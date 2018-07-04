@@ -5,7 +5,7 @@ import {
   TypeaheadState
 } from "@src/components/typings/Typeahead";
 import { css, cx } from "react-emotion";
-import { Options } from "@src/components/Options";
+import Options from "@src/components/Options";
 
 const wrapper = css({
   position: "relative"

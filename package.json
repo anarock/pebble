@@ -1,9 +1,10 @@
 {
   "name": "@anarock/pebble",
   "version": "0.1.0",
-  "main": "index.js",
   "author": "ritz078 <rkritesh078@gmail.com>",
   "license": "MIT",
+  "main": "dist/pebble.js",
+  "module": "dist/pebble.es.js",
   "dependencies": {
     "date-fns": "^1.29.0",
     "just-debounce-it": "^1.0.1",
@@ -49,12 +50,17 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "rimraf": "^2.6.2",
+    "rollup": "^0.62.0",
+    "rollup-plugin-alias": "^1.4.0",
+    "rollup-plugin-filesize": "^2.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
     "typescript": "^2.9.2",
     "webpack": "^4.14.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rimraf compiled && tsc -p tsconfig.base.json"
+    "build": "rimraf dist && tsc -p tsconfig.base.json && rollup -c && rimraf compiled"
   }
 }

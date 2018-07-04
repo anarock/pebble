@@ -2,7 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { boolean, select } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
-import Button from "@src/components/Button";
+import x from "../src/index";
+import Button from "../src/components/Button";
+console.log(x)
 
 const t = ["primary", "secondary", "link", "dropdown"];
 

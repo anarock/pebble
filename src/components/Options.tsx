@@ -9,7 +9,7 @@ import {
 import { OptionsProps, OptionsState } from "@src/components/typings/Options";
 import Ink from "react-ink";
 
-export class Options extends React.PureComponent<OptionsProps, OptionsState> {
+class Options extends React.PureComponent<OptionsProps, OptionsState> {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
 
   state = {
@@ -97,3 +97,5 @@ export class Options extends React.PureComponent<OptionsProps, OptionsState> {
     );
   }
 }
+
+export default Options;

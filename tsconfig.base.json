@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "compiled",
+    "declarationDir": "dist",
     "target": "esnext",
     "module": "esnext",
     "jsx": "preserve",
@@ -16,11 +16,13 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "outDir": "compiled",
+    "isolatedModules": false,
     "pretty": true,
     "baseUrl": ".",
     "typeRoots": ["./node_modules/@types"],
     "lib": ["dom", "es2015", "es2016"],
     "paths": {
+      "@src": ["./src"],
       "@src/*": ["./src/*"]
     }
   },
