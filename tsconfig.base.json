@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "compiled",
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "outDir": "compiled",
+    "pretty": true,
+    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types"],
+    "lib": ["dom", "es2015", "es2016"],
+    "paths": {
+      "@src/*": ["./src/*"]
+    }
+  },
+  "includes": ["src"],
+  "exclude": ["node_modules", "dist", "stories"]
+}

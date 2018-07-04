@@ -1,0 +1,14 @@
+{
+  "presets": ["env", "stage-0" , "react"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "@src": ["./src"]
+        }
+      }
+    ]
+  ]
+}
