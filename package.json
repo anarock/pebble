@@ -50,7 +50,6 @@
     "file-loader": "^1.1.11",
     "husky": "^0.14.3",
     "jest": "^23.3.0",
-    "jest-static-stubs": "^0.0.1",
     "moment": "^2.22.2",
     "prettier": "^1.13.7",
     "pretty-quick": "^1.6.0",
@@ -74,7 +73,7 @@
   },
   "jest": {
     "globals": {
-      "ts-jest":{
+      "ts-jest": {
         "useBabelrc": true
       }
     },
