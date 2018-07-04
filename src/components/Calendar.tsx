@@ -1,14 +1,14 @@
 import * as React from "react";
 import RCalendar from "react-calendar/dist/entry.nostyle";
 import { css, cx } from "react-emotion";
-import { CalendarProps } from "@src/components/typings/Calendar";
+import { CalendarProps } from "./typings/Calendar";
 import {
   dateStyle,
   tileStyle,
   wrapperStyle
-} from "@src/components/styles/Calendar.styles";
-import { mixins } from "@src/theme";
-import Button from "@src/components/Button";
+} from "./styles/Calendar.styles";
+import { mixins } from "../theme";
+import Button from "./Button";
 
 class Calendar extends React.PureComponent<CalendarProps> {
   static defaultProps = {
