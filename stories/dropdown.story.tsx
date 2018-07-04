@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Dropdown from "@src/components/Dropdown";
 import Options from "@src/components/Options";

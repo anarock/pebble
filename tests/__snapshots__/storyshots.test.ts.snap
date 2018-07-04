@@ -1,0 +1,2180 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button test 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="css-9m2nea"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": undefined,
+        }
+      }
+    >
+      Hello 😀 😎 👍 💯
+       
+      <canvas
+        height={0}
+        onDragOver={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        style={
+          Object {
+            "borderRadius": "inherit",
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": "100%",
+          }
+        }
+        width={0}
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Calendar Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-19ojhjp"
+    >
+      <div
+        className="react-calendar react-calendar--selectRange css-1jefc8t"
+        onBlur={[Function]}
+        onMouseOut={[Function]}
+      >
+        <div
+          className="react-calendar__navigation"
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+        >
+          <button
+            className="react-calendar__navigation__arrow react-calendar__navigation__prev-button"
+            onClick={[Function]}
+            type="button"
+          >
+            <i
+              className="icon-chevron-left"
+              style={
+                Object {
+                  "fontSize": 16,
+                }
+              }
+            />
+          </button>
+          <button
+            className="react-calendar__navigation__label"
+            disabled={false}
+            onClick={[Function]}
+            style={
+              Object {
+                "flexGrow": 1,
+              }
+            }
+            type="button"
+          >
+            July 2018
+          </button>
+          <button
+            className="react-calendar__navigation__arrow react-calendar__navigation__next-button"
+            onClick={[Function]}
+            type="button"
+          >
+            <i
+              className="icon-arrow-right"
+              style={
+                Object {
+                  "fontSize": 16,
+                }
+              }
+            />
+          </button>
+        </div>
+        <div
+          className="react-calendar__month-view "
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "display": "flex",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "flexGrow": 1,
+                  "width": "100%",
+                }
+              }
+            >
+              <div
+                className="react-calendar__month-view__weekdays"
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": undefined,
+                    "flexWrap": "no-wrap",
+                  }
+                }
+              >
+                <div
+                  className="react-calendar__month-view__weekdays__weekday"
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  Mon
+                </div>
+                <div
+                  className="react-calendar__month-view__weekdays__weekday"
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  Tue
+                </div>
+                <div
+                  className="react-calendar__month-view__weekdays__weekday"
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  Wed
+                </div>
+                <div
+                  className="react-calendar__month-view__weekdays__weekday"
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  Thu
+                </div>
+                <div
+                  className="react-calendar__month-view__weekdays__weekday"
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  Fri
+                </div>
+                <div
+                  className="react-calendar__month-view__weekdays__weekday"
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  Sat
+                </div>
+                <div
+                  className="react-calendar__month-view__weekdays__weekday"
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  Sun
+                </div>
+              </div>
+              <div
+                className="react-calendar__month-view__days"
+                style={
+                  Object {
+                    "display": "flex",
+                    "flexDirection": undefined,
+                    "flexWrap": "wrap",
+                  }
+                }
+              >
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": "85.71428571428571%",
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-01T00:00:00.000"
+                  >
+                    1
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-02T00:00:00.000"
+                  >
+                    2
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-03T00:00:00.000"
+                  >
+                    3
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-04T00:00:00.000"
+                  >
+                    4
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-05T00:00:00.000"
+                  >
+                    5
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-06T00:00:00.000"
+                  >
+                    6
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-07T00:00:00.000"
+                  >
+                    7
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-08T00:00:00.000"
+                  >
+                    8
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-09T00:00:00.000"
+                  >
+                    9
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-10T00:00:00.000"
+                  >
+                    10
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-11T00:00:00.000"
+                  >
+                    11
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-12T00:00:00.000"
+                  >
+                    12
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-13T00:00:00.000"
+                  >
+                    13
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-14T00:00:00.000"
+                  >
+                    14
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-15T00:00:00.000"
+                  >
+                    15
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-16T00:00:00.000"
+                  >
+                    16
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-17T00:00:00.000"
+                  >
+                    17
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-18T00:00:00.000"
+                  >
+                    18
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-19T00:00:00.000"
+                  >
+                    19
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-20T00:00:00.000"
+                  >
+                    20
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-21T00:00:00.000"
+                  >
+                    21
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-22T00:00:00.000"
+                  >
+                    22
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-23T00:00:00.000"
+                  >
+                    23
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-24T00:00:00.000"
+                  >
+                    24
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-25T00:00:00.000"
+                  >
+                    25
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-26T00:00:00.000"
+                  >
+                    26
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-27T00:00:00.000"
+                  >
+                    27
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-28T00:00:00.000"
+                  >
+                    28
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-29T00:00:00.000"
+                  >
+                    29
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-30T00:00:00.000"
+                  >
+                    30
+                  </time>
+                </button>
+                <button
+                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  onClick={[Function]}
+                  onFocus={[Function]}
+                  onMouseOver={[Function]}
+                  style={
+                    Object {
+                      "flexBasis": "14.285714285714286%",
+                      "marginLeft": null,
+                      "maxWidth": "14.285714285714286%",
+                      "overflow": "hidden",
+                    }
+                  }
+                  type="button"
+                >
+                  <time
+                    dateTime="2018-07-31T00:00:00.000"
+                  >
+                    31
+                  </time>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "alignContent": "initial",
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginTop": 20,
+          }
+        }
+      >
+        <button
+          className="css-ja1nsw"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          Clear
+           
+          <canvas
+            height={0}
+            onDragOver={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            style={
+              Object {
+                "borderRadius": "inherit",
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+            width={0}
+          />
+        </button>
+        <button
+          className="css-9m2nea"
+          onClick={[Function]}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          Apply
+           
+          <canvas
+            height={0}
+            onDragOver={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            style={
+              Object {
+                "borderRadius": "inherit",
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+            width={0}
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Controls simple 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div>
+      <div
+        onClick={[Function]}
+      >
+        <div
+          className="css-1kmps8p"
+        >
+          <i
+            className="css-1h73i9 icon-checkbox-unselected"
+            style={
+              Object {
+                "color": "#9FA6B0",
+              }
+            }
+          />
+          Ongoing
+        </div>
+      </div>
+      <div
+        onClick={[Function]}
+      >
+        <div
+          className="css-1kmps8p"
+        >
+          <i
+            className="css-1h73i9 icon-checkbox-unselected"
+            style={
+              Object {
+                "color": "#9FA6B0",
+              }
+            }
+          />
+          Done
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown simple 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div>
+      <button
+        className="__pebble__button__dropdown __pebble__button__dropdown__open css-1784jci"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": undefined,
+          }
+        }
+      >
+        Hello
+         
+        <i
+          className="icon-arrow-down css-nrd9zr"
+        />
+        <canvas
+          height={0}
+          onDragOver={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          style={
+            Object {
+              "borderRadius": "inherit",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100%",
+            }
+          }
+          width={0}
+        />
+      </button>
+      <div
+        className="css-atv200"
+        style={
+          Object {
+            "padding": undefined,
+          }
+        }
+      >
+        <div
+          className="css-11r82wm"
+        >
+          <div
+            className="css-5vk0ss"
+            onClick={[Function]}
+          >
+            <canvas
+              height={0}
+              onDragOver={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              style={
+                Object {
+                  "borderRadius": "inherit",
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              width={0}
+            />
+            Lorem ipsum dolor sit amet
+          </div>
+          <div
+            className="css-r0xgv4"
+            onClick={[Function]}
+          >
+            <canvas
+              height={0}
+              onDragOver={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              style={
+                Object {
+                  "borderRadius": "inherit",
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              width={0}
+            />
+            Lorem ipsum dolor sit amet
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input Date 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div>
+      <div
+        onClick={[Function]}
+      >
+        <div
+          className="css-1qyiurl"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <label
+            className="css-1o3mue1 __pebble__input__label__focused"
+          >
+            Date
+          </label>
+          <input
+            aria-label="Date"
+            className="css-1y3mi6c"
+            onChange={[Function]}
+            readOnly={false}
+            type="date"
+            value="Invalid Date"
+          />
+          <div
+            className="css-snw5v9"
+            style={
+              Object {
+                "backgroundColor": "#6161FF",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input Material 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-10nz3e"
+      onBlur={[Function]}
+      onFocus={[Function]}
+    >
+      <label
+        className="css-1o3mue1"
+      >
+        Name
+      </label>
+      <input
+        aria-label="Name"
+        className="css-1y3mi6c"
+        onChange={[Function]}
+        readOnly={false}
+        value=""
+      />
+      <div
+        className="css-snw5v9"
+        style={
+          Object {
+            "backgroundColor": "#6161FF",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Modal simple 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-1ce1i3k"
+    >
+      <div
+        className="css-1fbblc5"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Options basic 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-1h8hnwa"
+    >
+      <div
+        className="css-5vk0ss"
+        onClick={[Function]}
+      >
+        <canvas
+          height={0}
+          onDragOver={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          style={
+            Object {
+              "borderRadius": "inherit",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100%",
+            }
+          }
+          width={0}
+        />
+        Lorem ipsum dolor
+      </div>
+      <div
+        className="css-6bqth1"
+        onClick={[Function]}
+      >
+        <canvas
+          height={0}
+          onDragOver={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          style={
+            Object {
+              "borderRadius": "inherit",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100%",
+            }
+          }
+          width={0}
+        />
+        Lorem ipsum dolor
+      </div>
+      <div
+        className="css-r0xgv4"
+        onClick={[Function]}
+      >
+        <canvas
+          height={0}
+          onDragOver={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          style={
+            Object {
+              "borderRadius": "inherit",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100%",
+            }
+          }
+          width={0}
+        />
+        Lorem ipsum dolor
+      </div>
+      <div
+        className="css-r0xgv4"
+        onClick={[Function]}
+      >
+        <canvas
+          height={0}
+          onDragOver={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          style={
+            Object {
+              "borderRadius": "inherit",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100%",
+            }
+          }
+          width={0}
+        />
+        Lorem ipsum dolor
+      </div>
+      <div
+        className="css-r0xgv4"
+        onClick={[Function]}
+      >
+        <canvas
+          height={0}
+          onDragOver={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          style={
+            Object {
+              "borderRadius": "inherit",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100%",
+            }
+          }
+          width={0}
+        />
+        Lorem ipsum dolor
+      </div>
+      <div
+        className="css-r0xgv4"
+        onClick={[Function]}
+      >
+        <canvas
+          height={0}
+          onDragOver={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          style={
+            Object {
+              "borderRadius": "inherit",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100%",
+            }
+          }
+          width={0}
+        />
+        Lorem ipsum dolor
+      </div>
+      <div
+        className="css-r0xgv4"
+        onClick={[Function]}
+      >
+        <canvas
+          height={0}
+          onDragOver={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          style={
+            Object {
+              "borderRadius": "inherit",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100%",
+            }
+          }
+          width={0}
+        />
+        Lorem ipsum dolor
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Search Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-11eo10p __pebble__search__small"
+    >
+      <i
+        className="icon-search"
+        style={
+          Object {
+            "marginRight": 10,
+          }
+        }
+      />
+      <input
+        aria-label="Search"
+        className="css-qoeo72"
+        onChange={[Function]}
+        placeholder="Search"
+        type="text"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-uewl2b"
+    >
+      <div>
+        <div
+          className="css-24ok6r"
+          onClick={[Function]}
+        >
+          <div
+            className="css-ucpgee"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <label
+              className="css-1o3mue1 __pebble__input__label__focused"
+            >
+              hello
+            </label>
+            <input
+              aria-label="hello"
+              className="css-1y3mi6c"
+              onChange={[Function]}
+              readOnly={false}
+              value="Lorem ipsum dolor"
+            />
+            <div
+              className="css-snw5v9"
+              style={
+                Object {
+                  "backgroundColor": "#6161FF",
+                }
+              }
+            />
+          </div>
+          <i
+            className="css-15hkl27 icon-arrow-down"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SideBar simple 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-1rafu5a"
+      style={
+        Object {
+          "opacity": 0,
+        }
+      }
+    >
+      <div
+        className="css-1emno86"
+      >
+        <div
+          className="css-in04e0"
+          onClick={[Function]}
+        >
+          <i
+            className="icon-close"
+          />
+          <canvas
+            height={0}
+            onDragOver={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            style={
+              Object {
+                "borderRadius": "inherit",
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+            width={0}
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="css-st8p8x"
+      width={400}
+    >
+      <div
+        className="css-47raxj"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Slider simple 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-1z13ce1"
+    >
+      <div
+        className="css-1qcs2ss"
+      >
+        <div
+          style={
+            Object {
+              "color": "#6B7785",
+              "fontSize": 14,
+              "fontWeight": "normal",
+            }
+          }
+        >
+          Select Range
+        </div>
+        <div
+          style={
+            Object {
+              "color": "#101721",
+              "fontSize": 14,
+              "fontWeight": "normal",
+            }
+          }
+        >
+          0-100
+        </div>
+      </div>
+      <div
+        className="rheostat rheostat-horizontal "
+        onClick={[Function]}
+        style={
+          Object {
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          className="rheostat-background"
+        />
+        <button
+          aria-disabled={false}
+          aria-valuemax={90}
+          aria-valuemin={0}
+          aria-valuenow={10}
+          className="rheostat-handle"
+          data-handle-key={0}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+          role="slider"
+          style={
+            Object {
+              "left": "10%",
+              "position": "absolute",
+            }
+          }
+          tabIndex={0}
+          type="button"
+        />
+        <button
+          aria-disabled={false}
+          aria-valuemax={100}
+          aria-valuemin={10}
+          aria-valuenow={90}
+          className="rheostat-handle"
+          data-handle-key={1}
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchStart={[Function]}
+          role="slider"
+          style={
+            Object {
+              "left": "90%",
+              "position": "absolute",
+            }
+          }
+          tabIndex={0}
+          type="button"
+        />
+        <div
+          className="rheostat-progress"
+          style={
+            Object {
+              "left": "10%",
+              "width": "80%",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Stepper Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-ehohv7"
+    >
+      <div
+        className="css-4sszgj"
+      >
+        <div
+          className="css-5axksg"
+          onClick={[Function]}
+        >
+          <div
+            className="css-1d4tyn0"
+          >
+            Buyer Registration
+          </div>
+          <div
+            className="css-1fhx6wm"
+          />
+        </div>
+        <div
+          className="css-5axksg"
+          onClick={[Function]}
+        >
+          <div
+            className="css-1ophbyu"
+          >
+            Source Registration
+          </div>
+          <div
+            className="css-sbk6s2"
+          />
+        </div>
+        <div
+          className="css-5axksg"
+          onClick={[Function]}
+        >
+          <div
+            className="css-1ophbyu"
+          >
+            Assignment
+          </div>
+          <div
+            className="css-sbk6s2"
+          />
+        </div>
+        <div
+          className="css-y0emul"
+          style={
+            Object {
+              "marginLeft": "16.666666666666668%",
+              "width": "0%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="css-1bnpjlh"
+      >
+        <div
+          className=""
+        >
+          <div>
+            Buyer Registration
+          </div>
+        </div>
+        <div
+          className="css-1hyfx7x"
+        >
+          <div>
+            Source Registration
+          </div>
+        </div>
+        <div
+          className="css-1hyfx7x"
+        >
+          <div>
+            Assignment
+          </div>
+        </div>
+        <footer
+          className="css-198y4t4"
+        >
+          <button
+            className="css-ojk1d2"
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 100,
+              }
+            }
+          >
+            Cancel
+             
+            <canvas
+              height={0}
+              onDragOver={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              style={
+                Object {
+                  "borderRadius": "inherit",
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              width={0}
+            />
+          </button>
+          <button
+            className="css-1qpn69w"
+            onClick={[Function]}
+            style={
+              Object {
+                "width": 100,
+              }
+            }
+          >
+            Next
+             
+            <canvas
+              height={0}
+              onDragOver={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              style={
+                Object {
+                  "borderRadius": "inherit",
+                  "height": "100%",
+                  "left": 0,
+                  "position": "absolute",
+                  "top": 0,
+                  "width": "100%",
+                }
+              }
+              width={0}
+            />
+          </button>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tag simple 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-vf1xsb"
+      style={
+        Object {
+          "backgroundColor": "#E8F6DD",
+          "color": "#69C022",
+          "display": "inline-flex",
+        }
+      }
+    >
+      Anarock Tag
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tag with cross 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-vf1xsb __pebble__tag__with__close"
+      style={
+        Object {
+          "backgroundColor": "#E8F6DD",
+          "color": "#69C022",
+          "display": "flex",
+        }
+      }
+    >
+      Anarock Tag
+       
+      <i
+        className="icon-close"
+        onClick={[Function]}
+        style={
+          Object {
+            "borderLeft": "1px solid #E0E0E0",
+          }
+        }
+      >
+        <canvas
+          height={0}
+          onDragOver={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          style={
+            Object {
+              "borderRadius": "inherit",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "top": 0,
+              "width": "100%",
+            }
+          }
+          width={0}
+        />
+      </i>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Typeahead simple 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 0,
+      "display": "flex",
+      "left": 0,
+      "overflow": "auto",
+      "position": "fixed",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="css-1rdqlva"
+    >
+      <div
+        className="css-1qyiurl"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <label
+          className="css-1o3mue1"
+        >
+          H
+        </label>
+        <input
+          aria-label="H"
+          className="css-1y3mi6c"
+          onChange={[Function]}
+          onFocus={[Function]}
+          readOnly={false}
+          value=""
+        />
+        <div
+          className="css-snw5v9"
+          style={
+            Object {
+              "backgroundColor": "#6161FF",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Input, { DateInput } from "@src/components/Input";
 import { boolean, select, text } from "@storybook/addon-knobs";

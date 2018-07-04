@@ -1,10 +1,10 @@
-import React, { PureComponent } from "react";
+import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Controls, { ControlView } from "@src/components/Controls";
 
 type Id = string | number;
 
-class Container extends PureComponent<{}, { selected: Id | Id[] }> {
+class Container extends React.PureComponent<{}, { selected: Id | Id[] }> {
   state = {
     selected: []
   };

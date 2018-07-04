@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import SideBar from "@src/components/Sidebar";
 import { css } from "react-emotion";

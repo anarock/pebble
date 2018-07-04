@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import TypeAhead from "@src/components/TypeAhead";
 import Input from "@src/components/Input";
