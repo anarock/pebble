@@ -22,11 +22,16 @@ const Slider: React.SFC<SliderProps> = props => {
     __pebble__slider__large: large
   });
 
-  let _values = Array.isArray(values) ? values.slice(0) : values;
+	let _values = Array.isArray(values) ? values.slice(0) : values;
 
-  if (Array.isArray(values) && (!values[0] || !values[1])) {
-    _values = [rest.min, rest.max];
-  }
+	if (Array.isArray(values)) {
+		if (!values[0]) {
+			_values[0] = rest.min;
+		}
+		if (!values[1]) {
+			_values[1] = rest.max;
+		}
+	}
 
   return (
     <div className={mainClass}>

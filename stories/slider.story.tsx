@@ -11,7 +11,7 @@ const wrapperStyle = css({
 
 storiesOf("Slider", module).add("simple", () => (
   <Slider
-    onChange={action("change")}
+		onValuesUpdated={action("change")}
     min={number("min", 0)}
     max={number("max", 100)}
     values={[10, 90]}
