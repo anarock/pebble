@@ -91,6 +91,7 @@ export const buttonStyle = css({
     border: 0,
     color: violet.base,
     minWidth: 0,
+		fontSize: 14,
     ":hover": {
       textDecoration: "underline"
     },

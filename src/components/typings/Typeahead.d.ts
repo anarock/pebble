@@ -24,6 +24,7 @@ export interface TypeaheadProps {
   suggestions?: any[];
   valueExtractor: (suggestion: any) => string;
   dropdownClassName?: string;
+  initialValue?: string;
 }
 
 export interface TypeaheadState {
