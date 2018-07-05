@@ -1,6 +1,128 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Button test 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  font-weight: normal;
+  color: #ffffff;
+  font-size: 12px;
+  min-width: 100px;
+  height: 40px;
+  background-color: #6161FF;
+  box-shadow: none;
+}
+
+.emotion-0.__pebble__button__disabled {
+  cursor: inherit;
+}
+
+.emotion-0.__pebble__button__disabled:focus {
+  border: none;
+}
+
+.emotion-0.__pebble__button__dropdown {
+  color: #101721;
+  background-color: #ffffff;
+}
+
+.emotion-0.__pebble__button__dropdown:not(.__pebble__button__dropdown):hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-0.__pebble__button__dropdown:not(.__pebble__button__dropdown):active {
+  background-color: #E0E0E0;
+}
+
+.emotion-0.__pebble__button__dropdown.__pebble__button__disabled {
+  color: #9FA6B0;
+  background-color: #EDEDED;
+}
+
+.emotion-0.__pebble__button__dropdown__open {
+  color: #ffffff;
+  background-color: #6161FF;
+}
+
+.emotion-0.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):hover {
+  background-color: #7070FF;
+}
+
+.emotion-0.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):active {
+  background-color: #5656ED;
+}
+
+.emotion-0.__pebble__button__dropdown__open.__pebble__button__disabled {
+  color: #ffffff;
+  background-color: #C0C0FF;
+}
+
+.emotion-0.__pebble__button__dropdown__open:focus {
+  border: none;
+}
+
+.emotion-0.__pebble__button__dropdown__selected {
+  background-color: #6161FF;
+  color: #ffffff;
+}
+
+.emotion-0:focus {
+  border: none;
+}
+
+.emotion-0.__pebble__button_link {
+  background-color: transparent;
+  border: 0;
+  color: #6161FF;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.emotion-0.__pebble__button_link:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0.__pebble__button_link.__pebble__button__disabled {
+  color: #C0C0FF;
+  cursor: inherit;
+}
+
+.emotion-0:not(.__pebble__button__dropdown):hover {
+  background-color: #7070FF;
+}
+
+.emotion-0:not(.__pebble__button__dropdown):active {
+  background-color: #5656ED;
+}
+
+.emotion-0.__pebble__button__disabled {
+  color: #ffffff;
+  background-color: #C0C0FF;
+}
+
 <div
   style={
     Object {
@@ -24,7 +146,7 @@ exports[`Storyshots Button test 1`] = `
     }
   >
     <button
-      className="css-9m2nea"
+      className="emotion-0"
       onClick={[Function]}
       style={
         Object {
@@ -58,6 +180,374 @@ exports[`Storyshots Button test 1`] = `
 `;
 
 exports[`Storyshots Calendar Default 1`] = `
+.emotion-34 {
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+}
+
+.emotion-0 {
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  height: 48px;
+  width: 48px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  background-color: #F7F7F9;
+  border-radius: 3px;
+  display: table;
+  border-collapse: collapse;
+  border: 1px solid #ffffff;
+  border-left: 0;
+  border-top: 0;
+}
+
+.emotion-0 time {
+  font-family: inherit;
+}
+
+.emotion-0.react-calendar__tile--now {
+  color: #6161FF;
+}
+
+.emotion-0:hover {
+  background-color: #EDEDED;
+}
+
+.emotion-0.react-calendar__tile--active {
+  background-color: #E8E8FF;
+  color: #6161FF;
+}
+
+.emotion-0.react-calendar__tile--rangeStart {
+  background-color: #6161FF;
+  color: #ffffff !important;
+}
+
+.emotion-0.react-calendar__tile--rangeEnd {
+  background-color: #6161FF;
+  color: #ffffff !important;
+}
+
+.emotion-0.react-calendar__tile--singleSelect {
+  background-color: #6161FF;
+  color: #ffffff;
+}
+
+.emotion-0.react-calendar__month-view__days__day--neighboringMonth {
+  color: #9FA6B0;
+}
+
+.emotion-31 {
+  width: 356px;
+  margin: 10px;
+  position: relative;
+}
+
+.emotion-31 .react-calendar__month-view__weekdays__weekday {
+  color: #6B7785;
+  line-spacing: 7px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.emotion-31 .react-calendar__navigation__arrow {
+  border: 1px solid #E0E0E0;
+  padding: 8px 10px;
+  border-radius: 3px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  outline: none;
+  height: 40px;
+  width: 40px;
+}
+
+.emotion-31 .react-calendar__navigation__arrow.react-calendar__navigation__prev-button {
+  position: absolute;
+  right: 47px;
+}
+
+.emotion-31 .react-calendar__navigation__label {
+  font-weight: bold;
+  color: #101721;
+  font-size: 18px;
+  text-align: left;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.emotion-31 .react-calendar__month-view {
+  margin-top: 30px;
+}
+
+.emotion-31 .react-calendar__month-view__weekdays {
+  margin-bottom: 20px;
+}
+
+.emotion-31 .react-calendar__decade-view__years,
+.emotion-31 .react-calendar__century-view,
+.emotion-31 .react-calendar__year-view {
+  margin-top: 15px;
+}
+
+.emotion-33 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  font-weight: normal;
+  color: #ffffff;
+  font-size: 12px;
+  min-width: 100px;
+  height: 40px;
+  background-color: #6161FF;
+  box-shadow: none;
+}
+
+.emotion-33.__pebble__button__disabled {
+  cursor: inherit;
+}
+
+.emotion-33.__pebble__button__disabled:focus {
+  border: none;
+}
+
+.emotion-33.__pebble__button__dropdown {
+  color: #101721;
+  background-color: #ffffff;
+}
+
+.emotion-33.__pebble__button__dropdown:not(.__pebble__button__dropdown):hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-33.__pebble__button__dropdown:not(.__pebble__button__dropdown):active {
+  background-color: #E0E0E0;
+}
+
+.emotion-33.__pebble__button__dropdown.__pebble__button__disabled {
+  color: #9FA6B0;
+  background-color: #EDEDED;
+}
+
+.emotion-33.__pebble__button__dropdown__open {
+  color: #ffffff;
+  background-color: #6161FF;
+}
+
+.emotion-33.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):hover {
+  background-color: #7070FF;
+}
+
+.emotion-33.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):active {
+  background-color: #5656ED;
+}
+
+.emotion-33.__pebble__button__dropdown__open.__pebble__button__disabled {
+  color: #ffffff;
+  background-color: #C0C0FF;
+}
+
+.emotion-33.__pebble__button__dropdown__open:focus {
+  border: none;
+}
+
+.emotion-33.__pebble__button__dropdown__selected {
+  background-color: #6161FF;
+  color: #ffffff;
+}
+
+.emotion-33:focus {
+  border: none;
+}
+
+.emotion-33.__pebble__button_link {
+  background-color: transparent;
+  border: 0;
+  color: #6161FF;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.emotion-33.__pebble__button_link:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-33.__pebble__button_link.__pebble__button__disabled {
+  color: #C0C0FF;
+  cursor: inherit;
+}
+
+.emotion-33:not(.__pebble__button__dropdown):hover {
+  background-color: #7070FF;
+}
+
+.emotion-33:not(.__pebble__button__dropdown):active {
+  background-color: #5656ED;
+}
+
+.emotion-33.__pebble__button__disabled {
+  color: #ffffff;
+  background-color: #C0C0FF;
+}
+
+.emotion-32 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  font-weight: normal;
+  color: #101721;
+  font-size: 12px;
+  min-width: 100px;
+  height: 40px;
+  background-color: #EDEDED;
+  box-shadow: none;
+}
+
+.emotion-32.__pebble__button__disabled {
+  cursor: inherit;
+}
+
+.emotion-32.__pebble__button__disabled:focus {
+  border: none;
+}
+
+.emotion-32.__pebble__button__dropdown {
+  color: #101721;
+  background-color: #ffffff;
+}
+
+.emotion-32.__pebble__button__dropdown:not(.__pebble__button__dropdown):hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-32.__pebble__button__dropdown:not(.__pebble__button__dropdown):active {
+  background-color: #E0E0E0;
+}
+
+.emotion-32.__pebble__button__dropdown.__pebble__button__disabled {
+  color: #9FA6B0;
+  background-color: #EDEDED;
+}
+
+.emotion-32.__pebble__button__dropdown__open {
+  color: #ffffff;
+  background-color: #6161FF;
+}
+
+.emotion-32.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):hover {
+  background-color: #7070FF;
+}
+
+.emotion-32.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):active {
+  background-color: #5656ED;
+}
+
+.emotion-32.__pebble__button__dropdown__open.__pebble__button__disabled {
+  color: #ffffff;
+  background-color: #C0C0FF;
+}
+
+.emotion-32.__pebble__button__dropdown__open:focus {
+  border: none;
+}
+
+.emotion-32.__pebble__button__dropdown__selected {
+  background-color: #6161FF;
+  color: #ffffff;
+}
+
+.emotion-32:focus {
+  border: none;
+}
+
+.emotion-32.__pebble__button_link {
+  background-color: transparent;
+  border: 0;
+  color: #6161FF;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.emotion-32.__pebble__button_link:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-32.__pebble__button_link.__pebble__button__disabled {
+  color: #C0C0FF;
+  cursor: inherit;
+}
+
+.emotion-32:not(.__pebble__button__dropdown):hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-32:not(.__pebble__button__dropdown):active {
+  background-color: #E0E0E0;
+}
+
+.emotion-32.__pebble__button__disabled {
+  color: #9FA6B0;
+  background-color: #EDEDED;
+}
+
 <div
   style={
     Object {
@@ -81,10 +571,10 @@ exports[`Storyshots Calendar Default 1`] = `
     }
   >
     <div
-      className="css-19ojhjp"
+      className="emotion-34"
     >
       <div
-        className="react-calendar react-calendar--selectRange css-1jefc8t"
+        className="react-calendar react-calendar--selectRange emotion-31"
         onBlur={[Function]}
         onMouseOut={[Function]}
       >
@@ -270,7 +760,7 @@ exports[`Storyshots Calendar Default 1`] = `
                 }
               >
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -291,7 +781,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -312,7 +802,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -333,7 +823,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -354,7 +844,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -375,7 +865,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -396,7 +886,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -417,7 +907,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -438,7 +928,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -459,7 +949,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -480,7 +970,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -501,7 +991,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -522,7 +1012,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -543,7 +1033,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -564,7 +1054,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -585,7 +1075,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -606,7 +1096,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -627,7 +1117,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -648,7 +1138,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -669,7 +1159,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -690,7 +1180,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -711,7 +1201,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -732,7 +1222,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -753,7 +1243,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -774,7 +1264,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -795,7 +1285,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -816,7 +1306,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -837,7 +1327,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -858,7 +1348,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -879,7 +1369,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -900,7 +1390,7 @@ exports[`Storyshots Calendar Default 1`] = `
                   </time>
                 </button>
                 <button
-                  className="react-calendar__tile react-calendar__month-view__days__day css-gcmixi"
+                  className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
                   onClick={[Function]}
                   onFocus={[Function]}
                   onMouseOver={[Function]}
@@ -937,7 +1427,7 @@ exports[`Storyshots Calendar Default 1`] = `
         }
       >
         <button
-          className="css-ja1nsw"
+          className="emotion-32"
           onClick={[Function]}
           style={
             Object {
@@ -967,7 +1457,7 @@ exports[`Storyshots Calendar Default 1`] = `
           />
         </button>
         <button
-          className="css-9m2nea"
+          className="emotion-33"
           onClick={[Function]}
           style={
             Object {
@@ -1003,6 +1493,26 @@ exports[`Storyshots Calendar Default 1`] = `
 `;
 
 exports[`Storyshots Controls simple 1`] = `
+.emotion-1 {
+  color: #101721;
+  font-weight: normal;
+  font-size: 14px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+}
+
+.emotion-0 {
+  font-size: 16px;
+  margin-right: 10px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 <div
   style={
     Object {
@@ -1030,10 +1540,10 @@ exports[`Storyshots Controls simple 1`] = `
         onClick={[Function]}
       >
         <div
-          className="css-1kmps8p"
+          className="emotion-1"
         >
           <i
-            className="css-1h73i9 icon-checkbox-unselected"
+            className="emotion-0 icon-checkbox-unselected"
             style={
               Object {
                 "color": "#9FA6B0",
@@ -1047,10 +1557,10 @@ exports[`Storyshots Controls simple 1`] = `
         onClick={[Function]}
       >
         <div
-          className="css-1kmps8p"
+          className="emotion-1"
         >
           <i
-            className="css-1h73i9 icon-checkbox-unselected"
+            className="emotion-0 icon-checkbox-unselected"
             style={
               Object {
                 "color": "#9FA6B0",
@@ -1066,6 +1576,238 @@ exports[`Storyshots Controls simple 1`] = `
 `;
 
 exports[`Storyshots Dropdown simple 1`] = `
+.emotion-3 {
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  line-height: 10px;
+  cursor: pointer;
+  padding: 0 18px;
+  position: relative;
+  z-index: 999;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 52px;
+}
+
+.emotion-3:last-of-type {
+  border: 0;
+}
+
+.emotion-3:hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-1 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  font-weight: normal;
+  color: #101721;
+  font-size: 12px;
+  min-width: 100px;
+  height: 40px;
+  background-color: #EDEDED;
+  box-shadow: 0 2px 7px 0 #F2F2F2;
+}
+
+.emotion-1.__pebble__button__disabled {
+  cursor: inherit;
+}
+
+.emotion-1.__pebble__button__disabled:focus {
+  border: none;
+}
+
+.emotion-1.__pebble__button__dropdown {
+  color: #101721;
+  background-color: #ffffff;
+}
+
+.emotion-1.__pebble__button__dropdown:not(.__pebble__button__dropdown):hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-1.__pebble__button__dropdown:not(.__pebble__button__dropdown):active {
+  background-color: #E0E0E0;
+}
+
+.emotion-1.__pebble__button__dropdown.__pebble__button__disabled {
+  color: #9FA6B0;
+  background-color: #EDEDED;
+}
+
+.emotion-1.__pebble__button__dropdown__open {
+  color: #ffffff;
+  background-color: #6161FF;
+}
+
+.emotion-1.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):hover {
+  background-color: #7070FF;
+}
+
+.emotion-1.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):active {
+  background-color: #5656ED;
+}
+
+.emotion-1.__pebble__button__dropdown__open.__pebble__button__disabled {
+  color: #ffffff;
+  background-color: #C0C0FF;
+}
+
+.emotion-1.__pebble__button__dropdown__open:focus {
+  border: none;
+}
+
+.emotion-1.__pebble__button__dropdown__selected {
+  background-color: #6161FF;
+  color: #ffffff;
+}
+
+.emotion-1:focus {
+  border: none;
+}
+
+.emotion-1.__pebble__button_link {
+  background-color: transparent;
+  border: 0;
+  color: #6161FF;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.emotion-1.__pebble__button_link:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-1.__pebble__button_link.__pebble__button__disabled {
+  color: #C0C0FF;
+  cursor: inherit;
+}
+
+.emotion-0 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.emotion-5 {
+  min-width: 250px;
+  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  border-radius: 3px;
+  position: absolute;
+  -webkit-transition: margin-top cubic-bezier(0.23,1,0.32,1) .4s,opacity linear .2s;
+  transition: margin-top cubic-bezier(0.23,1,0.32,1) .4s,opacity linear .2s;
+  margin-top: 10px;
+  will-change: opacity,margin-top;
+  z-index: 999;
+}
+
+.emotion-4 {
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1);
+  position: absolute;
+  width: inherit;
+  z-index: 9;
+  max-height: 352px;
+  min-width: 200px;
+  overflow-y: scroll;
+  padding: 20px 1px;
+}
+
+.emotion-2 {
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  line-height: 10px;
+  cursor: pointer;
+  padding: 0 18px;
+  position: relative;
+  z-index: 999;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 52px;
+  background-color: #F7F7F9;
+}
+
+.emotion-2:last-of-type {
+  border: 0;
+}
+
+.emotion-2:hover {
+  background-color: #F7F7F9;
+}
+
 <div
   style={
     Object {
@@ -1090,7 +1832,7 @@ exports[`Storyshots Dropdown simple 1`] = `
   >
     <div>
       <button
-        className="__pebble__button__dropdown __pebble__button__dropdown__open css-1784jci"
+        className="__pebble__button__dropdown __pebble__button__dropdown__open emotion-1"
         onClick={[Function]}
         style={
           Object {
@@ -1101,7 +1843,7 @@ exports[`Storyshots Dropdown simple 1`] = `
         Hello
          
         <i
-          className="icon-arrow-down css-nrd9zr"
+          className="icon-arrow-down emotion-0"
         />
         <canvas
           height={0}
@@ -1123,7 +1865,7 @@ exports[`Storyshots Dropdown simple 1`] = `
         />
       </button>
       <div
-        className="css-atv200"
+        className="emotion-5"
         style={
           Object {
             "padding": undefined,
@@ -1131,10 +1873,10 @@ exports[`Storyshots Dropdown simple 1`] = `
         }
       >
         <div
-          className="css-11r82wm"
+          className="emotion-4"
         >
           <div
-            className="css-5vk0ss"
+            className="emotion-2"
             onClick={[Function]}
           >
             <canvas
@@ -1158,7 +1900,7 @@ exports[`Storyshots Dropdown simple 1`] = `
             Lorem ipsum dolor sit amet
           </div>
           <div
-            className="css-r0xgv4"
+            className="emotion-3"
             onClick={[Function]}
           >
             <canvas
@@ -1189,6 +1931,132 @@ exports[`Storyshots Dropdown simple 1`] = `
 `;
 
 exports[`Storyshots Input Date 1`] = `
+.emotion-3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+  height: 68px;
+}
+
+.emotion-3.__pebble__input__wrapper__textarea {
+  height: 110px;
+}
+
+.emotion-1 {
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #EDEDED;
+  padding: 24px 0 12px 0;
+  height: 48px;
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  width: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-1.__pebble__input__read__only {
+  color: #6B7785;
+}
+
+.emotion-1.__pebble__input__disabled {
+  cursor: inherit;
+  pointer-events: none;
+  color: #9FA6B0;
+}
+
+.emotion-1.__pebble__input__textarea {
+  height: 88px;
+  padding: 24px 0 52px 0;
+  resize: none;
+}
+
+.emotion-1[type='date']::-webkit-inner-spin-button,
+.emotion-1[type='date']::-webkit-calendar-picker-indicator {
+  webkit-appearance: none;
+  display: none;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-2 {
+  height: 2px;
+  background-color: #6161FF;
+  margin-top: -2px;
+  position: relative;
+  width: 0;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  z-index: 9;
+}
+
+.emotion-2.__pebble__input__highlight__state,
+.emotion-2.__pebble__input__highlight__focused {
+  width: 100%;
+}
+
+.emotion-0 {
+  color: #9FA6B0;
+  font-size: 14px;
+  line-height: 12px;
+  position: absolute;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  -webkit-transform: translate(0,24px);
+  -ms-transform: translate(0,24px);
+  transform: translate(0,24px);
+  pointer-events: none;
+}
+
+.emotion-0.__pebble__input__label__focused {
+  font-size: 12px;
+  line-height: 10px;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  color: #6B7785;
+}
+
 <div
   style={
     Object {
@@ -1216,25 +2084,25 @@ exports[`Storyshots Input Date 1`] = `
         onClick={[Function]}
       >
         <div
-          className="css-1qyiurl"
+          className="emotion-3"
           onBlur={[Function]}
           onFocus={[Function]}
         >
           <label
-            className="css-1o3mue1 __pebble__input__label__focused"
+            className="emotion-0 __pebble__input__label__focused"
           >
             Date
           </label>
           <input
             aria-label="Date"
-            className="css-1y3mi6c"
+            className="emotion-1"
             onChange={[Function]}
             readOnly={false}
             type="date"
             value="Invalid Date"
           />
           <div
-            className="css-snw5v9"
+            className="emotion-2"
             style={
               Object {
                 "backgroundColor": "#6161FF",
@@ -1249,6 +2117,133 @@ exports[`Storyshots Input Date 1`] = `
 `;
 
 exports[`Storyshots Input Material 1`] = `
+.emotion-1 {
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #EDEDED;
+  padding: 24px 0 12px 0;
+  height: 48px;
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  width: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-1.__pebble__input__read__only {
+  color: #6B7785;
+}
+
+.emotion-1.__pebble__input__disabled {
+  cursor: inherit;
+  pointer-events: none;
+  color: #9FA6B0;
+}
+
+.emotion-1.__pebble__input__textarea {
+  height: 88px;
+  padding: 24px 0 52px 0;
+  resize: none;
+}
+
+.emotion-1[type='date']::-webkit-inner-spin-button,
+.emotion-1[type='date']::-webkit-calendar-picker-indicator {
+  webkit-appearance: none;
+  display: none;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-2 {
+  height: 2px;
+  background-color: #6161FF;
+  margin-top: -2px;
+  position: relative;
+  width: 0;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  z-index: 9;
+}
+
+.emotion-2.__pebble__input__highlight__state,
+.emotion-2.__pebble__input__highlight__focused {
+  width: 100%;
+}
+
+.emotion-0 {
+  color: #9FA6B0;
+  font-size: 14px;
+  line-height: 12px;
+  position: absolute;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  -webkit-transform: translate(0,24px);
+  -ms-transform: translate(0,24px);
+  transform: translate(0,24px);
+  pointer-events: none;
+}
+
+.emotion-0.__pebble__input__label__focused {
+  font-size: 12px;
+  line-height: 10px;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  color: #6B7785;
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+  height: 68px;
+  width: 400px;
+}
+
+.emotion-3.__pebble__input__wrapper__textarea {
+  height: 110px;
+}
+
 <div
   style={
     Object {
@@ -1272,24 +2267,24 @@ exports[`Storyshots Input Material 1`] = `
     }
   >
     <div
-      className="css-10nz3e"
+      className="emotion-3"
       onBlur={[Function]}
       onFocus={[Function]}
     >
       <label
-        className="css-1o3mue1"
+        className="emotion-0"
       >
         Name
       </label>
       <input
         aria-label="Name"
-        className="css-1y3mi6c"
+        className="emotion-1"
         onChange={[Function]}
         readOnly={false}
         value=""
       />
       <div
-        className="css-snw5v9"
+        className="emotion-2"
         style={
           Object {
             "backgroundColor": "#6161FF",
@@ -1302,6 +2297,31 @@ exports[`Storyshots Input Material 1`] = `
 `;
 
 exports[`Storyshots Modal simple 1`] = `
+.emotion-1 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.4);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow-y: scroll;
+  z-index: 99999;
+}
+
+.emotion-0 {
+  height: 200px;
+  width: 200px;
+  background-color: #ffffff;
+}
+
 <div
   style={
     Object {
@@ -1325,10 +2345,10 @@ exports[`Storyshots Modal simple 1`] = `
     }
   >
     <div
-      className="css-1ce1i3k"
+      className="emotion-1"
     >
       <div
-        className="css-1fbblc5"
+        className="emotion-0"
       />
     </div>
   </div>
@@ -1336,6 +2356,146 @@ exports[`Storyshots Modal simple 1`] = `
 `;
 
 exports[`Storyshots Options basic 1`] = `
+.emotion-2 {
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  line-height: 10px;
+  cursor: pointer;
+  padding: 0 18px;
+  position: relative;
+  z-index: 999;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 52px;
+}
+
+.emotion-2:last-of-type {
+  border: 0;
+}
+
+.emotion-2:hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-0 {
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  line-height: 10px;
+  cursor: pointer;
+  padding: 0 18px;
+  position: relative;
+  z-index: 999;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 52px;
+  background-color: #F7F7F9;
+}
+
+.emotion-0:last-of-type {
+  border: 0;
+}
+
+.emotion-0:hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-7 {
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1);
+  position: absolute;
+  width: inherit;
+  z-index: 9;
+  max-height: 352px;
+  min-width: 200px;
+  overflow-y: scroll;
+  padding: 20px 1px;
+  width: 300px;
+}
+
+.emotion-1 {
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  line-height: 10px;
+  cursor: pointer;
+  padding: 0 18px;
+  position: relative;
+  z-index: 999;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 52px;
+  background-color: #E8E8FF;
+  color: #6161FF;
+}
+
+.emotion-1:last-of-type {
+  border: 0;
+}
+
+.emotion-1:hover {
+  background-color: #F7F7F9;
+}
+
 <div
   style={
     Object {
@@ -1359,10 +2519,10 @@ exports[`Storyshots Options basic 1`] = `
     }
   >
     <div
-      className="css-1h8hnwa"
+      className="emotion-7"
     >
       <div
-        className="css-5vk0ss"
+        className="emotion-0"
         onClick={[Function]}
       >
         <canvas
@@ -1386,7 +2546,7 @@ exports[`Storyshots Options basic 1`] = `
         Lorem ipsum dolor
       </div>
       <div
-        className="css-6bqth1"
+        className="emotion-1"
         onClick={[Function]}
       >
         <canvas
@@ -1410,7 +2570,7 @@ exports[`Storyshots Options basic 1`] = `
         Lorem ipsum dolor
       </div>
       <div
-        className="css-r0xgv4"
+        className="emotion-2"
         onClick={[Function]}
       >
         <canvas
@@ -1434,7 +2594,7 @@ exports[`Storyshots Options basic 1`] = `
         Lorem ipsum dolor
       </div>
       <div
-        className="css-r0xgv4"
+        className="emotion-2"
         onClick={[Function]}
       >
         <canvas
@@ -1458,7 +2618,7 @@ exports[`Storyshots Options basic 1`] = `
         Lorem ipsum dolor
       </div>
       <div
-        className="css-r0xgv4"
+        className="emotion-2"
         onClick={[Function]}
       >
         <canvas
@@ -1482,7 +2642,7 @@ exports[`Storyshots Options basic 1`] = `
         Lorem ipsum dolor
       </div>
       <div
-        className="css-r0xgv4"
+        className="emotion-2"
         onClick={[Function]}
       >
         <canvas
@@ -1506,7 +2666,7 @@ exports[`Storyshots Options basic 1`] = `
         Lorem ipsum dolor
       </div>
       <div
-        className="css-r0xgv4"
+        className="emotion-2"
         onClick={[Function]}
       >
         <canvas
@@ -1535,6 +2695,95 @@ exports[`Storyshots Options basic 1`] = `
 `;
 
 exports[`Storyshots Search Default 1`] = `
+.emotion-1 {
+  border-radius: 3px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+}
+
+.emotion-1.__pebble__search__small {
+  background-color: #F7F7F9;
+}
+
+.emotion-1.__pebble__search__large {
+  background-color: #ffffff;
+  height: 76px;
+  padding: 0 25px;
+  box-shadow: 0 2px 7px 0 #F2F2F2;
+}
+
+.emotion-1.__pebble__search__large input {
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+}
+
+.emotion-1.__pebble__search__table {
+  border: 1px solid #E0E0E0;
+  background-color: #ffffff;
+}
+
+.emotion-1.__pebble__search__table i {
+  color: #6B7785;
+}
+
+.emotion-0 {
+  border-radius: 3px;
+  outline: none;
+  border: 0;
+  height: inherit;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: normal;
+  color: #101721;
+  font-size: 12px;
+  background-color: transparent;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #F7F7F9;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #F7F7F9;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #F7F7F9;
+}
+
+.emotion-0:-moz-placeholder {
+  color: #F7F7F9;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #F7F7F9;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #F7F7F9;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #F7F7F9;
+}
+
+.emotion-0::placeholder {
+  color: #F7F7F9;
+}
+
 <div
   style={
     Object {
@@ -1558,7 +2807,7 @@ exports[`Storyshots Search Default 1`] = `
     }
   >
     <div
-      className="css-11eo10p __pebble__search__small"
+      className="emotion-1 __pebble__search__small"
     >
       <i
         className="icon-search"
@@ -1570,7 +2819,7 @@ exports[`Storyshots Search Default 1`] = `
       />
       <input
         aria-label="Search"
-        className="css-qoeo72"
+        className="emotion-0"
         onChange={[Function]}
         placeholder="Search"
         type="text"
@@ -1581,6 +2830,156 @@ exports[`Storyshots Search Default 1`] = `
 `;
 
 exports[`Storyshots Select default 1`] = `
+.emotion-1 {
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #EDEDED;
+  padding: 24px 0 12px 0;
+  height: 48px;
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  width: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-1.__pebble__input__read__only {
+  color: #6B7785;
+}
+
+.emotion-1.__pebble__input__disabled {
+  cursor: inherit;
+  pointer-events: none;
+  color: #9FA6B0;
+}
+
+.emotion-1.__pebble__input__textarea {
+  height: 88px;
+  padding: 24px 0 52px 0;
+  resize: none;
+}
+
+.emotion-1[type='date']::-webkit-inner-spin-button,
+.emotion-1[type='date']::-webkit-calendar-picker-indicator {
+  webkit-appearance: none;
+  display: none;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-2 {
+  height: 2px;
+  background-color: #6161FF;
+  margin-top: -2px;
+  position: relative;
+  width: 0;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  z-index: 9;
+}
+
+.emotion-2.__pebble__input__highlight__state,
+.emotion-2.__pebble__input__highlight__focused {
+  width: 100%;
+}
+
+.emotion-0 {
+  color: #9FA6B0;
+  font-size: 14px;
+  line-height: 12px;
+  position: absolute;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  -webkit-transform: translate(0,24px);
+  -ms-transform: translate(0,24px);
+  transform: translate(0,24px);
+  pointer-events: none;
+}
+
+.emotion-0.__pebble__input__label__focused {
+  font-size: 12px;
+  line-height: 10px;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  color: #6B7785;
+}
+
+.emotion-6 {
+  margin-bottom: 20px;
+}
+
+.emotion-5 {
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 25px;
+  right: 7px;
+  color: #9FA6B0;
+  font-size: 12px;
+}
+
+.emotion-4.__pebble__select__open {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+  height: 68px;
+  pointer-events: none;
+}
+
+.emotion-3.__pebble__input__wrapper__textarea {
+  height: 110px;
+}
+
 <div
   style={
     Object {
@@ -1604,32 +3003,32 @@ exports[`Storyshots Select default 1`] = `
     }
   >
     <div
-      className="css-uewl2b"
+      className="emotion-6"
     >
       <div>
         <div
-          className="css-24ok6r"
+          className="emotion-5"
           onClick={[Function]}
         >
           <div
-            className="css-ucpgee"
+            className="emotion-3"
             onBlur={[Function]}
             onFocus={[Function]}
           >
             <label
-              className="css-1o3mue1 __pebble__input__label__focused"
+              className="emotion-0 __pebble__input__label__focused"
             >
               hello
             </label>
             <input
               aria-label="hello"
-              className="css-1y3mi6c"
+              className="emotion-1"
               onChange={[Function]}
               readOnly={false}
               value="Lorem ipsum dolor"
             />
             <div
-              className="css-snw5v9"
+              className="emotion-2"
               style={
                 Object {
                   "backgroundColor": "#6161FF",
@@ -1638,7 +3037,7 @@ exports[`Storyshots Select default 1`] = `
             />
           </div>
           <i
-            className="css-15hkl27 icon-arrow-down"
+            className="emotion-4 icon-arrow-down"
           />
         </div>
       </div>
@@ -1648,6 +3047,73 @@ exports[`Storyshots Select default 1`] = `
 `;
 
 exports[`Storyshots SideBar simple 1`] = `
+.emotion-2 {
+  background-color: rgba(16,23,33,0.3);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.emotion-0 {
+  background-color: #ffffff;
+  border-radius: 3px;
+  height: 50px;
+  width: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.emotion-0 i {
+  font-size: 25px;
+  color: #101721;
+}
+
+.emotion-3 {
+  width: 400px;
+  height: 400px;
+  background-color: green;
+}
+
+.emotion-1 {
+  margin-right: 420px;
+  margin-top: 20px;
+  float: right;
+}
+
+.emotion-4 {
+  -webkit-transition: -webkit-transform 200ms cubic-bezier(.64,.09,.08,1);
+  -webkit-transition: transform 200ms cubic-bezier(.64,.09,.08,1);
+  transition: transform 200ms cubic-bezier(.64,.09,.08,1);
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  will-change: transform;
+  z-index: 99;
+  overflow-y: scroll;
+  width: 400px;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
 <div
   style={
     Object {
@@ -1671,7 +3137,7 @@ exports[`Storyshots SideBar simple 1`] = `
     }
   >
     <div
-      className="css-1rafu5a"
+      className="emotion-2"
       style={
         Object {
           "opacity": 0,
@@ -1679,10 +3145,10 @@ exports[`Storyshots SideBar simple 1`] = `
       }
     >
       <div
-        className="css-1emno86"
+        className="emotion-1"
       >
         <div
-          className="css-in04e0"
+          className="emotion-0"
           onClick={[Function]}
         >
           <i
@@ -1710,11 +3176,11 @@ exports[`Storyshots SideBar simple 1`] = `
       </div>
     </div>
     <div
-      className="css-st8p8x"
+      className="emotion-4"
       width={400}
     >
       <div
-        className="css-47raxj"
+        className="emotion-3"
         onClick={[Function]}
       />
     </div>
@@ -1723,6 +3189,36 @@ exports[`Storyshots SideBar simple 1`] = `
 `;
 
 exports[`Storyshots Slider simple 1`] = `
+.emotion-1 {
+  width: 400px;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  margin-bottom: 25px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.__pebble__slider__large .emotion-0 {
+  margin-bottom: 35px;
+}
+
 <div
   style={
     Object {
@@ -1746,10 +3242,10 @@ exports[`Storyshots Slider simple 1`] = `
     }
   >
     <div
-      className="css-1z13ce1"
+      className="emotion-1"
     >
       <div
-        className="css-1qcs2ss"
+        className="emotion-0"
       >
         <div
           style={
@@ -1842,6 +3338,360 @@ exports[`Storyshots Slider simple 1`] = `
 `;
 
 exports[`Storyshots Stepper Default 1`] = `
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+}
+
+.emotion-2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-2 > div {
+  font-size: 14px;
+}
+
+.emotion-4 {
+  height: 20px;
+  width: 20px;
+  background-color: #9FA6B0;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: 18px;
+  position: relative;
+  z-index: 9;
+}
+
+.emotion-16 {
+  background-color: #ffffff;
+  margin-top: -10px;
+  border-radius: 3px;
+  box-shadow: 0 4px 7px 0 #E0E0E0;
+  padding: 60px;
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.emotion-9 {
+  height: 2px;
+  bottom: 9px;
+  position: absolute;
+  -webkit-transition: width 100ms ease-out;
+  transition: width 100ms ease-out;
+  background-color: #6161FF;
+}
+
+.emotion-17 {
+  position: relative;
+  width: 800px;
+}
+
+.emotion-1 {
+  height: 20px;
+  width: 20px;
+  background-color: #9FA6B0;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-top: 18px;
+  position: relative;
+  z-index: 9;
+  background-color: #6161FF;
+}
+
+.emotion-11 {
+  display: none;
+}
+
+.emotion-0 {
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  color: #6161FF;
+}
+
+.emotion-3 {
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+}
+
+.emotion-13 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  min-width: 140px;
+  height: 50px;
+  background-color: #EDEDED;
+  box-shadow: none;
+}
+
+.emotion-13.__pebble__button__disabled {
+  cursor: inherit;
+}
+
+.emotion-13.__pebble__button__disabled:focus {
+  border: none;
+}
+
+.emotion-13.__pebble__button__dropdown {
+  color: #101721;
+  background-color: #ffffff;
+}
+
+.emotion-13.__pebble__button__dropdown:not(.__pebble__button__dropdown):hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-13.__pebble__button__dropdown:not(.__pebble__button__dropdown):active {
+  background-color: #E0E0E0;
+}
+
+.emotion-13.__pebble__button__dropdown.__pebble__button__disabled {
+  color: #9FA6B0;
+  background-color: #EDEDED;
+}
+
+.emotion-13.__pebble__button__dropdown__open {
+  color: #ffffff;
+  background-color: #6161FF;
+}
+
+.emotion-13.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):hover {
+  background-color: #7070FF;
+}
+
+.emotion-13.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):active {
+  background-color: #5656ED;
+}
+
+.emotion-13.__pebble__button__dropdown__open.__pebble__button__disabled {
+  color: #ffffff;
+  background-color: #C0C0FF;
+}
+
+.emotion-13.__pebble__button__dropdown__open:focus {
+  border: none;
+}
+
+.emotion-13.__pebble__button__dropdown__selected {
+  background-color: #6161FF;
+  color: #ffffff;
+}
+
+.emotion-13:focus {
+  border: none;
+}
+
+.emotion-13.__pebble__button_link {
+  background-color: transparent;
+  border: 0;
+  color: #6161FF;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.emotion-13.__pebble__button_link:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-13.__pebble__button_link.__pebble__button__disabled {
+  color: #C0C0FF;
+  cursor: inherit;
+}
+
+.emotion-13:not(.__pebble__button__dropdown):hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-13:not(.__pebble__button__dropdown):active {
+  background-color: #E0E0E0;
+}
+
+.emotion-13.__pebble__button__disabled {
+  color: #9FA6B0;
+  background-color: #EDEDED;
+}
+
+.emotion-14 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  font-weight: normal;
+  color: #ffffff;
+  font-size: 14px;
+  min-width: 140px;
+  height: 50px;
+  background-color: #6161FF;
+  box-shadow: none;
+}
+
+.emotion-14.__pebble__button__disabled {
+  cursor: inherit;
+}
+
+.emotion-14.__pebble__button__disabled:focus {
+  border: none;
+}
+
+.emotion-14.__pebble__button__dropdown {
+  color: #101721;
+  background-color: #ffffff;
+}
+
+.emotion-14.__pebble__button__dropdown:not(.__pebble__button__dropdown):hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-14.__pebble__button__dropdown:not(.__pebble__button__dropdown):active {
+  background-color: #E0E0E0;
+}
+
+.emotion-14.__pebble__button__dropdown.__pebble__button__disabled {
+  color: #9FA6B0;
+  background-color: #EDEDED;
+}
+
+.emotion-14.__pebble__button__dropdown__open {
+  color: #ffffff;
+  background-color: #6161FF;
+}
+
+.emotion-14.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):hover {
+  background-color: #7070FF;
+}
+
+.emotion-14.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):active {
+  background-color: #5656ED;
+}
+
+.emotion-14.__pebble__button__dropdown__open.__pebble__button__disabled {
+  color: #ffffff;
+  background-color: #C0C0FF;
+}
+
+.emotion-14.__pebble__button__dropdown__open:focus {
+  border: none;
+}
+
+.emotion-14.__pebble__button__dropdown__selected {
+  background-color: #6161FF;
+  color: #ffffff;
+}
+
+.emotion-14:focus {
+  border: none;
+}
+
+.emotion-14.__pebble__button_link {
+  background-color: transparent;
+  border: 0;
+  color: #6161FF;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.emotion-14.__pebble__button_link:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-14.__pebble__button_link.__pebble__button__disabled {
+  color: #C0C0FF;
+  cursor: inherit;
+}
+
+.emotion-14:not(.__pebble__button__dropdown):hover {
+  background-color: #7070FF;
+}
+
+.emotion-14:not(.__pebble__button__dropdown):active {
+  background-color: #5656ED;
+}
+
+.emotion-14.__pebble__button__disabled {
+  color: #ffffff;
+  background-color: #C0C0FF;
+}
+
 <div
   style={
     Object {
@@ -1865,52 +3715,52 @@ exports[`Storyshots Stepper Default 1`] = `
     }
   >
     <div
-      className="css-ehohv7"
+      className="emotion-17"
     >
       <div
-        className="css-4sszgj"
+        className="emotion-10"
       >
         <div
-          className="css-5axksg"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-1d4tyn0"
+            className="emotion-0"
           >
             Buyer Registration
           </div>
           <div
-            className="css-1fhx6wm"
+            className="emotion-1"
           />
         </div>
         <div
-          className="css-5axksg"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-1ophbyu"
+            className="emotion-3"
           >
             Source Registration
           </div>
           <div
-            className="css-sbk6s2"
+            className="emotion-4"
           />
         </div>
         <div
-          className="css-5axksg"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-1ophbyu"
+            className="emotion-3"
           >
             Assignment
           </div>
           <div
-            className="css-sbk6s2"
+            className="emotion-4"
           />
         </div>
         <div
-          className="css-y0emul"
+          className="emotion-9"
           style={
             Object {
               "marginLeft": "16.666666666666668%",
@@ -1920,7 +3770,7 @@ exports[`Storyshots Stepper Default 1`] = `
         />
       </div>
       <div
-        className="css-1bnpjlh"
+        className="emotion-16"
       >
         <div
           className=""
@@ -1930,24 +3780,24 @@ exports[`Storyshots Stepper Default 1`] = `
           </div>
         </div>
         <div
-          className="css-1hyfx7x"
+          className="emotion-11"
         >
           <div>
             Source Registration
           </div>
         </div>
         <div
-          className="css-1hyfx7x"
+          className="emotion-11"
         >
           <div>
             Assignment
           </div>
         </div>
         <footer
-          className="css-198y4t4"
+          className="emotion-15"
         >
           <button
-            className="css-ojk1d2"
+            className="emotion-13"
             onClick={[Function]}
             style={
               Object {
@@ -1977,7 +3827,7 @@ exports[`Storyshots Stepper Default 1`] = `
             />
           </button>
           <button
-            className="css-1qpn69w"
+            className="emotion-14"
             onClick={[Function]}
             style={
               Object {
@@ -2014,6 +3864,47 @@ exports[`Storyshots Stepper Default 1`] = `
 `;
 
 exports[`Storyshots Tag simple 1`] = `
+.emotion-0 {
+  font-weight: bold;
+  color: #101721;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  border-radius: 3px;
+  padding: 0 15px;
+  height: 24px;
+  text-transform: uppercase;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0.__pebble__tag__with__close {
+  padding-right: 0;
+}
+
+.emotion-0 i {
+  font-size: 13px;
+  margin-left: 10px;
+  height: inherit;
+  padding: 7px;
+  cursor: pointer;
+  position: relative;
+}
+
 <div
   style={
     Object {
@@ -2037,7 +3928,7 @@ exports[`Storyshots Tag simple 1`] = `
     }
   >
     <div
-      className="css-vf1xsb"
+      className="emotion-0"
       style={
         Object {
           "backgroundColor": "#E8F6DD",
@@ -2054,6 +3945,47 @@ exports[`Storyshots Tag simple 1`] = `
 `;
 
 exports[`Storyshots Tag with cross 1`] = `
+.emotion-0 {
+  font-weight: bold;
+  color: #101721;
+  font-size: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  border-radius: 3px;
+  padding: 0 15px;
+  height: 24px;
+  text-transform: uppercase;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0.__pebble__tag__with__close {
+  padding-right: 0;
+}
+
+.emotion-0 i {
+  font-size: 13px;
+  margin-left: 10px;
+  height: inherit;
+  padding: 7px;
+  cursor: pointer;
+  position: relative;
+}
+
 <div
   style={
     Object {
@@ -2077,7 +4009,7 @@ exports[`Storyshots Tag with cross 1`] = `
     }
   >
     <div
-      className="css-vf1xsb __pebble__tag__with__close"
+      className="emotion-0 __pebble__tag__with__close"
       style={
         Object {
           "backgroundColor": "#E8F6DD",
@@ -2122,6 +4054,137 @@ exports[`Storyshots Tag with cross 1`] = `
 `;
 
 exports[`Storyshots Typeahead simple 1`] = `
+.emotion-3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+  height: 68px;
+}
+
+.emotion-3.__pebble__input__wrapper__textarea {
+  height: 110px;
+}
+
+.emotion-1 {
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #EDEDED;
+  padding: 24px 0 12px 0;
+  height: 48px;
+  font-weight: normal;
+  color: #101721;
+  font-size: 14px;
+  width: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-1.__pebble__input__read__only {
+  color: #6B7785;
+}
+
+.emotion-1.__pebble__input__disabled {
+  cursor: inherit;
+  pointer-events: none;
+  color: #9FA6B0;
+}
+
+.emotion-1.__pebble__input__textarea {
+  height: 88px;
+  padding: 24px 0 52px 0;
+  resize: none;
+}
+
+.emotion-1[type='date']::-webkit-inner-spin-button,
+.emotion-1[type='date']::-webkit-calendar-picker-indicator {
+  webkit-appearance: none;
+  display: none;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-webkit-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::-moz-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1:-ms-input-placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-1::placeholder {
+  color: #E0E0E0;
+}
+
+.emotion-2 {
+  height: 2px;
+  background-color: #6161FF;
+  margin-top: -2px;
+  position: relative;
+  width: 0;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  z-index: 9;
+}
+
+.emotion-2.__pebble__input__highlight__state,
+.emotion-2.__pebble__input__highlight__focused {
+  width: 100%;
+}
+
+.emotion-0 {
+  color: #9FA6B0;
+  font-size: 14px;
+  line-height: 12px;
+  position: absolute;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  -webkit-transform: translate(0,24px);
+  -ms-transform: translate(0,24px);
+  transform: translate(0,24px);
+  pointer-events: none;
+}
+
+.emotion-0.__pebble__input__label__focused {
+  font-size: 12px;
+  line-height: 10px;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  color: #6B7785;
+}
+
+.emotion-4 {
+  position: relative;
+  width: 400px;
+}
+
 <div
   style={
     Object {
@@ -2145,28 +4208,28 @@ exports[`Storyshots Typeahead simple 1`] = `
     }
   >
     <div
-      className="css-1rdqlva"
+      className="emotion-4"
     >
       <div
-        className="css-1qyiurl"
+        className="emotion-3"
         onBlur={[Function]}
         onFocus={[Function]}
       >
         <label
-          className="css-1o3mue1"
+          className="emotion-0"
         >
           H
         </label>
         <input
           aria-label="H"
-          className="css-1y3mi6c"
+          className="emotion-1"
           onChange={[Function]}
           onFocus={[Function]}
           readOnly={false}
           value=""
         />
         <div
-          className="css-snw5v9"
+          className="emotion-2"
           style={
             Object {
               "backgroundColor": "#6161FF",
