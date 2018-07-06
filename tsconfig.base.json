@@ -28,5 +28,5 @@
     }
   },
   "includes": ["src"],
-  "exclude": ["node_modules", "dist", "stories", "tests", "compiled"]
+  "exclude": ["node_modules", "dist", "stories", "tests", "compiled", "src/**/__tests__"]
 }

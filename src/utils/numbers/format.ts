@@ -1,4 +1,4 @@
-function getShortenedNumber(num: number, toFixed: number = 1): string {
+export function getShortenedNumber(num: number, toFixed: number = 1): string {
   if (!num) return;
   let formattedNum: string;
   if (num >= 10000000) {
@@ -11,8 +11,4 @@ function getShortenedNumber(num: number, toFixed: number = 1): string {
     formattedNum = `${num.toFixed(toFixed)}`;
   }
   return formattedNum;
-}
-
-export default {
-	getShortenedNumber
 }

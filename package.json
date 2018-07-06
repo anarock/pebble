@@ -6,6 +6,14 @@
   "main": "dist/pebble.js",
   "module": "dist/pebble.es.js",
   "typings": "dist/index.d.ts",
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build": "rimraf dist && rimraf compiled && tsc -p tsconfig.base.json && rollup -c",
+    "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'npm run build'",
+    "test": "jest",
+    "test:watch": "npm test -- --watchAll"
+  },
   "dependencies": {
     "date-fns": "^1.29.0",
     "just-debounce-it": "^1.0.1",
@@ -44,6 +52,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "^6.26.0",
+    "chokidar-cli": "^1.2.0",
     "combos": "^0.2.0",
     "commitizen": "^2.10.1",
     "cz-conventional-changelog": "^2.1.0",
@@ -72,13 +81,6 @@
     "typescript": "^2.9.2",
     "webpack": "^4.15.1"
   },
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build": "rimraf dist && rimraf compiled && tsc -p tsconfig.base.json && rollup -c",
-    "test": "jest",
-    "test:watch": "npm test -- --watchAll"
-  },
   "jest": {
     "globals": {
       "ts-jest": {
@@ -93,7 +95,7 @@
       "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.tsx?$": "ts-jest"
     },
-    "testRegex": "(<rootDir>/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testRegex": "(<rootDir>/(tests|src)/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
