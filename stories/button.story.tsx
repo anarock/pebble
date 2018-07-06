@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { boolean, select } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
-import Button from "../src/components/Button";
+import Button from "@src/components/Button";
 
 const t = ["primary", "secondary", "link", "dropdown"];
 
@@ -20,3 +20,4 @@ storiesOf("Button", module).add("test", () => (
     Hello 😀 😎 👍 💯
   </Button>
 ));
+
