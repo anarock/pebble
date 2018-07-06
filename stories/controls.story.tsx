@@ -13,6 +13,7 @@ class Container extends React.PureComponent<{}, { selected: Id | Id[] }> {
   render() {
     return (
       <Controls
+				className="controls"
         type={ControlType.CHECKBOX}
         onChange={({ selected }) => this.setState({ selected })}
         selected={this.state.selected}

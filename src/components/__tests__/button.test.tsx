@@ -4,13 +4,15 @@ import Button from "@src/components/Button";
 import combos from "combos";
 import sinon from "sinon";
 import { mount } from "enzyme";
+import Ink from "react-ink";
+import {ButtonType} from "../Button";
 
 function noop() {}
 
 describe("Button Combos test", () => {
   const _props = {
     disabled: [true, false],
-    type: ["primary", "secondary", "dropdown", "link"],
+    type: Object.keys(ButtonType).map(x => ButtonType[x]),
     showRipple: [true, false]
   };
 
@@ -29,13 +31,22 @@ describe("Button Combos test", () => {
 });
 
 describe("Button: functionality", () => {
-  test("click is registered correctly", () => {
+  test("ripple is present and click is registered correctly", () => {
     const fake = sinon.fake();
 
     const button = mount(<Button onClick={fake}>Submit</Button>);
 
     button.find("button").simulate("click");
 
+		expect(button.contains(<Ink />)).toBeTruthy();
     expect(fake.calledOnce).toBeTruthy();
   });
+
+  test("no ripple present and no click registered in disabled state", () => {
+  	const fake = sinon.fake();
+  	const button = mount(<Button disabled onClick={fake}>Submit</Button>);
+
+  	expect(button.contains(<Ink />)).toBeFalsy();
+  	expect(fake.called).toBeFalsy();
+	});
 });

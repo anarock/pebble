@@ -64,14 +64,16 @@ class Controls extends React.PureComponent<ControlsProps> {
     return (
       <div className={className}>
         {data.map(datum => {
+        	const key = keyExtractor(datum);
+
           const isSelected =
             !this.isRadio() && Array.isArray(selected)
-              ? selected.includes(keyExtractor(datum))
-              : keyExtractor(datum) === selected;
+              ? selected.indexOf(key) >= 0
+              : key === selected;
           return (
             <div
-              key={keyExtractor(datum)}
-              onClick={() => this.handleClick(keyExtractor(datum))}
+              key={key}
+              onClick={() => this.handleClick(key)}
             >
               {renderElement ? (
                 renderElement(
@@ -111,7 +113,7 @@ export const ControlView: React.SFC<ControlViewProps> = ({
   isSelected,
   className
 }) => {
-  const isRadio = type === "radio";
+  const isRadio = type === ControlType.RADIO;
   const iconClass = cx(iconStyle, {
     "icon-radio": isRadio && !isSelected,
     "icon-radio-selected": isRadio && isSelected,

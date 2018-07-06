@@ -9,7 +9,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rimraf dist && rimraf compiled && tsc -p tsconfig.base.json && rollup -c",
+    "build": "rimraf dist && tsc -p tsconfig.base.json && rollup -c && rimraf compiled",
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'npm run build'",
     "test": "jest",
     "test:watch": "npm test -- --watchAll"

@@ -13,7 +13,7 @@ export interface ControlsProps {
   ) => JSX.Element;
   data: any[];
   keyExtractor: (item: any) => Id;
-  type?: ControlType;
+  type: ControlType;
   onChange: (
     args: {
       selected: Id | Id[];
