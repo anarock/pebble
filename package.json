@@ -25,7 +25,6 @@
     "@storybook/addon-knobs": "^v4.0.0-alpha.12",
     "@storybook/addon-links": "^v4.0.0-alpha.12",
     "@storybook/addon-options": "^v4.0.0-alpha.12",
-    "@storybook/addon-storyshots": "^v4.0.0-alpha.12",
     "@storybook/addon-storysource": "^v4.0.0-alpha.12",
     "@storybook/addons": "^v4.0.0-alpha.12",
     "@storybook/react": "^v4.0.0-alpha.12",
