@@ -1,5 +1,6 @@
+import {ControlType} from "@src/components/Controls";
+
 type Id = string | number;
-type Type = "radio" | "checkbox";
 
 export interface ControlsProps {
   className?: string;
@@ -12,7 +13,7 @@ export interface ControlsProps {
   ) => JSX.Element;
   data: any[];
   keyExtractor: (item: any) => Id;
-  type?: Type;
+  type?: ControlType;
   onChange: (
     args: {
       selected: Id | Id[];

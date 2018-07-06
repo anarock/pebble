@@ -1,13 +1,12 @@
 import * as React from "react";
-
-export type Type = "primary" | "secondary" | "dropdown" | "link";
+import {ButtonType} from "@src/components/Button";
 
 export interface ButtonProps {
   children: React.ReactNode | string;
   onClick: () => void;
   showShadow?: boolean;
   disabled?: boolean;
-  type?: Type;
+  type?: ButtonType;
   isOpen?: boolean;
   large?: boolean;
   width?: number;

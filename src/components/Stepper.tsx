@@ -1,7 +1,7 @@
 import * as React from "react";
 import { css, cx } from "react-emotion";
 import { StepperProps, StepperState } from "@src/components/typings/Stepper";
-import Button from "@src/components/Button";
+import Button, {ButtonType} from "@src/components/Button";
 import {
   activeDotStyle,
   contentWrapper,
@@ -159,7 +159,7 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
               <Button
                 large
                 width={100}
-                type="secondary"
+                type={ButtonType.SECONDARY}
                 onClick={this.getLeftButtonData().action}
               >
                 {this.getLeftButtonData().label}

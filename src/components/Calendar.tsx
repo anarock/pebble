@@ -70,15 +70,12 @@ class Calendar extends React.PureComponent<CalendarProps> {
           onApply && (
             <div style={{ ...mixins.flexSpaceBetween, marginTop: 20 }}>
               {onClear && (
-                <Button type="secondary" onClick={onClear}>
+                <Button onClick={onClear}>
                   Clear
                 </Button>
               )}
               {onApply && (
-                <Button
-                  type="primary"
-                  onClick={() => onApply(this.state.value)}
-                >
+                <Button onClick={() => onApply(this.state.value)}>
                   Apply
                 </Button>
               )}

@@ -1,7 +1,7 @@
-import constants from "@src/theme/constants";
-import colors from "@src/theme/colors";
+import constants from "./constants";
+import colors from "./colors";
 import { css } from "react-emotion";
-import typography from "@src/theme/typography";
+import typography from "./typography";
 
 export const tableStyle = css({
   borderRadius: constants.borderRadius,

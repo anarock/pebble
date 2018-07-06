@@ -1,4 +1,4 @@
-import { Colors } from "@src/theme/typings/colors";
+import { Colors } from "./typings/colors";
 
 const colors: Colors = {
   violet: {

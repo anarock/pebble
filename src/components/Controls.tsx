@@ -8,9 +8,14 @@ import {
 } from "@src/components/styles/Controls.styles";
 import { messageStyle } from "@src/components/styles/Input.styles";
 
+export enum ControlType {
+	CHECKBOX = "checkbox",
+	RADIO = "radio"
+}
+
 class Controls extends React.PureComponent<ControlsProps> {
   static defaultProps = {
-    type: "radio"
+    type: ControlType.RADIO
   };
 
   private handleClick = (id: string | number) => {

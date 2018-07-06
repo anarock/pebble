@@ -9,9 +9,16 @@ import {
 import Ink from "react-ink";
 import { ButtonProps } from "@src/components/typings/Button";
 
+export enum ButtonType {
+	PRIMARY = "primary",
+	SECONDARY = "secondary",
+	DROPDOWN = "dropdown",
+	LINK = "link"
+}
+
 const Button: React.SFC<ButtonProps> = ({
   large,
-  type = "primary",
+  type = ButtonType.PRIMARY,
   disabled,
   children,
   onClick,
