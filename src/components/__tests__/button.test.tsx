@@ -1,11 +1,10 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
-import Button from "@src/components/Button";
+import Button, { ButtonType } from "@src/components/Button";
 import combos from "combos";
 import sinon from "sinon";
 import { mount } from "enzyme";
 import Ink from "react-ink";
-import {ButtonType} from "../Button";
 
 function noop() {}
 
@@ -38,15 +37,19 @@ describe("Button: functionality", () => {
 
     button.find("button").simulate("click");
 
-		expect(button.contains(<Ink />)).toBeTruthy();
+    expect(button.contains(<Ink />)).toBeTruthy();
     expect(fake.calledOnce).toBeTruthy();
   });
 
   test("no ripple present and no click registered in disabled state", () => {
-  	const fake = sinon.fake();
-  	const button = mount(<Button disabled onClick={fake}>Submit</Button>);
+    const fake = sinon.fake();
+    const button = mount(
+      <Button disabled onClick={fake}>
+        Submit
+      </Button>
+    );
 
-  	expect(button.contains(<Ink />)).toBeFalsy();
-  	expect(fake.called).toBeFalsy();
-	});
+    expect(button.contains(<Ink />)).toBeFalsy();
+    expect(fake.called).toBeFalsy();
+  });
 });
