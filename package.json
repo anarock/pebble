@@ -12,7 +12,9 @@
     "build": "rimraf dist && tsc -p tsconfig.base.json && rollup -c && rimraf compiled",
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'npm run build'",
     "test": "jest",
-    "test:watch": "npm test -- --watchAll"
+    "test:watch": "npm test -- --watchAll",
+    "precommit": "pretty-quick --staged",
+    "format": "pretty-quick"
   },
   "dependencies": {
     "date-fns": "^1.29.0",

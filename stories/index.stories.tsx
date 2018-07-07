@@ -21,12 +21,12 @@ addDecorator(
   withBackgrounds([
     {
       name: "Grey",
-      value: colors.gray.lighter,
+      value: colors.gray.lighter
     },
     {
       name: "White",
       value: colors.white.base,
-			default: true
+      default: true
     }
   ])
 );

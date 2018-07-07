@@ -23,7 +23,13 @@ const Select: React.SFC<SelectProps> = ({
   ...selectProps
 }) => {
   // @ts-ignore
-	const {keyExtractor, rowRenderElement, options, selected, onSelect} = selectProps;
+  const {
+    keyExtractor,
+    rowRenderElement,
+    options,
+    selected,
+    onSelect
+  } = selectProps;
 
   // @ts-ignore
   const selectedLabel: string = selected
@@ -58,10 +64,10 @@ const Select: React.SFC<SelectProps> = ({
           <Options
             {...selectProps}
             width={"100%"}
-						keyExtractor={keyExtractor}
-						rowRenderElement={rowRenderElement}
-						options={options}
-						selected={selected}
+            keyExtractor={keyExtractor}
+            rowRenderElement={rowRenderElement}
+            options={options}
+            selected={selected}
             onSelect={option => {
               onSelect(option);
               toggle();
