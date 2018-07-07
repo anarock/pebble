@@ -9,7 +9,7 @@ import {
   selectWrapper
 } from "@src/components/styles/Select.styles";
 import Options from "@src/components/Options";
-import Dropdown from "@src/components/Dropdown";
+import DropDown from "@src/components/DropDown";
 import Input from "@src/components/Input";
 
 function noop() {}
@@ -32,7 +32,7 @@ const Select: React.SFC<SelectProps> = ({
 
   return (
     <div className={cx(selectWrapper, className)}>
-      <Dropdown
+      <DropDown
         dropDownClassName={dropDownClass}
         labelComponent={({ toggleDropdown, isOpen }) => {
           const chevron = cx(chevronStyle, "icon-arrow-down", {
@@ -68,7 +68,7 @@ const Select: React.SFC<SelectProps> = ({
             }}
           />
         )}
-      </Dropdown>
+      </DropDown>
     </div>
   );
 };

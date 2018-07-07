@@ -1,5 +1,7 @@
 {
-  "presets": ["env", "stage-0" , "react"],
+  "presets": [["env", {
+    "targets": { "node": "6" }
+  }], "stage-0" , "react"],
   "plugins": [
     [
       "module-resolver",

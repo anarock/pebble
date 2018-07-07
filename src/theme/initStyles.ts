@@ -16,14 +16,14 @@ export function fontFace(
   return `
       @font-face{
           font-family: "${name}";
-          src: url(${import("./fonts/" + src + ".eot")});
-          src: url(${import("./fonts/" +
+          src: url(${require("./fonts/" + src + ".eot")});
+          src: url(${require("./fonts/" +
             src +
             ".eot")}?#iefix) format("embedded-opentype"),
-               url(${import("./fonts/" + src + ".woff")}) format("woff"),
-               url(${import("./fonts/" + src + ".woff2")}) format("woff2"),
-               url(${import("./fonts/" + src + ".ttf")}) format("truetype"),
-               url(${import("./fonts/" + src + ".svg")}#${name}) format("svg");
+               url(${require("./fonts/" + src + ".woff")}) format("woff"),
+               url(${require("./fonts/" + src + ".woff2")}) format("woff2"),
+               url(${require("./fonts/" + src + ".ttf")}) format("truetype"),
+               url(${require("./fonts/" + src + ".svg")}#${name}) format("svg");
           font-style: ${fontStyle};
           font-weight: ${fontWeight};
       }

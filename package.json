@@ -18,10 +18,11 @@
     "date-fns": "^1.29.0",
     "just-debounce-it": "^1.0.1",
     "react-calendar": "^2.16.0",
-    "react-emotion": "^9.2.4",
+    "react-emotion": "^9.2.5",
     "react-ink": "^6.4.0",
-    "react-spring": "^5.3.19",
-    "rheostat": "^2.2.0"
+    "react-popper": "^1.0.0",
+    "react-spring": "^5.3.21",
+    "rheostat": "2.2.0"
   },
   "devDependencies": {
     "@storybook/addon-a11y": "^v4.0.0-alpha.12",
@@ -61,7 +62,7 @@
     "file-loader": "^1.1.11",
     "husky": "^0.14.3",
     "jest": "^23.3.0",
-    "jest-emotion": "^9.2.4",
+    "jest-emotion": "^9.2.5",
     "moment": "^2.22.2",
     "prettier": "^1.13.7",
     "pretty-quick": "^1.6.0",

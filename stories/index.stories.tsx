@@ -7,11 +7,12 @@ import { injectGlobal } from "react-emotion";
 import { checkA11y } from "@storybook/addon-a11y";
 import { withConsole } from "@storybook/addon-console";
 
+initStyles();
+
 injectGlobal`
-	 @import url(https://i.icomoon.io/public/temp/612dbdddf9/AppIcons/style.css);
+	 @import url(https://i.icomoon.io/public/temp/eb87a84def/AppIcons/style.css);
 `;
 
-initStyles();
 addDecorator(centered);
 addDecorator(withKnobs);
 addDecorator(checkA11y);
@@ -21,11 +22,11 @@ addDecorator(
     {
       name: "Grey",
       value: colors.gray.lighter,
-      default: true
     },
     {
       name: "White",
-      value: colors.white.base
+      value: colors.white.base,
+			default: true
     }
   ])
 );

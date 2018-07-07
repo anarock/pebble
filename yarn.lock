@@ -21,6 +21,13 @@
     "@babel/types" "7.0.0-beta.40"
     lodash "^4.2.0"
 
+"@babel/helper-module-imports@7.0.0-beta.51":
+  version "7.0.0-beta.51"
+  resolved "https://registry.yarnpkg.com/@babel/helper-module-imports/-/helper-module-imports-7.0.0-beta.51.tgz#ce00428045fbb7d5ebc0ea7bf835789f15366ab2"
+  dependencies:
+    "@babel/types" "7.0.0-beta.51"
+    lodash "^4.17.5"
+
 "@babel/highlight@7.0.0-beta.42":
   version "7.0.0-beta.42"
   resolved "https://registry.yarnpkg.com/@babel/highlight/-/highlight-7.0.0-beta.42.tgz#a502a1c0d6f99b2b0e81d468a1b0c0e81e3f3623"
@@ -50,6 +57,14 @@
   dependencies:
     esutils "^2.0.2"
     lodash "^4.2.0"
+    to-fast-properties "^2.0.0"
+
+"@babel/types@7.0.0-beta.51":
+  version "7.0.0-beta.51"
+  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.51.tgz#d802b7b543b5836c778aa691797abf00f3d97ea9"
+  dependencies:
+    esutils "^2.0.2"
+    lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
 "@emotion/babel-utils@^0.6.4":
@@ -1407,6 +1422,23 @@ babel-plugin-emotion@^9.2.4:
   resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-9.2.4.tgz#a4e54a8097f6ba06cbbc7a9063927afafe9fe73a"
   dependencies:
     "@babel/helper-module-imports" "7.0.0-beta.40"
+    "@emotion/babel-utils" "^0.6.4"
+    "@emotion/hash" "^0.6.2"
+    "@emotion/memoize" "^0.6.1"
+    "@emotion/stylis" "^0.6.10"
+    babel-plugin-macros "^2.0.0"
+    babel-plugin-syntax-jsx "^6.18.0"
+    convert-source-map "^1.5.0"
+    find-root "^1.1.0"
+    mkdirp "^0.5.1"
+    source-map "^0.5.7"
+    touch "^1.0.0"
+
+babel-plugin-emotion@^9.2.5:
+  version "9.2.5"
+  resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-9.2.5.tgz#0046e03be5c16276f85380476f88c9fcbf7c9536"
+  dependencies:
+    "@babel/helper-module-imports" "7.0.0-beta.51"
     "@emotion/babel-utils" "^0.6.4"
     "@emotion/hash" "^0.6.2"
     "@emotion/memoize" "^0.6.1"
@@ -2933,6 +2965,12 @@ create-emotion-styled@^9.2.3:
   dependencies:
     "@emotion/is-prop-valid" "^0.6.1"
 
+create-emotion-styled@^9.2.5:
+  version "9.2.5"
+  resolved "https://registry.yarnpkg.com/create-emotion-styled/-/create-emotion-styled-9.2.5.tgz#3f555365710233f0f26831d1ecf0b8ef760d4b2a"
+  dependencies:
+    "@emotion/is-prop-valid" "^0.6.1"
+
 create-emotion@^9.2.4:
   version "9.2.4"
   resolved "https://registry.yarnpkg.com/create-emotion/-/create-emotion-9.2.4.tgz#0a4379f6bf0708c54fe26bfcd6b6bd3592e8cf23"
@@ -2973,6 +3011,13 @@ create-react-class@^15.5.2, create-react-class@^15.6.2:
     fbjs "^0.8.9"
     loose-envify "^1.3.1"
     object-assign "^4.1.1"
+
+create-react-context@^0.2.1:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.2.tgz#9836542f9aaa22868cd7d4a6f82667df38019dca"
+  dependencies:
+    fbjs "^0.8.0"
+    gud "^1.0.0"
 
 cross-spawn@6.0.5:
   version "6.0.5"
@@ -3953,7 +3998,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.16, fbjs@^0.8.4, fbjs@^0.8.9:
+fbjs@^0.8.0, fbjs@^0.8.16, fbjs@^0.8.4, fbjs@^0.8.9:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   dependencies:
@@ -4386,6 +4431,10 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
+
+gud@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
 
 gzip-size@4.1.0:
   version "4.1.0"
@@ -5251,9 +5300,9 @@ jest-each@^23.2.0:
     chalk "^2.0.1"
     pretty-format "^23.2.0"
 
-jest-emotion@^9.2.4:
-  version "9.2.4"
-  resolved "https://registry.yarnpkg.com/jest-emotion/-/jest-emotion-9.2.4.tgz#a5cfe4374082a3c3dd42b7f0186a8c898f677cb8"
+jest-emotion@^9.2.5:
+  version "9.2.5"
+  resolved "https://registry.yarnpkg.com/jest-emotion/-/jest-emotion-9.2.5.tgz#1608bf20232f183c4073fb3bfe5186b0815a8549"
   dependencies:
     "@types/jest" "^23.0.2"
     chalk "^2.4.1"
@@ -6790,6 +6839,10 @@ pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
 
+popper.js@^1.14.1:
+  version "1.14.3"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.3.tgz#1438f98d046acf7b4d78cd502bf418ac64d4f095"
+
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
@@ -7389,12 +7442,19 @@ react-dom@^16.4.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-emotion@^9.1.3, react-emotion@^9.2.4:
+react-emotion@^9.1.3:
   version "9.2.4"
   resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.2.4.tgz#98e00f70ce2ca4ee13923460123e763e492c013a"
   dependencies:
     babel-plugin-emotion "^9.2.4"
     create-emotion-styled "^9.2.3"
+
+react-emotion@^9.2.5:
+  version "9.2.5"
+  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.2.5.tgz#0e40edf062d7eea260d4327a9fe27288ec83835e"
+  dependencies:
+    babel-plugin-emotion "^9.2.5"
+    create-emotion-styled "^9.2.5"
 
 react-error-overlay@^4.0.0:
   version "4.0.0"
@@ -7451,6 +7511,17 @@ react-onclickoutside@^6.5.0:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.7.1.tgz#6a5b5b8b4eae6b776259712c89c8a2b36b17be93"
 
+react-popper@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-1.0.0.tgz#b99452144e8fe4acc77fa3d959a8c79e07a65084"
+  dependencies:
+    babel-runtime "6.x.x"
+    create-react-context "^0.2.1"
+    popper.js "^1.14.1"
+    prop-types "^15.6.1"
+    typed-styles "^0.0.5"
+    warning "^3.0.0"
+
 react-reconciler@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.7.0.tgz#9614894103e5f138deeeb5eabaf3ee80eb1d026d"
@@ -7469,9 +7540,9 @@ react-split-pane@^0.1.77:
     react-lifecycles-compat "^3.0.4"
     react-style-proptype "^3.0.0"
 
-react-spring@^5.3.19:
-  version "5.3.19"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.3.19.tgz#512aa5df025b692965bc1bad0bb832a7833af0a1"
+react-spring@^5.3.21:
+  version "5.3.21"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.3.21.tgz#db9c3528669b366f473cf2078ee804efccc3d48e"
   dependencies:
     "@babel/runtime" "7.0.0-beta.51"
 
@@ -7851,7 +7922,7 @@ ret@~0.1.10:
   version "0.1.15"
   resolved "https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz#b8a4825d5bdb1fc3f6f53c2bc33f81388681c7bc"
 
-rheostat@^2.2.0:
+rheostat@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/rheostat/-/rheostat-2.2.0.tgz#d6b388e21f9c6bf5753a8e9518a8eea3467287d2"
   dependencies:
@@ -8785,6 +8856,10 @@ type-is@~1.6.15, type-is@~1.6.16:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.18"
+
+typed-styles@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/typed-styles/-/typed-styles-0.0.5.tgz#a60df245d482a9b1adf9c06c078d0f06085ed1cf"
 
 typedarray@^0.0.6:
   version "0.0.6"
