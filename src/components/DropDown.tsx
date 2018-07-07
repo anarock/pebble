@@ -1,12 +1,9 @@
 import * as React from "react";
-import {
-  DropdownProps,
-  DropdownState
-} from "@src/components/typings/Dropdown";
+import { DropdownProps, DropdownState } from "@src/components/typings/Dropdown";
 import Button from "@src/components/Button";
 import { DropDownStyle } from "@src/components/styles/Dropdown.styles";
 
-class Dropdown extends React.PureComponent<DropdownProps, DropdownState> {
+class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
   componentRef: React.RefObject<HTMLDivElement> = React.createRef();
 
   state: DropdownState = {
@@ -92,4 +89,4 @@ class Dropdown extends React.PureComponent<DropdownProps, DropdownState> {
   }
 }
 
-export default Dropdown;
+export default DropDown;

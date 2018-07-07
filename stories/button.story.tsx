@@ -22,6 +22,6 @@ storiesOf("Button", module).add("test", () => (
     isSelected={boolean("isSelected")}
     showRipple={boolean("showRipple")}
   >
-    Hello 😀 😎 👍 💯
+    Submit
   </Button>
 ));

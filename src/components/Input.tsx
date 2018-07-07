@@ -5,7 +5,7 @@ import {
   InputState,
   DateInputProps
 } from "@src/components/typings/Input";
-import Dropdown from "@src/components/Dropdown";
+import DropDown from "@src/components/DropDown";
 import Calendar from "@src/components/Calendar";
 import format from "date-fns/format";
 import {
@@ -157,7 +157,7 @@ class DateInput extends React.PureComponent<DateInputProps> {
   render() {
     const { value } = this.props;
     return (
-      <Dropdown
+      <DropDown
         dropDownClassName={dropDownClassName}
         labelComponent={({ toggleDropdown }) => (
           <div onClick={toggleDropdown}>
@@ -182,7 +182,7 @@ class DateInput extends React.PureComponent<DateInputProps> {
             }}
           />
         )}
-      </Dropdown>
+      </DropDown>
     );
   }
 }

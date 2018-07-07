@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import Dropdown from "@src/components/Dropdown";
+import DropDown from "@src/components/DropDown";
 import Options from "@src/components/Options";
 
 const options = [
@@ -13,7 +13,7 @@ const options = [
 ];
 
 storiesOf("Dropdown", module).add("simple", () => (
-  <Dropdown buttonLabel="Hello" initiallyOpen>
+  <DropDown buttonLabel="Hello" initiallyOpen>
     {() => (
       <Options
         options={options}
@@ -21,5 +21,5 @@ storiesOf("Dropdown", module).add("simple", () => (
         onSelect={() => {}}
       />
     )}
-  </Dropdown>
+  </DropDown>
 ));
