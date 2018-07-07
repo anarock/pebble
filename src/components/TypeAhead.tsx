@@ -110,7 +110,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
         {this.state.showSuggestions && (
           <Options
-            dropdownClassName={cx(css({ marginTop: -40 }), dropdownClassName)}
+            dropdownClassName={cx(css({ marginTop: -46 }), dropdownClassName)}
             rowRenderElement={rowRenderElement}
             onSelect={this.onSelect}
             options={suggestions}

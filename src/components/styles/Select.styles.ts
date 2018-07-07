@@ -10,7 +10,7 @@ export const selectInputStyle = css({
 });
 
 export const dropDownClass = css({
-  marginTop: -20
+  marginTop: -40
 });
 
 export const inputWrapper = css({
