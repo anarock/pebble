@@ -76,20 +76,22 @@ function getJSXSource(componentName: string, props: any) {
   });
 }
 
-const Combinations = ({
-  Component,
-  props,
-  groupProps,
-  randomProps,
-  children,
-  titleExtractor
-}: {
+interface CombinationProps {
   Component: any;
   props: any;
   groupProps: any;
   randomProps: any;
   children: any;
   titleExtractor?: (item: any) => any;
+}
+
+const Combinations: React.SFC<CombinationProps> = ({
+  Component,
+  props,
+  groupProps,
+  randomProps,
+  children,
+  titleExtractor
 }) => {
   return (
     <React.Fragment>
