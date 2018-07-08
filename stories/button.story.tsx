@@ -27,7 +27,7 @@ storiesOf("Button", module)
       Submit
     </Button>
   ))
-  .add("A", () => (
+  .add("Design System", () => (
     <Combinations
       Component={Button}
       titleExtractor={x => x.type}
