@@ -3,10 +3,10 @@ import filesize from "rollup-plugin-filesize";
 import sourceMaps from "rollup-plugin-sourcemaps";
 import pkg from "./package.json";
 import babel from "rollup-plugin-babel";
-import commonjs from 'rollup-plugin-commonjs';
+import commonjs from "rollup-plugin-commonjs";
 
 const input = "compiled/index.js";
-const external = ["react"];
+const external = ["react", "react-calendar/dist/entry.nostyle"];
 
 export default {
   input,
@@ -26,21 +26,22 @@ export default {
   plugins: [
     babel({
       babelrc: false,
-      presets: [['env', { modules: false }], "stage-0", "react"],
+      presets: [["env", { modules: false }], "stage-0", "react"],
       plugins: [
         [
           "module-resolver",
           {
-            "root": ["./"],
-            "alias": {
+            root: ["./"],
+            alias: {
               "@src": ["./compiled"]
             }
           }
-        ], "external-helpers"
-      ],
+        ],
+        "external-helpers"
+      ]
     }),
     resolve({
-      extensions: [ '.js', '.jsx', '.json' ]
+      extensions: [".js", ".jsx", ".json"]
     }),
     commonjs(),
     sourceMaps(),

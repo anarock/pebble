@@ -1,6 +1,6 @@
 import * as React from "react";
 import { DropdownProps, DropdownState } from "@src/components/typings/Dropdown";
-import Button from "@src/components/Button";
+import Button, { ButtonType } from "@src/components/Button";
 import { DropDownStyle } from "@src/components/styles/Dropdown.styles";
 
 class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
@@ -13,10 +13,10 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
   static defaultProps = {
     isInitiallyOpen: true,
     closeOnClickOutside: true,
-    type: "dropdown"
+    type: ButtonType.DROPDOWN
   };
 
-  private toggleDropdown = () => {
+  private toggleDropDown = () => {
     this.setState(
       {
         isOpen: !this.state.isOpen
@@ -43,7 +43,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
       this.componentRef &&
       !this.componentRef.current.contains(e.target as HTMLInputElement)
     ) {
-      return this.toggleDropdown();
+      return this.toggleDropDown();
     }
   };
 
@@ -67,21 +67,21 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
     return (
       <div className={className} ref={this.componentRef}>
         {labelComponent ? (
-          labelComponent({ isOpen, toggleDropdown: this.toggleDropdown })
+          labelComponent({ isOpen, toggleDropdown: this.toggleDropDown })
         ) : (
           <Button
             isSelected={isSelected}
             showShadow
             type={type}
             isOpen={isOpen}
-            onClick={this.toggleDropdown}
+            onClick={this.toggleDropDown}
           >
             {buttonLabel}
           </Button>
         )}
         {this.state.isOpen && (
           <DropDownStyle className={dropDownClassName} style={{ padding }}>
-            {children({ toggle: this.toggleDropdown })}
+            {children({ toggle: this.toggleDropDown })}
           </DropDownStyle>
         )}
       </div>
