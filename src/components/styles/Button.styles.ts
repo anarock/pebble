@@ -21,10 +21,10 @@ const buttonPseudo = {
   primary: {
     color: white.base,
     backgroundColor: violet.base,
-    "&:not(.__pebble__button__dropdown):hover": {
+    "&:not(.__pebble__button__dropdown):not(.__pebble__button__disabled):hover": {
       backgroundColor: violet.light
     },
-    "&:not(.__pebble__button__dropdown):active": {
+    "&:not(.__pebble__button__dropdown):not(__pebble__button__disabled):active": {
       backgroundColor: violet.dark
     },
     "&.__pebble__button__disabled": {
@@ -35,10 +35,10 @@ const buttonPseudo = {
   secondary: {
     color: gray.darker,
     backgroundColor: gray.lighter,
-    "&:not(.__pebble__button__dropdown):hover": {
+    "&:not(.__pebble__button__dropdown):not(__pebble__button__disabled):hover": {
       backgroundColor: gray.lightest
     },
-    "&:not(.__pebble__button__dropdown):active": {
+    "&:not(.__pebble__button__dropdown):not(__pebble__button__disabled):active": {
       backgroundColor: gray.light
     },
     "&.__pebble__button__disabled": {
@@ -64,7 +64,7 @@ export const buttonStyle = css({
   justifyContent: "center",
   border: 0,
   "&.__pebble__button__disabled": {
-    cursor: "inherit",
+    cursor: "not-allowed",
     ":focus": {
       border: "none"
     }
@@ -91,13 +91,13 @@ export const buttonStyle = css({
     border: 0,
     color: violet.base,
     minWidth: 0,
-		fontSize: 14,
-    ":hover": {
+    fontSize: 14,
+    ":not(.__pebble__button__disabled):hover": {
       textDecoration: "underline"
     },
     "&.__pebble__button__disabled": {
       color: violet.lighter,
-      cursor: "inherit"
+      cursor: "not-allowed"
     }
   }
 });
