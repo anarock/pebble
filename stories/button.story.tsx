@@ -2,14 +2,9 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { boolean, select } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
-import Button, { ButtonType } from "@src/components/Button";
+import Button from "@src/components/Button";
 
-const t = [
-  ButtonType.PRIMARY,
-  ButtonType.SECONDARY,
-  ButtonType.DROPDOWN,
-  ButtonType.LINK
-];
+const t = ["primary", "secondary", "dropdown", "link"];
 
 storiesOf("Button", module).add("test", () => (
   <Button
