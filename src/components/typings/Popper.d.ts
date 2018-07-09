@@ -11,6 +11,7 @@ export interface PopperProps extends PopperProps_ {
     args: { toggle: () => void; isOpen: boolean }
   ) => React.ReactChildren | React.ReactChild;
   isOpen?: boolean;
+  controlled?: boolean;
 }
 
 export interface PopperState {

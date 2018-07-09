@@ -21,7 +21,14 @@ class Popper extends React.PureComponent<PopperProps, PopperState> {
   };
 
   render() {
-    const { label, popperBackgroundColor, children, ...props } = this.props;
+    const {
+      label,
+      popperBackgroundColor,
+      children,
+      controlled,
+      isOpen,
+      ...props
+    } = this.props;
 
     return (
       <Manager>
@@ -36,7 +43,11 @@ class Popper extends React.PureComponent<PopperProps, PopperState> {
         </Reference>
         <Popper_ {...props}>
           {({ ref, style, placement, arrowProps }) =>
-            this.state.isOpen ? (
+            (controlled ? (
+              isOpen
+            ) : (
+              this.state.isOpen
+            )) ? (
               <div
                 className={popperStyle}
                 ref={ref}

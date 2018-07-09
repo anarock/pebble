@@ -24,7 +24,6 @@
     "react-ink": "^6.4.0",
     "react-popper": "^1.0.0",
     "react-spring": "^5.3.21",
-    "react-tippy": "^1.2.2",
     "rheostat": "2.2.0"
   },
   "devDependencies": {
