@@ -15,7 +15,8 @@
     "test:watch": "npm test -- --watchAll",
     "precommit": "pretty-quick --staged",
     "format": "pretty-quick",
-    "now-build": "npm run build-storybook"
+    "now-build": "npm run build-storybook",
+    "now-start": "cd storybook-static && serve"
   },
   "dependencies": {
     "date-fns": "^1.29.0",
@@ -80,6 +81,7 @@
     "rollup-plugin-filesize": "^2.0.0",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
+    "serve": "^9.2.0",
     "sinon": "^6.1.2",
     "ts-jest": "^23.0.0",
     "typescript": "^2.9.2",
