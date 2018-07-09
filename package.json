@@ -14,7 +14,8 @@
     "test": "jest",
     "test:watch": "npm test -- --watchAll",
     "precommit": "pretty-quick --staged",
-    "format": "pretty-quick"
+    "format": "pretty-quick",
+    "now-build": "npm run build-storybook"
   },
   "dependencies": {
     "date-fns": "^1.29.0",
