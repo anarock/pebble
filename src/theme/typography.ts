@@ -78,7 +78,7 @@ const typography: Typography = {
     }
   },
 
-  // fontSize 13
+  // fontSize 12
   s: {
     regular: {
       fontWeight: "normal",

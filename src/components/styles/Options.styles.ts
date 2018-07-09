@@ -5,7 +5,7 @@ export const optionsWrapper = css({
   backgroundColor: colors.white.base,
   borderRadius: constants.borderRadius,
   boxShadow: constants.boxShadow.xElevated,
-  position: "absolute",
+  position: "relative",
   width: "inherit",
   zIndex: 9,
   maxHeight: 352,

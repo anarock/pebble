@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Popper snapshot 1`] = `
+Array [
+  .emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  font-weight: normal;
+  color: #ffffff;
+  font-size: 12px;
+  min-width: 100px;
+  height: 40px;
+  background-color: #6161FF;
+  box-shadow: none;
+}
+
+.emotion-0.__pebble__button__disabled {
+  cursor: not-allowed;
+}
+
+.emotion-0.__pebble__button__disabled:focus {
+  border: none;
+}
+
+.emotion-0.__pebble__button__dropdown {
+  color: #101721;
+  background-color: #ffffff;
+}
+
+.emotion-0.__pebble__button__dropdown:not(.__pebble__button__dropdown):not(__pebble__button__disabled):hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-0.__pebble__button__dropdown:not(.__pebble__button__dropdown):not(__pebble__button__disabled):active {
+  background-color: #E0E0E0;
+}
+
+.emotion-0.__pebble__button__dropdown.__pebble__button__disabled {
+  color: #9FA6B0;
+  background-color: #EDEDED;
+}
+
+.emotion-0.__pebble__button__dropdown__open {
+  color: #ffffff;
+  background-color: #6161FF;
+}
+
+.emotion-0.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):not(.__pebble__button__disabled):hover {
+  background-color: #7070FF;
+}
+
+.emotion-0.__pebble__button__dropdown__open:not(.__pebble__button__dropdown):not(__pebble__button__disabled):active {
+  background-color: #5656ED;
+}
+
+.emotion-0.__pebble__button__dropdown__open.__pebble__button__disabled {
+  color: #ffffff;
+  background-color: #C0C0FF;
+}
+
+.emotion-0.__pebble__button__dropdown__open:focus {
+  border: none;
+}
+
+.emotion-0.__pebble__button__dropdown__selected {
+  background-color: #6161FF;
+  color: #ffffff;
+}
+
+.emotion-0:focus {
+  border: none;
+}
+
+.emotion-0.__pebble__button_link {
+  background-color: transparent;
+  border: 0;
+  color: #6161FF;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0.__pebble__button_link.__pebble__button__disabled {
+  color: #C0C0FF;
+  cursor: not-allowed;
+}
+
+.emotion-0:not(.__pebble__button__dropdown):not(.__pebble__button__disabled):hover {
+  background-color: #7070FF;
+}
+
+.emotion-0:not(.__pebble__button__dropdown):not(__pebble__button__disabled):active {
+  background-color: #5656ED;
+}
+
+.emotion-0.__pebble__button__disabled {
+  color: #ffffff;
+  background-color: #C0C0FF;
+}
+
+<div>
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": undefined,
+        }
+      }
+    >
+      Click Me
+       
+      <canvas
+        height={0}
+        onDragOver={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        style={
+          Object {
+            "borderRadius": "inherit",
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": "100%",
+          }
+        }
+        width={0}
+      />
+    </button>
+  </div>,
+  .emotion-1 {
+  margin: 14px;
+  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1);
+  border-radius: 3px;
+}
+
+.emotion-0 {
+  position: absolute;
+  text-shadow: 1px 0 20px rgba(0,0,0,0.1);
+}
+
+.emotion-0[data-placement^='top'] {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: -13px;
+}
+
+.emotion-0[data-placement^='bottom'] {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  top: -13px;
+}
+
+.emotion-0[data-placement^='right'] {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  left: -13px;
+}
+
+.emotion-0[data-placement^='left'] {
+  right: -13px;
+}
+
+<div
+    className="emotion-1"
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+        "left": 0,
+        "opacity": 0,
+        "pointerEvents": "none",
+        "position": "absolute",
+        "top": 0,
+      }
+    }
+  >
+    <div
+      className="dropdown-content"
+    />
+    <div
+      className="emotion-0"
+      style={
+        Object {
+          "color": "#ffffff",
+        }
+      }
+    >
+      ▶
+    </div>
+  </div>,
+]
+`;
