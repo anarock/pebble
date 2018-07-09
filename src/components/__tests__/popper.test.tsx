@@ -2,7 +2,7 @@ import * as React from "react";
 import renderer from "react-test-renderer";
 import Button from "../Button";
 import Popper from "../Popper";
-import { mount } from "enzyme";
+// import { mount } from "enzyme";
 
 describe("Component: Popper", () => {
   test("snapshot", () => {

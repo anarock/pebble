@@ -1,0 +1,11 @@
+{
+  "name": "pebble",
+  "alias": "pebble",
+  "files": ["storybook-static"],
+  "engines": {
+    "node": "9.x.x"
+  },
+  "static": {
+    "public": "storybook-static"
+  }
+}
