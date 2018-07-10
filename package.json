@@ -16,7 +16,8 @@
     "precommit": "pretty-quick --staged",
     "format": "pretty-quick",
     "now-build": "npm run build-storybook",
-    "now-start": "cd storybook-static && serve"
+    "now-start": "cd storybook-static && serve",
+    "deploy": "npm run now-build && cd storybook-static && now"
   },
   "dependencies": {
     "date-fns": "^1.29.0",
