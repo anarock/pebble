@@ -32,7 +32,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
   }
 
   render() {
-    const { placement, text, label, modifiers } = this.props;
+    const { placement, text, label, modifiers, isError } = this.props;
 
     return (
       <Popper
@@ -40,7 +40,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
         placement={placement}
         positionFixed
         controlled
-        popperBackgroundColor={colors.gray.darker}
+        popperBackgroundColor={isError ? colors.red.base : colors.gray.darker}
         modifiers={modifiers}
         isOpen={this.props.isOpen || this.state.isOpen}
         popperClassName={popperStyle}

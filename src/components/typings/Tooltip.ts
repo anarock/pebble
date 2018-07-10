@@ -6,6 +6,7 @@ export interface TooltipProps {
   label: (args: { ref: React.RefObject<any> }) => JSX.Element;
   modifiers?: PopperJS.Modifiers;
   isOpen?: boolean;
+  isError?: boolean;
 }
 
 export interface TooltipState {
