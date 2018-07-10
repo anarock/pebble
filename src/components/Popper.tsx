@@ -3,6 +3,7 @@ import { PopperProps, PopperState } from "./typings/Popper";
 import { Manager, Reference, Popper as Popper_ } from "react-popper";
 import { arrowStyle, popperStyle } from "./styles/Popper.styles";
 import { colors } from "../theme";
+import { cx } from "react-emotion";
 
 class Popper extends React.PureComponent<PopperProps, PopperState> {
   static defaultProps: Partial<PopperProps> = {
@@ -27,6 +28,7 @@ class Popper extends React.PureComponent<PopperProps, PopperState> {
       children,
       controlled,
       isOpen,
+      popperClassName,
       ...props
     } = this.props;
 
@@ -49,9 +51,12 @@ class Popper extends React.PureComponent<PopperProps, PopperState> {
               this.state.isOpen
             )) ? (
               <div
-                className={popperStyle}
+                className={cx(popperStyle, popperClassName)}
                 ref={ref}
-                style={{ ...style, backgroundColor: popperBackgroundColor }}
+                style={{
+                  ...style,
+                  backgroundColor: popperBackgroundColor
+                }}
                 data-placement={placement}
               >
                 {children({ toggle: this.toggle, isOpen: this.state.isOpen })}
