@@ -1,4 +1,4 @@
-import { colors, mixins, typography } from "@src/theme";
+import { colors, mixins, typography } from "../../theme";
 import { css } from "react-emotion";
 
 const animation = "all 0.3s cubic-bezier(.64,.09,.08,1)";

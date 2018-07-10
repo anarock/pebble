@@ -11,7 +11,7 @@ import {
   headSection,
   headStyle,
   stepperLineStyle
-} from "@src/components/styles/Stepper.styles";
+} from "./styles/Stepper.styles";
 
 function noop() {}
 

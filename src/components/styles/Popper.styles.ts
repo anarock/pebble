@@ -1,5 +1,5 @@
 import { css } from "react-emotion";
-import { constants } from "@src/theme";
+import { constants } from "../../theme";
 
 export const popperStyle = css({
   margin: 14,

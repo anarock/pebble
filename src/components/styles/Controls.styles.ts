@@ -1,5 +1,5 @@
 import { css } from "react-emotion";
-import { typography } from "@src/theme";
+import { typography } from "../../theme";
 
 export const controlViewStyle = css({
   color: "#1F314A",

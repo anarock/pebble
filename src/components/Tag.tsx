@@ -1,5 +1,5 @@
 import * as React from "react";
-import { colors } from "@src/theme";
+import { colors } from "../theme";
 import { tagStyle } from "./styles/Tag.styles";
 import { TagProps } from "./typings/Tag";
 

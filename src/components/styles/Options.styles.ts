@@ -1,4 +1,4 @@
-import { colors, constants, mixins, typography } from "@src/theme";
+import { colors, constants, mixins, typography } from "../../theme";
 import { css } from "react-emotion";
 
 export const optionsWrapper = css({

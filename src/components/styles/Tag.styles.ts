@@ -1,4 +1,4 @@
-import { constants, mixins, typography } from "@src/theme";
+import { constants, mixins, typography } from "../../theme";
 import { css } from "react-emotion";
 
 export const tagStyle = css({

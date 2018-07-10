@@ -1,4 +1,4 @@
-import { OptionsProps } from "@src/components/typings/Options";
+import { OptionsProps } from "./Options";
 
 export interface SelectProps extends OptionsProps {
   className?: string;

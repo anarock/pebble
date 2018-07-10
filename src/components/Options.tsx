@@ -5,8 +5,8 @@ import {
   rowWrapper,
   optionsWrapper,
   selectedRow
-} from "@src/components/styles/Options.styles";
-import { OptionsProps, OptionsState } from "@src/components/typings/Options";
+} from "./styles/Options.styles";
+import { OptionsProps, OptionsState } from "./typings/Options";
 import Ink from "react-ink";
 
 class Options extends React.PureComponent<OptionsProps, OptionsState> {

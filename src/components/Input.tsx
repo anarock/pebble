@@ -12,8 +12,8 @@ import {
   inputStyle,
   dropDownClassName,
   dateClass
-} from "@src/components/styles/Input.styles";
-import { colors } from "@src/theme";
+} from "./styles/Input.styles";
+import { colors } from "../theme";
 
 function getColor(error: string, success: string, isUnderlineColor?: boolean) {
   let color = colors.gray.dark;

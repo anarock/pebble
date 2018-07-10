@@ -1,5 +1,5 @@
 import styled, { css } from "react-emotion";
-import { colors, constants, typography } from "@src/theme";
+import { colors, constants, typography } from "../../theme";
 
 export const Icon = styled("i")(
   {
