@@ -1,6 +1,6 @@
 import * as React from "react";
 import { shallow } from "enzyme";
-import Controls, { ControlType } from "../Controls";
+import Controls from "../Controls";
 import sinon from "sinon";
 
 const data = [
@@ -46,15 +46,15 @@ const getControlComponent = (
 describe("Component: Controls", () => {
   describe("type: checkbox", () => {
     test("correctly sets values", () => {
-			const spy = sinon.spy();
-      const controls = getControlComponent(ControlType.CHECKBOX, spy, [1, 3]);
+      const spy = sinon.spy();
+      const controls = getControlComponent("checkbox", spy, [1, 3]);
 
       expect(controls.find(".selected")).toHaveLength(2);
     });
 
     test("correctly add the value", () => {
       const spy = sinon.spy();
-      const controls = getControlComponent(ControlType.CHECKBOX, spy, [1, 3]);
+      const controls = getControlComponent("checkbox", spy, [1, 3]);
 
       controls
         .find(".testControls > div")
@@ -71,7 +71,7 @@ describe("Component: Controls", () => {
     test("correctly unselects the value", () => {
       const spy = sinon.spy();
 
-      const controls = getControlComponent(ControlType.CHECKBOX, spy, [1, 3]);
+      const controls = getControlComponent("checkbox", spy, [1, 3]);
 
       controls
         .find(".testControls > div")
@@ -86,18 +86,17 @@ describe("Component: Controls", () => {
     });
   });
 
-
   describe("type: radio", () => {
     test("correctly sets values", () => {
       const spy = sinon.spy();
-      const controls = getControlComponent(ControlType.RADIO, spy, 1);
+      const controls = getControlComponent("radio", spy, 1);
 
       expect(controls.find(".selected")).toHaveLength(1);
     });
 
     test("correctly changes the value", () => {
       const spy = sinon.spy();
-      const controls = getControlComponent(ControlType.RADIO, spy, 1);
+      const controls = getControlComponent("radio", spy, 1);
 
       controls
         .find(".testControls > div")
@@ -113,7 +112,7 @@ describe("Component: Controls", () => {
 
     test("correctly un-selects the value", () => {
       const spy = sinon.spy();
-      const controls = getControlComponent(ControlType.RADIO, spy, 1, true);
+      const controls = getControlComponent("radio", spy, 1, true);
 
       controls
         .find(".testControls > div")
