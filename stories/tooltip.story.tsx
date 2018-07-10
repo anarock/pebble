@@ -27,7 +27,7 @@ storiesOf("Tooltip", module).add("simple", () => (
     label={({ ref }) => (
       <div ref={ref}>
         <Button type="link" onClick={() => {}}>
-          Click Me
+          Hover on me
         </Button>
       </div>
     )}
