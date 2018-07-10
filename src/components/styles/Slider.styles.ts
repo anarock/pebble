@@ -1,5 +1,5 @@
 import { injectGlobal, css } from "react-emotion";
-import { colors, constants, mixins } from "@src/theme";
+import { colors, constants, mixins } from "../../theme";
 
 injectGlobal`
 .rheostat {

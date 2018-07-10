@@ -1,10 +1,7 @@
 import * as React from "react";
 import { cx } from "react-emotion";
-import { SearchProps } from "@src/components/typings/Search";
-import {
-  searchStyle,
-  searchWrapperStyle
-} from "@src/components/styles/Search.styles";
+import { SearchProps } from "./typings/Search";
+import { searchStyle, searchWrapperStyle } from "./styles/Search.styles";
 
 const Search: React.SFC<SearchProps> = ({ type, onChange, placeholder }) => {
   const wrapperClassName = cx(searchWrapperStyle, {

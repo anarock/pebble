@@ -1,6 +1,6 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
-import Button, { ButtonType } from "@src/components/Button";
+import Button from "@src/components/Button";
 import combos from "combos";
 import sinon from "sinon";
 import { mount } from "enzyme";
@@ -11,7 +11,7 @@ function noop() {}
 describe("Button Combos test", () => {
   const _props = {
     disabled: [true, false],
-    type: Object.keys(ButtonType).map(x => ButtonType[x]),
+    type: ["primary", "secondary", "dropdown", "link"],
     showRipple: [true, false]
   };
 

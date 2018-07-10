@@ -6,7 +6,7 @@ export interface InputProps {
   placeholder: string;
   onChange: (text: string) => void;
   className?: string;
-  inputProps?: React.InputHTMLAttributes;
+  inputProps?: React.InputHTMLAttributes<any>;
   fixLabelAtTop?: boolean;
   value?: string | number;
   readOnly?: boolean;
@@ -19,11 +19,4 @@ export interface InputProps {
 
 export interface InputState {
   isFocused?: boolean;
-}
-
-export interface DateInputProps {
-  onChange: (date: number) => void;
-  value?: number;
-  placeholder: string;
-  value: string;
 }

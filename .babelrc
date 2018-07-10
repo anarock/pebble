@@ -2,17 +2,6 @@
   "presets": [["env", {
     "targets": { "node": "6" }
   }], "stage-0" , "react"],
-  "plugins": [
-    [
-      "module-resolver",
-      {
-        "root": ["./"],
-        "alias": {
-          "@src": ["./src"]
-        }
-      }
-    ]
-  ],
   "env": {
     "test": {
       "plugins": ["require-context-hook"]

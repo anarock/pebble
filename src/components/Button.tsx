@@ -4,21 +4,14 @@ import {
   Icon,
   buttonStyle,
   getDynamicButtonStyle
-} from "@src/components/styles/Button.styles";
+} from "./styles/Button.styles";
 
 import Ink from "react-ink";
-import { ButtonProps } from "@src/components/typings/Button";
-
-export enum ButtonType {
-	PRIMARY = "primary",
-	SECONDARY = "secondary",
-	DROPDOWN = "dropdown",
-	LINK = "link"
-}
+import { ButtonProps } from "./typings/Button";
 
 const Button: React.SFC<ButtonProps> = ({
   large,
-  type = ButtonType.PRIMARY,
+  type = "primary",
   disabled,
   children,
   onClick,

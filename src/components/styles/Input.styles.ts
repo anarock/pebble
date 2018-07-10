@@ -1,4 +1,4 @@
-import { colors, mixins, typography } from "@src/theme";
+import { colors, mixins, typography } from "../../theme";
 import { css } from "react-emotion";
 
 const animation = "all 0.3s cubic-bezier(.64,.09,.08,1)";
@@ -79,13 +79,4 @@ export const messageStyle = css({
   marginTop: 10,
   lineHeight: "10px",
   textAlign: "left"
-});
-
-export const dateClass = css({
-  padding: 20,
-  width: "100%"
-});
-
-export const dropDownClassName = css({
-  marginTop: -40
 });

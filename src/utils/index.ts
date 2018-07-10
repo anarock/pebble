@@ -1,7 +1,2 @@
-import capitalize from "./strings/capitalize";
-import * as format from "./numbers/format";
-
-export default {
-	capitalize,
-	format
-}
+export * from "./strings/capitalize";
+export * from "./numbers/format";

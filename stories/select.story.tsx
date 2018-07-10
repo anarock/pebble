@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import Select from "@src/components/Select";
+import Select from "../src/components/Select";
 import { action } from "@storybook/addon-actions";
 
 const options = new Array(7)

@@ -1,6 +1,6 @@
-import * as Rheostat from "rheostat";
+import { Props } from "rheostat";
 
-export interface SliderProps extends Rheostat.Props {
+export interface SliderProps extends Props {
   className?: string;
   large?: boolean;
   title: string;

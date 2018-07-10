@@ -1,7 +1,7 @@
 import * as React from "react";
-import { toastWrapper } from "@src/components/styles/Toast.styles";
-import { colors } from "@src/theme";
-import { ToastState, ToastType } from "@src/components/typings/Toast";
+import { toastWrapper } from "./styles/Toast.styles";
+import { colors } from "../theme";
+import { ToastState, ToastType } from "./typings/Toast";
 import { Transition } from "react-spring";
 import { cx } from "react-emotion";
 

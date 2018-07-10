@@ -1,5 +1,5 @@
 import styled, { css } from "react-emotion";
-import { colors, constants } from "@src/theme";
+import { colors, constants } from "../../theme";
 
 export const sidebarWrapperStyle = css({
   backgroundColor: "rgba(16,23,33,0.3)",

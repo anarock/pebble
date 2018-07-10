@@ -1,7 +1,7 @@
 import * as React from "react";
-import { colors } from "@src/theme";
-import { tagStyle } from "@src/components/styles/Tag.styles";
-import { TagProps } from "@src/components/typings/Tag";
+import { colors } from "../theme";
+import { tagStyle } from "./styles/Tag.styles";
+import { TagProps } from "./typings/Tag";
 
 import { cx } from "react-emotion";
 import Ink from "react-ink";

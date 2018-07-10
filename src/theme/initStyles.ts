@@ -30,7 +30,7 @@ export function fontFace(
   `;
 }
 
-export default function initStyles(): void {
+export function initStyles(): void {
   injectGlobal`
     ${fontFace("Anarock", "anarock-regular", "normal")}
     ${fontFace("Anarock", "anarock-medium", "bold")}

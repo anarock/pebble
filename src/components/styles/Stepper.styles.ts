@@ -1,4 +1,4 @@
-import { colors, typography, constants } from "@src/theme";
+import { colors, typography, constants } from "../../theme";
 import { default as styled, css } from "react-emotion";
 
 export const headStyle = css({

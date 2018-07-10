@@ -1,37 +1,35 @@
 import * as React from "react";
 import Rheostat from "rheostat";
 import { cx } from "react-emotion";
-import { typography } from "@src/theme";
-import { SliderProps } from "@src/components/typings/Slider";
-import { sliderHeader } from "@src/components/styles/Slider.styles";
+import { typography } from "../theme";
+import { SliderProps } from "./typings/Slider";
+import { sliderHeader } from "./styles/Slider.styles";
 
-const Slider: React.SFC<SliderProps> = props => {
-  const {
-    className,
-    large,
-    title,
-    disabled,
-    valueLabelExtractor,
-    values,
-    onValuesUpdated,
-    ...rest
-  } = props;
-
+const Slider: React.SFC<SliderProps> = ({
+  className,
+  large,
+  title,
+  disabled,
+  valueLabelExtractor,
+  values,
+  onValuesUpdated,
+  ...rest
+}) => {
   const mainClass = cx(className, {
     __pebble__slider__disabled: disabled,
     __pebble__slider__large: large
   });
 
-	let _values = Array.isArray(values) ? values.slice(0) : values;
+  let _values = Array.isArray(values) ? values.slice(0) : values;
 
-	if (Array.isArray(values)) {
-		if (!values[0]) {
-			_values[0] = rest.min;
-		}
-		if (!values[1]) {
-			_values[1] = rest.max;
-		}
-	}
+  if (Array.isArray(values)) {
+    if (!values[0]) {
+      _values[0] = rest.min;
+    }
+    if (!values[1]) {
+      _values[1] = rest.max;
+    }
+  }
 
   return (
     <div className={mainClass}>

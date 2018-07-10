@@ -1,6 +1,6 @@
-import {ControlType} from "@src/components/Controls";
-
 type Id = string | number;
+
+type ControlType = "checkbox" | "radio";
 
 export interface ControlsProps {
   className?: string;
@@ -27,7 +27,7 @@ export interface ControlsProps {
 
 export interface ControlViewProps {
   label: string;
-  type: Type;
+  type: ControlType;
   isSelected: boolean;
   className?: string;
 }

@@ -1,5 +1,5 @@
-import * as theme from "./theme";
+export * from "./theme";
+export * from "./components";
 import * as utils from "./utils";
-import * as components from "./components";
 
-export default { ...components, theme, utils }
+export { utils };

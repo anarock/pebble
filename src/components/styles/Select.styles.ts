@@ -1,5 +1,5 @@
 import { css } from "react-emotion";
-import { colors } from "@src/theme";
+import { colors } from "../../theme";
 
 export const selectWrapper = css({
   marginBottom: 20

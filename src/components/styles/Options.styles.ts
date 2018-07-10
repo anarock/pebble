@@ -1,11 +1,11 @@
-import { colors, constants, mixins, typography } from "@src/theme";
+import { colors, constants, mixins, typography } from "../../theme";
 import { css } from "react-emotion";
 
 export const optionsWrapper = css({
   backgroundColor: colors.white.base,
   borderRadius: constants.borderRadius,
   boxShadow: constants.boxShadow.xElevated,
-  position: "absolute",
+  position: "relative",
   width: "inherit",
   zIndex: 9,
   maxHeight: 352,

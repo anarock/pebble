@@ -5,8 +5,8 @@ import {
   rowWrapper,
   optionsWrapper,
   selectedRow
-} from "@src/components/styles/Options.styles";
-import { OptionsProps, OptionsState } from "@src/components/typings/Options";
+} from "./styles/Options.styles";
+import { OptionsProps, OptionsState } from "./typings/Options";
 import Ink from "react-ink";
 
 class Options extends React.PureComponent<OptionsProps, OptionsState> {
@@ -66,14 +66,19 @@ class Options extends React.PureComponent<OptionsProps, OptionsState> {
       dropdownClassName,
       width,
       keyExtractor,
-      selected
+      selected,
+      hideBorder
     } = this.props;
 
     if (!options.length) return null;
     return (
       <div
         ref={this.optionRef}
-        className={cx(optionsWrapper, dropdownClassName, css({ width }))}
+        className={cx(
+          optionsWrapper,
+          dropdownClassName,
+          css({ width, ...(hideBorder ? { boxShadow: "none" } : {}) })
+        )}
       >
         {options.map((suggestion, i) => {
           const _class = cx(rowWrapper, {
@@ -84,9 +89,7 @@ class Options extends React.PureComponent<OptionsProps, OptionsState> {
             <div
               key={i}
               className={_class}
-              onClick={() => {
-                return onSelect(suggestion);
-              }}
+              onClick={() => onSelect(suggestion)}
             >
               <Ink />
               {rowRenderElement(suggestion, i, i === this.state.selected)}

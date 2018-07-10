@@ -1,16 +1,16 @@
 import * as React from "react";
 import { cx } from "react-emotion";
-import { SelectProps } from "@src/components/typings/Select";
+import { SelectProps } from "./typings/Select";
 import {
   chevronStyle,
   dropDownClass,
   inputWrapper,
   selectInputStyle,
   selectWrapper
-} from "@src/components/styles/Select.styles";
-import Options from "@src/components/Options";
-import DropDown from "@src/components/DropDown";
-import Input from "@src/components/Input";
+} from "./styles/Select.styles";
+import Options from "./Options";
+import DropDown from "./DropDown";
+import Input from "./Input";
 
 function noop() {}
 

@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "esModuleInterop": true,
+    "importHelpers": true,
     "declaration": true,
     "declarationDir": "dist",
     "target": "esnext",
@@ -9,8 +10,10 @@
     "jsx": "preserve",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "removeComments": false,
     "preserveConstEnums": true,
     "experimentalDecorators": true,
@@ -21,12 +24,15 @@
     "pretty": true,
     "baseUrl": ".",
     "typeRoots": ["./node_modules/@types"],
-    "lib": ["dom", "es2015", "es2016"],
-    "paths": {
-      "@src": ["./src"],
-      "@src/*": ["./src/*"]
-    }
+    "lib": ["dom", "es2015", "es2016"]
   },
   "includes": ["src"],
-  "exclude": ["node_modules", "dist", "stories", "tests", "compiled", "src/**/__tests__"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "stories",
+    "tests",
+    "compiled",
+    "src/**/__tests__"
+  ]
 }

@@ -2,11 +2,7 @@ import * as React from "react";
 import RCalendar from "react-calendar/dist/entry.nostyle";
 import { css, cx } from "react-emotion";
 import { CalendarProps } from "./typings/Calendar";
-import {
-  dateStyle,
-  tileStyle,
-  wrapperStyle
-} from "./styles/Calendar.styles";
+import { dateStyle, tileStyle, wrapperStyle } from "./styles/Calendar.styles";
 import { mixins } from "../theme";
 import Button from "./Button";
 
@@ -70,14 +66,12 @@ class Calendar extends React.PureComponent<CalendarProps> {
           onApply && (
             <div style={{ ...mixins.flexSpaceBetween, marginTop: 20 }}>
               {onClear && (
-                <Button onClick={onClear}>
+                <Button onClick={onClear} type="secondary">
                   Clear
                 </Button>
               )}
               {onApply && (
-                <Button onClick={() => onApply(this.state.value)}>
-                  Apply
-                </Button>
+                <Button onClick={() => onApply(this.state.value)}>Apply</Button>
               )}
             </div>
           )}

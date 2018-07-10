@@ -1,0 +1,7 @@
+{
+  "name": "pebble",
+  "alias": "pebble",
+  "engines": {
+    "node": "9.x.x"
+  }
+}

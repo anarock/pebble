@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import Options from "@src/components/Options";
+import Options from "../src/components/Options";
 import { action } from "@storybook/addon-actions";
 import { number } from "@storybook/addon-knobs";
 

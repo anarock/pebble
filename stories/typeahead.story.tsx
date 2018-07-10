@@ -1,10 +1,10 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import TypeAhead from "@src/components/TypeAhead";
-import Input from "@src/components/Input";
+import TypeAhead from "../src/components/TypeAhead";
+import Input from "../src/components/Input";
 import { action } from "@storybook/addon-actions";
 import { css } from "react-emotion";
-import { mixins } from "@src/theme";
+import { mixins } from "../src/theme";
 
 const labelStyle = css({
   padding: "21px 0",

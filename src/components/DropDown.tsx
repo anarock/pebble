@@ -1,7 +1,7 @@
 import * as React from "react";
-import { DropdownProps, DropdownState } from "@src/components/typings/Dropdown";
-import Button, { ButtonType } from "@src/components/Button";
-import { DropDownStyle } from "@src/components/styles/Dropdown.styles";
+import { DropdownProps, DropdownState } from "./typings/Dropdown";
+import Button from "./Button";
+import { DropDownStyle } from "./styles/Dropdown.styles";
 
 class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
   componentRef: React.RefObject<HTMLDivElement> = React.createRef();
@@ -13,7 +13,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
   static defaultProps = {
     isInitiallyOpen: true,
     closeOnClickOutside: true,
-    type: ButtonType.DROPDOWN
+    type: "dropdown"
   };
 
   private toggleDropDown = () => {

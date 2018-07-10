@@ -1,6 +1,6 @@
 import { css } from "react-emotion";
-import { colors, constants, mixins, typography } from "@src/theme";
-import { getPlaceholderStyle } from "@src/theme/mixins";
+import { colors, constants, mixins, typography } from "../../theme";
+import { getPlaceholderStyle } from "../../theme/mixins";
 
 export const searchWrapperStyle = css({
   borderRadius: constants.borderRadius,

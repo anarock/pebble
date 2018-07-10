@@ -1,6 +1,6 @@
 // TODO: fix this crap.
 import _colors from "./colors";
-import _initStyles from "./initStyles";
+import * as _initStyles from "./initStyles";
 import _typography from "./typography";
 import _constants from "./constants";
 import * as _mixins from "./mixins";

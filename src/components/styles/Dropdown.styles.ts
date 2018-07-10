@@ -1,4 +1,4 @@
-import { colors, constants } from "@src/theme";
+import { colors, constants } from "../../theme";
 import styled, { injectGlobal } from "react-emotion";
 
 injectGlobal`
