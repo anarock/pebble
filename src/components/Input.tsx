@@ -1,17 +1,12 @@
 import * as React from "react";
 import { cx } from "react-emotion";
-import { InputProps, InputState, DateInputProps } from "./typings/Input";
-import DropDown from "./DropDown";
-import Calendar from "./Calendar";
-import format from "date-fns/format";
+import { InputProps, InputState } from "./typings/Input";
 import {
   highlightStyle,
   labelStyle,
   wrapperStyle,
   messageStyle,
-  inputStyle,
-  dropDownClassName,
-  dateClass
+  inputStyle
 } from "./styles/Input.styles";
 import { colors } from "../theme";
 
@@ -144,43 +139,3 @@ class Input extends React.PureComponent<InputProps, InputState> {
 }
 
 export default Input;
-
-class DateInput extends React.PureComponent<DateInputProps> {
-  onChange = (date: Date | string) => {
-    this.props.onChange(date ? new Date(date).getTime() : undefined);
-  };
-
-  render() {
-    const { value } = this.props;
-    return (
-      <DropDown
-        dropDownClassName={dropDownClassName}
-        labelComponent={({ toggleDropdown }) => (
-          <div onClick={toggleDropdown}>
-            <Input
-              onChange={this.onChange}
-              type="date"
-              value={format(value, "YYYY-MM-DD")}
-              placeholder={this.props.placeholder}
-              fixLabelAtTop
-            />
-          </div>
-        )}
-      >
-        {({ toggle }) => (
-          <Calendar
-            hideShadow
-            className={dateClass}
-            selected={value ? new Date(value) : undefined}
-            onChange={date => {
-              this.onChange(date);
-              toggle();
-            }}
-          />
-        )}
-      </DropDown>
-    );
-  }
-}
-
-export { DateInput };

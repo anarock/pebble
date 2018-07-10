@@ -20,9 +20,3 @@ export interface InputProps {
 export interface InputState {
   isFocused?: boolean;
 }
-
-export interface DateInputProps {
-  onChange: (date: number) => void;
-  value?: number | string;
-  placeholder: string;
-}
