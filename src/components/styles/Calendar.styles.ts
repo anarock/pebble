@@ -14,6 +14,7 @@ export const tileStyle = css({
   ...typography.normal.regular,
   height: 48,
   width: 48,
+  position: "relative",
   textAlign: "center",
   cursor: "pointer",
   outline: "none",
@@ -96,4 +97,19 @@ export const dateStyle = css({
   ".react-calendar__decade-view__years, .react-calendar__century-view, .react-calendar__year-view": {
     marginTop: 15
   }
+});
+
+export const dotWrapper = css({
+  display: "flex",
+  justifyContent: "center",
+  position: "absolute",
+  width: "100%"
+});
+
+export const dotStyle = css({
+  height: 4,
+  width: 4,
+  display: "inline-block",
+  borderRadius: constants.borderRadius,
+  margin: "5px 2px 0"
 });

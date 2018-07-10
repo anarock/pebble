@@ -1,13 +1,21 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
+import { boolean, object } from "@storybook/addon-knobs";
 import Calendar from "../src/components/Calendar";
 import { action } from "@storybook/addon-actions";
+import { colors } from "../src/theme";
 
 storiesOf("Calendar", module).add("Default", () => (
   <Calendar
     onChange={action("change")}
-    range={true}
+    range={boolean("range", true)}
     onApply={action("apply")}
     onClear={action("clear")}
+    tileDots={object("tileDots", [
+      {
+        timeStamp: 1531249699065,
+        colors: [colors.blue.base, colors.emerald.base, colors.yellow.base]
+      }
+    ])}
   />
 ));
