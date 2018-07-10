@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "esModuleInterop": true,
+    "importHelpers": true,
     "declaration": true,
     "declarationDir": "dist",
     "target": "esnext",
@@ -9,8 +10,10 @@
     "jsx": "preserve",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "removeComments": false,
     "preserveConstEnums": true,
     "experimentalDecorators": true,

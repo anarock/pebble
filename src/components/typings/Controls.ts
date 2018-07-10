@@ -1,4 +1,4 @@
-import {ControlType} from "@src/components/Controls";
+import { ControlType } from "../Controls";
 
 type Id = string | number;
 
@@ -27,7 +27,7 @@ export interface ControlsProps {
 
 export interface ControlViewProps {
   label: string;
-  type: Type;
+  type: ControlType;
   isSelected: boolean;
   className?: string;
 }

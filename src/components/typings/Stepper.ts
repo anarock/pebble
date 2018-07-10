@@ -1,6 +1,6 @@
 interface ButtonData {
   label: string;
-  action: (e: Event<HTMLButtonElement>) => void;
+  action: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export interface StepperProps {

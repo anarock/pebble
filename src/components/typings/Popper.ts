@@ -1,7 +1,8 @@
 import * as React from "react";
 import { PopperProps as PopperProps_ } from "react-popper";
 
-export interface PopperProps extends PopperProps_ {
+// @ts-ignore
+export interface PopperProps extends Partial<PopperProps_> {
   label:
     | string
     | number

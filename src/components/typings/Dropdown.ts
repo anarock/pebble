@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Type } from "@shared/components/typings/Button";
+import { ButtonType } from "./Button";
 
 //todo same padding for date and dropdown
 export interface DropdownProps {
   children: (args: { toggle: () => void }) => JSX.Element | string;
   buttonLabel?: React.ReactChildren | string;
   closeOnClickOutside?: boolean;
-  type?: Type;
+  type?: ButtonType;
   labelComponent?: (
     arg: { isOpen: boolean; toggleDropdown: () => void }
   ) => JSX.Element;

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-type ButtonType = "primary" | "secondary" | "dropdown" | "link";
+export type ButtonType = "primary" | "secondary" | "dropdown" | "link";
 
 export interface ButtonProps {
   children: React.ReactNode | string;
