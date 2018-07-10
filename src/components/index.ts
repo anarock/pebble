@@ -13,6 +13,7 @@ import Stepper from "./Stepper";
 import Tag from "./Tag";
 import Toast from "./Toast";
 import TypeAhead from "./TypeAhead";
+import DateInput from "./DateInput";
 
 export {
   Button,
@@ -29,5 +30,6 @@ export {
   Tag,
   Toast,
   TypeAhead,
-  SideBar
+  SideBar,
+  DateInput
 };
