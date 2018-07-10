@@ -5,18 +5,16 @@ import { typography } from "../theme";
 import { SliderProps } from "./typings/Slider";
 import { sliderHeader } from "./styles/Slider.styles";
 
-const Slider: React.SFC<SliderProps> = props => {
-  const {
-    className,
-    large,
-    title,
-    disabled,
-    valueLabelExtractor,
-    values,
-    onValuesUpdated,
-    ...rest
-  } = props;
-
+const Slider: React.SFC<SliderProps> = ({
+  className,
+  large,
+  title,
+  disabled,
+  valueLabelExtractor,
+  values,
+  onValuesUpdated,
+  ...rest
+}) => {
   const mainClass = cx(className, {
     __pebble__slider__disabled: disabled,
     __pebble__slider__large: large
