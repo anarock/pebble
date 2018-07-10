@@ -5,14 +5,9 @@ import { colors } from "../theme";
 import { controlViewStyle, iconStyle } from "./styles/Controls.styles";
 import { messageStyle } from "./styles/Input.styles";
 
-export enum ControlType {
-  CHECKBOX = "checkbox",
-  RADIO = "radio"
-}
-
 class Controls extends React.PureComponent<ControlsProps> {
   static defaultProps = {
-    type: ControlType.RADIO
+    type: "radio"
   };
 
   private handleClick = (id: string | number) => {
@@ -107,7 +102,7 @@ export const ControlView: React.SFC<ControlViewProps> = ({
   isSelected,
   className
 }) => {
-  const isRadio = type === ControlType.RADIO;
+  const isRadio = type === "radio";
   const iconClass = cx(iconStyle, {
     "icon-radio": isRadio && !isSelected,
     "icon-radio-selected": isRadio && isSelected,

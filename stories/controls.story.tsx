@@ -1,7 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Controls, { ControlView } from "../src/components/Controls";
-import { ControlType } from "../src/components/Controls";
 
 type Id = string | number;
 
@@ -14,7 +13,7 @@ class Container extends React.PureComponent<{}, { selected: Id | Id[] }> {
     return (
       <Controls
         className="controls"
-        type={ControlType.CHECKBOX}
+        type="checkbox"
         onChange={({ selected }) => this.setState({ selected })}
         selected={this.state.selected}
         data={[{ x: "Ongoing" }, { x: "Done" }]}

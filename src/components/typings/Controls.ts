@@ -1,6 +1,6 @@
-import { ControlType } from "../Controls";
-
 type Id = string | number;
+
+type ControlType = "checkbox" | "radio";
 
 export interface ControlsProps {
   className?: string;
