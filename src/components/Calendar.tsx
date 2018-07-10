@@ -12,6 +12,8 @@ import {
 import { mixins } from "../theme";
 import Button from "./Button";
 import isSameDay from "date-fns/is_same_day";
+import startOfToday from "date-fns/start_of_today";
+import getTime from "date-fns/get_time";
 
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   static defaultProps: Partial<CalendarProps> = {
@@ -51,6 +53,23 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     ) : null;
   };
 
+  private getDisabledDays = ({ date }) => {
+    const { disableFuture, disablePast, disabledDays } = this.props;
+
+    let disable = false;
+    if (disableFuture) {
+      disable = date.getTime() > Date.now();
+    }
+    if (disablePast) {
+      disable = disable || date.getTime() < getTime(startOfToday());
+    }
+    if (disabledDays && disabledDays.length) {
+      disable = disable || disabledDays.some(_date => isSameDay(_date, date));
+    }
+
+    return disable;
+  };
+
   render() {
     const {
       range,
@@ -82,6 +101,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
           className={dateStyle}
           showNeighboringMonth={false}
           tileContent={this.getTileContent}
+          tileDisabled={this.getDisabledDays}
           prevLabel={
             <i style={{ fontSize: 16 }} className="icon-chevron-left" />
           }

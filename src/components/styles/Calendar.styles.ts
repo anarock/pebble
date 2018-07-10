@@ -34,6 +34,13 @@ export const tileStyle = css({
   "&:hover": {
     backgroundColor: colors.gray.lighter
   },
+  "&[disabled]": {
+    color: colors.gray.base,
+    "&:hover": {
+      backgroundColor: colors.gray.lightest,
+      cursor: "not-allowed"
+    }
+  },
   "&.react-calendar__tile--active": {
     backgroundColor: colors.violet.lightest,
     color: colors.violet.base

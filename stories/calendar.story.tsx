@@ -11,6 +11,8 @@ storiesOf("Calendar", module).add("Default", () => (
     range={boolean("range", true)}
     onApply={action("apply")}
     onClear={action("clear")}
+    disableFuture={boolean("disableFuture")}
+    disablePast={boolean("disablePast")}
     tileDots={object("tileDots", [
       {
         timeStamp: 1531249699065,

@@ -12,6 +12,9 @@ export interface CalendarProps {
   onClear?: () => void;
   onApply?: (value: any) => void;
   tileDots?: TileDot[];
+  disabledDays?: (number | Date)[];
+  disableFuture?: boolean;
+  disablePast?: boolean;
 }
 
 export interface CalendarState {
