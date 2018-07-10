@@ -3,15 +3,10 @@ import { withKnobs } from "@storybook/addon-knobs";
 import centered from "@storybook/addon-centered";
 import { withBackgrounds } from "@storybook/addon-backgrounds";
 import { colors, initStyles } from "../src/theme";
-import { injectGlobal } from "react-emotion";
 import { checkA11y } from "@storybook/addon-a11y";
 import { withConsole } from "@storybook/addon-console";
 
 initStyles.initStyles();
-
-injectGlobal`
-	 @import url(https://i.icomoon.io/public/temp/045b870f81/AppIcons/style.css);
-`;
 
 addDecorator(centered);
 addDecorator(withKnobs);
