@@ -1,8 +1,8 @@
 import * as React from "react";
 import { PopperProps, PopperState } from "./typings/Popper";
 import { Manager, Reference, Popper as Popper_ } from "react-popper";
-import { arrowStyle, popperStyle } from "@src/components/styles/Popper.styles";
-import { colors } from "@src/theme";
+import { arrowStyle, popperStyle } from "./styles/Popper.styles";
+import { colors } from "../theme";
 
 class Popper extends React.PureComponent<PopperProps, PopperState> {
   static defaultProps: Partial<PopperProps> = {

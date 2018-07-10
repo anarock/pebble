@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import Popper from "@src/components/Popper";
+import Popper from "../src/components/Popper";
 import { action } from "@storybook/addon-actions";
 import { number } from "@storybook/addon-knobs";
 import Button from "../src/components/Button";

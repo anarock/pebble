@@ -2,15 +2,12 @@ import * as React from "react";
 import { cx } from "react-emotion";
 import { ControlsProps, ControlViewProps } from "./typings/Controls";
 import { colors } from "@src/theme";
-import {
-  controlViewStyle,
-  iconStyle
-} from "@src/components/styles/Controls.styles";
-import { messageStyle } from "@src/components/styles/Input.styles";
+import { controlViewStyle, iconStyle } from "./styles/Controls.styles";
+import { messageStyle } from "./styles/Input.styles";
 
 export enum ControlType {
-	CHECKBOX = "checkbox",
-	RADIO = "radio"
+  CHECKBOX = "checkbox",
+  RADIO = "radio"
 }
 
 class Controls extends React.PureComponent<ControlsProps> {
@@ -64,17 +61,14 @@ class Controls extends React.PureComponent<ControlsProps> {
     return (
       <div className={className}>
         {data.map(datum => {
-        	const key = keyExtractor(datum);
+          const key = keyExtractor(datum);
 
           const isSelected =
             !this.isRadio() && Array.isArray(selected)
               ? selected.indexOf(key) >= 0
               : key === selected;
           return (
-            <div
-              key={key}
-              onClick={() => this.handleClick(key)}
-            >
+            <div key={key} onClick={() => this.handleClick(key)}>
               {renderElement ? (
                 renderElement(
                   {

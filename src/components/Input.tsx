@@ -1,12 +1,8 @@
 import * as React from "react";
 import { cx } from "react-emotion";
-import {
-  InputProps,
-  InputState,
-  DateInputProps
-} from "@src/components/typings/Input";
-import DropDown from "@src/components/DropDown";
-import Calendar from "@src/components/Calendar";
+import { InputProps, InputState, DateInputProps } from "./typings/Input";
+import DropDown from "./DropDown";
+import Calendar from "./Calendar";
 import format from "date-fns/format";
 import {
   highlightStyle,

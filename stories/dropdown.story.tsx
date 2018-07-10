@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import DropDown from "@src/components/DropDown";
-import Options from "@src/components/Options";
+import DropDown from "../src/components/DropDown";
+import Options from "../src/components/Options";
 
 const options = [
   {

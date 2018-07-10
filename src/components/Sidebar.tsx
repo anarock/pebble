@@ -3,8 +3,8 @@ import {
   closeStyle,
   SidebarStyled,
   sidebarWrapperStyle
-} from "@src/components/styles/Sidebar.styles";
-import { SidebarProps } from "@src/components/typings/Sidebar";
+} from "./styles/Sidebar.styles";
+import { SidebarProps } from "./typings/Sidebar";
 import { Transition } from "react-spring";
 import { css } from "react-emotion";
 import Ink from "react-ink";

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import Search from "@src/components/Search";
+import Search from "../src/components/Search";
 import { action } from "@storybook/addon-actions";
 import { select, text } from "@storybook/addon-knobs";
 

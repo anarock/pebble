@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import SideBar from "@src/components/Sidebar";
+import SideBar from "../src/components/Sidebar";
 import { css } from "react-emotion";
 import { boolean, number } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";

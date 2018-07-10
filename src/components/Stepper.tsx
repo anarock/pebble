@@ -1,7 +1,7 @@
 import * as React from "react";
 import { css, cx } from "react-emotion";
-import { StepperProps, StepperState } from "@src/components/typings/Stepper";
-import Button from "@src/components/Button";
+import { StepperProps, StepperState } from "./typings/Stepper";
+import Button from "./Button";
 import {
   activeDotStyle,
   contentWrapper,

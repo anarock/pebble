@@ -1,11 +1,8 @@
 import * as React from "react";
 import debounce from "just-debounce-it";
-import {
-  TypeaheadProps,
-  TypeaheadState
-} from "@src/components/typings/Typeahead";
+import { TypeaheadProps, TypeaheadState } from "./typings/Typeahead";
 import { css, cx } from "react-emotion";
-import Options from "@src/components/Options";
+import Options from "./Options";
 
 const wrapper = css({
   position: "relative"

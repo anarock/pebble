@@ -1,8 +1,8 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { text, select } from "@storybook/addon-knobs";
-import Tag from "@src/components/Tag";
-import { colors } from "@src/theme";
+import Tag from "../src/components/Tag";
+import { colors } from "../src/theme";
 
 const _colors = Object.keys(colors).filter(
   x => !["gray", "violet", "white"].includes(x)

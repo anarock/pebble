@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import Stepper from "@src/components/Stepper";
+import Stepper from "../src/components/Stepper";
 import { css } from "react-emotion";
 import { action } from "@storybook/addon-actions";
 
