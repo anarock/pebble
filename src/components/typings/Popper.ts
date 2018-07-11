@@ -16,6 +16,7 @@ export interface PopperProps extends Partial<PopperProps_> {
   isOpen?: boolean;
   controlled?: boolean;
   popperClassName?: string;
+  closeOnClickOutside?: boolean;
 }
 
 export interface PopperState {

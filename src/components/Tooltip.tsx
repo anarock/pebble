@@ -44,6 +44,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
         modifiers={modifiers}
         isOpen={this.props.isOpen || this.state.isOpen}
         popperClassName={popperStyle}
+        closeOnClickOutside={false}
       >
         {() => <span className={textStyle}>{text}</span>}
       </Popper>
