@@ -12,17 +12,17 @@ export const arrowStyle = css({
   textShadow: "1px 0 20px rgba(0,0,0,0.1)",
   "&[data-placement^='top']": {
     transform: "rotate(90deg)",
-    bottom: -13
+    bottom: -12
   },
   "&[data-placement^='bottom']": {
     transform: "rotate(-90deg)",
-    top: -13
+    top: -12
   },
   "&[data-placement^='right']": {
     transform: "rotate(180deg)",
-    left: -13
+    left: -12
   },
   "&[data-placement^='left']": {
-    right: -13
+    right: -12
   }
 });
