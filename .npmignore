@@ -1,9 +1,0 @@
-.storybook
-src
-tests
-.babelrc
-.travis.yml
-now.json
-rollup.config.js
-tsconfig.*
-tslint.json
