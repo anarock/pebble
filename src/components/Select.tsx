@@ -53,6 +53,7 @@ const Select: React.SFC<SelectProps> = ({
                 fixLabelAtTop
                 onChange={noop}
                 required={required}
+                message={isOpen ? " " : ""}
                 errorMessage={errorMessage}
               />
               <i className={chevron} />
