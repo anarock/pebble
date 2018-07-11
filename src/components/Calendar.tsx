@@ -20,16 +20,18 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   };
 
   state = {
-    value: this.props.selected,
-    dots: []
+    value: this.props.selected
   };
 
   private onChange = value => {
+    const { range, onChange } = this.props;
     this.setState(
       {
         value
       },
-      () => this.props.onChange(value)
+      () => {
+        return range ? value.length === 2 && onChange(value) : onChange(value);
+      }
     );
   };
 
@@ -80,6 +82,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         )}
       >
         <RCalendar
+          {...rest}
           onChange={this.onChange}
           selectRange={range}
           view="month"
@@ -97,7 +100,6 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
           nextLabel={
             <i style={{ fontSize: 16 }} className="icon-arrow-right" />
           }
-          {...rest}
         />
 
         {onClear &&

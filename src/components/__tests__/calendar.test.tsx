@@ -33,6 +33,7 @@ describe("Calendar", () => {
   test("should return correct value on apply", () => {
     const applySpy = sinon.spy();
     const clearSpy = sinon.spy();
+    const changeSpy = sinon.spy();
 
     const calendar = mount(
       <Calendar
@@ -40,6 +41,7 @@ describe("Calendar", () => {
         onApply={applySpy}
         range
         onClear={clearSpy}
+        onChange={changeSpy}
         selected={date}
       />
     );
@@ -47,9 +49,14 @@ describe("Calendar", () => {
       .find(".react-calendar__tile")
       .at(0)
       .simulate("click");
+
+    // in case of range selector onChange should only be called once
+    // both values of range have been selected.
+    expect(changeSpy.calledOnce).toBeFalsy();
+
     calendar
       .find(".react-calendar__tile")
-      .at(0)
+      .at(10)
       .simulate("click");
 
     calendar
@@ -62,6 +69,15 @@ describe("Calendar", () => {
     const argument = applySpy
       .getCall(0)
       .args[0].map(x => format(x, "DD-MM-YYYY"));
-    expect(argument).toEqual(["01-12-2012", "01-01-2013"]);
+    expect(argument).toEqual(["01-12-2012", "11-12-2012"]);
+
+    calendar
+      .find(".calendar-test > div")
+      .at(1)
+      .find("button")
+      .at(0)
+      .simulate("click");
+
+    expect(clearSpy.calledOnce).toBeTruthy();
   });
 });
