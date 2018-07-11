@@ -171,25 +171,25 @@ Array [
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  bottom: -13px;
+  bottom: -12px;
 }
 
 .emotion-0[data-placement^='bottom'] {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
-  top: -13px;
+  top: -12px;
 }
 
 .emotion-0[data-placement^='right'] {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  left: -13px;
+  left: -12px;
 }
 
 .emotion-0[data-placement^='left'] {
-  right: -13px;
+  right: -12px;
 }
 
 <div
