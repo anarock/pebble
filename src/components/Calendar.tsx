@@ -1,14 +1,22 @@
 import * as React from "react";
 import RCalendar from "react-calendar/dist/entry.nostyle";
 import { css, cx } from "react-emotion";
-import { CalendarProps } from "./typings/Calendar";
-import { dateStyle, tileStyle, wrapperStyle } from "./styles/Calendar.styles";
-import { mixins } from "../theme";
+import { CalendarProps, CalendarState } from "./typings/Calendar";
+import {
+  buttonsWrapper,
+  dateStyle,
+  dotStyle,
+  dotWrapper,
+  tileStyle,
+  wrapperStyle
+} from "./styles/Calendar.styles";
 import Button from "./Button";
+import isSameDay from "date-fns/is_same_day";
 
-class Calendar extends React.PureComponent<CalendarProps> {
-  static defaultProps = {
-    onChange: () => {}
+class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
+  static defaultProps: Partial<CalendarProps> = {
+    onChange: () => {},
+    tileDots: []
   };
 
   state = {
@@ -16,12 +24,40 @@ class Calendar extends React.PureComponent<CalendarProps> {
   };
 
   private onChange = value => {
+    const { range, onChange } = this.props;
     this.setState(
       {
         value
       },
-      () => this.props.onChange(value)
+      () => {
+        return range ? value.length === 2 && onChange(value) : onChange(value);
+      }
     );
+  };
+
+  private getTileContent = ({ date }): JSX.Element => {
+    const dot = this.props.tileDots.find(datum =>
+      isSameDay(date, datum.timeStamp)
+    );
+
+    return dot ? (
+      <div className={dotWrapper}>
+        {dot.colors.map((color, i) => (
+          <span
+            key={i}
+            className={dotStyle}
+            style={{ backgroundColor: color }}
+          />
+        ))}
+      </div>
+    ) : null;
+  };
+
+  private getDisabledDays = ({ date }) => {
+    const { disabledDays } = this.props;
+    return disabledDays && disabledDays.length
+      ? disabledDays.some(_date => isSameDay(_date, date))
+      : null;
   };
 
   render() {
@@ -31,7 +67,8 @@ class Calendar extends React.PureComponent<CalendarProps> {
       hideShadow,
       className,
       onApply,
-      onClear
+      onClear,
+      ...rest
     } = this.props;
 
     return (
@@ -45,6 +82,7 @@ class Calendar extends React.PureComponent<CalendarProps> {
         )}
       >
         <RCalendar
+          {...rest}
           onChange={this.onChange}
           selectRange={range}
           view="month"
@@ -54,6 +92,8 @@ class Calendar extends React.PureComponent<CalendarProps> {
           tileClassName={tileStyle}
           className={dateStyle}
           showNeighboringMonth={false}
+          tileContent={this.getTileContent}
+          tileDisabled={this.getDisabledDays}
           prevLabel={
             <i style={{ fontSize: 16 }} className="icon-chevron-left" />
           }
@@ -64,7 +104,7 @@ class Calendar extends React.PureComponent<CalendarProps> {
 
         {onClear &&
           onApply && (
-            <div style={{ ...mixins.flexSpaceBetween, marginTop: 20 }}>
+            <div className={buttonsWrapper}>
               {onClear && (
                 <Button onClick={onClear} type="secondary">
                   Clear

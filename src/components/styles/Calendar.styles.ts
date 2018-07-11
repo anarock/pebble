@@ -1,5 +1,5 @@
 import { css } from "react-emotion";
-import { colors, constants, typography } from "../../theme";
+import { colors, constants, mixins, typography } from "../../theme";
 
 export const wrapperStyle = css({
   backgroundColor: colors.white.base,
@@ -14,6 +14,7 @@ export const tileStyle = css({
   ...typography.normal.regular,
   height: 48,
   width: 48,
+  position: "relative",
   textAlign: "center",
   cursor: "pointer",
   outline: "none",
@@ -32,6 +33,13 @@ export const tileStyle = css({
   },
   "&:hover": {
     backgroundColor: colors.gray.lighter
+  },
+  "&[disabled]": {
+    color: colors.gray.base,
+    "&:hover": {
+      backgroundColor: colors.gray.lightest,
+      cursor: "not-allowed"
+    }
   },
   "&.react-calendar__tile--active": {
     backgroundColor: colors.violet.lightest,
@@ -96,4 +104,24 @@ export const dateStyle = css({
   ".react-calendar__decade-view__years, .react-calendar__century-view, .react-calendar__year-view": {
     marginTop: 15
   }
+});
+
+export const dotWrapper = css({
+  display: "flex",
+  justifyContent: "center",
+  position: "absolute",
+  width: "100%"
+});
+
+export const dotStyle = css({
+  height: 4,
+  width: 4,
+  display: "inline-block",
+  borderRadius: constants.borderRadius,
+  margin: "5px 2px 0"
+});
+
+export const buttonsWrapper = css({
+  ...mixins.flexSpaceBetween,
+  marginTop: 20
 });
