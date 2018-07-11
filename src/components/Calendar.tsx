@@ -3,17 +3,15 @@ import RCalendar from "react-calendar/dist/entry.nostyle";
 import { css, cx } from "react-emotion";
 import { CalendarProps, CalendarState } from "./typings/Calendar";
 import {
+  buttonsWrapper,
   dateStyle,
   dotStyle,
   dotWrapper,
   tileStyle,
   wrapperStyle
 } from "./styles/Calendar.styles";
-import { mixins } from "../theme";
 import Button from "./Button";
 import isSameDay from "date-fns/is_same_day";
-import startOfToday from "date-fns/start_of_today";
-import getTime from "date-fns/get_time";
 
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   static defaultProps: Partial<CalendarProps> = {
@@ -54,20 +52,10 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   };
 
   private getDisabledDays = ({ date }) => {
-    const { disableFuture, disablePast, disabledDays } = this.props;
-
-    let disable = false;
-    if (disableFuture) {
-      disable = date.getTime() > Date.now();
-    }
-    if (disablePast) {
-      disable = disable || date.getTime() < getTime(startOfToday());
-    }
-    if (disabledDays && disabledDays.length) {
-      disable = disable || disabledDays.some(_date => isSameDay(_date, date));
-    }
-
-    return disable;
+    const { disabledDays } = this.props;
+    return disabledDays && disabledDays.length
+      ? disabledDays.some(_date => isSameDay(_date, date))
+      : null;
   };
 
   render() {
@@ -77,7 +65,8 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
       hideShadow,
       className,
       onApply,
-      onClear
+      onClear,
+      ...rest
     } = this.props;
 
     return (
@@ -108,11 +97,12 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
           nextLabel={
             <i style={{ fontSize: 16 }} className="icon-arrow-right" />
           }
+          {...rest}
         />
 
         {onClear &&
           onApply && (
-            <div style={{ ...mixins.flexSpaceBetween, marginTop: 20 }}>
+            <div className={buttonsWrapper}>
               {onClear && (
                 <Button onClick={onClear} type="secondary">
                   Clear

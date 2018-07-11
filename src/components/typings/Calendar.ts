@@ -1,9 +1,11 @@
+import { CalendarProps as CP } from "react-calendar";
+
 interface TileDot {
   timeStamp?: number | Date;
   colors?: string[];
 }
 
-export interface CalendarProps {
+export interface CalendarProps extends CP {
   onChange?: (date: Date) => void;
   range?: boolean;
   selected?: Date[] | Date;
@@ -13,8 +15,6 @@ export interface CalendarProps {
   onApply?: (value: any) => void;
   tileDots?: TileDot[];
   disabledDays?: (number | Date)[];
-  disableFuture?: boolean;
-  disablePast?: boolean;
 }
 
 export interface CalendarState {

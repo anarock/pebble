@@ -11,11 +11,10 @@ storiesOf("Calendar", module).add("Default", () => (
     range={boolean("range", true)}
     onApply={action("apply")}
     onClear={action("clear")}
-    disableFuture={boolean("disableFuture")}
-    disablePast={boolean("disablePast")}
+    maxDate={new Date()}
     tileDots={object("tileDots", [
       {
-        timeStamp: 1531249699065,
+        timeStamp: Date.now(),
         colors: [colors.blue.base, colors.emerald.base, colors.yellow.base]
       }
     ])}

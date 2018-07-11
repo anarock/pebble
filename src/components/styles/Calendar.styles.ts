@@ -1,5 +1,5 @@
 import { css } from "react-emotion";
-import { colors, constants, typography } from "../../theme";
+import { colors, constants, mixins, typography } from "../../theme";
 
 export const wrapperStyle = css({
   backgroundColor: colors.white.base,
@@ -119,4 +119,9 @@ export const dotStyle = css({
   display: "inline-block",
   borderRadius: constants.borderRadius,
   margin: "5px 2px 0"
+});
+
+export const buttonsWrapper = css({
+  ...mixins.flexSpaceBetween,
+  marginTop: 20
 });
