@@ -1,7 +1,9 @@
 import * as React from "react";
 import { DropdownProps, DropdownState } from "./typings/Dropdown";
 import Button from "./Button";
-import { DropDownStyle } from "./styles/Dropdown.styles";
+import { dropDownStyle } from "./styles/Dropdown.styles";
+import { cx } from "react-emotion";
+import { Transition, animated } from "react-spring";
 
 class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
   componentRef: React.RefObject<HTMLDivElement> = React.createRef();
@@ -79,11 +81,23 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
             {buttonLabel}
           </Button>
         )}
-        {this.state.isOpen && (
-          <DropDownStyle className={dropDownClassName} style={{ padding }}>
-            {children({ toggle: this.toggleDropdown })}
-          </DropDownStyle>
-        )}
+        <Transition
+          native
+          from={{ opacity: 0, transform: "translateY(10px)" }}
+          enter={{ opacity: 1, transform: "translateY(0)" }}
+          leave={{ opacity: 0, transform: "translateY(10px)" }}
+        >
+          {this.state.isOpen
+            ? styles => (
+                <animated.div
+                  className={cx(dropDownStyle, dropDownClassName)}
+                  style={{ ...styles, padding }}
+                >
+                  {children({ toggle: this.toggleDropdown })}
+                </animated.div>
+              )
+            : null}
+        </Transition>
       </div>
     );
   }
