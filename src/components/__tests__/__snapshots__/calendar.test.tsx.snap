@@ -135,7 +135,7 @@ exports[`Calendar snapshot 1`] = `
   margin-top: 15px;
 }
 
-.emotion-13 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -148,7 +148,7 @@ exports[`Calendar snapshot 1`] = `
   width: 100%;
 }
 
-.emotion-10 {
+.emotion-12 {
   height: 4px;
   width: 4px;
   display: inline-block;
@@ -848,34 +848,6 @@ exports[`Calendar snapshot 1`] = `
               >
                 11
               </time>
-              <div
-                className="emotion-13"
-              >
-                <span
-                  className="emotion-10"
-                  style={
-                    Object {
-                      "backgroundColor": "#6161FF",
-                    }
-                  }
-                />
-                <span
-                  className="emotion-10"
-                  style={
-                    Object {
-                      "backgroundColor": "#10AC60",
-                    }
-                  }
-                />
-                <span
-                  className="emotion-10"
-                  style={
-                    Object {
-                      "backgroundColor": "#F3AA07",
-                    }
-                  }
-                />
-              </div>
             </button>
             <button
               className="react-calendar__tile react-calendar__month-view__days__day emotion-0"
@@ -920,6 +892,34 @@ exports[`Calendar snapshot 1`] = `
               >
                 13
               </time>
+              <div
+                className="emotion-15"
+              >
+                <span
+                  className="emotion-12"
+                  style={
+                    Object {
+                      "backgroundColor": "#6161FF",
+                    }
+                  }
+                />
+                <span
+                  className="emotion-12"
+                  style={
+                    Object {
+                      "backgroundColor": "#10AC60",
+                    }
+                  }
+                />
+                <span
+                  className="emotion-12"
+                  style={
+                    Object {
+                      "backgroundColor": "#F3AA07",
+                    }
+                  }
+                />
+              </div>
             </button>
             <button
               className="react-calendar__tile react-calendar__month-view__days__day react-calendar__month-view__days__day--weekend emotion-0"
