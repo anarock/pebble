@@ -3,6 +3,7 @@ import debounce from "just-debounce-it";
 import { TypeaheadProps, TypeaheadState } from "./typings/Typeahead";
 import { css, cx } from "react-emotion";
 import Options from "./Options";
+import { Transition, animated } from "react-spring";
 
 const wrapper = css({
   position: "relative"
@@ -105,14 +106,27 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
           value: this.state.value
         })}
 
-        {this.state.showSuggestions && (
-          <Options
-            dropdownClassName={cx(css({ marginTop: -46 }), dropdownClassName)}
-            rowRenderElement={rowRenderElement}
-            onSelect={this.onSelect}
-            options={suggestions}
-          />
-        )}
+        <Transition
+          native
+          from={{ opacity: 0, transform: "translateY(10px)" }}
+          enter={{ opacity: 1, transform: "translateY(0)" }}
+          leave={{ opacity: 0, transform: "translateY(10px)" }}
+        >
+          {this.state.showSuggestions &&
+            (styles => (
+              <animated.div style={{ ...styles, width: "100%" }}>
+                <Options
+                  dropdownClassName={cx(
+                    css({ marginTop: -40, position: "absolute" }),
+                    dropdownClassName
+                  )}
+                  rowRenderElement={rowRenderElement}
+                  onSelect={this.onSelect}
+                  options={suggestions}
+                />
+              </animated.div>
+            ))}
+        </Transition>
       </div>
     );
   }
