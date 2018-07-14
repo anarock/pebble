@@ -24,6 +24,6 @@ module.exports = (baseConfig, env, config) => {
     ]
   });
 
-  config.resolve.extensions.push(".ts", ".tsx");
+  config.resolve.extensions.push(".ts", ".tsx", ".json");
   return config;
 };

@@ -2,11 +2,9 @@ import { addDecorator } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs";
 import centered from "@storybook/addon-centered";
 import { withBackgrounds } from "@storybook/addon-backgrounds";
-import { colors, initStyles } from "../src/theme";
+import { colors } from "../src/theme";
 import { checkA11y } from "@storybook/addon-a11y";
 import { withConsole } from "@storybook/addon-console";
-
-initStyles.initStyles();
 
 addDecorator(centered);
 addDecorator(withKnobs);
