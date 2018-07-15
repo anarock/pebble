@@ -32,4 +32,14 @@ describe("Component: Toast", () => {
     clock.tick(2000);
     expect(toast.state("show")).toBeFalsy();
   });
+
+  test("manually hide toast", () => {
+    const toast = mount(<Toast />);
+
+    Toast.show("Hello there", "success");
+    expect(toast.state("show")).toBeTruthy();
+
+    Toast.hide();
+    expect(toast.state("show")).toBeFalsy();
+  });
 });
