@@ -36,6 +36,7 @@ Array [
       Object {
         "backgroundColor": "#10AC60",
         "opacity": 0,
+        "transform": "translateY(10px)",
       }
     }
   >
