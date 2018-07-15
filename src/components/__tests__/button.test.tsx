@@ -1,6 +1,6 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
-import Button from "@src/components/Button";
+import Button from "../Button";
 import combos from "combos";
 import sinon from "sinon";
 import { mount } from "enzyme";
