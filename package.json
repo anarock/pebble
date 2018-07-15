@@ -7,8 +7,8 @@
   "module": "dist/pebble.es.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "storybook": "start-storybook -p 6006 --static-dir src",
-    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "rimraf storybook-static && build-storybook",
     "build": "rimraf dist && tsc -p tsconfig.base.json && rollup -c && rimraf compiled && npm run build:icons && npm run copy:fonts",
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'npm run build'",
     "test": "jest",
