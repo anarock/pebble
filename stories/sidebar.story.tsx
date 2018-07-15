@@ -2,8 +2,9 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import SideBar from "../src/components/Sidebar";
 import { css } from "react-emotion";
-import { boolean, number } from "@storybook/addon-knobs";
-import { action } from "@storybook/addon-actions";
+import { number } from "@storybook/addon-knobs";
+import { withState } from "@dump247/storybook-state";
+import Button from "../src/components/Button";
 
 const wrapperStyle = css({
   width: 400,
@@ -11,12 +12,20 @@ const wrapperStyle = css({
   backgroundColor: "green"
 });
 
-storiesOf("SideBar", module).add("simple", () => (
-  <SideBar
-    onClose={action("close")}
-    width={number("Width", 400)}
-    isOpen={boolean("isOpen", true)}
-  >
-    <div className={wrapperStyle} onClick={() => {}} />
-  </SideBar>
-));
+storiesOf("SideBar", module).add(
+  "simple",
+  withState({ value: false })(({ store }) => (
+    <React.Fragment>
+      <Button onClick={() => store.set({ value: !store.state.value })}>
+        Click Me
+      </Button>
+      <SideBar
+        onClose={() => store.set({ value: false })}
+        width={number("Width", 400)}
+        isOpen={store.state.value}
+      >
+        <div className={wrapperStyle} onClick={() => {}} />
+      </SideBar>
+    </React.Fragment>
+  ))
+);

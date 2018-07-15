@@ -10,4 +10,4 @@ export const typography = _typography;
 export const constants = _constants;
 export const mixins = _mixins;
 export const styles = _styles;
-export * from "./iconNames";
+export * from "./initStyles";

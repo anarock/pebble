@@ -1,8 +1,9 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { mixins, iconNames } from "../src/theme";
+import { mixins } from "../src/theme";
 import { css } from "react-emotion";
 import Tooltip from "../src/components/Tooltip";
+import { iconNames } from "../src/theme/icons";
 
 const wrapper = css({
   ...mixins.flexSpaceBetween,
