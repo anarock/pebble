@@ -6,8 +6,42 @@ import { colors, initStyles } from "../src/theme";
 import { checkA11y } from "@storybook/addon-a11y";
 import { withConsole } from "@storybook/addon-console";
 import { withViewport } from "@storybook/addon-viewport";
+import { injectGlobal } from "react-emotion";
 
-initStyles.initStyles();
+function loadFont(
+  name: string,
+  src: string,
+  fontWeight: string = "normal",
+  fontStyle: string = "normal"
+) {
+  return `
+      @font-face{
+          font-family: "${name}";
+          src: url(${require("../src/theme/fonts/" +
+            src +
+            ".woff")}) format("woff"),	
+              url(${require("../src/theme/fonts/" +
+                src +
+                ".woff2")}) format("woff2"),	
+               url(${require("../src/theme/fonts/" +
+                 src +
+                 ".ttf")}) format("truetype"),	
+               url(${require("../src/theme/fonts/" +
+                 src +
+                 ".svg")}#${name}) format("svg");
+          font-style: ${fontStyle};
+          font-weight: ${fontWeight};
+      }
+  `;
+}
+
+injectGlobal`
+	${loadFont("Anarock", "anarock-regular", "normal")}
+  ${loadFont("Anarock", "anarock-medium", "bold")}
+  ${loadFont("anarock-icons", "anarock-icons")}
+`;
+
+initStyles();
 
 addDecorator(centered);
 addDecorator(withKnobs);
