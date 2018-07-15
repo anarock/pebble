@@ -1,11 +1,12 @@
 import * as React from "react";
 import { PopperProps, PopperState } from "./typings/Popper";
-import { Manager, Reference, Popper as Popper_ } from "react-popper";
+import { Manager, Reference, Popper } from "react-popper";
 import { arrowStyle, popperStyle } from "./styles/Popper.styles";
 import { colors } from "../theme";
 import { cx } from "react-emotion";
+import { Transition } from "react-spring";
 
-class Popper extends React.PureComponent<PopperProps, PopperState> {
+export default class extends React.PureComponent<PopperProps, PopperState> {
   componentRef: React.RefObject<HTMLDivElement> = React.createRef();
 
   static defaultProps: Partial<PopperProps> = {
@@ -53,6 +54,8 @@ class Popper extends React.PureComponent<PopperProps, PopperState> {
       ...props
     } = this.props;
 
+    const _isPopperOpen = controlled ? isOpen : this.state.isOpen;
+
     return (
       <div ref={this.componentRef}>
         <Manager>
@@ -65,42 +68,47 @@ class Popper extends React.PureComponent<PopperProps, PopperState> {
               </div>
             )}
           </Reference>
-          <Popper_ {...props}>
-            {({ ref, style, placement, arrowProps }) =>
-              (controlled ? (
-                isOpen
-              ) : (
-                this.state.isOpen
-              )) ? (
-                <div
-                  className={cx(popperStyle, popperClassName)}
-                  ref={ref}
-                  style={{
-                    ...style,
-                    backgroundColor: popperBackgroundColor
-                  }}
-                  data-placement={placement}
-                >
-                  {children({ toggle: this.toggle, isOpen: this.state.isOpen })}
-                  <div
-                    className={arrowStyle}
-                    ref={arrowProps.ref}
-                    style={{
-                      ...arrowProps.style,
-                      color: popperBackgroundColor
-                    }}
-                    data-placement={placement}
-                  >
-                    ▶
-                  </div>
-                </div>
-              ) : null
-            }
-          </Popper_>
+          <Transition
+            from={{ opacity: 0 }}
+            enter={{ opacity: 1 }}
+            leave={{ opacity: 0 }}
+          >
+            {_isPopperOpen &&
+              (styles => (
+                <Popper {...props}>
+                  {({ ref, style, placement, arrowProps }) => (
+                    <div
+                      className={cx(popperStyle, popperClassName)}
+                      ref={ref}
+                      style={{
+                        ...styles,
+                        ...style,
+                        backgroundColor: popperBackgroundColor
+                      }}
+                      data-placement={placement}
+                    >
+                      {children({
+                        toggle: this.toggle,
+                        isOpen: this.state.isOpen
+                      })}
+                      <div
+                        className={arrowStyle}
+                        ref={arrowProps.ref}
+                        style={{
+                          ...arrowProps.style,
+                          color: popperBackgroundColor
+                        }}
+                        data-placement={placement}
+                      >
+                        ▶
+                      </div>
+                    </div>
+                  )}
+                </Popper>
+              ))}
+          </Transition>
         </Manager>
       </div>
     );
   }
 }
-
-export default Popper;
