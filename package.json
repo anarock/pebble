@@ -21,7 +21,7 @@
     "deploy": "npm run now-build && cd storybook-static && now",
     "svg:optimize": "mkdir optimized-svg && svgo -f ./svgs -o ./optimized-svg",
     "build:icons": "npm run svg:optimize && node ./scripts/generateIcon.js && rimraf optimized-svg",
-    "copy:fonts": "cp -R './src/theme/fonts' './dist/fonts' && cp './src/theme/pebble.css' './dist/pebble.css'"
+    "copy:fonts": "cp -R './src/theme/fonts' './dist/fonts'"
   },
   "dependencies": {
     "date-fns": "^1.29.0",
