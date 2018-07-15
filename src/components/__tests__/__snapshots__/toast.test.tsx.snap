@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Toast snapshot 1`] = `
+Array [
+  .emotion-0 {
+  position: fixed;
+  bottom: 50px;
+  border-radius: 3px;
+  font-weight: normal;
+  color: #ffffff;
+  font-size: 14px;
+  height: 46px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 99999;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.emotion-0 > i {
+  margin-right: 10px;
+}
+
+<div
+    className="emotion-0"
+    style={
+      Object {
+        "backgroundColor": "#10AC60",
+        "opacity": 0,
+        "transform": "translateY(10px)",
+      }
+    }
+  >
+    <i
+      className="icon-radio-check-filled"
+    />
+    hello world
+  </div>,
+  "",
+]
+`;

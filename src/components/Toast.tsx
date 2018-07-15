@@ -2,8 +2,11 @@ import * as React from "react";
 import { toastWrapper } from "./styles/Toast.styles";
 import { colors } from "../theme";
 import { ToastState, ToastType } from "./typings/Toast";
-import { Transition } from "react-spring";
+import { Transition, animated } from "react-spring";
 import { cx } from "react-emotion";
+import Mitt from "mitt";
+
+const emitter = new Mitt();
 
 const _colors = {
   success: colors.emerald.base,
@@ -11,13 +14,31 @@ const _colors = {
 };
 
 class Toast extends React.PureComponent<{}, ToastState> {
+  static show(text: string, type: ToastType) {
+    emitter.emit("showToast", { text, type });
+  }
+
+  static hide() {
+    emitter.emit("hideToast");
+  }
+
   state = {
     text: "",
     type: "success",
     show: false
   };
 
-  public show = (text: string, type: ToastType = "success") => {
+  componentDidMount() {
+    emitter.on("showToast", this.show);
+    emitter.on("hideToast", this.hide);
+  }
+
+  componentWillUnmount() {
+    emitter.off("showToast", this.show);
+    emitter.off("hideToast", this.hide);
+  }
+
+  private show = ({ text, type = "success" }: Partial<ToastState>) => {
     this.setState({
       text,
       type,
@@ -33,6 +54,8 @@ class Toast extends React.PureComponent<{}, ToastState> {
     );
   };
 
+  private hide = () => this.setState({ show: false });
+
   render() {
     const bColor = _colors[this.state.type];
 
@@ -44,19 +67,19 @@ class Toast extends React.PureComponent<{}, ToastState> {
     return (
       // @ts-ignore
       <Transition
-        from={{ opacity: 0 }}
-        enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}
+        from={{ opacity: 0, transform: "translateY(10px)" }}
+        enter={{ opacity: 1, transform: "translateY(0)" }}
+        leave={{ opacity: 0, transform: "translateY(10px)" }}
       >
         {this.state.show &&
           (styles => (
-            <div
+            <animated.div
               className={toastWrapper}
               style={{ backgroundColor: bColor, ...styles }}
             >
               <i className={iconClass} />
               {this.state.text}
-            </div>
+            </animated.div>
           ))}
       </Transition>
     );
