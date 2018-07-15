@@ -13,10 +13,9 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
   webfontsGenerator(
     {
       files,
-      writeFiles: false,
       dest: "src/theme/fonts/",
       fontName: "anarock-icons",
-      types: ["woff2", "ttf"],
+      types: ["woff2", "ttf", "eot", "woff"],
       css: false,
       templateOptions: {
         baseSelector: "i"

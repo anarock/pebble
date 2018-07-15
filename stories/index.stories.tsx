@@ -19,10 +19,16 @@ function loadFont(
           font-family: "${name}";
           src: url(${require("../src/theme/fonts/" +
             src +
-            ".woff2")}) format("woff2"),
+            ".woff")}) format("woff"),	
+              url(${require("../src/theme/fonts/" +
+                src +
+                ".woff2")}) format("woff2"),	
                url(${require("../src/theme/fonts/" +
                  src +
-                 ".ttf")}) format("truetype"),
+                 ".ttf")}) format("truetype"),	
+               url(${require("../src/theme/fonts/" +
+                 src +
+                 ".svg")}#${name}) format("svg");
           font-style: ${fontStyle};
           font-weight: ${fontWeight};
       }

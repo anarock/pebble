@@ -36,7 +36,7 @@ storiesOf("Icons", module).add("List", () => (
               <i className={`icon icon-${iconName}`} /> <span>{iconName}</span>
             </div>
           )}
-          text={`<i className="icon icon-${iconName}" />`}
+          text={`<i className="icon-${iconName}" />`}
         />
       </div>
     ))}
