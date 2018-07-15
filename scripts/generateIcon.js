@@ -26,30 +26,6 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
       const css = result.generateCss();
       const index = css.indexOf("i {");
 
-      const globalCss = `
-        ${css.substr(index)}
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Anarock",sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        .mb-10 {
-            margin-bottom: 10px;
-        }
-        
-        .ml-10 {
-            margin-left: 10px;
-        }
-        
-        .mt-10 {
-            margin-top: 10px;
-        }`;
-
       const fileContent = `
         import { injectGlobal } from "react-emotion";
         
@@ -58,7 +34,9 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
         )}
         
         export function initGlobalStyles() {
-          injectGlobal\`${prettier.format(globalCss, { parser: "css" })}\`
+          injectGlobal\`${prettier.format(css.substr(index), {
+            parser: "css"
+          })}\`
         }
       `;
 
