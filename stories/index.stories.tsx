@@ -5,12 +5,14 @@ import { withBackgrounds } from "@storybook/addon-backgrounds";
 import { colors, initStyles } from "../src/theme";
 import { checkA11y } from "@storybook/addon-a11y";
 import { withConsole } from "@storybook/addon-console";
+import { withViewport } from "@storybook/addon-viewport";
 
 initStyles.initStyles();
 
 addDecorator(centered);
 addDecorator(withKnobs);
 addDecorator(checkA11y);
+addDecorator(withViewport);
 addDecorator((storyFn, context) => withConsole()(storyFn)(context));
 addDecorator(
   withBackgrounds([

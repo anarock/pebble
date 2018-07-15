@@ -1,8 +1,21 @@
 import { configure } from "@storybook/react";
 import { setOptions } from "@storybook/addon-options";
 import "@storybook/addon-console";
-
 setOptions({
+  /**
+   * name to display in the top left corner
+   * @type {String}
+   */
+  name: "pebble",
+  /**
+   * URL for name in top left corner to link to
+   * @type {String}
+   */
+  url: "https://github.com/ritz078/pebble",
+  /**
+   * show addon panel as a vertical panel on the right
+   * @type {Boolean}
+   */
   addonPanelInRight: true
 });
 
