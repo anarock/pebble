@@ -7,7 +7,7 @@
   "module": "dist/pebble.es.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "storybook": "start-storybook -p 6006 -s ./src",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "rimraf storybook-static && build-storybook",
     "build": "rimraf dist && tsc -p tsconfig.base.json && rollup -c && rimraf compiled && npm run build:icons && npm run copy:fonts",
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'npm run build'",
@@ -19,8 +19,7 @@
     "now-build": "npm run build-storybook",
     "now-start": "cd storybook-static && serve",
     "deploy": "npm run now-build && cd storybook-static && now",
-    "svg:optimize": "mkdir optimized-svg && svgo -f ./svgs -o ./optimized-svg",
-    "build:icons": "npm run svg:optimize && node ./scripts/generateIcon.js && rimraf optimized-svg",
+    "build:icons": "node ./scripts/generateIcon.js",
     "copy:fonts": "cp -R './src/theme/fonts' './dist/fonts'"
   },
   "dependencies": {

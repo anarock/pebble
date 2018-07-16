@@ -8,7 +8,7 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
     console.log(err);
   }
 
-  const files = data.map(x => `./optimized-svg/${x}`);
+  const files = data.map(x => `./svgs/${x}`);
 
   webfontsGenerator(
     {
