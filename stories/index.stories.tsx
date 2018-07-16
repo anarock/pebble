@@ -14,21 +14,18 @@ function loadFont(
   fontWeight: string = "normal",
   fontStyle: string = "normal"
 ) {
+  const ttf = require(`../src/theme/fonts/${src}.ttf`);
+  const woff2 = require(`../src/theme/fonts/${src}.woff2`);
+  const woff = require(`../src/theme/fonts/${src}.woff`);
+  const svg = require(`../src/theme/fonts/${src}.svg`);
+
   return `
       @font-face{
           font-family: "${name}";
-          src: url(${require("../src/theme/fonts/" +
-            src +
-            ".woff")}) format("woff"),	
-              url(${require("../src/theme/fonts/" +
-                src +
-                ".woff2")}) format("woff2"),	
-               url(${require("../src/theme/fonts/" +
-                 src +
-                 ".ttf")}) format("truetype"),	
-               url(${require("../src/theme/fonts/" +
-                 src +
-                 ".svg")}#${name}) format("svg");
+          src: url(${woff}) format("woff"),	
+              url(${woff2}) format("woff2"),	
+               url(${ttf}) format("truetype"),	
+               url(${svg}#${name}) format("svg");
           font-style: ${fontStyle};
           font-weight: ${fontWeight};
       }
