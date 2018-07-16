@@ -10,11 +10,13 @@ export const tagStyle = css({
   textTransform: "uppercase",
   alignItems: "center",
   justifyContent: "center",
+  display: "inline-flex",
+  lineHeight: "10px",
   "&.__pebble__tag__with__close": {
     paddingRight: 0
   },
   i: {
-    fontSize: 13,
+    fontSize: 10,
     marginLeft: 10,
     height: "inherit",
     padding: 7,
