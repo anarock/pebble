@@ -21,9 +21,6 @@ Array [
   padding: 20px;
   z-index: 99999;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 
 .emotion-0 > i {
@@ -36,7 +33,7 @@ Array [
       Object {
         "backgroundColor": "#10AC60",
         "opacity": 0,
-        "transform": "translateY(10px)",
+        "transform": "translateX(-50%) translateY(10px)",
       }
     }
   >
