@@ -67,9 +67,9 @@ class Toast extends React.PureComponent<{}, ToastState> {
     return (
       // @ts-ignore
       <Transition
-        from={{ opacity: 0, transform: "translateY(10px)" }}
-        enter={{ opacity: 1, transform: "translateY(0)" }}
-        leave={{ opacity: 0, transform: "translateY(10px)" }}
+        from={{ opacity: 0, transform: "translateX(-50%) translateY(10px)" }}
+        enter={{ opacity: 1, transform: "translateX(-50%) translateY(0)" }}
+        leave={{ opacity: 0, transform: "translateX(-50%) translateY(10px)" }}
       >
         {this.state.show &&
           (styles => (

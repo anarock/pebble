@@ -13,7 +13,6 @@ export const toastWrapper = css({
   padding: 20,
   zIndex: 99999,
   left: "50%",
-  transform: "translateX(-50%)",
 
   "> i": {
     marginRight: 10
