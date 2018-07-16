@@ -1,4 +1,4 @@
-#pebble
+# pebble
 
 > A set of lightweight and accessible React component written in typescript and emotion.
 
