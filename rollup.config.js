@@ -26,7 +26,17 @@ export default {
   plugins: [
     babel({
       babelrc: false,
-      presets: [["env", { modules: false }], "stage-0", "react"],
+      presets: [
+        [
+          "env",
+          {
+            targets: { node: "6" },
+            modules: false
+          }
+        ],
+        "stage-0",
+        "react"
+      ],
       plugins: [
         [
           "module-resolver",
