@@ -17,6 +17,14 @@
   font-style: normal;
   font-weight: bold;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Anarock", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 @font-face {
   font-family: "anarock-icons";
   src: url("./fonts/anarock-icons.eot?b36cab9cffd53a5ba006faa74cb033fe?#iefix")

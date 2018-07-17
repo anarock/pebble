@@ -11,7 +11,15 @@ yarn add @anarock/pebble
 ## Getting started
 
 First of all you will need to install the fonts and icons used by the Design System.
-Make sure the below code is executed at the very beginning. If you are using next.js, then
+Make sure the below code is executed at the very beginning.
+
+The easier way is to use the cdn:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@anarock/pebble@0.6.0/dist/pebble.css"/>
+```
+
+If you are using next.js and want the CSS to be bundled with the app, then
 `_document.js` or `_app.js` is best location to execute this.
 
 ```typescript
