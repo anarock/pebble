@@ -53,11 +53,32 @@ function loadFont(
 injectGlobal`
   ${loadFont("Anarock", "anarock-regular", "normal")}
   ${loadFont("Anarock", "anarock-medium", "bold")}
-  ${loadFont("anarock-icons", "anarock-icons")}
+  ${loadFont("AnarockIcons", "AnarockIcons")}
 `;
 
 // initStyles includes the CSS for all the icons and some normalizing CSS properties.
 initStyles();
+```
+
+## Using fonts/icons in React Native
+
+Add the following in your `package.json`;
+
+```json
+"rnpm": {
+    "assets": {
+        "./node_modules/@anarock/pebble/dist/fonts"
+    }
+}
+```
+
+and then it can be used by importing the Icon component.
+
+```js
+import Icon from "@anarock/pebble/native/Icon"
+
+// Usage
+<Icon name="icon-name" size={20} color="#000000" />
 ```
 
 ## License
