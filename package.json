@@ -13,7 +13,7 @@
     "build": "npm run build:icons && rimraf dist && tsc -p tsconfig.base.json && rollup -c && rimraf compiled && npm run copy:fonts",
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'npm run build'",
     "test": "jest",
-    "prepublish": "npm run test && npm run build",
+    "prepublishOnly": "npm run test && npm run build",
     "test:watch": "npm test -- --watchAll",
     "precommit": "pretty-quick --staged",
     "format": "pretty-quick",
@@ -24,6 +24,7 @@
     "copy:fonts": "cp -R './src/theme/fonts' './dist/fonts' && cp ./src/theme/pebble.css ./dist/pebble.css"
   },
   "dependencies": {
+    "@types/rheostat": "^2.1.3",
     "date-fns": "^1.29.0",
     "just-debounce-it": "^1.0.1",
     "mitt": "^1.1.3",
@@ -52,7 +53,6 @@
     "@types/enzyme": "^3.1.11",
     "@types/jest": "^23.1.6",
     "@types/react-test-renderer": "^16.0.1",
-    "@types/rheostat": "^2.1.3",
     "@types/sinon": "^5.0.1",
     "@types/storybook__react": "^3.0.8",
     "awesome-typescript-loader": "^5.2.0",
