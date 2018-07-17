@@ -1,71 +1,16 @@
-import { injectGlobal } from "react-emotion";
+@font-face {
+  font-family: "AnarockIcons";
+  src: url("./fonts/AnarockIcons.eot?d5deb5612b1f7a43d8c50f709ce53bb1?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/AnarockIcons.woff2?d5deb5612b1f7a43d8c50f709ce53bb1")
+      format("woff2"),
+    url("./fonts/AnarockIcons.woff?d5deb5612b1f7a43d8c50f709ce53bb1")
+      format("woff"),
+    url("./fonts/AnarockIcons.ttf?d5deb5612b1f7a43d8c50f709ce53bb1")
+      format("truetype");
+}
 
-export const iconNames = [
-  "add",
-  "arrow-down",
-  "arrow-right",
-  "back",
-  "calendar",
-  "call",
-  "car",
-  "check",
-  "checkbox-selected",
-  "checkbox-unfilled",
-  "checkbox-unselected",
-  "chevron-left",
-  "clock",
-  "close-circle-filled",
-  "close-circle",
-  "close",
-  "copy",
-  "direction",
-  "document-uploaded",
-  "document",
-  "download",
-  "edit-2",
-  "edit",
-  "filter",
-  "fire",
-  "history",
-  "home",
-  "info",
-  "invoice",
-  "junk",
-  "location",
-  "logout-door",
-  "logout",
-  "mail",
-  "mic",
-  "more",
-  "note",
-  "notification",
-  "open-external",
-  "pause",
-  "phone",
-  "play",
-  "plus",
-  "profile-1",
-  "profile",
-  "radio-check-filled",
-  "radio-check",
-  "radio-selected",
-  "radio",
-  "reschedule",
-  "reset",
-  "search",
-  "share",
-  "sms",
-  "unchecked-radio",
-  "undo",
-  "update",
-  "updating",
-  "upload",
-  "warning",
-  "whatsapp"
-];
-
-export function initIconStyles() {
-  injectGlobal`i {
+i {
   line-height: 1;
 }
 
@@ -258,6 +203,4 @@ i:before {
 }
 .icon-whatsapp:before {
   content: "\f13d";
-}
-`;
 }

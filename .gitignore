@@ -6,3 +6,4 @@ dist
 storybook-static
 optimized-svg
 package-lock.json
+native

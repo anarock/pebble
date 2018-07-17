@@ -3,36 +3,18 @@ const path = require("path");
 const fs = require("fs");
 const prettier = require("prettier");
 const colors = require("colors");
+const execa = require("execa");
 
-const anarockFonts = `
-@font-face{
-    font-family: "Anarock";
-    src: url(./fonts/anarock-regular.woff) format("woff"),
-         url(./fonts/anarock-regular.woff2) format("woff2"),
-         url(./fonts/anarock-regular.ttf) format("truetype"),
-         url(./fonts/anarock-regular.svg#Anarock) format("svg");
-    font-style: normal;
-    font-weight: normal;
+async function createRNativeFont() {
+  try {
+    await execa.shell(
+      "rimraf native && mkdir native && ./node_modules/.bin/generate-icon ./src/theme/icons.css --componentName=AnarockIcons --fontFamily=anarock-icons > native/Icon.js"
+    );
+    console.log(colors.green.bold("Created Icon component for React Native."));
+  } catch (e) {
+    console.log(e);
+  }
 }
-
-@font-face{
-    font-family: "Anarock";
-    src: url(./fonts/anarock-medium.woff) format("woff"),
-         url(./fonts/anarock-medium.woff2) format("woff2"),
-         url(./fonts/anarock-medium.ttf) format("truetype"),
-         url(./fonts/anarock-medium.svg#Anarock) format("svg");
-    font-style: normal;
-    font-weight: bold;
-}
-* {	
-		margin: 0;	
-		padding: 0;	
-		box-sizing: border-box;	
-		font-family: "Anarock", sans-serif;	
-		-webkit-font-smoothing: antialiased;	
-		-moz-osx-font-smoothing: grayscale;	
-}
-`;
 
 fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
   if (err) {
@@ -45,7 +27,7 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
     {
       files,
       dest: "src/theme/fonts/",
-      fontName: "anarock-icons",
+      fontName: "AnarockIcons", // pascalcase to make it react native compatible
       types: ["woff2", "ttf", "eot", "woff"],
       css: false,
       cssFontsUrl: "./fonts/",
@@ -85,15 +67,16 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
       );
 
       fs.writeFile(
-        path.resolve(__dirname, "../src/theme/pebble.css"),
-        prettier.format(anarockFonts + css, {
+        path.resolve(__dirname, "../src/theme/icons.css"),
+        prettier.format(css, {
           parser: "css"
         }),
         "utf-8",
         err => {
           if (err) console.log(err.message);
-          else
-            console.log(colors.green.bold("pebble.css successfully created."));
+          else {
+            createRNativeFont();
+          }
         }
       );
     }

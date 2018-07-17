@@ -3,5 +3,14 @@
   "alias": "pebble",
   "engines": {
     "node": "9.x.x"
-  }
+  },
+  "files": [
+    ".storybook",
+    "src",
+    "stories",
+    "tests",
+    ".babelrc",
+    "tsconfig.base.json",
+    "tsconfig.json"
+  ]
 }
