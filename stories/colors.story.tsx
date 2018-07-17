@@ -39,7 +39,7 @@ storiesOf("Colors", module).add("List", () => (
     <h2 style={{ marginBottom: 40 }}>Colors</h2>
     {Object.keys(colors).map(x => (
       <div>
-        <h4 className={"mb-10"}>{x}</h4>
+        <h4 style={{ marginBottom: 10 }}>{x}</h4>
         <div style={{ overflow: "auto" }}>
           {Object.keys(colors[x]).map(y => {
             const color = colors[x][y];

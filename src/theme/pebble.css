@@ -1,71 +1,35 @@
-import { injectGlobal } from "react-emotion";
+@font-face {
+  font-family: "Anarock";
+  src: url(./fonts/anarock-regular.woff) format("woff"),
+    url(./fonts/anarock-regular.woff2) format("woff2"),
+    url(./fonts/anarock-regular.ttf) format("truetype"),
+    url(./fonts/anarock-regular.svg#Anarock) format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
 
-export const iconNames = [
-  "add",
-  "arrow-down",
-  "arrow-right",
-  "back",
-  "calendar",
-  "call",
-  "car",
-  "check",
-  "checkbox-selected",
-  "checkbox-unfilled",
-  "checkbox-unselected",
-  "chevron-left",
-  "clock",
-  "close-circle-filled",
-  "close-circle",
-  "close",
-  "copy",
-  "direction",
-  "document-uploaded",
-  "document",
-  "download",
-  "edit-2",
-  "edit",
-  "filter",
-  "fire",
-  "history",
-  "home",
-  "info",
-  "invoice",
-  "junk",
-  "location",
-  "logout-door",
-  "logout",
-  "mail",
-  "mic",
-  "more",
-  "note",
-  "notification",
-  "open-external",
-  "pause",
-  "phone",
-  "play",
-  "plus",
-  "profile-1",
-  "profile",
-  "radio-check-filled",
-  "radio-check",
-  "radio-selected",
-  "radio",
-  "reschedule",
-  "reset",
-  "search",
-  "share",
-  "sms",
-  "unchecked-radio",
-  "undo",
-  "update",
-  "updating",
-  "upload",
-  "warning",
-  "whatsapp"
-];
+@font-face {
+  font-family: "Anarock";
+  src: url(./fonts/anarock-medium.woff) format("woff"),
+    url(./fonts/anarock-medium.woff2) format("woff2"),
+    url(./fonts/anarock-medium.ttf) format("truetype"),
+    url(./fonts/anarock-medium.svg#Anarock) format("svg");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "anarock-icons";
+  src: url("./fonts/anarock-icons.eot?b36cab9cffd53a5ba006faa74cb033fe?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/anarock-icons.woff2?b36cab9cffd53a5ba006faa74cb033fe")
+      format("woff2"),
+    url("./fonts/anarock-icons.woff?b36cab9cffd53a5ba006faa74cb033fe")
+      format("woff"),
+    url("./fonts/anarock-icons.ttf?b36cab9cffd53a5ba006faa74cb033fe")
+      format("truetype");
+}
 
-export function initIconStyles() {
-  injectGlobal`i {
+i {
   line-height: 1;
 }
 
@@ -258,6 +222,4 @@ i:before {
 }
 .icon-whatsapp:before {
   content: "\f13d";
-}
-`;
 }
