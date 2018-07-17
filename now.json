@@ -4,5 +4,5 @@
   "engines": {
     "node": "9.x.x"
   },
-  "files": [".storybook", "src", "stories"]
+  "files": [".storybook", "src", "stories", "tests"]
 }
