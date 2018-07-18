@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import Controls, { ControlView } from "../src/components/Controls";
+import Controls from "../src/components/Controls";
 
 type Id = string | number;
 
@@ -19,7 +19,11 @@ class Container extends React.PureComponent<{}, { selected: Id | Id[] }> {
         data={[{ x: "Ongoing" }, { x: "Done" }]}
         keyExtractor={item => item.x}
         renderElement={({ item, isSelected }, { type }) => (
-          <ControlView isSelected={isSelected} label={item.x} type={type} />
+          <Controls.ControlView
+            isSelected={isSelected}
+            label={item.x}
+            type={type}
+          />
         )}
       />
     );
