@@ -22,9 +22,13 @@ export const inputStyle = css({
   borderBottom: `1px solid ${colors.gray.lighter}`,
   padding: "24px 0 12px 0",
   height: 48,
+  borderRadius: 0,
   ...typography.normal.regular,
   width: "100%",
   ...mixins.textEllipsis,
+  "&:disabled": {
+    backgroundColor: colors.white
+  },
   "&.__pebble__input__read__only": {
     color: colors.gray.dark
   },
