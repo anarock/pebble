@@ -62,7 +62,8 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
       padding,
       className,
       dropDownClassName,
-      isSelected
+      isSelected,
+      disabled
     } = this.props;
     const { isOpen } = this.state;
 
@@ -77,6 +78,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
             type={type}
             isOpen={isOpen}
             onClick={this.toggleDropdown}
+            disabled={disabled}
           >
             {buttonLabel}
           </Button>
