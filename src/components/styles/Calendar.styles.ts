@@ -82,6 +82,7 @@ export const dateStyle = css({
     outline: "none",
     height: 40,
     width: 40,
+    backgroundColor: colors.white.base,
     "&.react-calendar__navigation__prev-button": {
       position: "absolute",
       right: 47
@@ -93,6 +94,7 @@ export const dateStyle = css({
     border: 0,
     outline: "none",
     cursor: "pointer",
+    backgroundColor: colors.white.base,
     paddingLeft: 5
   },
   ".react-calendar__month-view ": {

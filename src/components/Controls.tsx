@@ -5,7 +5,36 @@ import { colors } from "../theme";
 import { controlViewStyle, iconStyle } from "./styles/Controls.styles";
 import { messageStyle } from "./styles/Input.styles";
 
+const ControlView: React.SFC<ControlViewProps> = ({
+  label,
+  type,
+  isSelected,
+  className
+}) => {
+  const isRadio = type === "radio";
+  const iconClass = cx(iconStyle, {
+    "icon-radio": isRadio && !isSelected,
+    "icon-radio-selected": isRadio && isSelected,
+    "icon-checkbox-selected": !isRadio && isSelected,
+    "icon-checkbox-unselected": !isRadio && !isSelected
+  });
+
+  return (
+    <div className={cx(controlViewStyle, className)}>
+      <i
+        className={iconClass}
+        style={{
+          color: isSelected ? colors.violet.base : colors.gray.base
+        }}
+      />
+      {label}
+    </div>
+  );
+};
+
 class Controls extends React.PureComponent<ControlsProps> {
+  static ControlView = ControlView;
+
   static defaultProps = {
     type: "radio"
   };
@@ -95,32 +124,5 @@ class Controls extends React.PureComponent<ControlsProps> {
     );
   }
 }
-
-export const ControlView: React.SFC<ControlViewProps> = ({
-  label,
-  type,
-  isSelected,
-  className
-}) => {
-  const isRadio = type === "radio";
-  const iconClass = cx(iconStyle, {
-    "icon-radio": isRadio && !isSelected,
-    "icon-radio-selected": isRadio && isSelected,
-    "icon-checkbox-selected": !isRadio && isSelected,
-    "icon-checkbox-unselected": !isRadio && !isSelected
-  });
-
-  return (
-    <div className={cx(controlViewStyle, className)}>
-      <i
-        className={iconClass}
-        style={{
-          color: isSelected ? colors.violet.base : colors.gray.base
-        }}
-      />
-      {label}
-    </div>
-  );
-};
 
 export default Controls;

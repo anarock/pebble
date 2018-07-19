@@ -1,7 +1,7 @@
 import * as React from "react";
 
 export interface InputProps {
-  type?: "text" | "date" | "password";
+  type?: "text" | "date" | "password" | "number";
   required?: boolean;
   placeholder: string;
   onChange: (text: string) => void;
