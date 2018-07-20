@@ -73,6 +73,7 @@ exports[`Component: Popper snapshot 1`] = `
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
