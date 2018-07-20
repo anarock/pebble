@@ -539,9 +539,9 @@
   version "0.22.8"
   resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.8.tgz#5702f74f78b73e13f1eb1bd435c2c9de61a250d4"
 
-"@types/enzyme@^3.1.11":
-  version "3.1.11"
-  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.1.11.tgz#0a059d2fe2c686f024ada911d24473cdb2e13903"
+"@types/enzyme@^3.1.12":
+  version "3.1.12"
+  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.1.12.tgz#293bb07c1ef5932d37add3879e72e0f5bc614f3c"
   dependencies:
     "@types/cheerio" "*"
     "@types/react" "*"
@@ -554,9 +554,9 @@
   version "23.1.4"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.4.tgz#71e1e2d08b1db742f479ee2795536ebc999a2419"
 
-"@types/jest@^23.1.6":
-  version "23.1.6"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.6.tgz#11c88f738f5b57d1a9dd4970c576a6639b8f0f37"
+"@types/jest@^23.3.0":
+  version "23.3.0"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.0.tgz#5dd70033b616a6228042244ebd992f6426808810"
 
 "@types/node@*":
   version "10.5.1"
@@ -3889,6 +3889,13 @@ escodegen@^1.9.0:
 eslint-scope@^3.7.1:
   version "3.7.1"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-3.7.1.tgz#3d63c3edfda02e06e01a452ad88caacc7cdcb6e8"
+  dependencies:
+    esrecurse "^4.1.0"
+    estraverse "^4.1.1"
+
+eslint-scope@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.0.tgz#50bf3071e9338bcdc43331794a0cb533f0136172"
   dependencies:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
@@ -7925,9 +7932,9 @@ react-base16-styling@^0.6.0:
     lodash.flow "^3.3.0"
     pure-color "^1.2.0"
 
-react-calendar@^2.16.0:
-  version "2.16.0"
-  resolved "https://registry.yarnpkg.com/react-calendar/-/react-calendar-2.16.0.tgz#32eb38d59b897269661fb4c8aa1f6a4f84223cfa"
+react-calendar@^2.16.1:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/react-calendar/-/react-calendar-2.16.1.tgz#efba379d19c2fc1eaddb0aa1644b94be8f9d6c6e"
   dependencies:
     lodash.once "^4.1.1"
     merge-class-names "^1.1.1"
@@ -8644,9 +8651,9 @@ rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.3.0:
     estree-walker "^0.5.2"
     micromatch "^2.3.11"
 
-rollup@^0.62.0:
-  version "0.62.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.62.0.tgz#4ca8b3c9582195dc9341ff8a1375f58319b95bfc"
+rollup@^0.63.2:
+  version "0.63.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.63.2.tgz#d27619204cd025c948d740972fb1d0da6aa64481"
   dependencies:
     "@types/estree" "0.0.39"
     "@types/node" "*"
@@ -9564,9 +9571,9 @@ trim@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/trim/-/trim-0.0.1.tgz#5858547f6b290757ee95cccc666fb50084c460dd"
 
-ts-jest@^23.0.0:
-  version "23.0.0"
-  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-23.0.0.tgz#3216310fb51e40789c6e4aa20bfe80198d250e9b"
+ts-jest@^23.0.1:
+  version "23.0.1"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-23.0.1.tgz#c90e747b2787d3394319cde77c2748a87aaf2f48"
   dependencies:
     babel-plugin-istanbul "^4.1.6"
     babel-preset-jest "^23.0.0"
@@ -10027,9 +10034,9 @@ webpack@^4.10.2:
     watchpack "^1.5.0"
     webpack-sources "^1.0.1"
 
-webpack@^4.15.1:
-  version "4.16.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.16.0.tgz#660dae90890e55b8ed17c6f9d17bebb01dab5b4c"
+webpack@^4.16.1:
+  version "4.16.1"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.16.1.tgz#2c4b89ea648125c3e67bcca6adf49ce2c14b2d31"
   dependencies:
     "@webassemblyjs/ast" "1.5.13"
     "@webassemblyjs/helper-module-context" "1.5.13"
@@ -10042,7 +10049,7 @@ webpack@^4.15.1:
     ajv-keywords "^3.1.0"
     chrome-trace-event "^1.0.0"
     enhanced-resolve "^4.1.0"
-    eslint-scope "^3.7.1"
+    eslint-scope "^4.0.0"
     json-parse-better-errors "^1.0.2"
     loader-runner "^2.3.0"
     loader-utils "^1.1.0"

@@ -65,6 +65,7 @@ export const buttonStyle = css({
   border: 0,
   "&.__pebble__button__disabled": {
     cursor: "not-allowed",
+    backgroundColor: colors.white.base,
     ":focus": {
       border: "none"
     }

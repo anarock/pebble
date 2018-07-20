@@ -37,6 +37,7 @@ exports[`Button Combos test { disabled: false, type: 'dropdown', showRipple: fal
 
 .emotion-1.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-1.__pebble__button__disabled:focus {
@@ -178,6 +179,7 @@ exports[`Button Combos test { disabled: false, type: 'dropdown', showRipple: tru
 
 .emotion-1.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-1.__pebble__button__disabled:focus {
@@ -337,6 +339,7 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: false }
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -461,6 +464,7 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: true } 
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -585,6 +589,7 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: fals
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -722,6 +727,7 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: true
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -877,6 +883,7 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: fa
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -1014,6 +1021,7 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: tr
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -1169,6 +1177,7 @@ exports[`Button Combos test { disabled: true, type: 'dropdown', showRipple: fals
 
 .emotion-1.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-1.__pebble__button__disabled:focus {
@@ -1309,6 +1318,7 @@ exports[`Button Combos test { disabled: true, type: 'dropdown', showRipple: true
 
 .emotion-1.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-1.__pebble__button__disabled:focus {
@@ -1449,6 +1459,7 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: false } 
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -1572,6 +1583,7 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: true } 1
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -1695,6 +1707,7 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: false
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -1831,6 +1844,7 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: true 
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -1967,6 +1981,7 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: fal
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -2103,6 +2118,7 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: tru
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
