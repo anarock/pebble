@@ -86,6 +86,9 @@ export const dateStyle = css({
     "&.react-calendar__navigation__prev-button": {
       position: "absolute",
       right: 47
+    },
+    "&:disabled": {
+      cursor: "not-allowed"
     }
   },
   ".react-calendar__navigation__label": {
