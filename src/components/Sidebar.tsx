@@ -64,7 +64,7 @@ const SideBar: React.SFC<SidebarProps> = ({
               </animated.div>
             ))}
         </Transition>
-        {children}
+        <div style={{ overflowY: "scroll", height: "100vh" }}>{children}</div>
       </div>
     </React.Fragment>
   );

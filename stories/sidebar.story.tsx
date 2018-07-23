@@ -8,8 +8,8 @@ import Button from "../src/components/Button";
 
 const wrapperStyle = css({
   width: "100%",
-  height: 400,
-  backgroundColor: "green"
+  height: 1000,
+  backgroundColor: "white"
 });
 
 storiesOf("SideBar", module).add(

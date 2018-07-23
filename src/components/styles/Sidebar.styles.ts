@@ -28,9 +28,19 @@ export const closeStyle = css({
     color: colors.gray.darker
   },
   "@media (max-width: 1024px)": {
-    right: 10,
-    marginTop: 10,
-    backgroundColor: "transparent"
+    right: 0,
+    marginTop: 0,
+    borderRadius: 0,
+    width: "100%",
+    display: "flex",
+    justifyContent: "flex-end",
+    padding: "0 20px",
+    boxShadow: constants.boxShadow.base,
+    i: {
+      float: "right",
+      color: colors.gray.dark,
+      fontSize: 20
+    }
   }
 });
 
