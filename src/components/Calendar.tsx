@@ -11,7 +11,7 @@ import {
   wrapperStyle
 } from "./styles/Calendar.styles";
 import Button from "./Button";
-import isSameDay from "date-fns/is_same_day";
+import { isSameDay } from "date-fns";
 
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   static defaultProps: Partial<CalendarProps> = {

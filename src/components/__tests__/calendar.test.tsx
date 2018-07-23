@@ -2,7 +2,7 @@ import * as React from "react";
 import Calendar from "../Calendar";
 import sinon from "sinon";
 import { mount } from "enzyme";
-import format from "date-fns/format";
+import { format } from "date-fns";
 
 const date = [new Date(2012, 11, 1), new Date(2012, 12, 1)];
 

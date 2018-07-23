@@ -7,12 +7,7 @@ import commonjs from "rollup-plugin-commonjs";
 import cleanup from "rollup-plugin-cleanup";
 
 const input = "compiled/index.js";
-const external = [
-  "react",
-  "react-calendar/dist/entry.nostyle",
-  "date-fns/format",
-  "date-fns/is_same_day"
-];
+const external = ["react", "react-calendar/dist/entry.nostyle"];
 
 const plugins = [
   babel({

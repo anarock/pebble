@@ -2,7 +2,7 @@ import * as React from "react";
 import { DateInputProps } from "./typings/Date";
 import DropDown from "./DropDown";
 import { dateClass, dropDownClassName } from "./styles/Date.styles";
-import format from "date-fns/format";
+import { format } from "date-fns";
 import Calendar from "./Calendar";
 import Input from "./Input";
 import { cx, css } from "react-emotion";
