@@ -28,7 +28,8 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
   private handleOutsideClick = (e: MouseEvent) => {
     if (
       this.componentRef &&
-      !this.componentRef.current.contains(e.target as HTMLDivElement)
+      !this.componentRef.current.contains(e.target as HTMLDivElement) &&
+      this.state.isOpen
     ) {
       this.toggle();
     }
