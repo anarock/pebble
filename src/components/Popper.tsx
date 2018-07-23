@@ -35,12 +35,15 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
   };
 
   componentDidMount() {
-    if (this.props.closeOnClickOutside)
+    if (this.props.closeOnClickOutside) {
       document.addEventListener("mousedown", this.handleOutsideClick);
+      document.addEventListener("touchstart", this.handleOutsideClick);
+    }
   }
 
   componentWillUnmount() {
     document.removeEventListener("mousedown", this.handleOutsideClick);
+    document.removeEventListener("touchstart", this.handleOutsideClick);
   }
 
   render() {

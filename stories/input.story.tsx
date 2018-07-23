@@ -10,7 +10,7 @@ const className = css({
   width: 400
 });
 
-const type = ["text", "date", "password"];
+const type = ["text", "date", "password", "email"];
 
 storiesOf("Input", module)
   .add(
