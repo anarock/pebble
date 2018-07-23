@@ -30,6 +30,7 @@
   "dependencies": {
     "@types/rheostat": "^2.1.3",
     "date-fns": "^1.29.0",
+    "input-format": "^0.2.4",
     "is-in-browser": "^1.1.3",
     "just-debounce-it": "^1.0.1",
     "mitt": "^1.1.3",
