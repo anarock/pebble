@@ -29,7 +29,7 @@ export const closeStyle = css({
   },
   "@media (max-width: 1024px)": {
     right: 0,
-    marginTop: 0,
+    marginTop: -50,
     borderRadius: 0,
     width: "100%",
     display: "flex",
