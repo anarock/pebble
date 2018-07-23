@@ -7,7 +7,7 @@ import { withState } from "@dump247/storybook-state";
 import Button from "../src/components/Button";
 
 const wrapperStyle = css({
-  width: 400,
+  width: "100%",
   height: 400,
   backgroundColor: "green"
 });
