@@ -1,4 +1,4 @@
-import styled, { css } from "react-emotion";
+import { css } from "react-emotion";
 import { colors, constants } from "../../theme";
 
 export const sidebarWrapperStyle = css({
@@ -20,28 +20,30 @@ export const closeStyle = css({
   alignItems: "center",
   justifyContent: "center",
   cursor: "pointer",
-  overflow: "hidden",
-  position: "relative",
+  marginLeft: -70,
+  marginTop: 20,
+  position: "absolute",
   i: {
     fontSize: 25,
     color: colors.gray.darker
+  },
+  "@media (max-width: 1024px)": {
+    right: 10,
+    marginTop: 10,
+    backgroundColor: "transparent"
   }
 });
 
-export const SidebarStyled = styled("div")(
-  {
-    transition: `transform 200ms ${constants.animationCurve}`,
-    backgroundColor: colors.white.base,
-    position: "fixed",
-    top: 0,
-    bottom: 0,
-    right: 0,
-    willChange: "transform",
-    zIndex: 99,
-    overflowY: "scroll"
-  },
-  ({ width, isOpen }: any) => ({
-    width,
-    transform: isOpen ? `translateX(0)` : `translateX(${width}px)`
-  })
-);
+export const sidebarStyle = css({
+  transition: `transform 200ms ${constants.animationCurve}`,
+  backgroundColor: colors.white.base,
+  position: "fixed",
+  top: 0,
+  bottom: 0,
+  right: 0,
+  willChange: "transform",
+  zIndex: 99,
+  "@media (max-width: 1024px)": {
+    width: "100%"
+  }
+});

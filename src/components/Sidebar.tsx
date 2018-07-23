@@ -1,13 +1,13 @@
 import * as React from "react";
 import {
   closeStyle,
-  SidebarStyled,
+  sidebarStyle,
   sidebarWrapperStyle
 } from "./styles/Sidebar.styles";
 import { SidebarProps } from "./typings/Sidebar";
-import { Transition } from "react-spring";
-import { css } from "react-emotion";
+import { Transition, animated } from "react-spring";
 import Ink from "react-ink";
+import { css, cx } from "react-emotion";
 
 const SideBar: React.SFC<SidebarProps> = ({
   width,
@@ -15,11 +15,18 @@ const SideBar: React.SFC<SidebarProps> = ({
   children,
   onClose
 }) => {
-  const closeButtonLocation = css({
-    marginRight: width + 20,
-    marginTop: 20,
-    float: "right" //todo fix this
+  const _sidebarOverride = css({
+    width,
+    transform: isOpen ? `translateX(0)` : `translateX(${width}px)`
   });
+
+  const _sidebarStyle = cx(
+    _sidebarOverride,
+    sidebarStyle,
+    css({
+      transform: isOpen ? `translateX(0)` : `translateX(100%)`
+    })
+  );
 
   const backdrop = (
     // @ts-ignore
@@ -30,14 +37,7 @@ const SideBar: React.SFC<SidebarProps> = ({
     >
       {isOpen &&
         (styles => (
-          <div style={styles} className={sidebarWrapperStyle}>
-            <div className={closeButtonLocation}>
-              <div className={closeStyle} onClick={onClose}>
-                <i className="icon-close" />
-                <Ink />
-              </div>
-            </div>
-          </div>
+          <animated.div style={styles} className={sidebarWrapperStyle} />
         ))}
     </Transition>
   );
@@ -45,9 +45,27 @@ const SideBar: React.SFC<SidebarProps> = ({
   return (
     <React.Fragment>
       {backdrop}
-      <SidebarStyled width={width} isOpen={isOpen}>
+
+      <div className={_sidebarStyle}>
+        <Transition
+          from={{ opacity: 0 }}
+          enter={{ opacity: 1 }}
+          leave={{ opacity: 0 }}
+        >
+          {isOpen &&
+            (styles => (
+              <animated.div
+                style={styles}
+                className={closeStyle}
+                onClick={onClose}
+              >
+                <i className="icon-close" />
+                <Ink />
+              </animated.div>
+            ))}
+        </Transition>
         {children}
-      </SidebarStyled>
+      </div>
     </React.Fragment>
   );
 };
