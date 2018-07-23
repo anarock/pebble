@@ -54,6 +54,7 @@ export const sidebarStyle = css({
   willChange: "transform",
   zIndex: 99,
   "@media (max-width: 1024px)": {
-    width: "100%"
+    width: "100%",
+    paddingTop: 50
   }
 });
