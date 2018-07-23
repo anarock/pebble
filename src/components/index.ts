@@ -16,6 +16,7 @@ import TypeAhead from "./TypeAhead";
 import DateInput from "./DateInput";
 import Tooltip from "./Tooltip";
 import Logo from "./Logo";
+import Popper from "./Popper";
 
 export {
   Button,
@@ -35,5 +36,6 @@ export {
   SideBar,
   DateInput,
   Tooltip,
-  Logo
+  Logo,
+  Popper
 };
