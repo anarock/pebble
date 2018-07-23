@@ -10,7 +10,7 @@ const className = css({
   width: 400
 });
 
-const type = ["text", "date", "password"];
+const type = ["text", "date", "password", "email"];
 
 storiesOf("Input", module)
   .add(
@@ -36,10 +36,12 @@ storiesOf("Input", module)
   .add(
     "Date",
     withState({ value: "" })(({ store }) => (
-      <DateInput
-        placeholder="Date"
-        value={store.state.value}
-        onChange={value => store.set({ value })}
-      />
+      <div style={{ width: 300 }}>
+        <DateInput
+          placeholder="Date"
+          value={store.state.value}
+          onChange={value => store.set({ value })}
+        />
+      </div>
     ))
   );

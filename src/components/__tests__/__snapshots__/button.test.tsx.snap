@@ -98,6 +98,7 @@ exports[`Button Combos test { disabled: false, type: 'dropdown', showRipple: fal
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -240,6 +241,7 @@ exports[`Button Combos test { disabled: false, type: 'dropdown', showRipple: tru
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -400,6 +402,7 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: false }
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -525,6 +528,7 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: true } 
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -650,6 +654,7 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: fals
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -788,6 +793,7 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: true
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -944,6 +950,7 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: fa
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -1082,6 +1089,7 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: tr
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -1238,6 +1246,7 @@ exports[`Button Combos test { disabled: true, type: 'dropdown', showRipple: fals
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -1379,6 +1388,7 @@ exports[`Button Combos test { disabled: true, type: 'dropdown', showRipple: true
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -1520,6 +1530,7 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: false } 
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -1644,6 +1655,7 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: true } 1
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -1768,6 +1780,7 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: false
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -1905,6 +1918,7 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: true 
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -2042,6 +2056,7 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: fal
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
@@ -2179,6 +2194,7 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: tru
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 

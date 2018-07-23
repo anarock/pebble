@@ -92,6 +92,7 @@ export const buttonStyle = css({
     border: 0,
     color: violet.base,
     minWidth: 0,
+    padding: 0,
     fontSize: 14,
     ":not(.__pebble__button__disabled):hover": {
       textDecoration: "underline"

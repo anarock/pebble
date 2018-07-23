@@ -32,12 +32,17 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
     );
   };
 
-  addClickListener = () =>
-    this.props.closeOnClickOutside &&
-    document.addEventListener("mousedown", this.handleOutsideClick);
+  addClickListener = () => {
+    if (this.props.closeOnClickOutside) {
+      document.addEventListener("mousedown", this.handleOutsideClick);
+      document.addEventListener("touchstart", this.handleOutsideClick);
+    }
+  };
 
-  removeClickListener = () =>
+  removeClickListener = () => {
     document.removeEventListener("mousedown", this.handleOutsideClick);
+    document.removeEventListener("touchstart", this.handleOutsideClick);
+  };
 
   handleOutsideClick = (e: MouseEvent) => {
     if (
@@ -50,6 +55,12 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
 
   componentWillUnmount() {
     this.removeClickListener();
+  }
+
+  componentDidMount() {
+    if (this.props.initiallyOpen) {
+      this.addClickListener();
+    }
   }
 
   render() {

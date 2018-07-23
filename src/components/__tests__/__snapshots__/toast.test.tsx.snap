@@ -2,6 +2,7 @@
 
 exports[`Component: Toast snapshot 1`] = `
 Array [
+  "",
   .emotion-0 {
   position: fixed;
   bottom: 50px;
@@ -42,6 +43,5 @@ Array [
     />
     hello world
   </div>,
-  "",
 ]
 `;

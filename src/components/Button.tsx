@@ -21,7 +21,7 @@ const Button: React.SFC<ButtonProps> = ({
   className,
   showRipple = true,
   isSelected
-}: any) => {
+}) => {
   const _className = cx(
     buttonStyle,
     getDynamicButtonStyle(large, type, showShadow),
