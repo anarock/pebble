@@ -16,7 +16,7 @@ Make sure the below code is executed at the very beginning.
 The easier way is to use the cdn:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@anarock/pebble@0.6.0/dist/pebble.css"/>
+<link rel="stylesheet" href="https://unpkg.com/@anarock/pebble@[version]/dist/pebble.css"/>
 ```
 
 If you are using next.js and want the CSS to be bundled with the app, then
@@ -67,7 +67,7 @@ Add the following in your `package.json`;
 ```json
 "rnpm": {
     "assets": {
-        "./node_modules/@anarock/pebble/dist/fonts"
+        "./node_modules/@anarock/pebble/native/fonts"
     }
 }
 ```
@@ -75,11 +75,13 @@ Add the following in your `package.json`;
 and then it can be used by importing the Icon component.
 
 ```js
-import Icon from "@anarock/pebble/native/Icon"
+import { Icon } from "@anarock/pebble/native"
 
 // Usage
 <Icon name="icon-name" size={20} color="#000000" />
 ```
+
+Then run `react-native link`
 
 ## License
 
