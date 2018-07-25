@@ -134,7 +134,7 @@ exports[`Component: Popper snapshot 1`] = `
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -143,12 +143,12 @@ exports[`Component: Popper snapshot 1`] = `
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }

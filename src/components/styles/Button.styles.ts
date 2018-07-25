@@ -101,7 +101,7 @@ export const buttonStyle = css({
       animation: `${rotate} 1500ms infinite linear`
     }
   },
-  "&.__pebble__button_link": {
+  "&.__pebble__button__link": {
     backgroundColor: "transparent",
     border: 0,
     color: violet.base,
