@@ -1,12 +1,12 @@
 @font-face {
   font-family: "AnarockIcons";
-  src: url("./fonts/AnarockIcons.eot?d5deb5612b1f7a43d8c50f709ce53bb1?#iefix")
+  src: url("./fonts/AnarockIcons.eot?839cf56130731345e35c0fc8918f5c72?#iefix")
       format("embedded-opentype"),
-    url("./fonts/AnarockIcons.woff2?d5deb5612b1f7a43d8c50f709ce53bb1")
+    url("./fonts/AnarockIcons.woff2?839cf56130731345e35c0fc8918f5c72")
       format("woff2"),
-    url("./fonts/AnarockIcons.woff?d5deb5612b1f7a43d8c50f709ce53bb1")
+    url("./fonts/AnarockIcons.woff?839cf56130731345e35c0fc8918f5c72")
       format("woff"),
-    url("./fonts/AnarockIcons.ttf?d5deb5612b1f7a43d8c50f709ce53bb1")
+    url("./fonts/AnarockIcons.ttf?839cf56130731345e35c0fc8918f5c72")
       format("truetype");
 }
 
