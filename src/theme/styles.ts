@@ -44,3 +44,7 @@ export const tableStyle = css({
     borderBottom: constants.border.dark
   }
 });
+
+export const disableScrollY = css({
+  overflowY: "hidden"
+});

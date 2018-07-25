@@ -98,7 +98,7 @@ exports[`Button Combos test { disabled: false, type: 'dropdown', showRipple: fal
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-1.__pebble__button_link {
+.emotion-1.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -107,12 +107,12 @@ exports[`Button Combos test { disabled: false, type: 'dropdown', showRipple: fal
   font-size: 14px;
 }
 
-.emotion-1.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-1.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-1.__pebble__button_link.__pebble__button__disabled {
+.emotion-1.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -246,7 +246,7 @@ exports[`Button Combos test { disabled: false, type: 'dropdown', showRipple: tru
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-1.__pebble__button_link {
+.emotion-1.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -255,12 +255,12 @@ exports[`Button Combos test { disabled: false, type: 'dropdown', showRipple: tru
   font-size: 14px;
 }
 
-.emotion-1.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-1.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-1.__pebble__button_link.__pebble__button__disabled {
+.emotion-1.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -412,7 +412,7 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: false }
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -421,18 +421,18 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: false }
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
 
 <button
-  className="__pebble__button_link emotion-0"
+  className="__pebble__button__link emotion-0"
   onClick={[Function]}
   style={
     Object {
@@ -542,7 +542,7 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: true } 
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -551,18 +551,18 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: true } 
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
 
 <button
-  className="__pebble__button_link emotion-0"
+  className="__pebble__button__link emotion-0"
   onClick={[Function]}
   style={
     Object {
@@ -672,7 +672,7 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: fals
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -681,12 +681,12 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: fals
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -815,7 +815,7 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: true
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -824,12 +824,12 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: true
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -976,7 +976,7 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: fa
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -985,12 +985,12 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: fa
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -1119,7 +1119,7 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: tr
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -1128,12 +1128,12 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: tr
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -1280,7 +1280,7 @@ exports[`Button Combos test { disabled: true, type: 'dropdown', showRipple: fals
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-1.__pebble__button_link {
+.emotion-1.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -1289,12 +1289,12 @@ exports[`Button Combos test { disabled: true, type: 'dropdown', showRipple: fals
   font-size: 14px;
 }
 
-.emotion-1.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-1.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-1.__pebble__button_link.__pebble__button__disabled {
+.emotion-1.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -1427,7 +1427,7 @@ exports[`Button Combos test { disabled: true, type: 'dropdown', showRipple: true
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-1.__pebble__button_link {
+.emotion-1.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -1436,12 +1436,12 @@ exports[`Button Combos test { disabled: true, type: 'dropdown', showRipple: true
   font-size: 14px;
 }
 
-.emotion-1.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-1.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-1.__pebble__button_link.__pebble__button__disabled {
+.emotion-1.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -1574,7 +1574,7 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: false } 
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -1583,18 +1583,18 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: false } 
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
 
 <button
-  className="__pebble__button__disabled __pebble__button_link emotion-0"
+  className="__pebble__button__disabled __pebble__button__link emotion-0"
   style={
     Object {
       "width": undefined,
@@ -1703,7 +1703,7 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: true } 1
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -1712,18 +1712,18 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: true } 1
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
 
 <button
-  className="__pebble__button__disabled __pebble__button_link emotion-0"
+  className="__pebble__button__disabled __pebble__button__link emotion-0"
   style={
     Object {
       "width": undefined,
@@ -1832,7 +1832,7 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: false
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -1841,12 +1841,12 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: false
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -1974,7 +1974,7 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: true 
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -1983,12 +1983,12 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: true 
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -2116,7 +2116,7 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: fal
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -2125,12 +2125,12 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: fal
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -2258,7 +2258,7 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: tru
   animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
@@ -2267,12 +2267,12 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: tru
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
