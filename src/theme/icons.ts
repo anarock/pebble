@@ -55,6 +55,7 @@ export const iconNames = [
   "search",
   "share",
   "sms",
+  "spinner",
   "unchecked-radio",
   "undo",
   "update",
@@ -238,26 +239,29 @@ i:before {
 .icon-sms:before {
   content: "\f136";
 }
-.icon-unchecked-radio:before {
+.icon-spinner:before {
   content: "\f137";
 }
-.icon-undo:before {
+.icon-unchecked-radio:before {
   content: "\f138";
 }
-.icon-update:before {
+.icon-undo:before {
   content: "\f139";
 }
-.icon-updating:before {
+.icon-update:before {
   content: "\f13a";
 }
-.icon-upload:before {
+.icon-updating:before {
   content: "\f13b";
 }
-.icon-warning:before {
+.icon-upload:before {
   content: "\f13c";
 }
-.icon-whatsapp:before {
+.icon-warning:before {
   content: "\f13d";
+}
+.icon-whatsapp:before {
+  content: "\f13e";
 }
 `;
 }
