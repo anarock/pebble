@@ -27,7 +27,7 @@ export const closeStyle = css({
     fontSize: 25,
     color: colors.gray.darker
   },
-  "@media (max-width: 1024px)": {
+  "@media (max-width: 800px)": {
     right: 0,
     marginTop: -50,
     borderRadius: 0,
@@ -53,7 +53,7 @@ export const sidebarStyle = css({
   right: 0,
   willChange: "transform",
   zIndex: 99,
-  "@media (max-width: 1024px)": {
+  "@media (max-width: 800px)": {
     width: "100%",
     paddingTop: 50
   }
