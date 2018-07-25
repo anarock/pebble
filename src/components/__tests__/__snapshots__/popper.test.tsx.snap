@@ -129,6 +129,11 @@ exports[`Component: Popper snapshot 1`] = `
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -173,7 +178,6 @@ exports[`Component: Popper snapshot 1`] = `
       }
     >
       Click Me
-       
       <canvas
         height={0}
         onDragOver={[Function]}

@@ -93,6 +93,11 @@ exports[`Button Combos test { disabled: false, type: 'dropdown', showRipple: fal
   border: none;
 }
 
+.emotion-1.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-1.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -234,6 +239,11 @@ exports[`Button Combos test { disabled: false, type: 'dropdown', showRipple: tru
 
 .emotion-1:focus {
   border: none;
+}
+
+.emotion-1.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
 .emotion-1.__pebble__button_link {
@@ -397,6 +407,11 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: false }
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -426,7 +441,6 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: false }
   }
 >
   Submit
-   
 </button>
 `;
 
@@ -523,6 +537,11 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: true } 
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -552,7 +571,6 @@ exports[`Button Combos test { disabled: false, type: 'link', showRipple: true } 
   }
 >
   Submit
-   
 </button>
 `;
 
@@ -649,6 +667,11 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: fals
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -691,7 +714,6 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: fals
   }
 >
   Submit
-   
 </button>
 `;
 
@@ -788,6 +810,11 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: true
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -830,7 +857,6 @@ exports[`Button Combos test { disabled: false, type: 'primary', showRipple: true
   }
 >
   Submit
-   
   <canvas
     height={0}
     onDragOver={[Function]}
@@ -945,6 +971,11 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: fa
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -987,7 +1018,6 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: fa
   }
 >
   Submit
-   
 </button>
 `;
 
@@ -1084,6 +1114,11 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: tr
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -1126,7 +1161,6 @@ exports[`Button Combos test { disabled: false, type: 'secondary', showRipple: tr
   }
 >
   Submit
-   
   <canvas
     height={0}
     onDragOver={[Function]}
@@ -1239,6 +1273,11 @@ exports[`Button Combos test { disabled: true, type: 'dropdown', showRipple: fals
 
 .emotion-1:focus {
   border: none;
+}
+
+.emotion-1.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
 }
 
 .emotion-1.__pebble__button_link {
@@ -1383,6 +1422,11 @@ exports[`Button Combos test { disabled: true, type: 'dropdown', showRipple: true
   border: none;
 }
 
+.emotion-1.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-1.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -1525,6 +1569,11 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: false } 
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -1553,7 +1602,6 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: false } 
   }
 >
   Submit
-   
 </button>
 `;
 
@@ -1650,6 +1698,11 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: true } 1
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -1678,7 +1731,6 @@ exports[`Button Combos test { disabled: true, type: 'link', showRipple: true } 1
   }
 >
   Submit
-   
 </button>
 `;
 
@@ -1775,6 +1827,11 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: false
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -1816,7 +1873,6 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: false
   }
 >
   Submit
-   
 </button>
 `;
 
@@ -1913,6 +1969,11 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: true 
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -1954,7 +2015,6 @@ exports[`Button Combos test { disabled: true, type: 'primary', showRipple: true 
   }
 >
   Submit
-   
 </button>
 `;
 
@@ -2051,6 +2111,11 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: fal
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -2092,7 +2157,6 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: fal
   }
 >
   Submit
-   
 </button>
 `;
 
@@ -2189,6 +2253,11 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: tru
   border: none;
 }
 
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
 .emotion-0.__pebble__button_link {
   background-color: transparent;
   border: 0;
@@ -2230,6 +2299,5 @@ exports[`Button Combos test { disabled: true, type: 'secondary', showRipple: tru
   }
 >
   Submit
-   
 </button>
 `;

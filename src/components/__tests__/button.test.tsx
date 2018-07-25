@@ -52,4 +52,16 @@ describe("Button: functionality", () => {
     expect(button.contains(<Ink />)).toBeFalsy();
     expect(fake.called).toBeFalsy();
   });
+
+  test("no ripple present and no click registered in loading state", () => {
+    const fake = sinon.fake();
+    const button = mount(
+      <Button loading onClick={fake}>
+        Submit
+      </Button>
+    );
+
+    expect(button.contains(<Ink />)).toBeFalsy();
+    expect(fake.called).toBeFalsy();
+  });
 });

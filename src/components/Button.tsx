@@ -20,7 +20,8 @@ const Button: React.SFC<ButtonProps> = ({
   showShadow,
   className,
   showRipple = true,
-  isSelected
+  isSelected,
+  loading
 }) => {
   const _className = cx(
     buttonStyle,
@@ -30,20 +31,27 @@ const Button: React.SFC<ButtonProps> = ({
       __pebble__button_link: type === "link",
       __pebble__button__dropdown: type === "dropdown",
       __pebble__button__dropdown__open: type === "dropdown" && isOpen,
-      __pebble__button__dropdown__selected: type === "dropdown" && isSelected
+      __pebble__button__dropdown__selected: type === "dropdown" && isSelected,
+      __pebble__button__loading: loading
     }
   );
+
+  const disableAction = disabled || loading;
+
   return (
     <button
       className={cx(_className, className)}
-      onClick={!disabled ? onClick : undefined}
+      onClick={!disableAction ? onClick : undefined}
       style={{ width }}
     >
-      {children}{" "}
+      {loading ? <i className="icon-spinner" /> : children}
       {type === "dropdown" && (
-        <Icon isOpen={isOpen} className="icon-arrow-down" />
+        <React.Fragment>
+          {" "}
+          <Icon isOpen={isOpen} className="icon-arrow-down" />
+        </React.Fragment>
       )}
-      {!disabled && showRipple && type !== "link" && <Ink />}
+      {!disableAction && showRipple && type !== "link" && <Ink />}
     </button>
   );
 };

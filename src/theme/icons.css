@@ -1,12 +1,12 @@
 @font-face {
   font-family: "AnarockIcons";
-  src: url("./fonts/AnarockIcons.eot?7162f866e01893d5c45040a9e807b9e9?#iefix")
+  src: url("./fonts/AnarockIcons.eot?9ae33fe5dae3da40a261cea2961a0009?#iefix")
       format("embedded-opentype"),
-    url("./fonts/AnarockIcons.woff2?7162f866e01893d5c45040a9e807b9e9")
+    url("./fonts/AnarockIcons.woff2?9ae33fe5dae3da40a261cea2961a0009")
       format("woff2"),
-    url("./fonts/AnarockIcons.woff?7162f866e01893d5c45040a9e807b9e9")
+    url("./fonts/AnarockIcons.woff?9ae33fe5dae3da40a261cea2961a0009")
       format("woff"),
-    url("./fonts/AnarockIcons.ttf?7162f866e01893d5c45040a9e807b9e9")
+    url("./fonts/AnarockIcons.ttf?9ae33fe5dae3da40a261cea2961a0009")
       format("truetype");
 }
 
@@ -183,24 +183,27 @@ i:before {
 .icon-sms:before {
   content: "\f136";
 }
-.icon-unchecked-radio:before {
+.icon-spinner:before {
   content: "\f137";
 }
-.icon-undo:before {
+.icon-unchecked-radio:before {
   content: "\f138";
 }
-.icon-update:before {
+.icon-undo:before {
   content: "\f139";
 }
-.icon-updating:before {
+.icon-update:before {
   content: "\f13a";
 }
-.icon-upload:before {
+.icon-updating:before {
   content: "\f13b";
 }
-.icon-warning:before {
+.icon-upload:before {
   content: "\f13c";
 }
-.icon-whatsapp:before {
+.icon-warning:before {
   content: "\f13d";
+}
+.icon-whatsapp:before {
+  content: "\f13e";
 }

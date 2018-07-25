@@ -14,4 +14,5 @@ export interface ButtonProps {
   className?: string;
   showRipple?: boolean;
   isSelected?: boolean;
+  loading?: boolean;
 }
