@@ -12,7 +12,9 @@ describe("Button Combos test", () => {
   const _props = {
     disabled: [true, false],
     type: ["primary", "secondary", "dropdown", "link"],
-    showRipple: [true, false]
+    showRipple: [true, false],
+    loading: [true, false],
+    large: [true, false]
   };
 
   const _combos = combos(_props);

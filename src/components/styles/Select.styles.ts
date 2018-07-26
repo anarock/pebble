@@ -23,7 +23,7 @@ export const chevronStyle = css({
   top: 25,
   right: 7,
   color: colors.gray.base,
-  fontSize: 12,
+  fontSize: 10,
   "&.__pebble__select__open": {
     transform: "rotate(180deg)"
   }
