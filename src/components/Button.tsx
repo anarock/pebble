@@ -8,6 +8,8 @@ import {
 
 import Ink from "react-ink";
 import { ButtonProps } from "./typings/Button";
+import Loader from "./Loader";
+import colors from "../theme/colors";
 
 const Button: React.SFC<ButtonProps> = ({
   large,
@@ -44,7 +46,7 @@ const Button: React.SFC<ButtonProps> = ({
       onClick={!disableAction ? onClick : undefined}
       style={{ width }}
     >
-      {loading ? <i className="icon-spinner" /> : children}
+      {loading ? <Loader color={colors.white.base} scale={0.4} /> : children}
       {type === "dropdown" && (
         <React.Fragment>
           {" "}
