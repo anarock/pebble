@@ -17,6 +17,7 @@ import DateInput from "./DateInput";
 import Tooltip from "./Tooltip";
 import Logo from "./Logo";
 import Popper from "./Popper";
+import Loader from "./Loader";
 
 export {
   Button,
@@ -37,5 +38,6 @@ export {
   DateInput,
   Tooltip,
   Logo,
-  Popper
+  Popper,
+  Loader
 };
