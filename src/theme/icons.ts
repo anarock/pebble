@@ -3,6 +3,8 @@ import { injectGlobal } from "react-emotion";
 export const iconNames = [
   "add",
   "arrow-down",
+  "arrow-drop-down",
+  "arrow-drop-up",
   "arrow-right",
   "back",
   "calendar",
@@ -83,185 +85,191 @@ i:before {
 .icon-arrow-down:before {
   content: "\f102";
 }
-.icon-arrow-right:before {
+.icon-arrow-drop-down:before {
   content: "\f103";
 }
-.icon-back:before {
+.icon-arrow-drop-up:before {
   content: "\f104";
 }
-.icon-calendar:before {
+.icon-arrow-right:before {
   content: "\f105";
 }
-.icon-call:before {
+.icon-back:before {
   content: "\f106";
 }
-.icon-car:before {
+.icon-calendar:before {
   content: "\f107";
 }
-.icon-check:before {
+.icon-call:before {
   content: "\f108";
 }
-.icon-checkbox-selected:before {
+.icon-car:before {
   content: "\f109";
 }
-.icon-checkbox-unfilled:before {
+.icon-check:before {
   content: "\f10a";
 }
-.icon-checkbox-unselected:before {
+.icon-checkbox-selected:before {
   content: "\f10b";
 }
-.icon-chevron-left:before {
+.icon-checkbox-unfilled:before {
   content: "\f10c";
 }
-.icon-clock:before {
+.icon-checkbox-unselected:before {
   content: "\f10d";
 }
-.icon-close-circle-filled:before {
+.icon-chevron-left:before {
   content: "\f10e";
 }
-.icon-close-circle:before {
+.icon-clock:before {
   content: "\f10f";
 }
-.icon-close:before {
+.icon-close-circle-filled:before {
   content: "\f110";
 }
-.icon-copy:before {
+.icon-close-circle:before {
   content: "\f111";
 }
-.icon-direction:before {
+.icon-close:before {
   content: "\f112";
 }
-.icon-document-uploaded:before {
+.icon-copy:before {
   content: "\f113";
 }
-.icon-document:before {
+.icon-direction:before {
   content: "\f114";
 }
-.icon-download:before {
+.icon-document-uploaded:before {
   content: "\f115";
 }
-.icon-edit-2:before {
+.icon-document:before {
   content: "\f116";
 }
-.icon-edit:before {
+.icon-download:before {
   content: "\f117";
 }
-.icon-filter:before {
+.icon-edit-2:before {
   content: "\f118";
 }
-.icon-fire:before {
+.icon-edit:before {
   content: "\f119";
 }
-.icon-history:before {
+.icon-filter:before {
   content: "\f11a";
 }
-.icon-home:before {
+.icon-fire:before {
   content: "\f11b";
 }
-.icon-info:before {
+.icon-history:before {
   content: "\f11c";
 }
-.icon-invoice:before {
+.icon-home:before {
   content: "\f11d";
 }
-.icon-junk:before {
+.icon-info:before {
   content: "\f11e";
 }
-.icon-location:before {
+.icon-invoice:before {
   content: "\f11f";
 }
-.icon-logout-door:before {
+.icon-junk:before {
   content: "\f120";
 }
-.icon-logout:before {
+.icon-location:before {
   content: "\f121";
 }
-.icon-mail:before {
+.icon-logout-door:before {
   content: "\f122";
 }
-.icon-mic:before {
+.icon-logout:before {
   content: "\f123";
 }
-.icon-more:before {
+.icon-mail:before {
   content: "\f124";
 }
-.icon-note:before {
+.icon-mic:before {
   content: "\f125";
 }
-.icon-notification:before {
+.icon-more:before {
   content: "\f126";
 }
-.icon-open-external:before {
+.icon-note:before {
   content: "\f127";
 }
-.icon-pause:before {
+.icon-notification:before {
   content: "\f128";
 }
-.icon-phone:before {
+.icon-open-external:before {
   content: "\f129";
 }
-.icon-play:before {
+.icon-pause:before {
   content: "\f12a";
 }
-.icon-plus:before {
+.icon-phone:before {
   content: "\f12b";
 }
-.icon-profile-1:before {
+.icon-play:before {
   content: "\f12c";
 }
-.icon-profile:before {
+.icon-plus:before {
   content: "\f12d";
 }
-.icon-radio-check-filled:before {
+.icon-profile-1:before {
   content: "\f12e";
 }
-.icon-radio-check:before {
+.icon-profile:before {
   content: "\f12f";
 }
-.icon-radio-selected:before {
+.icon-radio-check-filled:before {
   content: "\f130";
 }
-.icon-radio:before {
+.icon-radio-check:before {
   content: "\f131";
 }
-.icon-reschedule:before {
+.icon-radio-selected:before {
   content: "\f132";
 }
-.icon-reset:before {
+.icon-radio:before {
   content: "\f133";
 }
-.icon-search:before {
+.icon-reschedule:before {
   content: "\f134";
 }
-.icon-share:before {
+.icon-reset:before {
   content: "\f135";
 }
-.icon-sms:before {
+.icon-search:before {
   content: "\f136";
 }
-.icon-spinner:before {
+.icon-share:before {
   content: "\f137";
 }
-.icon-unchecked-radio:before {
+.icon-sms:before {
   content: "\f138";
 }
-.icon-undo:before {
+.icon-spinner:before {
   content: "\f139";
 }
-.icon-update:before {
+.icon-unchecked-radio:before {
   content: "\f13a";
 }
-.icon-updating:before {
+.icon-undo:before {
   content: "\f13b";
 }
-.icon-upload:before {
+.icon-update:before {
   content: "\f13c";
 }
-.icon-warning:before {
+.icon-updating:before {
   content: "\f13d";
 }
-.icon-whatsapp:before {
+.icon-upload:before {
   content: "\f13e";
+}
+.icon-warning:before {
+  content: "\f13f";
+}
+.icon-whatsapp:before {
+  content: "\f140";
 }
 `;
 }
