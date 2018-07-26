@@ -11,8 +11,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
     isOpen: this.props.initiallyOpen
   };
 
-  static defaultProps = {
-    isInitiallyOpen: true,
+  static defaultProps: Partial<DropdownProps> = {
     closeOnClickOutside: true,
     type: "dropdown"
   };
