@@ -13,14 +13,30 @@ class OutsideClick extends React.PureComponent<OutsideClickProps> {
     }
   };
 
-  componentDidMount() {
+  addListener = () => {
     document.addEventListener("mousedown", this.handleClick);
     document.addEventListener("touchstart", this.handleClick);
+  };
+
+  removeListener = () => {
+    document.removeEventListener("mousedown", this.handleClick);
+    document.removeEventListener("touchstart", this.handleClick);
+  };
+
+  componentDidMount() {
+    if (!this.props.disabled) {
+      this.addListener();
+    }
   }
 
   componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleClick);
-    document.removeEventListener("touchstart", this.handleClick);
+    this.removeListener();
+  }
+
+  componentDidUpdate(prevProps: OutsideClickProps) {
+    if (prevProps.disabled !== this.props.disabled) {
+      this.props.disabled ? this.removeListener() : this.addListener();
+    }
   }
 
   render() {

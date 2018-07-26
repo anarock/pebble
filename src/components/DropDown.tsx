@@ -43,6 +43,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
             isOpen: false
           })
         }
+        disabled={!isOpen}
       >
         <div className={className}>
           {labelComponent ? (

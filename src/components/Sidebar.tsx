@@ -54,7 +54,7 @@ class SideBar extends React.PureComponent<SidebarProps> {
       <React.Fragment>
         {backdrop}
 
-        <OutsideClick onOutsideClick={this.props.onClose}>
+        <OutsideClick onOutsideClick={this.props.onClose} disabled={!isOpen}>
           <div className={_sidebarStyle}>
             <Transition
               from={{ opacity: 0 }}

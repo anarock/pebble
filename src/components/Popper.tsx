@@ -44,6 +44,7 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
             isOpen: false
           })
         }
+        disabled={!_isPopperOpen}
       >
         <Manager>
           <Reference>
