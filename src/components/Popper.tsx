@@ -5,10 +5,9 @@ import { arrowStyle, popperStyle } from "./styles/Popper.styles";
 import { colors } from "../theme";
 import { cx } from "react-emotion";
 import { Transition } from "react-spring";
+import OutsideClick from "./OutsideClick";
 
 export default class extends React.PureComponent<PopperProps, PopperState> {
-  componentRef: React.RefObject<HTMLDivElement> = React.createRef();
-
   static defaultProps: Partial<PopperProps> = {
     placement: "bottom",
     popperBackgroundColor: colors.white.base,
@@ -25,28 +24,6 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
     });
   };
 
-  private handleOutsideClick = (e: MouseEvent) => {
-    if (
-      this.componentRef &&
-      !this.componentRef.current.contains(e.target as HTMLDivElement) &&
-      this.state.isOpen
-    ) {
-      this.toggle();
-    }
-  };
-
-  componentDidMount() {
-    if (this.props.closeOnClickOutside) {
-      document.addEventListener("mousedown", this.handleOutsideClick);
-      document.addEventListener("touchstart", this.handleOutsideClick);
-    }
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleOutsideClick);
-    document.removeEventListener("touchstart", this.handleOutsideClick);
-  }
-
   render() {
     const {
       label,
@@ -61,7 +38,13 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
     const _isPopperOpen = controlled ? isOpen : this.state.isOpen;
 
     return (
-      <div ref={this.componentRef}>
+      <OutsideClick
+        onOutsideClick={() =>
+          this.setState({
+            isOpen: false
+          })
+        }
+      >
         <Manager>
           <Reference>
             {({ ref }) => (
@@ -112,7 +95,7 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
               ))}
           </Transition>
         </Manager>
-      </div>
+      </OutsideClick>
     );
   }
 }
