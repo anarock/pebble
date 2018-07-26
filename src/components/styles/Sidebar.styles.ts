@@ -28,14 +28,12 @@ export const closeStyle = css({
     color: colors.gray.darker
   },
   "@media (max-width: 800px)": {
-    right: 0,
-    marginTop: -50,
+    left: 80,
+    marginTop: -45,
     borderRadius: 0,
-    width: "100%",
     display: "flex",
     justifyContent: "flex-end",
     padding: "0 20px",
-    boxShadow: constants.boxShadow.base,
     i: {
       float: "right",
       color: colors.gray.dark,

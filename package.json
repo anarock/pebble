@@ -44,7 +44,7 @@
     "react-emotion": "^9.2.6",
     "react-ink": "^6.4.0",
     "react-popper": "^1.0.0",
-    "react-spring": "^5.4.3",
+    "react-spring": "^5.4.4",
     "rheostat": "2.2.0"
   },
   "devDependencies": {

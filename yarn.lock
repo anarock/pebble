@@ -9236,9 +9236,9 @@ react-split-pane@^0.1.77:
     react-lifecycles-compat "^3.0.4"
     react-style-proptype "^3.0.0"
 
-react-spring@^5.4.3:
-  version "5.4.3"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.4.3.tgz#446102bfd9ccc17390554ae69a7d28159b9d0bc0"
+react-spring@^5.4.4:
+  version "5.4.4"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-5.4.4.tgz#d4f7c9626c9fb83b7e85769538cd80bcc7ba6f61"
   dependencies:
     "@babel/runtime" "7.0.0-beta.51"
 
