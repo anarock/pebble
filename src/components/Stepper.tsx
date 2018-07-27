@@ -96,7 +96,8 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
       keyExtractor,
       renderFooterElement,
       className,
-      allowSkip
+      allowSkip,
+      isRightButtonLoading
     } = this.props;
     return (
       <div className={className}>
@@ -167,6 +168,7 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
               <Button
                 large
                 width={100}
+                loading={isRightButtonLoading}
                 onClick={this.getRightButtonData().action}
               >
                 {this.getRightButtonData().label}
