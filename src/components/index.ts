@@ -14,6 +14,10 @@ import Tag from "./Tag";
 import Toast from "./Toast";
 import TypeAhead from "./TypeAhead";
 import DateInput from "./DateInput";
+import Tooltip from "./Tooltip";
+import Logo from "./Logo";
+import Popper from "./Popper";
+import Loader from "./Loader";
 
 export {
   Button,
@@ -31,5 +35,9 @@ export {
   Toast,
   TypeAhead,
   SideBar,
-  DateInput
+  DateInput,
+  Tooltip,
+  Logo,
+  Popper,
+  Loader
 };

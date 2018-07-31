@@ -41,7 +41,7 @@ const Select: React.SFC<SelectProps> = ({
       <DropDown
         dropDownClassName={dropDownClass}
         labelComponent={({ toggleDropdown, isOpen }) => {
-          const chevron = cx(chevronStyle, "icon-arrow-down", {
+          const chevron = cx(chevronStyle, "icon-arrow-drop-down", {
             __pebble__select__open: isOpen
           });
           return (
@@ -53,6 +53,7 @@ const Select: React.SFC<SelectProps> = ({
                 fixLabelAtTop
                 onChange={noop}
                 required={required}
+                message={isOpen ? " " : ""}
                 errorMessage={errorMessage}
               />
               <i className={chevron} />

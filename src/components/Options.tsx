@@ -16,47 +16,47 @@ class Options extends React.PureComponent<OptionsProps, OptionsState> {
     selected: 0
   };
 
-  private handleKeyPress = (e: KeyboardEvent) => {
-    const { options, onSelect } = this.props;
+  // private handleKeyPress = (e: KeyboardEvent) => {
+  //   const { options, onSelect } = this.props;
+  //
+  //   if (e.code === "Enter") {
+  //     onSelect(options[this.state.selected]);
+  //   }
+  //
+  //   this.setState(
+  //     () => {
+  //       let selected = this.state.selected;
+  //       if (e.code === "ArrowDown") {
+  //         e.preventDefault();
+  //         selected = Math.min(selected + 1, options.length - 1);
+  //       }
+  //       if (e.code === "ArrowUp") {
+  //         e.preventDefault();
+  //         selected = Math.max(selected - 1, 0);
+  //       }
+  //
+  //       return { selected };
+  //     },
+  //     () => {
+  //       if (this.optionRef.current) {
+  //         // @ts-ignore
+  //         // this.optionRef.current.childNodes[this.state.selected].scrollIntoView(
+  //         //   {
+  //         //     behavior: "smooth"
+  //         //   }
+  //         // );
+  //       }
+  //     }
+  //   );
+  // };
 
-    if (e.code === "Enter") {
-      onSelect(options[this.state.selected]);
-    }
-
-    this.setState(
-      () => {
-        let selected = this.state.selected;
-        if (e.code === "ArrowDown") {
-          e.preventDefault();
-          selected = Math.min(selected + 1, options.length - 1);
-        }
-        if (e.code === "ArrowUp") {
-          e.preventDefault();
-          selected = Math.max(selected - 1, 0);
-        }
-
-        return { selected };
-      },
-      () => {
-        if (this.optionRef.current) {
-          // @ts-ignore
-          this.optionRef.current.childNodes[this.state.selected].scrollIntoView(
-            {
-              behavior: "smooth"
-            }
-          );
-        }
-      }
-    );
-  };
-
-  componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyPress);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyPress);
-  }
+  // componentDidMount() {
+  //   document.addEventListener("keydown", this.handleKeyPress);
+  // }
+  //
+  // componentWillUnmount() {
+  //   document.removeEventListener("keydown", this.handleKeyPress);
+  // }
 
   render() {
     const {

@@ -1,6 +1,6 @@
 import * as React from "react";
 import renderer from "react-test-renderer";
-import Button from "@src/components/Button";
+import Button from "../Button";
 import combos from "combos";
 import sinon from "sinon";
 import { mount } from "enzyme";
@@ -12,7 +12,9 @@ describe("Button Combos test", () => {
   const _props = {
     disabled: [true, false],
     type: ["primary", "secondary", "dropdown", "link"],
-    showRipple: [true, false]
+    showRipple: [true, false],
+    loading: [true, false],
+    large: [true, false]
   };
 
   const _combos = combos(_props);
@@ -45,6 +47,18 @@ describe("Button: functionality", () => {
     const fake = sinon.fake();
     const button = mount(
       <Button disabled onClick={fake}>
+        Submit
+      </Button>
+    );
+
+    expect(button.contains(<Ink />)).toBeFalsy();
+    expect(fake.called).toBeFalsy();
+  });
+
+  test("no ripple present and no click registered in loading state", () => {
+    const fake = sinon.fake();
+    const button = mount(
+      <Button loading onClick={fake}>
         Submit
       </Button>
     );

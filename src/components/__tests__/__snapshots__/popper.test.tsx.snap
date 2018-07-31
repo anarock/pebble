@@ -1,8 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Popper snapshot 1`] = `
-Array [
-  .emotion-0 {
+.emotion-2 {
+  margin: 14px;
+  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1);
+  border-radius: 3px;
+}
+
+.emotion-1 {
+  position: absolute;
+  text-shadow: 1px 0 20px rgba(0,0,0,0.1);
+}
+
+.emotion-1[data-placement^='top'] {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: -12px;
+}
+
+.emotion-1[data-placement^='bottom'] {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  top: -12px;
+}
+
+.emotion-1[data-placement^='right'] {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  left: -12px;
+}
+
+.emotion-1[data-placement^='left'] {
+  right: -12px;
+}
+
+.emotion-0 {
   line-height: 23px;
   height: 40px;
   padding: 0 20px;
@@ -27,7 +62,7 @@ Array [
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 12px;
   min-width: 100px;
@@ -38,6 +73,7 @@ Array [
 
 .emotion-0.__pebble__button__disabled {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-0.__pebble__button__disabled:focus {
@@ -93,20 +129,26 @@ Array [
   border: none;
 }
 
-.emotion-0.__pebble__button_link {
+.emotion-0.__pebble__button__loading .icon-spinner {
+  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
+  animation: animation-1q8eu9e 1500ms infinite linear;
+}
+
+.emotion-0.__pebble__button__link {
   background-color: transparent;
   border: 0;
   color: #6161FF;
   min-width: 0;
+  padding: 0;
   font-size: 14px;
 }
 
-.emotion-0.__pebble__button_link:not(.__pebble__button__disabled):hover {
+.emotion-0.__pebble__button__link:not(.__pebble__button__disabled):hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.emotion-0.__pebble__button_link.__pebble__button__disabled {
+.emotion-0.__pebble__button__link.__pebble__button__disabled {
   color: #C0C0FF;
   cursor: not-allowed;
 }
@@ -125,6 +167,13 @@ Array [
 }
 
 <div>
+  <div
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
     <button
       className="emotion-0"
       onClick={[Function]}
@@ -135,7 +184,6 @@ Array [
       }
     >
       Click Me
-       
       <canvas
         height={0}
         onDragOver={[Function]}
@@ -155,45 +203,9 @@ Array [
         width={0}
       />
     </button>
-  </div>,
-  .emotion-1 {
-  margin: 14px;
-  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1);
-  border-radius: 3px;
-}
-
-.emotion-0 {
-  position: absolute;
-  text-shadow: 1px 0 20px rgba(0,0,0,0.1);
-}
-
-.emotion-0[data-placement^='top'] {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  bottom: -13px;
-}
-
-.emotion-0[data-placement^='bottom'] {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  top: -13px;
-}
-
-.emotion-0[data-placement^='right'] {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  left: -13px;
-}
-
-.emotion-0[data-placement^='left'] {
-  right: -13px;
-}
-
-<div
-    className="emotion-1"
+  </div>
+  <div
+    className="emotion-2"
     style={
       Object {
         "backgroundColor": "#ffffff",
@@ -209,7 +221,7 @@ Array [
       className="dropdown-content"
     />
     <div
-      className="emotion-0"
+      className="emotion-1"
       style={
         Object {
           "color": "#ffffff",
@@ -218,6 +230,6 @@ Array [
     >
       ▶
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;

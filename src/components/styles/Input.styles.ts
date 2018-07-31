@@ -1,5 +1,6 @@
 import { colors, mixins, typography } from "../../theme";
 import { css } from "react-emotion";
+import { isDesktop } from "../../utils";
 
 const animation = "all 0.3s cubic-bezier(.64,.09,.08,1)";
 
@@ -22,9 +23,13 @@ export const inputStyle = css({
   borderBottom: `1px solid ${colors.gray.lighter}`,
   padding: "24px 0 12px 0",
   height: 48,
+  borderRadius: 0,
   ...typography.normal.regular,
   width: "100%",
   ...mixins.textEllipsis,
+  "&:disabled": {
+    backgroundColor: colors.white
+  },
   "&.__pebble__input__read__only": {
     color: colors.gray.dark
   },
@@ -37,6 +42,9 @@ export const inputStyle = css({
     height: 88,
     padding: "24px 0 52px 0",
     resize: "none"
+  },
+  "&[type='date']": {
+    ...(!isDesktop ? { "-webkit-appearance": "textfield" } : {})
   },
   "&[type='date']::-webkit-inner-spin-button, &[type='date']::-webkit-calendar-picker-indicator": {
     webkitAppearance: "none",

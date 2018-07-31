@@ -18,6 +18,7 @@ storiesOf("Button", module)
       onClick={action("click")}
       isSelected={boolean("isSelected")}
       showRipple={boolean("showRipple")}
+      loading={boolean("loading")}
     >
       Submit
     </Button>

@@ -34,6 +34,7 @@ export interface StepperProps {
   onBeforeNext?: (index: number) => boolean;
   onBeforePrev?: (index: number) => boolean;
   onChange?: (args: { prev: number; current: number }) => void;
+  isRightButtonLoading?: boolean;
 }
 
 export interface StepperState {

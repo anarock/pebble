@@ -1,4 +1,4 @@
-import styled, { css } from "react-emotion";
+import styled, { css, keyframes } from "react-emotion";
 import { colors, constants, typography } from "../../theme";
 
 export const Icon = styled("i")(
@@ -48,6 +48,15 @@ const buttonPseudo = {
   }
 };
 
+const rotate = keyframes({
+  from: {
+    transform: "rotate(0deg)"
+  },
+  to: {
+    transform: "rotate(360deg)"
+  }
+});
+
 export const buttonStyle = css({
   lineHeight: "23px",
   height: constants.buttonHeight,
@@ -65,6 +74,7 @@ export const buttonStyle = css({
   border: 0,
   "&.__pebble__button__disabled": {
     cursor: "not-allowed",
+    backgroundColor: colors.white.base,
     ":focus": {
       border: "none"
     }
@@ -86,11 +96,17 @@ export const buttonStyle = css({
   ":focus": {
     border: "none"
   },
-  "&.__pebble__button_link": {
+  "&.__pebble__button__loading": {
+    ".icon-spinner": {
+      animation: `${rotate} 1500ms infinite linear`
+    }
+  },
+  "&.__pebble__button__link": {
     backgroundColor: "transparent",
     border: 0,
     color: violet.base,
     minWidth: 0,
+    padding: 0,
     fontSize: 14,
     ":not(.__pebble__button__disabled):hover": {
       textDecoration: "underline"

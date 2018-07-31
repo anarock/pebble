@@ -14,8 +14,7 @@ const Tag: React.SFC<TagProps> = ({ label, color, onClose }) => {
       className={wrapperClassName}
       style={{
         color: colors[color].base,
-        backgroundColor: colors[color].light,
-        display: onClose ? "flex" : "inline-flex"
+        backgroundColor: colors[color].light
       }}
     >
       {label}{" "}

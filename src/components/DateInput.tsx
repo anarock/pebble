@@ -2,9 +2,11 @@ import * as React from "react";
 import { DateInputProps } from "./typings/Date";
 import DropDown from "./DropDown";
 import { dateClass, dropDownClassName } from "./styles/Date.styles";
-import format from "date-fns/format";
+import { format } from "date-fns";
 import Calendar from "./Calendar";
 import Input from "./Input";
+import { cx, css } from "react-emotion";
+import { isDesktop } from "../utils";
 
 class DateInput extends React.PureComponent<DateInputProps> {
   onChange = (date: Date | string) => {
@@ -13,9 +15,16 @@ class DateInput extends React.PureComponent<DateInputProps> {
 
   render() {
     const { value } = this.props;
+
+    const dropDownClass = cx(dropDownClassName, {
+      [css({
+        display: "none"
+      })]: !isDesktop
+    });
+
     return (
       <DropDown
-        dropDownClassName={dropDownClassName}
+        dropDownClassName={dropDownClass}
         labelComponent={({ toggleDropdown }) => (
           <div onClick={toggleDropdown}>
             <Input
@@ -24,6 +33,9 @@ class DateInput extends React.PureComponent<DateInputProps> {
               value={format(value, "YYYY-MM-DD")}
               placeholder={this.props.placeholder}
               fixLabelAtTop
+              inputProps={{
+                placeholder: "DD/MM/YYYY"
+              }}
             />
           </div>
         )}

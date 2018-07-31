@@ -10,7 +10,7 @@ export const optionsWrapper = css({
   zIndex: 9,
   maxHeight: 352,
   minWidth: 200,
-  overflowY: "scroll",
+  overflowY: "auto",
   padding: "20px 1px"
 });
 
