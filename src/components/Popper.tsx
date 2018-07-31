@@ -49,7 +49,7 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
         <Manager>
           <Reference>
             {({ ref }) => (
-              <div ref={ref}>
+              <div style={{ display: "inline-block" }} ref={ref}>
                 {typeof label === "function"
                   ? label({ toggle: this.toggle, isOpen: this.state.isOpen })
                   : label}
