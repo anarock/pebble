@@ -26,11 +26,11 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
   webfontsGenerator(
     {
       files,
-      dest: "src/theme/icons/",
+      dest: "src/theme/icon-fonts/",
       fontName: "AnarockIcons", // pascalcase to make it react native compatible
       types: ["woff2", "ttf", "eot", "woff"],
       css: false,
-      cssFontsUrl: "./icons/",
+      cssFontsUrl: "./icon-fonts/",
       templateOptions: {
         baseSelector: "i"
       }

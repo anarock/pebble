@@ -25,7 +25,7 @@
     "now-start": "cd storybook-static && serve",
     "deploy": "npm run now-build && cd storybook-static && now",
     "build:icons": "node ./scripts/generateIcon.js",
-    "copy:icons": "copy './src/theme/icons/*' './dist/icons' && copy './src/theme/*.css' './dist' && copy './src/theme/icons/*.ttf' './native/icons'"
+    "copy:icons": "copy './src/theme/icon-fonts/*' './dist/icon-fonts' && copy './src/theme/*.css' './dist' && copy './src/theme/icon-fonts/*.ttf' './native/icon-fonts'"
   },
   "lint-staged": {
     "./svgs/*.svg": [
