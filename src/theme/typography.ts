@@ -36,7 +36,6 @@ const typography: Typography = {
 
   // fontSize 16
   l: {
-    // todo: add in design system
     bold: {
       fontWeight: "bold",
       color: colors.gray.dark,

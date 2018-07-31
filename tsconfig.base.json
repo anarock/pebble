@@ -22,7 +22,6 @@
     "outDir": "compiled",
     "isolatedModules": false,
     "pretty": true,
-    "baseUrl": ".",
     "typeRoots": ["./node_modules/@types"],
     "lib": ["dom", "es2015", "es2016"]
   },
