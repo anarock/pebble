@@ -44,7 +44,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -182,7 +182,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -385,7 +385,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -588,7 +588,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -782,7 +782,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -938,7 +938,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -1159,7 +1159,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -1362,7 +1362,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -1542,7 +1542,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -1676,7 +1676,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -1847,7 +1847,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -2046,7 +2046,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -2208,7 +2208,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -2342,7 +2342,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -2513,7 +2513,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -2712,7 +2712,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -2874,7 +2874,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 12px;
   min-width: 100px;
@@ -3021,7 +3021,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 14px;
   min-width: 140px;
@@ -3205,7 +3205,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 12px;
   min-width: 100px;
@@ -3417,7 +3417,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 14px;
   min-width: 140px;
@@ -3592,7 +3592,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 12px;
   min-width: 100px;
@@ -3757,7 +3757,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 14px;
   min-width: 140px;
@@ -3959,7 +3959,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 12px;
   min-width: 100px;
@@ -4171,7 +4171,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 14px;
   min-width: 140px;
@@ -4346,7 +4346,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -4493,7 +4493,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -4677,7 +4677,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -4889,7 +4889,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -5064,7 +5064,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -5229,7 +5229,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -5431,7 +5431,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -5643,7 +5643,7 @@ exports[`Button Combos test { disabled: false,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -5832,7 +5832,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -5969,7 +5969,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -6171,7 +6171,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -6374,7 +6374,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -6568,7 +6568,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -6705,7 +6705,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -6907,7 +6907,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -7110,7 +7110,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -7290,7 +7290,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -7423,7 +7423,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -7593,7 +7593,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -7792,7 +7792,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -7954,7 +7954,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -8087,7 +8087,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -8257,7 +8257,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -8456,7 +8456,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -8618,7 +8618,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 12px;
   min-width: 100px;
@@ -8764,7 +8764,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 14px;
   min-width: 140px;
@@ -8947,7 +8947,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 12px;
   min-width: 100px;
@@ -9159,7 +9159,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 14px;
   min-width: 140px;
@@ -9334,7 +9334,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 12px;
   min-width: 100px;
@@ -9480,7 +9480,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 14px;
   min-width: 140px;
@@ -9663,7 +9663,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 12px;
   min-width: 100px;
@@ -9875,7 +9875,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 14px;
   min-width: 140px;
@@ -10050,7 +10050,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -10196,7 +10196,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -10379,7 +10379,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -10591,7 +10591,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -10766,7 +10766,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -10912,7 +10912,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;
@@ -11095,7 +11095,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 12px;
   min-width: 100px;
@@ -11307,7 +11307,7 @@ exports[`Button Combos test { disabled: true,
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #101721;
   font-size: 14px;
   min-width: 140px;

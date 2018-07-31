@@ -7,7 +7,7 @@ Array [
   position: fixed;
   bottom: 50px;
   border-radius: 3px;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 14px;
   height: 46px;

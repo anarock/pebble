@@ -62,7 +62,7 @@ exports[`Component: Popper snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
-  font-weight: normal;
+  font-weight: 400;
   color: #ffffff;
   font-size: 12px;
   min-width: 100px;
