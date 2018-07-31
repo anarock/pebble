@@ -33,8 +33,6 @@ function loadFont(
 }
 
 injectGlobal`
-	${loadFont("Anarock", "anarock-regular", "normal")}
-  ${loadFont("Anarock", "anarock-medium", "bold")}
   ${loadFont("AnarockIcons", "AnarockIcons")}
 `;
 

@@ -1,29 +1,10 @@
 @import "./icons.css";
 
-@font-face {
-  font-family: "Anarock";
-  src: url(./fonts/anarock-regular.woff) format("woff"),
-    url(./fonts/anarock-regular.woff2) format("woff2"),
-    url(./fonts/anarock-regular.ttf) format("truetype"),
-    url(./fonts/anarock-regular.svg#Anarock) format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Anarock";
-  src: url(./fonts/anarock-medium.woff) format("woff"),
-    url(./fonts/anarock-medium.woff2) format("woff2"),
-    url(./fonts/anarock-medium.ttf) format("truetype"),
-    url(./fonts/anarock-medium.svg#Anarock) format("svg");
-  font-style: normal;
-  font-weight: bold;
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Anarock", sans-serif;
+  font-family: "Anarock", "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: transparent;
