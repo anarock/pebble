@@ -16,6 +16,7 @@ Make sure the below code is executed at the very beginning.
 The easier way is to use the cdn:
 
 ```html
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@anarock/pebble@[version]/dist/pebble.css"/>
 ```
 
@@ -51,8 +52,6 @@ function loadFont(
 }
 
 injectGlobal`
-  ${loadFont("Anarock", "anarock-regular", "normal")}
-  ${loadFont("Anarock", "anarock-medium", "bold")}
   ${loadFont("AnarockIcons", "AnarockIcons")}
 `;
 
@@ -60,14 +59,14 @@ injectGlobal`
 initStyles();
 ```
 
-## Using fonts/icons in React Native
+## Using icons in React Native
 
 Add the following in your `package.json`;
 
 ```json
 "rnpm": {
     "assets": {
-        "./node_modules/@anarock/pebble/native/fonts"
+        "./node_modules/@anarock/pebble/native/icons"
     }
 }
 ```

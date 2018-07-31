@@ -14,10 +14,10 @@ function loadFont(
   fontWeight: string = "normal",
   fontStyle: string = "normal"
 ) {
-  const ttf = require(`../src/theme/fonts/${src}.ttf`);
-  const woff2 = require(`../src/theme/fonts/${src}.woff2`);
-  const woff = require(`../src/theme/fonts/${src}.woff`);
-  const svg = require(`../src/theme/fonts/${src}.svg`);
+  const ttf = require(`../src/theme/icons/${src}.ttf`);
+  const woff2 = require(`../src/theme/icons/${src}.woff2`);
+  const woff = require(`../src/theme/icons/${src}.woff`);
+  const svg = require(`../src/theme/icons/${src}.svg`);
 
   return `
       @font-face{
@@ -33,8 +33,6 @@ function loadFont(
 }
 
 injectGlobal`
-	${loadFont("Anarock", "anarock-regular", "normal")}
-  ${loadFont("Anarock", "anarock-medium", "bold")}
   ${loadFont("AnarockIcons", "AnarockIcons")}
 `;
 

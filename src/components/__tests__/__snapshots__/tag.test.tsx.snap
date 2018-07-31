@@ -2,7 +2,7 @@
 
 exports[`Component: Tag snapshot 1`] = `
 .emotion-0 {
-  font-weight: bold;
+  font-weight: 500;
   color: #101721;
   font-size: 10px;
   display: -webkit-inline-box;
@@ -59,7 +59,7 @@ exports[`Component: Tag snapshot 1`] = `
 
 exports[`Component: Tag snapshot 2`] = `
 .emotion-0 {
-  font-weight: bold;
+  font-weight: 500;
   color: #101721;
   font-size: 10px;
   display: -webkit-inline-box;

@@ -10,16 +10,21 @@ const fontSize = {
   xll: 22
 };
 
+enum FontWeight {
+  NORMAL = 400,
+  BOLD = 500
+}
+
 const typography: Typography = {
   // fontSize 22
   xll: {
     regular: {
-      fontWeight: "normal",
+      fontWeight: FontWeight.NORMAL,
       color: colors.gray.darker,
       fontSize: fontSize.xll
     },
     bold: {
-      fontWeight: "bold",
+      fontWeight: FontWeight.BOLD,
       color: colors.gray.darker,
       fontSize: fontSize.xll
     }
@@ -28,7 +33,7 @@ const typography: Typography = {
   // fontSize 18
   xl: {
     bold: {
-      fontWeight: "bold",
+      fontWeight: FontWeight.BOLD,
       color: colors.gray.darker,
       fontSize: fontSize.xl
     }
@@ -37,12 +42,12 @@ const typography: Typography = {
   // fontSize 16
   l: {
     bold: {
-      fontWeight: "bold",
+      fontWeight: FontWeight.BOLD,
       color: colors.gray.dark,
       fontSize: fontSize.l
     },
     light: {
-      fontWeight: "normal",
+      fontWeight: FontWeight.NORMAL,
       color: colors.gray.dark,
       fontSize: fontSize.l
     }
@@ -51,27 +56,27 @@ const typography: Typography = {
   // fontSize 14
   normal: {
     regular: {
-      fontWeight: "normal",
+      fontWeight: FontWeight.NORMAL,
       color: colors.gray.darker,
       fontSize: fontSize.normal
     },
     bold: {
-      fontWeight: "bold",
+      fontWeight: FontWeight.BOLD,
       color: colors.gray.darker,
       fontSize: fontSize.normal
     },
     light: {
-      fontWeight: "normal",
+      fontWeight: FontWeight.NORMAL,
       color: colors.gray.dark,
       fontSize: fontSize.normal
     },
     lighter: {
-      fontWeight: "normal",
+      fontWeight: FontWeight.NORMAL,
       color: colors.gray.base,
       fontSize: fontSize.normal
     },
     link: {
-      fontWeight: "normal",
+      fontWeight: FontWeight.NORMAL,
       color: colors.violet.base,
       fontSize: fontSize.normal
     }
@@ -80,22 +85,22 @@ const typography: Typography = {
   // fontSize 12
   s: {
     regular: {
-      fontWeight: "normal",
+      fontWeight: FontWeight.NORMAL,
       color: colors.gray.darker,
       fontSize: fontSize.s
     },
     light: {
-      fontWeight: "normal",
+      fontWeight: FontWeight.NORMAL,
       color: colors.gray.dark,
       fontSize: fontSize.s
     },
     lighter: {
-      fontWeight: "normal",
+      fontWeight: FontWeight.NORMAL,
       color: colors.gray.base,
       fontSize: fontSize.s
     },
     link: {
-      fontWeight: "normal",
+      fontWeight: FontWeight.NORMAL,
       color: colors.violet.base,
       fontSize: fontSize.s
     }
@@ -104,12 +109,12 @@ const typography: Typography = {
   // fontSize 10
   xs: {
     bold: {
-      fontWeight: "bold",
+      fontWeight: FontWeight.BOLD,
       color: colors.gray.darker,
       fontSize: fontSize.xs
     },
     light: {
-      fontWeight: "normal",
+      fontWeight: FontWeight.NORMAL,
       color: colors.gray.dark,
       fontSize: fontSize.xs
     }
