@@ -167,7 +167,13 @@ exports[`Component: Popper snapshot 1`] = `
 }
 
 <div>
-  <div>
+  <div
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
     <button
       className="emotion-0"
       onClick={[Function]}
