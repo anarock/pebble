@@ -59,7 +59,10 @@ storiesOf("Typography", module).add("List", () => (
               {text}
             </div>
             <title className={titleStyle} style={{ width: 100 }}>
-              <span>{style.fontSize}px</span>
+              <span>
+                {style.fontSize}
+                px
+              </span>
               <span>{style.color}</span>
               <span>{style.fontWeight}</span>
             </title>

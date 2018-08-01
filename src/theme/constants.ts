@@ -12,7 +12,7 @@ const constants: ThemeConstants = {
 
   border: {
     base: `1px solid ${colors.gray.light}`,
-    dark: `1px solid ${colors.gray.lighter}`
+    light: `1px solid ${colors.gray.lighter}`
   },
 
   boxShadow: {
