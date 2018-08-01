@@ -31,7 +31,7 @@
     "./svgs/*.svg": [
       "imagemin-lint-staged",
       "yarn build:icons",
-      "git add src/theme/fonts/* src/theme/icons.css src/theme/icons.ts"
+      "git add src/theme/icon-fonts/* src/theme/icons.css src/theme/icons.ts"
     ]
   },
   "dependencies": {
