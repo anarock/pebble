@@ -10,6 +10,7 @@ export const iconNames = [
   "calendar",
   "call",
   "car",
+  "channel-partners",
   "check",
   "checkbox-selected",
   "checkbox-unfilled",
@@ -20,6 +21,8 @@ export const iconNames = [
   "close-circle",
   "close",
   "copy",
+  "digital-leads",
+  "direct-walkins",
   "direction",
   "document-uploaded",
   "document",
@@ -29,10 +32,13 @@ export const iconNames = [
   "filter",
   "fire",
   "history",
+  "home-tab",
   "home",
+  "incoming-calls",
   "info",
   "invoice",
   "junk",
+  "leads-tab",
   "location",
   "logout-door",
   "logout",
@@ -42,6 +48,8 @@ export const iconNames = [
   "note",
   "notification",
   "open-external",
+  "other-leads",
+  "patchout",
   "pause",
   "phone",
   "play",
@@ -106,170 +114,194 @@ i:before {
 .icon-car:before {
   content: "\f109";
 }
-.icon-check:before {
+.icon-channel-partners:before {
   content: "\f10a";
 }
-.icon-checkbox-selected:before {
+.icon-check:before {
   content: "\f10b";
 }
-.icon-checkbox-unfilled:before {
+.icon-checkbox-selected:before {
   content: "\f10c";
 }
-.icon-checkbox-unselected:before {
+.icon-checkbox-unfilled:before {
   content: "\f10d";
 }
-.icon-chevron-left:before {
+.icon-checkbox-unselected:before {
   content: "\f10e";
 }
-.icon-clock:before {
+.icon-chevron-left:before {
   content: "\f10f";
 }
-.icon-close-circle-filled:before {
+.icon-clock:before {
   content: "\f110";
 }
-.icon-close-circle:before {
+.icon-close-circle-filled:before {
   content: "\f111";
 }
-.icon-close:before {
+.icon-close-circle:before {
   content: "\f112";
 }
-.icon-copy:before {
+.icon-close:before {
   content: "\f113";
 }
-.icon-direction:before {
+.icon-copy:before {
   content: "\f114";
 }
-.icon-document-uploaded:before {
+.icon-digital-leads:before {
   content: "\f115";
 }
-.icon-document:before {
+.icon-direct-walkins:before {
   content: "\f116";
 }
-.icon-download:before {
+.icon-direction:before {
   content: "\f117";
 }
-.icon-edit-2:before {
+.icon-document-uploaded:before {
   content: "\f118";
 }
-.icon-edit:before {
+.icon-document:before {
   content: "\f119";
 }
-.icon-filter:before {
+.icon-download:before {
   content: "\f11a";
 }
-.icon-fire:before {
+.icon-edit-2:before {
   content: "\f11b";
 }
-.icon-history:before {
+.icon-edit:before {
   content: "\f11c";
 }
-.icon-home:before {
+.icon-filter:before {
   content: "\f11d";
 }
-.icon-info:before {
+.icon-fire:before {
   content: "\f11e";
 }
-.icon-invoice:before {
+.icon-history:before {
   content: "\f11f";
 }
-.icon-junk:before {
+.icon-home-tab:before {
   content: "\f120";
 }
-.icon-location:before {
+.icon-home:before {
   content: "\f121";
 }
-.icon-logout-door:before {
+.icon-incoming-calls:before {
   content: "\f122";
 }
-.icon-logout:before {
+.icon-info:before {
   content: "\f123";
 }
-.icon-mail:before {
+.icon-invoice:before {
   content: "\f124";
 }
-.icon-mic:before {
+.icon-junk:before {
   content: "\f125";
 }
-.icon-more:before {
+.icon-leads-tab:before {
   content: "\f126";
 }
-.icon-note:before {
+.icon-location:before {
   content: "\f127";
 }
-.icon-notification:before {
+.icon-logout-door:before {
   content: "\f128";
 }
-.icon-open-external:before {
+.icon-logout:before {
   content: "\f129";
 }
-.icon-pause:before {
+.icon-mail:before {
   content: "\f12a";
 }
-.icon-phone:before {
+.icon-mic:before {
   content: "\f12b";
 }
-.icon-play:before {
+.icon-more:before {
   content: "\f12c";
 }
-.icon-plus:before {
+.icon-note:before {
   content: "\f12d";
 }
-.icon-profile-1:before {
+.icon-notification:before {
   content: "\f12e";
 }
-.icon-profile:before {
+.icon-open-external:before {
   content: "\f12f";
 }
-.icon-radio-check-filled:before {
+.icon-other-leads:before {
   content: "\f130";
 }
-.icon-radio-check:before {
+.icon-patchout:before {
   content: "\f131";
 }
-.icon-radio-selected:before {
+.icon-pause:before {
   content: "\f132";
 }
-.icon-radio:before {
+.icon-phone:before {
   content: "\f133";
 }
-.icon-reschedule:before {
+.icon-play:before {
   content: "\f134";
 }
-.icon-reset:before {
+.icon-plus:before {
   content: "\f135";
 }
-.icon-search:before {
+.icon-profile-1:before {
   content: "\f136";
 }
-.icon-share:before {
+.icon-profile:before {
   content: "\f137";
 }
-.icon-sms:before {
+.icon-radio-check-filled:before {
   content: "\f138";
 }
-.icon-spinner:before {
+.icon-radio-check:before {
   content: "\f139";
 }
-.icon-unchecked-radio:before {
+.icon-radio-selected:before {
   content: "\f13a";
 }
-.icon-undo:before {
+.icon-radio:before {
   content: "\f13b";
 }
-.icon-update:before {
+.icon-reschedule:before {
   content: "\f13c";
 }
-.icon-updating:before {
+.icon-reset:before {
   content: "\f13d";
 }
-.icon-upload:before {
+.icon-search:before {
   content: "\f13e";
 }
-.icon-warning:before {
+.icon-share:before {
   content: "\f13f";
 }
-.icon-whatsapp:before {
+.icon-sms:before {
   content: "\f140";
+}
+.icon-spinner:before {
+  content: "\f141";
+}
+.icon-unchecked-radio:before {
+  content: "\f142";
+}
+.icon-undo:before {
+  content: "\f143";
+}
+.icon-update:before {
+  content: "\f144";
+}
+.icon-updating:before {
+  content: "\f145";
+}
+.icon-upload:before {
+  content: "\f146";
+}
+.icon-warning:before {
+  content: "\f147";
+}
+.icon-whatsapp:before {
+  content: "\f148";
 }
 `;
 }
