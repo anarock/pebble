@@ -33,7 +33,7 @@ function loadFont(
 }
 
 injectGlobal`
-  ${loadFont("AnarockIcons", "AnarockIcons")}
+  ${loadFont("PebbleIcons", "PebbleIcons")}
 `;
 
 initStyles();

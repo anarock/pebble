@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "AnarockIcons";
-  src: url("./icon-fonts/AnarockIcons.eot?549d8392a30acbbf808cb66387f97345?#iefix")
+  font-family: "PebbleIcons";
+  src: url("./icon-fonts/PebbleIcons.eot?f13c89360294f5fa55bb513e3066d151?#iefix")
       format("embedded-opentype"),
-    url("./icon-fonts/AnarockIcons.woff2?549d8392a30acbbf808cb66387f97345")
+    url("./icon-fonts/PebbleIcons.woff2?f13c89360294f5fa55bb513e3066d151")
       format("woff2"),
-    url("./icon-fonts/AnarockIcons.woff?549d8392a30acbbf808cb66387f97345")
+    url("./icon-fonts/PebbleIcons.woff?f13c89360294f5fa55bb513e3066d151")
       format("woff"),
-    url("./icon-fonts/AnarockIcons.ttf?549d8392a30acbbf808cb66387f97345")
+    url("./icon-fonts/PebbleIcons.ttf?f13c89360294f5fa55bb513e3066d151")
       format("truetype");
 }
 
@@ -15,7 +15,7 @@ i {
 }
 
 i:before {
-  font-family: AnarockIcons !important;
+  font-family: PebbleIcons !important;
   font-style: normal;
   font-weight: normal !important;
   vertical-align: top;
