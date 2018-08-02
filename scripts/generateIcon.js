@@ -5,12 +5,14 @@ const prettier = require("prettier");
 const colors = require("colors");
 const execa = require("execa");
 
-async function createRNativeFont() {
+async function createRNFont() {
   try {
     await execa.shell(
-      "rimraf native && mkdir native && ./node_modules/.bin/generate-icon ./src/theme/icons.css --componentName=AnarockIcons --fontFamily=anarock-icons > native/Icon.js"
+      "rimraf native && mkdir native && ./node_modules/.bin/generate-icon ./src/theme/icons.css --componentName=PebbleIcons --fontFamily=pebble-icons > native/Icon.js"
     );
-    console.log(colors.green.bold("Created Icon component for React Native."));
+    console.log(
+      colors.green.bold("Created PebbleIcon component for React Native.")
+    );
   } catch (e) {
     console.log(e);
   }
@@ -27,7 +29,7 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
     {
       files,
       dest: "src/theme/icon-fonts/",
-      fontName: "AnarockIcons", // pascalcase to make it react native compatible
+      fontName: "PebbleIcons", // pascalcase to make it react native compatible
       types: ["woff2", "ttf", "eot", "woff"],
       css: false,
       cssFontsUrl: "./icon-fonts/",
@@ -75,7 +77,7 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
         err => {
           if (err) console.log(err.message);
           else {
-            createRNativeFont();
+            createRNFont();
           }
         }
       );

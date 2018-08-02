@@ -87,7 +87,7 @@ export function initIconStyles() {
 }
 
 i:before {
-  font-family: AnarockIcons !important;
+  font-family: PebbleIcons !important;
   font-style: normal;
   font-weight: normal !important;
   vertical-align: top;

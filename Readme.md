@@ -52,7 +52,7 @@ function loadFont(
 }
 
 injectGlobal`
-  ${loadFont("AnarockIcons", "AnarockIcons")}
+  ${loadFont("PebbleIcons", "PebbleIcons")}
 `;
 
 // initStyles includes the CSS for all the icons and some normalizing CSS properties.
