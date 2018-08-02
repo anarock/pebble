@@ -29,8 +29,10 @@ export const iconNames = [
   "download",
   "edit-2",
   "edit",
+  "face-to-face",
   "filter",
   "fire",
+  "follow-up",
   "history",
   "home-filled",
   "home",
@@ -49,8 +51,10 @@ export const iconNames = [
   "notification",
   "open-external",
   "other-leads",
+  "others",
   "patchout",
   "pause",
+  "phone-2",
   "phone",
   "play",
   "plus",
@@ -64,8 +68,10 @@ export const iconNames = [
   "reset",
   "search",
   "share",
+  "site-visit",
   "sms",
   "spinner",
+  "travel",
   "unchecked-radio",
   "undo",
   "update",
@@ -171,137 +177,155 @@ i:before {
 .icon-edit:before {
   content: "\f11c";
 }
-.icon-filter:before {
+.icon-face-to-face:before {
   content: "\f11d";
 }
-.icon-fire:before {
+.icon-filter:before {
   content: "\f11e";
 }
-.icon-history:before {
+.icon-fire:before {
   content: "\f11f";
 }
-.icon-home-filled:before {
+.icon-follow-up:before {
   content: "\f120";
 }
-.icon-home:before {
+.icon-history:before {
   content: "\f121";
 }
-.icon-incoming-calls:before {
+.icon-home-filled:before {
   content: "\f122";
 }
-.icon-info:before {
+.icon-home:before {
   content: "\f123";
 }
-.icon-invoice:before {
+.icon-incoming-calls:before {
   content: "\f124";
 }
-.icon-junk:before {
+.icon-info:before {
   content: "\f125";
 }
-.icon-leads-tab:before {
+.icon-invoice:before {
   content: "\f126";
 }
-.icon-location:before {
+.icon-junk:before {
   content: "\f127";
 }
-.icon-logout-door:before {
+.icon-leads-tab:before {
   content: "\f128";
 }
-.icon-logout:before {
+.icon-location:before {
   content: "\f129";
 }
-.icon-mail:before {
+.icon-logout-door:before {
   content: "\f12a";
 }
-.icon-mic:before {
+.icon-logout:before {
   content: "\f12b";
 }
-.icon-more:before {
+.icon-mail:before {
   content: "\f12c";
 }
-.icon-note:before {
+.icon-mic:before {
   content: "\f12d";
 }
-.icon-notification:before {
+.icon-more:before {
   content: "\f12e";
 }
-.icon-open-external:before {
+.icon-note:before {
   content: "\f12f";
 }
-.icon-other-leads:before {
+.icon-notification:before {
   content: "\f130";
 }
-.icon-patchout:before {
+.icon-open-external:before {
   content: "\f131";
 }
-.icon-pause:before {
+.icon-other-leads:before {
   content: "\f132";
 }
-.icon-phone:before {
+.icon-others:before {
   content: "\f133";
 }
-.icon-play:before {
+.icon-patchout:before {
   content: "\f134";
 }
-.icon-plus:before {
+.icon-pause:before {
   content: "\f135";
 }
-.icon-profile-1:before {
+.icon-phone-2:before {
   content: "\f136";
 }
-.icon-profile:before {
+.icon-phone:before {
   content: "\f137";
 }
-.icon-radio-check-filled:before {
+.icon-play:before {
   content: "\f138";
 }
-.icon-radio-check:before {
+.icon-plus:before {
   content: "\f139";
 }
-.icon-radio-selected:before {
+.icon-profile-1:before {
   content: "\f13a";
 }
-.icon-radio:before {
+.icon-profile:before {
   content: "\f13b";
 }
-.icon-reschedule:before {
+.icon-radio-check-filled:before {
   content: "\f13c";
 }
-.icon-reset:before {
+.icon-radio-check:before {
   content: "\f13d";
 }
-.icon-search:before {
+.icon-radio-selected:before {
   content: "\f13e";
 }
-.icon-share:before {
+.icon-radio:before {
   content: "\f13f";
 }
-.icon-sms:before {
+.icon-reschedule:before {
   content: "\f140";
 }
-.icon-spinner:before {
+.icon-reset:before {
   content: "\f141";
 }
-.icon-unchecked-radio:before {
+.icon-search:before {
   content: "\f142";
 }
-.icon-undo:before {
+.icon-share:before {
   content: "\f143";
 }
-.icon-update:before {
+.icon-site-visit:before {
   content: "\f144";
 }
-.icon-updating:before {
+.icon-sms:before {
   content: "\f145";
 }
-.icon-upload:before {
+.icon-spinner:before {
   content: "\f146";
 }
-.icon-warning:before {
+.icon-travel:before {
   content: "\f147";
 }
-.icon-whatsapp:before {
+.icon-unchecked-radio:before {
   content: "\f148";
+}
+.icon-undo:before {
+  content: "\f149";
+}
+.icon-update:before {
+  content: "\f14a";
+}
+.icon-updating:before {
+  content: "\f14b";
+}
+.icon-upload:before {
+  content: "\f14c";
+}
+.icon-warning:before {
+  content: "\f14d";
+}
+.icon-whatsapp:before {
+  content: "\f14e";
 }
 `;
 }
