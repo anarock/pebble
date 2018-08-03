@@ -1,17 +1,18 @@
 import * as React from "react";
 
+type FocusEvent = (
+  event: React.KeyboardEvent<HTMLInputElement> | React.FocusEvent<HTMLElement>
+) => void;
+
 export interface TypeaheadProps {
   className?: string;
   searchBox: (
     args: {
       registerChange: (text: string) => void;
-      onFocus: (
-        event:
-          | React.KeyboardEvent<HTMLInputElement>
-          | React.FocusEvent<HTMLElement>
-      ) => void;
+      onFocus: FocusEvent;
       value: string;
-    }
+    },
+    props: TypeaheadProps
   ) => JSX.Element;
   debounceTime?: number;
   rowRenderElement: (
@@ -25,6 +26,9 @@ export interface TypeaheadProps {
   valueExtractor: (suggestion: any) => string;
   dropdownClassName?: string;
   initialValue?: string;
+  disabled?: boolean;
+  errorMessage?: string;
+  placeholder: string;
 }
 
 export interface TypeaheadState {
