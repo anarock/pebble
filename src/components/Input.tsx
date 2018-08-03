@@ -63,7 +63,8 @@ class Input extends React.PureComponent<InputProps, InputState> {
       successMessage,
       message,
       textArea,
-      required
+      required,
+      onClick
     } = this.props;
     const { isFocused } = this.state;
 
@@ -101,6 +102,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
         className={_wrapperStyle}
         onFocus={this.addFocus}
         onBlur={this.removeFocus}
+        onClick={onClick}
       >
         <label className={labelClassName}>
           {placeholder}

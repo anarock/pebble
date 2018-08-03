@@ -26,18 +26,17 @@ class DateInput extends React.PureComponent<DateInputProps> {
       <DropDown
         dropDownClassName={dropDownClass}
         labelComponent={({ toggleDropdown }) => (
-          <div onClick={toggleDropdown}>
-            <Input
-              onChange={this.onChange}
-              type="date"
-              value={format(value, "YYYY-MM-DD")}
-              placeholder={this.props.placeholder}
-              fixLabelAtTop
-              inputProps={{
-                placeholder: "DD/MM/YYYY"
-              }}
-            />
-          </div>
+          <Input
+            onChange={this.onChange}
+            type="date"
+            value={format(value, "YYYY-MM-DD")}
+            placeholder={this.props.placeholder}
+            fixLabelAtTop
+            inputProps={{
+              placeholder: "DD/MM/YYYY"
+            }}
+            onClick={toggleDropdown}
+          />
         )}
       >
         {({ toggle }) => (

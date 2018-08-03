@@ -6,7 +6,7 @@ export interface InputProps {
   placeholder: string;
   onChange: (text: string) => void;
   className?: string;
-  inputProps?: React.InputHTMLAttributes<any>;
+  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
   fixLabelAtTop?: boolean;
   value?: string | number;
   readOnly?: boolean;
@@ -15,6 +15,7 @@ export interface InputProps {
   errorMessage?: string;
   successMessage?: string;
   textArea?: boolean;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 export interface InputState {
