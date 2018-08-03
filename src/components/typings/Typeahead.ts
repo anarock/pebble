@@ -6,7 +6,7 @@ type FocusEvent = (
 
 export interface TypeaheadProps {
   className?: string;
-  searchBox: (
+  searchBox?: (
     args: {
       registerChange: (text: string) => void;
       onFocus: FocusEvent;
