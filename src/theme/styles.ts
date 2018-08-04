@@ -1,6 +1,6 @@
 import constants from "./constants";
 import colors from "./colors";
-import { css } from "react-emotion";
+import { css } from "emotion";
 import typography from "./typography";
 
 export const tableStyle = css({

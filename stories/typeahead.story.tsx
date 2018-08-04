@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import TypeAhead from "../src/components/TypeAhead";
 import { action } from "@storybook/addon-actions";
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { mixins } from "../src/theme";
 
 const labelStyle = css({

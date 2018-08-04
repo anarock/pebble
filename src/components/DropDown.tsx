@@ -2,7 +2,7 @@ import * as React from "react";
 import { DropdownProps, DropdownState } from "./typings/Dropdown";
 import Button from "./Button";
 import { dropDownStyle } from "./styles/Dropdown.styles";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
 
 class DropDown extends React.PureComponent<DropdownProps, DropdownState> {

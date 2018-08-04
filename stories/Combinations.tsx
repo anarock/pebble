@@ -1,6 +1,6 @@
 import * as React from "react";
 import combos from "combos";
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { colors, constants, mixins, typography } from "../src/theme";
 import prettier from "prettier/standalone";
 import babylon from "prettier/parser-babylon";

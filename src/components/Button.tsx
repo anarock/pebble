@@ -1,11 +1,10 @@
 import * as React from "react";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import {
-  Icon,
   buttonStyle,
+  iconStyle,
   getDynamicButtonStyle
 } from "./styles/Button.styles";
-
 import Ink from "react-ink";
 import { ButtonProps } from "./typings/Button";
 import Loader from "./Loader";
@@ -50,7 +49,12 @@ const Button: React.SFC<ButtonProps> = ({
       {type === "dropdown" && (
         <React.Fragment>
           {" "}
-          <Icon isOpen={isOpen} className="icon-arrow-down" />
+          <i
+            className={cx("icon-arrow-down", iconStyle)}
+            style={{
+              transform: isOpen ? "rotate(180deg)" : "none"
+            }}
+          />
         </React.Fragment>
       )}
       {!disableAction && showRipple && type !== "link" && <Ink />}

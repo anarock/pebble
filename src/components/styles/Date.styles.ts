@@ -1,4 +1,4 @@
-import { css } from "react-emotion";
+import { css } from "emotion";
 
 export const dateClass = css({
   padding: 20,

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import SideBar from "../src/components/Sidebar";
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { number } from "@storybook/addon-knobs";
 import { withState } from "@dump247/storybook-state";
 import Button from "../src/components/Button";

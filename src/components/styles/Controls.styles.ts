@@ -1,4 +1,4 @@
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { typography } from "../../theme";
 
 export const controlViewStyle = css({

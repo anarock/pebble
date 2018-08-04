@@ -1,5 +1,5 @@
 import { colors, mixins, typography } from "../../theme";
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { isDesktop } from "../../utils";
 
 const animation = "all 0.3s cubic-bezier(.64,.09,.08,1)";

@@ -1,5 +1,5 @@
 import { constants, mixins, typography } from "../../theme";
-import { css } from "react-emotion";
+import { css } from "emotion";
 
 export const tagStyle = css({
   ...typography.xs.bold,

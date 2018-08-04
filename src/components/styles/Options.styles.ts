@@ -1,5 +1,5 @@
 import { colors, constants, mixins, typography } from "../../theme";
-import { css } from "react-emotion";
+import { css } from "emotion";
 
 export const optionsWrapper = css({
   backgroundColor: colors.white.base,

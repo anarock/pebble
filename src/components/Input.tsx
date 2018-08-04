@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import { InputProps, InputState } from "./typings/Input";
 import {
   highlightStyle,

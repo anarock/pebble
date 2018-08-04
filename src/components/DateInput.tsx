@@ -5,7 +5,7 @@ import { dateClass, dropDownClassName } from "./styles/Date.styles";
 import { format } from "date-fns";
 import Calendar from "./Calendar";
 import Input from "./Input";
-import { cx, css } from "react-emotion";
+import { cx, css } from "emotion";
 import { isDesktop } from "../utils";
 
 class DateInput extends React.PureComponent<DateInputProps> {

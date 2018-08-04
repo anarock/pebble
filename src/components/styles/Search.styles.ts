@@ -1,4 +1,4 @@
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { colors, constants, mixins, typography } from "../../theme";
 import { getPlaceholderStyle } from "../../theme/mixins";
 

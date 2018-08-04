@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import { ControlsProps, ControlViewProps } from "./typings/Controls";
 import { colors } from "../theme";
 import { controlViewStyle, iconStyle } from "./styles/Controls.styles";

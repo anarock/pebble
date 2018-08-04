@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { css } from "react-emotion";
+import { css } from "emotion";
 import constants from "../src/theme/constants";
 import colors from "../src/theme/colors";
 import typography from "../src/theme/typography";

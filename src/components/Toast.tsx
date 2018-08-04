@@ -3,7 +3,7 @@ import { toastWrapper } from "./styles/Toast.styles";
 import { colors } from "../theme";
 import { ToastState, ToastType } from "./typings/Toast";
 import { Transition, animated } from "react-spring";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import Mitt from "mitt";
 
 const emitter = new Mitt();

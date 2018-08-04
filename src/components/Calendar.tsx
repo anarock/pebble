@@ -1,6 +1,6 @@
 import * as React from "react";
 import RCalendar from "react-calendar/dist/entry.nostyle";
-import { css, cx } from "react-emotion";
+import { css, cx } from "emotion";
 import { CalendarProps, CalendarState } from "./typings/Calendar";
 import {
   buttonsWrapper,

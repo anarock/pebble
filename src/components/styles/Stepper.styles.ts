@@ -1,5 +1,5 @@
 import { colors, typography, constants } from "../../theme";
-import { default as styled, css } from "react-emotion";
+import { css } from "emotion";
 
 export const headStyle = css({
   display: "flex",
@@ -18,18 +18,7 @@ export const headSection = css({
   }
 });
 
-export const Heading = styled("div")(
-  {
-    ...typography.normal.regular
-  },
-  (props: { isSelected: boolean; isDisabled }) => ({
-    color: props.isSelected
-      ? colors.violet.base
-      : props.isDisabled
-        ? colors.gray.base
-        : undefined
-  })
-);
+export const headingStyle = css({ ...typography.normal.regular });
 
 export const dotStyle = css({
   height: 20,

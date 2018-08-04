@@ -1,7 +1,7 @@
 import * as React from "react";
 import debounce from "just-debounce-it";
 import { TypeaheadProps, TypeaheadState } from "./typings/Typeahead";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import Options from "./Options";
 import { Transition, animated } from "react-spring";
 import Input from "./Input";

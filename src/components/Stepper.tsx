@@ -1,5 +1,5 @@
 import * as React from "react";
-import { css, cx } from "react-emotion";
+import { css, cx } from "emotion";
 import { StepperProps, StepperState } from "./typings/Stepper";
 import Button from "./Button";
 import {
@@ -7,16 +7,17 @@ import {
   contentWrapper,
   dotStyle,
   footerStyle,
-  Heading,
+  headingStyle,
   headSection,
   headStyle,
   stepperLineStyle
 } from "./styles/Stepper.styles";
+import { colors } from "../theme";
 
 function noop() {}
 
 class Stepper extends React.PureComponent<StepperProps, StepperState> {
-  static defaultProps = {
+  static defaultProps: Partial<StepperProps> = {
     allowSkip: true,
     cancelLabel: "Cancel",
     nextLabel: "Next",
@@ -32,11 +33,9 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
   };
 
   private goToNextPage = async () => {
-    const allow = await this.props.onBeforeNext(this.state.active);
-    if (allow)
-      this.goToPage(
-        Math.min(this.props.data.length - 1, this.state.active + 1)
-      );
+    const { onBeforeNext, data } = this.props;
+    const allow = await onBeforeNext(this.state.active);
+    if (allow) this.goToPage(Math.min(data.length - 1, this.state.active + 1));
   };
 
   private goToPrevPage = async () => {
@@ -99,13 +98,22 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
       allowSkip,
       isRightButtonLoading
     } = this.props;
+
+    const { active } = this.state;
+
     return (
       <div className={className}>
         <div className={headStyle}>
           {this.getHeadings().map((heading, i) => {
             const dotClass = cx(dotStyle, {
-              [activeDotStyle]: i <= this.state.active
+              [activeDotStyle]: i <= active
             });
+
+            const headingColor =
+              i === active
+                ? colors.violet.base
+                : !allowSkip && colors.gray.base;
+
             return (
               <div
                 key={keyExtractor(data[i])}
@@ -114,12 +122,9 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
                 })}
                 onClick={allowSkip ? () => this.goToPage(i) : noop}
               >
-                <Heading
-                  isSelected={i === this.state.active}
-                  isDisabled={!allowSkip}
-                >
+                <div className={headingStyle} style={{ color: headingColor }}>
                   {heading}
-                </Heading>
+                </div>
                 <div className={dotClass} />
               </div>
             );
@@ -127,7 +132,7 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
           <div
             className={stepperLineStyle}
             style={{
-              width: `${(100 / (2 * data.length)) * 2 * this.state.active}%`,
+              width: `${(100 / (2 * data.length)) * 2 * active}%`,
               marginLeft: `${100 / (2 * data.length)}%`
             }}
           />

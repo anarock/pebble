@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import { SearchProps } from "./typings/Search";
 import { searchStyle, searchWrapperStyle } from "./styles/Search.styles";
 

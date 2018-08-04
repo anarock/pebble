@@ -1,4 +1,4 @@
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { colors, typography } from "../../theme";
 
 export const textStyle = css({

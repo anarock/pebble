@@ -1,4 +1,4 @@
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { colors } from "../../theme";
 
 export const selectWrapper = css({
