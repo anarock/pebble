@@ -44,7 +44,7 @@
     "react-emotion": "^9.2.6",
     "react-ink": "^6.4.0",
     "react-popper": "^1.0.0",
-    "react-spring": "^5.5.1",
+    "react-spring": "^5.5.4",
     "rheostat": "2.2.0"
   },
   "devDependencies": {
@@ -62,7 +62,7 @@
     "@storybook/addon-viewport": "^v4.0.0-alpha.12",
     "@storybook/addons": "^v4.0.0-alpha.12",
     "@storybook/react": "^v4.0.0-alpha.12",
-    "@types/enzyme": "^3.1.12",
+    "@types/enzyme": "^3.1.13",
     "@types/jest": "^23.3.1",
     "@types/react-test-renderer": "^16.0.1",
     "@types/sinon": "^5.0.1",
