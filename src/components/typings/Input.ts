@@ -19,5 +19,5 @@ export interface InputProps {
 }
 
 export interface InputState {
-  isFocused?: boolean;
+  isFocused: boolean;
 }

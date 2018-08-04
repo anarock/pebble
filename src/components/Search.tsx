@@ -12,9 +12,7 @@ const Search: React.SFC<SearchProps> = ({ type, onChange, placeholder }) => {
 
   return (
     <div className={wrapperClassName}>
-      {type !== "large" && (
-        <i style={{ marginRight: 10 }} className="icon-search" />
-      )}
+      {type !== "large" && <i className="icon-search" />}
       <input
         className={searchStyle}
         type="text"

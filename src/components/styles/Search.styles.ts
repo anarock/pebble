@@ -8,6 +8,9 @@ export const searchWrapperStyle = css({
   ...mixins.flexRow,
   alignItems: "center",
   height: 40,
+  "> i": {
+    marginRight: 10
+  },
   "&.__pebble__search__small": {
     backgroundColor: colors.gray.lightest
   },

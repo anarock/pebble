@@ -3,8 +3,8 @@ import * as React from "react";
 export type ButtonType = "primary" | "secondary" | "dropdown" | "link";
 
 export interface ButtonProps {
-  children: React.ReactNode | string;
-  onClick: () => void;
+  children: JSX.Element | string | number;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
   showShadow?: boolean;
   disabled?: boolean;
   type?: ButtonType;

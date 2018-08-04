@@ -40,11 +40,11 @@ class Controls extends React.PureComponent<ControlsProps> {
   };
 
   private handleClick = (id: string | number) => {
-    const { onChange, allowUnselectForRadio, selected } = this.props;
+    const { onChange, allowToggle, selected } = this.props;
 
     let result;
     if (this.isRadio()) {
-      if (allowUnselectForRadio && id === selected) {
+      if (allowToggle && id === selected) {
         id = null;
       }
       result = id;
