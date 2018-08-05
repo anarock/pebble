@@ -24,7 +24,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
     )
   };
 
-  constructor(props: TypeaheadProps) {
+  constructor(props) {
     super(props);
 
     this.debouncedChange = debounce(this.onChange, props.debounceTime);

@@ -19,7 +19,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     tileDots: []
   };
 
-  state = {
+  state: CalendarState = {
     value: this.props.selected
   };
 
@@ -29,9 +29,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
       {
         value
       },
-      () => {
-        return range ? value.length === 2 && onChange(value) : onChange(value);
-      }
+      () => (range ? value.length === 2 && onChange(value) : onChange(value))
     );
   };
 
@@ -55,9 +53,12 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
 
   private getDisabledDays = ({ date }) => {
     const { disabledDays } = this.props;
-    return disabledDays && disabledDays.length
-      ? disabledDays.some(_date => isSameDay(_date, date))
-      : null;
+    return (
+      (disabledDays &&
+        disabledDays.length &&
+        disabledDays.some(_date => isSameDay(_date, date))) ||
+      null
+    );
   };
 
   render() {
@@ -102,19 +103,18 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
           }
         />
 
-        {onClear &&
-          onApply && (
-            <div className={buttonsWrapper}>
-              {onClear && (
-                <Button onClick={onClear} type="secondary">
-                  Clear
-                </Button>
-              )}
-              {onApply && (
-                <Button onClick={() => onApply(this.state.value)}>Apply</Button>
-              )}
-            </div>
-          )}
+        {(onClear || onApply) && (
+          <div className={buttonsWrapper}>
+            {onClear && (
+              <Button onClick={onClear} type="secondary">
+                Clear
+              </Button>
+            )}
+            {onApply && (
+              <Button onClick={() => onApply(this.state.value)}>Apply</Button>
+            )}
+          </div>
+        )}
       </div>
     );
   }
