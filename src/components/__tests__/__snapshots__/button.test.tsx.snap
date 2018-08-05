@@ -14,9 +14,6 @@ exports[`Button Combos test { disabled: false,
   transition: transform ease-out .2s;
   will-transform: transform;
   margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
 }
 
 .emotion-1 {
@@ -148,6 +145,11 @@ exports[`Button Combos test { disabled: false,
    
   <i
     className="icon-arrow-down emotion-0"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -157,6 +159,17 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: false,
   large: true } 1`] = `
+.emotion-0 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-1 {
   line-height: 23px;
   height: 40px;
@@ -273,20 +286,6 @@ exports[`Button Combos test { disabled: false,
   cursor: not-allowed;
 }
 
-.emotion-0 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
 <button
   className="__pebble__button__dropdown emotion-1"
   onClick={[Function]}
@@ -300,6 +299,11 @@ exports[`Button Combos test { disabled: false,
    
   <i
     className="icon-arrow-down emotion-0"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -309,6 +313,17 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -344,20 +359,6 @@ exports[`Button Combos test { disabled: false,
 .emotion-0 > div:nth-of-type(2n) {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
-}
-
-.emotion-1 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
 }
 
 .emotion-2 {
@@ -517,6 +518,11 @@ exports[`Button Combos test { disabled: false,
    
   <i
     className="icon-arrow-down emotion-1"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -526,6 +532,17 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -679,20 +696,6 @@ exports[`Button Combos test { disabled: false,
   cursor: not-allowed;
 }
 
-.emotion-1 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
 <button
   className="__pebble__button__dropdown __pebble__button__loading emotion-2"
   style={
@@ -734,6 +737,11 @@ exports[`Button Combos test { disabled: false,
    
   <i
     className="icon-arrow-down emotion-1"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -752,9 +760,6 @@ exports[`Button Combos test { disabled: false,
   transition: transform ease-out .2s;
   will-transform: transform;
   margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
 }
 
 .emotion-1 {
@@ -886,6 +891,11 @@ exports[`Button Combos test { disabled: false,
    
   <i
     className="icon-arrow-down emotion-0"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
   <canvas
     height={0}
@@ -913,6 +923,17 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: false,
   large: true } 1`] = `
+.emotion-0 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-1 {
   line-height: 23px;
   height: 40px;
@@ -1029,20 +1050,6 @@ exports[`Button Combos test { disabled: false,
   cursor: not-allowed;
 }
 
-.emotion-0 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
 <button
   className="__pebble__button__dropdown emotion-1"
   onClick={[Function]}
@@ -1056,6 +1063,11 @@ exports[`Button Combos test { disabled: false,
    
   <i
     className="icon-arrow-down emotion-0"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
   <canvas
     height={0}
@@ -1083,6 +1095,17 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: true,
   large: false } 1`] = `
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1118,20 +1141,6 @@ exports[`Button Combos test { disabled: false,
 .emotion-0 > div:nth-of-type(2n) {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
-}
-
-.emotion-1 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
 }
 
 .emotion-2 {
@@ -1291,6 +1300,11 @@ exports[`Button Combos test { disabled: false,
    
   <i
     className="icon-arrow-down emotion-1"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -1300,6 +1314,17 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1453,20 +1478,6 @@ exports[`Button Combos test { disabled: false,
   cursor: not-allowed;
 }
 
-.emotion-1 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
 <button
   className="__pebble__button__dropdown __pebble__button__loading emotion-2"
   style={
@@ -1508,6 +1519,11 @@ exports[`Button Combos test { disabled: false,
    
   <i
     className="icon-arrow-down emotion-1"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -5802,9 +5818,6 @@ exports[`Button Combos test { disabled: true,
   transition: transform ease-out .2s;
   will-transform: transform;
   margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
 }
 
 .emotion-1 {
@@ -5935,6 +5948,11 @@ exports[`Button Combos test { disabled: true,
    
   <i
     className="icon-arrow-down emotion-0"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -5944,6 +5962,17 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: false,
   large: true } 1`] = `
+.emotion-0 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-1 {
   line-height: 23px;
   height: 40px;
@@ -6060,20 +6089,6 @@ exports[`Button Combos test { disabled: true,
   cursor: not-allowed;
 }
 
-.emotion-0 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
 <button
   className="__pebble__button__disabled __pebble__button__dropdown emotion-1"
   style={
@@ -6086,6 +6101,11 @@ exports[`Button Combos test { disabled: true,
    
   <i
     className="icon-arrow-down emotion-0"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -6095,6 +6115,17 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6130,20 +6161,6 @@ exports[`Button Combos test { disabled: true,
 .emotion-0 > div:nth-of-type(2n) {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
-}
-
-.emotion-1 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
 }
 
 .emotion-2 {
@@ -6303,6 +6320,11 @@ exports[`Button Combos test { disabled: true,
    
   <i
     className="icon-arrow-down emotion-1"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -6312,6 +6334,17 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6465,20 +6498,6 @@ exports[`Button Combos test { disabled: true,
   cursor: not-allowed;
 }
 
-.emotion-1 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
 <button
   className="__pebble__button__disabled __pebble__button__dropdown __pebble__button__loading emotion-2"
   style={
@@ -6520,6 +6539,11 @@ exports[`Button Combos test { disabled: true,
    
   <i
     className="icon-arrow-down emotion-1"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -6538,9 +6562,6 @@ exports[`Button Combos test { disabled: true,
   transition: transform ease-out .2s;
   will-transform: transform;
   margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
 }
 
 .emotion-1 {
@@ -6671,6 +6692,11 @@ exports[`Button Combos test { disabled: true,
    
   <i
     className="icon-arrow-down emotion-0"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -6680,6 +6706,17 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: false,
   large: true } 1`] = `
+.emotion-0 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-1 {
   line-height: 23px;
   height: 40px;
@@ -6796,20 +6833,6 @@ exports[`Button Combos test { disabled: true,
   cursor: not-allowed;
 }
 
-.emotion-0 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
 <button
   className="__pebble__button__disabled __pebble__button__dropdown emotion-1"
   style={
@@ -6822,6 +6845,11 @@ exports[`Button Combos test { disabled: true,
    
   <i
     className="icon-arrow-down emotion-0"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -6831,6 +6859,17 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: false } 1`] = `
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6866,20 +6905,6 @@ exports[`Button Combos test { disabled: true,
 .emotion-0 > div:nth-of-type(2n) {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
-}
-
-.emotion-1 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
 }
 
 .emotion-2 {
@@ -7039,6 +7064,11 @@ exports[`Button Combos test { disabled: true,
    
   <i
     className="icon-arrow-down emotion-1"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;
@@ -7048,6 +7078,17 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7201,20 +7242,6 @@ exports[`Button Combos test { disabled: true,
   cursor: not-allowed;
 }
 
-.emotion-1 {
-  margin-left: 15px;
-  font-weight: bold;
-  font-size: 12px;
-  -webkit-transition: -webkit-transform ease-out .2s;
-  -webkit-transition: transform ease-out .2s;
-  transition: transform ease-out .2s;
-  will-transform: transform;
-  margin-top: 2px;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-}
-
 <button
   className="__pebble__button__disabled __pebble__button__dropdown __pebble__button__loading emotion-2"
   style={
@@ -7256,6 +7283,11 @@ exports[`Button Combos test { disabled: true,
    
   <i
     className="icon-arrow-down emotion-1"
+    style={
+      Object {
+        "transform": "none",
+      }
+    }
   />
 </button>
 `;

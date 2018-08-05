@@ -1,4 +1,4 @@
-import { injectGlobal } from "react-emotion";
+import { injectGlobal } from "emotion";
 import { initIconStyles } from "./icons";
 
 export function initStyles() {

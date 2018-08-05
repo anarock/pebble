@@ -19,7 +19,7 @@ export interface ControlsProps {
       selected: Id | Id[];
     }
   ) => void;
-  allowUnselectForRadio?: boolean;
+  allowToggle?: boolean;
   selected: Id | Id[];
   labelExtractor?: (item: any) => string;
   errorMessage?: string;

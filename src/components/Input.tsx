@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import { InputProps, InputState } from "./typings/Input";
 import {
   highlightStyle,
@@ -63,7 +63,8 @@ class Input extends React.PureComponent<InputProps, InputState> {
       successMessage,
       message,
       textArea,
-      required
+      required,
+      onClick
     } = this.props;
     const { isFocused } = this.state;
 
@@ -101,6 +102,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
         className={_wrapperStyle}
         onFocus={this.addFocus}
         onBlur={this.removeFocus}
+        onClick={onClick}
       >
         <label className={labelClassName}>
           {placeholder}

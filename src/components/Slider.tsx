@@ -1,6 +1,6 @@
 import * as React from "react";
 import Rheostat from "rheostat";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import { typography } from "../theme";
 import { SliderProps } from "./typings/Slider";
 import { sliderHeader } from "./styles/Slider.styles";

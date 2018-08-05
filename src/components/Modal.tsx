@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ModalProps } from "./typings/Modal";
 import { modalContainer } from "./styles/Modal.styles";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 
 class Modal extends React.PureComponent<ModalProps> {
   componentDidUpdate(prevProps: ModalProps) {

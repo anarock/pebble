@@ -5,7 +5,7 @@ import { dateClass, dropDownClassName } from "./styles/Date.styles";
 import { format } from "date-fns";
 import Calendar from "./Calendar";
 import Input from "./Input";
-import { cx, css } from "react-emotion";
+import { cx, css } from "emotion";
 import { isDesktop } from "../utils";
 
 class DateInput extends React.PureComponent<DateInputProps> {
@@ -26,18 +26,17 @@ class DateInput extends React.PureComponent<DateInputProps> {
       <DropDown
         dropDownClassName={dropDownClass}
         labelComponent={({ toggleDropdown }) => (
-          <div onClick={toggleDropdown}>
-            <Input
-              onChange={this.onChange}
-              type="date"
-              value={format(value, "YYYY-MM-DD")}
-              placeholder={this.props.placeholder}
-              fixLabelAtTop
-              inputProps={{
-                placeholder: "DD/MM/YYYY"
-              }}
-            />
-          </div>
+          <Input
+            onChange={this.onChange}
+            type="date"
+            value={format(value, "YYYY-MM-DD")}
+            placeholder={this.props.placeholder}
+            fixLabelAtTop
+            inputProps={{
+              placeholder: "DD/MM/YYYY"
+            }}
+            onClick={toggleDropdown}
+          />
         )}
       >
         {({ toggle }) => (

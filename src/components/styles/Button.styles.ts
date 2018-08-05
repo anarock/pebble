@@ -1,19 +1,14 @@
-import styled, { css, keyframes } from "react-emotion";
+import { css, keyframes } from "emotion";
 import { colors, constants, typography } from "../../theme";
 
-export const Icon = styled("i")(
-  {
-    marginLeft: 15,
-    fontWeight: "bold",
-    fontSize: 12,
-    transition: "transform ease-out .2s",
-    willTransform: "transform",
-    marginTop: 2
-  },
-  ({ isOpen }: any) => ({
-    transform: isOpen ? "rotate(180deg)" : "none"
-  })
-);
+export const iconStyle = css({
+  marginLeft: 15,
+  fontWeight: "bold",
+  fontSize: 12,
+  transition: "transform ease-out .2s",
+  willTransform: "transform",
+  marginTop: 2
+});
 
 const { violet, gray, white } = colors;
 

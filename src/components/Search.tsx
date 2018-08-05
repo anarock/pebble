@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import { SearchProps } from "./typings/Search";
 import { searchStyle, searchWrapperStyle } from "./styles/Search.styles";
 
@@ -12,9 +12,7 @@ const Search: React.SFC<SearchProps> = ({ type, onChange, placeholder }) => {
 
   return (
     <div className={wrapperClassName}>
-      {type !== "large" && (
-        <i style={{ marginRight: 10 }} className="icon-search" />
-      )}
+      {type !== "large" && <i className="icon-search" />}
       <input
         className={searchStyle}
         type="text"

@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Input from "../src/components/Input";
 import { boolean, select, text } from "@storybook/addon-knobs";
-import { css } from "react-emotion";
+import { css } from "emotion";
 import DateInput from "../src/components/DateInput";
 import { withState } from "@dump247/storybook-state";
 

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import { ControlsProps, ControlViewProps } from "./typings/Controls";
 import { colors } from "../theme";
 import { controlViewStyle, iconStyle } from "./styles/Controls.styles";
@@ -40,11 +40,11 @@ class Controls extends React.PureComponent<ControlsProps> {
   };
 
   private handleClick = (id: string | number) => {
-    const { onChange, allowUnselectForRadio, selected } = this.props;
+    const { onChange, allowToggle, selected } = this.props;
 
     let result;
     if (this.isRadio()) {
-      if (allowUnselectForRadio && id === selected) {
+      if (allowToggle && id === selected) {
         id = null;
       }
       result = id;

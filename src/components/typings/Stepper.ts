@@ -1,6 +1,8 @@
+import * as React from "react";
+
 interface ButtonData {
   label: string;
-  action: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  action: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 export interface StepperProps {

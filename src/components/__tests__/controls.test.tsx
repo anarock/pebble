@@ -39,7 +39,7 @@ const getControlComponent = (
       type={type}
       selected={selected}
       className="testControls"
-      allowUnselectForRadio={allowUnselectForRadio}
+      allowToggle={allowUnselectForRadio}
     />
   );
 

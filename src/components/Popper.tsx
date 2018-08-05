@@ -3,7 +3,7 @@ import { PopperProps, PopperState } from "./typings/Popper";
 import { Manager, Reference, Popper } from "react-popper";
 import { arrowStyle, popperStyle } from "./styles/Popper.styles";
 import { colors } from "../theme";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import { Transition } from "react-spring";
 import OutsideClick from "./OutsideClick";
 

@@ -1,4 +1,4 @@
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { colors, constants, typography } from "../../theme";
 
 export const toastWrapper = css({

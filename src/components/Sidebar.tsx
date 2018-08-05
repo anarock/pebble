@@ -7,9 +7,15 @@ import {
 import { SidebarProps } from "./typings/Sidebar";
 import { Transition, animated } from "react-spring";
 import Ink from "react-ink";
-import { css, cx } from "react-emotion";
+import { css, cx } from "emotion";
 import { disableScrollY } from "../theme/styles";
 import OutsideClick from "./OutsideClick";
+
+const transitionProps = {
+  from: { opacity: 0 },
+  enter: { opacity: 1 },
+  leave: { opacity: 0 }
+};
 
 class SideBar extends React.PureComponent<SidebarProps> {
   componentDidMount() {
@@ -37,30 +43,19 @@ class SideBar extends React.PureComponent<SidebarProps> {
         transform: isOpen ? `translateX(0)` : `translateX(100%)`
       })
     );
-    const backdrop = (
-      // @ts-ignore
-      <Transition
-        from={{ opacity: 0 }}
-        enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}
-      >
-        {isOpen &&
-          (styles => (
-            <animated.div style={styles} className={sidebarWrapperStyle} />
-          ))}
-      </Transition>
-    );
+
     return (
       <React.Fragment>
-        {backdrop}
+        <Transition {...transitionProps}>
+          {isOpen &&
+            (styles => (
+              <animated.div style={styles} className={sidebarWrapperStyle} />
+            ))}
+        </Transition>
 
         <OutsideClick onOutsideClick={this.props.onClose} disabled={!isOpen}>
           <div className={_sidebarStyle}>
-            <Transition
-              from={{ opacity: 0 }}
-              enter={{ opacity: 1 }}
-              leave={{ opacity: 0 }}
-            >
+            <Transition {...transitionProps}>
               {isOpen &&
                 (styles => (
                   <animated.div

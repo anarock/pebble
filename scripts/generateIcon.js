@@ -43,7 +43,7 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
       const index = css.indexOf("i {");
 
       const fileContent = `
-        import { injectGlobal } from "react-emotion";
+        import { injectGlobal } from "emotion";
         
         export const iconNames = ${JSON.stringify(
           data.map(x => x.replace(".svg", ""))

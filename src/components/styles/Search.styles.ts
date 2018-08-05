@@ -1,4 +1,4 @@
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { colors, constants, mixins, typography } from "../../theme";
 import { getPlaceholderStyle } from "../../theme/mixins";
 
@@ -8,6 +8,9 @@ export const searchWrapperStyle = css({
   ...mixins.flexRow,
   alignItems: "center",
   height: 40,
+  "> i": {
+    marginRight: 10
+  },
   "&.__pebble__search__small": {
     backgroundColor: colors.gray.lightest
   },

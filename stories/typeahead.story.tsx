@@ -1,9 +1,8 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import TypeAhead from "../src/components/TypeAhead";
-import Input from "../src/components/Input";
 import { action } from "@storybook/addon-actions";
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { mixins } from "../src/theme";
 
 const labelStyle = css({
@@ -13,17 +12,10 @@ const labelStyle = css({
 
 storiesOf("Typeahead", module).add("simple", () => (
   <TypeAhead
-    searchBox={({ registerChange, onFocus, value }) => (
-      <Input
-        placeholder="H"
-        onChange={registerChange}
-        value={value}
-        inputProps={{ onFocus }}
-      />
-    )}
     className={css({
       width: 400
     })}
+    placeholder="H"
     suggestions={[
       {
         label:

@@ -1,20 +1,27 @@
 import * as React from "react";
 import debounce from "just-debounce-it";
 import { TypeaheadProps, TypeaheadState } from "./typings/Typeahead";
-import { css, cx } from "react-emotion";
+import { cx } from "emotion";
 import Options from "./Options";
 import { Transition, animated } from "react-spring";
-
-const wrapper = css({
-  position: "relative"
-});
+import Input from "./Input";
+import { optionsWrapper, wrapper } from "./styles/TypeAhead.styles";
 
 class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   debouncedChange: () => void;
-  typeaheadRef: React.RefObject<HTMLDivElement> = React.createRef();
+  typeAheadRef: React.RefObject<HTMLDivElement> = React.createRef();
 
-  static defaultProps = {
-    debounceTime: 500
+  static defaultProps: Partial<TypeaheadProps> = {
+    debounceTime: 500,
+    searchBox: ({ registerChange, onFocus, value }, props) => (
+      <Input
+        onChange={registerChange}
+        placeholder={props.placeholder}
+        inputProps={{ onFocus }}
+        value={value}
+        errorMessage={props.errorMessage}
+      />
+    )
   };
 
   constructor(props: TypeaheadProps) {
@@ -29,7 +36,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   };
 
   private handleMousePress = (e: MouseEvent) => {
-    if (!this.typeaheadRef.current.contains(e.target as HTMLElement)) {
+    if (!this.typeAheadRef.current.contains(e.target as HTMLElement)) {
       this.setState({
         showSuggestions: false
       });
@@ -99,12 +106,15 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
     } = this.props;
 
     return (
-      <div className={cx(wrapper, className)} ref={this.typeaheadRef}>
-        {searchBox({
-          registerChange: this.registerChange,
-          onFocus: this.onFocus,
-          value: this.state.value
-        })}
+      <div className={cx(wrapper, className)} ref={this.typeAheadRef}>
+        {searchBox(
+          {
+            registerChange: this.registerChange,
+            onFocus: this.onFocus,
+            value: this.state.value
+          },
+          this.props
+        )}
 
         <Transition
           native
@@ -115,11 +125,8 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
           {this.state.showSuggestions &&
             (styles => (
               <animated.div
-                style={{ ...styles, width: "100%" }}
-                className={cx(
-                  css({ marginTop: -40, position: "absolute", zIndex: 999 }),
-                  dropdownClassName
-                )}
+                style={styles}
+                className={cx(optionsWrapper, dropdownClassName)}
               >
                 <Options
                   rowRenderElement={rowRenderElement}

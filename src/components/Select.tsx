@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import { SelectProps } from "./typings/Select";
 import {
   chevronStyle,

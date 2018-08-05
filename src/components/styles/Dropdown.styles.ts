@@ -1,5 +1,5 @@
 import { colors, constants } from "../../theme";
-import { css } from "react-emotion";
+import { css } from "emotion";
 
 export const dropDownStyle = css({
   minWidth: 250,

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { css } from "react-emotion";
+import { css } from "emotion";
 import { LogoProps } from "./typings/Logo";
 
 const Logo: React.SFC<LogoProps> = ({ height = 40, color = "#000000" }) => {

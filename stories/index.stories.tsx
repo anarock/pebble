@@ -6,7 +6,7 @@ import { colors, initStyles } from "../src/theme";
 import { checkA11y } from "@storybook/addon-a11y";
 import { withConsole } from "@storybook/addon-console";
 import { withViewport } from "@storybook/addon-viewport";
-import { injectGlobal } from "react-emotion";
+import { injectGlobal } from "emotion";
 
 function loadFont(
   name: string,

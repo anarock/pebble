@@ -1,14 +1,15 @@
 import * as React from "react";
 import { ButtonType } from "./Button";
 
-//todo same padding for date and dropdown
+type Toggle = () => void;
+
 export interface DropdownProps {
-  children: (args: { toggle: () => void }) => JSX.Element | string;
+  children: (args: { toggle: Toggle }) => JSX.Element | string;
   buttonLabel?: React.ReactChildren | string;
   closeOnClickOutside?: boolean;
   type?: ButtonType;
   labelComponent?: (
-    arg: { isOpen: boolean; toggleDropdown: () => void }
+    arg: { isOpen: boolean; toggleDropdown: Toggle }
   ) => JSX.Element;
   padding?: number | string;
   className?: string;

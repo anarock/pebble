@@ -2,7 +2,7 @@ import * as React from "react";
 import { colors, constants } from "../theme";
 import { tagStyle } from "./styles/Tag.styles";
 import { TagProps } from "./typings/Tag";
-import { cx } from "react-emotion";
+import { cx } from "emotion";
 import Ink from "react-ink";
 
 const Tag: React.SFC<TagProps> = ({ label, color, onClose }) => {

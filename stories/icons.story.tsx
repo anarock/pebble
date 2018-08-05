@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { mixins } from "../src/theme";
-import { css } from "react-emotion";
+import { css } from "emotion";
 import Tooltip from "../src/components/Tooltip";
 import { iconNames } from "../src/theme/icons";
 
