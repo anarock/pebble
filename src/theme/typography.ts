@@ -1,5 +1,5 @@
 import { Typography } from "./typings/typography";
-import colors from "./colors";
+import { colors } from "./colors";
 
 const fontSize = {
   xs: 10,
@@ -15,8 +15,7 @@ enum FontWeight {
   BOLD = 500
 }
 
-const typography: Typography = {
-  // fontSize 22
+export const typography: Typography = {
   xll: {
     regular: {
       fontWeight: FontWeight.NORMAL,
@@ -30,7 +29,6 @@ const typography: Typography = {
     }
   },
 
-  // fontSize 18
   xl: {
     bold: {
       fontWeight: FontWeight.BOLD,
@@ -39,7 +37,6 @@ const typography: Typography = {
     }
   },
 
-  // fontSize 16
   l: {
     bold: {
       fontWeight: FontWeight.BOLD,
@@ -53,7 +50,6 @@ const typography: Typography = {
     }
   },
 
-  // fontSize 14
   normal: {
     regular: {
       fontWeight: FontWeight.NORMAL,
@@ -82,7 +78,6 @@ const typography: Typography = {
     }
   },
 
-  // fontSize 12
   s: {
     regular: {
       fontWeight: FontWeight.NORMAL,
@@ -106,7 +101,6 @@ const typography: Typography = {
     }
   },
 
-  // fontSize 10
   xs: {
     bold: {
       fontWeight: FontWeight.BOLD,
@@ -120,5 +114,3 @@ const typography: Typography = {
     }
   }
 };
-
-export default typography;

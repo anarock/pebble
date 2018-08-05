@@ -1,7 +1,7 @@
 import * as React from "react";
 import { LoaderProps } from "./typings/Loader";
-import colors from "../theme/colors";
 import { spinnerStyle } from "./styles/Loader.styles";
+import { colors } from "../theme";
 
 const Loader: React.SFC<LoaderProps> = ({
   color = colors.gray.darker,

@@ -12,9 +12,10 @@
     "native"
   ],
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "rimraf storybook-static && build-storybook",
-    "build": "rimraf dist && tsc -p tsconfig.base.json && rollup -c && rimraf compiled && npm run copy:icons",
+    "storybook": "start-storybook -p 6006 -s ./dist",
+    "build:icons": "node ./scripts/generateIcon.js",
+    "build-storybook": "npm run build && rimraf storybook-static && build-storybook -s ./dist",
+    "build": "rimraf dist && tsc -p tsconfig.base.json && rollup -c && rimraf compiled && npm run build:icons",
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'npm run build'",
     "test": "jest",
     "prepublishOnly": "npm run test && npm run build",
@@ -23,15 +24,11 @@
     "format": "pretty-quick",
     "now-build": "npm run build-storybook",
     "now-start": "cd storybook-static && serve",
-    "deploy": "npm run now-build && cd storybook-static && now",
-    "build:icons": "node ./scripts/generateIcon.js",
-    "copy:icons": "copy './src/theme/icon-fonts/*' './dist/icon-fonts' && copy './src/theme/*.css' './dist' && copy './src/theme/icon-fonts/*.ttf' './native/icon-fonts'"
+    "deploy": "npm run now-build && cd storybook-static && now"
   },
   "lint-staged": {
     "./svgs/*.svg": [
-      "imagemin-lint-staged",
-      "yarn build:icons",
-      "git add src/theme/icon-fonts/* src/theme/icons.css src/theme/icons.ts"
+      "imagemin-lint-staged"
     ]
   },
   "dependencies": {
@@ -81,7 +78,6 @@
     "colors": "^1.3.1",
     "combos": "^0.2.0",
     "commitizen": "^2.10.1",
-    "copy": "^0.3.2",
     "cz-conventional-changelog": "^2.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",

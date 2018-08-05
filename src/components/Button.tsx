@@ -8,7 +8,7 @@ import {
 import Ink from "react-ink";
 import { ButtonProps } from "./typings/Button";
 import Loader from "./Loader";
-import colors from "../theme/colors";
+import { colors } from "../theme";
 
 const Button: React.SFC<ButtonProps> = ({
   large,
