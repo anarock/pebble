@@ -36,11 +36,7 @@ export const activeDotStyle = css({
 });
 
 export const contentWrapper = css({
-  backgroundColor: colors.white.base,
-  marginTop: -10,
-  borderRadius: constants.borderRadius,
-  boxShadow: constants.boxShadow.elevated,
-  padding: 60
+  marginTop: -10
 });
 
 export const footerStyle = css({
