@@ -5,23 +5,32 @@ interface ButtonData {
   action: React.MouseEventHandler<HTMLButtonElement>;
 }
 
+interface ArgsRenderContent {
+  item: any;
+  isSelected: boolean;
+  goToPrev: () => void;
+  goToNext: () => void;
+  goToPage: (index: number) => void;
+  leftButtonData: ButtonData;
+  rightButtonData: ButtonData;
+}
+
+interface ArgsRenderFooter {
+  activeIndex: number;
+  goToPrev: () => void;
+  goToNext: () => void;
+  goToPage: (index: number) => void;
+  leftButtonData: ButtonData;
+  rightButtonData: ButtonData;
+}
+
 export interface StepperProps {
   keyExtractor: (item: any) => number | string;
   data: any[];
-  renderContentElement: (
-    args: {
-      item: any;
-      isSelected: boolean;
-      goToPrev: () => void;
-      goToNext: () => void;
-      goToPage: (index: number) => void;
-      leftButtonData: ButtonData;
-      rightButtonData: ButtonData;
-    }
-  ) => JSX.Element;
+  renderContentElement: (args: ArgsRenderContent) => JSX.Element;
   headingExtractor: ({ item: any }) => string;
   renderFooterElement?: (
-    currentIndex: number,
+    args: ArgsRenderFooter,
     props: StepperProps
   ) => JSX.Element;
   className?: string;

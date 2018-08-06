@@ -22,7 +22,6 @@ const Select: React.SFC<SelectProps> = ({
   errorMessage,
   ...selectProps
 }) => {
-  // @ts-ignore
   const {
     keyExtractor,
     rowRenderElement,
@@ -31,8 +30,7 @@ const Select: React.SFC<SelectProps> = ({
     onSelect
   } = selectProps;
 
-  // @ts-ignore
-  const selectedLabel: string = selected
+  const selectedLabel = selected
     ? rowRenderElement(options.find(x => keyExtractor(x) === selected))
     : placeholder;
 
@@ -49,7 +47,7 @@ const Select: React.SFC<SelectProps> = ({
               <Input
                 className={selectInputStyle}
                 placeholder={title}
-                value={selectedLabel}
+                value={selectedLabel && selectedLabel.toString()}
                 fixLabelAtTop
                 onChange={noop}
                 required={required}
@@ -78,6 +76,11 @@ const Select: React.SFC<SelectProps> = ({
       </DropDown>
     </div>
   );
+};
+
+Select.defaultProps = {
+  keyExtractor: item => item.id,
+  rowRenderElement: item => item.label || item.name
 };
 
 export default Select;

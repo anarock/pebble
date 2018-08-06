@@ -35,8 +35,17 @@ const ControlView: React.SFC<ControlViewProps> = ({
 class Controls extends React.PureComponent<ControlsProps> {
   static ControlView = ControlView;
 
-  static defaultProps = {
-    type: "radio"
+  static defaultProps: Partial<ControlsProps> = {
+    type: "radio",
+    renderElement: ({ item, isSelected }, { type, labelExtractor }) => (
+      <ControlView
+        type={type}
+        label={labelExtractor(item)}
+        isSelected={isSelected}
+      />
+    ),
+    keyExtractor: item => item.id,
+    labelExtractor: item => item.label || item.name
   };
 
   private handleClick = (id: string | number) => {
@@ -77,15 +86,13 @@ class Controls extends React.PureComponent<ControlsProps> {
       keyExtractor,
       selected,
       className,
-      labelExtractor,
-      type,
       errorMessage
     } = this.props;
 
     return (
       <div className={className}>
-        {data.map(datum => {
-          const key = keyExtractor(datum);
+        {data.map(item => {
+          const key = keyExtractor(item);
 
           const isSelected =
             !this.isRadio() && Array.isArray(selected)
@@ -93,20 +100,12 @@ class Controls extends React.PureComponent<ControlsProps> {
               : key === selected;
           return (
             <div key={key} onClick={() => this.handleClick(key)}>
-              {renderElement ? (
-                renderElement(
-                  {
-                    item: datum,
-                    isSelected
-                  },
-                  this.props
-                )
-              ) : (
-                <ControlView
-                  type={type}
-                  label={labelExtractor(datum)}
-                  isSelected={isSelected}
-                />
+              {renderElement(
+                {
+                  item,
+                  isSelected
+                },
+                this.props
               )}
             </div>
           );
