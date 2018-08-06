@@ -5,9 +5,7 @@ interface ButtonData {
   action: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-interface ArgsRenderContent {
-  item: any;
-  isSelected: boolean;
+interface ArgsCommon {
   goToPrev: () => void;
   goToNext: () => void;
   goToPage: (index: number) => void;
@@ -15,13 +13,13 @@ interface ArgsRenderContent {
   rightButtonData: ButtonData;
 }
 
-interface ArgsRenderFooter {
+interface ArgsRenderContent extends ArgsCommon {
+  item: any;
+  isSelected: boolean;
+}
+
+interface ArgsRenderFooter extends ArgsCommon {
   activeIndex: number;
-  goToPrev: () => void;
-  goToNext: () => void;
-  goToPage: (index: number) => void;
-  leftButtonData: ButtonData;
-  rightButtonData: ButtonData;
 }
 
 export interface StepperProps {
