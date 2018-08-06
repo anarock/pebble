@@ -26,7 +26,8 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
 
   fs.writeFile(
     "./icons.json",
-    JSON.stringify(data.map(fileName => fileName.split(".")[0]))
+    JSON.stringify(data.map(fileName => fileName.split(".")[0])),
+    console.log
   );
 
   webfontsGenerator(
