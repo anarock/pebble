@@ -21,7 +21,8 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
         value={value}
         errorMessage={props.errorMessage}
       />
-    )
+    ),
+    valueExtractor: suggestion => suggestion.label || suggestion.name
   };
 
   constructor(props) {

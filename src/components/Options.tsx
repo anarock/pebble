@@ -12,6 +12,11 @@ import Ink from "react-ink";
 class Options extends React.PureComponent<OptionsProps, OptionsState> {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
 
+  static defaultProps: Partial<OptionsProps> = {
+    keyExtractor: item => item.id,
+    rowRenderElement: item => <div>{item.label || item.name}</div>
+  };
+
   state = {
     selected: 0
   };
@@ -83,7 +88,7 @@ class Options extends React.PureComponent<OptionsProps, OptionsState> {
         {options.map((suggestion, i) => {
           const _class = cx(rowWrapper, {
             [activeRow]: i === this.state.selected,
-            [selectedRow]: keyExtractor && keyExtractor(suggestion) === selected
+            [selectedRow]: keyExtractor(suggestion) === selected
           });
           return (
             <div

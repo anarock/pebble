@@ -25,7 +25,29 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
     doneLabel: "Done",
     onBeforeNext: () => true,
     onBeforePrev: () => true,
-    onChange: () => {}
+    onChange: () => {},
+    renderFooterElement: ({ leftButtonData, rightButtonData }, props) => {
+      return (
+        <footer className={footerStyle}>
+          <Button
+            large
+            width={100}
+            type={"secondary"}
+            onClick={leftButtonData.action}
+          >
+            {leftButtonData.label}
+          </Button>
+          <Button
+            large
+            width={100}
+            loading={props.isRightButtonLoading}
+            onClick={rightButtonData.action}
+          >
+            {rightButtonData.label}
+          </Button>
+        </footer>
+      );
+    }
   };
 
   state: StepperState = {
@@ -95,11 +117,18 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
       keyExtractor,
       renderFooterElement,
       className,
-      allowSkip,
-      isRightButtonLoading
+      allowSkip
     } = this.props;
 
     const { active } = this.state;
+
+    const args = {
+      goToNext: this.goToNextPage,
+      goToPage: this.goToPage,
+      goToPrev: this.goToPrevPage,
+      leftButtonData: this.getLeftButtonData(),
+      rightButtonData: this.getRightButtonData()
+    };
 
     return (
       <div className={className}>
@@ -148,37 +177,18 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
             >
               {renderContentElement({
                 item: datum,
-                goToNext: this.goToNextPage,
-                goToPage: this.goToPage,
-                goToPrev: this.goToPrevPage,
                 isSelected: i === this.state.active,
-                leftButtonData: this.getLeftButtonData(),
-                rightButtonData: this.getRightButtonData()
+                ...args
               })}
             </div>
           ))}
 
-          {renderFooterElement ? (
-            renderFooterElement(this.state.active, this.props)
-          ) : (
-            <footer className={footerStyle}>
-              <Button
-                large
-                width={100}
-                type={"secondary"}
-                onClick={this.getLeftButtonData().action}
-              >
-                {this.getLeftButtonData().label}
-              </Button>
-              <Button
-                large
-                width={100}
-                loading={isRightButtonLoading}
-                onClick={this.getRightButtonData().action}
-              >
-                {this.getRightButtonData().label}
-              </Button>
-            </footer>
+          {renderFooterElement(
+            {
+              activeIndex: this.state.active,
+              ...args
+            },
+            this.props
           )}
         </div>
       </div>
