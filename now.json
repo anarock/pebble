@@ -12,6 +12,7 @@
     ".babelrc",
     "tsconfig.base.json",
     "tsconfig.json",
-    "rollup.config.js"
+    "rollup.config.js",
+    "scripts"
   ]
 }
