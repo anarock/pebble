@@ -1,7 +1,7 @@
 import { ThemeConstants } from "./typings/constants";
-import colors from "./colors";
+import { colors } from "./colors";
 
-const constants: ThemeConstants = {
+export const constants: ThemeConstants = {
   borderRadius: 3,
   buttonHeight: 40,
   animationCurve: "cubic-bezier(.64,.09,.08,1)",
@@ -21,5 +21,3 @@ const constants: ThemeConstants = {
     xElevated: "0 2px 15px 0 rgba(0,0,0,0.1)"
   }
 };
-
-export default constants;

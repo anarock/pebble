@@ -11,6 +11,9 @@
     "tests",
     ".babelrc",
     "tsconfig.base.json",
-    "tsconfig.json"
+    "tsconfig.json",
+    "rollup.config.js",
+    "scripts",
+    "svgs"
   ]
 }

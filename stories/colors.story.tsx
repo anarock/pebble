@@ -1,9 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { css } from "emotion";
-import constants from "../src/theme/constants";
-import colors from "../src/theme/colors";
-import typography from "../src/theme/typography";
+import { colors, constants, typography } from "../src/theme";
 
 const wrapper = css({
   padding: 30,

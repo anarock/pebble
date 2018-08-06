@@ -1,6 +1,6 @@
 import { Colors } from "./typings/colors";
 
-const colors: Colors = {
+export const colors: Colors = {
   violet: {
     darker: "#4040BA",
     dark: "#5656ED",
@@ -61,5 +61,3 @@ const colors: Colors = {
     lightest: "#F7F7F9"
   }
 };
-
-export default colors;

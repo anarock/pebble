@@ -1,7 +1,7 @@
-import constants from "./constants";
-import colors from "./colors";
 import { css } from "emotion";
-import typography from "./typography";
+import { constants } from "./constants";
+import { typography } from "./typography";
+import { colors } from "./colors";
 
 export const tableStyle = css({
   borderRadius: constants.borderRadius,
