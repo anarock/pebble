@@ -29,6 +29,7 @@ export interface TypeaheadProps {
   disabled?: boolean;
   errorMessage?: string;
   placeholder: string;
+  keyExtractor?: (item: any) => number | string;
 }
 
 export interface TypeaheadState {

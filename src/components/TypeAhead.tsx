@@ -22,7 +22,8 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
         errorMessage={props.errorMessage}
       />
     ),
-    valueExtractor: suggestion => suggestion.label || suggestion.name
+    valueExtractor: option => option.label || option.name,
+    keyExtractor: option => option.id
   };
 
   constructor(props) {
@@ -103,7 +104,8 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
       searchBox,
       rowRenderElement,
       suggestions,
-      dropdownClassName
+      dropdownClassName,
+      keyExtractor
     } = this.props;
 
     return (
@@ -133,6 +135,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                   rowRenderElement={rowRenderElement}
                   onSelect={this.onSelect}
                   options={suggestions}
+                  keyExtractor={keyExtractor}
                 />
               </animated.div>
             ))}
