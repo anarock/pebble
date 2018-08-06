@@ -1,4 +1,4 @@
-import { colors, typography, constants } from "../../theme";
+import { colors, typography } from "../../theme";
 import { css } from "emotion";
 
 export const headStyle = css({

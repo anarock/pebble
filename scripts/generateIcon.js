@@ -3,6 +3,7 @@ const path = require("path");
 const fs = require("fs");
 const colors = require("colors");
 const execa = require("execa");
+const prettier = require("prettier");
 
 async function createRNFont() {
   try {
@@ -26,7 +27,12 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
 
   fs.writeFile(
     "./icons.json",
-    JSON.stringify(data.map(fileName => fileName.split(".")[0])),
+    prettier.format(
+      JSON.stringify(data.map(fileName => fileName.split(".")[0])),
+      {
+        parser: "json"
+      }
+    ),
     console.log
   );
 
