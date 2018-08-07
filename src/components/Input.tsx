@@ -89,13 +89,13 @@ class Input extends React.PureComponent<InputProps, InputState> {
     });
 
     const labelClassName = cx(labelStyle, {
-      __pebble__input__label__focused: isFocused || !!value || fixLabelAtTop
+      _pebble_input_label_focused: isFocused || !!value || fixLabelAtTop
     });
 
     const _wrapperStyle = cx(
       wrapperStyle,
       {
-        __pebble__input__wrapper__textarea: textArea
+        _pebble_input_wrapper_textarea: textArea
       },
       className
     );
