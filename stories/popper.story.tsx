@@ -29,7 +29,6 @@ storiesOf("Popper", module).add("simple", () => (
     {() => (
       <Options
         options={options}
-        rowRenderElement={item => item.label}
         onSelect={action("onSelect")}
         width={number("width", 300)}
         selected={number("selected", 1)}

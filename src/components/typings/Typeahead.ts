@@ -16,9 +16,12 @@ export interface TypeaheadProps {
   ) => JSX.Element;
   debounceTime?: number;
   rowRenderElement?: (
-    item: any,
-    index: number,
-    selected: boolean
+    args: {
+      item: any;
+      index: number;
+      isSelected: boolean;
+    },
+    props: TypeaheadProps
   ) => JSX.Element;
   onChange: (text: string, props: TypeaheadProps) => void;
   onSelect: (suggestion: any) => void;

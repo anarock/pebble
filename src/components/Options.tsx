@@ -4,17 +4,30 @@ import {
   activeRow,
   rowWrapper,
   optionsWrapper,
-  selectedRow
+  selectedRow,
+  rowTextStyle
 } from "./styles/Options.styles";
 import { OptionsProps, OptionsState } from "./typings/Options";
 import Ink from "react-ink";
+import Controls from "./Controls";
 
 class Options extends React.PureComponent<OptionsProps, OptionsState> {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
 
   static defaultProps: Partial<OptionsProps> = {
     keyExtractor: item => item.id,
-    rowRenderElement: item => <div>{item.label || item.name}</div>
+    rowRenderElement: ({ item, isActive, isSelected }) => {
+      const _class = cx(rowWrapper, {
+        [activeRow]: isActive,
+        [selectedRow]: isSelected
+      });
+      return (
+        <div className={_class}>
+          <Ink />
+          <div className={rowTextStyle}>{item.label || item.name}</div>
+        </div>
+      );
+    }
   };
 
   state = {
@@ -25,7 +38,7 @@ class Options extends React.PureComponent<OptionsProps, OptionsState> {
     const { options, onSelect } = this.props;
 
     if (e.which === 13) {
-      onSelect(options[this.state.selected]);
+      onSelect(options[this.state.selected], this.props);
     }
 
     this.setState(
@@ -85,22 +98,18 @@ class Options extends React.PureComponent<OptionsProps, OptionsState> {
           css({ width, ...(hideBorder ? { boxShadow: "none" } : {}) })
         )}
       >
-        {options.map((suggestion, i) => {
-          const _class = cx(rowWrapper, {
-            [activeRow]: i === this.state.selected,
-            [selectedRow]: selected && keyExtractor(suggestion) === selected
-          });
-          return (
-            <div
-              key={i}
-              className={_class}
-              onClick={() => onSelect(suggestion)}
-            >
-              <Ink />
-              {rowRenderElement(suggestion, i, i === this.state.selected)}
-            </div>
-          );
-        })}
+        <Controls
+          data={options}
+          keyExtractor={keyExtractor}
+          selected={selected}
+          onChange={args => onSelect(args, this.props)}
+          renderElement={args =>
+            rowRenderElement({
+              ...args,
+              isActive: args.index === this.state.selected
+            })
+          }
+        />
       </div>
     );
   }

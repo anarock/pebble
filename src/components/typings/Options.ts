@@ -1,11 +1,19 @@
 export interface OptionsProps {
   options: any[];
-  onSelect: (suggestion: any) => void;
+  onSelect: (
+    args: {
+      selected: number | string | (number | string)[];
+    },
+    props: OptionsProps
+  ) => void;
   rowRenderElement?: (
-    item: any,
-    index?: number,
-    selected?: boolean
-  ) => JSX.Element | string;
+    args: {
+      item: any;
+      index: number;
+      isActive: boolean;
+      isSelected: boolean;
+    }
+  ) => JSX.Element | string | number;
   dropdownClassName?: string;
   width?: number | string;
   selected?: any;

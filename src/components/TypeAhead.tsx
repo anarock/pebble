@@ -133,7 +133,10 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                 className={cx(optionsWrapper, dropdownClassName)}
               >
                 <Options
-                  rowRenderElement={rowRenderElement}
+                  rowRenderElement={
+                    rowRenderElement &&
+                    (args => rowRenderElement(args, this.props))
+                  }
                   onSelect={this.onSelect}
                   options={suggestions}
                   keyExtractor={keyExtractor}

@@ -3,12 +3,12 @@ import { storiesOf } from "@storybook/react";
 import TypeAhead from "../src/components/TypeAhead";
 import { action } from "@storybook/addon-actions";
 import { css } from "emotion";
-import { mixins } from "../src/theme";
+// import { mixins } from "../src/theme";
 
-const labelStyle = css({
-  padding: "21px 0",
-  ...mixins.textEllipsis
-});
+// const labelStyle = css({
+//   padding: "21px 0",
+//   ...mixins.textEllipsis
+// });
 
 storiesOf("Typeahead", module).add("simple", () => (
   <TypeAhead
@@ -27,7 +27,6 @@ storiesOf("Typeahead", module).add("simple", () => (
       }
     ]}
     onChange={action("change")}
-    rowRenderElement={({ label }) => <div className={labelStyle}>{label}</div>}
     onSelect={action("select")}
     valueExtractor={suggestion => suggestion.label}
   />

@@ -6,4 +6,5 @@ export interface SelectProps extends OptionsProps {
   placeholder: string;
   required?: boolean;
   errorMessage?: string;
+  valueExtractor?: (item: any) => string | number;
 }

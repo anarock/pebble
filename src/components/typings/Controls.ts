@@ -8,12 +8,13 @@ export interface ControlsProps {
     args: {
       item: any;
       isSelected: boolean;
+      index: number;
     },
     props: ControlsProps
-  ) => JSX.Element;
+  ) => JSX.Element | string | number;
   data: any[];
-  keyExtractor: (item: any) => Id;
-  type: ControlType;
+  keyExtractor?: (item: any) => Id;
+  type?: ControlType;
   onChange: (
     args: {
       selected: Id | Id[];

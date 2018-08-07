@@ -91,19 +91,21 @@ class Controls extends React.PureComponent<ControlsProps> {
 
     return (
       <div className={className}>
-        {data.map(item => {
+        {data.map((item, i) => {
           const key = keyExtractor(item);
 
           const isSelected =
-            !this.isRadio() && Array.isArray(selected)
+            selected &&
+            (!this.isRadio() && Array.isArray(selected)
               ? selected.indexOf(key) >= 0
-              : key === selected;
+              : key === selected);
           return (
             <div key={key} onClick={() => this.handleClick(key)}>
               {renderElement(
                 {
                   item,
-                  isSelected
+                  isSelected,
+                  index: i
                 },
                 this.props
               )}

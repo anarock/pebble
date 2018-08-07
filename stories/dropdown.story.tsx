@@ -14,12 +14,6 @@ const options = [
 
 storiesOf("Dropdown", module).add("simple", () => (
   <DropDown buttonLabel="Hello" initiallyOpen>
-    {() => (
-      <Options
-        options={options}
-        rowRenderElement={item => item.label}
-        onSelect={() => {}}
-      />
-    )}
+    {() => <Options options={options} onSelect={() => {}} />}
   </DropDown>
 ));
