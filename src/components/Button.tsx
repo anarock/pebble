@@ -28,12 +28,12 @@ const Button: React.SFC<ButtonProps> = ({
     buttonStyle,
     getDynamicButtonStyle(large, type, showShadow),
     {
-      __pebble__button__disabled: disabled,
-      __pebble__button__link: type === "link",
-      __pebble__button__dropdown: type === "dropdown",
-      __pebble__button__dropdown__open: type === "dropdown" && isOpen,
-      __pebble__button__dropdown__selected: type === "dropdown" && isSelected,
-      __pebble__button__loading: loading
+      _pebble_btn_disabled: disabled,
+      _pebble_btn_link: type === "link",
+      _pebble_btn_dropdown: type === "dropdown",
+      _pebble_btn_dropdown_open: type === "dropdown" && isOpen,
+      _pebble_btn_dropdown_selected: type === "dropdown" && isSelected,
+      _pebble_btn_loading: loading
     }
   );
 

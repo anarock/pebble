@@ -20,6 +20,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
         inputProps={{ onFocus }}
         value={value}
         errorMessage={props.errorMessage}
+        loading={props.loading}
       />
     ),
     valueExtractor: option => option.label || option.name,
@@ -51,8 +52,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   private removeMouseClickListener = () =>
     document.removeEventListener("mousedown", this.handleMousePress);
 
-  // @ts-ignore
-  componentDidUpdate(prevProps, prevState: TypeaheadState) {
+  componentDidUpdate(_prevProps, prevState: TypeaheadState) {
     if (prevState.showSuggestions === this.state.showSuggestions) return null;
 
     if (this.state.showSuggestions) {
@@ -105,7 +105,8 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
       rowRenderElement,
       suggestions,
       dropdownClassName,
-      keyExtractor
+      keyExtractor,
+      selected
     } = this.props;
 
     return (
@@ -136,6 +137,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
                   onSelect={this.onSelect}
                   options={suggestions}
                   keyExtractor={keyExtractor}
+                  selected={selected}
                 />
               </animated.div>
             ))}

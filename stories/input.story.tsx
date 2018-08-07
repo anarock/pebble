@@ -30,6 +30,7 @@ storiesOf("Input", module)
         errorMessage={text("errorMessage")}
         successMessage={text("successMessage")}
         textArea={boolean("textArea")}
+        loading={boolean("loading")}
       />
     ))
   )

@@ -16,13 +16,13 @@ const buttonPseudo = {
   primary: {
     color: white.base,
     backgroundColor: violet.base,
-    "&:not(.__pebble__button__dropdown):not(.__pebble__button__disabled):hover": {
+    "&:not(._pebble_btn_dropdown):not(._pebble_btn_disabled):hover": {
       backgroundColor: violet.light
     },
-    "&:not(.__pebble__button__dropdown):not(__pebble__button__disabled):active": {
+    "&:not(._pebble_btn_dropdown):not(_pebble_btn_disabled):active": {
       backgroundColor: violet.dark
     },
-    "&.__pebble__button__disabled": {
+    "&._pebble_btn_disabled": {
       color: white.base,
       backgroundColor: violet.lighter
     }
@@ -30,13 +30,13 @@ const buttonPseudo = {
   secondary: {
     color: gray.darker,
     backgroundColor: gray.lighter,
-    "&:not(.__pebble__button__dropdown):not(__pebble__button__disabled):hover": {
+    "&:not(._pebble_btn_dropdown):not(_pebble_btn_disabled):hover": {
       backgroundColor: gray.lightest
     },
-    "&:not(.__pebble__button__dropdown):not(__pebble__button__disabled):active": {
+    "&:not(._pebble_btn_dropdown):not(_pebble_btn_disabled):active": {
       backgroundColor: gray.light
     },
-    "&.__pebble__button__disabled": {
+    "&._pebble_btn_disabled": {
       color: gray.base,
       backgroundColor: gray.lighter
     }
@@ -67,46 +67,46 @@ export const buttonStyle = css({
   whiteSpace: "nowrap",
   justifyContent: "center",
   border: 0,
-  "&.__pebble__button__disabled": {
+  "&._pebble_btn_disabled": {
     cursor: "not-allowed",
     backgroundColor: colors.white.base,
     ":focus": {
       border: "none"
     }
   },
-  "&.__pebble__button__dropdown": {
+  "&._pebble_btn_dropdown": {
     ...buttonPseudo.secondary,
     backgroundColor: white.base
   },
-  "&.__pebble__button__dropdown__open": {
+  "&._pebble_btn_dropdown_open": {
     ...buttonPseudo.primary,
     ":focus": {
       border: "none"
     }
   },
-  "&.__pebble__button__dropdown__selected": {
+  "&._pebble_btn_dropdown_selected": {
     backgroundColor: colors.violet.base,
     color: colors.white.base
   },
   ":focus": {
     border: "none"
   },
-  "&.__pebble__button__loading": {
+  "&._pebble_btn_loading": {
     ".icon-spinner": {
       animation: `${rotate} 1500ms infinite linear`
     }
   },
-  "&.__pebble__button__link": {
+  "&._pebble_btn_link": {
     backgroundColor: "transparent",
     border: 0,
     color: violet.base,
     minWidth: 0,
     padding: 0,
     fontSize: 14,
-    ":not(.__pebble__button__disabled):hover": {
+    ":not(._pebble_btn_disabled):hover": {
       textDecoration: "underline"
     },
-    "&.__pebble__button__disabled": {
+    "&._pebble_btn_disabled": {
       color: violet.lighter,
       cursor: "not-allowed"
     }

@@ -6,9 +6,11 @@ import {
   labelStyle,
   wrapperStyle,
   messageStyle,
-  inputStyle
+  inputStyle,
+  loadingStyle
 } from "./styles/Input.styles";
 import { colors } from "../theme";
+import Loader from "./Loader";
 
 function getColor(error: string, success: string, isUnderlineColor?: boolean) {
   let color = colors.gray.dark;
@@ -64,7 +66,8 @@ class Input extends React.PureComponent<InputProps, InputState> {
       message,
       textArea,
       required,
-      onClick
+      onClick,
+      loading
     } = this.props;
     const { isFocused } = this.state;
 
@@ -73,16 +76,16 @@ class Input extends React.PureComponent<InputProps, InputState> {
     const Input_ = textArea ? "textarea" : "input";
 
     const inputClassName = cx(inputStyle, {
-      __pebble__input__disabled: disabled,
-      __pebble__input__read__only: readOnly,
-      __pebble__input__textarea: textArea
+      _pebble_input_disabled: disabled,
+      _pebble_input_read_only: readOnly,
+      _pebble_input_textarea: textArea
     });
 
     const highlightClassName = cx(highlightStyle, {
-      __pebble__input__highlight__focused: isFocused,
-      __pebble__input__highlight__state: !!_message,
-      __pebble__input__highlight__read__only: readOnly,
-      __pebble__input__highlight__disabled: disabled
+      _pebble_input_highlight_focused: isFocused,
+      _pebble_input_highlight_state: !!_message,
+      _pebble_input_highlight_read_only: readOnly,
+      _pebble_input_highlight_disabled: disabled
     });
 
     const labelClassName = cx(labelStyle, {
@@ -126,6 +129,14 @@ class Input extends React.PureComponent<InputProps, InputState> {
             backgroundColor: getColor(errorMessage, successMessage, true)
           }}
         />
+
+        {loading && (
+          <Loader
+            color={colors.violet.base}
+            scale={0.6}
+            className={loadingStyle}
+          />
+        )}
 
         {_message && (
           <div

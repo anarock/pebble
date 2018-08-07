@@ -12,7 +12,7 @@ export const wrapperStyle = css({
   flexDirection: "column",
   marginBottom: 20,
   height: 68,
-  "&.__pebble__input__wrapper__textarea": {
+  "&._pebble_input_wrapper_textarea": {
     height: 110
   }
 });
@@ -30,15 +30,15 @@ export const inputStyle = css({
   "&:disabled": {
     backgroundColor: colors.white
   },
-  "&.__pebble__input__read__only": {
+  "&._pebble_input_read_only": {
     color: colors.gray.dark
   },
-  "&.__pebble__input__disabled": {
-    cursor: "inherit",
+  "&._pebble_input_disabled": {
+    cursor: "not-allowed",
     pointerEvents: "none",
     color: colors.gray.base
   },
-  "&.__pebble__input__textarea": {
+  "&._pebble_input_textarea": {
     height: 88,
     padding: "24px 0 52px 0",
     resize: "none"
@@ -61,7 +61,7 @@ export const highlightStyle = css({
   width: 0,
   transition: animation,
   zIndex: 9,
-  "&.__pebble__input__highlight__state, &.__pebble__input__highlight__focused": {
+  "&._pebble_input_highlight_state, &._pebble_input_highlight_focused": {
     width: "100%"
   }
 });
@@ -74,7 +74,7 @@ export const labelStyle = css({
   transition: animation,
   transform: "translate(0, 24px)",
   pointerEvents: "none",
-  "&.__pebble__input__label__focused": {
+  "&._pebble_input_label_focused": {
     fontSize: 12,
     lineHeight: "10px",
     transform: "translate(0, 0)",
@@ -87,4 +87,10 @@ export const messageStyle = css({
   marginTop: 10,
   lineHeight: "10px",
   textAlign: "left"
+});
+
+export const loadingStyle = css({
+  right: -10,
+  top: 20,
+  position: "absolute"
 });
