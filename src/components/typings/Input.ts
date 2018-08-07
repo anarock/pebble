@@ -16,6 +16,7 @@ export interface InputProps {
   successMessage?: string;
   textArea?: boolean;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
+  loading?: boolean;
 }
 
 export interface InputState {

@@ -88,7 +88,7 @@ class Options extends React.PureComponent<OptionsProps, OptionsState> {
         {options.map((suggestion, i) => {
           const _class = cx(rowWrapper, {
             [activeRow]: i === this.state.selected,
-            [selectedRow]: keyExtractor(suggestion) === selected
+            [selectedRow]: selected && keyExtractor(suggestion) === selected
           });
           return (
             <div

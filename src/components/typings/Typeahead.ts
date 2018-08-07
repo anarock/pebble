@@ -30,6 +30,8 @@ export interface TypeaheadProps {
   errorMessage?: string;
   placeholder: string;
   keyExtractor?: (item: any) => number | string;
+  loading?: boolean;
+  selected?: number | string;
 }
 
 export interface TypeaheadState {
