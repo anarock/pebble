@@ -1,6 +1,6 @@
 import * as React from "react";
 import { DropdownProps, DropdownState } from "./typings/Dropdown";
-import Button from "./Button";
+import { DropDownButton } from "./Button";
 import { dropDownStyle } from "./styles/Dropdown.styles";
 import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
@@ -11,8 +11,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
   };
 
   static defaultProps: Partial<DropdownProps> = {
-    closeOnClickOutside: true,
-    type: "dropdown"
+    closeOnClickOutside: true
   };
 
   private toggleDropdown = () => {
@@ -25,7 +24,6 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
     const {
       buttonLabel,
       children,
-      type,
       labelComponent,
       padding,
       className,
@@ -48,16 +46,14 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
           {labelComponent ? (
             labelComponent({ isOpen, toggleDropdown: this.toggleDropdown })
           ) : (
-            <Button
+            <DropDownButton
               isSelected={isSelected}
-              showShadow
-              type={type}
               isOpen={isOpen}
               onClick={this.toggleDropdown}
               disabled={disabled}
             >
               {buttonLabel}
-            </Button>
+            </DropDownButton>
           )}
           {this.state.isOpen && (
             <div

@@ -1,18 +1,23 @@
 import * as React from "react";
 
-export type ButtonType = "primary" | "secondary" | "dropdown" | "link";
+export type ButtonType = "primary" | "secondary" | "link" | "success" | "alert";
+
+type Children = JSX.Element | string | number | React.ReactChildren;
 
 export interface ButtonProps {
-  children: JSX.Element | string | number | React.ReactChildren;
+  children: Children;
   onClick: React.MouseEventHandler<HTMLButtonElement>;
   showShadow?: boolean;
   disabled?: boolean;
   type?: ButtonType;
-  isOpen?: boolean;
-  large?: boolean;
+  size?: "x-small" | "small" | "large";
   width?: number;
   className?: string;
   showRipple?: boolean;
-  isSelected?: boolean;
   loading?: boolean;
+}
+
+export interface DropDownButtonProps extends ButtonProps {
+  isOpen: boolean;
+  isSelected: boolean;
 }

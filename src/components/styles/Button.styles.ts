@@ -1,5 +1,6 @@
-import { css, keyframes } from "emotion";
+import { css } from "emotion";
 import { colors, constants, typography } from "../../theme";
+const { violet, gray, white, red, emerald } = colors;
 
 export const iconStyle = css({
   marginLeft: 15,
@@ -10,19 +11,17 @@ export const iconStyle = css({
   marginTop: 2
 });
 
-const { violet, gray, white } = colors;
-
 const buttonPseudo = {
   primary: {
     color: white.base,
     backgroundColor: violet.base,
-    "&:not(._pebble_btn_dropdown):not(._pebble_btn_disabled):hover": {
+    "&:not([disabled]):hover": {
       backgroundColor: violet.light
     },
-    "&:not(._pebble_btn_dropdown):not(_pebble_btn_disabled):active": {
+    "&:not([disabled]):active": {
       backgroundColor: violet.dark
     },
-    "&._pebble_btn_disabled": {
+    "&[disabled]": {
       color: white.base,
       backgroundColor: violet.lighter
     }
@@ -30,29 +29,62 @@ const buttonPseudo = {
   secondary: {
     color: gray.darker,
     backgroundColor: gray.lighter,
-    "&:not(._pebble_btn_dropdown):not(_pebble_btn_disabled):hover": {
+    "&:not([disabled]):hover": {
       backgroundColor: gray.lightest
     },
-    "&:not(._pebble_btn_dropdown):not(_pebble_btn_disabled):active": {
+    "&:not([disabled]):active": {
       backgroundColor: gray.light
     },
-    "&._pebble_btn_disabled": {
+    "&[disabled]": {
       color: gray.base,
       backgroundColor: gray.lighter
+    }
+  },
+  success: {
+    color: white.base,
+    backgroundColor: emerald.base,
+    "&:not([disabled]):hover": {
+      backgroundColor: emerald.light
+    },
+    "&:not([disabled]):active": {
+      backgroundColor: emerald.light
+    },
+    "&[disabled]": {
+      color: gray.base,
+      backgroundColor: gray.lighter
+    }
+  },
+  alert: {
+    color: white.base,
+    backgroundColor: red.base,
+    "&:not([disabled]):hover": {
+      backgroundColor: red.light
+    },
+    "&:not([disabled]):active": {
+      backgroundColor: red.light
+    },
+    "&[disabled]": {
+      color: gray.base,
+      backgroundColor: gray.lighter
+    }
+  },
+  link: {
+    backgroundColor: "transparent",
+    border: 0,
+    color: violet.base,
+    minWidth: 0,
+    padding: 0,
+    fontSize: 14,
+    ":not([disabled]):hover": {
+      textDecoration: "underline"
+    },
+    "&[disabled]": {
+      color: violet.lighter
     }
   }
 };
 
-const rotate = keyframes({
-  from: {
-    transform: "rotate(0deg)"
-  },
-  to: {
-    transform: "rotate(360deg)"
-  }
-});
-
-export const buttonStyle = css({
+export const commonButtonStyle = css({
   lineHeight: "23px",
   height: constants.buttonHeight,
   padding: "0 20px",
@@ -67,60 +99,42 @@ export const buttonStyle = css({
   whiteSpace: "nowrap",
   justifyContent: "center",
   border: 0,
-  "&._pebble_btn_disabled": {
+  "&[disabled]": {
     cursor: "not-allowed",
     backgroundColor: colors.white.base,
     ":focus": {
       border: "none"
     }
   },
-  "&._pebble_btn_dropdown": {
-    ...buttonPseudo.secondary,
-    backgroundColor: white.base
-  },
-  "&._pebble_btn_dropdown_open": {
-    ...buttonPseudo.primary,
-    ":focus": {
-      border: "none"
-    }
-  },
-  "&._pebble_btn_dropdown_selected": {
-    backgroundColor: colors.violet.base,
-    color: colors.white.base
-  },
   ":focus": {
     border: "none"
-  },
-  "&._pebble_btn_loading": {
-    ".icon-spinner": {
-      animation: `${rotate} 1500ms infinite linear`
-    }
-  },
-  "&._pebble_btn_link": {
-    backgroundColor: "transparent",
-    border: 0,
-    color: violet.base,
-    minWidth: 0,
-    padding: 0,
-    fontSize: 14,
-    ":not(._pebble_btn_disabled):hover": {
-      textDecoration: "underline"
-    },
-    "&._pebble_btn_disabled": {
-      color: violet.lighter,
-      cursor: "not-allowed"
-    }
   }
 });
 
-export const getDynamicButtonStyle = (isLarge, type, showShadow) => {
-  const isPrimary = type === "primary";
-  return css({
-    ...(isLarge ? typography.normal.regular : typography.s.regular),
-    minWidth: isLarge ? 140 : 100,
-    height: isLarge ? 50 : 40,
-    backgroundColor: isPrimary ? violet.base : gray.lighter,
-    boxShadow: showShadow ? constants.boxShadow.base : "none",
-    ...buttonPseudo[type]
-  });
+const styleBasedOnSize = {
+  "x-small": {
+    height: 25,
+    minWidth: 70,
+    ...typography.xs.light
+  },
+  small: {
+    height: 40,
+    minWidth: 100,
+    ...typography.s.regular
+  },
+  large: {
+    height: 50,
+    minWidth: 140,
+    ...typography.normal.regular
+  }
 };
+
+export const getButtonStyle = (size, type, showShadow) =>
+  css([
+    commonButtonStyle,
+    {
+      ...styleBasedOnSize[size],
+      ...buttonPseudo[type],
+      boxShadow: showShadow ? constants.boxShadow.base : "none"
+    }
+  ]);
