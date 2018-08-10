@@ -30,7 +30,7 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
       return (
         <footer className={footerStyle}>
           <Button
-            large
+            size="large"
             width={100}
             type={"secondary"}
             onClick={leftButtonData.action}
@@ -38,7 +38,7 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
             {leftButtonData.label}
           </Button>
           <Button
-            large
+            size="large"
             width={100}
             loading={props.isRightButtonLoading}
             onClick={rightButtonData.action}

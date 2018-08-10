@@ -11,7 +11,7 @@ function noop() {}
 describe("Button Combos test", () => {
   const _props = {
     disabled: [true, false],
-    type: ["primary", "secondary", "dropdown", "link"],
+    type: ["primary", "secondary", "alert", "link", "success"],
     showRipple: [true, false],
     loading: [true, false],
     large: [true, false]
