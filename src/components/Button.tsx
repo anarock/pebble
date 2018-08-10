@@ -16,17 +16,14 @@ const Button: React.SFC<ButtonProps> = ({
   className,
   showRipple = true,
   loading,
-  size = "small",
-  filled = "true"
+  size = "small"
 }) => {
   const disableAction = disabled || loading;
 
+  const filled = size !== "x-small";
   const _className = cx(
     getButtonStyle(size, type, showShadow, filled),
-    className,
-    {
-      _pebble_button_xs_small: size === "x-small"
-    }
+    className
   );
 
   return (
