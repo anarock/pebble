@@ -47,7 +47,7 @@ exports[`Component: Tag snapshot 1`] = `
   className="emotion-0"
   style={
     Object {
-      "backgroundColor": "#DBF3E7",
+      "backgroundColor": "#40BD80",
       "color": "#10AC60",
     }
   }
@@ -104,7 +104,7 @@ exports[`Component: Tag snapshot 2`] = `
   className="emotion-0 __pebble__tag__with__close"
   style={
     Object {
-      "backgroundColor": "#DBF3E7",
+      "backgroundColor": "#40BD80",
       "color": "#10AC60",
     }
   }

@@ -62,108 +62,36 @@ exports[`Component: Popper snapshot 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   border: 0;
+  height: 40px;
+  min-width: 100px;
   font-weight: 400;
   color: #ffffff;
   font-size: 12px;
-  min-width: 100px;
-  height: 40px;
   background-color: #6161FF;
+  border: none;
   box-shadow: none;
 }
 
-.emotion-0._pebble_btn_disabled {
-  cursor: not-allowed;
-  background-color: #ffffff;
-}
-
-.emotion-0._pebble_btn_disabled:focus {
-  border: none;
-}
-
-.emotion-0._pebble_btn_dropdown {
-  color: #101721;
-  background-color: #ffffff;
-}
-
-.emotion-0._pebble_btn_dropdown:not(._pebble_btn_dropdown):not(_pebble_btn_disabled):hover {
-  background-color: #F7F7F9;
-}
-
-.emotion-0._pebble_btn_dropdown:not(._pebble_btn_dropdown):not(_pebble_btn_disabled):active {
-  background-color: #E0E0E0;
-}
-
-.emotion-0._pebble_btn_dropdown._pebble_btn_disabled {
-  color: #9FA6B0;
-  background-color: #EDEDED;
-}
-
-.emotion-0._pebble_btn_dropdown_open {
-  color: #ffffff;
-  background-color: #6161FF;
-}
-
-.emotion-0._pebble_btn_dropdown_open:not(._pebble_btn_dropdown):not(._pebble_btn_disabled):hover {
-  background-color: #7070FF;
-}
-
-.emotion-0._pebble_btn_dropdown_open:not(._pebble_btn_dropdown):not(_pebble_btn_disabled):active {
-  background-color: #5656ED;
-}
-
-.emotion-0._pebble_btn_dropdown_open._pebble_btn_disabled {
-  color: #ffffff;
-  background-color: #C0C0FF;
-}
-
-.emotion-0._pebble_btn_dropdown_open:focus {
-  border: none;
-}
-
-.emotion-0._pebble_btn_dropdown_selected {
-  background-color: #6161FF;
-  color: #ffffff;
-}
-
-.emotion-0:focus {
-  border: none;
-}
-
-.emotion-0._pebble_btn_loading .icon-spinner {
-  -webkit-animation: animation-1q8eu9e 1500ms infinite linear;
-  animation: animation-1q8eu9e 1500ms infinite linear;
-}
-
-.emotion-0._pebble_btn_link {
-  background-color: transparent;
-  border: 0;
-  color: #6161FF;
-  min-width: 0;
-  padding: 0;
-  font-size: 14px;
-}
-
-.emotion-0._pebble_btn_link:not(._pebble_btn_disabled):hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-0._pebble_btn_link._pebble_btn_disabled {
-  color: #C0C0FF;
+.emotion-0[disabled] {
   cursor: not-allowed;
 }
 
-.emotion-0:not(._pebble_btn_dropdown):not(._pebble_btn_disabled):hover {
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
   background-color: #7070FF;
+  border-color: #7070FF;
 }
 
-.emotion-0:not(._pebble_btn_dropdown):not(_pebble_btn_disabled):active {
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
   background-color: #5656ED;
+  border-color: #5656ED;
 }
 
-.emotion-0._pebble_btn_disabled {
+.emotion-0[disabled] {
   color: #ffffff;
   background-color: #C0C0FF;
+  border-color: #C0C0FF;
 }
 
 <div>

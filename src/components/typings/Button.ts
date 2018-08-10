@@ -15,9 +15,25 @@ export interface ButtonProps {
   className?: string;
   showRipple?: boolean;
   loading?: boolean;
+  filled?: boolean;
 }
 
 export interface DropDownButtonProps extends ButtonProps {
   isOpen: boolean;
   isSelected: boolean;
+}
+
+interface MappingColorByTypeOptions {
+  textColor?: string;
+  base: string;
+  hover: string;
+  active: string;
+  disabled: string;
+}
+
+export interface MappingColorByType {
+  primary: MappingColorByTypeOptions;
+  secondary: MappingColorByTypeOptions;
+  success: MappingColorByTypeOptions;
+  alert: MappingColorByTypeOptions;
 }

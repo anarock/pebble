@@ -1,90 +1,10 @@
 import { css } from "emotion";
 import { colors, constants, typography } from "../../theme";
+import { ButtonType, MappingColorByType } from "../typings/Button";
+
 const { violet, gray, white, red, emerald } = colors;
 
-export const iconStyle = css({
-  marginLeft: 15,
-  fontWeight: "bold",
-  fontSize: 12,
-  transition: "transform ease-out .2s",
-  willTransform: "transform",
-  marginTop: 2
-});
-
-const buttonPseudo = {
-  primary: {
-    color: white.base,
-    backgroundColor: violet.base,
-    "&:not([disabled]):hover": {
-      backgroundColor: violet.light
-    },
-    "&:not([disabled]):active": {
-      backgroundColor: violet.dark
-    },
-    "&[disabled]": {
-      color: white.base,
-      backgroundColor: violet.lighter
-    }
-  },
-  secondary: {
-    color: gray.darker,
-    backgroundColor: gray.lighter,
-    "&:not([disabled]):hover": {
-      backgroundColor: gray.lightest
-    },
-    "&:not([disabled]):active": {
-      backgroundColor: gray.light
-    },
-    "&[disabled]": {
-      color: gray.base,
-      backgroundColor: gray.lighter
-    }
-  },
-  success: {
-    color: white.base,
-    backgroundColor: emerald.base,
-    "&:not([disabled]):hover": {
-      backgroundColor: emerald.light
-    },
-    "&:not([disabled]):active": {
-      backgroundColor: emerald.light
-    },
-    "&[disabled]": {
-      color: gray.base,
-      backgroundColor: gray.lighter
-    }
-  },
-  alert: {
-    color: white.base,
-    backgroundColor: red.base,
-    "&:not([disabled]):hover": {
-      backgroundColor: red.light
-    },
-    "&:not([disabled]):active": {
-      backgroundColor: red.light
-    },
-    "&[disabled]": {
-      color: gray.base,
-      backgroundColor: gray.lighter
-    }
-  },
-  link: {
-    backgroundColor: "transparent",
-    border: 0,
-    color: violet.base,
-    minWidth: 0,
-    padding: 0,
-    fontSize: 14,
-    ":not([disabled]):hover": {
-      textDecoration: "underline"
-    },
-    "&[disabled]": {
-      color: violet.lighter
-    }
-  }
-};
-
-export const commonButtonStyle = css({
+const commonButtonStyle = css({
   lineHeight: "23px",
   height: constants.buttonHeight,
   padding: "0 20px",
@@ -100,16 +20,82 @@ export const commonButtonStyle = css({
   justifyContent: "center",
   border: 0,
   "&[disabled]": {
-    cursor: "not-allowed",
-    backgroundColor: colors.white.base,
-    ":focus": {
-      border: "none"
-    }
-  },
-  ":focus": {
-    border: "none"
+    cursor: "not-allowed"
   }
 });
+
+const mappingColorByType: MappingColorByType = {
+  primary: {
+    base: violet.base,
+    hover: violet.light,
+    active: violet.dark,
+    disabled: violet.lighter
+  },
+  secondary: {
+    textColor: gray.darker,
+    base: gray.lighter,
+    hover: gray.lightest,
+    active: gray.base,
+    disabled: gray.lighter
+  },
+  success: {
+    base: emerald.base,
+    hover: emerald.light,
+    active: emerald.dark,
+    disabled: emerald.lighter
+  },
+  alert: {
+    base: red.base,
+    hover: red.light,
+    active: red.dark,
+    disabled: red.lighter
+  }
+};
+
+const linkStyle = {
+  backgroundColor: "transparent",
+  border: 0,
+  color: violet.base,
+  minWidth: 0,
+  padding: 0,
+  fontSize: 14,
+  ":not([disabled]):hover": {
+    textDecoration: "underline"
+  },
+  "&[disabled]": {
+    color: violet.lighter
+  }
+};
+
+const getStyleByType = (type: ButtonType, filled: boolean) => {
+  if (type === "link") return linkStyle;
+
+  const _color = mappingColorByType[type];
+  const { base: colorBase, disabled, hover, active, textColor } = _color;
+
+  const defaultFontColor = filled ? textColor || white.base : colorBase;
+
+  return {
+    color: defaultFontColor,
+    backgroundColor: filled ? colorBase : white.base,
+    border: filled ? "none" : `1px solid ${colorBase}`,
+    "&:not([disabled]):hover": {
+      color: textColor || white.base,
+      backgroundColor: hover,
+      borderColor: hover
+    },
+    "&:not([disabled]):active": {
+      color: textColor || white.base,
+      backgroundColor: active,
+      borderColor: active
+    },
+    "&[disabled]": {
+      color: textColor || white.base,
+      backgroundColor: disabled,
+      borderColor: disabled
+    }
+  };
+};
 
 const styleBasedOnSize = {
   "x-small": {
@@ -129,12 +115,22 @@ const styleBasedOnSize = {
   }
 };
 
-export const getButtonStyle = (size, type, showShadow) =>
-  css([
+export const getButtonStyle = (size, type, showShadow, filled) => {
+  return css([
     commonButtonStyle,
     {
       ...styleBasedOnSize[size],
-      ...buttonPseudo[type],
+      ...getStyleByType(type, filled),
       boxShadow: showShadow ? constants.boxShadow.base : "none"
     }
   ]);
+};
+
+export const iconStyle = css({
+  marginLeft: 15,
+  fontWeight: "bold",
+  fontSize: 12,
+  transition: "transform ease-out .2s",
+  willTransform: "transform",
+  marginTop: 2
+});

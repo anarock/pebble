@@ -16,13 +16,22 @@ const Button: React.SFC<ButtonProps> = ({
   className,
   showRipple = true,
   loading,
-  size = "small"
+  size = "small",
+  filled = "true"
 }) => {
   const disableAction = disabled || loading;
 
+  const _className = cx(
+    getButtonStyle(size, type, showShadow, filled),
+    className,
+    {
+      _pebble_button_xs_small: size === "x-small"
+    }
+  );
+
   return (
     <button
-      className={cx(getButtonStyle(size, type, showShadow), className)}
+      className={_className}
       onClick={!disableAction ? onClick : undefined}
       style={{ width }}
       disabled={disabled}
@@ -37,9 +46,10 @@ export const DropDownButton: React.SFC<DropDownButtonProps> = ({
   isOpen,
   isSelected,
   children,
+  className,
   ...props
 }) => {
-  const className = cx(
+  const _className = cx(
     css({
       border: constants.border.base
     }),
@@ -52,7 +62,7 @@ export const DropDownButton: React.SFC<DropDownButtonProps> = ({
   );
 
   return (
-    <Button {...props} type="secondary" className={className}>
+    <Button {...props} type="secondary" className={cx(_className, className)}>
       <React.Fragment>
         {children}{" "}
         <i
