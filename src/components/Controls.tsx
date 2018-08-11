@@ -48,6 +48,14 @@ class Controls extends React.PureComponent<ControlsProps> {
     labelExtractor: item => item.label || item.name
   };
 
+  constructor(props) {
+    super(props);
+
+    console.warn(
+      "pebble: Controls component is deprecated. Instead use RadioGroup or CheckboxGroup."
+    );
+  }
+
   private handleClick = (id: string | number) => {
     const { onChange, allowToggle, selected } = this.props;
 

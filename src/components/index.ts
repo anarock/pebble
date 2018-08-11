@@ -18,6 +18,10 @@ import Tooltip from "./Tooltip";
 import Logo from "./Logo";
 import Popper from "./Popper";
 import Loader from "./Loader";
+import Radio from "./Radio";
+import RadioGroup from "./RadioGroup";
+import Checkbox from "./Checkbox";
+import CheckboxGroup from "./CheckboxGroup";
 
 export {
   Button,
@@ -39,5 +43,9 @@ export {
   Tooltip,
   Logo,
   Popper,
-  Loader
+  Loader,
+  Radio,
+  RadioGroup,
+  Checkbox,
+  CheckboxGroup
 };
