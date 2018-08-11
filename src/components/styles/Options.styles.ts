@@ -42,3 +42,10 @@ export const selectedRow = css({
   backgroundColor: colors.violet.lightest,
   color: colors.violet.base
 });
+
+export const rowTextStyle = css({
+  ...mixins.textEllipsis,
+  height: "inherit",
+  display: "flex",
+  alignItems: "center"
+});

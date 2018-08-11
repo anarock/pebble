@@ -11,7 +11,6 @@ const options = new Array(7)
 
 storiesOf("Select", module).add("default", () => (
   <Select
-    rowRenderElement={x => x.label}
     keyExtractor={x => x.id}
     options={options}
     onSelect={action("onSelect")}

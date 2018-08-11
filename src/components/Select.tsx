@@ -27,11 +27,12 @@ const Select: React.SFC<SelectProps> = ({
     rowRenderElement,
     options,
     selected,
-    onSelect
+    onSelect,
+    valueExtractor = item => item.label || item.name
   } = selectProps;
 
   const selectedLabel = selected
-    ? rowRenderElement(options.find(x => keyExtractor(x) === selected))
+    ? valueExtractor(options.find(x => keyExtractor(x) === selected))
     : placeholder;
 
   return (
@@ -67,8 +68,8 @@ const Select: React.SFC<SelectProps> = ({
             rowRenderElement={rowRenderElement}
             options={options}
             selected={selected}
-            onSelect={option => {
-              onSelect(option);
+            onSelect={args => {
+              onSelect(args, this.props);
               toggle();
             }}
           />
@@ -80,7 +81,7 @@ const Select: React.SFC<SelectProps> = ({
 
 Select.defaultProps = {
   keyExtractor: item => item.id,
-  rowRenderElement: item => item.label || item.name
+  rowRenderElement: ({ item }) => item.label || item.name
 };
 
 export default Select;
