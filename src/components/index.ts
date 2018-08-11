@@ -18,6 +18,7 @@ import Tooltip from "./Tooltip";
 import Logo from "./Logo";
 import Popper from "./Popper";
 import Loader from "./Loader";
+import Radio from "./Radio";
 
 export {
   Button,
@@ -39,5 +40,6 @@ export {
   Tooltip,
   Logo,
   Popper,
-  Loader
+  Loader,
+  Radio
 };
