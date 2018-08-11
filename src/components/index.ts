@@ -20,6 +20,8 @@ import Popper from "./Popper";
 import Loader from "./Loader";
 import Radio from "./Radio";
 import RadioGroup from "./RadioGroup";
+import Checkbox from "./Checkbox";
+import CheckboxGroup from "./CheckboxGroup";
 
 export {
   Button,
@@ -43,5 +45,7 @@ export {
   Popper,
   Loader,
   Radio,
-  RadioGroup
+  RadioGroup,
+  Checkbox,
+  CheckboxGroup
 };

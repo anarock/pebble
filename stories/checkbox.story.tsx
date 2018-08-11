@@ -3,14 +3,14 @@ import { storiesOf } from "@storybook/react";
 import { Checkbox } from "../src";
 import { withState } from "@dump247/storybook-state";
 
-storiesOf("Radio", module).add(
+storiesOf("Checkbox", module).add(
   "Default",
   withState({ checked: false })(({ store }) => (
     <Checkbox
       checked={store.state.checked}
       onChange={() => store.set({ checked: !store.state.checked })}
-      value="radio"
-      label="I am radio button"
+      value="checkbox"
+      label="I am a checkbox"
     />
   ))
 );

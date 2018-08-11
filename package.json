@@ -43,7 +43,8 @@
     "react-ink": "^6.4.0",
     "react-popper": "^1.0.0",
     "react-spring": "^5.5.4",
-    "rheostat": "2.2.0"
+    "rheostat": "2.2.0",
+    "utility-types": "^2.0.0"
   },
   "devDependencies": {
     "@dump247/storybook-state": "^1.5.0",

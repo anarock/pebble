@@ -1,11 +1,11 @@
 import { css } from "emotion";
 import { colors, typography } from "../../theme";
 
-export const radioStyle = css({
+export const controlStyle = css({
   outline: "none"
 });
 
-export const radioContentStyle = css({
+export const controlContentStyle = css({
   display: "flex",
   justifyContent: "center",
   ...typography.normal.regular,
