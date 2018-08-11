@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import Radio from "../src/components/Radio";
+import { Radio } from "../src";
 import { withState } from "@dump247/storybook-state";
 
 storiesOf("Radio", module).add(

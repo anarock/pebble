@@ -19,6 +19,7 @@ import Logo from "./Logo";
 import Popper from "./Popper";
 import Loader from "./Loader";
 import Radio from "./Radio";
+import RadioGroup from "./RadioGroup";
 
 export {
   Button,
@@ -41,5 +42,6 @@ export {
   Logo,
   Popper,
   Loader,
-  Radio
+  Radio,
+  RadioGroup
 };
