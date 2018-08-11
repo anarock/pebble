@@ -10,8 +10,10 @@ export const radioContentStyle = css({
   justifyContent: "center",
   ...typography.normal.regular,
   cursor: "pointer",
+  padding: "10px 0",
   i: {
-    marginRight: 10
+    marginRight: 10,
+    fontSize: 16
   },
   "&[data-disabled='true']": {
     cursor: "not-allowed",

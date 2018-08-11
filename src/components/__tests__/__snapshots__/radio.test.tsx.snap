@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Logo snapshot 1`] = `
+exports[`Radio snapshot 1`] = `
 .emotion-1 {
   outline: none;
 }
@@ -18,10 +18,12 @@ exports[`Logo snapshot 1`] = `
   color: #101721;
   font-size: 14px;
   cursor: pointer;
+  padding: 10px 0;
 }
 
 .emotion-0 i {
   margin-right: 10px;
+  font-size: 16px;
 }
 
 .emotion-0[data-disabled='true'] {
@@ -48,7 +50,7 @@ exports[`Logo snapshot 1`] = `
       style={
         Object {
           "color": "#6161FF",
-          "paddingTop": 3,
+          "paddingTop": 2,
         }
       }
     />

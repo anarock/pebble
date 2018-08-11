@@ -4,7 +4,7 @@ import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 import sinon from "sinon";
 
-describe("Logo", () => {
+describe("Radio", () => {
   test("snapshot", () => {
     const radio = renderer.create(
       <Radio

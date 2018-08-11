@@ -3,7 +3,7 @@ import { Radio, RadioGroup } from "../";
 import { mount } from "enzyme";
 import sinon from "sinon";
 
-describe("Logo", () => {
+describe("RadioGroup", () => {
   test("should call onChange on click with correct arguments", () => {
     const spy = sinon.spy();
 

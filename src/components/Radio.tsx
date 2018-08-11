@@ -28,7 +28,7 @@ Radio.defaultProps = {
       <i
         style={{
           color: checked ? colors.violet.base : colors.gray.light,
-          paddingTop: 3
+          paddingTop: 2
         }}
         className={checked ? "icon-radio-selected" : "icon-radio"}
       />{" "}

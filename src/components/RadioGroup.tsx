@@ -6,7 +6,7 @@ export default class RadioGroup extends React.PureComponent<RadioGroupProps> {
   private handleChange = ({ value, checked }) => {
     const { toggle, selected, onChange } = this.props;
     if (!toggle && value === selected) return;
-    onChange(checked ? value : undefined);
+    onChange(checked ? value : undefined, this.props);
   };
 
   render() {
