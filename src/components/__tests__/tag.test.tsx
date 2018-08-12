@@ -5,7 +5,7 @@ import Tag from "../Tag";
 
 describe("Component: Tag", () => {
   test("snapshot", () => {
-    const tag = shallow(<Tag label="Anarock" color="emerald" />);
+    const tag = shallow(<Tag label="Anarock" color="violet" />);
     expect(tag).toMatchSnapshot();
 
     const tag2 = shallow(
