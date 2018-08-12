@@ -45,6 +45,7 @@ export default class OptionGroup extends React.PureComponent<
         if (this.optionRef.current && (e.which === 40 || e.which === 38)) {
           ReactDOM.findDOMNode(
             this[`option-ref-${selected}`].current
+            // @ts-ignore
           ).scrollIntoView({
             behavior: "smooth"
           });
