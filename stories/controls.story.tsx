@@ -30,4 +30,4 @@ class Container extends React.PureComponent<{}, { selected: Id | Id[] }> {
   }
 }
 
-storiesOf("Controls", module).add("simple", () => <Container />);
+storiesOf("Controls (deprecated)", module).add("simple", () => <Container />);
