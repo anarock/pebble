@@ -1,5 +1,5 @@
 import * as React from "react";
-import { colors, constants } from "../theme";
+import { colors } from "../theme";
 import { tagStyle } from "./styles/Tag.styles";
 import { TagProps } from "./typings/Tag";
 import { cx } from "emotion";
@@ -14,16 +14,12 @@ const Tag: React.SFC<TagProps> = ({ label, color, onClose }) => {
       className={wrapperClassName}
       style={{
         color: colors[color].base,
-        backgroundColor: colors[color].light
+        backgroundColor: colors[color].lightest || colors[color].light
       }}
     >
       {label}{" "}
       {onClose && (
-        <i
-          style={{ borderLeft: constants.border.base }}
-          onClick={onClose}
-          className="icon-close"
-        >
+        <i onClick={onClose} className="icon-close">
           <Ink />
         </i>
       )}
