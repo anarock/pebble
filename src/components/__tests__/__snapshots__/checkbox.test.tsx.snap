@@ -3,6 +3,7 @@
 exports[`Checkbox snapshot 1`] = `
 .emotion-1 {
   outline: none;
+  position: relative;
 }
 
 .emotion-0 {
@@ -19,6 +20,8 @@ exports[`Checkbox snapshot 1`] = `
   font-size: 14px;
   cursor: pointer;
   padding: 10px 0;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 .emotion-0 i {

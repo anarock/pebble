@@ -90,6 +90,7 @@ class Options extends React.PureComponent<OptionsProps, OptionsState> {
             [activeRow]: i === this.state.selected,
             [selectedRow]: selected && keyExtractor(suggestion) === selected
           });
+
           return (
             <div
               key={i}
