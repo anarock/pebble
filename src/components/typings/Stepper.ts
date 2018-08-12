@@ -19,7 +19,7 @@ interface ArgsRenderContent extends ArgsCommon {
 }
 
 interface ArgsRenderFooter extends ArgsCommon {
-  selected: number;
+  activeIndex: number;
 }
 
 export interface StepperProps {
