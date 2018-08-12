@@ -13,7 +13,6 @@ storiesOf("OptionGroup", module).add(
           value
         })
       }
-      name="test"
       multi
     >
       <Option value="option-1" label="I am an option" />
