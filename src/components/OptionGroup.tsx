@@ -2,7 +2,7 @@ import * as React from "react";
 import { optionsWrapper } from "./styles/Options.styles";
 import { OptionProps } from "./typings/Option";
 import { getSelectedCheckboxes } from "./utils/getSelectedCheckboxes";
-import { findDOMNode } from "react-dom";
+import * as ReactDOM from "react-dom";
 import { OptionGroupProps, OptionGroupState } from "./typings/OptionGroup";
 
 export default class OptionGroup extends React.PureComponent<
@@ -43,7 +43,9 @@ export default class OptionGroup extends React.PureComponent<
       },
       () => {
         if (this.optionRef.current && (e.which === 40 || e.which === 38)) {
-          findDOMNode(this[`option-ref-${selected}`].current).scrollIntoView({
+          ReactDOM.findDOMNode(
+            this[`option-ref-${selected}`].current
+          ).scrollIntoView({
             behavior: "smooth"
           });
         }
