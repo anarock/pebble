@@ -47,8 +47,8 @@ exports[`Component: Tag snapshot 1`] = `
   className="emotion-0"
   style={
     Object {
-      "backgroundColor": "#DBF3E7",
-      "color": "#10AC60",
+      "backgroundColor": "#E8E8FF",
+      "color": "#6161FF",
     }
   }
 >
