@@ -5,10 +5,18 @@ import { colors } from "../../theme";
 import { cx } from "emotion";
 
 const Control: React.SFC<ControlProps> = props => {
-  const { checked, onChange, value, disabled, children, type } = props;
+  const {
+    checked,
+    onChange,
+    value,
+    disabled,
+    children,
+    type,
+    className
+  } = props;
   return (
     <div
-      className={controlStyle}
+      className={cx(controlStyle, className)}
       role={type}
       aria-disabled={disabled}
       aria-checked={checked}

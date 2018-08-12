@@ -185,7 +185,7 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
 
           {renderFooterElement(
             {
-              activeIndex: this.state.active,
+              selected: this.state.active,
               ...args
             },
             this.props

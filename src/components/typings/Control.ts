@@ -8,4 +8,5 @@ export interface ControlProps {
   disabled?: boolean;
   children?: (props: ControlProps) => React.ReactNode | React.ReactNodeArray;
   type: "radio" | "checkbox";
+  className?: string;
 }
