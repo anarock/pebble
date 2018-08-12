@@ -4,9 +4,7 @@ import { text, select } from "@storybook/addon-knobs";
 import Tag from "../src/components/Tag";
 import { colors } from "../src/theme";
 
-const _colors = Object.keys(colors).filter(
-  x => !["gray", "violet", "white"].includes(x)
-);
+const _colors = Object.keys(colors).filter(x => !["white"].includes(x));
 
 storiesOf("Tag", module)
   .add("simple", () => (

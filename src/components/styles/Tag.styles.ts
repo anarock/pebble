@@ -6,7 +6,7 @@ export const tagStyle = css({
   ...mixins.flexSpaceBetween,
   borderRadius: constants.borderRadius,
   padding: "0 15px",
-  height: 24,
+  height: 25,
   textTransform: "uppercase",
   alignItems: "center",
   justifyContent: "center",
@@ -16,10 +16,10 @@ export const tagStyle = css({
     paddingRight: 0
   },
   i: {
-    fontSize: 10,
-    marginLeft: 10,
+    fontSize: 7,
+    marginLeft: 5,
     height: "inherit",
-    padding: 7,
+    padding: "9px 10px",
     cursor: "pointer",
     position: "relative"
   }

@@ -53,7 +53,7 @@ export const colors: Colors = {
     light: "#E4F6F6"
   },
   coral: {
-    base: "#E4F6F6",
+    base: "#ED754B",
     light: "#FDEBE4"
   },
   jade: {

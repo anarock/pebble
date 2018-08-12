@@ -21,7 +21,7 @@ exports[`Component: Tag snapshot 1`] = `
   align-content: initial;
   border-radius: 3px;
   padding: 0 15px;
-  height: 24px;
+  height: 25px;
   text-transform: uppercase;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -35,10 +35,10 @@ exports[`Component: Tag snapshot 1`] = `
 }
 
 .emotion-0 i {
-  font-size: 10px;
-  margin-left: 10px;
+  font-size: 7px;
+  margin-left: 5px;
   height: inherit;
-  padding: 7px;
+  padding: 9px 10px;
   cursor: pointer;
   position: relative;
 }
@@ -47,7 +47,7 @@ exports[`Component: Tag snapshot 1`] = `
   className="emotion-0"
   style={
     Object {
-      "backgroundColor": "#40BD80",
+      "backgroundColor": "#DBF3E7",
       "color": "#10AC60",
     }
   }
@@ -78,7 +78,7 @@ exports[`Component: Tag snapshot 2`] = `
   align-content: initial;
   border-radius: 3px;
   padding: 0 15px;
-  height: 24px;
+  height: 25px;
   text-transform: uppercase;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -92,10 +92,10 @@ exports[`Component: Tag snapshot 2`] = `
 }
 
 .emotion-0 i {
-  font-size: 10px;
-  margin-left: 10px;
+  font-size: 7px;
+  margin-left: 5px;
   height: inherit;
-  padding: 7px;
+  padding: 9px 10px;
   cursor: pointer;
   position: relative;
 }
@@ -104,7 +104,7 @@ exports[`Component: Tag snapshot 2`] = `
   className="emotion-0 __pebble__tag__with__close"
   style={
     Object {
-      "backgroundColor": "#40BD80",
+      "backgroundColor": "#DBF3E7",
       "color": "#10AC60",
     }
   }
@@ -114,11 +114,6 @@ exports[`Component: Tag snapshot 2`] = `
   <i
     className="icon-close"
     onClick={[Function]}
-    style={
-      Object {
-        "borderLeft": "1px solid #E0E0E0",
-      }
-    }
   >
     <e
       background={true}
