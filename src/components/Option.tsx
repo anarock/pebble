@@ -8,13 +8,13 @@ import { colors, mixins } from "../theme";
 import { Component } from "react";
 
 class Option extends Component<OptionProps> {
-  static defaultProps = {
-    rightElement: ({ isSelected, multi }) => {
+  static defaultProps: Partial<OptionProps> = {
+    rightElement: ({ isSelected, multiSelect }) => {
       const iconClass = cx({
         "icon-checkbox-selected": isSelected,
         "icon-checkbox-unselected": !isSelected
       });
-      return multi ? (
+      return multiSelect ? (
         <i
           style={{
             color: isSelected ? colors.violet.base : colors.gray.light
@@ -30,7 +30,7 @@ class Option extends Component<OptionProps> {
       <Control
         {...this.props}
         checked={this.props.isSelected}
-        type={this.props.multi ? "checkbox" : "radio"}
+        type={this.props.multiSelect ? "checkbox" : "radio"}
       >
         {() => {
           const { label, isActive, isSelected, rightElement } = this.props;

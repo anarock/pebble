@@ -39,5 +39,6 @@ export const activeRow = css({
 });
 
 export const selectedRow = css({
-  color: colors.violet.base
+  color: colors.violet.base,
+  ...typography.normal.bold
 });

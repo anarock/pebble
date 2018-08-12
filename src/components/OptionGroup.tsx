@@ -67,9 +67,9 @@ export default class OptionGroup extends React.PureComponent<
   }
 
   handleChange = ({ value, checked }) => {
-    const { multi, onChange, selected } = this.props;
+    const { multiSelect, onChange, selected } = this.props;
 
-    if (multi) {
+    if (multiSelect) {
       // @ts-ignore
       onChange(getSelectedCheckboxes(value, selected), this.props);
     } else {
@@ -78,9 +78,9 @@ export default class OptionGroup extends React.PureComponent<
   };
 
   private isSelected = value => {
-    const { multi, selected } = this.props;
+    const { multiSelect, selected } = this.props;
     // @ts-ignore
-    return multi ? selected.indexOf(value) >= 0 : selected === value;
+    return multiSelect ? selected.indexOf(value) >= 0 : selected === value;
   };
 
   render() {
@@ -92,7 +92,7 @@ export default class OptionGroup extends React.PureComponent<
           onChange: this.handleChange,
           isActive: this.state.selected === i,
           isSelected: this.isSelected(option.props.value),
-          multi: this.props.multi,
+          multiSelect: this.props.multiSelect,
           // @ts-ignore
           ref: this[`option-ref-${i}`]
         });

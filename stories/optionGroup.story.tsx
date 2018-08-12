@@ -13,7 +13,7 @@ storiesOf("OptionGroup", module).add(
           value
         })
       }
-      multi
+      multiSelect
     >
       <Option value="option-1" label="I am an option" />
       <Option value="option-2" label="I am an option" />

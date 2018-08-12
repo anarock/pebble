@@ -6,6 +6,6 @@ export interface OptionProps
   extends Omit<Omit<ControlProps, "checked">, "type"> {
   isActive?: boolean;
   isSelected?: boolean;
-  multi?: boolean;
+  multiSelect?: boolean;
   rightElement?: (props: OptionProps) => React.ReactNode;
 }

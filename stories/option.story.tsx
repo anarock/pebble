@@ -12,7 +12,7 @@ storiesOf("Option", module).add(
         onChange={() => store.set({ checked: !store.state.checked })}
         value="option"
         label="I am an option"
-        multi
+        multiSelect
       />
     </div>
   ))

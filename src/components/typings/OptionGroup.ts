@@ -5,7 +5,7 @@ type Value = string | number | (string | number)[];
 export interface OptionGroupProps {
   onChange: (value: Value, props: OptionGroupProps) => void;
   selected?: Value;
-  multi?: boolean;
+  multiSelect?: boolean;
   children: React.ReactNodeArray;
 }
 
