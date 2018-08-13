@@ -21,8 +21,13 @@ export default class OptionGroup extends React.PureComponent<
     const { selected } = this.state;
 
     if (e.which === 13) {
-      // @ts-ignore
-      this.handleChange(children[selected].props);
+      const selectedOption: Partial<React.ReactElement<OptionProps>> =
+        children[selected];
+
+      this.handleChange({
+        value: selectedOption.props.value,
+        checked: !selectedOption.props.isSelected
+      });
     }
 
     this.setState(

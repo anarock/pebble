@@ -2,10 +2,10 @@ import * as React from "react";
 import debounce from "just-debounce-it";
 import { TypeaheadProps, TypeaheadState } from "./typings/Typeahead";
 import { cx } from "emotion";
-import Options from "./Options";
-import { Transition, animated } from "react-spring";
 import Input from "./Input";
 import { optionsWrapper, wrapper } from "./styles/TypeAhead.styles";
+import OptionGroup from "./OptionGroup";
+import OutsideClick from "./OutsideClick";
 
 class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   debouncedChange: () => void;
@@ -22,9 +22,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
         errorMessage={props.errorMessage}
         loading={props.loading}
       />
-    ),
-    valueExtractor: option => option.label || option.name,
-    keyExtractor: option => option.id
+    )
   };
 
   constructor(props) {
@@ -35,36 +33,8 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
   state: TypeaheadState = {
     value: this.props.initialValue,
-    showSuggestions: false
+    showSuggestions: true
   };
-
-  private handleMousePress = (e: MouseEvent) => {
-    if (!this.typeAheadRef.current.contains(e.target as HTMLElement)) {
-      this.setState({
-        showSuggestions: false
-      });
-    }
-  };
-
-  private addMouseClickListener = () =>
-    document.addEventListener("mousedown", this.handleMousePress);
-
-  private removeMouseClickListener = () =>
-    document.removeEventListener("mousedown", this.handleMousePress);
-
-  componentDidUpdate(_prevProps, prevState: TypeaheadState) {
-    if (prevState.showSuggestions === this.state.showSuggestions) return null;
-
-    if (this.state.showSuggestions) {
-      this.addMouseClickListener();
-    } else {
-      this.removeMouseClickListener();
-    }
-  }
-
-  componentWillUnmount() {
-    this.removeMouseClickListener();
-  }
 
   onChange = () => {
     this.props.onChange(this.state.value, this.props);
@@ -79,70 +49,52 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
     );
   };
 
-  private onSelect = (suggestion: any) => {
-    const { valueExtractor, onSelect } = this.props;
-    this.setState(
-      {
-        value: valueExtractor(suggestion),
-        showSuggestions: false
-      },
-      () => {
-        onSelect(suggestion);
-      }
-    );
-  };
-
   private onFocus = () => {
     this.setState({
       showSuggestions: true
     });
   };
 
+  private onSelect = _value => {
+    this.props.onSelect(_value, this.props);
+
+    this.setState({
+      showSuggestions: false,
+      value: this.props.valueExtractor(_value)
+    });
+  };
+
   render() {
-    const {
-      className,
-      searchBox,
-      rowRenderElement,
-      suggestions,
-      dropdownClassName,
-      keyExtractor,
-      selected
-    } = this.props;
+    const { className, searchBox, dropdownClassName, children } = this.props;
+
+    const { showSuggestions, value } = this.state;
 
     return (
-      <div className={cx(wrapper, className)} ref={this.typeAheadRef}>
-        {searchBox(
-          {
-            registerChange: this.registerChange,
-            onFocus: this.onFocus,
-            value: this.state.value
-          },
-          this.props
-        )}
+      <OutsideClick
+        onOutsideClick={() =>
+          this.setState({
+            showSuggestions: false
+          })
+        }
+        disabled={!showSuggestions}
+      >
+        <div className={cx(wrapper, className)} ref={this.typeAheadRef}>
+          {searchBox(
+            {
+              registerChange: this.registerChange,
+              onFocus: this.onFocus,
+              value
+            },
+            this.props
+          )}
 
-        <Transition
-          native
-          from={{ opacity: 0, transform: "translateY(10px)" }}
-          enter={{ opacity: 1, transform: "translateY(0)" }}
-          leave={{ opacity: 0, transform: "translateY(10px)" }}
-        >
-          {this.state.showSuggestions &&
-            (styles => (
-              <animated.div
-                style={styles}
-                className={cx(optionsWrapper, dropdownClassName)}
-              >
-                <Options
-                  rowRenderElement={rowRenderElement}
-                  onSelect={this.onSelect}
-                  options={suggestions}
-                  keyExtractor={keyExtractor}
-                  selected={selected}
-                />
-              </animated.div>
-            ))}
-        </Transition>
-      </div>
+          {showSuggestions && (
+            <div className={cx(optionsWrapper, dropdownClassName)}>
+              <OptionGroup onChange={this.onSelect}>{children}</OptionGroup>
+            </div>
+          )}
+        </div>
+      </OutsideClick>
     );
   }
 }
