@@ -15,23 +15,17 @@ export interface TypeaheadProps {
     props: TypeaheadProps
   ) => JSX.Element;
   debounceTime?: number;
-  rowRenderElement?: (
-    item: any,
-    index: number,
-    selected: boolean
-  ) => JSX.Element;
   onChange: (text: string, props: TypeaheadProps) => void;
-  onSelect: (suggestion: any) => void;
-  suggestions?: any[];
-  valueExtractor?: (suggestion: any) => string;
+  onSelect: (value, props: TypeaheadProps) => void;
   dropdownClassName?: string;
   initialValue?: string;
   disabled?: boolean;
   errorMessage?: string;
   placeholder: string;
-  keyExtractor?: (item: any) => number | string;
   loading?: boolean;
   selected?: number | string;
+  children: React.ReactNodeArray;
+  valueExtractor: (value: string | number) => string;
 }
 
 export interface TypeaheadState {
