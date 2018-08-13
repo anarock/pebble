@@ -8,32 +8,23 @@ import {
   selectInputStyle,
   selectWrapper
 } from "./styles/Select.styles";
-import Options from "./Options";
 import DropDown from "./DropDown";
 import Input from "./Input";
+import OptionGroup from "./OptionGroup";
 
 function noop() {}
 
-const Select: React.SFC<SelectProps> = ({
-  className,
-  title,
-  placeholder,
-  required,
-  errorMessage,
-  ...selectProps
-}) => {
+const Select: React.SFC<SelectProps> = props => {
   const {
-    keyExtractor,
-    rowRenderElement,
-    options,
+    className,
+    placeholder,
+    required,
+    errorMessage,
+    onSelect,
+    value,
     selected,
-    onSelect
-  } = selectProps;
-
-  const selectedLabel = selected
-    ? rowRenderElement(options.find(x => keyExtractor(x) === selected))
-    : placeholder;
-
+    children
+  } = props;
   return (
     <div className={cx(selectWrapper, className)}>
       <DropDown
@@ -46,9 +37,8 @@ const Select: React.SFC<SelectProps> = ({
             <div className={inputWrapper} onClick={toggleDropdown}>
               <Input
                 className={selectInputStyle}
-                placeholder={title}
-                value={selectedLabel && selectedLabel.toString()}
-                fixLabelAtTop
+                placeholder={placeholder}
+                value={value}
                 onChange={noop}
                 required={required}
                 message={isOpen ? " " : ""}
@@ -60,27 +50,19 @@ const Select: React.SFC<SelectProps> = ({
         }}
       >
         {({ toggle }) => (
-          <Options
-            {...selectProps}
-            width={"100%"}
-            keyExtractor={keyExtractor}
-            rowRenderElement={rowRenderElement}
-            options={options}
+          <OptionGroup
             selected={selected}
-            onSelect={option => {
-              onSelect(option);
+            onChange={_value => {
+              onSelect(_value, props);
               toggle();
             }}
-          />
+          >
+            {children}
+          </OptionGroup>
         )}
       </DropDown>
     </div>
   );
-};
-
-Select.defaultProps = {
-  keyExtractor: item => item.id,
-  rowRenderElement: item => item.label || item.name
 };
 
 export default Select;

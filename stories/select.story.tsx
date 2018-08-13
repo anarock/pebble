@@ -2,21 +2,16 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Select from "../src/components/Select";
 import { action } from "@storybook/addon-actions";
-
-const options = new Array(7)
-  .fill({
-    label: "Lorem ipsum dolor"
-  })
-  .map((x, i) => ({ ...x, id: i }));
+import Option from "../src/components/Option";
 
 storiesOf("Select", module).add("default", () => (
   <Select
-    rowRenderElement={x => x.label}
-    keyExtractor={x => x.id}
-    options={options}
     onSelect={action("onSelect")}
-    title="hello"
     placeholder="Choose Option"
-    selected={1}
-  />
+    selected={"option-2"}
+  >
+    {new Array(5).fill(1).map((_x, i) => (
+      <Option value={`option-${i + 1}`} label="I am an option" />
+    ))}
+  </Select>
 ));

@@ -4,7 +4,6 @@ import Controls from "./Controls";
 import DropDown from "./DropDown";
 import Input from "./Input";
 import Modal from "./Modal";
-import Options from "./Options";
 import Search from "./Search";
 import Select from "./Select";
 import SideBar from "./Sidebar";
@@ -32,7 +31,6 @@ export {
   DropDown,
   Input,
   Modal,
-  Options,
   Search,
   Select,
   Slider,
