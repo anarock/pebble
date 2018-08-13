@@ -5,6 +5,7 @@ import { getSelectedCheckboxes } from "./utils/getSelectedCheckboxes";
 import * as ReactDOM from "react-dom";
 import { OptionGroupProps, OptionGroupState } from "./typings/OptionGroup";
 import scrollIntoView from "scroll-into-view-if-needed";
+import { cx } from "emotion";
 
 export default class OptionGroup extends React.PureComponent<
   OptionGroupProps,
@@ -21,12 +22,13 @@ export default class OptionGroup extends React.PureComponent<
     const { selected } = this.state;
 
     if (e.which === 13) {
-      const selectedOption: Partial<React.ReactElement<OptionProps>> =
-        children[selected];
+      const {
+        props: { value, isSelected }
+      }: Partial<React.ReactElement<OptionProps>> = children[selected];
 
       this.handleChange({
-        value: selectedOption.props.value,
-        checked: !selectedOption.props.isSelected
+        value,
+        checked: !isSelected
       });
     }
 
@@ -75,8 +77,10 @@ export default class OptionGroup extends React.PureComponent<
     const { multiSelect, onChange, selected } = this.props;
 
     if (multiSelect) {
-      // @ts-ignore
-      onChange(getSelectedCheckboxes(value, selected), this.props);
+      onChange(
+        getSelectedCheckboxes(value, selected as (number | string)[]),
+        this.props
+      );
     } else {
       onChange(checked ? value : undefined, this.props);
     }
@@ -84,8 +88,9 @@ export default class OptionGroup extends React.PureComponent<
 
   private isSelected = value => {
     const { multiSelect, selected } = this.props;
-    // @ts-ignore
-    return multiSelect ? selected.indexOf(value) >= 0 : selected === value;
+    return multiSelect
+      ? selected && (selected as (number | string)[]).indexOf(value) >= 0
+      : selected === value;
   };
 
   render() {
@@ -105,7 +110,10 @@ export default class OptionGroup extends React.PureComponent<
     );
 
     return (
-      <div ref={this.optionRef} className={optionsWrapper}>
+      <div
+        ref={this.optionRef}
+        className={cx(optionsWrapper, this.props.className)}
+      >
         {_children}
       </div>
     );

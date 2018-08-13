@@ -13,7 +13,7 @@ const style = css({
 });
 
 storiesOf("Modal", module).add("simple", () => (
-  <Modal visible={boolean("Visible", true)}>
+  <Modal visible={boolean("Visible", false)}>
     <div className={style} />
   </Modal>
 ));

@@ -7,6 +7,7 @@ export interface OptionGroupProps {
   selected?: Value;
   multiSelect?: boolean;
   children: React.ReactNodeArray;
+  className?: string;
 }
 
 export interface OptionGroupState {
