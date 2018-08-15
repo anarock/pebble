@@ -1,9 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import Popper from "../src/components/Popper";
-import Button from "../src/components/Button";
-import Option from "../src/components/Option";
-import OptionGroup from "../src/components/OptionGroup";
+import { Popper, Button, OptionGroupRadio, Option } from "../src";
 
 storiesOf("Popper", module).add("simple", () => (
   <Popper
@@ -20,13 +17,13 @@ storiesOf("Popper", module).add("simple", () => (
     }}
   >
     {() => (
-      <OptionGroup onChange={() => {}} multiSelect>
+      <OptionGroupRadio onChange={() => {}}>
         <Option value="option-1" label="I am an option" />
         <Option value="option-2" label="I am an option" />
         <Option value="option-3" label="I am an option" />
         <Option value="option-4" label="I am an option" />
         <Option value="option-8" label="I am an option" />
-      </OptionGroup>
+      </OptionGroupRadio>
     )}
   </Popper>
 ));

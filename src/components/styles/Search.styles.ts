@@ -9,7 +9,8 @@ export const searchWrapperStyle = css({
   alignItems: "center",
   height: 40,
   "> i": {
-    marginRight: 10
+    marginRight: 10,
+    fontSize: 12
   },
   "&.__pebble__search__small": {
     backgroundColor: colors.gray.lightest

@@ -8,7 +8,13 @@ export interface SelectProps {
   required?: boolean;
   errorMessage?: string;
   children: React.ReactNodeArray;
-  onSelect: (value: Selected, props: SelectProps) => void;
   value?: string;
   selected?: Selected;
+  multiSelect?: boolean;
+  onChange: (value: Selected, props: SelectProps) => void;
+  onApply?: (value: Selected, props: SelectProps) => void;
+  onClear?: () => void;
+  searchBox?: boolean;
+  searchBoxPlaceholder?: string;
+  onSearchBoxQueryChange?: (query: string) => void;
 }

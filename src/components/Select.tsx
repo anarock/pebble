@@ -10,7 +10,8 @@ import {
 } from "./styles/Select.styles";
 import DropDown from "./DropDown";
 import Input from "./Input";
-import OptionGroup from "./OptionGroup";
+import OptionGroupCheckBox from "./OptionGroupCheckBox";
+import OptionGroupRadio from "./OptionGroupRadio";
 
 function noop() {}
 
@@ -20,11 +21,20 @@ const Select: React.SFC<SelectProps> = props => {
     placeholder,
     required,
     errorMessage,
-    onSelect,
+    onChange,
     value,
     selected,
-    children
+    children,
+    multiSelect,
+    onClear,
+    onApply,
+    searchBox,
+    searchBoxPlaceholder,
+    onSearchBoxQueryChange
   } = props;
+
+  const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
+
   return (
     <div className={cx(selectWrapper, className)}>
       <DropDown
@@ -43,6 +53,7 @@ const Select: React.SFC<SelectProps> = props => {
                 required={required}
                 message={isOpen ? " " : ""}
                 errorMessage={errorMessage}
+                readOnly
               />
               <i className={chevron} />
             </div>
@@ -50,15 +61,30 @@ const Select: React.SFC<SelectProps> = props => {
         }}
       >
         {({ toggle }) => (
-          <OptionGroup
-            selected={selected}
-            onChange={_value => {
-              onSelect(_value, props);
-              toggle();
-            }}
-          >
-            {children}
-          </OptionGroup>
+          <React.Fragment>
+            <OptionGroup
+              selected={selected}
+              onChange={_value => {
+                onChange(_value, props);
+                if (!multiSelect) {
+                  toggle();
+                }
+              }}
+              onApply={_value => {
+                onApply(_value, props);
+                toggle();
+              }}
+              onClear={() => {
+                onClear();
+                toggle();
+              }}
+              searchBox={searchBox}
+              searchBoxPlaceholder={searchBoxPlaceholder}
+              onSearchBoxQueryChange={onSearchBoxQueryChange}
+            >
+              {children}
+            </OptionGroup>
+          </React.Fragment>
         )}
       </DropDown>
     </div>

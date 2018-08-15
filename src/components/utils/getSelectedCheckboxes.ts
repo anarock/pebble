@@ -1,7 +1,9 @@
+import * as React from "react";
+
 export function getSelectedCheckboxes(
-  changedValue: number | string,
-  prevSelected?: (number | string)[]
-) {
+  changedValue: React.ReactText,
+  prevSelected?: React.ReactText[]
+): React.ReactText[] {
   const _selected = prevSelected || [];
   const cloned = _selected.slice(0);
   const index = _selected.findIndex(datum => datum === changedValue);

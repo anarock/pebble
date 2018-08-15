@@ -4,8 +4,8 @@ import { TypeaheadProps, TypeaheadState } from "./typings/Typeahead";
 import { cx } from "emotion";
 import Input from "./Input";
 import { optionsWrapper, wrapper } from "./styles/TypeAhead.styles";
-import OptionGroup from "./OptionGroup";
 import OutsideClick from "./OutsideClick";
+import OptionGroupRadio from "./OptionGroupRadio";
 
 class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   debouncedChange: () => void;
@@ -90,7 +90,9 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
           {showSuggestions && (
             <div className={cx(optionsWrapper, dropdownClassName)}>
-              <OptionGroup onChange={this.onSelect}>{children}</OptionGroup>
+              <OptionGroupRadio onChange={this.onSelect}>
+                {children}
+              </OptionGroupRadio>
             </div>
           )}
         </div>
