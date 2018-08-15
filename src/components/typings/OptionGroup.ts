@@ -4,7 +4,7 @@ export interface OptionGroupProps_ {
   children: React.ReactNodeArray;
   className?: string;
   searchBox?: boolean;
-  onSearchBoxQueryChange?: (query: string) => any;
+  onSearchBoxQueryChange?: (query: string) => void;
   searchBoxPlaceholder?: string;
   isSelected: (value: React.ReactText) => boolean;
   handleChange: (args: { value: React.ReactText; checked: boolean }) => void;

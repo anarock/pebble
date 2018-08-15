@@ -27,7 +27,10 @@ const Select: React.SFC<SelectProps> = props => {
     children,
     multiSelect,
     onClear,
-    onApply
+    onApply,
+    searchBox,
+    searchBoxPlaceholder,
+    onSearchBoxQueryChange
   } = props;
 
   const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
@@ -50,6 +53,7 @@ const Select: React.SFC<SelectProps> = props => {
                 required={required}
                 message={isOpen ? " " : ""}
                 errorMessage={errorMessage}
+                readOnly
               />
               <i className={chevron} />
             </div>
@@ -74,6 +78,9 @@ const Select: React.SFC<SelectProps> = props => {
                 onClear();
                 toggle();
               }}
+              searchBox={searchBox}
+              searchBoxPlaceholder={searchBoxPlaceholder}
+              onSearchBoxQueryChange={onSearchBoxQueryChange}
             >
               {children}
             </OptionGroup>

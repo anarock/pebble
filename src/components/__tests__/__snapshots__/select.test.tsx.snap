@@ -181,13 +181,13 @@ exports[`Component: Select multi-select: snapshot 1`] = `
           </label>
           <input
             aria-label="Choose Option"
-            className="emotion-1"
+            className="emotion-1 _pebble_input_read_only"
             onChange={[Function]}
-            readOnly={false}
+            readOnly={true}
             value=""
           />
           <div
-            className="emotion-2"
+            className="emotion-2 _pebble_input_highlight_read_only"
             style={
               Object {
                 "backgroundColor": "#6161FF",
@@ -386,13 +386,13 @@ exports[`Component: Select single-select: snapshot 1`] = `
           </label>
           <input
             aria-label="Choose Option"
-            className="emotion-1"
+            className="emotion-1 _pebble_input_read_only"
             onChange={[Function]}
-            readOnly={false}
+            readOnly={true}
             value=""
           />
           <div
-            className="emotion-2"
+            className="emotion-2 _pebble_input_highlight_read_only"
             style={
               Object {
                 "backgroundColor": "#6161FF",
@@ -410,7 +410,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
 </div>
 `;
 
-exports[`Component: Select snapshot 1`] = `
+exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
 .emotion-6 {
   margin-bottom: 20px;
 }
@@ -591,13 +591,13 @@ exports[`Component: Select snapshot 1`] = `
           </label>
           <input
             aria-label="Choose Option"
-            className="emotion-1"
+            className="emotion-1 _pebble_input_read_only"
             onChange={[Function]}
-            readOnly={false}
+            readOnly={true}
             value=""
           />
           <div
-            className="emotion-2"
+            className="emotion-2 _pebble_input_highlight_read_only"
             style={
               Object {
                 "backgroundColor": "#6161FF",

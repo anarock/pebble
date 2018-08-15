@@ -14,4 +14,7 @@ export interface SelectProps {
   onChange: (value: Selected, props: SelectProps) => void;
   onApply?: (value: Selected, props: SelectProps) => void;
   onClear?: () => void;
+  searchBox?: boolean;
+  searchBoxPlaceholder?: string;
+  onSearchBoxQueryChange?: (query: string) => void;
 }

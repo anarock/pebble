@@ -4,9 +4,10 @@ import Option from "../Option";
 import Select from "../Select";
 import { mount } from "enzyme";
 import sinon from "sinon";
-import Input from "../Input";
 import { SelectProps } from "../typings/Select";
 import Button from "../Button";
+import Input from "../Input";
+import Search from "../Search";
 
 function getComponent(spy = () => {}, props: Partial<SelectProps> = {}) {
   return (
@@ -35,6 +36,17 @@ describe("Component: Select", () => {
       getComponent(undefined, {
         multiSelect: true,
         selected: []
+      })
+    );
+    const tree = select.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("sinle-select with searchbox: snapshot", () => {
+    const select = renderer.create(
+      getComponent(undefined, {
+        searchBox: true,
+        searchBoxPlaceholder: "Search"
       })
     );
     const tree = select.toJSON();
@@ -129,5 +141,28 @@ describe("Component: Select", () => {
 
     // ensure the dropdown is closed
     expect(select.find(Option)).toHaveLength(0);
+  });
+
+  test("single select: should trigger onChange with correct onChange", () => {
+    const spy = sinon.spy();
+    const queryChangeSpy = sinon.spy();
+    const select = mount(
+      getComponent(spy, {
+        searchBox: true,
+        searchBoxPlaceholder: "Search",
+        onSearchBoxQueryChange: queryChangeSpy
+      })
+    );
+    select.find(Input).simulate("click");
+    select
+      .find(Search)
+      .find("input")
+      .simulate("change", {
+        target: {
+          value: "hello"
+        }
+      });
+
+    expect(queryChangeSpy.calledWith("hello")).toBeTruthy();
   });
 });

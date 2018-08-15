@@ -32,4 +32,24 @@ storiesOf("Select", module)
         />
       ))}
     </Select>
+  ))
+  .add("Multi Select with searchbox", () => (
+    <Select
+      onChange={action("onSelect")}
+      placeholder="Choose Option"
+      multiSelect
+      searchBox
+      searchBoxPlaceholder="Search"
+      onSearchBoxQueryChange={action("queryChange")}
+      onApply={action("onApply")}
+      onClear={action("onClear")}
+    >
+      {new Array(20).fill(1).map((_x, i) => (
+        <Option
+          key={i + 1}
+          value={`option-${i + 1}`}
+          label={`I am an option-${i + 1}`}
+        />
+      ))}
+    </Select>
   ));
