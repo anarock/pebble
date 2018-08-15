@@ -15,17 +15,14 @@ export const optionsWrapper = css({
 
 export const searchBoxWrapper = css({
   padding: 20,
-  paddingBottom: 0,
   boxShadow: "none",
-  transition: "all 100ms ease-out",
+  transition: "all 100ms linear",
   position: "relative",
   zIndex: 10,
-  willChange: "padding",
-  height: 80
+  willChange: "padding"
 });
 
 export const searchBoxScrolledStyle = css({
-  height: 60,
   boxShadow: constants.boxShadow.base,
   padding: 10
 });

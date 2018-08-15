@@ -16,7 +16,11 @@ storiesOf("Typeahead", module).add("simple", () => (
     valueExtractor={value => value && value.toString()}
   >
     {new Array(5).fill(1).map((_x, i) => (
-      <Option value={`option-${i + 1}`} label="I am an option" />
+      <Option
+        key={i + 1}
+        value={`option-${i + 1}`}
+        label={`I am an option - ${i + 1}`}
+      />
     ))}
   </TypeAhead>
 ));
