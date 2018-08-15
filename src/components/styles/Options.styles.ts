@@ -1,18 +1,5 @@
-import { colors, constants, mixins, typography } from "../../theme";
+import { colors, mixins, typography } from "../../theme";
 import { css } from "emotion";
-
-export const optionsWrapper = css({
-  backgroundColor: colors.white.base,
-  borderRadius: constants.borderRadius,
-  boxShadow: constants.boxShadow.xElevated,
-  position: "relative",
-  width: "inherit",
-  zIndex: 9,
-  maxHeight: 352,
-  minWidth: 200,
-  overflowY: "auto",
-  padding: "20px 1px"
-});
 
 export const rowWrapper = css({
   ...typography.normal.regular,

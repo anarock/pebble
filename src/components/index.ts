@@ -22,7 +22,8 @@ import RadioGroup from "./RadioGroup";
 import Checkbox from "./Checkbox";
 import CheckboxGroup from "./CheckboxGroup";
 import Option from "./Option";
-import OptionGroup from "./OptionGroup";
+import OptionGroupRadio from "./OptionGroupRadio";
+import OptionGroupCheckBox from "./OptionGroupCheckBox";
 
 export {
   Button,
@@ -49,5 +50,6 @@ export {
   Checkbox,
   CheckboxGroup,
   Option,
-  OptionGroup
+  OptionGroupRadio,
+  OptionGroupCheckBox
 };

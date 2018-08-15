@@ -11,4 +11,5 @@ export interface SelectProps {
   onSelect: (value: Selected, props: SelectProps) => void;
   value?: string;
   selected?: Selected;
+  multiSelect?: boolean;
 }

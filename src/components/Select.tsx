@@ -10,7 +10,8 @@ import {
 } from "./styles/Select.styles";
 import DropDown from "./DropDown";
 import Input from "./Input";
-import OptionGroup from "./OptionGroup";
+import OptionGroupCheckBox from "./OptionGroupCheckBox";
+import OptionGroupRadio from "./OptionGroupRadio";
 
 function noop() {}
 
@@ -23,8 +24,12 @@ const Select: React.SFC<SelectProps> = props => {
     onSelect,
     value,
     selected,
-    children
+    children,
+    multiSelect
   } = props;
+
+  const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
+
   return (
     <div className={cx(selectWrapper, className)}>
       <DropDown
@@ -50,15 +55,17 @@ const Select: React.SFC<SelectProps> = props => {
         }}
       >
         {({ toggle }) => (
-          <OptionGroup
-            selected={selected}
-            onChange={_value => {
-              onSelect(_value, props);
-              toggle();
-            }}
-          >
-            {children}
-          </OptionGroup>
+          <React.Fragment>
+            <OptionGroup
+              selected={selected}
+              onChange={_value => {
+                onSelect(_value, props);
+                toggle();
+              }}
+            >
+              {children}
+            </OptionGroup>
+          </React.Fragment>
         )}
       </DropDown>
     </div>

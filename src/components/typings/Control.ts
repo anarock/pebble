@@ -1,8 +1,8 @@
 import * as React from "react";
 
 export interface ControlProps {
-  onChange?: (args: { value: number | string; checked: boolean }) => void;
-  value: number | string;
+  onChange?: (args: { value: React.ReactText; checked: boolean }) => void;
+  value: React.ReactText;
   label: string;
   checked?: boolean;
   disabled?: boolean;

@@ -13,7 +13,7 @@ storiesOf("Typeahead", module).add("simple", () => (
     placeholder="H"
     onChange={action("change")}
     onSelect={action("select")}
-    valueExtractor={value => value.toString()}
+    valueExtractor={value => value && value.toString()}
   >
     {new Array(5).fill(1).map((_x, i) => (
       <Option value={`option-${i + 1}`} label="I am an option" />
