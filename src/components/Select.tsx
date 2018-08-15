@@ -21,11 +21,13 @@ const Select: React.SFC<SelectProps> = props => {
     placeholder,
     required,
     errorMessage,
-    onSelect,
+    onChange,
     value,
     selected,
     children,
-    multiSelect
+    multiSelect,
+    onClear,
+    onApply
   } = props;
 
   const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
@@ -59,7 +61,17 @@ const Select: React.SFC<SelectProps> = props => {
             <OptionGroup
               selected={selected}
               onChange={_value => {
-                onSelect(_value, props);
+                onChange(_value, props);
+                if (!multiSelect) {
+                  toggle();
+                }
+              }}
+              onApply={_value => {
+                onApply(_value, props);
+                toggle();
+              }}
+              onClear={() => {
+                onClear();
                 toggle();
               }}
             >
