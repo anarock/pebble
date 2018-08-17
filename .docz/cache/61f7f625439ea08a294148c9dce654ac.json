@@ -1,0 +1,60 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/utils/analytics/ga.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/utils/analytics/ga.ts",
+      "mtime": 1533059852355
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.initGoogleAnalytics = initGoogleAnalytics;\n\nvar _isInBrowser = require(\"is-in-browser\");\n\nvar _isInBrowser2 = _interopRequireDefault(_isInBrowser);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nfunction initGoogleAnalytics(gaId) {\n  if (_isInBrowser2.default) {\n    (function (i, s, o, g, r, a, m) {\n      i[\"GoogleAnalyticsObject\"] = r;\n      i[r] = i[r] || function () {\n        (i[r].q = i[r].q || []).push(arguments);\n      }, i[r].l = 1 * new Date();\n      a = s.createElement(o), m = s.getElementsByTagName(o)[0];\n      a.async = 1;\n      a.src = g;\n      m.parentNode.insertBefore(a, m);\n    })(window, document, \"script\", \"https://www.google-analytics.com/analytics.js\", \"ga\"); // @ts-ignore\n\n\n    window.ga(\"create\", gaId, \"auto\"); // @ts-ignore\n\n    window.ga(\"send\", \"pageview\");\n  }\n}\n\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(initGoogleAnalytics, \"initGoogleAnalytics\", \"/Users/ritz078/projects/pebble/src/utils/analytics/ga.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/utils/analytics/ga.ts"],
+      "names": [
+        "initGoogleAnalytics",
+        "gaId",
+        "isBrowser",
+        "i",
+        "s",
+        "o",
+        "g",
+        "r",
+        "a",
+        "m",
+        "q",
+        "push",
+        "arguments",
+        "l",
+        "Date",
+        "createElement",
+        "getElementsByTagName",
+        "async",
+        "src",
+        "parentNode",
+        "insertBefore",
+        "window",
+        "document",
+        "ga"
+      ],
+      "mappings": ";;;;;QAEgBA,mB,GAAAA,mB;;AAFhB;;;;;;;;;;;;AAEO,SAASA,mBAAT,CAA6BC,IAA7B,EAA2C;AAChD,MAAIC,qBAAJ,EAAe;AACb,KAAC,UAASC,CAAT,EAAYC,CAAZ,EAAeC,CAAf,EAAkBC,CAAlB,EAAqBC,CAArB,EAAwBC,CAAxB,EAA2BC,CAA3B,EAA8B;AAC7BN,MAAAA,CAAC,CAAC,uBAAD,CAAD,GAA6BI,CAA7B;AACCJ,MAAAA,CAAC,CAACI,CAAD,CAAD,GACCJ,CAAC,CAACI,CAAD,CAAD,IACA,YAAW;AACT,SAACJ,CAAC,CAACI,CAAD,CAAD,CAAKG,CAAL,GAASP,CAAC,CAACI,CAAD,CAAD,CAAKG,CAAL,IAAU,EAApB,EAAwBC,IAAxB,CAA6BC,SAA7B;AACD,OAJH,EAKGT,CAAC,CAACI,CAAD,CAAD,CAAKM,CAAL,GAAS,IAAK,IAAIC,IAAJ,EALjB;AAMCN,MAAAA,CAAC,GAAGJ,CAAC,CAACW,aAAF,CAAgBV,CAAhB,CAAL,EAA2BI,CAAC,GAAGL,CAAC,CAACY,oBAAF,CAAuBX,CAAvB,EAA0B,CAA1B,CAA/B;AACAG,MAAAA,CAAC,CAACS,KAAF,GAAU,CAAV;AACAT,MAAAA,CAAC,CAACU,GAAF,GAAQZ,CAAR;AACAG,MAAAA,CAAC,CAACU,UAAF,CAAaC,YAAb,CAA0BZ,CAA1B,EAA6BC,CAA7B;AACD,KAZD,EAaEY,MAbF,EAcEC,QAdF,EAeE,QAfF,EAgBE,+CAhBF,EAiBE,IAjBF,EADa,CAqBb;;;AACAD,IAAAA,MAAM,CAACE,EAAP,CAAU,QAAV,EAAoBtB,IAApB,EAA0B,MAA1B,EAtBa,CAuBb;;AACAoB,IAAAA,MAAM,CAACE,EAAP,CAAU,MAAV,EAAkB,UAAlB;AACD;AACF;;;;;;;;;;;;;0BA3BevB,mB",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import isBrowser from \"is-in-browser\";\n\nexport function initGoogleAnalytics(gaId: string) {\n  if (isBrowser) {\n    (function(i, s, o, g, r, a, m) {\n      i[\"GoogleAnalyticsObject\"] = r;\n      (i[r] =\n        i[r] ||\n        function() {\n          (i[r].q = i[r].q || []).push(arguments);\n        }),\n        (i[r].l = 1 * (new Date() as any));\n      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);\n      a.async = 1;\n      a.src = g;\n      m.parentNode.insertBefore(a, m);\n    })(\n      window,\n      document,\n      \"script\",\n      \"https://www.google-analytics.com/analytics.js\",\n      \"ga\"\n    );\n\n    // @ts-ignore\n    window.ga(\"create\", gaId, \"auto\");\n    // @ts-ignore\n    window.ga(\"send\", \"pageview\");\n  }\n}\n"
+      ]
+    }
+  ]
+}

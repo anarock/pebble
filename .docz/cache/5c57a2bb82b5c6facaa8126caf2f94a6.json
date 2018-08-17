@@ -1,0 +1,50 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/components/styles/Slider.styles.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/components/styles/Slider.styles.ts",
+      "mtime": 1533463818089
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.sliderHeader = undefined;\n\nvar _templateObject = /*#__PURE__*/ _taggedTemplateLiteral([\"\\n.rheostat {\\n  overflow: visible;\\n}\\n\\n.rheostat-background {\\n  background-color: \", \";\\n  position: relative;\\n  border-radius: 2px;\\n  overflow: hidden;\\n \\theight: 4px;\\n  top: 0;\\n  width: 100%;\\n}\\n\\n.rheostat-progress {\\n  background-color: \", \";\\n  position: absolute;\\n  height: 4px;\\n  border-radius: 2px;\\n  top: 0;\\n}\\n\\n.rheostat-handle {\\n  background-color: \", \";\\n  border-radius: 50%;\\n  height: 20px;\\n  outline: none;\\n  z-index: 2;\\n  width: 20px;\\n  margin-left: -10px;\\n  top: -8px;\\n  border: 0;\\n  cursor: pointer;\\n  box-shadow: \", \";\\n}\\n\\n.__pebble__slider__large .rheostat-handle {\\n\\twidth: 24px;\\n\\theight: 24px;\\n\\tmargin-left: -12px;\\n\\ttop: -10px;\\n}\\n\\n.rheostat-handle:hover {\\n\\tbackground-color: \", \";\\n}\\n\\n.__pebble__slider__disabled .rheostat-handle {\\n\\tbackground-color: \", \";\\n\\tcursor: inherit;\\n}\\n\\n.rheostat-horizontal {\\n  height: 4px;\\n}\\n\"]);\n\nvar _emotion = require(\"emotion\");\n\nvar _theme = require(\"../../theme\");\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nfunction _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }\n\n(0, _emotion.injectGlobal)(_templateObject, _theme.colors.violet.lightest, _theme.colors.violet.base, _theme.colors.violet.base, _theme.constants.boxShadow.xElevated, _theme.colors.violet.light, _theme.colors.violet.lighter);\nvar sliderHeader = exports.sliderHeader = (0, _emotion.css)(_objectSpread({}, _theme.mixins.flexSpaceBetween, {\n  marginBottom: 25,\n  alignItems: \"center\",\n  \".__pebble__slider__large &\": {\n    marginBottom: 35\n  }\n}));\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(sliderHeader, \"sliderHeader\", \"/Users/ritz078/projects/pebble/src/components/styles/Slider.styles.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/components/styles/Slider.styles.ts"],
+      "names": [
+        "colors",
+        "violet",
+        "lightest",
+        "base",
+        "constants",
+        "boxShadow",
+        "xElevated",
+        "light",
+        "lighter",
+        "sliderHeader",
+        "mixins",
+        "flexSpaceBetween",
+        "marginBottom",
+        "alignItems"
+      ],
+      "mappings": ";;;;;;;;;AAAA;;AACA;;;;;;;;;;;;;;AAEA,4CAMsBA,cAAOC,MAAP,CAAcC,QANpC,EAgBsBF,cAAOC,MAAP,CAAcE,IAhBpC,EAwBsBH,cAAOC,MAAP,CAAcE,IAxBpC,EAkCgBC,iBAAUC,SAAV,CAAoBC,SAlCpC,EA6CqBN,cAAOC,MAAP,CAAcM,KA7CnC,EAiDqBP,cAAOC,MAAP,CAAcO,OAjDnC;AA0DO,IAAMC,YAAY,WAAZA,YAAY,GAAG,oCACvBC,cAAOC,gBADgB;AAE1BC,EAAAA,YAAY,EAAE,EAFY;AAG1BC,EAAAA,UAAU,EAAE,QAHc;AAI1B,gCAA8B;AAC5BD,IAAAA,YAAY,EAAE;AADc;AAJJ,GAArB;;;;;;;;;;;;0BAAMH,Y",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import { injectGlobal, css } from \"emotion\";\nimport { colors, constants, mixins } from \"../../theme\";\n\ninjectGlobal`\n.rheostat {\n  overflow: visible;\n}\n\n.rheostat-background {\n  background-color: ${colors.violet.lightest};\n  position: relative;\n  border-radius: 2px;\n  overflow: hidden;\n \theight: 4px;\n  top: 0;\n  width: 100%;\n}\n\n.rheostat-progress {\n  background-color: ${colors.violet.base};\n  position: absolute;\n  height: 4px;\n  border-radius: 2px;\n  top: 0;\n}\n\n.rheostat-handle {\n  background-color: ${colors.violet.base};\n  border-radius: 50%;\n  height: 20px;\n  outline: none;\n  z-index: 2;\n  width: 20px;\n  margin-left: -10px;\n  top: -8px;\n  border: 0;\n  cursor: pointer;\n  box-shadow: ${constants.boxShadow.xElevated};\n}\n\n.__pebble__slider__large .rheostat-handle {\n\twidth: 24px;\n\theight: 24px;\n\tmargin-left: -12px;\n\ttop: -10px;\n}\n\n.rheostat-handle:hover {\n\tbackground-color: ${colors.violet.light};\n}\n\n.__pebble__slider__disabled .rheostat-handle {\n\tbackground-color: ${colors.violet.lighter};\n\tcursor: inherit;\n}\n\n.rheostat-horizontal {\n  height: 4px;\n}\n`;\n\nexport const sliderHeader = css({\n  ...mixins.flexSpaceBetween,\n  marginBottom: 25,\n  alignItems: \"center\",\n  \".__pebble__slider__large &\": {\n    marginBottom: 35\n  }\n});\n"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"@babel/preset-env\",{\"targets\":{\"node\":\"6\"},\"modules\":false}],\"@babel/preset-react\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"@babel/plugin-proposal-object-rest-spread\",\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/theme/index.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/theme/index.ts",
+      "mtime": 1533552276796
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "import * as mixins from \"./mixins\";\nimport * as styles from \"./styles\";\nexport * from \"./colors\";\nexport * from \"./typography\";\nexport * from \"./constants\";\nexport { mixins, styles };",
+    {
+      "version": 3,
+      "sources": ["src/theme/index.ts"],
+      "names": ["mixins", "styles"],
+      "mappings": "AAAA,OAAO,KAAKA,MAAZ,MAAwB,UAAxB;AACA,OAAO,KAAKC,MAAZ,MAAwB,UAAxB;AAEA,cAAc,UAAd;AACA,cAAc,cAAd;AACA,cAAc,aAAd;AACA,SAASD,MAAT,EAAiBC,MAAjB",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import * as mixins from \"./mixins\";\nimport * as styles from \"./styles\";\n\nexport * from \"./colors\";\nexport * from \"./typography\";\nexport * from \"./constants\";\nexport { mixins, styles };\n"
+      ]
+    }
+  ]
+}

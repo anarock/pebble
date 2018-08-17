@@ -1,0 +1,66 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/components/styles/Search.styles.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/components/styles/Search.styles.ts",
+      "mtime": 1534351907155
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.searchStyle = exports.searchWrapperStyle = undefined;\n\nvar _emotion = require(\"emotion\");\n\nvar _theme = require(\"../../theme\");\n\nvar _mixins = require(\"../../theme/mixins\");\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nvar searchWrapperStyle = exports.searchWrapperStyle = (0, _emotion.css)(_objectSpread({\n  borderRadius: _theme.constants.borderRadius,\n  padding: \"0 20px\"\n}, _theme.mixins.flexRow, {\n  alignItems: \"center\",\n  height: 40,\n  \"> i\": {\n    marginRight: 10,\n    fontSize: 12\n  },\n  \"&.__pebble__search__small\": {\n    backgroundColor: _theme.colors.gray.lightest\n  },\n  \"&.__pebble__search__large\": {\n    backgroundColor: _theme.colors.white.base,\n    height: 76,\n    padding: \"0 25px\",\n    boxShadow: _theme.constants.boxShadow.base,\n    input: _theme.typography.normal.regular\n  },\n  \"&.__pebble__search__table\": {\n    border: \"1px solid \".concat(_theme.colors.gray.light),\n    backgroundColor: _theme.colors.white.base,\n    i: {\n      color: _theme.colors.gray.dark\n    }\n  }\n}));\nvar searchStyle = exports.searchStyle = (0, _emotion.css)(_objectSpread({\n  borderRadius: _theme.constants.borderRadius,\n  outline: \"none\",\n  border: 0,\n  height: \"inherit\"\n}, _theme.mixins.textEllipsis, _theme.typography.s.regular, (0, _mixins.getPlaceholderStyle)(_theme.colors.gray.light), {\n  backgroundColor: \"transparent\"\n}));\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(searchWrapperStyle, \"searchWrapperStyle\", \"/Users/ritz078/projects/pebble/src/components/styles/Search.styles.ts\");\n  reactHotLoader.register(searchStyle, \"searchStyle\", \"/Users/ritz078/projects/pebble/src/components/styles/Search.styles.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/components/styles/Search.styles.ts"],
+      "names": [
+        "searchWrapperStyle",
+        "borderRadius",
+        "constants",
+        "padding",
+        "mixins",
+        "flexRow",
+        "alignItems",
+        "height",
+        "marginRight",
+        "fontSize",
+        "backgroundColor",
+        "colors",
+        "gray",
+        "lightest",
+        "white",
+        "base",
+        "boxShadow",
+        "input",
+        "typography",
+        "normal",
+        "regular",
+        "border",
+        "light",
+        "i",
+        "color",
+        "dark",
+        "searchStyle",
+        "outline",
+        "textEllipsis",
+        "s"
+      ],
+      "mappings": ";;;;;;;AAAA;;AACA;;AACA;;;;;;;;;;;;AAEO,IAAMA,kBAAkB,WAAlBA,kBAAkB,GAAG;AAChCC,EAAAA,YAAY,EAAEC,iBAAUD,YADQ;AAEhCE,EAAAA,OAAO,EAAE;AAFuB,GAG7BC,cAAOC,OAHsB;AAIhCC,EAAAA,UAAU,EAAE,QAJoB;AAKhCC,EAAAA,MAAM,EAAE,EALwB;AAMhC,SAAO;AACLC,IAAAA,WAAW,EAAE,EADR;AAELC,IAAAA,QAAQ,EAAE;AAFL,GANyB;AAUhC,+BAA6B;AAC3BC,IAAAA,eAAe,EAAEC,cAAOC,IAAP,CAAYC;AADF,GAVG;AAahC,+BAA6B;AAC3BH,IAAAA,eAAe,EAAEC,cAAOG,KAAP,CAAaC,IADH;AAE3BR,IAAAA,MAAM,EAAE,EAFmB;AAG3BJ,IAAAA,OAAO,EAAE,QAHkB;AAI3Ba,IAAAA,SAAS,EAAEd,iBAAUc,SAAV,CAAoBD,IAJJ;AAK3BE,IAAAA,KAAK,EAAEC,kBAAWC,MAAX,CAAkBC;AALE,GAbG;AAoBhC,+BAA6B;AAC3BC,IAAAA,MAAM,sBAAeV,cAAOC,IAAP,CAAYU,KAA3B,CADqB;AAE3BZ,IAAAA,eAAe,EAAEC,cAAOG,KAAP,CAAaC,IAFH;AAG3BQ,IAAAA,CAAC,EAAE;AACDC,MAAAA,KAAK,EAAEb,cAAOC,IAAP,CAAYa;AADlB;AAHwB;AApBG,GAA3B;AA6BA,IAAMC,WAAW,WAAXA,WAAW,GAAG;AACzBzB,EAAAA,YAAY,EAAEC,iBAAUD,YADC;AAEzB0B,EAAAA,OAAO,EAAE,MAFgB;AAGzBN,EAAAA,MAAM,EAAE,CAHiB;AAIzBd,EAAAA,MAAM,EAAE;AAJiB,GAKtBH,cAAOwB,YALe,EAMtBV,kBAAWW,CAAX,CAAaT,OANS,EAOtB,iCAAoBT,cAAOC,IAAP,CAAYU,KAAhC,CAPsB;AAQzBZ,EAAAA,eAAe,EAAE;AARQ,GAApB;;;;;;;;;;;;0BA7BMV,kB;0BA6BA0B,W",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import { css } from \"emotion\";\nimport { colors, constants, mixins, typography } from \"../../theme\";\nimport { getPlaceholderStyle } from \"../../theme/mixins\";\n\nexport const searchWrapperStyle = css({\n  borderRadius: constants.borderRadius,\n  padding: \"0 20px\",\n  ...mixins.flexRow,\n  alignItems: \"center\",\n  height: 40,\n  \"> i\": {\n    marginRight: 10,\n    fontSize: 12\n  },\n  \"&.__pebble__search__small\": {\n    backgroundColor: colors.gray.lightest\n  },\n  \"&.__pebble__search__large\": {\n    backgroundColor: colors.white.base,\n    height: 76,\n    padding: \"0 25px\",\n    boxShadow: constants.boxShadow.base,\n    input: typography.normal.regular\n  },\n  \"&.__pebble__search__table\": {\n    border: `1px solid ${colors.gray.light}`,\n    backgroundColor: colors.white.base,\n    i: {\n      color: colors.gray.dark\n    }\n  }\n});\n\nexport const searchStyle = css({\n  borderRadius: constants.borderRadius,\n  outline: \"none\",\n  border: 0,\n  height: \"inherit\",\n  ...mixins.textEllipsis,\n  ...typography.s.regular,\n  ...getPlaceholderStyle(colors.gray.light),\n  backgroundColor: \"transparent\"\n});\n"
+      ]
+    }
+  ]
+}

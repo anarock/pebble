@@ -1,0 +1,64 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/components/Modal.tsx",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/components/Modal.tsx",
+      "mtime": 1534351907147
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar _jsxFileName = \"/Users/ritz078/projects/pebble/src/components/Modal.tsx\";\n\nvar _react = require(\"react\");\n\nvar React = _interopRequireWildcard(_react);\n\nvar _Modal = require(\"./styles/Modal.styles\");\n\nvar _emotion = require(\"emotion\");\n\nvar _isInBrowser = require(\"is-in-browser\");\n\nvar _isInBrowser2 = _interopRequireDefault(_isInBrowser);\n\nvar _reactDom = require(\"react-dom\");\n\nvar ReactDOM = _interopRequireWildcard(_reactDom);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nvar Modal =\n/*#__PURE__*/\nfunction (_React$PureComponent) {\n  _inherits(Modal, _React$PureComponent);\n\n  function Modal() {\n    _classCallCheck(this, Modal);\n\n    return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));\n  }\n\n  _createClass(Modal, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      this.node = document.createElement(\"div\");\n      document.body.appendChild(this.node);\n    }\n  }, {\n    key: \"componentWillUnmount\",\n    value: function componentWillUnmount() {\n      document.body.removeChild(this.node);\n    }\n  }, {\n    key: \"componentDidUpdate\",\n    value: function componentDidUpdate(prevProps) {\n      if (prevProps.visible === this.props.visible) return;\n\n      if (this.props.visible) {\n        document.getElementsByTagName(\"body\")[0].style.overflow = \"hidden\";\n      } else {\n        document.getElementsByTagName(\"body\")[0].style.overflow = \"\";\n      }\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      if (!_isInBrowser2.default) return null;\n      var _this$props = this.props,\n          children = _this$props.children,\n          visible = _this$props.visible,\n          className = _this$props.className;\n\n      if (!this.node) {\n        this.node = document.createElement(\"div\");\n      }\n\n      return visible ? ReactDOM.createPortal(React.createElement(\"div\", {\n        className: (0, _emotion.cx)(_Modal.modalContainer, \"ReactPortal\", className),\n        __source: {\n          fileName: _jsxFileName,\n          lineNumber: 41\n        },\n        __self: this\n      }, children), this.node) : null;\n    }\n  }, {\n    key: \"__reactstandin__regenerateByEval\",\n    // @ts-ignore\n    value: function __reactstandin__regenerateByEval(key, code) {\n      // @ts-ignore\n      this[key] = eval(code);\n    }\n  }]);\n\n  return Modal;\n}(React.PureComponent);\n\nvar _default = Modal;\nexports.default = _default;\n\ntry {\n  // @ts-ignore\n  Modal.displayName = \"Modal\"; // @ts-ignore\n\n  Modal.__docgenInfo = {\n    \"description\": \"\",\n    \"displayName\": \"Modal\",\n    \"props\": {\n      \"visible\": {\n        \"defaultValue\": null,\n        \"description\": \"\",\n        \"name\": \"visible\",\n        \"required\": true,\n        \"type\": {\n          \"name\": \"boolean\"\n        }\n      },\n      \"className\": {\n        \"defaultValue\": null,\n        \"description\": \"\",\n        \"name\": \"className\",\n        \"required\": false,\n        \"type\": {\n          \"name\": \"string\"\n        }\n      }\n    }\n  }; // @ts-ignore\n\n  if (typeof STORYBOOK_REACT_CLASSES !== \"undefined\") // @ts-ignore\n    STORYBOOK_REACT_CLASSES[\"src/components/Modal.tsx#Modal\"] = {\n      docgenInfo: Modal.__docgenInfo,\n      name: \"Modal\",\n      path: \"src/components/Modal.tsx#Modal\"\n    };\n} catch (__react_docgen_typescript_loader_error) {}\n\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(Modal, \"Modal\", \"/Users/ritz078/projects/pebble/src/components/Modal.tsx\");\n  reactHotLoader.register(_default, \"default\", \"/Users/ritz078/projects/pebble/src/components/Modal.tsx\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/components/Modal.tsx"],
+      "names": [
+        "React",
+        "ReactDOM",
+        "Modal",
+        "node",
+        "document",
+        "createElement",
+        "body",
+        "appendChild",
+        "removeChild",
+        "prevProps",
+        "visible",
+        "props",
+        "getElementsByTagName",
+        "style",
+        "overflow",
+        "isBrowser",
+        "children",
+        "className",
+        "createPortal",
+        "modalContainer",
+        "PureComponent",
+        "displayName",
+        "__docgenInfo",
+        "STORYBOOK_REACT_CLASSES",
+        "docgenInfo",
+        "name",
+        "path",
+        "__react_docgen_typescript_loader_error"
+      ],
+      "mappings": ";;;;;;;AAAA;;IAAYA,K;;AAEZ;;AACA;;AACA;;;;AACA;;IAAYC,Q;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAENC,K;;;;;;;;;;;;;wCAGgB;AAClB,WAAKC,IAAL,GAAYC,QAAQ,CAACC,aAAT,CAAuB,KAAvB,CAAZ;AACAD,MAAAA,QAAQ,CAACE,IAAT,CAAcC,WAAd,CAA0B,KAAKJ,IAA/B;AACD;;;2CAEsB;AACrBC,MAAAA,QAAQ,CAACE,IAAT,CAAcE,WAAd,CAA0B,KAAKL,IAA/B;AACD;;;uCAEkBM,S,EAAuB;AACxC,UAAIA,SAAS,CAACC,OAAV,KAAsB,KAAKC,KAAL,CAAWD,OAArC,EAA8C;;AAE9C,UAAI,KAAKC,KAAL,CAAWD,OAAf,EAAwB;AACtBN,QAAAA,QAAQ,CAACQ,oBAAT,CAA8B,MAA9B,EAAsC,CAAtC,EAAyCC,KAAzC,CAA+CC,QAA/C,GAA0D,QAA1D;AACD,OAFD,MAEO;AACLV,QAAAA,QAAQ,CAACQ,oBAAT,CAA8B,MAA9B,EAAsC,CAAtC,EAAyCC,KAAzC,CAA+CC,QAA/C,GAA0D,EAA1D;AACD;AACF;;;6BAEQ;AACP,UAAI,CAACC,qBAAL,EAAgB,OAAO,IAAP;AADT,wBAGkC,KAAKJ,KAHvC;AAAA,UAGCK,QAHD,eAGCA,QAHD;AAAA,UAGWN,OAHX,eAGWA,OAHX;AAAA,UAGoBO,SAHpB,eAGoBA,SAHpB;;AAKP,UAAI,CAAC,KAAKd,IAAV,EAAgB;AACd,aAAKA,IAAL,GAAYC,QAAQ,CAACC,aAAT,CAAuB,KAAvB,CAAZ;AACD;;AAED,aAAOK,OAAO,GACVT,QAAQ,CAACiB,YAAT,CACE;AAAK,QAAA,SAAS,EAAE,iBAAGC,qBAAH,EAAmB,aAAnB,EAAkCF,SAAlC,CAAhB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,SACGD,QADH,CADF,EAIE,KAAKb,IAJP,CADU,GAOV,IAPJ;AAQD;;;;;;;;;;;EAvCiBH,KAAK,CAACoB,a;;eA0CXlB,K;;;AACf,IAAI;AACA;AACAA,EAAAA,KAAK,CAACmB,WAAN,GAAoB,OAApB,CAFA,CAGA;;AACAnB,EAAAA,KAAK,CAACoB,YAAN,GAAqB;AAAE,mBAAe,EAAjB;AAAqB,mBAAe,OAApC;AAA6C,aAAS;AAAE,iBAAW;AAAE,wBAAgB,IAAlB;AAAwB,uBAAe,EAAvC;AAA2C,gBAAQ,SAAnD;AAA8D,oBAAY,IAA1E;AAAgF,gBAAQ;AAAE,kBAAQ;AAAV;AAAxF,OAAb;AAA8H,mBAAa;AAAE,wBAAgB,IAAlB;AAAwB,uBAAe,EAAvC;AAA2C,gBAAQ,WAAnD;AAAgE,oBAAY,KAA5E;AAAmF,gBAAQ;AAAE,kBAAQ;AAAV;AAA3F;AAA3I;AAAtD,GAArB,CAJA,CAKA;;AACA,MAAI,OAAOC,uBAAP,KAAmC,WAAvC,EACI;AACAA,IAAAA,uBAAuB,CAAC,gCAAD,CAAvB,GAA4D;AAAEC,MAAAA,UAAU,EAAEtB,KAAK,CAACoB,YAApB;AAAkCG,MAAAA,IAAI,EAAE,OAAxC;AAAiDC,MAAAA,IAAI,EAAE;AAAvD,KAA5D;AACP,CATD,CAUA,OAAOC,sCAAP,EAA+C,CAAG;;;;;;;;;;;;;0BArD5CzB,K",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import * as React from \"react\";\nimport { ModalProps } from \"./typings/Modal\";\nimport { modalContainer } from \"./styles/Modal.styles\";\nimport { cx } from \"emotion\";\nimport isBrowser from \"is-in-browser\";\nimport * as ReactDOM from \"react-dom\";\n\nclass Modal extends React.PureComponent<ModalProps> {\n  node: HTMLDivElement;\n\n  componentDidMount() {\n    this.node = document.createElement(\"div\");\n    document.body.appendChild(this.node);\n  }\n\n  componentWillUnmount() {\n    document.body.removeChild(this.node);\n  }\n\n  componentDidUpdate(prevProps: ModalProps) {\n    if (prevProps.visible === this.props.visible) return;\n\n    if (this.props.visible) {\n      document.getElementsByTagName(\"body\")[0].style.overflow = \"hidden\";\n    } else {\n      document.getElementsByTagName(\"body\")[0].style.overflow = \"\";\n    }\n  }\n\n  render() {\n    if (!isBrowser) return null;\n\n    const { children, visible, className } = this.props;\n\n    if (!this.node) {\n      this.node = document.createElement(\"div\");\n    }\n\n    return visible\n      ? ReactDOM.createPortal(\n          <div className={cx(modalContainer, \"ReactPortal\", className)}>\n            {children}\n          </div>,\n          this.node\n        )\n      : null;\n  }\n}\n\nexport default Modal;\ntry {\n    // @ts-ignore\n    Modal.displayName = \"Modal\";\n    // @ts-ignore\n    Modal.__docgenInfo = { \"description\": \"\", \"displayName\": \"Modal\", \"props\": { \"visible\": { \"defaultValue\": null, \"description\": \"\", \"name\": \"visible\", \"required\": true, \"type\": { \"name\": \"boolean\" } }, \"className\": { \"defaultValue\": null, \"description\": \"\", \"name\": \"className\", \"required\": false, \"type\": { \"name\": \"string\" } } } };\n    // @ts-ignore\n    if (typeof STORYBOOK_REACT_CLASSES !== \"undefined\")\n        // @ts-ignore\n        STORYBOOK_REACT_CLASSES[\"src/components/Modal.tsx#Modal\"] = { docgenInfo: Modal.__docgenInfo, name: \"Modal\", path: \"src/components/Modal.tsx#Modal\" };\n}\ncatch (__react_docgen_typescript_loader_error) { }"
+      ]
+    }
+  ]
+}

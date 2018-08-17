@@ -1,0 +1,44 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/utils/dimensions.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/utils/dimensions.ts",
+      "mtime": 1533059852355
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.isDesktop = undefined;\n\nvar _isInBrowser = require(\"is-in-browser\");\n\nvar _isInBrowser2 = _interopRequireDefault(_isInBrowser);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nvar defaultDimensions = {\n  height: 800,\n  width: 1025\n};\n\nvar dimensions = function () {\n  var width, height;\n  return function () {\n    if (!_isInBrowser2.default) return defaultDimensions;\n\n    if (!width || !height) {\n      var _ref = [window.screen.width, window.screen.height];\n      width = _ref[0];\n      height = _ref[1];\n    }\n\n    return {\n      width: width,\n      height: height\n    };\n  };\n}();\n\nvar isDesktop = exports.isDesktop = dimensions().width > 1024;\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(defaultDimensions, \"defaultDimensions\", \"/Users/ritz078/projects/pebble/src/utils/dimensions.ts\");\n  reactHotLoader.register(dimensions, \"dimensions\", \"/Users/ritz078/projects/pebble/src/utils/dimensions.ts\");\n  reactHotLoader.register(isDesktop, \"isDesktop\", \"/Users/ritz078/projects/pebble/src/utils/dimensions.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/utils/dimensions.ts"],
+      "names": [
+        "defaultDimensions",
+        "height",
+        "width",
+        "dimensions",
+        "isBrowser",
+        "window",
+        "screen",
+        "isDesktop"
+      ],
+      "mappings": ";;;;;;;AAAA;;;;;;;;;;;;AAEA,IAAMA,iBAAiB,GAAG;AACxBC,EAAAA,MAAM,EAAE,GADgB;AAExBC,EAAAA,KAAK,EAAE;AAFiB,CAA1B;;AAKA,IAAMC,UAAU,GAAI,YAAW;AAC7B,MAAID,KAAJ,EAAWD,MAAX;AAEA,SAAO,YAAM;AACX,QAAI,CAACG,qBAAL,EAAgB,OAAOJ,iBAAP;;AAEhB,QAAI,CAACE,KAAD,IAAU,CAACD,MAAf,EAAuB;AAAA,iBACH,CAACI,MAAM,CAACC,MAAP,CAAcJ,KAAf,EAAsBG,MAAM,CAACC,MAAP,CAAcL,MAApC,CADG;AACpBC,MAAAA,KADoB;AACbD,MAAAA,MADa;AAEtB;;AAED,WAAO;AACLC,MAAAA,KAAK,EAALA,KADK;AAELD,MAAAA,MAAM,EAANA;AAFK,KAAP;AAID,GAXD;AAYD,CAfkB,EAAnB;;AAiBO,IAAMM,SAAS,WAATA,SAAS,GAAGJ,UAAU,GAAGD,KAAb,GAAqB,IAAvC;;;;;;;;;;;;0BAtBDF,iB;0BAKAG,U;0BAiBOI,S",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import isBrowser from \"is-in-browser\";\n\nconst defaultDimensions = {\n  height: 800,\n  width: 1025\n};\n\nconst dimensions = (function() {\n  let width, height;\n\n  return () => {\n    if (!isBrowser) return defaultDimensions;\n\n    if (!width || !height) {\n      [width, height] = [window.screen.width, window.screen.height];\n    }\n\n    return {\n      width,\n      height\n    };\n  };\n})();\n\nexport const isDesktop = dimensions().width > 1024;\n"
+      ]
+    }
+  ]
+}

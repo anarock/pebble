@@ -1,0 +1,35 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/utils/numbers/format.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/utils/numbers/format.ts",
+      "mtime": 1530886719132
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.getShortenedNumber = getShortenedNumber;\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nfunction getShortenedNumber(num) {\n  var toFixed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;\n  if (!num) return;\n  var formattedNum;\n\n  if (num >= 10000000) {\n    formattedNum = (num / 10000000).toFixed(toFixed) + \" Cr\";\n  } else if (num >= 100000) {\n    formattedNum = (num / 100000).toFixed(toFixed) + \" L\";\n  } else if (num >= 1000) {\n    formattedNum = (num / 1000).toFixed(toFixed) + \" K\";\n  } else {\n    formattedNum = \"\".concat(num.toFixed(toFixed));\n  }\n\n  return formattedNum;\n}\n\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(getShortenedNumber, \"getShortenedNumber\", \"/Users/ritz078/projects/pebble/src/utils/numbers/format.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/utils/numbers/format.ts"],
+      "names": ["getShortenedNumber", "num", "toFixed", "formattedNum"],
+      "mappings": ";;;;;QAAgBA,kB,GAAAA,kB;;;;;;;;AAAT,SAASA,kBAAT,CAA4BC,GAA5B,EAAsE;AAAA,MAA7BC,OAA6B,uEAAX,CAAW;AAC3E,MAAI,CAACD,GAAL,EAAU;AACV,MAAIE,YAAJ;;AACA,MAAIF,GAAG,IAAI,QAAX,EAAqB;AACnBE,IAAAA,YAAY,GAAG,CAACF,GAAG,GAAG,QAAP,EAAiBC,OAAjB,CAAyBA,OAAzB,IAAoC,KAAnD;AACD,GAFD,MAEO,IAAID,GAAG,IAAI,MAAX,EAAmB;AACxBE,IAAAA,YAAY,GAAG,CAACF,GAAG,GAAG,MAAP,EAAeC,OAAf,CAAuBA,OAAvB,IAAkC,IAAjD;AACD,GAFM,MAEA,IAAID,GAAG,IAAI,IAAX,EAAiB;AACtBE,IAAAA,YAAY,GAAG,CAACF,GAAG,GAAG,IAAP,EAAaC,OAAb,CAAqBA,OAArB,IAAgC,IAA/C;AACD,GAFM,MAEA;AACLC,IAAAA,YAAY,aAAMF,GAAG,CAACC,OAAJ,CAAYA,OAAZ,CAAN,CAAZ;AACD;;AACD,SAAOC,YAAP;AACD;;;;;;;;;;;;;0BAbeH,kB",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "export function getShortenedNumber(num: number, toFixed: number = 1): string {\n  if (!num) return;\n  let formattedNum: string;\n  if (num >= 10000000) {\n    formattedNum = (num / 10000000).toFixed(toFixed) + \" Cr\";\n  } else if (num >= 100000) {\n    formattedNum = (num / 100000).toFixed(toFixed) + \" L\";\n  } else if (num >= 1000) {\n    formattedNum = (num / 1000).toFixed(toFixed) + \" K\";\n  } else {\n    formattedNum = `${num.toFixed(toFixed)}`;\n  }\n  return formattedNum;\n}\n"
+      ]
+    }
+  ]
+}

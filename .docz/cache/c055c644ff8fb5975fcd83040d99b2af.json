@@ -1,0 +1,50 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/components/styles/Popper.styles.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/components/styles/Popper.styles.ts",
+      "mtime": 1533463818087
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.arrowStyle = exports.popperStyle = undefined;\n\nvar _emotion = require(\"emotion\");\n\nvar _theme = require(\"../../theme\");\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nvar popperStyle = exports.popperStyle = (0, _emotion.css)({\n  margin: 14,\n  boxShadow: _theme.constants.boxShadow.xElevated,\n  borderRadius: _theme.constants.borderRadius\n});\nvar arrowStyle = exports.arrowStyle = (0, _emotion.css)({\n  position: \"absolute\",\n  textShadow: \"1px 0 20px rgba(0,0,0,0.1)\",\n  \"&[data-placement^='top']\": {\n    transform: \"rotate(90deg)\",\n    bottom: -12\n  },\n  \"&[data-placement^='bottom']\": {\n    transform: \"rotate(-90deg)\",\n    top: -12\n  },\n  \"&[data-placement^='right']\": {\n    transform: \"rotate(180deg)\",\n    left: -12\n  },\n  \"&[data-placement^='left']\": {\n    right: -12\n  }\n});\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(popperStyle, \"popperStyle\", \"/Users/ritz078/projects/pebble/src/components/styles/Popper.styles.ts\");\n  reactHotLoader.register(arrowStyle, \"arrowStyle\", \"/Users/ritz078/projects/pebble/src/components/styles/Popper.styles.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/components/styles/Popper.styles.ts"],
+      "names": [
+        "popperStyle",
+        "margin",
+        "boxShadow",
+        "constants",
+        "xElevated",
+        "borderRadius",
+        "arrowStyle",
+        "position",
+        "textShadow",
+        "transform",
+        "bottom",
+        "top",
+        "left",
+        "right"
+      ],
+      "mappings": ";;;;;;;AAAA;;AACA;;;;;;;;AAEO,IAAMA,WAAW,WAAXA,WAAW,GAAG,kBAAI;AAC7BC,EAAAA,MAAM,EAAE,EADqB;AAE7BC,EAAAA,SAAS,EAAEC,iBAAUD,SAAV,CAAoBE,SAFF;AAG7BC,EAAAA,YAAY,EAAEF,iBAAUE;AAHK,CAAJ,CAApB;AAMA,IAAMC,UAAU,WAAVA,UAAU,GAAG,kBAAI;AAC5BC,EAAAA,QAAQ,EAAE,UADkB;AAE5BC,EAAAA,UAAU,EAAE,4BAFgB;AAG5B,8BAA4B;AAC1BC,IAAAA,SAAS,EAAE,eADe;AAE1BC,IAAAA,MAAM,EAAE,CAAC;AAFiB,GAHA;AAO5B,iCAA+B;AAC7BD,IAAAA,SAAS,EAAE,gBADkB;AAE7BE,IAAAA,GAAG,EAAE,CAAC;AAFuB,GAPH;AAW5B,gCAA8B;AAC5BF,IAAAA,SAAS,EAAE,gBADiB;AAE5BG,IAAAA,IAAI,EAAE,CAAC;AAFqB,GAXF;AAe5B,+BAA6B;AAC3BC,IAAAA,KAAK,EAAE,CAAC;AADmB;AAfD,CAAJ,CAAnB;;;;;;;;;;;;0BANMb,W;0BAMAM,U",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import { css } from \"emotion\";\nimport { constants } from \"../../theme\";\n\nexport const popperStyle = css({\n  margin: 14,\n  boxShadow: constants.boxShadow.xElevated,\n  borderRadius: constants.borderRadius\n});\n\nexport const arrowStyle = css({\n  position: \"absolute\",\n  textShadow: \"1px 0 20px rgba(0,0,0,0.1)\",\n  \"&[data-placement^='top']\": {\n    transform: \"rotate(90deg)\",\n    bottom: -12\n  },\n  \"&[data-placement^='bottom']\": {\n    transform: \"rotate(-90deg)\",\n    top: -12\n  },\n  \"&[data-placement^='right']\": {\n    transform: \"rotate(180deg)\",\n    left: -12\n  },\n  \"&[data-placement^='left']\": {\n    right: -12\n  }\n});\n"
+      ]
+    }
+  ]
+}

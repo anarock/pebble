@@ -1,0 +1,83 @@
+{
+  "config": {
+    "title": "Pebble",
+    "description": "My awesome app using docz",
+    "themeConfig": {},
+    "ordering": "descending",
+    "version": "0.14.1",
+    "repository": null,
+    "typescript": true,
+    "protocol": "http"
+  },
+  "entries": {
+    "docs/Button.mdx": {
+      "name": "Button",
+      "menu": "Components",
+      "id": "68a6b55def5e73bf0a1b7ab2a4a79f62",
+      "filepath": "docs/Button.mdx",
+      "link": null,
+      "slug": "docs-button",
+      "route": "/docs-button",
+      "order": 0,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "button",
+          "value": "Button"
+        },
+        {
+          "depth": 2,
+          "slug": "properties",
+          "value": "Properties"
+        },
+        {
+          "depth": 2,
+          "slug": "basic-usage",
+          "value": "Basic usage"
+        },
+        {
+          "depth": 2,
+          "slug": "using-different-kinds",
+          "value": "Using different kinds"
+        },
+        {
+          "depth": 2,
+          "slug": "use-with-children-as-a-function",
+          "value": "Use with children as a function"
+        }
+      ]
+    },
+    "docs/index.mdx": {
+      "name": "Getting Started",
+      "route": "/",
+      "order": 1,
+      "id": "73498ad0e1e62a714b08085d318f9de1",
+      "filepath": "docs/index.mdx",
+      "link": null,
+      "slug": "docs-index",
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "pebble",
+          "value": "Pebble"
+        },
+        {
+          "depth": 2,
+          "slug": "installation",
+          "value": "Installation"
+        },
+        {
+          "depth": 2,
+          "slug": "getting-started",
+          "value": "Getting started"
+        },
+        {
+          "depth": 2,
+          "slug": "using-icons-in-react-native",
+          "value": "Using icons in react native"
+        }
+      ]
+    }
+  }
+}

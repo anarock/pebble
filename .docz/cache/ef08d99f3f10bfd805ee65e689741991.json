@@ -1,0 +1,68 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"@babel/preset-env\",{\"targets\":{\"node\":\"6\"}}],\"@babel/preset-react\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"@babel/plugin-proposal-object-rest-spread\",\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/theme/styles.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/theme/styles.ts",
+      "mtime": 1533552276796
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.disableScrollY = exports.tableStyle = void 0;\n\nvar _emotion = require(\"emotion\");\n\nvar _constants = require(\"./constants\");\n\nvar _typography = require(\"./typography\");\n\nvar _colors = require(\"./colors\");\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nconst tableStyle = (0, _emotion.css)(_objectSpread({\n  borderRadius: _constants.constants.borderRadius,\n  border: _constants.constants.border.dark\n}, _typography.typography.s.regular, {\n  width: \"100%\",\n  borderCollapse: \"separate\",\n  borderSpacing: 0,\n  backgroundColor: _colors.colors.gray.lightest,\n  \"tr:last-child\": {\n    td: {\n      border: 0\n    },\n    \"td:first-child\": {\n      borderBottomLeftRadius: _constants.constants.borderRadius\n    },\n    \"td:last-child\": {\n      borderBottomRightRadius: _constants.constants.borderRadius\n    }\n  },\n  \"tr:first-child\": {\n    \"th:first-child\": {\n      borderLeftLeftRadius: _constants.constants.borderRadius\n    },\n    \"th:last-child\": {\n      borderLeftRightRadius: _constants.constants.borderRadius\n    }\n  },\n  th: _objectSpread({\n    textAlign: \"left\"\n  }, _typography.typography.xs.bold, {\n    color: _colors.colors.gray.dark\n  }),\n  \"tbody > tr:nth-of-type(2n + 1)\": {\n    backgroundColor: _colors.colors.white.base\n  },\n  \"th, td\": {\n    height: 50,\n    padding: \"10px 25px\",\n    borderBottom: _constants.constants.border.dark\n  }\n}));\nexports.tableStyle = tableStyle;\nconst disableScrollY = (0, _emotion.css)({\n  overflowY: \"hidden\"\n});\nexports.disableScrollY = disableScrollY;\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(tableStyle, \"tableStyle\", \"/Users/ritz078/projects/pebble/src/theme/styles.ts\");\n  reactHotLoader.register(disableScrollY, \"disableScrollY\", \"/Users/ritz078/projects/pebble/src/theme/styles.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/theme/styles.ts"],
+      "names": [
+        "tableStyle",
+        "borderRadius",
+        "constants",
+        "border",
+        "dark",
+        "typography",
+        "s",
+        "regular",
+        "width",
+        "borderCollapse",
+        "borderSpacing",
+        "backgroundColor",
+        "colors",
+        "gray",
+        "lightest",
+        "td",
+        "borderBottomLeftRadius",
+        "borderBottomRightRadius",
+        "borderLeftLeftRadius",
+        "borderLeftRightRadius",
+        "th",
+        "textAlign",
+        "xs",
+        "bold",
+        "color",
+        "white",
+        "base",
+        "height",
+        "padding",
+        "borderBottom",
+        "disableScrollY",
+        "overflowY"
+      ],
+      "mappings": ";;;;;;;AAAA;;AACA;;AACA;;AACA;;;;;;;;;;;;AAEO,MAAMA,UAAU,GAAG;AACxBC,EAAAA,YAAY,EAAEC,qBAAUD,YADA;AAExBE,EAAAA,MAAM,EAAED,qBAAUC,MAAV,CAAiBC;AAFD,GAGrBC,uBAAWC,CAAX,CAAaC,OAHQ;AAIxBC,EAAAA,KAAK,EAAE,MAJiB;AAKxBC,EAAAA,cAAc,EAAE,UALQ;AAMxBC,EAAAA,aAAa,EAAE,CANS;AAOxBC,EAAAA,eAAe,EAAEC,eAAOC,IAAP,CAAYC,QAPL;AAQxB,mBAAiB;AACfC,IAAAA,EAAE,EAAE;AACFZ,MAAAA,MAAM,EAAE;AADN,KADW;AAIf,sBAAkB;AAChBa,MAAAA,sBAAsB,EAAEd,qBAAUD;AADlB,KAJH;AAOf,qBAAiB;AACfgB,MAAAA,uBAAuB,EAAEf,qBAAUD;AADpB;AAPF,GARO;AAmBxB,oBAAkB;AAChB,sBAAkB;AAChBiB,MAAAA,oBAAoB,EAAEhB,qBAAUD;AADhB,KADF;AAIhB,qBAAiB;AACfkB,MAAAA,qBAAqB,EAAEjB,qBAAUD;AADlB;AAJD,GAnBM;AA2BxBmB,EAAAA,EAAE;AACAC,IAAAA,SAAS,EAAE;AADX,KAEGhB,uBAAWiB,EAAX,CAAcC,IAFjB;AAGAC,IAAAA,KAAK,EAAEZ,eAAOC,IAAP,CAAYT;AAHnB,IA3BsB;AAgCxB,oCAAkC;AAChCO,IAAAA,eAAe,EAAEC,eAAOa,KAAP,CAAaC;AADE,GAhCV;AAmCxB,YAAU;AACRC,IAAAA,MAAM,EAAE,EADA;AAERC,IAAAA,OAAO,EAAE,WAFD;AAGRC,IAAAA,YAAY,EAAE3B,qBAAUC,MAAV,CAAiBC;AAHvB;AAnCc,GAAnB;;AA0CA,MAAM0B,cAAc,GAAG,kBAAI;AAChCC,EAAAA,SAAS,EAAE;AADqB,CAAJ,CAAvB;;;;;;;;;;;;;0BA1CM/B,U;0BA0CA8B,c",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import { css } from \"emotion\";\nimport { constants } from \"./constants\";\nimport { typography } from \"./typography\";\nimport { colors } from \"./colors\";\n\nexport const tableStyle = css({\n  borderRadius: constants.borderRadius,\n  border: constants.border.dark,\n  ...typography.s.regular,\n  width: \"100%\",\n  borderCollapse: \"separate\",\n  borderSpacing: 0,\n  backgroundColor: colors.gray.lightest,\n  \"tr:last-child\": {\n    td: {\n      border: 0\n    },\n    \"td:first-child\": {\n      borderBottomLeftRadius: constants.borderRadius\n    },\n    \"td:last-child\": {\n      borderBottomRightRadius: constants.borderRadius\n    }\n  },\n  \"tr:first-child\": {\n    \"th:first-child\": {\n      borderLeftLeftRadius: constants.borderRadius\n    },\n    \"th:last-child\": {\n      borderLeftRightRadius: constants.borderRadius\n    }\n  },\n  th: {\n    textAlign: \"left\",\n    ...typography.xs.bold,\n    color: colors.gray.dark\n  },\n  \"tbody > tr:nth-of-type(2n + 1)\": {\n    backgroundColor: colors.white.base\n  },\n  \"th, td\": {\n    height: 50,\n    padding: \"10px 25px\",\n    borderBottom: constants.border.dark\n  }\n});\n\nexport const disableScrollY = css({\n  overflowY: \"hidden\"\n});\n"
+      ]
+    }
+  ]
+}

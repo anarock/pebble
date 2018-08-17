@@ -1,0 +1,35 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"@babel/preset-env\",{\"targets\":{\"node\":\"6\"}}],\"@babel/preset-react\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"@babel/plugin-proposal-object-rest-spread\",\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/.docz/app/root.jsx",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/.docz/app/root.jsx",
+      "mtime": 1534419799442
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactHotLoader = require(\"react-hot-loader\");\n\nvar _doczThemeDefault = _interopRequireDefault(require(\"docz-theme-default\"));\n\nvar _db = _interopRequireDefault(require(\"./db.json\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nconst Root = ({\n  imports\n}) => _react.default.createElement(_doczThemeDefault.default, {\n  db: _db.default,\n  imports: imports,\n  hashRouter: false,\n  websocketUrl: \"ws://127.0.0.1:60505\"\n});\n\nconst _default = (0, _reactHotLoader.hot)(module)(Root);\n\nvar _default2 = _default;\nexports.default = _default2;\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(Root, \"Root\", \"/Users/ritz078/projects/pebble/.docz/app/root.jsx\");\n  reactHotLoader.register(_default, \"default\", \"/Users/ritz078/projects/pebble/.docz/app/root.jsx\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": [".docz/app/root.jsx"],
+      "names": ["Root", "imports", "db", "module"],
+      "mappings": ";;;;;;;AAAA;;AACA;;AACA;;AACA;;;;;;;;;;AAEA,MAAMA,IAAI,GAAG,CAAC;AAAEC,EAAAA;AAAF,CAAD,KACX,6BAAC,yBAAD;AACE,EAAA,EAAE,EAAEC,WADN;AAEE,EAAA,OAAO,EAAED,OAFX;AAGE,EAAA,UAAU,EAAE,KAHd;AAIE,EAAA,YAAY,EAAC;AAJf,EADF;;iBASe,yBAAIE,MAAJ,EAAYH,IAAZ,C;;;;;;;;;;;;;;;0BATTA,I",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import React from 'react'\nimport { hot } from 'react-hot-loader'\nimport Theme from 'docz-theme-default'\nimport db from './db.json'\n\nconst Root = ({ imports }) => (\n  <Theme\n    db={db}\n    imports={imports}\n    hashRouter={false}\n    websocketUrl=\"ws://127.0.0.1:60505\"\n  />\n)\n\nexport default hot(module)(Root)\n"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/utils/strings/capitalize.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/utils/strings/capitalize.ts",
+      "mtime": 1533465374519
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.capitalize = capitalize;\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nfunction capitalize(str) {\n  return str ? str.split(\" \").map(function (s) {\n    return s.charAt(0).toUpperCase() + s.slice(1);\n  }).join(\" \") : str;\n}\n\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(capitalize, \"capitalize\", \"/Users/ritz078/projects/pebble/src/utils/strings/capitalize.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/utils/strings/capitalize.ts"],
+      "names": [
+        "capitalize",
+        "str",
+        "split",
+        "map",
+        "s",
+        "charAt",
+        "toUpperCase",
+        "slice",
+        "join"
+      ],
+      "mappings": ";;;;;QAAgBA,U,GAAAA,U;;;;;;;;AAAT,SAASA,UAAT,CAAoBC,GAApB,EAAyC;AAC9C,SAAOA,GAAG,GACNA,GAAG,CACAC,KADH,CACS,GADT,EAEGC,GAFH,CAEO,UAAAC,CAAC;AAAA,WAAIA,CAAC,CAACC,MAAF,CAAS,CAAT,EAAYC,WAAZ,KAA4BF,CAAC,CAACG,KAAF,CAAQ,CAAR,CAAhC;AAAA,GAFR,EAGGC,IAHH,CAGQ,GAHR,CADM,GAKNP,GALJ;AAMD;;;;;;;;;;;;;0BAPeD,U",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "export function capitalize(str: string): string {\n  return str\n    ? str\n        .split(\" \")\n        .map(s => s.charAt(0).toUpperCase() + s.slice(1))\n        .join(\" \")\n    : str;\n}\n"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/components/utils/getSelectedCheckboxes.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/components/utils/getSelectedCheckboxes.ts",
+      "mtime": 1534351907166
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.getSelectedCheckboxes = getSelectedCheckboxes;\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nfunction getSelectedCheckboxes(changedValue, prevSelected) {\n  var _selected = prevSelected || [];\n\n  var cloned = _selected.slice(0);\n\n  var index = _selected.findIndex(function (datum) {\n    return datum === changedValue;\n  });\n\n  if (index >= 0) {\n    cloned.splice(index, 1);\n  } else {\n    cloned.push(changedValue);\n  }\n\n  return cloned;\n}\n\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(getSelectedCheckboxes, \"getSelectedCheckboxes\", \"/Users/ritz078/projects/pebble/src/components/utils/getSelectedCheckboxes.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/components/utils/getSelectedCheckboxes.ts"],
+      "names": [
+        "getSelectedCheckboxes",
+        "changedValue",
+        "prevSelected",
+        "_selected",
+        "cloned",
+        "slice",
+        "index",
+        "findIndex",
+        "datum",
+        "splice",
+        "push"
+      ],
+      "mappings": ";;;;;QAEgBA,qB,GAAAA,qB;;;;;;;;AAAT,SAASA,qBAAT,CACLC,YADK,EAELC,YAFK,EAGc;AACnB,MAAMC,SAAS,GAAGD,YAAY,IAAI,EAAlC;;AACA,MAAME,MAAM,GAAGD,SAAS,CAACE,KAAV,CAAgB,CAAhB,CAAf;;AACA,MAAMC,KAAK,GAAGH,SAAS,CAACI,SAAV,CAAoB,UAAAC,KAAK;AAAA,WAAIA,KAAK,KAAKP,YAAd;AAAA,GAAzB,CAAd;;AACA,MAAIK,KAAK,IAAI,CAAb,EAAgB;AACdF,IAAAA,MAAM,CAACK,MAAP,CAAcH,KAAd,EAAqB,CAArB;AACD,GAFD,MAEO;AACLF,IAAAA,MAAM,CAACM,IAAP,CAAYT,YAAZ;AACD;;AACD,SAAOG,MAAP;AACD;;;;;;;;;;;;;0BAbeJ,qB",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import * as React from \"react\";\n\nexport function getSelectedCheckboxes(\n  changedValue: React.ReactText,\n  prevSelected?: React.ReactText[]\n): React.ReactText[] {\n  const _selected = prevSelected || [];\n  const cloned = _selected.slice(0);\n  const index = _selected.findIndex(datum => datum === changedValue);\n  if (index >= 0) {\n    cloned.splice(index, 1);\n  } else {\n    cloned.push(changedValue);\n  }\n  return cloned;\n}\n"
+      ]
+    }
+  ]
+}

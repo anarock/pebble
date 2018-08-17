@@ -1,0 +1,56 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"@babel/preset-env\",{\"targets\":{\"node\":\"6\"},\"modules\":false}],\"@babel/preset-react\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"@babel/plugin-proposal-object-rest-spread\",\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/components/Loader.tsx",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/components/Loader.tsx",
+      "mtime": 1533640788845
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nimport * as React from \"react\";\nimport { spinnerStyle } from \"./styles/Loader.styles\";\nimport { colors } from \"../theme\";\nimport { cx } from \"emotion\";\n\nconst Loader = ({\n  color = colors.gray.darker,\n  scale = 1,\n  className\n}) => {\n  const style = {\n    backgroundColor: color\n  };\n  return React.createElement(\"div\", {\n    className: cx(spinnerStyle, className),\n    style: {\n      transform: `scale(${scale})`\n    }\n  }, React.createElement(\"div\", {\n    style: style\n  }), React.createElement(\"div\", {\n    style: style\n  }), React.createElement(\"div\", {\n    style: style\n  }));\n};\n\nconst _default = Loader;\nexport default _default;\n\ntry {\n  // @ts-ignore\n  Loader.displayName = \"Loader\"; // @ts-ignore\n\n  Loader.__docgenInfo = {\n    \"description\": \"\",\n    \"displayName\": \"Loader\",\n    \"props\": {\n      \"color\": {\n        \"defaultValue\": null,\n        \"description\": \"\",\n        \"name\": \"color\",\n        \"required\": false,\n        \"type\": {\n          \"name\": \"string\"\n        }\n      },\n      \"className\": {\n        \"defaultValue\": null,\n        \"description\": \"\",\n        \"name\": \"className\",\n        \"required\": false,\n        \"type\": {\n          \"name\": \"string\"\n        }\n      },\n      \"scale\": {\n        \"defaultValue\": null,\n        \"description\": \"\",\n        \"name\": \"scale\",\n        \"required\": false,\n        \"type\": {\n          \"name\": \"number\"\n        }\n      }\n    }\n  }; // @ts-ignore\n\n  if (typeof STORYBOOK_REACT_CLASSES !== \"undefined\") // @ts-ignore\n    STORYBOOK_REACT_CLASSES[\"src/components/Loader.tsx#Loader\"] = {\n      docgenInfo: Loader.__docgenInfo,\n      name: \"Loader\",\n      path: \"src/components/Loader.tsx#Loader\"\n    };\n} catch (__react_docgen_typescript_loader_error) {}\n\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(Loader, \"Loader\", \"/Users/ritz078/projects/pebble/src/components/Loader.tsx\");\n  reactHotLoader.register(_default, \"default\", \"/Users/ritz078/projects/pebble/src/components/Loader.tsx\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/components/Loader.tsx"],
+      "names": [
+        "React",
+        "spinnerStyle",
+        "colors",
+        "cx",
+        "Loader",
+        "color",
+        "gray",
+        "darker",
+        "scale",
+        "className",
+        "style",
+        "backgroundColor",
+        "transform",
+        "displayName",
+        "__docgenInfo",
+        "STORYBOOK_REACT_CLASSES",
+        "docgenInfo",
+        "name",
+        "path",
+        "__react_docgen_typescript_loader_error"
+      ],
+      "mappings": ";;;;;;AAAA,OAAO,KAAKA,KAAZ,MAAuB,OAAvB;AAEA,SAASC,YAAT,QAA6B,wBAA7B;AACA,SAASC,MAAT,QAAuB,UAAvB;AACA,SAASC,EAAT,QAAmB,SAAnB;;AAEA,MAAMC,MAA8B,GAAG,CAAC;AACtCC,EAAAA,KAAK,GAAGH,MAAM,CAACI,IAAP,CAAYC,MADkB;AAEtCC,EAAAA,KAAK,GAAG,CAF8B;AAGtCC,EAAAA;AAHsC,CAAD,KAIjC;AACJ,QAAMC,KAAK,GAAG;AACZC,IAAAA,eAAe,EAAEN;AADL,GAAd;AAGA,SACE;AACE,IAAA,SAAS,EAAEF,EAAE,CAACF,YAAD,EAAeQ,SAAf,CADf;AAEE,IAAA,KAAK,EAAE;AAAEG,MAAAA,SAAS,EAAG,SAAQJ,KAAM;AAA5B;AAFT,KAIE;AAAK,IAAA,KAAK,EAAEE;AAAZ,IAJF,EAKE;AAAK,IAAA,KAAK,EAAEA;AAAZ,IALF,EAME;AAAK,IAAA,KAAK,EAAEA;AAAZ,IANF,CADF;AAUD,CAlBD;;iBAoBeN,M;AAAf;;AACA,IAAI;AACA;AACAA,EAAAA,MAAM,CAACS,WAAP,GAAqB,QAArB,CAFA,CAGA;;AACAT,EAAAA,MAAM,CAACU,YAAP,GAAsB;AAAE,mBAAe,EAAjB;AAAqB,mBAAe,QAApC;AAA8C,aAAS;AAAE,eAAS;AAAE,wBAAgB,IAAlB;AAAwB,uBAAe,EAAvC;AAA2C,gBAAQ,OAAnD;AAA4D,oBAAY,KAAxE;AAA+E,gBAAQ;AAAE,kBAAQ;AAAV;AAAvF,OAAX;AAA0H,mBAAa;AAAE,wBAAgB,IAAlB;AAAwB,uBAAe,EAAvC;AAA2C,gBAAQ,WAAnD;AAAgE,oBAAY,KAA5E;AAAmF,gBAAQ;AAAE,kBAAQ;AAAV;AAA3F,OAAvI;AAA0P,eAAS;AAAE,wBAAgB,IAAlB;AAAwB,uBAAe,EAAvC;AAA2C,gBAAQ,OAAnD;AAA4D,oBAAY,KAAxE;AAA+E,gBAAQ;AAAE,kBAAQ;AAAV;AAAvF;AAAnQ;AAAvD,GAAtB,CAJA,CAKA;;AACA,MAAI,OAAOC,uBAAP,KAAmC,WAAvC,EACI;AACAA,IAAAA,uBAAuB,CAAC,kCAAD,CAAvB,GAA8D;AAAEC,MAAAA,UAAU,EAAEZ,MAAM,CAACU,YAArB;AAAmCG,MAAAA,IAAI,EAAE,QAAzC;AAAmDC,MAAAA,IAAI,EAAE;AAAzD,KAA9D;AACP,CATD,CAUA,OAAOC,sCAAP,EAA+C,CAAG;;;;;;;;;;;;;0BA/B5Cf,M",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import * as React from \"react\";\nimport { LoaderProps } from \"./typings/Loader\";\nimport { spinnerStyle } from \"./styles/Loader.styles\";\nimport { colors } from \"../theme\";\nimport { cx } from \"emotion\";\n\nconst Loader: React.SFC<LoaderProps> = ({\n  color = colors.gray.darker,\n  scale = 1,\n  className\n}) => {\n  const style = {\n    backgroundColor: color\n  };\n  return (\n    <div\n      className={cx(spinnerStyle, className)}\n      style={{ transform: `scale(${scale})` }}\n    >\n      <div style={style} />\n      <div style={style} />\n      <div style={style} />\n    </div>\n  );\n};\n\nexport default Loader;\ntry {\n    // @ts-ignore\n    Loader.displayName = \"Loader\";\n    // @ts-ignore\n    Loader.__docgenInfo = { \"description\": \"\", \"displayName\": \"Loader\", \"props\": { \"color\": { \"defaultValue\": null, \"description\": \"\", \"name\": \"color\", \"required\": false, \"type\": { \"name\": \"string\" } }, \"className\": { \"defaultValue\": null, \"description\": \"\", \"name\": \"className\", \"required\": false, \"type\": { \"name\": \"string\" } }, \"scale\": { \"defaultValue\": null, \"description\": \"\", \"name\": \"scale\", \"required\": false, \"type\": { \"name\": \"number\" } } } };\n    // @ts-ignore\n    if (typeof STORYBOOK_REACT_CLASSES !== \"undefined\")\n        // @ts-ignore\n        STORYBOOK_REACT_CLASSES[\"src/components/Loader.tsx#Loader\"] = { docgenInfo: Loader.__docgenInfo, name: \"Loader\", path: \"src/components/Loader.tsx#Loader\" };\n}\ncatch (__react_docgen_typescript_loader_error) { }"
+      ]
+    }
+  ]
+}

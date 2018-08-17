@@ -1,0 +1,50 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/components/styles/Dropdown.styles.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/components/styles/Dropdown.styles.ts",
+      "mtime": 1533463818085
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.dropDownStyle = undefined;\n\nvar _theme = require(\"../../theme\");\n\nvar _emotion = require(\"emotion\");\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nvar dropDownStyle = exports.dropDownStyle = (0, _emotion.css)({\n  minWidth: 250,\n  boxShadow: _theme.constants.boxShadow.xElevated,\n  backgroundColor: _theme.colors.white.base,\n  borderRadius: _theme.constants.borderRadius,\n  position: \"absolute\",\n  zIndex: 999,\n  marginTop: 10,\n  transformOrigin: \"top left\"\n});\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(dropDownStyle, \"dropDownStyle\", \"/Users/ritz078/projects/pebble/src/components/styles/Dropdown.styles.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/components/styles/Dropdown.styles.ts"],
+      "names": [
+        "dropDownStyle",
+        "minWidth",
+        "boxShadow",
+        "constants",
+        "xElevated",
+        "backgroundColor",
+        "colors",
+        "white",
+        "base",
+        "borderRadius",
+        "position",
+        "zIndex",
+        "marginTop",
+        "transformOrigin"
+      ],
+      "mappings": ";;;;;;;AAAA;;AACA;;;;;;;;AAEO,IAAMA,aAAa,WAAbA,aAAa,GAAG,kBAAI;AAC/BC,EAAAA,QAAQ,EAAE,GADqB;AAE/BC,EAAAA,SAAS,EAAEC,iBAAUD,SAAV,CAAoBE,SAFA;AAG/BC,EAAAA,eAAe,EAAEC,cAAOC,KAAP,CAAaC,IAHC;AAI/BC,EAAAA,YAAY,EAAEN,iBAAUM,YAJO;AAK/BC,EAAAA,QAAQ,EAAE,UALqB;AAM/BC,EAAAA,MAAM,EAAE,GANuB;AAO/BC,EAAAA,SAAS,EAAE,EAPoB;AAQ/BC,EAAAA,eAAe,EAAE;AARc,CAAJ,CAAtB;;;;;;;;;;;;0BAAMb,a",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import { colors, constants } from \"../../theme\";\nimport { css } from \"emotion\";\n\nexport const dropDownStyle = css({\n  minWidth: 250,\n  boxShadow: constants.boxShadow.xElevated,\n  backgroundColor: colors.white.base,\n  borderRadius: constants.borderRadius,\n  position: \"absolute\",\n  zIndex: 999,\n  marginTop: 10,\n  transformOrigin: \"top left\"\n});\n"
+      ]
+    }
+  ]
+}

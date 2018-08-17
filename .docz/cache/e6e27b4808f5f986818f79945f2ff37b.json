@@ -1,0 +1,104 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts",
+      "mtime": 1533912295944
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.iconStyle = exports.getButtonStyle = undefined;\n\nvar _emotion = require(\"emotion\");\n\nvar _theme = require(\"../../theme\");\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nvar violet = _theme.colors.violet,\n    gray = _theme.colors.gray,\n    white = _theme.colors.white,\n    red = _theme.colors.red,\n    emerald = _theme.colors.emerald;\nvar commonButtonStyle = (0, _emotion.css)({\n  lineHeight: \"23px\",\n  height: _theme.constants.buttonHeight,\n  padding: \"0 20px\",\n  display: \"flex\",\n  alignItems: \"center\",\n  transition: \"all ease-out .2s\",\n  borderRadius: _theme.constants.borderRadius,\n  outline: \"none\",\n  position: \"relative\",\n  overflow: \"hidden\",\n  cursor: \"pointer\",\n  whiteSpace: \"nowrap\",\n  justifyContent: \"center\",\n  border: 0,\n  \"&[disabled]\": {\n    cursor: \"not-allowed\"\n  }\n});\nvar mappingColorByType = {\n  primary: {\n    base: violet.base,\n    hover: violet.light,\n    active: violet.dark,\n    disabled: violet.lighter\n  },\n  secondary: {\n    textColor: gray.darker,\n    base: gray.lighter,\n    hover: gray.lightest,\n    active: gray.base,\n    disabled: gray.lighter\n  },\n  success: {\n    base: emerald.base,\n    hover: emerald.light,\n    active: emerald.dark,\n    disabled: emerald.lighter\n  },\n  alert: {\n    base: red.base,\n    hover: red.light,\n    active: red.dark,\n    disabled: red.lighter\n  }\n};\nvar linkStyle = {\n  backgroundColor: \"transparent\",\n  border: 0,\n  color: violet.base,\n  minWidth: 0,\n  padding: 0,\n  fontSize: 14,\n  \":not([disabled]):hover\": {\n    textDecoration: \"underline\"\n  },\n  \"&[disabled]\": {\n    color: violet.lighter\n  }\n};\n\nvar getStyleByType = function getStyleByType(type, filled) {\n  if (type === \"link\") return linkStyle;\n  var _color = mappingColorByType[type];\n  var colorBase = _color.base,\n      disabled = _color.disabled,\n      hover = _color.hover,\n      active = _color.active,\n      textColor = _color.textColor;\n  var defaultFontColor = filled ? textColor || white.base : colorBase;\n  return {\n    color: defaultFontColor,\n    backgroundColor: filled ? colorBase : white.base,\n    border: filled ? \"none\" : \"1px solid \".concat(colorBase),\n    \"&:not([disabled]):hover\": {\n      color: textColor || white.base,\n      backgroundColor: hover,\n      borderColor: hover\n    },\n    \"&:not([disabled]):active\": {\n      color: textColor || white.base,\n      backgroundColor: active,\n      borderColor: active\n    },\n    \"&[disabled]\": {\n      color: textColor || white.base,\n      backgroundColor: disabled,\n      borderColor: disabled\n    }\n  };\n};\n\nvar styleBasedOnSize = {\n  \"x-small\": _objectSpread({\n    height: 25,\n    minWidth: 70\n  }, _theme.typography.xs.light),\n  small: _objectSpread({\n    height: 40,\n    minWidth: 100\n  }, _theme.typography.s.regular),\n  large: _objectSpread({\n    height: 50,\n    minWidth: 140\n  }, _theme.typography.normal.regular)\n};\n\nvar getButtonStyle = exports.getButtonStyle = function getButtonStyle(size, type, showShadow, filled) {\n  return (0, _emotion.css)([commonButtonStyle, _objectSpread({}, styleBasedOnSize[size], getStyleByType(type, filled), {\n    boxShadow: showShadow ? _theme.constants.boxShadow.base : \"none\"\n  })]);\n};\n\nvar iconStyle = exports.iconStyle = (0, _emotion.css)({\n  marginLeft: 15,\n  fontWeight: \"bold\",\n  fontSize: 12,\n  transition: \"transform ease-out .2s\",\n  willTransform: \"transform\",\n  marginTop: 2\n});\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(violet, \"violet\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  reactHotLoader.register(gray, \"gray\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  reactHotLoader.register(white, \"white\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  reactHotLoader.register(red, \"red\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  reactHotLoader.register(emerald, \"emerald\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  reactHotLoader.register(commonButtonStyle, \"commonButtonStyle\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  reactHotLoader.register(mappingColorByType, \"mappingColorByType\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  reactHotLoader.register(linkStyle, \"linkStyle\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  reactHotLoader.register(getStyleByType, \"getStyleByType\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  reactHotLoader.register(styleBasedOnSize, \"styleBasedOnSize\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  reactHotLoader.register(getButtonStyle, \"getButtonStyle\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  reactHotLoader.register(iconStyle, \"iconStyle\", \"/Users/ritz078/projects/pebble/src/components/styles/Button.styles.ts\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": ["src/components/styles/Button.styles.ts"],
+      "names": [
+        "violet",
+        "colors",
+        "gray",
+        "white",
+        "red",
+        "emerald",
+        "commonButtonStyle",
+        "lineHeight",
+        "height",
+        "constants",
+        "buttonHeight",
+        "padding",
+        "display",
+        "alignItems",
+        "transition",
+        "borderRadius",
+        "outline",
+        "position",
+        "overflow",
+        "cursor",
+        "whiteSpace",
+        "justifyContent",
+        "border",
+        "mappingColorByType",
+        "primary",
+        "base",
+        "hover",
+        "light",
+        "active",
+        "dark",
+        "disabled",
+        "lighter",
+        "secondary",
+        "textColor",
+        "darker",
+        "lightest",
+        "success",
+        "alert",
+        "linkStyle",
+        "backgroundColor",
+        "color",
+        "minWidth",
+        "fontSize",
+        "textDecoration",
+        "getStyleByType",
+        "type",
+        "filled",
+        "_color",
+        "colorBase",
+        "defaultFontColor",
+        "borderColor",
+        "styleBasedOnSize",
+        "typography",
+        "xs",
+        "small",
+        "s",
+        "regular",
+        "large",
+        "normal",
+        "getButtonStyle",
+        "size",
+        "showShadow",
+        "boxShadow",
+        "iconStyle",
+        "marginLeft",
+        "fontWeight",
+        "willTransform",
+        "marginTop"
+      ],
+      "mappings": "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",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import { css } from \"emotion\";\nimport { colors, constants, typography } from \"../../theme\";\nimport { ButtonType, MappingColorByType } from \"../typings/Button\";\n\nconst { violet, gray, white, red, emerald } = colors;\n\nconst commonButtonStyle = css({\n  lineHeight: \"23px\",\n  height: constants.buttonHeight,\n  padding: \"0 20px\",\n  display: \"flex\",\n  alignItems: \"center\",\n  transition: \"all ease-out .2s\",\n  borderRadius: constants.borderRadius,\n  outline: \"none\",\n  position: \"relative\",\n  overflow: \"hidden\",\n  cursor: \"pointer\",\n  whiteSpace: \"nowrap\",\n  justifyContent: \"center\",\n  border: 0,\n  \"&[disabled]\": {\n    cursor: \"not-allowed\"\n  }\n});\n\nconst mappingColorByType: MappingColorByType = {\n  primary: {\n    base: violet.base,\n    hover: violet.light,\n    active: violet.dark,\n    disabled: violet.lighter\n  },\n  secondary: {\n    textColor: gray.darker,\n    base: gray.lighter,\n    hover: gray.lightest,\n    active: gray.base,\n    disabled: gray.lighter\n  },\n  success: {\n    base: emerald.base,\n    hover: emerald.light,\n    active: emerald.dark,\n    disabled: emerald.lighter\n  },\n  alert: {\n    base: red.base,\n    hover: red.light,\n    active: red.dark,\n    disabled: red.lighter\n  }\n};\n\nconst linkStyle = {\n  backgroundColor: \"transparent\",\n  border: 0,\n  color: violet.base,\n  minWidth: 0,\n  padding: 0,\n  fontSize: 14,\n  \":not([disabled]):hover\": {\n    textDecoration: \"underline\"\n  },\n  \"&[disabled]\": {\n    color: violet.lighter\n  }\n};\n\nconst getStyleByType = (type: ButtonType, filled: boolean) => {\n  if (type === \"link\") return linkStyle;\n\n  const _color = mappingColorByType[type];\n  const { base: colorBase, disabled, hover, active, textColor } = _color;\n\n  const defaultFontColor = filled ? textColor || white.base : colorBase;\n\n  return {\n    color: defaultFontColor,\n    backgroundColor: filled ? colorBase : white.base,\n    border: filled ? \"none\" : `1px solid ${colorBase}`,\n    \"&:not([disabled]):hover\": {\n      color: textColor || white.base,\n      backgroundColor: hover,\n      borderColor: hover\n    },\n    \"&:not([disabled]):active\": {\n      color: textColor || white.base,\n      backgroundColor: active,\n      borderColor: active\n    },\n    \"&[disabled]\": {\n      color: textColor || white.base,\n      backgroundColor: disabled,\n      borderColor: disabled\n    }\n  };\n};\n\nconst styleBasedOnSize = {\n  \"x-small\": {\n    height: 25,\n    minWidth: 70,\n    ...typography.xs.light\n  },\n  small: {\n    height: 40,\n    minWidth: 100,\n    ...typography.s.regular\n  },\n  large: {\n    height: 50,\n    minWidth: 140,\n    ...typography.normal.regular\n  }\n};\n\nexport const getButtonStyle = (size, type, showShadow, filled) => {\n  return css([\n    commonButtonStyle,\n    {\n      ...styleBasedOnSize[size],\n      ...getStyleByType(type, filled),\n      boxShadow: showShadow ? constants.boxShadow.base : \"none\"\n    }\n  ]);\n};\n\nexport const iconStyle = css({\n  marginLeft: 15,\n  fontWeight: \"bold\",\n  fontSize: 12,\n  transition: \"transform ease-out .2s\",\n  willTransform: \"transform\",\n  marginTop: 2\n});\n"
+      ]
+    }
+  ]
+}

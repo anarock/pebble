@@ -1,0 +1,35 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"@babel/preset-env\",{\"targets\":{\"node\":\"6\"}}],\"@babel/preset-react\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"@babel/plugin-proposal-object-rest-spread\",\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/.docz/app/imports.js",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/.docz/app/imports.js",
+      "mtime": 1534419804052
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.imports = void 0;\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nconst imports = {\n  'Button.mdx': () => import(\n  /* webpackPrefetch: true, webpackChunkName: \"button\" */\n  'Button.mdx'),\n  'index.mdx': () => import(\n  /* webpackPrefetch: true, webpackChunkName: \"index\" */\n  'index.mdx')\n};\nexports.imports = imports;\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(imports, \"imports\", \"/Users/ritz078/projects/pebble/.docz/app/imports.js\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": [".docz/app/imports.js"],
+      "names": ["imports"],
+      "mappings": ";;;;;;;;;;;;;AAAO,MAAMA,OAAO,GAAG;AACrB,gBAAc,MACZ;AAAO;AAAwD,cAA/D,CAFmB;AAGrB,eAAa,MACX;AAAO;AAAuD,aAA9D;AAJmB,CAAhB;;;;;;;;;;;;;0BAAMA,O",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "export const imports = {\n  'Button.mdx': () =>\n    import(/* webpackPrefetch: true, webpackChunkName: \"button\" */ 'Button.mdx'),\n  'index.mdx': () =>\n    import(/* webpackPrefetch: true, webpackChunkName: \"index\" */ 'index.mdx'),\n}\n"
+      ]
+    }
+  ]
+}

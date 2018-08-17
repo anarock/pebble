@@ -1,0 +1,53 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"env\",{\"targets\":{\"node\":\"6\"}}],[\"/Users/ritz078/projects/pebble/node_modules/babel-preset-react-app/index.js\",{\"flow\":false}],\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/.docz/app/index.jsx",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/.docz/app/index.jsx",
+      "mtime": 1534412836449
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "\"use strict\";\n\nvar _jsxFileName = \"/Users/ritz078/projects/pebble/.docz/app/index.jsx\";\n\nrequire(\"webpack-serve-overlay\");\n\nvar _react = require(\"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = require(\"react-dom\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _imports = require(\"./imports\");\n\nvar _root = require(\"./root\");\n\nvar _root2 = _interopRequireDefault(_root);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nvar _onPreRenders = [];\nvar _onPostRenders = [];\n\nvar onPreRender = function onPreRender() {\n  return _onPreRenders.forEach(function (f) {\n    return f && f();\n  });\n};\n\nvar onPostRender = function onPostRender() {\n  return _onPostRenders.forEach(function (f) {\n    return f && f();\n  });\n};\n\nvar root = document.querySelector('#root');\n\nvar render = function render() {\n  var Component = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _root2.default;\n  onPreRender();\n\n  _reactDom2.default.render(_react2.default.createElement(Component, {\n    imports: _imports.imports,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 17\n    },\n    __self: undefined\n  }), root, onPostRender);\n};\n\nif (module.hot) {\n  module.hot.accept('./imports', function () {\n    return render(_root2.default);\n  });\n}\n\nrender(_root2.default);\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(_onPreRenders, \"_onPreRenders\", \"/Users/ritz078/projects/pebble/.docz/app/index.jsx\");\n  reactHotLoader.register(_onPostRenders, \"_onPostRenders\", \"/Users/ritz078/projects/pebble/.docz/app/index.jsx\");\n  reactHotLoader.register(onPreRender, \"onPreRender\", \"/Users/ritz078/projects/pebble/.docz/app/index.jsx\");\n  reactHotLoader.register(onPostRender, \"onPostRender\", \"/Users/ritz078/projects/pebble/.docz/app/index.jsx\");\n  reactHotLoader.register(root, \"root\", \"/Users/ritz078/projects/pebble/.docz/app/index.jsx\");\n  reactHotLoader.register(render, \"render\", \"/Users/ritz078/projects/pebble/.docz/app/index.jsx\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": [".docz/app/index.jsx"],
+      "names": [
+        "_onPreRenders",
+        "_onPostRenders",
+        "onPreRender",
+        "forEach",
+        "f",
+        "onPostRender",
+        "root",
+        "document",
+        "querySelector",
+        "render",
+        "Component",
+        "Root",
+        "ReactDOM",
+        "imports",
+        "module",
+        "hot",
+        "accept"
+      ],
+      "mappings": ";;;;AAAA;;AACA;;;;AACA;;;;AAEA;;AACA;;;;;;;;;;;;AAEA,IAAMA,aAAa,GAAG,EAAtB;AACA,IAAMC,cAAc,GAAG,EAAvB;;AAEA,IAAMC,WAAW,GAAG,SAAdA,WAAc;AAAA,SAAMF,aAAa,CAACG,OAAd,CAAsB,UAAAC,CAAC;AAAA,WAAIA,CAAC,IAAIA,CAAC,EAAV;AAAA,GAAvB,CAAN;AAAA,CAApB;;AACA,IAAMC,YAAY,GAAG,SAAfA,YAAe;AAAA,SAAMJ,cAAc,CAACE,OAAf,CAAuB,UAAAC,CAAC;AAAA,WAAIA,CAAC,IAAIA,CAAC,EAAV;AAAA,GAAxB,CAAN;AAAA,CAArB;;AAEA,IAAME,IAAI,GAAGC,QAAQ,CAACC,aAAT,CAAuB,OAAvB,CAAb;;AACA,IAAMC,MAAM,GAAG,SAATA,MAAS,GAAsB;AAAA,MAArBC,SAAqB,uEAATC,cAAS;AACnCT,EAAAA,WAAW;;AACXU,qBAASH,MAAT,CAAgB,8BAAC,SAAD;AAAW,IAAA,OAAO,EAAEI,gBAApB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IAAhB,EAAiDP,IAAjD,EAAuDD,YAAvD;AACD,CAHD;;AAKA,IAAIS,MAAM,CAACC,GAAX,EAAgB;AACdD,EAAAA,MAAM,CAACC,GAAP,CAAWC,MAAX,CAAkB,WAAlB,EAA+B;AAAA,WAAMP,MAAM,CAACE,cAAD,CAAZ;AAAA,GAA/B;AACD;;AAEDF,MAAM,CAACE,cAAD,CAAN;;;;;;;;;;;;0BAhBMX,a;0BACAC,c;0BAEAC,W;0BACAG,Y;0BAEAC,I;0BACAG,M",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "import 'webpack-serve-overlay'\nimport React from 'react'\nimport ReactDOM from 'react-dom'\n\nimport { imports } from './imports'\nimport Root from './root'\n\nconst _onPreRenders = []\nconst _onPostRenders = []\n\nconst onPreRender = () => _onPreRenders.forEach(f => f && f())\nconst onPostRender = () => _onPostRenders.forEach(f => f && f())\n\nconst root = document.querySelector('#root')\nconst render = (Component = Root) => {\n  onPreRender()\n  ReactDOM.render(<Component imports={imports} />, root, onPostRender)\n}\n\nif (module.hot) {\n  module.hot.accept('./imports', () => render(Root))\n}\n\nrender(Root)\n"
+      ]
+    }
+  ]
+}

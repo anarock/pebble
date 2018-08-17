@@ -1,0 +1,35 @@
+{
+  "remainingRequest": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js?{\"presets\":[[\"@babel/preset-env\",{\"targets\":{\"node\":\"6\"},\"modules\":false}],\"@babel/preset-react\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/preset-typescript/lib/index.js\"],\"plugins\":[\"@babel/plugin-proposal-object-rest-spread\",\"/Users/ritz078/projects/pebble/node_modules/react-hot-loader/babel.js\",\"/Users/ritz078/projects/pebble/node_modules/docz-core/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js\"],\"env\":{\"test\":{\"plugins\":[\"require-context-hook\"]}},\"cacheDirectory\":true,\"babelrc\":false}!/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js!/Users/ritz078/projects/pebble/.docz/app/imports.js",
+  "dependencies": [
+    {
+      "path": "/Users/ritz078/projects/pebble/.docz/app/imports.js",
+      "mtime": 1534421902964
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/cache-loader/dist/cjs.js",
+      "mtime": 0
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/babel-loader/lib/index.js",
+      "mtime": 1529635966000
+    },
+    {
+      "path": "/Users/ritz078/projects/pebble/node_modules/react-docgen-typescript-loader/dist/index.js",
+      "mtime": 1534034887000
+    }
+  ],
+  "contextDependencies": [],
+  "result": [
+    "(function () {\n  var enterModule = require('react-hot-loader').enterModule;\n\n  enterModule && enterModule(module);\n})();\n\nexport const imports = {\n  'docs/Button.mdx': () => import(\n  /* webpackPrefetch: true, webpackChunkName: \"docs-button\" */\n  'docs/Button.mdx'),\n  'docs/index.mdx': () => import(\n  /* webpackPrefetch: true, webpackChunkName: \"docs-index\" */\n  'docs/index.mdx')\n};\n;\n\n(function () {\n  var reactHotLoader = require('react-hot-loader').default;\n\n  var leaveModule = require('react-hot-loader').leaveModule;\n\n  if (!reactHotLoader) {\n    return;\n  }\n\n  reactHotLoader.register(imports, \"imports\", \"/Users/ritz078/projects/pebble/.docz/app/imports.js\");\n  leaveModule(module);\n})();\n\n;",
+    {
+      "version": 3,
+      "sources": [".docz/app/imports.js"],
+      "names": ["imports"],
+      "mappings": ";;;;;;AAAA,OAAO,MAAMA,OAAO,GAAG;AACrB,qBAAmB,MACjB;AAAO;AAA6D,mBAApE,CAFmB;AAGrB,oBAAkB,MAChB;AAAO;AAA4D,kBAAnE;AAJmB,CAAhB;;;;;;;;;;;;0BAAMA,O",
+      "sourceRoot": "/Users/ritz078/projects/pebble",
+      "sourcesContent": [
+        "export const imports = {\n  'docs/Button.mdx': () =>\n    import(/* webpackPrefetch: true, webpackChunkName: \"docs-button\" */ 'docs/Button.mdx'),\n  'docs/index.mdx': () =>\n    import(/* webpackPrefetch: true, webpackChunkName: \"docs-index\" */ 'docs/index.mdx'),\n}\n"
+      ]
+    }
+  ]
+}
