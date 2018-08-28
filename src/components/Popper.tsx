@@ -4,7 +4,6 @@ import { Manager, Reference, Popper } from "react-popper";
 import { arrowStyle, popperStyle } from "./styles/Popper.styles";
 import { colors } from "../theme";
 import { cx } from "emotion";
-import { Transition } from "react-spring";
 import OutsideClick from "./OutsideClick";
 
 export default class extends React.PureComponent<PopperProps, PopperState> {
@@ -56,45 +55,37 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
               </div>
             )}
           </Reference>
-          <Transition
-            from={{ opacity: 0 }}
-            enter={{ opacity: 1 }}
-            leave={{ opacity: 0 }}
-          >
-            {_isPopperOpen &&
-              (styles => (
-                <Popper {...props}>
-                  {({ ref, style, placement, arrowProps }) => (
-                    <div
-                      className={cx(popperStyle, popperClassName)}
-                      ref={ref}
-                      style={{
-                        ...styles,
-                        ...style,
-                        backgroundColor: popperBackgroundColor
-                      }}
-                      data-placement={placement}
-                    >
-                      {children({
-                        toggle: this.toggle,
-                        isOpen: this.state.isOpen
-                      })}
-                      <div
-                        className={arrowStyle}
-                        ref={arrowProps.ref}
-                        style={{
-                          ...arrowProps.style,
-                          color: popperBackgroundColor
-                        }}
-                        data-placement={placement}
-                      >
-                        ▶
-                      </div>
-                    </div>
-                  )}
-                </Popper>
-              ))}
-          </Transition>
+          {_isPopperOpen && (
+            <Popper {...props}>
+              {({ ref, style, placement, arrowProps }) => (
+                <div
+                  className={cx(popperStyle, popperClassName)}
+                  ref={ref}
+                  style={{
+                    ...style,
+                    backgroundColor: popperBackgroundColor
+                  }}
+                  data-placement={placement}
+                >
+                  {children({
+                    toggle: this.toggle,
+                    isOpen: this.state.isOpen
+                  })}
+                  <div
+                    className={arrowStyle}
+                    ref={arrowProps.ref}
+                    style={{
+                      ...arrowProps.style,
+                      color: popperBackgroundColor
+                    }}
+                    data-placement={placement}
+                  >
+                    ▶
+                  </div>
+                </div>
+              )}
+            </Popper>
+          )}
         </Manager>
       </OutsideClick>
     );

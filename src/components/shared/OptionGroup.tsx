@@ -86,7 +86,7 @@ class OptionGroup extends React.PureComponent<
       }
     );
 
-    if (this.optionRef.current) {
+    if (this.optionRef.current && this.optionRef.current.childNodes) {
       this.observer.observe(this.optionRef.current.childNodes[0] as Element);
     }
   }

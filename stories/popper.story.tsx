@@ -16,8 +16,8 @@ storiesOf("Popper", module).add("simple", () => (
       }
     }}
   >
-    {() => (
-      <OptionGroupRadio onChange={() => {}}>
+    {({ toggle }) => (
+      <OptionGroupRadio onChange={toggle}>
         <Option value="option-1" label="I am an option" />
         <Option value="option-2" label="I am an option" />
         <Option value="option-3" label="I am an option" />
