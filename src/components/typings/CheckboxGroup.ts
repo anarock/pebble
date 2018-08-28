@@ -2,7 +2,7 @@ import * as React from "react";
 
 export interface CheckboxGroupProps {
   selected: (number | string)[];
-  onChange: (value: (number | string)[], props: CheckboxGroupProps) => void;
+  onChange: (value: (number | string)[], e: React.MouseEvent) => void;
   children: React.ReactNode | React.ReactNodeArray;
   className?: string;
   name: string;

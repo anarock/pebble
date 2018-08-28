@@ -64,8 +64,8 @@ const Select: React.SFC<SelectProps> = props => {
           <React.Fragment>
             <OptionGroup
               selected={selected}
-              onChange={_value => {
-                onChange(_value, props);
+              onChange={(_value, event) => {
+                onChange(_value, event);
                 if (!multiSelect) {
                   toggle();
                 }

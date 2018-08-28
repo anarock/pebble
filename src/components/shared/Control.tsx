@@ -23,7 +23,9 @@ const Control: React.SFC<ControlProps> = props => {
       data-disabled={disabled}
       tabIndex={checked ? 0 : -1}
       onClick={
-        !disabled ? () => onChange({ value, checked: !checked }) : undefined
+        !disabled
+          ? (e: React.MouseEvent) => onChange({ value, checked: !checked }, e)
+          : undefined
       }
     >
       {children(props)}

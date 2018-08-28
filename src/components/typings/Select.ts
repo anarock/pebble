@@ -11,7 +11,7 @@ export interface SelectProps {
   value?: string;
   selected?: Selected;
   multiSelect?: boolean;
-  onChange: (value: Selected, props: SelectProps) => void;
+  onChange: (value: Selected, event: React.MouseEvent) => void;
   onApply?: (value: Selected, props: SelectProps) => void;
   onClear?: () => void;
   searchBox?: boolean;

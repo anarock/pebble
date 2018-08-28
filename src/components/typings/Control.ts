@@ -1,7 +1,10 @@
 import * as React from "react";
 
 export interface ControlProps {
-  onChange?: (args: { value: React.ReactText; checked: boolean }) => void;
+  onChange?: (
+    args: { value: React.ReactText; checked: boolean },
+    e: React.MouseEvent
+  ) => void;
   value: React.ReactText;
   label: string;
   checked?: boolean;
