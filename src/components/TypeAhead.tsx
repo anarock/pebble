@@ -21,6 +21,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
         value={value}
         errorMessage={props.errorMessage}
         loading={props.loading}
+        required={props.required}
       />
     )
   };

@@ -24,6 +24,7 @@ export interface TypeaheadProps {
   placeholder: string;
   loading?: boolean;
   selected?: number | string;
+  required?: boolean;
   children: React.ReactNodeArray;
   valueExtractor: (value: string | number) => string;
 }

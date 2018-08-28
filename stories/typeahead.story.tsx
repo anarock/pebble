@@ -10,7 +10,7 @@ storiesOf("Typeahead", module).add("simple", () => (
     className={css({
       width: 400
     })}
-    placeholder="H"
+    placeholder="Typeahead"
     onChange={action("change")}
     onSelect={action("select")}
     valueExtractor={value => value && value.toString()}
