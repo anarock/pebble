@@ -3,7 +3,13 @@ import { cx } from "emotion";
 import { SearchProps } from "./typings/Search";
 import { searchStyle, searchWrapperStyle } from "./styles/Search.styles";
 
-const Search: React.SFC<SearchProps> = ({ type, onChange, placeholder }) => {
+const Search: React.SFC<SearchProps> = ({
+  type,
+  onChange,
+  placeholder,
+  showSearchIcon = true,
+  className
+}) => {
   const wrapperClassName = cx(searchWrapperStyle, {
     __pebble__search__small: type === "small",
     __pebble__search__large: type === "large",
@@ -11,8 +17,8 @@ const Search: React.SFC<SearchProps> = ({ type, onChange, placeholder }) => {
   });
 
   return (
-    <div className={wrapperClassName}>
-      {type !== "large" && <i className="icon-search" />}
+    <div className={cx(wrapperClassName, className)}>
+      {type !== "large" && showSearchIcon && <i className="icon-search" />}
       <input
         className={searchStyle}
         type="text"

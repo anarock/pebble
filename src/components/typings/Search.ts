@@ -3,4 +3,6 @@ export interface SearchProps {
   onChange: (text: string) => void;
   value?: string;
   placeholder: string;
+  showSearchIcon?: boolean;
+  className?: string;
 }
