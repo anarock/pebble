@@ -10,14 +10,14 @@ const Search: React.SFC<SearchProps> = ({
   showSearchIcon = true,
   className
 }) => {
-  const wrapperClassName = cx(searchWrapperStyle, className, {
+  const wrapperClassName = cx(searchWrapperStyle, {
     __pebble__search__small: type === "small",
     __pebble__search__large: type === "large",
     __pebble__search__table: type === "table"
   });
 
   return (
-    <div className={wrapperClassName}>
+    <div className={cx(wrapperClassName, className)}>
       {type !== "large" && showSearchIcon && <i className="icon-search" />}
       <input
         className={searchStyle}
