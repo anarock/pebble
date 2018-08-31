@@ -8,3 +8,4 @@ optimized-svg
 package-lock.json
 native
 coverage
+.docz

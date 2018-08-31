@@ -28,20 +28,53 @@ Array [
   margin-right: 10px;
 }
 
-<div
+<ForwardRef
     className="emotion-0"
     style={
       Object {
         "backgroundColor": "#10AC60",
         "opacity": 0,
+        "originalKey": "styles => {
+                    /* istanbul ignore next */cov_1wjqu4hxg1.f[9]++;
+                    cov_1wjqu4hxg1.s[27]++;
+                    return (/* istanbul ignore next */React.createElement(
+                            /* istanbul ignore next */react_spring_1.animated.div,
+                            /* istanbul ignore next */{ className: Toast_styles_1.toastWrapper, style: /* istanbul ignore next */_extends({ backgroundColor: bColor }, styles) },
+                            /* istanbul ignore next */React.createElement( /* istanbul ignore next */\\"i\\", /* istanbul ignore next */{ className: iconClass }),
+                            this.state.text
+                        )
+                    );
+                }",
         "transform": "translateX(-50%) translateY(10px)",
       }
     }
   >
-    <i
-      className="icon-radio-check-filled"
-    />
-    hello world
-  </div>,
+    <div
+      className="emotion-0"
+      style={
+        Object {
+          "backgroundColor": "#10AC60",
+          "opacity": 0,
+          "originalKey": "styles => {
+                    /* istanbul ignore next */cov_1wjqu4hxg1.f[9]++;
+                    cov_1wjqu4hxg1.s[27]++;
+                    return (/* istanbul ignore next */React.createElement(
+                            /* istanbul ignore next */react_spring_1.animated.div,
+                            /* istanbul ignore next */{ className: Toast_styles_1.toastWrapper, style: /* istanbul ignore next */_extends({ backgroundColor: bColor }, styles) },
+                            /* istanbul ignore next */React.createElement( /* istanbul ignore next */\\"i\\", /* istanbul ignore next */{ className: iconClass }),
+                            this.state.text
+                        )
+                    );
+                }",
+          "transform": "translateX(-50%) translateY(10px)",
+        }
+      }
+    >
+      <i
+        className="icon-radio-check-filled"
+      />
+      hello world
+    </div>
+  </ForwardRef>,
 ]
 `;
