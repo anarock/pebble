@@ -17,6 +17,7 @@ export interface DropdownProps {
   initiallyOpen?: boolean;
   isSelected?: boolean;
   disabled?: boolean;
+  labelClassName?: string;
 }
 
 export interface DropdownState {
