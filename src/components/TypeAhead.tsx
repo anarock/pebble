@@ -34,7 +34,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
   state: TypeaheadState = {
     value: this.props.initialValue,
-    showSuggestions: true
+    showSuggestions: false
   };
 
   onChange = () => {
