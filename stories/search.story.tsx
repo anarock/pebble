@@ -11,6 +11,6 @@ storiesOf("Search", module).add("Default", () => (
     placeholder={text("placeholder", "Search")}
     onChange={action("change")}
     type={select("type", type, "small")}
-    showSearchIcon={boolean("Show search icon", true)}
+    showSearchIcon={boolean("showSearchIcon", true)}
   />
 ));
