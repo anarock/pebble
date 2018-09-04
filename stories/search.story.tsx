@@ -12,7 +12,7 @@ storiesOf("Search", module).add("Default", () => (
     onChange={action("change")}
     type={select("type", type, "small")}
     showSearchIcon={boolean("showSearchIcon", true)}
-    showClearButton={boolean("showClearButton", true)}
+    clearable={boolean("showClearButton", true)}
     onClear={() => {}}
   />
 ));

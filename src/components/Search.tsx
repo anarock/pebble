@@ -8,9 +8,11 @@ import {
 } from "./styles/Search.styles";
 
 class Search extends React.PureComponent<SearchProps, SearchState> {
+  searchInputRef: React.RefObject<HTMLInputElement> = React.createRef();
+
   static defaultProps: Partial<SearchProps> = {
     showSearchIcon: true,
-    showClearButton: true,
+    clearable: true,
     onClear: () => {}
   };
 
@@ -25,7 +27,7 @@ class Search extends React.PureComponent<SearchProps, SearchState> {
       placeholder,
       showSearchIcon,
       className,
-      showClearButton,
+      clearable,
       onClear
     } = this.props;
     const { searchValue } = this.state;
@@ -44,17 +46,18 @@ class Search extends React.PureComponent<SearchProps, SearchState> {
           type="text"
           aria-label={placeholder}
           placeholder={placeholder}
-          value={searchValue}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
             this.setState({ searchValue: e.target.value });
             onChange(e.target.value);
           }}
+          ref={this.searchInputRef}
         />
-        {showClearButton && (
+        {clearable && (
           <div
             className={cx(clearContainer, { __display: !!searchValue.length })}
             onClick={() => {
               this.setState({ searchValue: "" });
+              this.searchInputRef.current.value = "";
               onClear();
             }}
           >
