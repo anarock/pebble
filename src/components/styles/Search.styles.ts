@@ -41,3 +41,14 @@ export const searchStyle = css({
   ...getPlaceholderStyle(colors.gray.light),
   backgroundColor: "transparent"
 });
+
+export const clearContainer = css({
+  display: "table",
+  height: 16,
+  width: 16,
+  backgroundColor: colors.gray.light,
+  fontSize: 6,
+  borderRadius: 16,
+  textAlign: "center",
+  cursor: "pointer"
+});

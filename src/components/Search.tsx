@@ -1,15 +1,22 @@
 import * as React from "react";
 import { cx } from "emotion";
 import { SearchProps } from "./typings/Search";
-import { searchStyle, searchWrapperStyle } from "./styles/Search.styles";
+import {
+  searchStyle,
+  searchWrapperStyle,
+  clearContainer
+} from "./styles/Search.styles";
 
 const Search: React.SFC<SearchProps> = ({
   type,
   onChange,
   placeholder,
   showSearchIcon = true,
-  className
+  className,
+  showClearButton = false,
+  onClear
 }) => {
+  const searchInput: React.RefObject<HTMLInputElement> = React.createRef();
   const wrapperClassName = cx(searchWrapperStyle, {
     __pebble__search__small: type === "small",
     __pebble__search__large: type === "large",
@@ -27,7 +34,22 @@ const Search: React.SFC<SearchProps> = ({
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.target.value)
         }
+        ref={searchInput}
       />
+      {showClearButton && (
+        <div
+          className={clearContainer}
+          onClick={() => {
+            searchInput.current.value = "";
+            onClear();
+          }}
+        >
+          <i
+            className="icon-close"
+            style={{ display: "table-cell", verticalAlign: "middle" }}
+          />
+        </div>
+      )}
     </div>
   );
 };
