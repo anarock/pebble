@@ -35,8 +35,8 @@ Array [
         "backgroundColor": "#10AC60",
         "opacity": 0,
         "originalKey": "styles => {
-                    /* istanbul ignore next */cov_1wjqu4hxg1.f[9]++;
-                    cov_1wjqu4hxg1.s[27]++;
+                    /* istanbul ignore next */cov_3rzavxems.f[9]++;
+                    cov_3rzavxems.s[27]++;
                     return (/* istanbul ignore next */React.createElement(
                             /* istanbul ignore next */react_spring_1.animated.div,
                             /* istanbul ignore next */{ className: Toast_styles_1.toastWrapper, style: /* istanbul ignore next */_extends({ backgroundColor: bColor }, styles) },
@@ -56,8 +56,8 @@ Array [
           "backgroundColor": "#10AC60",
           "opacity": 0,
           "originalKey": "styles => {
-                    /* istanbul ignore next */cov_1wjqu4hxg1.f[9]++;
-                    cov_1wjqu4hxg1.s[27]++;
+                    /* istanbul ignore next */cov_3rzavxems.f[9]++;
+                    cov_3rzavxems.s[27]++;
                     return (/* istanbul ignore next */React.createElement(
                             /* istanbul ignore next */react_spring_1.animated.div,
                             /* istanbul ignore next */{ className: Toast_styles_1.toastWrapper, style: /* istanbul ignore next */_extends({ backgroundColor: bColor }, styles) },
