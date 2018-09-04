@@ -8,3 +8,7 @@ export interface SearchProps {
   showClearButton?: boolean;
   onClear?: () => void;
 }
+
+export interface SearchState {
+  searchValue: string;
+}

@@ -50,5 +50,12 @@ export const clearContainer = css({
   fontSize: 6,
   borderRadius: 16,
   textAlign: "center",
-  cursor: "pointer"
+  cursor: "pointer",
+  pointerEvents: "none",
+  transition: "opacity 0.3s",
+  opacity: 0,
+  "&.__display": {
+    opacity: 1,
+    pointerEvents: "unset"
+  }
 });
