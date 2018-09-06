@@ -35,5 +35,6 @@ storiesOf("Tooltip", module).add("simple", () => (
     isOpen={boolean("isOpen")}
     placement={select("placement", placements)}
     isError={boolean("error")}
+    disabled={boolean("disabled")}
   />
 ));

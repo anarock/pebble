@@ -7,6 +7,7 @@ export interface TooltipProps {
   modifiers?: PopperJS.Modifiers;
   isOpen?: boolean;
   isError?: boolean;
+  disabled?: boolean;
 }
 
 export interface TooltipState {
