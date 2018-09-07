@@ -1,13 +1,21 @@
 import * as React from "react";
 import debounce from "just-debounce-it";
-import { TypeaheadProps, TypeaheadState } from "./typings/Typeahead";
+import {
+  TypeaheadProps,
+  TypeaheadState,
+  CachedTypeAheadProps,
+  CacheTypeAheadState
+} from "./typings/TypeAhead";
 import { cx } from "emotion";
 import Input from "./Input";
 import { optionsWrapper, wrapper } from "./styles/TypeAhead.styles";
 import OutsideClick from "./OutsideClick";
 import OptionGroupRadio from "./OptionGroupRadio";
 
-class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
+export default class TypeAhead extends React.PureComponent<
+  TypeaheadProps,
+  TypeaheadState
+> {
   debouncedChange: () => void;
   typeAheadRef: React.RefObject<HTMLDivElement> = React.createRef();
 
@@ -102,4 +110,60 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   }
 }
 
-export default TypeAhead;
+export class CachedTypeAhead extends React.PureComponent<
+  CachedTypeAheadProps,
+  CacheTypeAheadState
+> {
+  state = {
+    query: "",
+    cache: {
+      "": {
+        promise: Promise.resolve([]),
+        options: []
+      }
+    }
+  };
+
+  onSearchBoxQueryChange = async (query: string) => {
+    if (this.state.query === query) return;
+
+    this.setState({ query });
+    if (this.state.cache[query]) return;
+
+    const optionsPromise = this.props.children(query);
+    this.setState({
+      query: query,
+      cache: {
+        ...this.state.cache,
+        [query]: {
+          promise: optionsPromise
+        }
+      }
+    });
+
+    const options = await optionsPromise;
+    this.setState({
+      cache: {
+        ...this.state.cache,
+        [query]: { options }
+      }
+    });
+  };
+
+  render() {
+    const { children, ...remainingProps } = this.props;
+    const { query, cache } = this.state;
+
+    let options = cache[query] && cache[query].options;
+
+    return (
+      <TypeAhead
+        {...remainingProps}
+        onChange={this.onSearchBoxQueryChange}
+        loading={!options}
+      >
+        {options || []}
+      </TypeAhead>
+    );
+  }
+}

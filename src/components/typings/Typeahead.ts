@@ -33,3 +33,18 @@ export interface TypeaheadState {
   value: string;
   showSuggestions: boolean;
 }
+
+type keys = Exclude<keyof TypeaheadProps, "onChange" | "children">;
+export type CachedTypeAheadProps = Pick<TypeaheadProps, keys> & {
+  children: (query: string) => Promise<React.ReactNodeArray>;
+};
+
+export type CacheTypeAheadState = {
+  query: string;
+  cache: {
+    [query: string]: {
+      promise: Promise<React.ReactNodeArray>;
+      options?: React.ReactNodeArray;
+    };
+  };
+};
