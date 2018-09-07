@@ -5,6 +5,4 @@ export const dateClass = css({
   width: "100%"
 });
 
-export const dropDownClassName = css({
-  marginTop: -40
-});
+export const dropDownClassName = css({});

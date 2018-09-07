@@ -8,6 +8,5 @@ export const dropDownStyle = css({
   borderRadius: constants.borderRadius,
   position: "absolute",
   zIndex: 999,
-  marginTop: 10,
   transformOrigin: "top left"
 });

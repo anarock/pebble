@@ -10,8 +10,6 @@ export const wrapperStyle = css({
   backgroundColor: colors.white.base,
   width: "100%",
   flexDirection: "column",
-  marginBottom: 20,
-  height: 68,
   "&._pebble_input_wrapper_textarea": {
     height: 110
   }

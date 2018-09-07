@@ -9,9 +9,7 @@ export const selectInputStyle = css({
   pointerEvents: "none"
 });
 
-export const dropDownClass = css({
-  marginTop: -40
-});
+export const dropDownClass = css({});
 
 export const inputWrapper = css({
   cursor: "pointer",
