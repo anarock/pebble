@@ -127,8 +127,9 @@ export class CachedTypeAhead extends React.PureComponent<
   onSearchBoxQueryChange = async (query: string) => {
     if (this.state.query === query) return;
 
-    this.setState({ query });
-    if (this.state.cache[query]) return;
+    if (this.state.cache[query]) {
+      return this.setState({ query });
+    }
 
     const optionsPromise = this.props.children(query);
     this.setState({
@@ -154,7 +155,7 @@ export class CachedTypeAhead extends React.PureComponent<
     const { children, ...remainingProps } = this.props;
     const { query, cache } = this.state;
 
-    let options = cache[query] && cache[query].options;
+    let options = cache[query].options;
 
     return (
       <TypeAhead
