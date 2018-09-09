@@ -4,18 +4,6 @@ import Toast from "../Toast";
 import sinon from "sinon";
 
 describe("Component: Toast", () => {
-  test("snapshot", () => {
-    const toast = mount(<Toast />);
-
-    toast.setState({
-      show: true,
-      text: "hello world",
-      type: "success"
-    });
-
-    expect(toast).toMatchSnapshot();
-  });
-
   test("renders when called and disappears automatically.", () => {
     const clock = sinon.useFakeTimers();
 
