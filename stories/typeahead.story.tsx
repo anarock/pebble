@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import TypeAhead, { CachedTypeAhead } from "../src/components/TypeAhead";
+import { TypeAhead } from "../src";
 import { action } from "@storybook/addon-actions";
 import { css } from "emotion";
 import Option from "../src/components/Option";
@@ -26,7 +26,10 @@ storiesOf("Typeahead", module)
     </TypeAhead>
   ))
   .add("cached", () => (
-    <CachedTypeAhead
+    <TypeAhead.Cached
+      className={css({
+        width: 200
+      })}
       placeholder="Select User"
       valueExtractor={v => v as string}
       onSelect={action("select")}
@@ -46,5 +49,5 @@ storiesOf("Typeahead", module)
             ))
           )
       }
-    </CachedTypeAhead>
+    </TypeAhead.Cached>
   ));

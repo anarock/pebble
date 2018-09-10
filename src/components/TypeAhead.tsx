@@ -12,12 +12,73 @@ import { optionsWrapper, wrapper } from "./styles/TypeAhead.styles";
 import OutsideClick from "./OutsideClick";
 import OptionGroupRadio from "./OptionGroupRadio";
 
+export class CachedTypeAhead extends React.PureComponent<
+  CachedTypeAheadProps,
+  CacheTypeAheadState
+> {
+  state = {
+    query: "",
+    cache: {
+      "": {
+        promise: Promise.resolve([]),
+        options: []
+      }
+    }
+  };
+
+  onSearchBoxQueryChange = async (query: string) => {
+    if (this.state.query === query) return;
+
+    if (this.state.cache[query]) {
+      return this.setState({ query });
+    }
+
+    const optionsPromise = this.props.children(query);
+    this.setState({
+      query: query,
+      cache: {
+        ...this.state.cache,
+        [query]: {
+          promise: optionsPromise
+        }
+      }
+    });
+
+    const options = await optionsPromise;
+    this.setState({
+      cache: {
+        ...this.state.cache,
+        [query]: { options }
+      }
+    });
+  };
+
+  render() {
+    const { ...remainingProps } = this.props;
+    const { query, cache } = this.state;
+
+    let options = cache[query].options || null;
+
+    return (
+      <TypeAhead
+        {...remainingProps}
+        onChange={this.onSearchBoxQueryChange}
+        loading={!options}
+      >
+        {options}
+      </TypeAhead>
+    );
+  }
+}
+
 export default class TypeAhead extends React.PureComponent<
   TypeaheadProps,
   TypeaheadState
 > {
   debouncedChange: () => void;
   typeAheadRef: React.RefObject<HTMLDivElement> = React.createRef();
+
+  static Cached = CachedTypeAhead;
 
   static defaultProps: Partial<TypeaheadProps> = {
     debounceTime: 500,
@@ -97,74 +158,17 @@ export default class TypeAhead extends React.PureComponent<
             this.props
           )}
 
-          {showSuggestions && (
-            <div className={cx(optionsWrapper, dropdownClassName)}>
-              <OptionGroupRadio onChange={this.onSelect}>
-                {children}
-              </OptionGroupRadio>
-            </div>
-          )}
+          {showSuggestions &&
+            children &&
+            !!children.length && (
+              <div className={cx(optionsWrapper, dropdownClassName)}>
+                <OptionGroupRadio onChange={this.onSelect}>
+                  {children}
+                </OptionGroupRadio>
+              </div>
+            )}
         </div>
       </OutsideClick>
-    );
-  }
-}
-
-export class CachedTypeAhead extends React.PureComponent<
-  CachedTypeAheadProps,
-  CacheTypeAheadState
-> {
-  state = {
-    query: "",
-    cache: {
-      "": {
-        promise: Promise.resolve([]),
-        options: []
-      }
-    }
-  };
-
-  onSearchBoxQueryChange = async (query: string) => {
-    if (this.state.query === query) return;
-
-    if (this.state.cache[query]) {
-      return this.setState({ query });
-    }
-
-    const optionsPromise = this.props.children(query);
-    this.setState({
-      query: query,
-      cache: {
-        ...this.state.cache,
-        [query]: {
-          promise: optionsPromise
-        }
-      }
-    });
-
-    const options = await optionsPromise;
-    this.setState({
-      cache: {
-        ...this.state.cache,
-        [query]: { options }
-      }
-    });
-  };
-
-  render() {
-    const { children, ...remainingProps } = this.props;
-    const { query, cache } = this.state;
-
-    let options = cache[query].options;
-
-    return (
-      <TypeAhead
-        {...remainingProps}
-        onChange={this.onSearchBoxQueryChange}
-        loading={!options}
-      >
-        {options || []}
-      </TypeAhead>
     );
   }
 }
