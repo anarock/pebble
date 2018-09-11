@@ -26,7 +26,7 @@ export class CachedTypeAhead extends React.PureComponent<
     }
   };
 
-  onSearchBoxQueryChange = async (query: string) => {
+  private onSearchBoxQueryChange = async (query: string) => {
     if (this.state.query === query) return;
 
     if (this.state.cache[query]) {
