@@ -12,7 +12,7 @@ const wrapperStyle = css({
   backgroundColor: "white"
 });
 
-let obj
+let obj=[]
 for(var i=0;i < 500;i++){
   obj[i]=i
 }
