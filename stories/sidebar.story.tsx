@@ -12,11 +12,6 @@ const wrapperStyle = css({
   backgroundColor: "white"
 });
 
-let obj=[]
-for(var i=0;i < 500;i++){
-  obj[i]=i
-}
-
 storiesOf("SideBar", module).add(
   "simple",
   withState({ value: false })(({ store }) => (
@@ -29,11 +24,7 @@ storiesOf("SideBar", module).add(
         width={number("Width", 400)}
         isOpen={store.state.value}
       >
-        <div className={wrapperStyle} onClick={() => {}} >
-        <div>
-          {obj.map(x => <div>x</div>)}
-        </div>
-        </div>
+        <div className={wrapperStyle} onClick={() => {}} />
       </SideBar>
     </React.Fragment>
   ))
