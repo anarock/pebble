@@ -21,18 +21,38 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
       isOpen: false
     });
 
+  private addListeners = () => {
+    if (!this.props.disabled) {
+      this.labelRef.current.addEventListener("mouseenter", this.showTooltip);
+      this.labelRef.current.addEventListener("mouseout", this.hideTooltip);
+    }
+  };
+
+  private removeListeners = () => {
+    this.labelRef.current.removeEventListener("mouseenter", this.showTooltip);
+    this.labelRef.current.removeEventListener("mouseout", this.showTooltip);
+  };
+
   componentDidMount() {
-    this.labelRef.current.addEventListener("mouseenter", this.showTooltip);
-    this.labelRef.current.addEventListener("mouseout", this.hideTooltip);
+    this.addListeners();
   }
 
   componentWillUnmount() {
-    this.labelRef.current.removeEventListener("mouseenter", this.showTooltip);
-    this.labelRef.current.removeEventListener("mouseout", this.showTooltip);
+    this.removeListeners();
   }
 
+  componentDidUpdate(prevProps: TooltipProps) {
+    if (prevProps.disabled !== this.props.disabled) {
+      this.props.disabled ? this.removeListeners() : this.addListeners();
+    }
+  }
+
+  private getTooltip = () => (
+    <span className={textStyle}>{this.props.text}</span>
+  );
+
   render() {
-    const { placement, text, label, modifiers, isError } = this.props;
+    const { placement, label, modifiers, isError } = this.props;
 
     return (
       <Popper
@@ -46,7 +66,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
         popperClassName={popperStyle}
         closeOnClickOutside={false}
       >
-        {() => <span className={textStyle}>{text}</span>}
+        {this.getTooltip}
       </Popper>
     );
   }

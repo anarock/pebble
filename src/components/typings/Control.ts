@@ -6,7 +6,7 @@ export interface ControlProps {
     e: React.MouseEvent
   ) => void;
   value: React.ReactText;
-  label: string;
+  label: React.ReactText | React.ReactNode;
   checked?: boolean;
   disabled?: boolean;
   children?: (props: ControlProps) => React.ReactNode | React.ReactNodeArray;
