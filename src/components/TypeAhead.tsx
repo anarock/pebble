@@ -78,8 +78,9 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
           })
         }
         disabled={!showSuggestions}
+        className={className}
       >
-        <div className={cx(wrapper, className)} ref={this.typeAheadRef}>
+        <div className={cx(wrapper)} ref={this.typeAheadRef}>
           {searchBox(
             {
               registerChange: this.registerChange,
