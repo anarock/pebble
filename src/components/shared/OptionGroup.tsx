@@ -143,15 +143,18 @@ class OptionGroup extends React.PureComponent<
             />
           </div>
         )}
-        <div
-          ref={this.optionRef}
-          style={{
-            paddingTop: searchBox ? 0 : undefined
-          }}
-          className={cx(optionsWrapper, className)}
-        >
-          {_children}
-        </div>
+        {children &&
+          !!children.length && (
+            <div
+              ref={this.optionRef}
+              style={{
+                paddingTop: searchBox ? 0 : undefined
+              }}
+              className={cx(optionsWrapper, className)}
+            >
+              {_children}
+            </div>
+          )}
       </React.Fragment>
     );
   }
