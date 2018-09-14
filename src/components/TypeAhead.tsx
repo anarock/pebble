@@ -79,24 +79,22 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
         disabled={!showSuggestions}
         className={cx(wrapper, className)}
       >
-        <React.Fragment>
-          {searchBox(
-            {
-              registerChange: this.registerChange,
-              onFocus: this.onFocus,
-              value
-            },
-            this.props
-          )}
+        {searchBox(
+          {
+            registerChange: this.registerChange,
+            onFocus: this.onFocus,
+            value
+          },
+          this.props
+        )}
 
-          {showSuggestions && (
-            <div className={cx(optionsWrapper, dropdownClassName)}>
-              <OptionGroupRadio onChange={this.onSelect}>
-                {children}
-              </OptionGroupRadio>
-            </div>
-          )}
-        </React.Fragment>
+        {showSuggestions && (
+          <div className={cx(optionsWrapper, dropdownClassName)}>
+            <OptionGroupRadio onChange={this.onSelect}>
+              {children}
+            </OptionGroupRadio>
+          </div>
+        )}
       </OutsideClick>
     );
   }
