@@ -9,7 +9,9 @@ import { css } from "emotion";
 const style = css({
   height: 200,
   width: 200,
-  backgroundColor: colors.white.base
+  backgroundColor: colors.white.base,
+  overflowY: "scroll",
+  WebkitOverflowScrolling: "touch"
 });
 
 let arr = [];
@@ -17,13 +19,8 @@ for (let i = 0; i < 5000; i++) {
   arr[i] = i;
 }
 
-const modalTest = css({
-  overflowY: "scroll",
-  WebkitOverflowScrolling: "touch"
-});
-
 storiesOf("Modal", module).add("simple", () => (
-  <Modal visible={boolean("Visible", true)} className={modalTest}>
+  <Modal visible={boolean("Visible", true)}>
     <div className={style}>
       {arr.map(id => (
         <div>{id}</div>
