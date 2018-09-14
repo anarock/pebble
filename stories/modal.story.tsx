@@ -7,11 +7,9 @@ import { colors } from "../src/theme";
 import { css } from "emotion";
 
 const style = css({
-  height: 800,
+  height: 200,
   width: 200,
-  backgroundColor: colors.white.base,
-  overflowY: "scroll",
-  WebkitOverflowScrolling: "touch"
+  backgroundColor: colors.white.base
 });
 
 let arr = [];
