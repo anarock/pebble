@@ -7,7 +7,7 @@ import { colors } from "../src/theme";
 import { css } from "emotion";
 
 const style = css({
-  height: 200,
+  height: 800,
   width: 200,
   backgroundColor: colors.white.base,
   overflowY: "scroll",
