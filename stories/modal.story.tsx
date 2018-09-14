@@ -17,8 +17,13 @@ for (let i = 0; i < 5000; i++) {
   arr[i] = i;
 }
 
+const modalTest = css({
+  overflowY: "scroll",
+  WebkitOverflowScrolling: "touch"
+});
+
 storiesOf("Modal", module).add("simple", () => (
-  <Modal visible={boolean("Visible", true)}>
+  <Modal visible={boolean("Visible", true)} className={modalTest}>
     <div className={style}>
       {arr.map(id => (
         <div>{id}</div>
