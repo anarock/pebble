@@ -18,7 +18,7 @@ for (let i = 0; i < 5000; i++) {
 }
 
 storiesOf("Modal", module).add("simple", () => (
-  <Modal visible={boolean("Visible", false)}>
+  <Modal visible={boolean("Visible", true)}>
     <div className={style}>
       {arr.map(id => (
         <div>{id}</div>
