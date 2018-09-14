@@ -10,5 +10,6 @@ export const modalContainer = css({
   display: "flex",
   justifyContent: "center",
   overflowY: "scroll",
+  WebkitOverflowScrolling: "touch",
   zIndex: 99999
 });
