@@ -24,6 +24,7 @@ import CheckboxGroup from "./CheckboxGroup";
 import Option from "./Option";
 import OptionGroupRadio from "./OptionGroupRadio";
 import OptionGroupCheckBox from "./OptionGroupCheckBox";
+import OutsideClick from "./OutsideClick";
 
 export {
   Button,
@@ -51,5 +52,6 @@ export {
   CheckboxGroup,
   Option,
   OptionGroupRadio,
-  OptionGroupCheckBox
+  OptionGroupCheckBox,
+  OutsideClick
 };
