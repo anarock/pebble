@@ -6,7 +6,7 @@ type Toggle = () => void;
 export interface DropdownProps {
   children: (args: { toggle: Toggle }) => JSX.Element | string;
   buttonLabel?: React.ReactChildren | string;
-  closeOnClickOutside?: boolean;
+  closeOnOutsideClick?: boolean;
   type?: ButtonType;
   labelComponent?: (
     arg: { isOpen: boolean; toggleDropdown: Toggle }
