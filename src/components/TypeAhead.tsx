@@ -9,7 +9,6 @@ import OptionGroupRadio from "./OptionGroupRadio";
 
 class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   debouncedChange: () => void;
-  typeAheadRef: React.RefObject<HTMLDivElement> = React.createRef();
 
   static defaultProps: Partial<TypeaheadProps> = {
     debounceTime: 500,
@@ -78,25 +77,24 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
           })
         }
         disabled={!showSuggestions}
+        className={cx(wrapper, className)}
       >
-        <div className={cx(wrapper, className)} ref={this.typeAheadRef}>
-          {searchBox(
-            {
-              registerChange: this.registerChange,
-              onFocus: this.onFocus,
-              value
-            },
-            this.props
-          )}
+        {searchBox(
+          {
+            registerChange: this.registerChange,
+            onFocus: this.onFocus,
+            value
+          },
+          this.props
+        )}
 
-          {showSuggestions && (
-            <div className={cx(optionsWrapper, dropdownClassName)}>
-              <OptionGroupRadio onChange={this.onSelect}>
-                {children}
-              </OptionGroupRadio>
-            </div>
-          )}
-        </div>
+        {showSuggestions && (
+          <div className={cx(optionsWrapper, dropdownClassName)}>
+            <OptionGroupRadio onChange={this.onSelect}>
+              {children}
+            </OptionGroupRadio>
+          </div>
+        )}
       </OutsideClick>
     );
   }

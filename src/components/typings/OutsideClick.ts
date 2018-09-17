@@ -1,5 +1,6 @@
 export interface OutsideClickProps {
   onOutsideClick: () => void;
-  children: JSX.Element;
+  children: JSX.Element[] | JSX.Element;
   disabled?: boolean;
+  className?: string;
 }

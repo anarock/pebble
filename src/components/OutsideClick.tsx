@@ -40,7 +40,12 @@ class OutsideClick extends React.PureComponent<OutsideClickProps> {
   }
 
   render() {
-    return <div ref={this.childRef}>{this.props.children}</div>;
+    const { className, children } = this.props;
+    return (
+      <div ref={this.childRef} className={className}>
+        {children}
+      </div>
+    );
   }
 }
 

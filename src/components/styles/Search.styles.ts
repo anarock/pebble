@@ -38,7 +38,7 @@ export const searchStyle = css({
   height: "inherit",
   ...mixins.textEllipsis,
   ...typography.s.regular,
-  ...getPlaceholderStyle(colors.gray.light),
+  ...getPlaceholderStyle(colors.gray.base),
   backgroundColor: "transparent"
 });
 
