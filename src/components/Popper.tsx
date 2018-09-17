@@ -10,7 +10,7 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
   static defaultProps: Partial<PopperProps> = {
     placement: "bottom",
     popperBackgroundColor: colors.white.base,
-    closeOnClickOutside: true
+    closeOnOutsideClick: true
   };
 
   state: PopperState = {

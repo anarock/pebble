@@ -18,6 +18,10 @@ const transitionProps = {
 };
 
 class SideBar extends React.PureComponent<SidebarProps> {
+  static defaultProps: Partial<SidebarProps> = {
+    closeOnOutsideClick: true
+  };
+
   componentDidMount() {
     if (this.props.isOpen) document.body.classList.add(disableScrollY);
   }
@@ -31,7 +35,7 @@ class SideBar extends React.PureComponent<SidebarProps> {
   }
 
   render() {
-    let { width, isOpen, children, onClose } = this.props;
+    let { width, isOpen, children, onClose, closeOnOutsideClick } = this.props;
     const _sidebarOverride = css({
       width,
       transform: isOpen ? `translateX(0)` : `translateX(${width}px)`
@@ -53,7 +57,10 @@ class SideBar extends React.PureComponent<SidebarProps> {
             ))}
         </Transition>
 
-        <OutsideClick onOutsideClick={this.props.onClose} disabled={!isOpen}>
+        <OutsideClick
+          onOutsideClick={this.props.onClose}
+          disabled={!closeOnOutsideClick || !isOpen}
+        >
           <div className={_sidebarStyle}>
             <Transition {...transitionProps}>
               {isOpen &&

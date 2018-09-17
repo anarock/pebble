@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import SideBar from "../src/components/Sidebar";
 import { css } from "emotion";
-import { number } from "@storybook/addon-knobs";
+import { number, boolean } from "@storybook/addon-knobs";
 import { withState } from "@dump247/storybook-state";
 import Button from "../src/components/Button";
 
@@ -23,6 +23,7 @@ storiesOf("SideBar", module).add(
         onClose={() => store.set({ value: false })}
         width={number("Width", 400)}
         isOpen={store.state.value}
+        closeOnOutsideClick={boolean("closeOnOutsideClick", true)}
       >
         <div className={wrapperStyle} onClick={() => {}} />
       </SideBar>

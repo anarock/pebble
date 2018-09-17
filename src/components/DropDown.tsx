@@ -11,7 +11,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
   };
 
   static defaultProps: Partial<DropdownProps> = {
-    closeOnClickOutside: true
+    closeOnOutsideClick: true
   };
 
   private toggleDropdown = () => {
