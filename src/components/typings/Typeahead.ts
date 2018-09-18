@@ -27,6 +27,7 @@ export interface TypeaheadProps {
   required?: boolean;
   children: React.ReactNodeArray;
   valueExtractor: (value: string | number) => string;
+  onClear?: () => void;
 }
 
 export interface TypeaheadState {

@@ -12,11 +12,22 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
   static defaultProps: Partial<TypeaheadProps> = {
     debounceTime: 500,
+    onClear: () => {},
     searchBox: ({ registerChange, onFocus, value }, props) => (
       <Input
         onChange={registerChange}
         placeholder={props.placeholder}
-        inputProps={{ onFocus }}
+        inputProps={{
+          onFocus,
+          onKeyDown: e => {
+            if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+            if (e.keyCode === 8 && props.selected) {
+              // keyCode for delete
+              registerChange("");
+              props.onClear();
+            }
+          }
+        }}
         value={value}
         errorMessage={props.errorMessage}
         loading={props.loading}
