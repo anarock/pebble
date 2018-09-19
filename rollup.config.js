@@ -9,7 +9,7 @@ import cleanup from "rollup-plugin-cleanup";
 const input = "compiled/index.js";
 const external = ["react", "react-calendar/dist/entry.nostyle"];
 
-const plugins = [
+const plugins = ({ dev } = {}) => [
   babel({
     babelrc: false,
     presets: [
@@ -23,7 +23,16 @@ const plugins = [
       "stage-0",
       "react"
     ],
-    plugins: ["external-helpers"]
+    plugins: [
+      "external-helpers",
+      dev && [
+        "emotion",
+        {
+          autoLabel: true,
+          labelFormat: "[filename]-[local]"
+        }
+      ]
+    ].filter(p => p)
   }),
   resolve({
     extensions: [".js", ".jsx", ".json"]
@@ -50,23 +59,40 @@ export default [
         }
       }
     ],
-    plugins
+    plugins: plugins()
   },
   {
     input,
     external: external.concat(Object.keys(pkg.dependencies)),
     output: [
       {
-        file: pkg.module,
+        file: "dist/pebble.es.js",
         format: "es",
         sourcemap: true
       },
       {
-        file: pkg.main,
+        file: "dist/pebble.js",
         format: "cjs",
         sourcemap: true
       }
     ],
-    plugins
+    plugins: plugins({ dev: true })
+  },
+  {
+    input,
+    external: external.concat(Object.keys(pkg.dependencies)),
+    output: [
+      {
+        file: "dist/pebble.es.min.js",
+        format: "es",
+        sourcemap: true
+      },
+      {
+        file: "dist/pebble.min.js",
+        format: "cjs",
+        sourcemap: true
+      }
+    ],
+    plugins: plugins()
   }
 ];
