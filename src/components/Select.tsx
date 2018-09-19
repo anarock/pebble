@@ -40,7 +40,7 @@ const Select: React.SFC<SelectProps> = props => {
       <DropDown
         dropDownClassName={dropDownClass}
         labelComponent={({ toggleDropdown, isOpen }) => {
-          const chevron = cx(chevronStyle, "icon-arrow-drop-down", {
+          const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {
             __pebble__select__open: isOpen
           });
           return (

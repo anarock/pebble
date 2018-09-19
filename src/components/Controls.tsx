@@ -12,11 +12,11 @@ const ControlView: React.SFC<ControlViewProps> = ({
   className
 }) => {
   const isRadio = type === "radio";
-  const iconClass = cx(iconStyle, {
-    "icon-radio": isRadio && !isSelected,
-    "icon-radio-selected": isRadio && isSelected,
-    "icon-checkbox-selected": !isRadio && isSelected,
-    "icon-checkbox-unselected": !isRadio && !isSelected
+  const iconClass = cx(iconStyle, "pi", {
+    "pi-radio": isRadio && !isSelected,
+    "pi-radio-selected": isRadio && isSelected,
+    "pi-checkbox-selected": !isRadio && isSelected,
+    "pi-checkbox-unselected": !isRadio && !isSelected
   });
 
   return (

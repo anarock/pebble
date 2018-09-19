@@ -35,11 +35,11 @@ Add the following in your `package.json`;
 Then run `react-native link`.
 and then it can be used by importing the Icon component.
 
-```js
+```jsx
 import { Icon } from "@anarock/pebble/native"
 
 // Usage
-<Icon name="icon-name" size={20} color="#000000" />
+<Icon name="iconName" size={20} color="#000000" />
 ```
 
 ## License

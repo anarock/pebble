@@ -59,9 +59,9 @@ class Toast extends React.PureComponent<{}, ToastState> {
   render() {
     const bColor = _colors[this.state.type];
 
-    const iconClass = cx({
-      "icon-radio-check-filled": this.state.type === "success",
-      "icon-close-circle-filled": this.state.type === "error"
+    const iconClass = cx("pi", {
+      "pi-radio-check-filled": this.state.type === "success",
+      "pi-close-circle-filled": this.state.type === "error"
     });
 
     return (

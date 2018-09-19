@@ -67,7 +67,7 @@ exports[`Option component snapshot for multi select 1`] = `
     I am an option
      
     <i
-      className="icon-checkbox-unselected"
+      className="pi pi-checkbox-unselected"
       style={
         Object {
           "color": "#E0E0E0",

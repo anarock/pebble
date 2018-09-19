@@ -49,7 +49,7 @@ exports[`Checkbox snapshot 1`] = `
     className="emotion-0"
   >
     <i
-      className="icon-checkbox-selected"
+      className="pi pi-checkbox-selected"
       style={
         Object {
           "color": "#6161FF",

@@ -19,7 +19,7 @@ const Tag: React.SFC<TagProps> = ({ label, color, onClose }) => {
     >
       {label}{" "}
       {onClose && (
-        <i onClick={onClose} className="icon-close">
+        <i onClick={onClose} className="pi pi-close">
           <Ink />
         </i>
       )}

@@ -112,7 +112,7 @@ exports[`Component: Tag snapshot 2`] = `
   Anarock
    
   <i
-    className="icon-close"
+    className="pi pi-close"
     onClick={[Function]}
   >
     <e

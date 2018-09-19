@@ -40,7 +40,7 @@ class Search extends React.PureComponent<SearchProps, SearchState> {
 
     return (
       <div className={cx(wrapperClassName, className)}>
-        {type !== "large" && showSearchIcon && <i className="icon-search" />}
+        {type !== "large" && showSearchIcon && <i className="pi pi-search" />}
         <input
           className={searchStyle}
           type="text"
@@ -62,7 +62,7 @@ class Search extends React.PureComponent<SearchProps, SearchState> {
             }}
           >
             <i
-              className="icon-close"
+              className="pi pi-close"
               style={{ display: "table-cell", verticalAlign: "middle" }}
             />
           </div>
