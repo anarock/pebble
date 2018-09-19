@@ -46,7 +46,8 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
       cssDest: "./dist/pebble.css",
       cssTemplate: "./scripts/templates/pebble-css.hbs",
       templateOptions: {
-        baseSelector: "i"
+        baseSelector: ".pi",
+        classPrefix: "pi-"
       }
     },
     err => {

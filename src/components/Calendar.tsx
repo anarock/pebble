@@ -96,10 +96,10 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
           tileContent={this.getTileContent}
           tileDisabled={this.getDisabledDays}
           prevLabel={
-            <i style={{ fontSize: 14 }} className="icon-chevron-left" />
+            <i style={{ fontSize: 14 }} className="pi pi-chevron-left" />
           }
           nextLabel={
-            <i style={{ fontSize: 14 }} className="icon-arrow-right" />
+            <i style={{ fontSize: 14 }} className="pi pi-arrow-right" />
           }
         />
 

@@ -63,7 +63,7 @@ export const DropDownButton: React.SFC<DropDownButtonProps> = ({
       <React.Fragment>
         {children}{" "}
         <i
-          className={cx("icon-arrow-down", iconStyle)}
+          className={cx("pi pi-arrow-down", iconStyle)}
           style={{
             transform: isOpen ? "rotate(180deg)" : "none"
           }}

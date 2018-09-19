@@ -34,10 +34,10 @@ storiesOf("Icons", module).add("List", () => (
         <Tooltip
           label={({ ref }) => (
             <div className={divs} ref={ref}>
-              <i className={`icon icon-${iconName}`} /> <span>{iconName}</span>
+              <i className={`pi pi-${iconName}`} /> <span>{iconName}</span>
             </div>
           )}
-          text={`<i className="icon-${iconName}" />`}
+          text={`<i className="pi pi-${iconName}" />`}
         />
       </div>
     ))}

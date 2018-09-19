@@ -70,7 +70,7 @@ class SideBar extends React.PureComponent<SidebarProps> {
                     className={closeStyle}
                     onClick={onClose}
                   >
-                    <i className="icon-close" />
+                    <i className="pi pi-close" />
                     <Ink />
                   </animated.div>
                 ))}

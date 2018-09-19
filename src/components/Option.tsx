@@ -10,9 +10,9 @@ import { Component } from "react";
 class Option extends Component<OptionProps> {
   static defaultProps: Partial<OptionProps> = {
     rightElement: ({ isSelected, multiSelect }) => {
-      const iconClass = cx({
-        "icon-checkbox-selected": isSelected,
-        "icon-checkbox-unselected": !isSelected
+      const iconClass = cx("pi", {
+        "pi-checkbox-selected": isSelected,
+        "pi-checkbox-unselected": !isSelected
       });
       return multiSelect ? (
         <i
