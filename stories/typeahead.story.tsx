@@ -5,6 +5,7 @@ import { action } from "@storybook/addon-actions";
 import { css } from "emotion";
 import Option from "../src/components/Option";
 import { withState } from "@dump247/storybook-state";
+import { boolean } from "@storybook/addon-knobs";
 
 storiesOf("Typeahead", module).add(
   "simple",
@@ -21,6 +22,7 @@ storiesOf("Typeahead", module).add(
       valueExtractor={value => `${value} is the best option`}
       selected={store.state.selected}
       onClear={action("clear")}
+      disabled={boolean("disabled")}
     >
       {new Array(5).fill(1).map((_x, i) => (
         <Option key={i + 1} value={i + 1} label={`I am an option - ${i + 1}`} />
