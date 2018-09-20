@@ -18,7 +18,9 @@
     "build": "rimraf dist && tsc -p tsconfig.base.json && rollup -c && rimraf compiled && npm run build:icons && npm run copy:fonts",
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'npm run build'",
     "test:cover": "npm run test && codecov",
-    "test": "jest",
+    "pretest": "npm run build",
+    "test": "jest && npm run test:shaking",
+    "test:shaking": "agadoo",
     "prepublishOnly": "npm run test && npm run build",
     "test:watch": "npm test -- --watchAll",
     "precommit": "pretty-quick --staged && lint-staged",
@@ -35,6 +37,7 @@
   },
   "dependencies": {
     "@types/rheostat": "^2.1.3",
+    "agadoo": "^1.0.0",
     "date-fns": "^1.29.0",
     "emotion": "^9.2.8",
     "is-in-browser": "^1.1.3",
