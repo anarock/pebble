@@ -1,23 +1,12 @@
 import * as React from "react";
 import { DropdownProps, DropdownState } from "./typings/Dropdown";
 import { DropDownButton } from "./Button";
-import { dropDownStyle } from "./styles/Dropdown.styles";
 import { cx } from "emotion";
-import OutsideClick from "./OutsideClick";
+import Popper from "./Popper";
 
 class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
-  state: DropdownState = {
-    isOpen: this.props.initiallyOpen
-  };
-
   static defaultProps: Partial<DropdownProps> = {
     closeOnOutsideClick: true
-  };
-
-  private toggleDropdown = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
   };
 
   render() {
@@ -26,47 +15,41 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
       children,
       labelComponent,
       padding,
-      className,
       dropDownClassName,
       isSelected,
       disabled,
-      labelClassName
+      labelClassName,
+      initiallyOpen
     } = this.props;
-    const { isOpen } = this.state;
 
     return (
-      <OutsideClick
-        onOutsideClick={() =>
-          this.setState({
-            isOpen: false
-          })
-        }
-        disabled={!isOpen}
+      <Popper
+        isOpen={initiallyOpen}
+        placement="bottom"
+        label={({ isOpen, toggle }) => (
+          <React.Fragment>
+            {labelComponent ? (
+              labelComponent({ isOpen, toggleDropdown: toggle })
+            ) : (
+              <DropDownButton
+                isSelected={isSelected}
+                isOpen={isOpen}
+                onClick={toggle}
+                disabled={disabled}
+                className={labelClassName}
+              >
+                {buttonLabel}
+              </DropDownButton>
+            )}
+          </React.Fragment>
+        )}
       >
-        <div className={className}>
-          {labelComponent ? (
-            labelComponent({ isOpen, toggleDropdown: this.toggleDropdown })
-          ) : (
-            <DropDownButton
-              isSelected={isSelected}
-              isOpen={isOpen}
-              onClick={this.toggleDropdown}
-              disabled={disabled}
-              className={labelClassName}
-            >
-              {buttonLabel}
-            </DropDownButton>
-          )}
-          {this.state.isOpen && (
-            <div
-              className={cx(dropDownStyle, dropDownClassName)}
-              style={{ padding }}
-            >
-              {children({ toggle: this.toggleDropdown })}
-            </div>
-          )}
-        </div>
-      </OutsideClick>
+        {({ toggle }) => (
+          <div className={cx(dropDownClassName)} style={{ padding }}>
+            {children({ toggle: toggle })}
+          </div>
+        )}
+      </Popper>
     );
   }
 }
