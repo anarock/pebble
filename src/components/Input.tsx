@@ -107,11 +107,6 @@ class Input extends React.PureComponent<InputProps, InputState> {
         onBlur={this.removeFocus}
         onClick={onClick}
       >
-        <label className={labelClassName}>
-          {placeholder}
-          {required && <span style={{ color: colors.red.base }}>&nbsp;*</span>}
-        </label>
-
         <Input_
           className={inputClassName}
           {...inputProps}
@@ -122,6 +117,11 @@ class Input extends React.PureComponent<InputProps, InputState> {
           disabled={disabled}
           readOnly={readOnly}
         />
+
+        <label className={labelClassName}>
+          {placeholder}
+          {required && <span style={{ color: colors.red.base }}>&nbsp;*</span>}
+        </label>
 
         <div
           className={highlightClassName}
