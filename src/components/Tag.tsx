@@ -5,7 +5,7 @@ import { TagProps } from "./typings/Tag";
 import { cx } from "emotion";
 import Ink from "react-ink";
 
-const Tag: React.SFC<TagProps> = ({ label, color, onClose, class }) => {
+const Tag: React.SFC<TagProps> = ({ label, color, onClose, className }) => {
   const wrapperClassName = cx(tagStyle, {
     __pebble__tag__with__close: !!onClose
   });
