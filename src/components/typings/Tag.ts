@@ -1,6 +1,6 @@
 export interface TagProps {
   label: string;
   color: string;
-  class: string;
+  className: string;
   onClose?: () => void;
 }
