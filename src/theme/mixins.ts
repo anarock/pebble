@@ -26,7 +26,7 @@ export const flexMiddleAlign: Styles = {
   justifyContent: "center"
 };
 
-export const displayInline: Styles | any = {
+export const displayInlineBlock: Styles | any = {
   display: "inline-block",
   verticalAlign: "top"
 }
