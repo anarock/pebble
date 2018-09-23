@@ -26,6 +26,11 @@ export const flexMiddleAlign: Styles = {
   justifyContent: "center"
 };
 
+export const displayInlineBlock: Styles | any = {
+  display: "inline-block",
+  verticalAlign: "top"
+}
+
 export const getPlaceholderStyle = (color: string): Styles => ({
   "::-webkit-input-placeholder": { color },
   "::-moz-placeholder": { color },
