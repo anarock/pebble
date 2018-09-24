@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button, { DropDownButton } from "./Button";
 import Calendar from "./Calendar";
 import Controls from "./Controls";
 import DropDown from "./DropDown";
@@ -28,6 +28,7 @@ import OutsideClick from "./OutsideClick";
 
 export {
   Button,
+  DropDownButton,
   Calendar,
   Controls,
   DropDown,
