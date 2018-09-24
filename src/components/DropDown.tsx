@@ -14,7 +14,6 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
       buttonLabel,
       children,
       labelComponent,
-      padding,
       dropDownClassName,
       isSelected,
       disabled,
@@ -45,7 +44,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
         )}
       >
         {({ toggle }) => (
-          <div className={cx(dropDownClassName)} style={{ padding }}>
+          <div className={cx(dropDownClassName)}>
             {children({ toggle: toggle })}
           </div>
         )}

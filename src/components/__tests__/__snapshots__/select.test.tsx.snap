@@ -164,7 +164,13 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   className="emotion-6"
 >
   <div>
-    <div>
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    >
       <div
         className="emotion-5"
         onClick={[Function]}
@@ -369,7 +375,13 @@ exports[`Component: Select single-select: snapshot 1`] = `
   className="emotion-6"
 >
   <div>
-    <div>
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    >
       <div
         className="emotion-5"
         onClick={[Function]}
@@ -574,7 +586,13 @@ exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
   className="emotion-6"
 >
   <div>
-    <div>
+    <div
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    >
       <div
         className="emotion-5"
         onClick={[Function]}

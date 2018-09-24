@@ -11,7 +11,6 @@ export interface DropdownProps {
   labelComponent?: (
     arg: { isOpen: boolean; toggleDropdown: Toggle }
   ) => JSX.Element;
-  padding?: number | string;
   className?: string;
   dropDownClassName?: string;
   initiallyOpen?: boolean;
