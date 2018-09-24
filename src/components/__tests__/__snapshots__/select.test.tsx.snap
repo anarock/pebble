@@ -24,7 +24,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   transform: rotate(180deg);
 }
 
-.emotion-1 {
+.emotion-0 {
   outline: 0;
   border: 0;
   border-bottom: 1px solid #EDEDED;
@@ -40,65 +40,65 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   white-space: nowrap;
 }
 
-.emotion-1:disabled backgroundColor {
+.emotion-0:disabled backgroundColor {
   base: #ffffff;
 }
 
-.emotion-1._pebble_input_read_only {
+.emotion-0._pebble_input_read_only {
   color: #6B7785;
 }
 
-.emotion-1._pebble_input_disabled {
+.emotion-0._pebble_input_disabled {
   cursor: not-allowed;
   pointer-events: none;
   color: #9FA6B0;
 }
 
-.emotion-1._pebble_input_textarea {
+.emotion-0._pebble_input_textarea {
   height: 88px;
   padding: 24px 0 52px 0;
   resize: none;
 }
 
-.emotion-1[type='date'] {
+.emotion-0[type='date'] {
   -webkit-appearance: textfield;
 }
 
-.emotion-1[type='date']::-webkit-inner-spin-button,
-.emotion-1[type='date']::-webkit-calendar-picker-indicator {
+.emotion-0[type='date']::-webkit-inner-spin-button,
+.emotion-0[type='date']::-webkit-calendar-picker-indicator {
   webkit-appearance: none;
   display: none;
 }
 
-.emotion-1::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1:-moz-placeholder {
+.emotion-0:-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::placeholder {
+.emotion-0::placeholder {
   color: #E0E0E0;
 }
 
@@ -118,7 +118,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   width: 100%;
 }
 
-.emotion-0 {
+.emotion-1 {
   color: #9FA6B0;
   font-size: 14px;
   line-height: 12px;
@@ -131,7 +131,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   pointer-events: none;
 }
 
-.emotion-0._pebble_input_label_focused {
+.emotion-1._pebble_input_label_focused {
   font-size: 12px;
   line-height: 10px;
   -webkit-transform: translate(0,0);
@@ -174,18 +174,18 @@ exports[`Component: Select multi-select: snapshot 1`] = `
           onBlur={[Function]}
           onFocus={[Function]}
         >
-          <label
-            className="emotion-0"
-          >
-            Choose Option
-          </label>
           <input
             aria-label="Choose Option"
-            className="emotion-1 _pebble_input_read_only"
+            className="emotion-0 _pebble_input_read_only"
             onChange={[Function]}
             readOnly={true}
             value=""
           />
+          <label
+            className="emotion-1"
+          >
+            Choose Option
+          </label>
           <div
             className="emotion-2 _pebble_input_highlight_read_only"
             style={
@@ -229,7 +229,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
   transform: rotate(180deg);
 }
 
-.emotion-1 {
+.emotion-0 {
   outline: 0;
   border: 0;
   border-bottom: 1px solid #EDEDED;
@@ -245,65 +245,65 @@ exports[`Component: Select single-select: snapshot 1`] = `
   white-space: nowrap;
 }
 
-.emotion-1:disabled backgroundColor {
+.emotion-0:disabled backgroundColor {
   base: #ffffff;
 }
 
-.emotion-1._pebble_input_read_only {
+.emotion-0._pebble_input_read_only {
   color: #6B7785;
 }
 
-.emotion-1._pebble_input_disabled {
+.emotion-0._pebble_input_disabled {
   cursor: not-allowed;
   pointer-events: none;
   color: #9FA6B0;
 }
 
-.emotion-1._pebble_input_textarea {
+.emotion-0._pebble_input_textarea {
   height: 88px;
   padding: 24px 0 52px 0;
   resize: none;
 }
 
-.emotion-1[type='date'] {
+.emotion-0[type='date'] {
   -webkit-appearance: textfield;
 }
 
-.emotion-1[type='date']::-webkit-inner-spin-button,
-.emotion-1[type='date']::-webkit-calendar-picker-indicator {
+.emotion-0[type='date']::-webkit-inner-spin-button,
+.emotion-0[type='date']::-webkit-calendar-picker-indicator {
   webkit-appearance: none;
   display: none;
 }
 
-.emotion-1::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1:-moz-placeholder {
+.emotion-0:-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::placeholder {
+.emotion-0::placeholder {
   color: #E0E0E0;
 }
 
@@ -323,7 +323,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
   width: 100%;
 }
 
-.emotion-0 {
+.emotion-1 {
   color: #9FA6B0;
   font-size: 14px;
   line-height: 12px;
@@ -336,7 +336,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
   pointer-events: none;
 }
 
-.emotion-0._pebble_input_label_focused {
+.emotion-1._pebble_input_label_focused {
   font-size: 12px;
   line-height: 10px;
   -webkit-transform: translate(0,0);
@@ -379,18 +379,18 @@ exports[`Component: Select single-select: snapshot 1`] = `
           onBlur={[Function]}
           onFocus={[Function]}
         >
-          <label
-            className="emotion-0"
-          >
-            Choose Option
-          </label>
           <input
             aria-label="Choose Option"
-            className="emotion-1 _pebble_input_read_only"
+            className="emotion-0 _pebble_input_read_only"
             onChange={[Function]}
             readOnly={true}
             value=""
           />
+          <label
+            className="emotion-1"
+          >
+            Choose Option
+          </label>
           <div
             className="emotion-2 _pebble_input_highlight_read_only"
             style={
@@ -434,7 +434,7 @@ exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
   transform: rotate(180deg);
 }
 
-.emotion-1 {
+.emotion-0 {
   outline: 0;
   border: 0;
   border-bottom: 1px solid #EDEDED;
@@ -450,65 +450,65 @@ exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
   white-space: nowrap;
 }
 
-.emotion-1:disabled backgroundColor {
+.emotion-0:disabled backgroundColor {
   base: #ffffff;
 }
 
-.emotion-1._pebble_input_read_only {
+.emotion-0._pebble_input_read_only {
   color: #6B7785;
 }
 
-.emotion-1._pebble_input_disabled {
+.emotion-0._pebble_input_disabled {
   cursor: not-allowed;
   pointer-events: none;
   color: #9FA6B0;
 }
 
-.emotion-1._pebble_input_textarea {
+.emotion-0._pebble_input_textarea {
   height: 88px;
   padding: 24px 0 52px 0;
   resize: none;
 }
 
-.emotion-1[type='date'] {
+.emotion-0[type='date'] {
   -webkit-appearance: textfield;
 }
 
-.emotion-1[type='date']::-webkit-inner-spin-button,
-.emotion-1[type='date']::-webkit-calendar-picker-indicator {
+.emotion-0[type='date']::-webkit-inner-spin-button,
+.emotion-0[type='date']::-webkit-calendar-picker-indicator {
   webkit-appearance: none;
   display: none;
 }
 
-.emotion-1::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1:-moz-placeholder {
+.emotion-0:-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::-webkit-input-placeholder {
+.emotion-0::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::-moz-placeholder {
+.emotion-0::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1:-ms-input-placeholder {
+.emotion-0:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-1::placeholder {
+.emotion-0::placeholder {
   color: #E0E0E0;
 }
 
@@ -528,7 +528,7 @@ exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
   width: 100%;
 }
 
-.emotion-0 {
+.emotion-1 {
   color: #9FA6B0;
   font-size: 14px;
   line-height: 12px;
@@ -541,7 +541,7 @@ exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
   pointer-events: none;
 }
 
-.emotion-0._pebble_input_label_focused {
+.emotion-1._pebble_input_label_focused {
   font-size: 12px;
   line-height: 10px;
   -webkit-transform: translate(0,0);
@@ -584,18 +584,18 @@ exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
           onBlur={[Function]}
           onFocus={[Function]}
         >
-          <label
-            className="emotion-0"
-          >
-            Choose Option
-          </label>
           <input
             aria-label="Choose Option"
-            className="emotion-1 _pebble_input_read_only"
+            className="emotion-0 _pebble_input_read_only"
             onChange={[Function]}
             readOnly={true}
             value=""
           />
+          <label
+            className="emotion-1"
+          >
+            Choose Option
+          </label>
           <div
             className="emotion-2 _pebble_input_highlight_read_only"
             style={
