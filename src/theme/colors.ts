@@ -12,20 +12,20 @@ export const colors: Colors = {
   green: {
     base: "#69C022",
     light: "#E8F6DD",
-    dark :"87d56d",
-    darker : "79C062"
+    dark :"#87d56d",
+    darker : "#79C062"
   },
   yellow: {
     base: "#F3AA07",
     light: "#FDF2DA",
     dark: "#eeb840",
-    darker: "D6A539"
+    darker: "#D6A539"
   },
   blue: {
     base: "#1F69FF",
     light: "#DDE8FF",
     dark: "#0087f1",
-    darker: "0079D9"
+    darker: "#0079D9"
   },
   white: {
     base: "#ffffff"
