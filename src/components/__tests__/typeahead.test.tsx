@@ -1,11 +1,9 @@
 import * as React from "react";
-import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 import sinon from "sinon";
 import { TypeaheadProps } from "../typings/Typeahead";
 import TypeAhead from "../TypeAhead";
 import Option from "../Option";
-import Input from "../Input";
 
 function getComponent(
   changeSpy = () => {},
