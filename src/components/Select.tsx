@@ -53,7 +53,6 @@ const Select: React.SFC<SelectProps> = props => {
                 required={required}
                 message={isOpen ? " " : ""}
                 errorMessage={errorMessage}
-                readOnly
               />
               <i className={chevron} />
             </div>
