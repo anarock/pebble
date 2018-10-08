@@ -8,7 +8,6 @@ export const wrapper = css({
 export const optionsWrapper = css({
   width: "100%",
   position: "absolute",
-  marginTop: -40,
   zIndex: 999,
   boxShadow: constants.boxShadow.elevated
 });
