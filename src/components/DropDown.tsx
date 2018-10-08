@@ -7,7 +7,7 @@ import OutsideClick from "./OutsideClick";
 
 class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
   state: DropdownState = {
-    isOpen: this.props.initiallyOpen
+    isOpen: !!this.props.initiallyOpen
   };
 
   static defaultProps: Partial<DropdownProps> = {
@@ -48,7 +48,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
             labelComponent({ isOpen, toggleDropdown: this.toggleDropdown })
           ) : (
             <DropDownButton
-              isSelected={isSelected}
+              isSelected={!!isSelected}
               isOpen={isOpen}
               onClick={this.toggleDropdown}
               disabled={disabled}

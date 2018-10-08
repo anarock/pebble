@@ -4,13 +4,15 @@ import { ControlProps } from "../typings/Control";
 import { colors } from "../../theme";
 import { cx } from "emotion";
 
+const renderProps = props => <ControlView {...props} />;
+
 const Control: React.SFC<ControlProps> = props => {
   const {
     checked,
     onChange,
     value,
     disabled,
-    children,
+    children = renderProps,
     type,
     className
   } = props;
@@ -24,7 +26,8 @@ const Control: React.SFC<ControlProps> = props => {
       tabIndex={checked ? 0 : -1}
       onClick={
         !disabled
-          ? (e: React.MouseEvent) => onChange({ value, checked: !checked }, e)
+          ? (e: React.MouseEvent) =>
+              onChange && onChange({ value, checked: !checked }, e)
           : undefined
       }
     >
@@ -59,10 +62,6 @@ export const ControlView: React.SFC<ControlProps> = ({
       {label}
     </div>
   );
-};
-
-Control.defaultProps = {
-  children: props => <ControlView {...props} />
 };
 
 export default Control;

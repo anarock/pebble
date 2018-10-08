@@ -38,7 +38,10 @@ class Toast extends React.PureComponent<{}, ToastState> {
     emitter.off("hideToast", this.hide);
   }
 
-  private show = ({ text, type = "success" }: Partial<ToastState>) => {
+  private show = ({
+    text,
+    type = "success"
+  }: Partial<ToastState> & { text: string }) => {
     this.setState({
       text,
       type,

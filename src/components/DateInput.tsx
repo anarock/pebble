@@ -29,7 +29,7 @@ class DateInput extends React.PureComponent<DateInputProps> {
           <Input
             onChange={this.onChange}
             type="date"
-            value={format(value, "YYYY-MM-DD")}
+            value={(value && format(value, "YYYY-MM-DD")) || ""}
             placeholder={this.props.placeholder}
             fixLabelAtTop
             inputProps={{

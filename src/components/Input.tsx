@@ -12,7 +12,11 @@ import {
 import { colors } from "../theme";
 import Loader from "./Loader";
 
-function getColor(error: string, success: string, isUnderlineColor?: boolean) {
+function getColor(
+  error: string | undefined,
+  success: string | undefined,
+  isUnderlineColor?: boolean
+) {
   let color = colors.gray.dark;
   if (error) {
     color = colors.red.base;

@@ -6,17 +6,17 @@ interface TileDot {
 }
 
 export interface CalendarProps extends CP {
-  onChange?: (date: Date) => void;
+  onChange: (date: Date) => void;
   range?: boolean;
   selected?: Date[] | Date;
   hideShadow?: boolean;
   className?: string;
   onClear?: () => void;
   onApply?: (value: any) => void;
-  tileDots?: TileDot[];
+  tileDots: TileDot[];
   disabledDays?: (number | Date)[];
 }
 
 export interface CalendarState {
-  value: Date[] | Date;
+  value?: Date[] | Date;
 }

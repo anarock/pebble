@@ -11,7 +11,7 @@ const OptionGroupCheckBox: React.SFC<OptionGroupCheckBoxProps> = props => {
     <React.Fragment>
       <OptionGroup
         {...rest}
-        isSelected={value => selected && selected.indexOf(value) >= 0}
+        isSelected={value => !!selected && selected.indexOf(value) >= 0}
         handleChange={({ value }) => {
           onChange(getSelectedCheckboxes(value, selected), props);
         }}

@@ -71,11 +71,11 @@ const Select: React.SFC<SelectProps> = props => {
                 }
               }}
               onApply={_value => {
-                onApply(_value, props);
+                onApply && onApply(_value, props);
                 toggle();
               }}
               onClear={() => {
-                onClear();
+                onClear && onClear();
                 toggle();
               }}
               searchBox={searchBox}
