@@ -32,6 +32,7 @@ class OptionGroup extends React.PureComponent<
       // Enter key
       // @ts-ignore
       const { value, isSelected } =
+        // @ts-ignore
         (children && children[selected] && children[selected].props) || {};
 
       handleChange({
