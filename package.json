@@ -21,7 +21,6 @@
     "test": "jest",
     "prepublishOnly": "npm run test && npm run build",
     "test:watch": "npm test -- --watchAll",
-    "precommit": "pretty-quick --staged && lint-staged",
     "format": "pretty-quick",
     "now-build": "npm run build-storybook",
     "now-start": "cd storybook-static && serve",
@@ -156,5 +155,10 @@
     },
     "collectCoverage": true,
     "coverageDirectory": "<rootDir>/coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && lint-staged"
+    }
   }
 }
