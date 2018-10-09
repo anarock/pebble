@@ -20,7 +20,7 @@ class OptionGroup extends React.PureComponent<
   observer: IntersectionObserver;
 
   state = {
-    selected: -1,
+    selected: 0,
     isScrolled: false
   };
 
