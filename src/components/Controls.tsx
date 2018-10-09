@@ -56,7 +56,7 @@ class Controls extends React.PureComponent<ControlsProps> {
     );
   }
 
-  private handleClick = (id: string | number) => {
+  private handleClick = (id: string | number | null) => {
     const { onChange, allowToggle, selected } = this.props;
 
     let result;

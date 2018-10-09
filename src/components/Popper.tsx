@@ -14,7 +14,7 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
   };
 
   state: PopperState = {
-    isOpen: this.props.isOpen
+    isOpen: !!this.props.isOpen
   };
 
   private toggle = () => {

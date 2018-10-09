@@ -33,20 +33,21 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     );
   };
 
-  private getTileContent = ({ date }): JSX.Element => {
-    const dot = this.props.tileDots.find(datum =>
-      isSameDay(date, datum.timeStamp)
+  private getTileContent = ({ date }) => {
+    const dot = this.props.tileDots.find(
+      datum => !!datum.timeStamp && isSameDay(date, datum.timeStamp)
     );
 
     return dot ? (
       <div className={dotWrapper}>
-        {dot.colors.map((color, i) => (
-          <span
-            key={i}
-            className={dotStyle}
-            style={{ backgroundColor: color }}
-          />
-        ))}
+        {dot.colors &&
+          dot.colors.map((color, i) => (
+            <span
+              key={i}
+              className={dotStyle}
+              style={{ backgroundColor: color }}
+            />
+          ))}
       </div>
     ) : null;
   };
@@ -57,7 +58,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
       (disabledDays &&
         disabledDays.length &&
         disabledDays.some(_date => isSameDay(_date, date))) ||
-      null
+      false
     );
   };
 

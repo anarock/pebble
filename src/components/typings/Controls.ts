@@ -4,7 +4,7 @@ type ControlType = "checkbox" | "radio";
 
 export interface ControlsProps {
   className?: string;
-  renderElement?: (
+  renderElement: (
     args: {
       item: any;
       isSelected: boolean;
@@ -21,7 +21,7 @@ export interface ControlsProps {
   ) => void;
   allowToggle?: boolean;
   selected: Id | Id[];
-  labelExtractor?: (item: any) => string;
+  labelExtractor: (item: any) => string;
   errorMessage?: string;
 }
 

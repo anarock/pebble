@@ -4,7 +4,7 @@ import { PopperProps as PopperProps_ } from "react-popper";
 type Label =
   | string
   | number
-  | ((args?: { toggle: () => void; isOpen: boolean }) => JSX.Element);
+  | ((args: { toggle: () => void; isOpen: boolean }) => JSX.Element);
 
 // @ts-ignore
 export interface PopperProps extends Partial<PopperProps_> {

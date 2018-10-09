@@ -1,5 +1,5 @@
 export interface DateInputProps {
-  onChange: (date: number) => void;
+  onChange: (date?: number) => void;
   value?: number | string;
   placeholder: string;
 }

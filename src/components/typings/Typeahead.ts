@@ -6,7 +6,7 @@ type FocusEvent = (
 
 export interface TypeaheadProps {
   className?: string;
-  searchBox?: (
+  searchBox: (
     args: {
       registerChange: (text: string) => void;
       onFocus: FocusEvent;
@@ -14,7 +14,7 @@ export interface TypeaheadProps {
     },
     props: TypeaheadProps
   ) => JSX.Element;
-  debounceTime?: number;
+  debounceTime: number;
   onChange: (text: string, props: TypeaheadProps) => void;
   onSelect: (value, props: TypeaheadProps) => void;
   dropdownClassName?: string;
@@ -27,7 +27,7 @@ export interface TypeaheadProps {
   required?: boolean;
   children: React.ReactNodeArray;
   valueExtractor: (value: string | number) => string;
-  onClear?: () => void;
+  onClear: () => void;
 }
 
 export interface TypeaheadState {

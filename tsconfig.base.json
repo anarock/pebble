@@ -19,6 +19,7 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "skipLibCheck": true,
+    "strictNullChecks": true,
     "outDir": "compiled",
     "isolatedModules": false,
     "pretty": true,

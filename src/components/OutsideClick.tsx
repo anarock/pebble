@@ -6,7 +6,7 @@ class OutsideClick extends React.PureComponent<OutsideClickProps> {
 
   handleClick = (e: MouseEvent) => {
     if (
-      this.childRef &&
+      this.childRef.current &&
       !this.childRef.current.contains(e.target as HTMLElement)
     ) {
       this.props.onOutsideClick();

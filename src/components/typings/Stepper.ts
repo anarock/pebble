@@ -27,22 +27,22 @@ export interface StepperProps {
   data: any[];
   renderContentElement: (args: ArgsRenderContent) => JSX.Element;
   headingExtractor: ({ item: any }) => string;
-  renderFooterElement?: (
+  renderFooterElement: (
     args: ArgsRenderFooter,
     props: StepperProps
-  ) => JSX.Element;
+  ) => React.ReactNode;
   className?: string;
   initialSelectedIndex?: number;
-  allowSkip?: boolean;
-  cancelLabel?: string;
-  onCancel?: () => void;
-  nextLabel?: string;
-  prevLabel?: string;
-  doneLabel?: string;
-  onDone?: () => void;
-  onBeforeNext?: (index: number) => boolean;
-  onBeforePrev?: (index: number) => boolean;
-  onChange?: (args: { prev: number; current: number }) => void;
+  allowSkip: boolean;
+  cancelLabel: string;
+  onCancel: () => void;
+  nextLabel: string;
+  prevLabel: string;
+  doneLabel: string;
+  onDone: () => void;
+  onBeforeNext: (index: number) => boolean;
+  onBeforePrev: (index: number) => boolean;
+  onChange: (args: { prev: number; current: number }) => void;
   isRightButtonLoading?: boolean;
 }
 
