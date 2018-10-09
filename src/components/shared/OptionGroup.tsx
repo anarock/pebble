@@ -8,7 +8,8 @@ import Search from "../Search";
 import {
   searchBoxScrolledStyle,
   searchBoxWrapper,
-  optionsWrapper
+  optionsWrapper,
+  optionsWrapperScrolledStyle
 } from "../styles/OptionGroup.styles";
 
 class OptionGroup extends React.PureComponent<
@@ -19,7 +20,7 @@ class OptionGroup extends React.PureComponent<
   observer: IntersectionObserver;
 
   state = {
-    selected: 0,
+    selected: -1,
     isScrolled: false
   };
 
@@ -153,7 +154,11 @@ class OptionGroup extends React.PureComponent<
               style={{
                 paddingTop: searchBox ? 0 : undefined
               }}
-              className={cx(optionsWrapper, className)}
+              className={cx(
+                optionsWrapper,
+                { [optionsWrapperScrolledStyle]: isScrolled },
+                className
+              )}
             >
               {_children}
             </div>

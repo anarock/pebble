@@ -10,7 +10,13 @@ export const optionsWrapper = css({
   maxHeight: 352,
   minWidth: 200,
   overflowY: "auto",
-  padding: "20px 1px"
+  padding: "20px 1px",
+  transition: "all 100ms linear",
+  willChange: "max-height"
+});
+
+export const optionsWrapperScrolledStyle = css({
+  maxHeight: 372
 });
 
 export const searchBoxWrapper = css({

@@ -35,6 +35,14 @@ storiesOf("OptionGroupCheckBox", module).add(
         <Option value="option-6" label="I am an option" />
         <Option value="option-7" label="I am an option" />
         <Option value="option-8" label="I am an option" />
+        <Option value="option-11" label="I am an option" />
+        <Option value="option-21" label="I am an option" />
+        <Option value="option-31" label="I am an option" />
+        <Option value="option-41" label="I am an option" />
+        <Option value="option-51" label="I am an option" />
+        <Option value="option-61" label="I am an option" />
+        <Option value="option-71" label="I am an option" />
+        <Option value="option-81" label="I am an option" />
       </OptionGroupCheckBox>
     </div>
   ))
