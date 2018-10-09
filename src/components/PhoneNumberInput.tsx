@@ -28,11 +28,11 @@ export default class PhoneNumberInput extends React.Component<
     });
   };
   render() {
-    const { countries, phone, country_code } = this.props;
+    const { countries, phone, country_code, placeholder } = this.props;
     return (
       <div className={wrapper}>
         <Select
-          placeholder="Phone no."
+          placeholder={placeholder || "Phone no."}
           onChange={this.onCountrySelect}
           value={country_code}
           className={selectStyle}
