@@ -40,6 +40,7 @@ export default class PhoneNumberInput extends React.Component<
           {countries.map(country => (
             <Option
               value={country.country_code}
+              key={country.country_code}
               label={`${country.name} (${country.country_code})`}
             />
           ))}
