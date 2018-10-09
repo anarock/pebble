@@ -20,6 +20,9 @@ The easier way is to use the cdn:
 <link rel="stylesheet" href="https://unpkg.com/@anarock/pebble@[version]/dist/pebble.css"/>
 ```
 
+:boom: Warning: Pebble adds `box-sizing: border-box` by default to every element by using [`inherit`](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
+If you have some elements whose children which need default box-sizing you can reset it's box-sizing to `content-box`
+
 ## Using icons in React Native
 
 Add the following in your `package.json`;

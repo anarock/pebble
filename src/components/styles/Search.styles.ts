@@ -36,6 +36,7 @@ export const searchStyle = css({
   outline: "none",
   border: 0,
   height: "inherit",
+  flexGrow: 1,
   ...mixins.textEllipsis,
   ...typography.s.regular,
   ...getPlaceholderStyle(colors.gray.base),
