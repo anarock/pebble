@@ -81,9 +81,11 @@ class Input extends React.PureComponent<InputProps, InputState> {
 
     const _inputClassName = cx(
       inputStyle,
-      !!disabled && inputDisabledStyle,
-      !!readOnly && inputReadOnlyStyle,
-      !!textArea && inputTextAreaStyle,
+      {
+        [inputDisabledStyle]: disabled,
+        [inputReadOnlyStyle]: readOnly,
+        [inputTextAreaStyle]: textArea
+      },
       inputClassName
     );
 
