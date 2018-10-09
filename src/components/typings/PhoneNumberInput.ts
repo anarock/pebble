@@ -7,6 +7,7 @@ export interface Country {
 export interface PhoneNumberInputProps {
   country_code: string;
   phone: string;
+  placeholder: string;
   onChange: (
     { country_code, phone }: { country_code: string; phone: string }
   ) => void;

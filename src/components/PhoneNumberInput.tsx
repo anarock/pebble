@@ -28,11 +28,11 @@ export default class PhoneNumberInput extends React.Component<
     });
   };
   render() {
-    const { countries, phone, country_code } = this.props;
+    const { countries, phone, country_code, placeholder } = this.props;
     return (
       <div className={wrapper}>
         <Select
-          placeholder="Phone no."
+          placeholder={placeholder || "Phone no."}
           onChange={this.onCountrySelect}
           value={country_code}
           className={selectStyle}
@@ -40,6 +40,7 @@ export default class PhoneNumberInput extends React.Component<
           {countries.map(country => (
             <Option
               value={country.country_code}
+              key={country.country_code}
               label={`${country.name} (${country.country_code})`}
             />
           ))}
