@@ -17,8 +17,8 @@ class Toast extends React.PureComponent<{}, ToastState> {
   static show(text: string, type: ToastType) {
     emitter.emit("showToast", { text, type });
   }
-  
-  showTimer = null
+
+  showTimer: number | null;
 
   static hide() {
     emitter.emit("hideToast");
@@ -49,13 +49,13 @@ class Toast extends React.PureComponent<{}, ToastState> {
       type,
       show: true
     });
-    
+
     if (this.showTimer) {
-      clearTimeout(this.showTimer)
-      this.showTimer = null
+      clearTimeout(this.showTimer);
+      this.showTimer = null;
     }
 
-    this.showTimer = setTimeout(
+    this.showTimer = window.setTimeout(
       () =>
         this.setState({
           show: false
