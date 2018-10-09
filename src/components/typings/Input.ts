@@ -6,6 +6,7 @@ export interface InputProps {
   placeholder: string;
   onChange: (text: string) => void;
   className?: string;
+  inputClassName?: string;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
   fixLabelAtTop?: boolean;
   value?: string | number;

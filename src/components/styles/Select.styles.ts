@@ -5,8 +5,12 @@ export const selectWrapper = css({
   marginBottom: 20
 });
 
-export const selectInputStyle = css({
+export const selectInputWrapper = css({
   pointerEvents: "none"
+});
+
+export const selectInput = css({
+  color: colors.gray.darker
 });
 
 export const dropDownClass = css({

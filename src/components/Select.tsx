@@ -5,7 +5,8 @@ import {
   chevronStyle,
   dropDownClass,
   inputWrapper,
-  selectInputStyle,
+  selectInput,
+  selectInputWrapper,
   selectWrapper
 } from "./styles/Select.styles";
 import DropDown from "./DropDown";
@@ -46,7 +47,8 @@ const Select: React.SFC<SelectProps> = props => {
           return (
             <div className={inputWrapper} onClick={toggleDropdown}>
               <Input
-                className={selectInputStyle}
+                className={selectInputWrapper}
+                inputClassName={selectInput}
                 placeholder={placeholder}
                 value={value}
                 onChange={noop}
