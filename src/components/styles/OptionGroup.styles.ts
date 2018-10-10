@@ -15,8 +15,10 @@ export const optionsWrapper = css({
   willChange: "max-height"
 });
 
-export const optionsWrapperScrolledStyle = css({
-  maxHeight: 372
+export const fixedDiv = css({
+  position: "relative",
+  zIndex: 8,
+  height: 80
 });
 
 export const searchBoxWrapper = css({

@@ -9,7 +9,7 @@ import {
   searchBoxScrolledStyle,
   searchBoxWrapper,
   optionsWrapper,
-  optionsWrapperScrolledStyle
+  fixedDiv
 } from "../styles/OptionGroup.styles";
 
 class OptionGroup extends React.PureComponent<
@@ -139,12 +139,14 @@ class OptionGroup extends React.PureComponent<
     return (
       <React.Fragment>
         {searchBox && (
-          <div className={searchBoxClassName}>
-            <Search
-              type="small"
-              onChange={onSearchBoxQueryChange}
-              placeholder={searchBoxPlaceholder}
-            />
+          <div className={fixedDiv}>
+            <div className={searchBoxClassName}>
+              <Search
+                type="small"
+                onChange={onSearchBoxQueryChange}
+                placeholder={searchBoxPlaceholder}
+              />
+            </div>
           </div>
         )}
         {children &&
@@ -154,11 +156,7 @@ class OptionGroup extends React.PureComponent<
               style={{
                 paddingTop: searchBox ? 0 : undefined
               }}
-              className={cx(
-                optionsWrapper,
-                { [optionsWrapperScrolledStyle]: isScrolled },
-                className
-              )}
+              className={cx(optionsWrapper, className)}
             >
               {_children}
             </div>
