@@ -10,10 +10,11 @@ export default class PhoneNumberInput extends React.Component<
 > {
   onCountrySelect = countryCode => {
     this.props.onChange({
-      countryCode: countryCode,
+      countryCode,
       phone: this.props.phone
     });
   };
+
   onNumberChange = (value: string) => {
     if (!value.match(/^\d*$/)) {
       return;
@@ -23,6 +24,7 @@ export default class PhoneNumberInput extends React.Component<
       phone: value
     });
   };
+
   render() {
     const {
       phone,
