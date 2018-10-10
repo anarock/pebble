@@ -1,18 +1,16 @@
-export interface Country {
-  id: number;
-  name: string;
-  country_code: string;
-}
+import { SelectProps } from "./Select";
+import { InputProps } from "./Input";
 
 export interface PhoneNumberInputProps {
-  country_code: string;
+  countryCode: string;
   phone: string;
   onChange: (
-    { country_code, phone }: { country_code: string; phone: string }
+    { countryCode, phone }: { countryCode: string; phone: string }
   ) => void;
-  countries: Country[];
-}
 
-export interface PhoneNumberInputState {
-  country?: Country;
+  // Optional
+  className?: string;
+  selectProps?: Partial<SelectProps>;
+  inputProps?: Partial<InputProps>;
+  placeholder?: string;
 }

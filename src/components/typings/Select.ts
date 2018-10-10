@@ -7,7 +7,6 @@ export interface SelectProps {
   placeholder: string;
   required?: boolean;
   errorMessage?: string;
-  children: React.ReactNodeArray;
   value?: string;
   selected?: Selected;
   multiSelect?: boolean;

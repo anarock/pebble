@@ -4,6 +4,7 @@ import PhoneNumberInput from "../src/components/PhoneNumberInput";
 // import { boolean, select, text } from "@storybook/addon-knobs";
 // import { css } from "emotion";
 import { withState } from "@dump247/storybook-state";
+import Option from "../src/components/Option";
 
 // const className = css({
 //   width: 400
@@ -920,10 +921,17 @@ storiesOf("PhoneNumberInput", module).add(
   "Material",
   withState({})(({ store }) => (
     <PhoneNumberInput
-      countries={countries}
-      country_code={store.state.country_code || "+91"}
+      countryCode={store.state.countryCode || "+91"}
       phone={store.state.phone || ""}
-      onChange={({ country_code, phone }) => store.set({ country_code, phone })}
-    />
+      onChange={({ countryCode, phone }) => store.set({ countryCode, phone })}
+    >
+      {countries.map(country => (
+        <Option
+          key={country.id}
+          value={country.country_code}
+          label={`${country.name} (${country.country_code})`}
+        />
+      ))}
+    </PhoneNumberInput>
   ))
 );

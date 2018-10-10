@@ -1,50 +1,56 @@
 import * as React from "react";
 import Select from "./Select";
 import Input from "./Input";
-import Option from "./Option";
-import {
-  PhoneNumberInputProps,
-  PhoneNumberInputState
-} from "./typings/PhoneNumberInput";
+import { cx } from "emotion";
+import { PhoneNumberInputProps } from "./typings/PhoneNumberInput";
 import { wrapper, selectStyle } from "./styles/PhoneNumberInput.styles";
 
 export default class PhoneNumberInput extends React.Component<
-  PhoneNumberInputProps,
-  PhoneNumberInputState
+  PhoneNumberInputProps
 > {
-  onCountrySelect = country_code => {
+  onCountrySelect = countryCode => {
     this.props.onChange({
-      country_code: country_code,
+      countryCode,
       phone: this.props.phone
     });
   };
+
   onNumberChange = (value: string) => {
     if (!value.match(/^\d*$/)) {
       return;
     }
     this.props.onChange({
-      country_code: this.props.country_code,
+      countryCode: this.props.countryCode,
       phone: value
     });
   };
+
   render() {
-    const { countries, phone, country_code } = this.props;
+    const {
+      phone,
+      countryCode,
+      className,
+      selectProps,
+      inputProps,
+      placeholder
+    } = this.props;
     return (
-      <div className={wrapper}>
+      <div className={cx(wrapper, className)}>
         <Select
-          placeholder="Phone no."
+          placeholder={placeholder || "Phone No."}
           onChange={this.onCountrySelect}
-          value={country_code}
+          value={countryCode}
           className={selectStyle}
+          {...selectProps}
         >
-          {countries.map(country => (
-            <Option
-              value={country.country_code}
-              label={`${country.name} (${country.country_code})`}
-            />
-          ))}
+          {this.props.children}
         </Select>
-        <Input onChange={this.onNumberChange} placeholder="" value={phone} />
+        <Input
+          onChange={this.onNumberChange}
+          placeholder=""
+          value={phone}
+          {...inputProps}
+        />
       </div>
     );
   }
