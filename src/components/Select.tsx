@@ -3,7 +3,7 @@ import { cx } from "emotion";
 import { SelectProps } from "./typings/Select";
 import {
   chevronStyle,
-  dropDownClass,
+  _dropDownClass,
   inputWrapper,
   selectInput,
   selectInputWrapper,
@@ -31,7 +31,8 @@ const Select: React.SFC<SelectProps> = props => {
     onApply,
     searchBox,
     searchBoxPlaceholder,
-    onSearchBoxQueryChange
+    onSearchBoxQueryChange,
+    dropdownClassName
   } = props;
 
   const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
@@ -39,7 +40,7 @@ const Select: React.SFC<SelectProps> = props => {
   return (
     <div className={cx(selectWrapper, className)}>
       <DropDown
-        dropDownClassName={dropDownClass}
+        dropDownClassName={cx(_dropDownClass, dropdownClassName)}
         labelComponent={({ toggleDropdown, isOpen }) => {
           const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {
             __pebble__select__open: isOpen
