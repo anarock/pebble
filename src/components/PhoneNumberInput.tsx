@@ -16,13 +16,13 @@ export default class PhoneNumberInput extends React.Component<
   };
 
   onNumberChange = (value: string) => {
-    value = value.replace(/\D/g, "");
-    if (!value || (this.props.phone && value === this.props.phone)) {
+    const _value = value.replace(/\D/g, "");
+    if (!_value || (this.props.phone && _value === this.props.phone)) {
       return;
     }
     this.props.onChange({
       countryCode: this.props.countryCode,
-      phone: value
+      phone: _value
     });
   };
 
