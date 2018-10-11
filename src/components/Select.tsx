@@ -72,14 +72,22 @@ const Select: React.SFC<SelectProps> = props => {
                   toggle();
                 }
               }}
-              onApply={_value => {
-                onApply && onApply(_value, props);
-                toggle();
-              }}
-              onClear={() => {
-                onClear && onClear();
-                toggle();
-              }}
+              onApply={
+                onApply
+                  ? _value => {
+                      onApply(_value, props);
+                      toggle();
+                    }
+                  : undefined
+              }
+              onClear={
+                onClear
+                  ? () => {
+                      onClear();
+                      toggle();
+                    }
+                  : undefined
+              }
               searchBox={searchBox}
               searchBoxPlaceholder={searchBoxPlaceholder}
               onSearchBoxQueryChange={onSearchBoxQueryChange}

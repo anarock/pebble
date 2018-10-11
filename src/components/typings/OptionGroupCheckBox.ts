@@ -16,6 +16,6 @@ export interface OptionGroupCheckBoxProps extends CommonProps {
   onApply: (
     value: React.ReactText[] | undefined,
     props: OptionGroupCheckBoxProps
-  ) => void;
-  onClear: () => void;
+  ) => void | undefined;
+  onClear: () => void | undefined;
 }
