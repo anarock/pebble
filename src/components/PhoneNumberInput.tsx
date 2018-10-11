@@ -42,8 +42,8 @@ export default class PhoneNumberInput extends React.Component<
           onChange={this.onCountrySelect}
           value={countryCode}
           selected={countryCode}
-          className={cx(selectStyle, selectProps && selectProps.className)}
           {...selectProps}
+          className={cx(selectStyle, selectProps && selectProps.className)}
         >
           {this.props.children}
         </Select>
