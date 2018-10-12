@@ -15,7 +15,7 @@ export const optionsWrapper = css({
   willChange: "max-height"
 });
 
-export const fixedDiv = css({
+export const fixedHeightDiv = css({
   position: "relative",
   zIndex: 8,
   height: 80

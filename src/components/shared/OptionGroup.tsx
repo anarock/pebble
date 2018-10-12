@@ -9,7 +9,7 @@ import {
   searchBoxScrolledStyle,
   searchBoxWrapper,
   optionsWrapper,
-  fixedDiv
+  fixedHeightDiv
 } from "../styles/OptionGroup.styles";
 
 class OptionGroup extends React.PureComponent<
@@ -139,7 +139,7 @@ class OptionGroup extends React.PureComponent<
     return (
       <React.Fragment>
         {searchBox && (
-          <div className={fixedDiv}>
+          <div className={fixedHeightDiv}>
             <div className={searchBoxClassName}>
               <Search
                 type="small"
