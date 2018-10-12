@@ -16,12 +16,13 @@ export default class PhoneNumberInput extends React.Component<
   };
 
   onNumberChange = (value: string) => {
-    if (!value.match(/^\d*$/)) {
+    const _value = value.replace(/\D/g, "");
+    if (_value === this.props.phone) {
       return;
     }
     this.props.onChange({
       countryCode: this.props.countryCode,
-      phone: value
+      phone: _value
     });
   };
 
@@ -40,8 +41,9 @@ export default class PhoneNumberInput extends React.Component<
           placeholder={placeholder || "Phone No."}
           onChange={this.onCountrySelect}
           value={countryCode}
-          className={selectStyle}
+          selected={countryCode}
           {...selectProps}
+          className={cx(selectStyle, selectProps && selectProps.className)}
         >
           {this.props.children}
         </Select>
