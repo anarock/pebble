@@ -31,6 +31,7 @@ const Select: React.SFC<SelectProps> = props => {
     onApply,
     searchBox,
     searchBoxPlaceholder,
+    dropdownClassName,
     inputProps,
     onSearchBoxQueryChange
   } = props;
@@ -40,7 +41,7 @@ const Select: React.SFC<SelectProps> = props => {
   return (
     <div className={cx(selectWrapper, className)}>
       <DropDown
-        dropDownClassName={dropDownClass}
+        dropDownClassName={cx(dropDownClass, dropdownClassName)}
         labelComponent={({ toggleDropdown, isOpen }) => {
           const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {
             __pebble__select__open: isOpen

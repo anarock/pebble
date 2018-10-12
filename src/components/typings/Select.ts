@@ -17,5 +17,6 @@ export interface SelectProps {
   searchBox?: boolean;
   searchBoxPlaceholder?: string;
   onSearchBoxQueryChange?: (query: string) => void;
+  dropdownClassName?: string;
   inputProps?: Partial<InputProps>;
 }
