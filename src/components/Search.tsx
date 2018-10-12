@@ -21,6 +21,7 @@ class Search extends React.PureComponent<SearchProps, SearchState> {
   };
 
   render() {
+    console.log(document.activeElement)
     const {
       type,
       onChange,
