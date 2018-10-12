@@ -3,7 +3,7 @@ import { cx } from "emotion";
 import { SelectProps } from "./typings/Select";
 import {
   chevronStyle,
-  _dropDownClass,
+  dropDownClass,
   inputWrapper,
   selectInput,
   selectInputWrapper,
@@ -40,7 +40,7 @@ const Select: React.SFC<SelectProps> = props => {
   return (
     <div className={cx(selectWrapper, className)}>
       <DropDown
-        dropDownClassName={cx(_dropDownClass, dropdownClassName)}
+        dropDownClassName={cx(dropDownClass, dropdownClassName)}
         labelComponent={({ toggleDropdown, isOpen }) => {
           const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {
             __pebble__select__open: isOpen

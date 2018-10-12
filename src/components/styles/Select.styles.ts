@@ -13,7 +13,7 @@ export const selectInput = css({
   color: colors.gray.darker
 });
 
-export const _dropDownClass = css({
+export const dropDownClass = css({
   marginTop: -40
 });
 
