@@ -1,4 +1,5 @@
 import * as React from "react";
+import { InputProps } from "./Input";
 
 type Selected = number | string | (number | string)[];
 
@@ -16,4 +17,5 @@ export interface SelectProps {
   searchBox?: boolean;
   searchBoxPlaceholder?: string;
   onSearchBoxQueryChange?: (query: string) => void;
+  inputProps?: Partial<InputProps>;
 }

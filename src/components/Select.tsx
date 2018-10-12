@@ -31,6 +31,7 @@ const Select: React.SFC<SelectProps> = props => {
     onApply,
     searchBox,
     searchBoxPlaceholder,
+    inputProps,
     onSearchBoxQueryChange
   } = props;
 
@@ -50,12 +51,13 @@ const Select: React.SFC<SelectProps> = props => {
                 className={selectInputWrapper}
                 inputClassName={selectInput}
                 placeholder={placeholder}
-                value={value}
+                value={value || ""}
                 onChange={noop}
                 required={required}
                 message={isOpen ? " " : ""}
                 errorMessage={errorMessage}
                 readOnly
+                {...inputProps}
               />
               <i className={chevron} />
             </div>
