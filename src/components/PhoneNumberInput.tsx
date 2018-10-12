@@ -17,7 +17,7 @@ export default class PhoneNumberInput extends React.Component<
 
   onNumberChange = (value: string) => {
     const _value = value.replace(/\D/g, "");
-    if (!_value || (this.props.phone && _value === this.props.phone)) {
+    if (_value === this.props.phone) {
       return;
     }
     this.props.onChange({

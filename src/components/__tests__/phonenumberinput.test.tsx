@@ -89,6 +89,29 @@ describe("Component: Select", () => {
         countryCode: "+1"
       })
     );
+
+    // should not trigger unnecessary renders
+    phoneInput.simulate("change", {
+      target: {
+        value: "99997876a"
+      }
+    });
+
+    expect(spy.notCalled);
+
+    // should be able to empty the input
+    phoneInput.simulate("change", {
+      target: {
+        value: ""
+      }
+    });
+
+    expect(
+      spy.calledWith({
+        phone: "",
+        countryCode: "+1"
+      })
+    );
   });
 
   test("should be able to select country", () => {
