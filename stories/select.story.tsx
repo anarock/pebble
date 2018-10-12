@@ -4,6 +4,7 @@ import Select from "../src/components/Select";
 import { action } from "@storybook/addon-actions";
 import Option from "../src/components/Option";
 import { withState } from "@dump247/storybook-state";
+import { boolean, text } from "@storybook/addon-knobs";
 
 const options = new Array(20).fill(1).map((_x, i) => ({
   value: `option-${i + 1}`,
@@ -13,7 +14,7 @@ const options = new Array(20).fill(1).map((_x, i) => ({
 storiesOf("Select", module)
   .add(
     "Single Select",
-    withState({})(({ store }) => (
+    withState({ searchQuery: "" })(({ store }) => (
       <Select
         selected={store.state.selected} // The value selected
         value={store.state.value} // To show in input box after selection
@@ -27,14 +28,24 @@ storiesOf("Select", module)
           action("onSelect")(selected, e);
         }}
         placeholder="Choose Option"
+        searchBox={boolean("searchBox")}
+        searchBoxPlaceholder={text("searchBoxPlaceholder", "Search")}
+        onSearchBoxQueryChange={query => store.set({ searchQuery: query })}
       >
-        {options.map(option => (
-          <Option
-            key={option.value}
-            value={option.value}
-            label={option.label}
-          />
-        ))}
+        {options
+          .filter(option => {
+            if (!boolean("searchBox") || !store.state.searchQuery) {
+              return true;
+            }
+            return option.label.includes(store.state.searchQuery);
+          })
+          .map(option => (
+            <Option
+              key={option.value}
+              value={option.value}
+              label={option.label}
+            />
+          ))}
       </Select>
     ))
   )

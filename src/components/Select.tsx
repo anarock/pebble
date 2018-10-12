@@ -31,8 +31,9 @@ const Select: React.SFC<SelectProps> = props => {
     onApply,
     searchBox,
     searchBoxPlaceholder,
-    onSearchBoxQueryChange,
-    dropdownClassName
+    dropdownClassName,
+    inputProps,
+    onSearchBoxQueryChange
   } = props;
 
   const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
@@ -51,12 +52,13 @@ const Select: React.SFC<SelectProps> = props => {
                 className={selectInputWrapper}
                 inputClassName={selectInput}
                 placeholder={placeholder}
-                value={value}
+                value={value || ""}
                 onChange={noop}
                 required={required}
                 message={isOpen ? " " : ""}
                 errorMessage={errorMessage}
                 readOnly
+                {...inputProps}
               />
               <i className={chevron} />
             </div>
