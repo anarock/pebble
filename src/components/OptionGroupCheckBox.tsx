@@ -26,7 +26,9 @@ const OptionGroupCheckBox: React.SFC<OptionGroupCheckBoxProps> = props => {
             </Button>
           )}
           {onApply && (
-            <Button onClick={() => onApply(selected, props)}>Apply</Button>
+            <Button onClick={() => onApply && onApply(selected, props)}>
+              Apply
+            </Button>
           )}
         </div>
       )}
