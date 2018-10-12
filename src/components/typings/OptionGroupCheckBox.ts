@@ -13,9 +13,9 @@ type CommonProps = Subtract<OptionGroupProps_, _Subtract>;
 export interface OptionGroupCheckBoxProps extends CommonProps {
   onChange: (value: React.ReactText[], props: OptionGroupCheckBoxProps) => void;
   selected?: React.ReactText[];
-  onApply: (
+  onApply?: (
     value: React.ReactText[] | undefined,
     props: OptionGroupCheckBoxProps
   ) => void;
-  onClear: () => void;
+  onClear?: () => void;
 }
