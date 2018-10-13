@@ -35,5 +35,5 @@ export interface TypeaheadProps {
 export interface TypeaheadState {
   value: string;
   showSuggestions: boolean;
-  focussedElement: Element | null;
+  focussedElement?: Element | null;
 }
