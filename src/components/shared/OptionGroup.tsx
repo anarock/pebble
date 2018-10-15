@@ -112,7 +112,9 @@ class OptionGroup extends React.PureComponent<
       className,
       searchBoxPlaceholder,
       isSelected,
-      handleChange
+      handleChange,
+      isSearchBoxClearable,
+      onSearchBoxClear
     } = this.props;
     const { isScrolled, selected } = this.state;
 
@@ -143,6 +145,8 @@ class OptionGroup extends React.PureComponent<
               type="small"
               onChange={onSearchBoxQueryChange}
               placeholder={searchBoxPlaceholder}
+              clearable={isSearchBoxClearable}
+              onClear={onSearchBoxClear}
             />
           </div>
         )}

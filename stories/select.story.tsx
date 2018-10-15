@@ -76,6 +76,8 @@ storiesOf("Select", module)
       onSearchBoxQueryChange={action("queryChange")}
       onApply={action("onApply")}
       onClear={action("onClear")}
+      onSearchBoxClear={action("onSearchBoxClear")}
+      isSearchBoxClearable={boolean("isSearchBoxClearable", true)}
     >
       {new Array(20).fill(1).map((_x, i) => (
         <Option

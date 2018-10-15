@@ -9,6 +9,8 @@ export interface OptionGroupProps_ {
   isSelected: (value: React.ReactText) => boolean;
   handleChange: (args: { value: React.ReactText; checked: boolean }) => void;
   multiSelect?: boolean;
+  isSearchBoxClearable?: boolean;
+  onSearchBoxClear?: () => void;
 }
 
 export interface OptionGroupState_ {

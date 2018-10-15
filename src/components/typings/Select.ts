@@ -19,4 +19,6 @@ export interface SelectProps {
   onSearchBoxQueryChange?: (query: string) => void;
   dropdownClassName?: string;
   inputProps?: Partial<InputProps>;
+  onSearchBoxClear?: () => void;
+  isSearchBoxClearable?: boolean;
 }
