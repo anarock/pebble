@@ -1,5 +1,6 @@
 import * as React from "react";
 import { InputProps } from "./Input";
+import { SearchProps } from "./Search";
 
 type Selected = number | string | (number | string)[];
 
@@ -15,10 +16,7 @@ export interface SelectProps {
   onApply?: (value: Selected, props: SelectProps) => void;
   onClear?: () => void;
   searchBox?: boolean;
-  searchBoxPlaceholder?: string;
-  onSearchBoxQueryChange?: (query: string) => void;
+  searchBoxProps?: Partial<SearchProps>;
   dropdownClassName?: string;
   inputProps?: Partial<InputProps>;
-  onSearchBoxClear?: () => void;
-  isSearchBoxClearable?: boolean;
 }

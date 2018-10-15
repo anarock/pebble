@@ -108,13 +108,10 @@ class OptionGroup extends React.PureComponent<
       searchBox,
       children,
       multiSelect,
-      onSearchBoxQueryChange,
       className,
-      searchBoxPlaceholder,
       isSelected,
       handleChange,
-      isSearchBoxClearable,
-      onSearchBoxClear
+      searchBoxProps
     } = this.props;
     const { isScrolled, selected } = this.state;
 
@@ -141,13 +138,7 @@ class OptionGroup extends React.PureComponent<
       <React.Fragment>
         {searchBox && (
           <div className={searchBoxClassName}>
-            <Search
-              type="small"
-              onChange={onSearchBoxQueryChange}
-              placeholder={searchBoxPlaceholder}
-              clearable={isSearchBoxClearable}
-              onClear={onSearchBoxClear}
-            />
+            <Search type="small" {...searchBoxProps} />
           </div>
         )}
         {children &&

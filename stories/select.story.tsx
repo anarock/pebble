@@ -29,8 +29,10 @@ storiesOf("Select", module)
         }}
         placeholder="Choose Option"
         searchBox={boolean("searchBox")}
-        searchBoxPlaceholder={text("searchBoxPlaceholder", "Search")}
-        onSearchBoxQueryChange={query => store.set({ searchQuery: query })}
+        searchBoxProps={{
+          placeholder: text("searchBoxPlaceholder", "Search"),
+          onChange: query => store.set({ searchQuery: query })
+        }}
       >
         {options
           .filter(option => {
@@ -72,12 +74,14 @@ storiesOf("Select", module)
       placeholder="Choose Option"
       multiSelect
       searchBox
-      searchBoxPlaceholder="Search"
-      onSearchBoxQueryChange={action("queryChange")}
       onApply={action("onApply")}
       onClear={action("onClear")}
-      onSearchBoxClear={action("onSearchBoxClear")}
-      isSearchBoxClearable={boolean("isSearchBoxClearable", true)}
+      searchBoxProps={{
+        onChange: action("Search.onChange"),
+        placeholder: "Search",
+        onClear: action("Search.onClear"),
+        clearable: boolean("Search.clearable", true)
+      }}
     >
       {new Array(20).fill(1).map((_x, i) => (
         <Option
