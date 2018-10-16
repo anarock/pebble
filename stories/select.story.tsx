@@ -30,7 +30,7 @@ storiesOf("Select", module)
         placeholder="Choose Option"
         searchBox={boolean("searchBox")}
         searchBoxProps={{
-          placeholder: text("searchBoxPlaceholder", "Search"),
+          placeholder: text("searchBoxProps.placeholder", "Search"),
           onChange: query => store.set({ searchQuery: query })
         }}
       >
@@ -77,10 +77,10 @@ storiesOf("Select", module)
       onApply={action("onApply")}
       onClear={action("onClear")}
       searchBoxProps={{
-        onChange: action("Search.onChange"),
+        onChange: action("searchBoxProps.onChange"),
         placeholder: "Search",
-        onClear: action("Search.onClear"),
-        clearable: boolean("Search.clearable", true)
+        onClear: action("searchBoxProps.onClear"),
+        clearable: boolean("searchBoxProps.clearable", true)
       }}
     >
       {new Array(20).fill(1).map((_x, i) => (
