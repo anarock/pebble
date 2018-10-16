@@ -46,7 +46,9 @@ describe("Component: Select", () => {
     const select = renderer.create(
       getComponent(undefined, {
         searchBox: true,
-        searchBoxPlaceholder: "Search"
+        searchBoxProps: {
+          placeholder: "Search"
+        }
       })
     );
     const tree = select.toJSON();
@@ -149,8 +151,10 @@ describe("Component: Select", () => {
     const select = mount(
       getComponent(spy, {
         searchBox: true,
-        searchBoxPlaceholder: "Search",
-        onSearchBoxQueryChange: queryChangeSpy
+        searchBoxProps: {
+          placeholder: "Search",
+          onChange: queryChangeSpy
+        }
       })
     );
     select.find(Input).simulate("click");

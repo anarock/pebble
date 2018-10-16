@@ -29,11 +29,10 @@ const Select: React.SFC<SelectProps> = props => {
     multiSelect,
     onClear,
     onApply,
-    searchBox,
-    searchBoxPlaceholder,
     dropdownClassName,
     inputProps,
-    onSearchBoxQueryChange
+    searchBox,
+    searchBoxProps
   } = props;
 
   const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
@@ -92,8 +91,7 @@ const Select: React.SFC<SelectProps> = props => {
                   : undefined
               }
               searchBox={searchBox}
-              searchBoxPlaceholder={searchBoxPlaceholder}
-              onSearchBoxQueryChange={onSearchBoxQueryChange}
+              searchBoxProps={searchBoxProps}
             >
               {children}
             </OptionGroup>
