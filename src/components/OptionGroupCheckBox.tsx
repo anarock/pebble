@@ -19,12 +19,20 @@ const OptionGroupCheckBox: React.SFC<OptionGroupCheckBoxProps> = props => {
           multiSelect
         />
 
-        <div style={{ ...mixins.flexSpaceBetween, padding: 20 }}>
-          <Button type="secondary" onClick={onClear}>
-            Clear
-          </Button>
-          <Button onClick={() => onApply(selected, props)}>Apply</Button>
-        </div>
+        {(onApply || onClear) && (
+          <div style={{ ...mixins.flexSpaceBetween, padding: 20 }}>
+            {onClear && (
+              <Button type="secondary" onClick={onClear}>
+                Clear
+              </Button>
+            )}
+            {onApply && (
+              <Button onClick={() => onApply && onApply(selected, props)}>
+                Apply
+              </Button>
+            )}
+          </div>
+        )}
       </div>
     </React.Fragment>
   );

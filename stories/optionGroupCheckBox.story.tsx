@@ -18,7 +18,9 @@ storiesOf("OptionGroupCheckBox", module).add(
       <OptionGroupCheckBox
         selected={store.state.value}
         searchBox
-        searchBoxPlaceholder="Search"
+        searchBoxProps={{
+          placeholder: "Search"
+        }}
         onChange={value =>
           store.set({
             value

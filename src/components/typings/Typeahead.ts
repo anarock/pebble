@@ -11,6 +11,8 @@ export interface TypeaheadProps {
       registerChange: (text: string) => void;
       onFocus: FocusEvent;
       value: string;
+      typeaheadInputRef: React.RefObject<HTMLInputElement>;
+      onBlur: FocusEvent;
     },
     props: TypeaheadProps
   ) => JSX.Element;
@@ -33,4 +35,5 @@ export interface TypeaheadProps {
 export interface TypeaheadState {
   value: string;
   showSuggestions: boolean;
+  focussedElement?: Element | null;
 }
