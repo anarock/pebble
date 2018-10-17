@@ -29,7 +29,8 @@
   },
   "lint-staged": {
     "./svgs/*.svg": [
-      "imagemin-lint-staged"
+      "imagemin-lint-staged",
+      "git add"
     ]
   },
   "dependencies": {
