@@ -23,6 +23,15 @@ The easier way is to use the cdn:
 :boom: Warning: Pebble adds `box-sizing: border-box` by default to every element by using [`inherit`](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
 If you have some elements whose children which need default box-sizing you can reset it's box-sizing to `content-box`
 
+### Polyfill
+
+Pebble intends to have a very small footprint while maintaining performance.
+This, however, comes at a cost of supporting only modern browsers. If you need to support legacy browsers, you would need to add polyfills.
+
+```html
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find,Array.prototype.findIndex,Array.prototype.includes,IntersectionObserver,Intl.~locale.en" />
+```
+
 ## Using icons in React Native
 
 Add the following in your `package.json`;
