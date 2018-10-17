@@ -1,15 +1,15 @@
 import * as React from "react";
 import { getSelectedCheckboxes } from "./utils/getSelectedCheckboxes";
-import * as mixins from "../theme/mixins";
 import Button from "./Button";
 import OptionGroup from "./shared/OptionGroup";
 import { OptionGroupCheckBoxProps } from "./typings/OptionGroupCheckBox";
+import * as styles from "../components/styles/OptionGroupCheckBox.styles";
 
 const OptionGroupCheckBox: React.SFC<OptionGroupCheckBoxProps> = props => {
   let { onApply, onClear, selected, onChange, ...rest } = props;
   return (
     <React.Fragment>
-      <div style={{ maxHeight: "532px", position: "relative" }}>
+      <div className={styles.optionGroupCheckBoxWrap}>
         <OptionGroup
           {...rest}
           isSelected={value => !!selected && selected.indexOf(value) >= 0}
@@ -20,7 +20,7 @@ const OptionGroupCheckBox: React.SFC<OptionGroupCheckBoxProps> = props => {
         />
 
         {(onApply || onClear) && (
-          <div style={{ ...mixins.flexSpaceBetween, padding: 20 }}>
+          <div className={styles.optionGroupCheckBoxButtonWrap}>
             {onClear && (
               <Button type="secondary" onClick={onClear}>
                 Clear
