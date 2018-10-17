@@ -9,20 +9,22 @@ const OptionGroupCheckBox: React.SFC<OptionGroupCheckBoxProps> = props => {
   let { onApply, onClear, selected, onChange, ...rest } = props;
   return (
     <React.Fragment>
-      <OptionGroup
-        {...rest}
-        isSelected={value => !!selected && selected.indexOf(value) >= 0}
-        handleChange={({ value }) => {
-          onChange(getSelectedCheckboxes(value, selected), props);
-        }}
-        multiSelect
-      />
+      <div style={{ maxHeight: "532px", position: "relative" }}>
+        <OptionGroup
+          {...rest}
+          isSelected={value => !!selected && selected.indexOf(value) >= 0}
+          handleChange={({ value }) => {
+            onChange(getSelectedCheckboxes(value, selected), props);
+          }}
+          multiSelect
+        />
 
-      <div style={{ ...mixins.flexSpaceBetween, padding: 20 }}>
-        <Button type="secondary" onClick={onClear}>
-          Clear
-        </Button>
-        <Button onClick={() => onApply(selected, props)}>Apply</Button>
+        <div style={{ ...mixins.flexSpaceBetween, padding: 20 }}>
+          <Button type="secondary" onClick={onClear}>
+            Clear
+          </Button>
+          <Button onClick={() => onApply(selected, props)}>Apply</Button>
+        </div>
       </div>
     </React.Fragment>
   );

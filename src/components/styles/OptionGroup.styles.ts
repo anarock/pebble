@@ -10,24 +10,20 @@ export const optionsWrapper = css({
   maxHeight: 352,
   minWidth: 200,
   overflowY: "auto",
-  padding: "20px 1px",
-  transition: "all 100ms linear",
-  willChange: "max-height"
-});
-
-export const fixedHeightDiv = css({
-  position: "relative",
-  zIndex: 8,
-  height: 80
+  padding: "20px 1px"
 });
 
 export const searchBoxWrapper = css({
   padding: 20,
   boxShadow: "none",
   transition: "all 100ms linear",
-  position: "relative",
   zIndex: 10,
-  willChange: "padding"
+  willChange: "padding",
+  position: "absolute",
+  top: 0,
+  background: "white",
+  width: "100%",
+  boxSizing: "border-box"
 });
 
 export const searchBoxScrolledStyle = css({

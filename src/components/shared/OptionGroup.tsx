@@ -8,8 +8,7 @@ import Search from "../Search";
 import {
   searchBoxScrolledStyle,
   searchBoxWrapper,
-  optionsWrapper,
-  fixedHeightDiv
+  optionsWrapper
 } from "../styles/OptionGroup.styles";
 
 class OptionGroup extends React.PureComponent<
@@ -139,14 +138,12 @@ class OptionGroup extends React.PureComponent<
     return (
       <React.Fragment>
         {searchBox && (
-          <div className={fixedHeightDiv}>
-            <div className={searchBoxClassName}>
-              <Search
-                type="small"
-                onChange={onSearchBoxQueryChange}
-                placeholder={searchBoxPlaceholder}
-              />
-            </div>
+          <div className={searchBoxClassName}>
+            <Search
+              type="small"
+              onChange={onSearchBoxQueryChange}
+              placeholder={searchBoxPlaceholder}
+            />
           </div>
         )}
         {children &&
@@ -154,7 +151,7 @@ class OptionGroup extends React.PureComponent<
             <div
               ref={this.optionRef}
               style={{
-                paddingTop: searchBox ? 0 : undefined
+                paddingTop: searchBox ? 80 : undefined
               }}
               className={cx(optionsWrapper, className)}
             >
