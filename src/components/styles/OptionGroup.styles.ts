@@ -17,9 +17,13 @@ export const searchBoxWrapper = css({
   padding: 20,
   boxShadow: "none",
   transition: "all 100ms linear",
-  position: "relative",
   zIndex: 10,
-  willChange: "padding"
+  willChange: "padding",
+  position: "absolute",
+  top: 0,
+  background: "white",
+  width: "100%",
+  boxSizing: "border-box"
 });
 
 export const searchBoxScrolledStyle = css({
