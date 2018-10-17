@@ -29,7 +29,7 @@ Pebble intends to have a very small footprint while maintaining performance.
 This, however, comes at a cost of supporting only modern browsers. If you need to support legacy browsers, you would need to add polyfills.
 
 ```html
-<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find,Array.prototype.findIndex,IntersectionObserver,Intl.~locale.en" />
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find,Array.prototype.findIndex,IntersectionObserver,Intl.~locale.en"></script>
 ```
 
 ## Using icons in React Native
