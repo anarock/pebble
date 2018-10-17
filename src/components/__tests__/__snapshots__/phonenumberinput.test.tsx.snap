@@ -168,6 +168,7 @@ exports[`Component: Select default snapshot 1`] = `
   white-space: nowrap;
   color: #6B7785;
   color: #101721;
+  padding-right: 15px;
 }
 
 .emotion-0:disabled backgroundColor {
