@@ -15,40 +15,43 @@ storiesOf("Select", module)
   .add(
     "Single Select",
     withState({ searchQuery: "" })(({ store }) => (
-      <Select
-        selected={store.state.selected} // The value selected
-        value={store.state.value} // To show in input box after selection
-        onChange={(selected, e) => {
-          if (selected) {
-            store.set({
-              selected: selected,
-              value: options.find(option => option.value === selected)!.label // Yes, we save the label in value
-            });
-          }
-          action("onSelect")(selected, e);
-        }}
-        placeholder="Choose Option"
-        searchBox={boolean("searchBox")}
-        searchBoxProps={{
-          placeholder: text("searchBoxProps.placeholder", "Search"),
-          onChange: query => store.set({ searchQuery: query })
-        }}
-      >
-        {options
-          .filter(option => {
-            if (!boolean("searchBox") || !store.state.searchQuery) {
-              return true;
+      <div style={{ width: "330px" }}>
+        <Select
+          selected={store.state.selected} // The value selected
+          value={store.state.value} // To show in input box after selection
+          fullWidthDropdown
+          onChange={(selected, e) => {
+            if (selected) {
+              store.set({
+                selected: selected,
+                value: options.find(option => option.value === selected)!.label // Yes, we save the label in value
+              });
             }
-            return option.label.includes(store.state.searchQuery);
-          })
-          .map(option => (
-            <Option
-              key={option.value}
-              value={option.value}
-              label={option.label}
-            />
-          ))}
-      </Select>
+            action("onSelect")(selected, e);
+          }}
+          placeholder="Choose Option"
+          searchBox={boolean("searchBox")}
+          searchBoxProps={{
+            placeholder: text("searchBoxProps.placeholder", "Search"),
+            onChange: query => store.set({ searchQuery: query })
+          }}
+        >
+          {options
+            .filter(option => {
+              if (!boolean("searchBox") || !store.state.searchQuery) {
+                return true;
+              }
+              return option.label.includes(store.state.searchQuery);
+            })
+            .map(option => (
+              <Option
+                key={option.value}
+                value={option.value}
+                label={option.label}
+              />
+            ))}
+        </Select>
+      </div>
     ))
   )
   .add("Multi Select", () => (

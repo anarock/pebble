@@ -19,4 +19,5 @@ export interface SelectProps {
   searchBoxProps?: Partial<SearchProps>;
   dropdownClassName?: string;
   inputProps?: Partial<InputProps>;
+  fullWidthDropdown?: boolean;
 }

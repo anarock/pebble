@@ -7,7 +7,9 @@ import {
   inputWrapper,
   selectInput,
   selectInputWrapper,
-  selectWrapper
+  selectWrapper,
+  fullWidth,
+  relativePosition
 } from "./styles/Select.styles";
 import DropDown from "./DropDown";
 import Input from "./Input";
@@ -32,15 +34,22 @@ const Select: React.SFC<SelectProps> = props => {
     dropdownClassName,
     inputProps,
     searchBox,
-    searchBoxProps
+    searchBoxProps,
+    fullWidthDropdown
   } = props;
 
   const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
 
   return (
-    <div className={cx(selectWrapper, className)}>
+    <div
+      className={cx(selectWrapper, className, {
+        [relativePosition]: fullWidthDropdown
+      })}
+    >
       <DropDown
-        dropDownClassName={cx(dropDownClass, dropdownClassName)}
+        dropDownClassName={cx(dropDownClass, dropdownClassName, {
+          [fullWidth]: fullWidthDropdown
+        })}
         labelComponent={({ toggleDropdown, isOpen }) => {
           const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {
             __pebble__select__open: isOpen
