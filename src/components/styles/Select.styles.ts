@@ -10,7 +10,8 @@ export const selectInputWrapper = css({
 });
 
 export const selectInput = css({
-  color: colors.gray.darker
+  color: colors.gray.darker,
+  paddingRight: 15
 });
 
 export const dropDownClass = css({
