@@ -12,7 +12,7 @@ export interface PopperProps extends Partial<PopperProps_> {
   popperBackgroundColor?: string;
   children: (
     args: { toggle: () => void; isOpen: boolean }
-  ) => React.ReactChildren | React.ReactChild;
+  ) => JSX.Element;
   isOpen?: boolean;
   controlled?: boolean;
   popperClassName?: string;
