@@ -35,7 +35,7 @@ const Select: React.SFC<SelectProps> = props => {
     inputProps,
     searchBox,
     searchBoxProps,
-    dropdownFullWidth
+    fullWidthDropdown
   } = props;
 
   const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
@@ -43,12 +43,12 @@ const Select: React.SFC<SelectProps> = props => {
   return (
     <div
       className={cx(selectWrapper, className, {
-        [relativePosition]: dropdownFullWidth
+        [relativePosition]: fullWidthDropdown
       })}
     >
       <DropDown
         dropDownClassName={cx(dropDownClass, dropdownClassName, {
-          [fullWidth]: dropdownFullWidth
+          [fullWidth]: fullWidthDropdown
         })}
         labelComponent={({ toggleDropdown, isOpen }) => {
           const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {

@@ -19,7 +19,7 @@ storiesOf("Select", module)
         <Select
           selected={store.state.selected} // The value selected
           value={store.state.value} // To show in input box after selection
-          dropdownFullWidth
+          fullWidthDropdown
           onChange={(selected, e) => {
             if (selected) {
               store.set({
