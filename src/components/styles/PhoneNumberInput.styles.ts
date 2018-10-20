@@ -8,3 +8,7 @@ export const selectStyle = css({
   width: "80px",
   marginBottom: 0
 });
+
+export const combinedLabelStyle = css({
+  zIndex: 1
+});
