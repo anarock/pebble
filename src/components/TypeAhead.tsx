@@ -8,16 +8,12 @@ import OutsideClick from "./OutsideClick";
 import OptionGroupRadio from "./OptionGroupRadio";
 
 class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
-  typeaheadInputRef: React.RefObject<HTMLInputElement> = React.createRef();
   debouncedChange: () => void;
 
   static defaultProps: Partial<TypeaheadProps> = {
     debounceTime: 500,
     onClear: () => {},
-    searchBox: (
-      { registerChange, onFocus, value, typeaheadInputRef, onBlur },
-      props
-    ) => (
+    searchBox: ({ registerChange, onFocus, value }, props) => (
       <Input
         onChange={registerChange}
         placeholder={props.placeholder}
@@ -30,10 +26,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
               registerChange("");
               props.onClear();
             }
-          },
-          //@ts-ignore
-          ref: typeaheadInputRef,
-          onBlur
+          }
         }}
         value={value}
         errorMessage={props.errorMessage}
@@ -52,8 +45,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
   state: TypeaheadState = {
     value: this.props.initialValue || "",
-    showSuggestions: false,
-    focussedElement: undefined
+    showSuggestions: false
   };
 
   onChange = () => {
@@ -71,13 +63,8 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
   private onFocus = () => {
     this.setState({
-      showSuggestions: true,
-      focussedElement: document.activeElement
+      showSuggestions: true
     });
-  };
-
-  private onBlur = () => {
-    this.setState({ focussedElement: document.activeElement });
   };
 
   private onSelect = _value => {
@@ -92,7 +79,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   render() {
     const { className, searchBox, dropdownClassName, children } = this.props;
 
-    const { showSuggestions, value, focussedElement } = this.state;
+    const { showSuggestions, value } = this.state;
 
     return (
       <OutsideClick
@@ -108,15 +95,12 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
           {
             registerChange: this.registerChange,
             onFocus: this.onFocus,
-            onBlur: this.onBlur,
-            value,
-            typeaheadInputRef: this.typeaheadInputRef
+            value
           },
           this.props
         )}
 
-        {(focussedElement === this.typeaheadInputRef.current ||
-          showSuggestions) && (
+        {showSuggestions && (
           <div className={cx(optionsWrapper, dropdownClassName)}>
             <OptionGroupRadio onChange={this.onSelect}>
               {children}
