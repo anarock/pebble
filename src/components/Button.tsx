@@ -59,7 +59,7 @@ export const DropDownButton: React.SFC<DropDownButtonProps> = ({
   );
 
   return (
-    <Button {...props} type="secondary" className={cx(_className, className)}>
+    <Button {...props} type="dropdown" className={cx(_className, className)}>
       <React.Fragment>
         {children}{" "}
         <i

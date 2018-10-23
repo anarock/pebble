@@ -49,6 +49,13 @@ const mappingColorByType: MappingColorByType = {
     hover: red.light,
     active: red.dark,
     disabled: red.lighter
+  },
+  dropdown: {
+    textColor: gray.darker,
+    base: gray.lighter,
+    hover: gray.lighter,
+    active: gray.base,
+    disabled: gray.lighter
   }
 };
 
@@ -129,8 +136,9 @@ export const getButtonStyle = (size, type, showShadow, filled) => {
 export const iconStyle = css({
   marginLeft: 15,
   fontWeight: "bold",
-  fontSize: 12,
+  fontSize: 8,
   transition: "transform ease-out .2s",
   willTransform: "transform",
-  marginTop: 2
+  marginTop: 2,
+  color: colors.gray.dark
 });

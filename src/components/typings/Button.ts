@@ -1,6 +1,12 @@
 import * as React from "react";
 
-export type ButtonType = "primary" | "secondary" | "link" | "success" | "alert";
+export type ButtonType =
+  | "primary"
+  | "secondary"
+  | "link"
+  | "success"
+  | "alert"
+  | "dropdown";
 
 export interface ButtonProps {
   children: React.ReactNode;
@@ -34,4 +40,5 @@ export interface MappingColorByType {
   secondary: MappingColorByTypeOptions;
   success: MappingColorByTypeOptions;
   alert: MappingColorByTypeOptions;
+  dropdown: MappingColorByTypeOptions;
 }
