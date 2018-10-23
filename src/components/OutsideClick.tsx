@@ -15,12 +15,10 @@ class OutsideClick extends React.PureComponent<OutsideClickProps> {
 
   addListener = () => {
     document.addEventListener("mousedown", this.handleClick);
-    document.addEventListener("touchstart", this.handleClick);
   };
 
   removeListener = () => {
     document.removeEventListener("mousedown", this.handleClick);
-    document.removeEventListener("touchstart", this.handleClick);
   };
 
   componentDidMount() {
