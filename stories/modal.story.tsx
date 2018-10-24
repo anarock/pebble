@@ -3,7 +3,6 @@ import { storiesOf } from "@storybook/react";
 import Modal from "../src/components/Modal";
 import { boolean } from "@storybook/addon-knobs";
 import { colors } from "../src/theme";
-
 import { css } from "emotion";
 
 const style = css({
