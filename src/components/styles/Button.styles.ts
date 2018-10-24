@@ -135,3 +135,18 @@ export const iconStyle = css({
   marginTop: 2,
   color: colors.gray.dark
 });
+
+export const dropDownButtonStyle = css({
+  border: constants.border.base,
+  "&:not([disabled]):hover": {
+    backgroundColor: colors.gray.lighter
+  }
+});
+
+export const dropDownButtonDefaultStyle = css({
+  backgroundColor: colors.white.base,
+  color: colors.gray.darker,
+  "&:not([disabled]):hover": {
+    backgroundColor: colors.gray.lighter
+  }
+});
