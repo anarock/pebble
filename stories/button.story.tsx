@@ -4,7 +4,7 @@ import { boolean, select } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 import Button from "../src/components/Button";
 
-const t = ["primary", "secondary", "link", "success", "alert"];
+const t = ["primary", "secondary", "link", "success", "alert", "dropdown"];
 const size = ["x-small", "small", "large"];
 
 storiesOf("Button", module).add("Playground", () => (
