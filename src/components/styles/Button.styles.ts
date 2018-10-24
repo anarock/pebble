@@ -49,13 +49,6 @@ const mappingColorByType: MappingColorByType = {
     hover: red.light,
     active: red.dark,
     disabled: red.lighter
-  },
-  dropdown: {
-    textColor: gray.darker,
-    base: gray.lighter,
-    hover: gray.lighter,
-    active: gray.base,
-    disabled: gray.lighter
   }
 };
 

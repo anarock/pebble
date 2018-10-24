@@ -48,18 +48,24 @@ export const DropDownButton: React.SFC<DropDownButtonProps> = ({
 }) => {
   const _className = cx(
     css({
-      border: constants.border.base
+      border: constants.border.base,
+      "&:not([disabled]):hover": {
+        backgroundColor: colors.gray.lighter
+      }
     }),
     {
       [css({
         backgroundColor: colors.white.base,
-        color: colors.gray.darker
+        color: colors.gray.darker,
+        "&:not([disabled]):hover": {
+          backgroundColor: colors.gray.lighter
+        }
       })]: !(isOpen || isSelected)
     }
   );
 
   return (
-    <Button {...props} type="dropdown" className={cx(_className, className)}>
+    <Button {...props} type="secondary" className={cx(_className, className)}>
       <React.Fragment>
         {children}{" "}
         <i
