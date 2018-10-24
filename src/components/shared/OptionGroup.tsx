@@ -26,11 +26,14 @@ class OptionGroup extends React.PureComponent<
   private handleKeyPress = (e: KeyboardEvent) => {
     const { children, handleChange } = this.props;
     const { selected } = this.state;
+    const { which } = e;
 
-    if (e.which === 13) {
-      const {
-        props: { value, isSelected }
-      }: Partial<React.ReactElement<OptionProps>> = children[selected];
+    if (which === 13) {
+      // Enter key
+      // @ts-ignore
+      const { value, isSelected } =
+        // @ts-ignore
+        (children && children[selected] && children[selected].props) || {};
 
       handleChange({
         value,
@@ -41,14 +44,14 @@ class OptionGroup extends React.PureComponent<
     this.setState(
       () => {
         let _selected = selected;
-        if (e.which === 40) {
+        if (which === 40) {
           e.preventDefault();
           _selected = Math.min(
             _selected + 1,
             React.Children.count(children) - 1
           );
         }
-        if (e.which === 38) {
+        if (which === 38) {
           e.preventDefault();
           _selected = Math.max(_selected - 1, 0);
         }
@@ -56,7 +59,7 @@ class OptionGroup extends React.PureComponent<
         return { selected: _selected };
       },
       () => {
-        if (this.optionRef.current && (e.which === 40 || e.which === 38)) {
+        if (this.optionRef.current && (which === 40 || which === 38)) {
           scrollIntoView(
             ReactDOM.findDOMNode(
               this[`option-ref-${selected}`].current
@@ -105,11 +108,10 @@ class OptionGroup extends React.PureComponent<
       searchBox,
       children,
       multiSelect,
-      onSearchBoxQueryChange,
       className,
-      searchBoxPlaceholder,
       isSelected,
-      handleChange
+      handleChange,
+      searchBoxProps
     } = this.props;
     const { isScrolled, selected } = this.state;
 
@@ -136,11 +138,7 @@ class OptionGroup extends React.PureComponent<
       <React.Fragment>
         {searchBox && (
           <div className={searchBoxClassName}>
-            <Search
-              type="small"
-              onChange={onSearchBoxQueryChange}
-              placeholder={searchBoxPlaceholder}
-            />
+            <Search type="small" {...searchBoxProps} />
           </div>
         )}
         {children &&
@@ -148,7 +146,7 @@ class OptionGroup extends React.PureComponent<
             <div
               ref={this.optionRef}
               style={{
-                paddingTop: searchBox ? 0 : undefined
+                paddingTop: searchBox ? 80 : undefined
               }}
               className={cx(optionsWrapper, className)}
             >

@@ -11,6 +11,9 @@ interface _Subtract {
 type CommonProps = Subtract<OptionGroupProps_, _Subtract>;
 
 export interface OptionGroupRadio extends CommonProps {
-  onChange: (value: React.ReactText, props: OptionGroupRadio) => void;
+  onChange: (
+    value: React.ReactText | undefined,
+    props: OptionGroupRadio
+  ) => void;
   selected?: React.ReactText;
 }

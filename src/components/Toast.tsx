@@ -18,6 +18,8 @@ class Toast extends React.PureComponent<{}, ToastState> {
     emitter.emit("showToast", { text, type });
   }
 
+  showTimer: number | null;
+
   static hide() {
     emitter.emit("hideToast");
   }
@@ -38,14 +40,22 @@ class Toast extends React.PureComponent<{}, ToastState> {
     emitter.off("hideToast", this.hide);
   }
 
-  private show = ({ text, type = "success" }: Partial<ToastState>) => {
+  private show = ({
+    text,
+    type = "success"
+  }: Partial<ToastState> & { text: string }) => {
     this.setState({
       text,
       type,
       show: true
     });
 
-    setTimeout(
+    if (this.showTimer) {
+      clearTimeout(this.showTimer);
+      this.showTimer = null;
+    }
+
+    this.showTimer = window.setTimeout(
       () =>
         this.setState({
           show: false

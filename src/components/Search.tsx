@@ -57,7 +57,9 @@ class Search extends React.PureComponent<SearchProps, SearchState> {
             className={cx(clearContainer, { __display: !!searchValue.length })}
             onClick={() => {
               this.setState({ searchValue: "" });
-              this.searchInputRef.current.value = "";
+              if (this.searchInputRef.current) {
+                this.searchInputRef.current.value = "";
+              }
               onClear();
             }}
           >

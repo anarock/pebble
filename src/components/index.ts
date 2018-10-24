@@ -25,6 +25,7 @@ import Option from "./Option";
 import OptionGroupRadio from "./OptionGroupRadio";
 import OptionGroupCheckBox from "./OptionGroupCheckBox";
 import OutsideClick from "./OutsideClick";
+import PhoneNumberInput from "./PhoneNumberInput";
 
 export {
   Button,
@@ -54,5 +55,6 @@ export {
   Option,
   OptionGroupRadio,
   OptionGroupCheckBox,
-  OutsideClick
+  OutsideClick,
+  PhoneNumberInput
 };

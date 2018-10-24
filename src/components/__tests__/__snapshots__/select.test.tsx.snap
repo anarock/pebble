@@ -24,6 +24,44 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   transform: rotate(180deg);
 }
 
+.emotion-2 {
+  height: 2px;
+  background-color: #6161FF;
+  margin-top: -2px;
+  position: relative;
+  width: 0;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  z-index: 9;
+}
+
+.emotion-2._pebble_input_highlight_state,
+.emotion-2._pebble_input_highlight_focused {
+  width: 100%;
+}
+
+.emotion-1 {
+  color: #9FA6B0;
+  font-size: 14px;
+  line-height: 12px;
+  position: absolute;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  -webkit-transform: translate(0,24px);
+  -ms-transform: translate(0,24px);
+  transform: translate(0,24px);
+  pointer-events: none;
+}
+
+.emotion-1._pebble_input_label_focused {
+  font-size: 12px;
+  line-height: 10px;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  color: #6B7785;
+}
+
 .emotion-0 {
   outline: 0;
   border: 0;
@@ -38,26 +76,13 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #6B7785;
+  color: #101721;
+  padding-right: 15px;
 }
 
 .emotion-0:disabled backgroundColor {
   base: #ffffff;
-}
-
-.emotion-0._pebble_input_read_only {
-  color: #6B7785;
-}
-
-.emotion-0._pebble_input_disabled {
-  cursor: not-allowed;
-  pointer-events: none;
-  color: #9FA6B0;
-}
-
-.emotion-0._pebble_input_textarea {
-  height: 88px;
-  padding: 24px 0 52px 0;
-  resize: none;
 }
 
 .emotion-0[type='date'] {
@@ -102,44 +127,6 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   color: #E0E0E0;
 }
 
-.emotion-2 {
-  height: 2px;
-  background-color: #6161FF;
-  margin-top: -2px;
-  position: relative;
-  width: 0;
-  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  z-index: 9;
-}
-
-.emotion-2._pebble_input_highlight_state,
-.emotion-2._pebble_input_highlight_focused {
-  width: 100%;
-}
-
-.emotion-1 {
-  color: #9FA6B0;
-  font-size: 14px;
-  line-height: 12px;
-  position: absolute;
-  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  -webkit-transform: translate(0,24px);
-  -ms-transform: translate(0,24px);
-  transform: translate(0,24px);
-  pointer-events: none;
-}
-
-.emotion-1._pebble_input_label_focused {
-  font-size: 12px;
-  line-height: 10px;
-  -webkit-transform: translate(0,0);
-  -ms-transform: translate(0,0);
-  transform: translate(0,0);
-  color: #6B7785;
-}
-
 .emotion-3 {
   position: relative;
   display: -webkit-box;
@@ -176,7 +163,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
         >
           <input
             aria-label="Choose Option"
-            className="emotion-0 _pebble_input_read_only"
+            className="emotion-0"
             onChange={[Function]}
             readOnly={true}
             value=""
@@ -229,6 +216,44 @@ exports[`Component: Select single-select: snapshot 1`] = `
   transform: rotate(180deg);
 }
 
+.emotion-2 {
+  height: 2px;
+  background-color: #6161FF;
+  margin-top: -2px;
+  position: relative;
+  width: 0;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  z-index: 9;
+}
+
+.emotion-2._pebble_input_highlight_state,
+.emotion-2._pebble_input_highlight_focused {
+  width: 100%;
+}
+
+.emotion-1 {
+  color: #9FA6B0;
+  font-size: 14px;
+  line-height: 12px;
+  position: absolute;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  -webkit-transform: translate(0,24px);
+  -ms-transform: translate(0,24px);
+  transform: translate(0,24px);
+  pointer-events: none;
+}
+
+.emotion-1._pebble_input_label_focused {
+  font-size: 12px;
+  line-height: 10px;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  color: #6B7785;
+}
+
 .emotion-0 {
   outline: 0;
   border: 0;
@@ -243,26 +268,13 @@ exports[`Component: Select single-select: snapshot 1`] = `
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #6B7785;
+  color: #101721;
+  padding-right: 15px;
 }
 
 .emotion-0:disabled backgroundColor {
   base: #ffffff;
-}
-
-.emotion-0._pebble_input_read_only {
-  color: #6B7785;
-}
-
-.emotion-0._pebble_input_disabled {
-  cursor: not-allowed;
-  pointer-events: none;
-  color: #9FA6B0;
-}
-
-.emotion-0._pebble_input_textarea {
-  height: 88px;
-  padding: 24px 0 52px 0;
-  resize: none;
 }
 
 .emotion-0[type='date'] {
@@ -307,44 +319,6 @@ exports[`Component: Select single-select: snapshot 1`] = `
   color: #E0E0E0;
 }
 
-.emotion-2 {
-  height: 2px;
-  background-color: #6161FF;
-  margin-top: -2px;
-  position: relative;
-  width: 0;
-  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  z-index: 9;
-}
-
-.emotion-2._pebble_input_highlight_state,
-.emotion-2._pebble_input_highlight_focused {
-  width: 100%;
-}
-
-.emotion-1 {
-  color: #9FA6B0;
-  font-size: 14px;
-  line-height: 12px;
-  position: absolute;
-  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  -webkit-transform: translate(0,24px);
-  -ms-transform: translate(0,24px);
-  transform: translate(0,24px);
-  pointer-events: none;
-}
-
-.emotion-1._pebble_input_label_focused {
-  font-size: 12px;
-  line-height: 10px;
-  -webkit-transform: translate(0,0);
-  -ms-transform: translate(0,0);
-  transform: translate(0,0);
-  color: #6B7785;
-}
-
 .emotion-3 {
   position: relative;
   display: -webkit-box;
@@ -381,7 +355,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
         >
           <input
             aria-label="Choose Option"
-            className="emotion-0 _pebble_input_read_only"
+            className="emotion-0"
             onChange={[Function]}
             readOnly={true}
             value=""
@@ -434,6 +408,44 @@ exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
   transform: rotate(180deg);
 }
 
+.emotion-2 {
+  height: 2px;
+  background-color: #6161FF;
+  margin-top: -2px;
+  position: relative;
+  width: 0;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  z-index: 9;
+}
+
+.emotion-2._pebble_input_highlight_state,
+.emotion-2._pebble_input_highlight_focused {
+  width: 100%;
+}
+
+.emotion-1 {
+  color: #9FA6B0;
+  font-size: 14px;
+  line-height: 12px;
+  position: absolute;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  -webkit-transform: translate(0,24px);
+  -ms-transform: translate(0,24px);
+  transform: translate(0,24px);
+  pointer-events: none;
+}
+
+.emotion-1._pebble_input_label_focused {
+  font-size: 12px;
+  line-height: 10px;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  color: #6B7785;
+}
+
 .emotion-0 {
   outline: 0;
   border: 0;
@@ -448,26 +460,13 @@ exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: #6B7785;
+  color: #101721;
+  padding-right: 15px;
 }
 
 .emotion-0:disabled backgroundColor {
   base: #ffffff;
-}
-
-.emotion-0._pebble_input_read_only {
-  color: #6B7785;
-}
-
-.emotion-0._pebble_input_disabled {
-  cursor: not-allowed;
-  pointer-events: none;
-  color: #9FA6B0;
-}
-
-.emotion-0._pebble_input_textarea {
-  height: 88px;
-  padding: 24px 0 52px 0;
-  resize: none;
 }
 
 .emotion-0[type='date'] {
@@ -512,44 +511,6 @@ exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
   color: #E0E0E0;
 }
 
-.emotion-2 {
-  height: 2px;
-  background-color: #6161FF;
-  margin-top: -2px;
-  position: relative;
-  width: 0;
-  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  z-index: 9;
-}
-
-.emotion-2._pebble_input_highlight_state,
-.emotion-2._pebble_input_highlight_focused {
-  width: 100%;
-}
-
-.emotion-1 {
-  color: #9FA6B0;
-  font-size: 14px;
-  line-height: 12px;
-  position: absolute;
-  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
-  -webkit-transform: translate(0,24px);
-  -ms-transform: translate(0,24px);
-  transform: translate(0,24px);
-  pointer-events: none;
-}
-
-.emotion-1._pebble_input_label_focused {
-  font-size: 12px;
-  line-height: 10px;
-  -webkit-transform: translate(0,0);
-  -ms-transform: translate(0,0);
-  transform: translate(0,0);
-  color: #6B7785;
-}
-
 .emotion-3 {
   position: relative;
   display: -webkit-box;
@@ -586,7 +547,7 @@ exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
         >
           <input
             aria-label="Choose Option"
-            className="emotion-0 _pebble_input_read_only"
+            className="emotion-0"
             onChange={[Function]}
             readOnly={true}
             value=""

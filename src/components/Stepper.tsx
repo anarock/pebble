@@ -26,6 +26,8 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
     onBeforeNext: () => true,
     onBeforePrev: () => true,
     onChange: () => {},
+    onCancel: () => {},
+    onDone: () => {},
     renderFooterElement: ({ leftButtonData, rightButtonData }, props) => {
       return (
         <footer className={footerStyle}>
@@ -141,7 +143,9 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
             const headingColor =
               i === active
                 ? colors.violet.base
-                : !allowSkip && colors.gray.base;
+                : allowSkip
+                  ? colors.gray.base
+                  : undefined;
 
             return (
               <div

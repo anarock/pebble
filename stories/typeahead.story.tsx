@@ -17,6 +17,7 @@ storiesOf("Typeahead", module).add(
       placeholder="Typeahead"
       onChange={action("change")}
       onSelect={val => {
+        action("onSelect")(val);
         store.set({ selected: val });
       }}
       valueExtractor={value => `${value} is the best option`}
@@ -24,7 +25,7 @@ storiesOf("Typeahead", module).add(
       onClear={action("clear")}
       disabled={boolean("disabled")}
     >
-      {new Array(5).fill(1).map((_x, i) => (
+      {new Array(25).fill(1).map((_x, i) => (
         <Option key={i + 1} value={i + 1} label={`I am an option - ${i + 1}`} />
       ))}
     </TypeAhead>

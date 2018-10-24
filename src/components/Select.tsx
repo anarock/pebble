@@ -5,8 +5,11 @@ import {
   chevronStyle,
   dropDownClass,
   inputWrapper,
-  selectInputStyle,
-  selectWrapper
+  selectInput,
+  selectInputWrapper,
+  selectWrapper,
+  fullWidth,
+  relativePosition
 } from "./styles/Select.styles";
 import DropDown from "./DropDown";
 import Input from "./Input";
@@ -28,17 +31,25 @@ const Select: React.SFC<SelectProps> = props => {
     multiSelect,
     onClear,
     onApply,
+    dropdownClassName,
+    inputProps,
     searchBox,
-    searchBoxPlaceholder,
-    onSearchBoxQueryChange
+    searchBoxProps,
+    fullWidthDropdown
   } = props;
 
   const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
 
   return (
-    <div className={cx(selectWrapper, className)}>
+    <div
+      className={cx(selectWrapper, className, {
+        [relativePosition]: fullWidthDropdown
+      })}
+    >
       <DropDown
-        dropDownClassName={dropDownClass}
+        dropDownClassName={cx(dropDownClass, dropdownClassName, {
+          [fullWidth]: fullWidthDropdown
+        })}
         labelComponent={({ toggleDropdown, isOpen }) => {
           const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {
             __pebble__select__open: isOpen
@@ -46,14 +57,16 @@ const Select: React.SFC<SelectProps> = props => {
           return (
             <div className={inputWrapper} onClick={toggleDropdown}>
               <Input
-                className={selectInputStyle}
+                className={selectInputWrapper}
+                inputClassName={selectInput}
                 placeholder={placeholder}
-                value={value}
+                value={value || ""}
                 onChange={noop}
                 required={required}
                 message={isOpen ? " " : ""}
                 errorMessage={errorMessage}
                 readOnly
+                {...inputProps}
               />
               <i className={chevron} />
             </div>
@@ -70,17 +83,24 @@ const Select: React.SFC<SelectProps> = props => {
                   toggle();
                 }
               }}
-              onApply={_value => {
-                onApply(_value, props);
-                toggle();
-              }}
-              onClear={() => {
-                onClear();
-                toggle();
-              }}
+              onApply={
+                onApply
+                  ? _value => {
+                      onApply(_value, props);
+                      toggle();
+                    }
+                  : undefined
+              }
+              onClear={
+                onClear
+                  ? () => {
+                      onClear();
+                      toggle();
+                    }
+                  : undefined
+              }
               searchBox={searchBox}
-              searchBoxPlaceholder={searchBoxPlaceholder}
-              onSearchBoxQueryChange={onSearchBoxQueryChange}
+              searchBoxProps={searchBoxProps}
             >
               {children}
             </OptionGroup>
