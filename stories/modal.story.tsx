@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import Modal from "../src/components/Modal";
 import { boolean } from "@storybook/addon-knobs";
 import { colors } from "../src/theme";
-import ConfirmationModal from "../src/components/ConfirmationModal";
+import PopUp from "../src/components/PopUp";
 import { css } from "emotion";
 
 const style = css({
@@ -18,8 +18,8 @@ storiesOf("Modal", module).add("simple", () => (
   </Modal>
 ));
 
-storiesOf("Modal", module).add("Confirmation Modal", () => (
-  <ConfirmationModal
+storiesOf("Modal", module).add("PopUp", () => (
+  <PopUp
     visible={true}
     headingText="Are you sure?"
     onApprove={() => {}}

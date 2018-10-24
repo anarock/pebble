@@ -1,9 +1,14 @@
 import { css } from "emotion";
-import { colors } from "../../theme";
+import { colors, typography } from "../../theme";
+
+export const headingText = css({
+  ...typography.xl.bold,
+  lineHeight: "24px"
+});
 
 export const modalContainer = css({
   background: "white",
-  minWidth: "370px",
+  minWidth: "360px",
   alignSelf: "center",
   border: `1px solid ${colors.gray.light}`,
   borderRadius: "4px",
@@ -13,14 +18,14 @@ export const modalContainer = css({
 export const buttonsContainer = css({
   display: "flex",
   justifyContent: "space-between",
-  marginTop: "30px"
+  marginTop: "40px"
 });
 
 export const iconClose = css({
   cursor: "pointer",
   right: "30px",
   fontSize: "14px",
-  paddingTop: "2px",
+  paddingTop: "7px",
   color: colors.gray.base,
   "&:hover": {
     color: colors.gray.darker
