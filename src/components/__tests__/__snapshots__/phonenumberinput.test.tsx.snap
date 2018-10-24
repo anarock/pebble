@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Select default snapshot 1`] = `
-.emotion-5 {
+.emotion-6 {
   cursor: pointer;
   position: relative;
 }
 
-.emotion-4 {
+.emotion-5 {
   position: absolute;
   top: 25px;
   right: 7px;
@@ -14,13 +14,13 @@ exports[`Component: Select default snapshot 1`] = `
   font-size: 10px;
 }
 
-.emotion-4.__pebble__select__open {
+.emotion-5.__pebble__select__open {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -35,11 +35,11 @@ exports[`Component: Select default snapshot 1`] = `
   height: 68px;
 }
 
-.emotion-10._pebble_input_wrapper_textarea {
+.emotion-11._pebble_input_wrapper_textarea {
   height: 110px;
 }
 
-.emotion-7 {
+.emotion-8 {
   outline: 0;
   border: 0;
   border-bottom: 1px solid #EDEDED;
@@ -55,53 +55,53 @@ exports[`Component: Select default snapshot 1`] = `
   white-space: nowrap;
 }
 
-.emotion-7:disabled backgroundColor {
+.emotion-8:disabled backgroundColor {
   base: #ffffff;
 }
 
-.emotion-7[type='date'] {
+.emotion-8[type='date'] {
   -webkit-appearance: textfield;
 }
 
-.emotion-7[type='date']::-webkit-inner-spin-button,
-.emotion-7[type='date']::-webkit-calendar-picker-indicator {
+.emotion-8[type='date']::-webkit-inner-spin-button,
+.emotion-8[type='date']::-webkit-calendar-picker-indicator {
   webkit-appearance: none;
   display: none;
 }
 
-.emotion-7::-webkit-input-placeholder {
+.emotion-8::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-7::-moz-placeholder {
+.emotion-8::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-7:-ms-input-placeholder {
+.emotion-8:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-7:-moz-placeholder {
+.emotion-8:-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-7::-webkit-input-placeholder {
+.emotion-8::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-7::-moz-placeholder {
+.emotion-8::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-7:-ms-input-placeholder {
+.emotion-8:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-7::placeholder {
+.emotion-8::placeholder {
   color: #E0E0E0;
 }
 
-.emotion-2 {
+.emotion-3 {
   height: 2px;
   background-color: #6161FF;
   margin-top: -2px;
@@ -112,12 +112,12 @@ exports[`Component: Select default snapshot 1`] = `
   z-index: 9;
 }
 
-.emotion-2._pebble_input_highlight_state,
-.emotion-2._pebble_input_highlight_focused {
+.emotion-3._pebble_input_highlight_state,
+.emotion-3._pebble_input_highlight_focused {
   width: 100%;
 }
 
-.emotion-1 {
+.emotion-2 {
   color: #9FA6B0;
   font-size: 14px;
   line-height: 12px;
@@ -130,7 +130,7 @@ exports[`Component: Select default snapshot 1`] = `
   pointer-events: none;
 }
 
-.emotion-1._pebble_input_label_focused {
+.emotion-2._pebble_input_label_focused {
   font-size: 12px;
   line-height: 10px;
   -webkit-transform: translate(0,0);
@@ -139,20 +139,43 @@ exports[`Component: Select default snapshot 1`] = `
   color: #6B7785;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-6 {
+.emotion-0 {
+  color: #9FA6B0;
+  font-size: 14px;
+  line-height: 12px;
+  position: absolute;
+  -webkit-transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  transition: all 0.3s cubic-bezier(.64,.09,.08,1);
+  -webkit-transform: translate(0,24px);
+  -ms-transform: translate(0,24px);
+  transform: translate(0,24px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.emotion-0._pebble_input_label_focused {
+  font-size: 12px;
+  line-height: 10px;
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0);
+  color: #6B7785;
+}
+
+.emotion-7 {
   margin-bottom: 20px;
   width: 80px;
   margin-bottom: 0;
 }
 
-.emotion-0 {
+.emotion-1 {
   outline: 0;
   border: 0;
   border-bottom: 1px solid #EDEDED;
@@ -171,53 +194,53 @@ exports[`Component: Select default snapshot 1`] = `
   padding-right: 15px;
 }
 
-.emotion-0:disabled backgroundColor {
+.emotion-1:disabled backgroundColor {
   base: #ffffff;
 }
 
-.emotion-0[type='date'] {
+.emotion-1[type='date'] {
   -webkit-appearance: textfield;
 }
 
-.emotion-0[type='date']::-webkit-inner-spin-button,
-.emotion-0[type='date']::-webkit-calendar-picker-indicator {
+.emotion-1[type='date']::-webkit-inner-spin-button,
+.emotion-1[type='date']::-webkit-calendar-picker-indicator {
   webkit-appearance: none;
   display: none;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-0:-moz-placeholder {
+.emotion-1:-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-0::-webkit-input-placeholder {
+.emotion-1::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-0::-moz-placeholder {
+.emotion-1::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-0:-ms-input-placeholder {
+.emotion-1:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-0::placeholder {
+.emotion-1::placeholder {
   color: #E0E0E0;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -233,42 +256,47 @@ exports[`Component: Select default snapshot 1`] = `
   pointer-events: none;
 }
 
-.emotion-3._pebble_input_wrapper_textarea {
+.emotion-4._pebble_input_wrapper_textarea {
   height: 110px;
 }
 
 <div
-  className="emotion-11"
+  className="emotion-12"
 >
+  <label
+    className="_pebble_input_label_focused emotion-0"
+  >
+    Phone No.
+  </label>
   <div
-    className="emotion-6"
+    className="emotion-7"
   >
     <div>
       <div>
         <div
-          className="emotion-5"
+          className="emotion-6"
           onClick={[Function]}
         >
           <div
-            className="emotion-3"
+            className="emotion-4"
             onBlur={[Function]}
             onFocus={[Function]}
           >
             <input
-              aria-label="Phone No."
-              className="emotion-0"
+              aria-label=""
+              className="emotion-1"
               id="phone-select-input-test"
               onChange={[Function]}
               readOnly={true}
               value="+1"
             />
             <label
-              className="emotion-1 _pebble_input_label_focused"
+              className="emotion-2 _pebble_input_label_focused"
             >
-              Phone No.
+              
             </label>
             <div
-              className="emotion-2 _pebble_input_highlight_read_only"
+              className="emotion-3 _pebble_input_highlight_read_only"
               style={
                 Object {
                   "backgroundColor": "#6161FF",
@@ -278,32 +306,32 @@ exports[`Component: Select default snapshot 1`] = `
             
           </div>
           <i
-            className="emotion-4 pi pi-arrow-drop-down"
+            className="emotion-5 pi pi-arrow-drop-down"
           />
         </div>
       </div>
     </div>
   </div>
   <div
-    className="emotion-10"
+    className="emotion-11"
     onBlur={[Function]}
     onFocus={[Function]}
   >
     <input
       aria-label=""
-      className="emotion-7"
+      className="emotion-8"
       id="phone-test-input-test"
       onChange={[Function]}
       readOnly={false}
       value=""
     />
     <label
-      className="emotion-1"
+      className="emotion-2"
     >
       
     </label>
     <div
-      className="emotion-2"
+      className="emotion-3"
       style={
         Object {
           "backgroundColor": "#6161FF",

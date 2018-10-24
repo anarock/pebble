@@ -13,4 +13,5 @@ export interface PhoneNumberInputProps {
   selectProps?: Partial<SelectProps>;
   inputProps?: Partial<InputProps>;
   placeholder?: string;
+  required?: boolean;
 }

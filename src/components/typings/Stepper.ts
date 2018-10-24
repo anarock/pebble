@@ -18,7 +18,7 @@ interface ArgsRenderContent extends ArgsCommon {
   isSelected: boolean;
 }
 
-interface ArgsRenderFooter extends ArgsCommon {
+export interface ArgsRenderFooter extends ArgsCommon {
   activeIndex: number;
 }
 
