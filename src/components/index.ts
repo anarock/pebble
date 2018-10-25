@@ -16,6 +16,7 @@ import DateInput from "./DateInput";
 import Tooltip from "./Tooltip";
 import Logo from "./Logo";
 import Popper from "./Popper";
+import PopUp from "./PopUp";
 import Loader from "./Loader";
 import Radio from "./Radio";
 import RadioGroup from "./RadioGroup";
@@ -47,6 +48,7 @@ export {
   Tooltip,
   Logo,
   Popper,
+  PopUp,
   Loader,
   Radio,
   RadioGroup,
