@@ -4,6 +4,8 @@ import { ButtonType, MappingColorByType } from "../typings/Button";
 
 const { violet, gray, white, red, emerald } = colors;
 
+export const smallButtonHeight = 40;
+
 const commonButtonStyle = css({
   lineHeight: "23px",
   height: constants.buttonHeight,
@@ -104,7 +106,7 @@ const styleBasedOnSize = {
     ...typography.xs.light
   },
   small: {
-    height: 40,
+    height: `${smallButtonHeight}`,
     minWidth: 100,
     ...typography.s.regular
   },

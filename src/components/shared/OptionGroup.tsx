@@ -8,7 +8,8 @@ import Search from "../Search";
 import {
   searchBoxScrolledStyle,
   searchBoxWrapper,
-  optionsWrapper
+  optionsWrapper,
+  searchBoxHeight
 } from "../styles/OptionGroup.styles";
 
 class OptionGroup extends React.PureComponent<
@@ -146,7 +147,7 @@ class OptionGroup extends React.PureComponent<
             <div
               ref={this.optionRef}
               style={{
-                paddingTop: searchBox ? 80 : undefined
+                paddingTop: searchBox ? `${searchBoxHeight}px` : undefined
               }}
               className={cx(optionsWrapper, className)}
             >
