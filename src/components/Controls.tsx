@@ -48,7 +48,7 @@ class Controls extends React.PureComponent<ControlsProps> {
     labelExtractor: item => item.label || item.name
   };
 
-  constructor(props) {
+  constructor(props: ControlsProps) {
     super(props);
 
     console.warn(

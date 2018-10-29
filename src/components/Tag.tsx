@@ -9,12 +9,13 @@ const Tag: React.SFC<TagProps> = ({ label, color, onClose, className }) => {
   const wrapperClassName = cx(tagStyle, {
     __pebble__tag__with__close: !!onClose
   });
-  const _className = cx(wrapperClassName, className)
+  const _className = cx(wrapperClassName, className);
   return (
     <div
       className={_className}
       style={{
         color: colors[color].base,
+        // @ts-ignore
         backgroundColor: colors[color].lightest || colors[color].light
       }}
     >

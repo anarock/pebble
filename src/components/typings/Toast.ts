@@ -1,7 +1,7 @@
 export type ToastType = "success" | "error";
 
 export interface ToastState {
-  type: string;
+  type: ToastType;
   text: string;
   show: boolean;
 }

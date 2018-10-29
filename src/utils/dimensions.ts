@@ -6,7 +6,7 @@ const defaultDimensions = {
 };
 
 const dimensions = (function() {
-  let width, height;
+  let width: number, height: number;
 
   return () => {
     if (!isBrowser) return defaultDimensions;

@@ -38,7 +38,7 @@ const Select: React.SFC<SelectProps> = props => {
     fullWidthDropdown
   } = props;
 
-  const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
+  const OptionGroup = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
 
   return (
     <div

@@ -44,7 +44,7 @@ class DateInput extends React.PureComponent<DateInputProps> {
             hideShadow
             className={dateClass}
             selected={value ? new Date(value) : undefined}
-            onChange={date => {
+            onChange={(date: Date) => {
               this.onChange(date);
               toggle();
             }}

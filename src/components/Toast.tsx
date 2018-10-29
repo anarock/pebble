@@ -24,7 +24,7 @@ class Toast extends React.PureComponent<{}, ToastState> {
     emitter.emit("hideToast");
   }
 
-  state = {
+  state: ToastState = {
     text: "",
     type: "success",
     show: false

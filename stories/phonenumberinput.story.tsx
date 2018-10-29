@@ -7,15 +7,14 @@ import { withState } from "@dump247/storybook-state";
 import Option from "../src/components/Option";
 import countries from "../src/components/__tests__/fixtures/countrycodes";
 
-// const className = css({
-//   width: 400
-// });
-
-// const type = ["text", "date", "password", "email"];
+interface State {
+  countryCode: string;
+  phone: string;
+}
 
 storiesOf("PhoneNumberInput", module).add(
   "Material",
-  withState({ countryCode: "+91", phone: "" })(({ store }) => (
+  withState<State>({ countryCode: "+91", phone: "" })(({ store }) => (
     <PhoneNumberInput
       countryCode={store.state.countryCode}
       phone={store.state.phone}

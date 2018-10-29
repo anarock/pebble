@@ -40,7 +40,7 @@ storiesOf("Colors", module).add("List", () => (
         <h4 style={{ marginBottom: 10 }}>{x}</h4>
         <div style={{ overflow: "auto" }}>
           {Object.keys(colors[x]).map(y => {
-            const color = colors[x][y];
+            const color: string = colors[x][y];
             return (
               <div className={section}>
                 <div

@@ -115,7 +115,12 @@ const styleBasedOnSize = {
   }
 };
 
-export const getButtonStyle = (size, type, showShadow, filled) => {
+export const getButtonStyle = (
+  size: keyof typeof styleBasedOnSize,
+  type: ButtonType,
+  showShadow: boolean,
+  filled: boolean
+) => {
   return css([
     commonButtonStyle,
     {
