@@ -106,7 +106,7 @@ const styleBasedOnSize = {
     ...typography.xs.light
   },
   small: {
-    height: `${smallButtonHeight}`,
+    height: smallButtonHeight,
     minWidth: 100,
     ...typography.s.regular
   },

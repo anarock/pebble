@@ -147,7 +147,7 @@ class OptionGroup extends React.PureComponent<
             <div
               ref={this.optionRef}
               style={{
-                paddingTop: searchBox ? `${searchBoxHeight}px` : undefined
+                paddingTop: searchBox ? searchBoxHeight : undefined
               }}
               className={cx(optionsWrapper, className)}
             >
