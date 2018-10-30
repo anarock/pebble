@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { SelectProps } from "./typings/Select";
+import { SelectProps, Selected } from "./typings/Select";
 import {
   chevronStyle,
   dropDownClass,
@@ -15,6 +15,7 @@ import DropDown from "./DropDown";
 import Input from "./Input";
 import OptionGroupCheckBox from "./OptionGroupCheckBox";
 import OptionGroupRadio from "./OptionGroupRadio";
+import { Extras } from "./typings/OptionGroup";
 
 function noop() {}
 
@@ -37,8 +38,6 @@ const Select: React.SFC<SelectProps> = props => {
     searchBoxProps,
     fullWidthDropdown
   } = props;
-
-  const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
 
   return (
     <div
@@ -73,39 +72,65 @@ const Select: React.SFC<SelectProps> = props => {
           );
         }}
       >
-        {({ toggle }) => (
-          <React.Fragment>
-            <OptionGroup
-              selected={selected}
-              onChange={(_value, extras) => {
-                onChange(_value, extras);
-                if (!multiSelect) {
+        {({ toggle }) => {
+          const commonProps = {
+            onChange: (_value: Selected, extras: Extras) => {
+              onChange(_value, extras);
+              if (!multiSelect) {
+                toggle();
+              }
+            },
+            onApply: onApply
+              ? (_value: Selected) => {
+                  onApply(_value, props);
                   toggle();
                 }
-              }}
-              onApply={
-                onApply
-                  ? _value => {
-                      onApply(_value, props);
-                      toggle();
-                    }
-                  : undefined
-              }
-              onClear={
-                onClear
-                  ? () => {
-                      onClear();
-                      toggle();
-                    }
-                  : undefined
-              }
-              searchBox={searchBox}
-              searchBoxProps={searchBoxProps}
+              : undefined,
+
+            onClear: onClear
+              ? () => {
+                  onClear();
+                  toggle();
+                }
+              : undefined,
+
+            searchBox: searchBox,
+            searchBoxProps: searchBoxProps
+          };
+
+          // const OptionGroup = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
+          // const _selected = multiSelect
+          //   ? Array.isArray(selected) && selected || undefined
+          //   : !Array.isArray(selected) && selected || undefined
+
+          // return (
+          //   <OptionGroup
+          //     selected={selected}
+          //     {...commonProps}
+          //   >
+          //     {children}
+          //   </OptionGroup>
+          // )
+
+          if (multiSelect) {
+            return (
+              <OptionGroupCheckBox
+                selected={(Array.isArray(selected) && selected) || undefined}
+                {...commonProps}
+              >
+                {children}
+              </OptionGroupCheckBox>
+            );
+          }
+          return (
+            <OptionGroupRadio
+              selected={(!Array.isArray(selected) && selected) || undefined}
+              {...commonProps}
             >
               {children}
-            </OptionGroup>
-          </React.Fragment>
-        )}
+            </OptionGroupRadio>
+          );
+        }}
       </DropDown>
     </div>
   );

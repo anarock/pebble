@@ -1,4 +1,4 @@
-import { addDecorator } from "@storybook/react";
+import { addDecorator, StoryDecorator } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs";
 import centered from "@storybook/addon-centered";
 import { withBackgrounds } from "@storybook/addon-backgrounds";
@@ -8,10 +8,11 @@ import { withConsole } from "@storybook/addon-console";
 import { withViewport } from "@storybook/addon-viewport";
 
 addDecorator(centered);
-addDecorator(withKnobs);
+addDecorator(withKnobs as StoryDecorator);
 addDecorator(checkA11y);
 addDecorator(withViewport);
-addDecorator((storyFn, context) => withConsole()(storyFn)(context));
+addDecorator(((storyFn, context) =>
+  withConsole()(storyFn)(context)) as StoryDecorator);
 addDecorator(
   withBackgrounds([
     {

@@ -1,6 +1,5 @@
 import * as React from "react";
 import { OptionProps } from "../typings/Option";
-import * as ReactDOM from "react-dom";
 import { OptionGroupProps_, OptionGroupState_ } from "../typings/OptionGroup";
 import scrollIntoView from "scroll-into-view-if-needed";
 import { cx } from "emotion";
@@ -16,6 +15,7 @@ class OptionGroup extends React.PureComponent<
   OptionGroupState_
 > {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
+  optionsRefsSet = new Map<number, React.RefObject<HTMLDivElement>>();
   observer: IntersectionObserver;
 
   state = {
@@ -35,10 +35,13 @@ class OptionGroup extends React.PureComponent<
         // @ts-ignore
         (children && children[selected] && children[selected].props) || {};
 
-      handleChange({
-        value,
-        checked: !isSelected
-      });
+      handleChange(
+        {
+          value,
+          checked: !isSelected
+        },
+        e
+      );
     }
 
     this.setState(
@@ -59,16 +62,17 @@ class OptionGroup extends React.PureComponent<
         return { selected: _selected };
       },
       () => {
-        if (this.optionRef.current && (which === 40 || which === 38)) {
-          scrollIntoView(
-            ReactDOM.findDOMNode(
-              this[`option-ref-${selected}`].current
-            ) as Element,
-            {
-              behavior: "smooth",
-              boundary: this.optionRef.current
-            }
-          );
+        const currentRef = this.optionsRefsSet.get(selected);
+        if (
+          this.optionRef.current &&
+          (which === 40 || which === 38) &&
+          currentRef &&
+          currentRef.current
+        ) {
+          scrollIntoView(currentRef.current, {
+            behavior: "smooth",
+            boundary: this.optionRef.current
+          });
         }
       }
     );
@@ -118,14 +122,18 @@ class OptionGroup extends React.PureComponent<
     const _children = React.Children.map(
       children,
       (option: React.ReactElement<OptionProps>, i) => {
-        this[`option-ref-${i}`] = React.createRef();
+        let ref = this.optionsRefsSet.get(i);
+        if (!ref) {
+          ref = React.createRef<HTMLDivElement>();
+          this.optionsRefsSet.set(i, ref);
+        }
         return React.cloneElement(option, {
           onChange: handleChange,
           isActive: selected === i,
           isSelected: isSelected(option.props.value),
           multiSelect,
           // @ts-ignore
-          ref: this[`option-ref-${i}`]
+          ref: ref
         });
       }
     );
@@ -141,18 +149,17 @@ class OptionGroup extends React.PureComponent<
             <Search type="small" {...searchBoxProps} />
           </div>
         )}
-        {children &&
-          !!children.length && (
-            <div
-              ref={this.optionRef}
-              style={{
-                paddingTop: searchBox ? 80 : undefined
-              }}
-              className={cx(optionsWrapper, className)}
-            >
-              {_children}
-            </div>
-          )}
+        {!!React.Children.count(children) && (
+          <div
+            ref={this.optionRef}
+            style={{
+              paddingTop: searchBox ? 80 : undefined
+            }}
+            className={cx(optionsWrapper, className)}
+          >
+            {_children}
+          </div>
+        )}
       </React.Fragment>
     );
   }

@@ -1354,11 +1354,6 @@
   resolved "https://registry.yarnpkg.com/@types/storybook__addon-actions/-/storybook__addon-actions-3.4.1.tgz#8f90d76b023b58ee794170f2fe774a3fddda2c1d"
   integrity sha512-An8pNb1/7QhkdOT8Ht5WjJsSxAh2mWti/J4eILwUHpXVZ1j3xlVaOzwTbg8twN4DjgOAggjEDOj6Bx8YOWh9Pg==
 
-"@types/storybook__addon-backgrounds@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@types/storybook__addon-backgrounds/-/storybook__addon-backgrounds-3.2.1.tgz#07a5f97fe87068b95763a35d36f05fba413b7695"
-  integrity sha512-08kYHoBfG1oZx4OMvLWcSzZB2ToKDBd7sjsJ6iooev5Fi1TRIQTAc4/Ts9s4IZjCv/LpTCqcCSd3ZPVb/BZ2UA==
-
 "@types/storybook__addon-centered@^3.3.1":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/storybook__addon-centered/-/storybook__addon-centered-3.3.1.tgz#3ba6deb76da8742a9452e588956cf16a306fa752"

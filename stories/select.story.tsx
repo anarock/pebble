@@ -70,6 +70,7 @@ storiesOf("Select", module)
       multiSelect
       onApply={action("onApply")}
       onClear={action("onClear")}
+      selected={undefined} // TODO:Aziz add withState
     >
       {new Array(20).fill(1).map((_x, i) => (
         <Option
@@ -86,6 +87,7 @@ storiesOf("Select", module)
       placeholder="Choose Option"
       multiSelect
       searchBox
+      selected={undefined} // TODO:Aziz add withState
       onApply={action("onApply")}
       onClear={action("onClear")}
       searchBoxProps={{

@@ -13,8 +13,8 @@ const OptionGroupCheckBox: React.SFC<OptionGroupCheckBoxProps> = props => {
         <OptionGroup
           {...rest}
           isSelected={value => !!selected && selected.indexOf(value) >= 0}
-          handleChange={({ value }) => {
-            onChange(getSelectedCheckboxes(value, selected), props);
+          handleChange={({ value }, event) => {
+            onChange(getSelectedCheckboxes(value, selected), { props, event });
           }}
           multiSelect
         />

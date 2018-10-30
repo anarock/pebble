@@ -67,12 +67,12 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
     });
   };
 
-  private onSelect = _value => {
+  private onSelect = (_value?: React.ReactText) => {
     this.props.onSelect(_value, this.props);
 
     this.setState({
       showSuggestions: false,
-      value: this.props.valueExtractor(_value)
+      value: (_value && this.props.valueExtractor(_value)) || ""
     });
   };
 

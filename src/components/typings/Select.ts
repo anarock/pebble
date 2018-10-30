@@ -1,8 +1,8 @@
-import * as React from "react";
 import { InputProps } from "./Input";
 import { SearchProps } from "./Search";
+import { Extras } from "./OptionGroup";
 
-type Selected = number | string | (number | string)[];
+export type Selected = number | string | (number | string)[] | undefined;
 
 export interface SelectProps {
   className?: string;
@@ -10,9 +10,9 @@ export interface SelectProps {
   required?: boolean;
   errorMessage?: string;
   value?: string;
-  selected?: Selected;
+  selected: Selected;
   multiSelect?: boolean;
-  onChange: (value: Selected, event: React.MouseEvent) => void;
+  onChange: (value: Selected, extras: Extras) => void;
   onApply?: (value: Selected, props: SelectProps) => void;
   onClear?: () => void;
   searchBox?: boolean;

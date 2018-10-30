@@ -10,8 +10,11 @@ const OptionGroupRadio: React.SFC<OptionGroupRadio> = props => {
       isSelected={value => {
         return selected === value;
       }}
-      handleChange={({ value, checked }) => {
-        onChange(checked ? value : undefined, props);
+      handleChange={({ value, checked }, event) => {
+        onChange(checked ? value : undefined, {
+          props,
+          event: event
+        });
       }}
     />
   );
