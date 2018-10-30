@@ -1,7 +1,8 @@
 import * as React from "react";
 import { shallow } from "enzyme";
 import Controls from "../Controls";
-import sinon from "sinon";
+import sinon, { SinonSpy } from "sinon";
+import { ControlsProps } from "../typings/Controls";
 
 const data = [
   {
@@ -18,23 +19,21 @@ const data = [
   }
 ];
 
-const renderElement = ({ item, isSelected }) => (
-  <span className={isSelected ? "selected" : "unselected"}>{item.label}</span>
-);
-
-const keyExtractor = item => item.id;
-
 const getControlComponent = (
-  type,
-  spy,
-  selected,
+  type: ControlsProps["type"],
+  spy: SinonSpy,
+  selected: ControlsProps["selected"],
   allowUnselectForRadio?: boolean
 ) =>
   shallow(
     <Controls
       onChange={spy}
-      keyExtractor={keyExtractor}
-      renderElement={renderElement}
+      keyExtractor={item => item.id}
+      renderElement={({ item, isSelected }) => (
+        <span className={isSelected ? "selected" : "unselected"}>
+          {item.label}
+        </span>
+      )}
       data={data}
       type={type}
       selected={selected}

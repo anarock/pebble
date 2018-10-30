@@ -14,7 +14,7 @@ export interface CalendarProps extends CP {
   hideShadow?: boolean;
   className?: string;
   onClear?: () => void;
-  onApply?: (value: any) => void;
+  onApply?: (value?: CalendarValue) => void;
   tileDots: TileDot[];
   disabledDays?: (number | Date)[];
 }

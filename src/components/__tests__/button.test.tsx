@@ -17,7 +17,7 @@ describe("Button Combos test", () => {
     large: [true, false]
   };
 
-  const _combos = combos(_props);
+  const _combos = combos<typeof _props>(_props);
 
   test.each(_combos)("%o", props => {
     const button = renderer.create(

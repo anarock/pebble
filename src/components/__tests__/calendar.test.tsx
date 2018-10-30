@@ -45,7 +45,7 @@ describe("Calendar", () => {
 
     const argument = applySpy
       .getCall(0)
-      .args[0].map(x => format(x, "DD-MM-YYYY"));
+      .args[0].map((x: Date) => format(x, "DD-MM-YYYY"));
     expect(argument).toEqual(["01-12-2012", "11-12-2012"]);
 
     calendar
