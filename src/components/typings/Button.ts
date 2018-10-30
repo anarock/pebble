@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as CSS from "csstype";
 
 export type ButtonType = "primary" | "secondary" | "link" | "success" | "alert";
 
@@ -9,7 +10,7 @@ export interface ButtonProps {
   disabled?: boolean;
   type?: ButtonType;
   size?: "x-small" | "small" | "large";
-  width?: number | string;
+  width?: CSS.WidthProperty<number>;
   className?: string;
   showRipple?: boolean;
   loading?: boolean;
