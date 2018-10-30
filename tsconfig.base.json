@@ -27,7 +27,7 @@
     "target": "esnext",
     "typeRoots": ["./node_modules/@types", "./typings/npm"]
   },
-  "includes": ["src"],
+  "includes": ["src", "typings"],
   "exclude": [
     "node_modules",
     "dist",
