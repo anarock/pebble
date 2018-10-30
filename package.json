@@ -22,7 +22,7 @@
     "prepublishOnly": "npm run test && npm run build",
     "test:watch": "npm test -- --watchAll",
     "format": "pretty-quick",
-    "now-build": "rm -rf ./node_modules/.cache && npm run build-storybook",
+    "now-build": "rm -rf ./node_modules && yarn && npm run build-storybook",
     "now-start": "cd storybook-static && serve",
     "deploy": "npm run now-build && cd storybook-static && now",
     "copy:fonts": "copy './dist/fonts/*.ttf' ./native/icons"
