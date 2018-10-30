@@ -38,7 +38,7 @@ const Select: React.SFC<SelectProps> = props => {
     fullWidthDropdown
   } = props;
 
-  const OptionGroup = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
+  const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
 
   return (
     <div
@@ -77,8 +77,8 @@ const Select: React.SFC<SelectProps> = props => {
           <React.Fragment>
             <OptionGroup
               selected={selected}
-              onChange={(_value, event) => {
-                onChange(_value, event);
+              onChange={(_value, extras) => {
+                onChange(_value, extras);
                 if (!multiSelect) {
                   toggle();
                 }
