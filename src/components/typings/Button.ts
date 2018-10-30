@@ -9,7 +9,7 @@ export interface ButtonProps {
   disabled?: boolean;
   type?: ButtonType;
   size?: "x-small" | "small" | "large";
-  width?: number;
+  width?: number | string;
   className?: string;
   showRipple?: boolean;
   loading?: boolean;
