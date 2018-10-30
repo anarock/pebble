@@ -20,17 +20,25 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   };
 
   state: CalendarState = {
-    value: this.props.selected
+    value: this.props.selected,
+    singleSelectedDate: null
   };
 
   private onChange = value => {
     const { range, onChange } = this.props;
     this.setState(
       {
-        value
+        value,
+        singleSelectedDate: null
       },
       () => (range ? value.length === 2 && onChange(value) : onChange(value))
     );
+  };
+
+  private onDayClick = day => {
+    const { onClickDay } = this.props;
+    this.setState({ singleSelectedDate: day });
+    onClickDay && onClickDay(day);
   };
 
   private getTileContent = ({ date }) => {
@@ -96,6 +104,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
           showNeighboringMonth={false}
           tileContent={this.getTileContent}
           tileDisabled={this.getDisabledDays}
+          onClickDay={this.onDayClick}
           prevLabel={
             <i style={{ fontSize: 14 }} className="pi pi-chevron-left" />
           }
@@ -112,7 +121,15 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
               </Button>
             )}
             {onApply && (
-              <Button onClick={() => onApply(this.state.value)}>Apply</Button>
+              <Button
+                onClick={() => {
+                  range && this.state.singleSelectedDate
+                    ? onApply(this.state.singleSelectedDate)
+                    : onApply(this.state.value);
+                }}
+              >
+                Apply
+              </Button>
             )}
           </div>
         )}
