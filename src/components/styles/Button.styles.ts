@@ -131,8 +131,24 @@ export const getButtonStyle = (size, type, showShadow, filled) => {
 export const iconStyle = css({
   marginLeft: 15,
   fontWeight: "bold",
-  fontSize: 12,
+  fontSize: 8,
   transition: "transform ease-out .2s",
   willTransform: "transform",
-  marginTop: 2
+  marginTop: 2,
+  color: colors.gray.dark
+});
+
+export const dropDownButtonStyle = css({
+  border: constants.border.base,
+  "&:not([disabled]):hover": {
+    backgroundColor: colors.gray.lighter
+  }
+});
+
+export const dropDownButtonDefaultStyle = css({
+  backgroundColor: colors.white.base,
+  color: colors.gray.darker,
+  "&:not([disabled]):hover": {
+    backgroundColor: colors.gray.lighter
+  }
 });
