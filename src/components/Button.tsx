@@ -1,10 +1,15 @@
 import * as React from "react";
-import { css, cx } from "emotion";
-import { iconStyle, getButtonStyle } from "./styles/Button.styles";
+import { cx } from "emotion";
+import {
+  iconStyle,
+  getButtonStyle,
+  dropDownButtonStyle,
+  dropDownButtonDefaultStyle
+} from "./styles/Button.styles";
 import Ink from "react-ink";
 import { ButtonProps, DropDownButtonProps } from "./typings/Button";
 import Loader from "./Loader";
-import { colors, constants } from "../theme";
+import { colors } from "../theme";
 
 const Button: React.SFC<ButtonProps> = ({
   type = "primary",
@@ -46,17 +51,9 @@ export const DropDownButton: React.SFC<DropDownButtonProps> = ({
   className,
   ...props
 }) => {
-  const _className = cx(
-    css({
-      border: constants.border.base
-    }),
-    {
-      [css({
-        backgroundColor: colors.white.base,
-        color: colors.gray.darker
-      })]: !(isOpen || isSelected)
-    }
-  );
+  const _className = cx(dropDownButtonStyle, {
+    [dropDownButtonDefaultStyle]: !(isOpen || isSelected)
+  });
 
   return (
     <Button {...props} type="secondary" className={cx(_className, className)}>
