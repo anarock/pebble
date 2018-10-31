@@ -1,9 +1,11 @@
 declare module "combos" {
-  interface Input<T> {
-    [key: keyof T]: any[];
+  export const UNDEF: Symbol;
+
+  interface Input {
+    [key: string]: any[];
   }
-  interface Output<T> {
-    [key: keyof T]: any;
-  }
-  export default function combos<T extends {}>(inp: Input<T>): Output<T>[];
+
+  export default function combos<T extends Input>(
+    inp: T
+  ): { [P in keyof T]: T[P][0] }[];
 }

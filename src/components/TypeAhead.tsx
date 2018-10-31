@@ -8,8 +8,6 @@ import OutsideClick from "./OutsideClick";
 import OptionGroupRadio from "./OptionGroupRadio";
 
 class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
-  debouncedChange: () => void;
-
   static defaultProps: Partial<TypeaheadProps> = {
     debounceTime: 500,
     onClear: () => {},
@@ -37,20 +35,16 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
     )
   };
 
-  constructor(props: TypeaheadProps) {
-    super(props);
-
-    this.debouncedChange = debounce(this.onChange, props.debounceTime);
-  }
-
   state: TypeaheadState = {
     value: this.props.initialValue || "",
     showSuggestions: false
   };
 
-  onChange = () => {
+  private onChange = () => {
     this.props.onChange(this.state.value, this.props);
   };
+
+  private debouncedChange = debounce(this.onChange, this.props.debounceTime);
 
   private registerChange = (value: string) => {
     this.setState(
