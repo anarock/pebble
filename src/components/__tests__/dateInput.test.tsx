@@ -11,12 +11,12 @@ describe("DateInput", () => {
   test("should return correct value on apply", () => {
     const changeSpy = sinon.spy();
 
-    const dateinput = mount(
+    const dateInput = mount(
       <DateInput placeholder="Select Date" onChange={changeSpy} value={date} />
     );
-    dateinput.find(Input).simulate("click");
+    dateInput.find(Input).simulate("click");
 
-    dateinput
+    dateInput
       .find(".react-calendar__tile")
       .at(0)
       .simulate("click");
