@@ -27,7 +27,7 @@ const Button: React.SFC<ButtonProps> = ({
 
   const filled = size !== "x-small";
   const _className = cx(
-    getButtonStyle(size, type, showShadow, filled),
+    getButtonStyle(size, type, !!showShadow, filled),
     className
   );
 

@@ -23,7 +23,7 @@ storiesOf("OptionGroupCheckBox", module).add(
         }}
         onChange={value =>
           store.set({
-            value
+            value: value as string[]
           })
         }
         onApply={() => {}}

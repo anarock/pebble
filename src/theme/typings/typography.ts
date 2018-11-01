@@ -6,7 +6,7 @@ interface Style {
   color: CSS.ColorProperty;
 }
 
-interface Type {
+export interface Type {
   light?: Style;
   bold?: Style;
   lighter?: Style;

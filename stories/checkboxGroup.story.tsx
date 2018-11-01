@@ -10,7 +10,7 @@ storiesOf("CheckboxGroup", module).add(
       selected={store.state.value}
       onChange={value =>
         store.set({
-          value
+          value: value as string[]
         })
       }
       name="test"

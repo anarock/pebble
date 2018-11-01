@@ -3,8 +3,11 @@ import { storiesOf } from "@storybook/react";
 import { text, select } from "@storybook/addon-knobs";
 import Tag from "../src/components/Tag";
 import { colors } from "../src/theme";
+import { TagProps } from "../src/components/typings/Tag";
 
-const _colors = Object.keys(colors).filter(x => !["white"].includes(x));
+const _colors = Object.keys(colors).filter(
+  x => "white" !== x
+) as TagProps["color"][];
 
 storiesOf("Tag", module)
   .add("simple", () => (

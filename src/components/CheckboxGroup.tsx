@@ -6,7 +6,10 @@ import { getSelectedCheckboxes } from "./utils/getSelectedCheckboxes";
 export default class RadioGroup extends React.PureComponent<
   CheckboxGroupProps
 > {
-  private handleChange = ({ value }, event: React.MouseEvent) => {
+  private handleChange = (
+    { value }: { value: React.ReactText },
+    event: React.MouseEvent
+  ) => {
     const { onChange, selected } = this.props;
     onChange(getSelectedCheckboxes(value, selected), event);
   };

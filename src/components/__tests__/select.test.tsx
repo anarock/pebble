@@ -4,12 +4,20 @@ import Option from "../Option";
 import Select from "../Select";
 import { mount } from "enzyme";
 import sinon from "sinon";
-import { SelectProps } from "../typings/Select";
+import { SingleSelectProps, MultiSelectProps } from "../typings/Select";
 import Button from "../Button";
 import Input from "../Input";
 import Search from "../Search";
 
-function getComponent(spy = () => {}, props: Partial<SelectProps> = {}) {
+const options = new Array(5)
+  .fill(1)
+  .map((_x, i) => (
+    <Option key={i + 1} value={`option-${i + 1}`} label="I am an option" />
+  ));
+
+const noop = () => {};
+
+function getComponent(spy = noop, props: Partial<SingleSelectProps> = {}) {
   return (
     <Select
       onChange={spy}
@@ -17,9 +25,23 @@ function getComponent(spy = () => {}, props: Partial<SelectProps> = {}) {
       selected={"option-2"}
       {...props}
     >
-      {new Array(5).fill(1).map((_x, i) => (
-        <Option key={i + 1} value={`option-${i + 1}`} label="I am an option" />
-      ))}
+      {options}
+    </Select>
+  );
+}
+
+function getMultiSelectComponent(
+  spy = noop,
+  props: Partial<MultiSelectProps> = {}
+) {
+  return (
+    <Select
+      onChange={spy}
+      placeholder="Choose Option"
+      multiSelect={true}
+      {...props}
+    >
+      {options}
     </Select>
   );
 }
@@ -33,7 +55,7 @@ describe("Component: Select", () => {
 
   test("multi-select: snapshot", () => {
     const select = renderer.create(
-      getComponent(undefined, {
+      getMultiSelectComponent(undefined, {
         multiSelect: true,
         selected: []
       })
@@ -83,7 +105,7 @@ describe("Component: Select", () => {
     const applySpy = sinon.spy();
     const clearSpy = sinon.spy();
     const select = mount(
-      getComponent(spy, {
+      getMultiSelectComponent(spy, {
         multiSelect: true,
         onApply: applySpy,
         onClear: clearSpy,

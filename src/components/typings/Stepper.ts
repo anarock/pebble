@@ -22,11 +22,13 @@ export interface ArgsRenderFooter extends ArgsCommon {
   activeIndex: number;
 }
 
+type Item = any;
+
 export interface StepperProps {
-  keyExtractor: (item: any) => number | string;
+  keyExtractor: (item: Item) => number | string;
   data: any[];
   renderContentElement: (args: ArgsRenderContent) => JSX.Element;
-  headingExtractor: ({ item: any }) => string;
+  headingExtractor: (obj: { item: Item }) => string;
   renderFooterElement: (
     args: ArgsRenderFooter,
     props: StepperProps

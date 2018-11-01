@@ -1,15 +1,17 @@
+type Option = any;
+
 export interface OptionsProps {
-  options: any[];
-  onSelect: (suggestion: any) => void;
+  options: Option[];
+  onSelect: (suggestion: Option) => void;
   rowRenderElement?: (
-    item: any,
+    item: Option,
     index?: number,
     selected?: boolean
   ) => JSX.Element | string;
   dropdownClassName?: string;
   width?: number | string;
-  selected?: any;
-  keyExtractor?: (item) => number | string;
+  selected?: Option;
+  keyExtractor?: (item: Option) => number | string;
   hideBorder?: boolean;
 }
 
