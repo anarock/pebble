@@ -101,7 +101,6 @@ const Select: React.SFC<SelectProps> = props => {
                 selected={props.selected}
                 onChange={(_value, extras) => {
                   props.onChange(_value, extras);
-                  toggle();
                 }}
                 onApply={
                   props.onApply &&
@@ -121,6 +120,7 @@ const Select: React.SFC<SelectProps> = props => {
                 selected={props.selected}
                 onChange={(_value, extras) => {
                   _value && props.onChange(_value, extras);
+                  toggle();
                 }}
                 {...commonProps}
               >
