@@ -28,7 +28,7 @@ class DateInput extends React.PureComponent<DateInputProps> {
         labelComponent={({ toggleDropdown }) => (
           <Input
             onChange={this.onChange}
-            type="date"
+            type="text"
             value={(value && format(value, "YYYY-MM-DD")) || ""}
             placeholder={this.props.placeholder}
             fixLabelAtTop
