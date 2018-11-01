@@ -5,6 +5,8 @@ import { action } from "@storybook/addon-actions";
 import Option from "../src/components/Option";
 import { withState } from "@dump247/storybook-state";
 import { boolean, text } from "@storybook/addon-knobs";
+import { SingleSelected } from "../src/components/typings/Select";
+import { Extras } from "../src/components/typings/OptionGroup";
 
 const options = new Array(20).fill(1).map((_x, i) => ({
   value: `option-${i + 1}`,
@@ -27,7 +29,7 @@ storiesOf("Select", module)
             selected={store.state.selected} // The value selected
             value={store.state.value} // To show in input box after selection
             fullWidthDropdown
-            onChange={(selected, e) => {
+            onChange={(selected: SingleSelected, e: Extras) => {
               if (selected) {
                 store.set({
                   selected: selected as string,

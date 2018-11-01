@@ -1,4 +1,4 @@
-import { SelectProps } from "./Select";
+import { SingleSelectProps } from "./Select";
 import { InputProps } from "./Input";
 
 export interface PhoneNumberInputProps {
@@ -10,7 +10,7 @@ export interface PhoneNumberInputProps {
 
   // Optional
   className?: string;
-  selectProps?: Partial<SelectProps>;
+  selectProps?: Partial<SingleSelectProps>;
   inputProps?: Partial<InputProps>;
   placeholder?: string;
   required?: boolean;

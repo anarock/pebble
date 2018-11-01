@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { SelectProps, Selected } from "./typings/Select";
+import { SelectProps } from "./typings/Select";
 import {
   chevronStyle,
   dropDownClass,
@@ -15,7 +15,6 @@ import DropDown from "./DropDown";
 import Input from "./Input";
 import OptionGroupCheckBox from "./OptionGroupCheckBox";
 import OptionGroupRadio from "./OptionGroupRadio";
-import { Extras } from "./typings/OptionGroup";
 
 function noop() {}
 
@@ -25,17 +24,9 @@ const Select: React.SFC<SelectProps> = props => {
     placeholder,
     required,
     errorMessage,
-    onChange,
     value,
-    selected,
-    children,
-    multiSelect,
-    onClear,
-    onApply,
     dropdownClassName,
     inputProps,
-    searchBox,
-    searchBoxProps,
     fullWidthDropdown
   } = props;
 
@@ -73,63 +64,70 @@ const Select: React.SFC<SelectProps> = props => {
         }}
       >
         {({ toggle }) => {
+          const { children, onClear, searchBox, searchBoxProps } = props;
           const commonProps = {
-            onChange: (_value: Selected, extras: Extras) => {
-              onChange(_value, extras);
-              if (!multiSelect) {
+            onClear:
+              onClear &&
+              (() => {
+                onClear();
                 toggle();
-              }
-            },
-            onApply: onApply
-              ? (_value: Selected) => {
-                  onApply(_value, props);
-                  toggle();
-                }
-              : undefined,
-
-            onClear: onClear
-              ? () => {
-                  onClear();
-                  toggle();
-                }
-              : undefined,
-
-            searchBox: searchBox,
-            searchBoxProps: searchBoxProps
+              }),
+            searchBox,
+            searchBoxProps
           };
 
-          // const OptionGroup = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
-          // const _selected = multiSelect
-          //   ? Array.isArray(selected) && selected || undefined
-          //   : !Array.isArray(selected) && selected || undefined
-
+          // This would have been the ideal way to write this but tyepscript is crying.
+          // const OptionGroup = props.multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
           // return (
           //   <OptionGroup
-          //     selected={selected}
+          //     selected={props.selected}
+          //     onChange={(_value, extras) => {
+          //       props.onChange(_value, extras)
+          //       props.multiSelect && toggle();
+          //     }}
+          //     onApply={props.multiSelect && ((_value) => {
+          //       props.onApply && props.onApply(_value, props);
+          //       toggle();
+          //     })}
           //     {...commonProps}
           //   >
           //     {children}
           //   </OptionGroup>
           // )
 
-          if (multiSelect) {
+          if (props.multiSelect === true) {
             return (
               <OptionGroupCheckBox
-                selected={(Array.isArray(selected) && selected) || undefined}
+                selected={props.selected}
+                onChange={(_value, extras) => {
+                  props.onChange(_value, extras);
+                  toggle();
+                }}
+                onApply={
+                  props.onApply &&
+                  (_value => {
+                    props.onApply && props.onApply(_value, props);
+                    toggle();
+                  })
+                }
                 {...commonProps}
               >
                 {children}
               </OptionGroupCheckBox>
             );
+          } else {
+            return (
+              <OptionGroupRadio
+                selected={props.selected}
+                onChange={(_value, extras) => {
+                  _value && props.onChange(_value, extras);
+                }}
+                {...commonProps}
+              >
+                {children}
+              </OptionGroupRadio>
+            );
           }
-          return (
-            <OptionGroupRadio
-              selected={(!Array.isArray(selected) && selected) || undefined}
-              {...commonProps}
-            >
-              {children}
-            </OptionGroupRadio>
-          );
         }}
       </DropDown>
     </div>
