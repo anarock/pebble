@@ -14,7 +14,7 @@ import { colors } from "../theme";
 export default class PhoneNumberInput extends React.Component<
   PhoneNumberInputProps
 > {
-  onCountrySelect = (countryCode: string) => {
+  onCountrySelect = (countryCode: string | number) => {
     this.props.onChange({
       countryCode,
       phone: this.props.phone
@@ -57,7 +57,7 @@ export default class PhoneNumberInput extends React.Component<
         <Select
           placeholder=""
           onChange={this.onCountrySelect}
-          value={countryCode}
+          value={countryCode + ""}
           selected={countryCode}
           {...selectProps}
           className={cx(selectStyle, selectProps && selectProps.className)}
