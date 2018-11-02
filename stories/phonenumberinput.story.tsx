@@ -19,7 +19,12 @@ storiesOf("PhoneNumberInput", module).add(
       countryCode={store.state.countryCode}
       phone={store.state.phone}
       placeholder="Alternate Phone Number"
-      onChange={({ countryCode, phone }) => store.set({ countryCode, phone })}
+      onChange={({ countryCode, phone }) =>
+        store.set({
+          countryCode: `${countryCode}`,
+          phone
+        })
+      }
     >
       {countries.map(country => (
         <Option

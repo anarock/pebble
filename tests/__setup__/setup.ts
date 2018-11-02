@@ -1,3 +1,2 @@
-import register from "babel-plugin-require-context-hook/register";
-
-register();
+// tslint:disable-next-line no-var-requires
+require("babel-plugin-require-context-hook/register")();
