@@ -3,7 +3,9 @@ import isBrowser from "is-in-browser";
 declare global {
   interface Window {
     ga: {
+      // tslint:disable-next-line no-any
       function(args: any[]): void;
+      // tslint:disable-next-line no-any
       q: any[];
       l: number;
     };
@@ -13,19 +15,19 @@ declare global {
 
 export function initGoogleAnalytics(gaId: string) {
   if (isBrowser) {
-    (function(s, o, g) {
+    ((s, o, g) => {
       window.GoogleAnalyticsObject = "ga";
       window.ga =
         window.ga ||
-        function() {
+        (() => {
           (window.ga.q = window.ga.q || []).push(arguments);
-        };
-      window.ga.l = 1 * (new Date() as any);
-      const a = <HTMLScriptElement>s.createElement(o);
+        });
+      window.ga.l = Date.now();
+      const a = s.createElement(o) as HTMLScriptElement;
       const m = s.getElementsByTagName(o)[0];
       a.async = true;
       a.src = g;
-      m.parentNode && m.parentNode.insertBefore(a, m);
+      if (m.parentNode) m.parentNode.insertBefore(a, m);
     })(document, "script", "https://www.google-analytics.com/analytics.js");
 
     // @ts-ignore

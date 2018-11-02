@@ -5,7 +5,7 @@ import PopUp from "../src/components/PopUp";
 
 storiesOf("PopUp", module).add("simple", () => (
   <PopUp
-    visible={true}
+    visible
     headingText="Are you sure?"
     onApprove={action("click")}
     onClose={action("click")}

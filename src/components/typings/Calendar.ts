@@ -16,7 +16,7 @@ export interface CalendarProps extends CP {
   onClear?: () => void;
   onApply?: (value?: CalendarValue) => void;
   tileDots: TileDot[];
-  disabledDays?: (number | Date)[];
+  disabledDays?: Array<number | Date>;
 }
 
 export interface CalendarState {

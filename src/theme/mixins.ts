@@ -3,18 +3,18 @@ import { CSSObject } from "create-emotion/types";
 
 type Styles = CSSObject | React.CSSProperties;
 
-export const textEllipsis: Styles | any = {
+export const textEllipsis: Styles = {
   overflowX: "hidden",
   textOverflow: "ellipsis",
   whiteSpace: "nowrap"
 };
 
-export const flexRow: Styles | any = {
+export const flexRow: Styles = {
   display: "flex",
   flexDirection: "row"
 };
 
-export const flexSpaceBetween: Styles | any = {
+export const flexSpaceBetween: Styles = {
   ...flexRow,
   justifyContent: "space-between",
   alignContent: "initial"

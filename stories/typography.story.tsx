@@ -44,7 +44,7 @@ storiesOf("Typography", module).add("List", () => (
       Object.keys(typography[x]).map((y: keyof Type) => {
         const style = typography[x][y] as React.CSSProperties;
         return (
-          <div className={section}>
+          <div className={section} key={`${x}.${y}`}>
             <div
               style={{
                 ...style,

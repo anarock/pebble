@@ -1,3 +1,4 @@
+// tslint:disable-next-line no-any
 type Option = any;
 
 export interface OptionsProps {

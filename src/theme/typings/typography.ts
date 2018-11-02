@@ -1,7 +1,7 @@
 import * as CSS from "csstype";
 
 interface Style {
-  fontSize: CSS.FontSizeProperty<any>;
+  fontSize: CSS.FontSizeProperty<number>;
   fontWeight: CSS.FontWeightProperty;
   color: CSS.ColorProperty;
 }

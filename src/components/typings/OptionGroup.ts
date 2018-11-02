@@ -2,7 +2,7 @@ import * as React from "react";
 import { SearchProps } from "./Search";
 import { Omit } from "utility-types";
 
-export interface OptionGroupProps_ {
+export interface OptionGroupProps {
   className?: string;
   searchBox?: boolean;
   searchBoxProps?: Partial<SearchProps>;
@@ -15,15 +15,16 @@ export interface OptionGroupProps_ {
 }
 
 export type CommonProps = Omit<
-  OptionGroupProps_,
+  OptionGroupProps,
   "multiSelect" | "isSelected" | "handleChange"
 >;
-export type Extras = {
+
+export interface Extras {
   props: CommonProps;
   event: React.SyntheticEvent | Event;
-};
+}
 
-export interface OptionGroupState_ {
+export interface OptionGroupState {
   selected: number;
   isScrolled: boolean;
 }

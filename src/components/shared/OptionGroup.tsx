@@ -1,6 +1,6 @@
 import * as React from "react";
 import { OptionProps } from "../typings/Option";
-import { OptionGroupProps_, OptionGroupState_ } from "../typings/OptionGroup";
+import { OptionGroupProps, OptionGroupState } from "../typings/OptionGroup";
 import scrollIntoView from "scroll-into-view-if-needed";
 import { cx } from "emotion";
 import Search from "../Search";
@@ -12,8 +12,8 @@ import {
 } from "../styles/OptionGroup.styles";
 
 class OptionGroup extends React.PureComponent<
-  OptionGroupProps_,
-  OptionGroupState_
+  OptionGroupProps,
+  OptionGroupState
 > {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
   optionsRefsSet = new Map<number, React.RefObject<HTMLDivElement>>();
@@ -134,7 +134,7 @@ class OptionGroup extends React.PureComponent<
           isSelected: isSelected(option.props.value),
           multiSelect,
           // @ts-ignore
-          ref: ref
+          ref
         });
       }
     );

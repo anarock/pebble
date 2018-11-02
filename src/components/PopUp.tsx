@@ -12,7 +12,7 @@ import {
 import { PopUpProps } from "./typings/PopUp";
 
 const PopUp: React.SFC<PopUpProps> = props => {
-  let {
+  const {
     onClose,
     headingText,
     onApprove,

@@ -105,7 +105,7 @@ const Select: React.SFC<SelectProps> = props => {
                 onApply={
                   props.onApply &&
                   (_value => {
-                    props.onApply && props.onApply(_value, props);
+                    if (props.onApply) props.onApply(_value, props);
                     toggle();
                   })
                 }
@@ -119,7 +119,7 @@ const Select: React.SFC<SelectProps> = props => {
               <OptionGroupRadio
                 selected={props.selected}
                 onChange={(_value, extras) => {
-                  _value && props.onChange(_value, extras);
+                  if (_value) props.onChange(_value, extras);
                   toggle();
                 }}
                 {...commonProps}

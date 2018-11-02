@@ -81,7 +81,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
 
     const _message = errorMessage || successMessage || message;
 
-    const Input_ = textArea ? "textarea" : "input";
+    const InputElement = textArea ? "textarea" : "input";
 
     const _inputClassName = cx(
       inputStyle,
@@ -119,7 +119,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
         onBlur={this.removeFocus}
         onClick={onClick}
       >
-        <Input_
+        <InputElement
           className={_inputClassName}
           {...inputProps}
           type={type}

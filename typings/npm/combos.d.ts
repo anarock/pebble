@@ -1,11 +1,10 @@
 declare module "combos" {
-  export const UNDEF: Symbol;
-
   interface Input {
+    // tslint:disable-next-line no-any
     [key: string]: any[];
   }
 
   export default function combos<T extends Input>(
     inp: T
-  ): { [P in keyof T]: T[P][0] }[];
+  ): Array<{ [P in keyof T]: T[P][0] }>;
 }
