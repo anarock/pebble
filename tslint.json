@@ -25,6 +25,7 @@
     "ordered-imports": false,
     "prefer-conditional-expression": false,
     "semicolon": false,
+    "space-before-function-paren": false,
     "switch-default": false,
     "trailing-comma": false,
     "variable-name": [
