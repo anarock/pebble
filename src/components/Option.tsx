@@ -5,9 +5,8 @@ import { cx } from "emotion";
 import { activeRow, rowWrapper, selectedRow } from "./styles/Options.styles";
 import Ink from "react-ink";
 import { colors, mixins } from "../theme";
-import { Component } from "react";
 
-class Option extends Component<OptionProps> {
+class Option extends React.Component<OptionProps> {
   static defaultProps: Partial<OptionProps> = {
     rightElement: ({ isSelected, multiSelect }) => {
       const iconClass = cx("pi", {
