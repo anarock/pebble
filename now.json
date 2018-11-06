@@ -5,7 +5,7 @@
     "node": "9.x.x"
   },
   "files": [
-    ".babelrc",
+    "babel.config.js",
     ".storybook",
     "rollup.config.js",
     "scripts",
