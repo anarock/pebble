@@ -35,12 +35,7 @@ function getMultiSelectComponent(
   props: Partial<MultiSelectProps> = {}
 ) {
   return (
-    <Select
-      onChange={spy}
-      placeholder="Choose Option"
-      multiSelect={true}
-      {...props}
-    >
+    <Select onChange={spy} placeholder="Choose Option" multiSelect {...props}>
       {options}
     </Select>
   );

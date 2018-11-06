@@ -39,13 +39,13 @@ storiesOf("Colors", module).add("List", () => (
     {Object.keys(colors).map((x: keyof Colors) => {
       const group = colors[x];
       return (
-        <div>
+        <div key={x}>
           <h4 style={{ marginBottom: 10 }}>{x}</h4>
           <div style={{ overflow: "auto" }}>
             {Object.keys(colors[x]).map((y: keyof typeof group) => {
               const color = group[y];
               return (
-                <div className={section}>
+                <div className={section} key={y}>
                   <div
                     style={{
                       backgroundColor: color,

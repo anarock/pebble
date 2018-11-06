@@ -5,9 +5,9 @@ import Tag from "../src/components/Tag";
 import { colors } from "../src/theme";
 import { TagProps } from "../src/components/typings/Tag";
 
-const _colors = Object.keys(colors).filter(
-  x => "white" !== x
-) as TagProps["color"][];
+const _colors = Object.keys(colors).filter(x => "white" !== x) as Array<
+  TagProps["color"]
+>;
 
 storiesOf("Tag", module)
   .add("simple", () => (

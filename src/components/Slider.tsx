@@ -20,7 +20,7 @@ const Slider: React.SFC<SliderProps> = ({
     __pebble__slider__large: large
   });
 
-  let _values = Array.isArray(values) ? values.slice(0) : values || [];
+  const _values = Array.isArray(values) ? values.slice(0) : values || [];
 
   if (Array.isArray(values)) {
     if (!values[0] && rest.min) {
@@ -48,11 +48,11 @@ const Slider: React.SFC<SliderProps> = ({
         onValuesUpdated={
           onValuesUpdated &&
           (args => {
-            const { min, max, values } = args;
+            const { min, max } = args;
             if (
-              Array.isArray(values) &&
-              values[0] === rest.min &&
-              values[1] === rest.max
+              Array.isArray(args.values) &&
+              args.values[0] === rest.min &&
+              args.values[1] === rest.max
             ) {
               onValuesUpdated({ min, max, values: [] });
             } else {

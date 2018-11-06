@@ -28,7 +28,7 @@ export const inputStyle = css({
   width: "100%",
   ...mixins.textEllipsis,
   "&:disabled": {
-    backgroundColor: colors.white
+    backgroundColor: colors.white.base
   },
   "&[type='date']": {
     ...(!isDesktop ? { "-webkit-appearance": "textfield" } : {})

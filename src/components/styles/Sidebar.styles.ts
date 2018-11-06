@@ -55,5 +55,5 @@ export const sidebarStyle = css({
     width: "100%",
     paddingTop: 50
   },
-  webkitOverflowScrolling:"touch"
+  webkitOverflowScrolling: "touch"
 });

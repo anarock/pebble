@@ -33,8 +33,10 @@ storiesOf("Select", module)
               if (selected) {
                 store.set({
                   selected: selected as string,
-                  value: options.find(option => option.value === selected)!
-                    .label // Yes, we save the label in value
+                  value: (() => {
+                    const option = options.find(o => o.value === selected);
+                    return option && option.label;
+                  })()
                 });
               }
               action("onSelect")(selected, e);

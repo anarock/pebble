@@ -81,8 +81,8 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   padding-right: 15px;
 }
 
-.emotion-0:disabled backgroundColor {
-  base: #ffffff;
+.emotion-0:disabled {
+  background-color: #ffffff;
 }
 
 .emotion-0[type='date'] {
@@ -273,8 +273,8 @@ exports[`Component: Select single-select: snapshot 1`] = `
   padding-right: 15px;
 }
 
-.emotion-0:disabled backgroundColor {
-  base: #ffffff;
+.emotion-0:disabled {
+  background-color: #ffffff;
 }
 
 .emotion-0[type='date'] {
@@ -465,8 +465,8 @@ exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
   padding-right: 15px;
 }
 
-.emotion-0:disabled backgroundColor {
-  base: #ffffff;
+.emotion-0:disabled {
+  background-color: #ffffff;
 }
 
 .emotion-0[type='date'] {

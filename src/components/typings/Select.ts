@@ -5,7 +5,7 @@ import { Extras } from "./OptionGroup";
 export type Selected = SingleSelected | MultiSelected;
 
 export type SingleSelected = number | string;
-export type MultiSelected = (number | string)[];
+export type MultiSelected = Array<number | string>;
 
 interface CommonSelectProps {
   className?: string;

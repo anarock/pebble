@@ -18,6 +18,7 @@
     "build": "rimraf dist && tsc -p tsconfig.base.json && rollup -c && rimraf compiled && yarn build:icons && yarn copy:fonts",
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'yarn build'",
     "test:cover": "yarn test && codecov",
+    "pretest": "tslint ./src/**/*.{ts,tsx} ./stories/**/*.tsx ./{tests,typings}/**/*.ts",
     "test": "tsc && jest",
     "prepublishOnly": "yarn test && yarn build",
     "test:watch": "npm test -- --watchAll",
@@ -28,6 +29,10 @@
     "copy:fonts": "copy './dist/fonts/*.ttf' ./native/icons"
   },
   "lint-staged": {
+    "*.{ts,tsx}": [
+      "tslint",
+      "git add"
+    ],
     "./svgs/*.svg": [
       "imagemin-lint-staged",
       "git add"
@@ -71,6 +76,7 @@
     "@types/enzyme": "^3.1.14",
     "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/jest": "^23.3.5",
+    "@types/just-debounce-it": "^1.1.0",
     "@types/react": "^16.4.18",
     "@types/react-dom": "^16.0.9",
     "@types/react-test-renderer": "^16.0.3",
@@ -110,6 +116,7 @@
     "moment": "^2.22.2",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.8.0",
+    "prop-types": "^15.6.2",
     "react-emotion": "^9.2.12",
     "react-native-vector-icons": "^6.0.2",
     "react-test-renderer": "^16.5.2",
@@ -126,6 +133,8 @@
     "serve": "^10.0.2",
     "sinon": "^7.0.0",
     "svgo": "^1.1.1",
+    "tslint": "^5.11.0",
+    "tslint-react": "^3.6.0",
     "typescript": "3.1.4",
     "webfonts-generator": "^0.4.0",
     "webpack": "^4.21.0"
