@@ -1,7 +1,7 @@
 import * as React from "react";
 import { toastWrapper } from "./styles/Toast.styles";
 import { colors } from "../theme";
-import { ToastState, ToastType } from "./typings/Toast";
+import { ToastProps, ToastState, ToastType } from "./typings/Toast";
 import { Transition, animated } from "react-spring";
 import { cx } from "emotion";
 import Mitt from "mitt";
@@ -13,7 +13,7 @@ const _colors = {
   error: colors.red.base
 };
 
-class Toast extends React.PureComponent<{}, ToastState> {
+class Toast extends React.PureComponent<ToastProps, ToastState> {
   static show(text: string, type: ToastType) {
     emitter.emit("showToast", { text, type });
   }
@@ -77,6 +77,7 @@ class Toast extends React.PureComponent<{}, ToastState> {
     return (
       // @ts-ignore
       <Transition
+        native
         from={{ opacity: 0, transform: "translateX(-50%) translateY(10px)" }}
         enter={{ opacity: 1, transform: "translateX(-50%) translateY(0)" }}
         leave={{ opacity: 0, transform: "translateX(-50%) translateY(10px)" }}
@@ -84,7 +85,7 @@ class Toast extends React.PureComponent<{}, ToastState> {
         {this.state.show &&
           (styles => (
             <animated.div
-              className={toastWrapper}
+              className={cx(toastWrapper, this.props.className)}
               style={{ backgroundColor: bColor, ...styles }}
             >
               <i className={iconClass} />
