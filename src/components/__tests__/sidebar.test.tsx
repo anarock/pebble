@@ -8,18 +8,31 @@ import combos from "combos";
 function noop() {}
 
 describe("Sidebar snapshot tests", () => {
-  const _combos = combos({
-    isOpen: [true, false],
-    width: [200, 300],
-    closeOnOutsideClick: [true, false, undefined]
-  });
+  test("open", () => {
+    const clock = sinon.useFakeTimers();
 
-  test.each(_combos)("%o", props => {
     const sidebar = renderer.create(
-      <SideBar {...props} onClose={noop}>
+      <SideBar isOpen width={200} onClose={noop}>
         Sidebar
       </SideBar>
     );
+
+    clock.tick(2000);
+
+    const tree = sidebar.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  test("closed", () => {
+    const clock = sinon.useFakeTimers();
+
+    const sidebar = renderer.create(
+      <SideBar isOpen={false} width={200} onClose={noop}>
+        Sidebar
+      </SideBar>
+    );
+
+    clock.tick(2000);
 
     const tree = sidebar.toJSON();
     expect(tree).toMatchSnapshot();
