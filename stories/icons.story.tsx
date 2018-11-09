@@ -7,9 +7,9 @@ import Tooltip from "../src/components/Tooltip";
 import iconNames from "../icons.json";
 
 const wrapper = css({
-  ...mixins.flexSpaceBetween
-  // flexWrap: "wrap",
-  // padding: 30
+  ...mixins.flexSpaceBetween,
+  flexWrap: "wrap",
+  padding: 30
 });
 
 const divs = css({
