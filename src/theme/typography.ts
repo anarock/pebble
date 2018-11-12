@@ -10,10 +10,10 @@ const fontSize = {
   xll: 22
 };
 
-enum FontWeight {
-  NORMAL = 400,
-  BOLD = 500
-}
+const FontWeight = {
+  NORMAL: 400,
+  BOLD: 500
+};
 
 export const typography: Typography = {
   xll: {

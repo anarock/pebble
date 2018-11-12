@@ -16,7 +16,7 @@
   dependencies:
     "@babel/highlight" "7.0.0-beta.51"
 
-"@babel/core@^7.0.0":
+"@babel/core@^7.1.2":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.1.2.tgz#f8d2a9ceb6832887329a7b60f9d035791400ba4e"
   integrity sha512-IFeSSnjXdhDaoysIlev//UzHZbdEmm7D0EIH2qtse9xK7mXEZQpYjs2P00XlP1qYsYvid79p+Zgg6tz1mp6iVw==
@@ -630,7 +630,7 @@
     "@babel/helper-regex" "^7.0.0"
     regexpu-core "^4.1.3"
 
-"@babel/preset-env@^7.0.0", "@babel/preset-env@^7.1.0":
+"@babel/preset-env@^7.1.0":
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.1.0.tgz#e67ea5b0441cfeab1d6f41e9b5c79798800e8d11"
   integrity sha512-ZLVSynfAoDHB/34A17/JCZbyrzbQj59QC1Anyueb4Bwjh373nVPq5/HMph0z+tCmcDjXDe+DlKQq9ywQuvWrQg==
@@ -10752,7 +10752,7 @@ rollup-plugin-alias@^1.4.0:
   dependencies:
     slash "^1.0.0"
 
-rollup-plugin-babel@^4.0.1:
+rollup-plugin-babel@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/rollup-plugin-babel/-/rollup-plugin-babel-4.0.3.tgz#8282b0e22233160d679e9c7631342e848422fb02"
   integrity sha512-/PP0MgbPQyRywI4zRIJim6ySjTcOLo4kQbEbROqp9kOR3kHC3FeU++QpBDZhS2BcHtJTVZMVbBV46flbBN5zxQ==
@@ -10808,6 +10808,16 @@ rollup-plugin-sourcemaps@^0.4.2:
   dependencies:
     rollup-pluginutils "^2.0.1"
     source-map-resolve "^0.5.0"
+
+rollup-plugin-terser@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-terser/-/rollup-plugin-terser-3.0.0.tgz#045bd7cf625ee1affcfe6971dab6fffe6fb48c65"
+  integrity sha512-Ed9zRD7OoCBnh0XGlEAJle5TCUsFXMLClwKzZWnS1zbNO4MelHjfCSdFZxCAdH70M40nhZ1nRrY2GZQJhSMcjA==
+  dependencies:
+    "@babel/code-frame" "^7.0.0"
+    jest-worker "^23.2.0"
+    serialize-javascript "^1.5.0"
+    terser "^3.8.2"
 
 rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.3.0:
   version "2.3.0"
@@ -11022,7 +11032,7 @@ send@0.16.2:
     range-parser "~1.2.0"
     statuses "~1.4.0"
 
-serialize-javascript@^1.4.0:
+serialize-javascript@^1.4.0, serialize-javascript@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-1.5.0.tgz#1aa336162c88a890ddad5384baebc93a655161fe"
   integrity sha512-Ga8c8NjAAp46Br4+0oZ2WxJCwIzwP60Gq1YPgU+39PiTVxyed/iKE/zyZI6+UlVYH5Q4PaQdHhcegIFPZTUfoQ==
@@ -11969,6 +11979,15 @@ terser@^3.10.0:
     source-map "~0.6.1"
     source-map-support "~0.5.6"
 
+terser@^3.8.2:
+  version "3.10.11"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-3.10.11.tgz#e063da74b194dde9faf0a561f3a438c549d2da3f"
+  integrity sha512-iruZ7j14oBbRYJC5cP0/vTU7YOWjN+J1ZskEGoF78tFzXdkK2hbCL/3TRZN8XB+MuvFhvOHMp7WkOCBO4VEL5g==
+  dependencies:
+    commander "~2.17.1"
+    source-map "~0.6.1"
+    source-map-support "~0.5.6"
+
 test-exclude@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/test-exclude/-/test-exclude-4.2.1.tgz#dfa222f03480bca69207ca728b37d74b45f724fa"
@@ -12301,10 +12320,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@3.1.4:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.1.4.tgz#c74ef7b3c2da65beff548b903022cb8c3cd997ed"
-  integrity sha512-JZHJtA6ZL15+Q3Dqkbh8iCUmvxD3iJ7ujXS+fVkKnwIVAdHc5BJTDNM0aTrnr2luKulFjU7W+SRhDZvi66Ru7Q==
+typescript@3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.1.6.tgz#b6543a83cfc8c2befb3f4c8fba6896f5b0c9be68"
+  integrity sha512-tDMYfVtvpb96msS1lDX9MEdHrW4yOuZ4Kdc4Him9oU796XldPYF/t2+uKoX0BBa0hXXwDlqYQbXY5Rzjzc5hBA==
 
 ua-parser-js@^0.7.18:
   version "0.7.18"
