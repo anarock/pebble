@@ -34,7 +34,7 @@ async function compress() {
   });
 
   return output.code
-    .replace(/\n^import \"[^\"]*\";$\n/gm, "")
+    .replace(/\n^import \"[^\"]*\";$\n/gm, "") // Webpack will remove unused imports
     .replace(/,[^\n]/g, ",\n")
     .replace(/\n\n/g, "\n")
     .trim();

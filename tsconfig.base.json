@@ -17,7 +17,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "compiled",
-    "preserveConstEnums": true,
     "pretty": true,
     "removeComments": false,
     "skipLibCheck": true,
