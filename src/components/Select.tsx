@@ -24,21 +24,11 @@ const Select: React.SFC<SelectProps> = props => {
     placeholder,
     required,
     errorMessage,
-    onChange,
     value,
-    selected,
-    children,
-    multiSelect,
-    onClear,
-    onApply,
     dropdownClassName,
     inputProps,
-    searchBox,
-    searchBoxProps,
     fullWidthDropdown
   } = props;
-
-  const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
 
   return (
     <div
@@ -73,39 +63,72 @@ const Select: React.SFC<SelectProps> = props => {
           );
         }}
       >
-        {({ toggle }) => (
-          <React.Fragment>
-            <OptionGroup
-              selected={selected}
-              onChange={(_value, event) => {
-                onChange(_value, event);
-                if (!multiSelect) {
-                  toggle();
+        {({ toggle }) => {
+          const { children, onClear, searchBox, searchBoxProps } = props;
+          const commonProps = {
+            onClear:
+              onClear &&
+              (() => {
+                onClear();
+                toggle();
+              }),
+            searchBox,
+            searchBoxProps
+          };
+
+          // This would have been the ideal way to write this but tyepscript is crying.
+          // const OptionGroup = props.multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
+          // return (
+          //   <OptionGroup
+          //     selected={props.selected}
+          //     onChange={(_value, extras) => {
+          //       props.onChange(_value, extras)
+          //       props.multiSelect && toggle();
+          //     }}
+          //     onApply={props.multiSelect && ((_value) => {
+          //       props.onApply && props.onApply(_value, props);
+          //       toggle();
+          //     })}
+          //     {...commonProps}
+          //   >
+          //     {children}
+          //   </OptionGroup>
+          // )
+
+          if (props.multiSelect === true) {
+            return (
+              <OptionGroupCheckBox
+                selected={props.selected}
+                onChange={(_value, extras) => {
+                  props.onChange(_value, extras);
+                }}
+                onApply={
+                  props.onApply &&
+                  (_value => {
+                    if (props.onApply) props.onApply(_value, props);
+                    toggle();
+                  })
                 }
-              }}
-              onApply={
-                onApply
-                  ? _value => {
-                      onApply(_value, props);
-                      toggle();
-                    }
-                  : undefined
-              }
-              onClear={
-                onClear
-                  ? () => {
-                      onClear();
-                      toggle();
-                    }
-                  : undefined
-              }
-              searchBox={searchBox}
-              searchBoxProps={searchBoxProps}
-            >
-              {children}
-            </OptionGroup>
-          </React.Fragment>
-        )}
+                {...commonProps}
+              >
+                {children}
+              </OptionGroupCheckBox>
+            );
+          } else {
+            return (
+              <OptionGroupRadio
+                selected={props.selected}
+                onChange={(_value, extras) => {
+                  if (_value) props.onChange(_value, extras);
+                  toggle();
+                }}
+                {...commonProps}
+              >
+                {children}
+              </OptionGroupRadio>
+            );
+          }
+        }}
       </DropDown>
     </div>
   );

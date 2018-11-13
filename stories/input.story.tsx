@@ -5,12 +5,17 @@ import { boolean, select, text } from "@storybook/addon-knobs";
 import { css } from "emotion";
 import DateInput from "../src/components/DateInput";
 import { withState } from "@dump247/storybook-state";
+import { InputProps } from "../src/components/typings/Input";
 
 const className = css({
   width: 400
 });
 
 const type = ["text", "date", "password", "email"];
+
+interface DateInputStoryState {
+  value?: number;
+}
 
 storiesOf("Input", module)
   .add(
@@ -19,24 +24,24 @@ storiesOf("Input", module)
       <Input
         className={className}
         onChange={value => store.set({ value })}
-        type={select("type", type)}
+        type={select("type", type, type[0]) as InputProps["type"]}
         placeholder={text("placeholder", "Name")}
-        fixLabelAtTop={boolean("fixLabelAtTop")}
-        required={boolean("required")}
+        fixLabelAtTop={boolean("fixLabelAtTop", false)}
+        required={boolean("required", false)}
         value={store.state.value}
-        readOnly={boolean("readOnly")}
-        disabled={boolean("disabled")}
-        message={text("message")}
-        errorMessage={text("errorMessage")}
-        successMessage={text("successMessage")}
-        textArea={boolean("textArea")}
-        loading={boolean("loading")}
+        readOnly={boolean("readOnly", false)}
+        disabled={boolean("disabled", false)}
+        message={text("message", "Info Message")}
+        errorMessage={text("errorMessage", "Error Message")}
+        successMessage={text("successMessage", "Success Message")}
+        textArea={boolean("textArea", false)}
+        loading={boolean("loading", false)}
       />
     ))
   )
   .add(
     "Date",
-    withState({ value: "" })(({ store }) => (
+    withState<DateInputStoryState>({ value: undefined })(({ store }) => (
       <div style={{ width: 300 }}>
         <DateInput
           placeholder="Date"

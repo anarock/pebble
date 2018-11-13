@@ -4,7 +4,7 @@ import { ControlProps } from "../typings/Control";
 import { colors } from "../../theme";
 import { cx } from "emotion";
 
-const renderProps = props => <ControlView {...props} />;
+const renderProps = (props: ControlProps) => <ControlView {...props} />;
 
 const Control: React.SFC<ControlProps> = props => {
   const {

@@ -5,8 +5,9 @@ const defaultDimensions = {
   width: 1025
 };
 
-const dimensions = (function() {
-  let width, height;
+const dimensions = (() => {
+  let width: number;
+  let height: number;
 
   return () => {
     if (!isBrowser) return defaultDimensions;

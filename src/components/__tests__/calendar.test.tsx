@@ -7,7 +7,7 @@ import { format } from "date-fns";
 const date = [new Date(2012, 11, 1), new Date(2012, 12, 1)];
 
 describe("Calendar", () => {
-  test("should return correct value on apply", () => {
+  test("should return correct range value on apply", () => {
     const applySpy = sinon.spy();
     const clearSpy = sinon.spy();
     const changeSpy = sinon.spy();
@@ -45,8 +45,49 @@ describe("Calendar", () => {
 
     const argument = applySpy
       .getCall(0)
-      .args[0].map(x => format(x, "DD-MM-YYYY"));
+      .args[0].map((x: Date) => format(x, "DD-MM-YYYY"));
     expect(argument).toEqual(["01-12-2012", "11-12-2012"]);
+
+    calendar
+      .find(".calendar-test > div")
+      .at(1)
+      .find("button")
+      .at(0)
+      .simulate("click");
+
+    expect(clearSpy.calledOnce).toBeTruthy();
+  });
+
+  test("should return correct value on apply", () => {
+    const applySpy = sinon.spy();
+    const clearSpy = sinon.spy();
+    const changeSpy = sinon.spy();
+
+    const calendar = mount(
+      <Calendar
+        className="calendar-test"
+        onApply={applySpy}
+        onClear={clearSpy}
+        onChange={changeSpy}
+        selected={date[0]}
+      />
+    );
+    calendar
+      .find(".react-calendar__tile")
+      .at(0)
+      .simulate("click");
+
+    expect(changeSpy.calledOnce);
+
+    calendar
+      .find(".calendar-test > div")
+      .at(1)
+      .find("button")
+      .at(1)
+      .simulate("click");
+
+    const argument = format(applySpy.getCall(0).args[0], "DD-MM-YYYY");
+    expect(argument).toEqual("01-12-2012");
 
     calendar
       .find(".calendar-test > div")

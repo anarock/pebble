@@ -35,7 +35,13 @@ class SideBar extends React.PureComponent<SidebarProps> {
   }
 
   render() {
-    let { width, isOpen, children, onClose, closeOnOutsideClick } = this.props;
+    const {
+      width,
+      isOpen,
+      children,
+      onClose,
+      closeOnOutsideClick
+    } = this.props;
     const _sidebarOverride = css({
       width,
       transform: isOpen ? `translateX(0)` : `translateX(${width}px)`

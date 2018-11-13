@@ -1,7 +1,13 @@
 import * as React from "react";
-import RCalendar from "react-calendar/dist/entry.nostyle";
+import RCalendar, {
+  CalendarTileProperties
+} from "react-calendar/dist/entry.nostyle";
 import { css, cx } from "emotion";
-import { CalendarProps, CalendarState } from "./typings/Calendar";
+import {
+  CalendarProps,
+  CalendarState,
+  CalendarValue
+} from "./typings/Calendar";
 import {
   buttonsWrapper,
   dateStyle,
@@ -24,24 +30,27 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     singleSelectedDate: null
   };
 
-  private onChange = value => {
+  private onChange = (value: CalendarValue) => {
     const { range, onChange } = this.props;
     this.setState(
       {
         value,
         singleSelectedDate: null
       },
-      () => (range ? value.length === 2 && onChange(value) : onChange(value))
+      () =>
+        range && Array.isArray(value)
+          ? value.length === 2 && onChange(value)
+          : onChange(value)
     );
   };
 
-  private onDayClick = day => {
+  private onDayClick = (day: Date) => {
     const { onClickDay } = this.props;
     this.setState({ singleSelectedDate: day });
-    onClickDay && onClickDay(day);
+    if (onClickDay) onClickDay(day);
   };
 
-  private getTileContent = ({ date }) => {
+  private getTileContent = ({ date }: CalendarTileProperties) => {
     const dot = this.props.tileDots.find(
       datum => !!datum.timeStamp && isSameDay(date, datum.timeStamp)
     );
@@ -60,7 +69,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     ) : null;
   };
 
-  private getDisabledDays = ({ date }) => {
+  private getDisabledDays = ({ date }: CalendarTileProperties) => {
     const { disabledDays } = this.props;
     return (
       (disabledDays &&

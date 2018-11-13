@@ -3,7 +3,13 @@ import { RadioProps } from "./typings/Radio";
 import { RadioGroupProps } from "./typings/RadioGroup";
 
 export default class RadioGroup extends React.PureComponent<RadioGroupProps> {
-  private handleChange = ({ value, checked }, event: React.MouseEvent) => {
+  private handleChange = (
+    {
+      value,
+      checked
+    }: { value: RadioGroupProps["selected"]; checked: boolean },
+    event: React.MouseEvent
+  ) => {
     const { toggle, selected, onChange } = this.props;
     if (!toggle && value === selected) return;
     onChange(checked ? value : undefined, event);

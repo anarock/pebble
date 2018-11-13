@@ -1,19 +1,7 @@
 import * as React from "react";
-import { Subtract } from "utility-types";
-import { OptionGroupProps_ } from "./OptionGroup";
-
-interface _Subtract {
-  multiSelect?: boolean;
-  isSelected: (value: React.ReactText) => boolean;
-  handleChange: (args: { value: React.ReactText; checked: boolean }) => void;
-}
-
-type CommonProps = Subtract<OptionGroupProps_, _Subtract>;
+import { CommonProps, Extras } from "./OptionGroup";
 
 export interface OptionGroupRadio extends CommonProps {
-  onChange: (
-    value: React.ReactText | undefined,
-    props: OptionGroupRadio
-  ) => void;
+  onChange: (value: React.ReactText | undefined, extras: Extras) => void;
   selected?: React.ReactText;
 }
