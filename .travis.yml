@@ -7,4 +7,5 @@ cache: yarn
 git:
   depth: 5
 script:
+  - yarn build
   - yarn test:cover
