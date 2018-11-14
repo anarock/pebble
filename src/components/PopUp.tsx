@@ -5,26 +5,26 @@ import Button from "./Button";
 import { mixins } from "../theme";
 import {
   modalContainer,
-  iconClose,
   buttonsContainer,
-  headingTextStyle
+  iconClose,
+  childrenWrap
 } from "./styles/PopUp.styles";
 import { PopUpProps } from "./typings/PopUp";
 
 const PopUp: React.SFC<PopUpProps> = props => {
   const {
     onClose,
-    headingText,
     onApprove,
     visible,
     approveButtonText,
-    closeButtonText
+    closeButtonText,
+    children
   } = props;
   return (
     <Modal visible={visible}>
       <div className={modalContainer}>
         <div className={css({ ...mixins.flexSpaceBetween })}>
-          <div className={headingTextStyle}>{headingText}</div>
+          <div className={childrenWrap}>{children}</div>
           <i className={cx("pi", "pi-close", iconClose)} onClick={onClose} />
         </div>
         {(onClose || onApprove) && (

@@ -4,10 +4,7 @@ import { action } from "@storybook/addon-actions";
 import PopUp from "../src/components/PopUp";
 
 storiesOf("PopUp", module).add("simple", () => (
-  <PopUp
-    visible
-    headingText="Are you sure?"
-    onApprove={action("click")}
-    onClose={action("click")}
-  />
+  <PopUp visible onApprove={action("click")} onClose={action("click")}>
+    <div>Are you sure?</div>
+  </PopUp>
 ));

@@ -1,10 +1,5 @@
 import { css } from "emotion";
-import { colors, typography, mixins, constants } from "../../theme";
-
-export const headingTextStyle = css({
-  ...typography.xl.bold,
-  lineHeight: "24px"
-});
+import { colors, mixins, constants } from "../../theme";
 
 export const modalContainer = css({
   background: "white",
@@ -27,4 +22,9 @@ export const iconClose = css({
   "&:hover": {
     color: colors.gray.darker
   }
+});
+
+export const childrenWrap = css({
+  width: "280px",
+  marginRight: "5px"
 });

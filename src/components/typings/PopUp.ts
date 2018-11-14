@@ -1,6 +1,6 @@
 export interface PopUpProps {
   visible: boolean;
-  headingText: string;
+  children: JSX.Element | string;
   onApprove?: () => void;
   onClose?: () => void;
   approveButtonText?: string;
