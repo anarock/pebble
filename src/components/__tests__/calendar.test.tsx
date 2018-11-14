@@ -58,6 +58,38 @@ describe("Calendar", () => {
     expect(clearSpy.calledOnce).toBeTruthy();
   });
 
+  test("should return correct date value on single select after apply", () => {
+    const applySpy = sinon.spy();
+    const clearSpy = sinon.spy();
+    const changeSpy = sinon.spy();
+
+    const calendar = mount(
+      <Calendar
+        className="calendar-test"
+        onApply={applySpy}
+        range
+        onClear={clearSpy}
+        onChange={changeSpy}
+        selected={date}
+      />
+    );
+
+    calendar
+      .find(".react-calendar__tile")
+      .at(0)
+      .simulate("click");
+
+    calendar
+      .find(".calendar-test > div")
+      .at(1)
+      .find("button")
+      .at(1)
+      .simulate("click");
+
+    const argument = format(applySpy.getCall(0).args[0], "DD-MM-YYYY");
+    expect(argument).toEqual("01-12-2012");
+  });
+
   test("should return correct value on apply", () => {
     const applySpy = sinon.spy();
     const clearSpy = sinon.spy();
