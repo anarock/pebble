@@ -1346,6 +1346,11 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
+"@types/googlemaps@*":
+  version "3.30.16"
+  resolved "https://registry.yarnpkg.com/@types/googlemaps/-/googlemaps-3.30.16.tgz#3264d5ef7c3a92fab2a9f00e09e3247866ff3532"
+  integrity sha512-6OZ64ahLzYfzuSr71y4jAHZXiwxjvvEM2bfF2tzjIc9KUZVbO30SkYa8WewTsR8aM5BFz/uBiNlZ14eRLXYS0g==
+
 "@types/jest@^23.0.2":
   version "23.1.4"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.1.4.tgz#71e1e2d08b1db742f479ee2795536ebc999a2419"
@@ -1377,6 +1382,14 @@
   integrity sha512-4Z0bW+75zeQgsEg7RaNuS1k9MKhci7oQqZXxrV5KUGIyXZHHAAL3KA4rjhdH8o6foZ5xsRMSqkoM5A3yRVPR5w==
   dependencies:
     "@types/node" "*"
+    "@types/react" "*"
+
+"@types/react-places-autocomplete@^6.1.3":
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/@types/react-places-autocomplete/-/react-places-autocomplete-6.1.3.tgz#181d77f3b0be23a8962738d60bfa8de7299356bf"
+  integrity sha512-sQj5x9pBG7mFkwsWZ6oVm5VOnW6C+gW8VMXkXdsGjJngBJD06tZBDpCk0U8nTfUbUz/2w9Hb8idK/d+DDdbMpA==
+  dependencies:
+    "@types/googlemaps" "*"
     "@types/react" "*"
 
 "@types/react-test-renderer@^16.0.3":
@@ -10076,6 +10089,14 @@ react-native-vector-icons@^6.0.2:
     lodash "^4.0.0"
     prop-types "^15.6.2"
     yargs "^8.0.2"
+
+react-places-autocomplete@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/react-places-autocomplete/-/react-places-autocomplete-7.2.0.tgz#85319ff42a1e3e0d2b02cc40471c1e2911e6dfbe"
+  integrity sha512-tjaH0dBHPz9emFekLf7g7vab3CVNqTPJGGaWRjtk5apGLpGpLhzC3u+qTBYQ0TM1c2Y07If/i22H+6v5IGdHlQ==
+  dependencies:
+    lodash.debounce "^4.0.8"
+    prop-types "^15.5.8"
 
 react-popper@^1.0.2:
   version "1.0.2"
