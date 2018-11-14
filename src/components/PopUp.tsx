@@ -1,13 +1,11 @@
 import * as React from "react";
-import { css, cx } from "emotion";
+import { cx } from "emotion";
 import Modal from "./Modal";
 import Button from "./Button";
-import { mixins } from "../theme";
 import {
   modalContainer,
   buttonsContainer,
-  iconClose,
-  childrenWrap
+  iconCloseClassName
 } from "./styles/PopUp.styles";
 import { PopUpProps } from "./typings/PopUp";
 
@@ -15,23 +13,27 @@ const PopUp: React.SFC<PopUpProps> = props => {
   const {
     onClose,
     onApprove,
+    onReject,
     visible,
     approveButtonText,
-    closeButtonText,
+    rejectButtonText,
     children
   } = props;
   return (
     <Modal visible={visible}>
       <div className={modalContainer}>
-        <div className={css({ ...mixins.flexSpaceBetween })}>
-          <div className={childrenWrap}>{children}</div>
-          <i className={cx("pi", "pi-close", iconClose)} onClick={onClose} />
-        </div>
-        {(onClose || onApprove) && (
+        {onClose && (
+          <i
+            className={cx("pi", "pi-close", iconCloseClassName)}
+            onClick={onClose}
+          />
+        )}
+        {children}
+        {(onReject || onApprove) && (
           <div className={buttonsContainer}>
-            {onClose && (
-              <Button size="large" type="secondary" onClick={onClose}>
-                {closeButtonText || "No"}
+            {onReject && (
+              <Button size="large" type="secondary" onClick={onReject}>
+                {rejectButtonText || "No"}
               </Button>
             )}
             {onApprove && (

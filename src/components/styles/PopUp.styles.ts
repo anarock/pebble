@@ -1,12 +1,15 @@
 import { css } from "emotion";
 import { colors, mixins, constants } from "../../theme";
 
+const modalPadding = 30;
+
 export const modalContainer = css({
   background: "white",
   width: "360px",
   alignSelf: "center",
   borderRadius: constants.borderRadius,
-  padding: "30px"
+  padding: `${modalPadding}px`,
+  position: "relative"
 });
 
 export const buttonsContainer = css({
@@ -14,17 +17,14 @@ export const buttonsContainer = css({
   marginTop: "40px"
 });
 
-export const iconClose = css({
+export const iconCloseClassName = css({
   cursor: "pointer",
-  right: "30px",
+  position: "absolute",
+  right: `${modalPadding}px`,
+  top: `${modalPadding}px`,
   fontSize: "14px",
   color: colors.gray.base,
   "&:hover": {
     color: colors.gray.darker
   }
-});
-
-export const childrenWrap = css({
-  width: "280px",
-  marginRight: "5px"
 });
