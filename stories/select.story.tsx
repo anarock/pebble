@@ -15,8 +15,9 @@ const options = new Array(20).fill(1).map((_x, i) => ({
 
 interface State {
   searchQuery: string;
-  selected: string;
-  value: string;
+  selected?: string | number;
+  value?: string;
+  multiSelected?: string[] | number[];
 }
 
 storiesOf("Select", module)
@@ -85,28 +86,43 @@ storiesOf("Select", module)
       ))}
     </Select>
   ))
-  .add("Multi Select with searchbox", () => (
-    <Select
-      onChange={action("onSelect")}
-      placeholder="Choose Option"
-      multiSelect
-      searchBox
-      selected={undefined} // TODO:Aziz add withState
-      onApply={action("onApply")}
-      onClear={action("onClear")}
-      searchBoxProps={{
-        onChange: action("searchBoxProps.onChange"),
-        placeholder: "Search",
-        onClear: action("searchBoxProps.onClear"),
-        clearable: boolean("searchBoxProps.clearable", true)
-      }}
-    >
-      {new Array(20).fill(1).map((_x, i) => (
-        <Option
-          key={i + 1}
-          value={`option-${i + 1}`}
-          label={`I am an option-${i + 1}`}
-        />
-      ))}
-    </Select>
-  ));
+  .add(
+    "Multi Select with searchbox",
+    withState<State>({ searchQuery: "", multiSelected: undefined })(
+      ({ store }) => (
+        <Select
+          onChange={(val: number[] | string[]) => {
+            action("onSelect")(val);
+            store.set({ multiSelected: val });
+          }}
+          placeholder="Choose Option"
+          multiSelect
+          searchBox
+          selected={store.state.multiSelected} // TODO:Aziz add withState
+          // onApply={action("onApply")}
+          // onClear={action("onClear")}
+          searchBoxProps={{
+            value: store.state.searchQuery,
+            onChange: query => {
+              action("searchBoxProps.onChange")(query);
+              store.set({ searchQuery: query });
+            },
+            placeholder: "Search",
+            onClear: () => {
+              action("searchBoxProps.onClear")();
+              store.set({ searchQuery: "" });
+            },
+            clearable: boolean("searchBoxProps.clearable", true)
+          }}
+        >
+          {new Array(20).fill(1).map((_x, i) => (
+            <Option
+              key={i + 1}
+              value={`option-${i + 1}`}
+              label={`I am an option-${i + 1}`}
+            />
+          ))}
+        </Select>
+      )
+    )
+  );
