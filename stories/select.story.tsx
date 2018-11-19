@@ -99,8 +99,8 @@ storiesOf("Select", module)
           multiSelect
           searchBox
           selected={store.state.multiSelected} // TODO:Aziz add withState
-          // onApply={action("onApply")}
-          // onClear={action("onClear")}
+          onApply={action("onApply")}
+          onClear={action("onClear")}
           searchBoxProps={{
             value: store.state.searchQuery,
             onChange: query => {
