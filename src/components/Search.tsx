@@ -17,7 +17,7 @@ class Search extends React.PureComponent<SearchProps, SearchState> {
   };
 
   state: SearchState = {
-    searchValue: ""
+    searchValue: this.props.value || ""
   };
 
   render() {
@@ -51,6 +51,7 @@ class Search extends React.PureComponent<SearchProps, SearchState> {
             onChange(e.target.value);
           }}
           ref={this.searchInputRef}
+          value={this.props.value}
         />
         {clearable && (
           <div
