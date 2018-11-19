@@ -5,18 +5,20 @@ interface TileDot {
   colors?: string[];
 }
 
+export type CalendarValue = Date[] | Date;
+
 export interface CalendarProps extends CP {
-  onChange: (date: Date) => void;
+  onChange: (value: CalendarValue) => void;
   range?: boolean;
-  selected?: Date[] | Date;
+  selected?: CalendarValue;
   hideShadow?: boolean;
   className?: string;
   onClear?: () => void;
-  onApply?: (value: any) => void;
+  onApply?: (value?: CalendarValue) => void;
   tileDots: TileDot[];
-  disabledDays?: (number | Date)[];
+  disabledDays?: Array<number | Date>;
 }
 
 export interface CalendarState {
-  value?: Date[] | Date;
+  value?: CalendarValue;
 }

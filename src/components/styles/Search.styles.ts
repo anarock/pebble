@@ -19,8 +19,8 @@ export const searchWrapperStyle = css({
     backgroundColor: colors.white.base,
     height: 76,
     padding: "0 25px",
-    boxShadow: constants.boxShadow.base,
-    input: typography.normal.regular
+    boxShadow: constants.boxShadow.base
+    // input: typography.normal.regular
   },
   "&.__pebble__search__table": {
     border: `1px solid ${colors.gray.light}`,

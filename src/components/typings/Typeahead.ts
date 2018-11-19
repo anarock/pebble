@@ -16,7 +16,7 @@ export interface TypeaheadProps {
   ) => JSX.Element;
   debounceTime: number;
   onChange: (text: string, props: TypeaheadProps) => void;
-  onSelect: (value, props: TypeaheadProps) => void;
+  onSelect: (value: number | string | undefined, props: TypeaheadProps) => void;
   dropdownClassName?: string;
   initialValue?: string;
   disabled?: boolean;

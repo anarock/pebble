@@ -28,8 +28,8 @@ class DateInput extends React.PureComponent<DateInputProps> {
         labelComponent={({ toggleDropdown }) => (
           <Input
             onChange={this.onChange}
-            type="date"
-            value={(value && format(value, "YYYY-MM-DD")) || ""}
+            type="text"
+            value={(value && format(value, "DD/MM/YYYY")) || ""}
             placeholder={this.props.placeholder}
             fixLabelAtTop
             inputProps={{
@@ -44,7 +44,7 @@ class DateInput extends React.PureComponent<DateInputProps> {
             hideShadow
             className={dateClass}
             selected={value ? new Date(value) : undefined}
-            onChange={date => {
+            onChange={(date: Date) => {
               this.onChange(date);
               toggle();
             }}

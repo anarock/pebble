@@ -5,9 +5,11 @@ import PopUp from "../src/components/PopUp";
 
 storiesOf("PopUp", module).add("simple", () => (
   <PopUp
-    visible={true}
-    headingText="Are you sure?"
-    onApprove={action("click")}
-    onClose={action("click")}
-  />
+    visible
+    onApprove={action("approve")}
+    onReject={action("reject")}
+    onClose={action("close")}
+  >
+    <div>Are you sure?</div>
+  </PopUp>
 ));

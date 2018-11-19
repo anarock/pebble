@@ -29,7 +29,7 @@ const divs = css({
 
 storiesOf("Icons", module).add("List", () => (
   <div className={wrapper}>
-    {iconNames.map(iconName => (
+    {iconNames.map((iconName: string) => (
       <div key={iconName} style={{ width: "33%" }}>
         <Tooltip
           label={({ ref }) => (

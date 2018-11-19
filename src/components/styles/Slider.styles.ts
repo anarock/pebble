@@ -1,6 +1,7 @@
 import { injectGlobal, css } from "emotion";
 import { colors, constants, mixins } from "../../theme";
 
+/* tslint:disable */
 injectGlobal`
 .rheostat {
   overflow: visible;
@@ -58,6 +59,7 @@ injectGlobal`
   height: 4px;
 }
 `;
+/* tslint:enable */
 
 export const sliderHeader = css({
   ...mixins.flexSpaceBetween,

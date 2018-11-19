@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react";
 import Tooltip from "../src/components/Tooltip";
 import Button from "../src/components/Button";
 import { boolean, select } from "@storybook/addon-knobs";
+import { Placement } from "popper.js";
 
 const placements = [
   "auto-start",
@@ -20,7 +21,7 @@ const placements = [
   "left-end",
   "left",
   "left-start"
-];
+] as Placement[];
 
 storiesOf("Tooltip", module).add("simple", () => (
   <Tooltip
@@ -32,9 +33,9 @@ storiesOf("Tooltip", module).add("simple", () => (
       </div>
     )}
     text="Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc"
-    isOpen={boolean("isOpen")}
-    placement={select("placement", placements)}
-    isError={boolean("error")}
-    disabled={boolean("disabled")}
+    isOpen={boolean("isOpen", false)}
+    placement={select("placement", placements, placements[0])}
+    isError={boolean("error", false)}
+    disabled={boolean("disabled", false)}
   />
 ));

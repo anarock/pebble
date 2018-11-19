@@ -14,7 +14,7 @@ interface ArgsCommon {
 }
 
 interface ArgsRenderContent extends ArgsCommon {
-  item: any;
+  item: Item;
   isSelected: boolean;
 }
 
@@ -22,11 +22,14 @@ export interface ArgsRenderFooter extends ArgsCommon {
   activeIndex: number;
 }
 
+// tslint:disable-next-line no-any
+type Item = any;
+
 export interface StepperProps {
-  keyExtractor: (item: any) => number | string;
-  data: any[];
+  keyExtractor: (item: Item) => number | string;
+  data: Item[];
   renderContentElement: (args: ArgsRenderContent) => JSX.Element;
-  headingExtractor: ({ item: any }) => string;
+  headingExtractor: (obj: { item: Item }) => string;
   renderFooterElement: (
     args: ArgsRenderFooter,
     props: StepperProps

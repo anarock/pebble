@@ -55,8 +55,8 @@ exports[`Component: Select default snapshot 1`] = `
   white-space: nowrap;
 }
 
-.emotion-8:disabled backgroundColor {
-  base: #ffffff;
+.emotion-8:disabled {
+  background-color: #ffffff;
 }
 
 .emotion-8[type='date'] {
@@ -194,8 +194,8 @@ exports[`Component: Select default snapshot 1`] = `
   padding-right: 15px;
 }
 
-.emotion-1:disabled backgroundColor {
-  base: #ffffff;
+.emotion-1:disabled {
+  background-color: #ffffff;
 }
 
 .emotion-1[type='date'] {
