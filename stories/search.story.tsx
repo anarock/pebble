@@ -4,16 +4,31 @@ import Search from "../src/components/Search";
 import { action } from "@storybook/addon-actions";
 import { select, text, boolean } from "@storybook/addon-knobs";
 import { SearchProps } from "../src/components/typings/Search";
+import { withState } from "@dump247/storybook-state";
 
 const type = ["small", "large", "table"] as Array<SearchProps["type"]>;
 
-storiesOf("Search", module).add("Default", () => (
-  <Search
-    placeholder={text("placeholder", "Search")}
-    onChange={action("change")}
-    type={select("type", type, "small")}
-    showSearchIcon={boolean("showSearchIcon", true)}
-    clearable={boolean("showClearButton", true)}
-    onClear={() => {}}
-  />
-));
+interface State {
+  query?: string;
+}
+
+storiesOf("Search", module).add(
+  "Default",
+  withState<State>({ query: "" })(({ store }) => (
+    <Search
+      placeholder={text("placeholder", "Search")}
+      onChange={query => {
+        action("change")(query);
+        store.set({ query });
+      }}
+      type={select("type", type, "small")}
+      showSearchIcon={boolean("showSearchIcon", true)}
+      clearable={boolean("showClearButton", true)}
+      onClear={() => {
+        action("clear")();
+        store.set({ query: "" });
+      }}
+      value={store.state.query}
+    />
+  ))
+);
