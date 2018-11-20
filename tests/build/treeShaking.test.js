@@ -10,7 +10,9 @@ async function compress() {
     external: ["react", "react-calendar/dist/entry.nostyle"].concat(
       Object.keys(pkg.dependencies)
     ),
-    pureExternalModules: true,
+    treeshake: {
+      pureExternalModules: true
+    },
     plugins: [
       terser({
         toplevel: true,
