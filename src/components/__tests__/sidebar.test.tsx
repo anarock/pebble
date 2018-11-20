@@ -3,7 +3,6 @@ import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 import SideBar from "../Sidebar";
 import sinon from "sinon";
-import combos from "combos";
 
 function noop() {}
 

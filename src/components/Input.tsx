@@ -119,16 +119,16 @@ class Input extends React.PureComponent<InputProps, InputState> {
         onBlur={this.removeFocus}
         onClick={onClick}
       >
-        <InputElement
-          className={_inputClassName}
-          {...inputProps}
-          type={type}
-          aria-label={placeholder}
-          value={value || ""}
-          onChange={this.handleChange}
-          disabled={disabled}
-          readOnly={readOnly}
-        />
+        {React.createElement(InputElement, {
+          className: _inputClassName,
+          ...inputProps,
+          type,
+          disabled,
+          readOnly,
+          "aria-label": placeholder,
+          value: value || "",
+          onChange: this.handleChange
+        })}
 
         <label className={labelClassName}>
           {placeholder}

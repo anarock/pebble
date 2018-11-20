@@ -19,7 +19,7 @@
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'yarn build'",
     "test:cover": "yarn test && codecov",
     "pretest": "tslint ./src/**/*.{ts,tsx} ./stories/**/*.tsx ./{tests,typings}/**/*.ts",
-    "test": "tsc && jest",
+    "test": "jest",
     "test:tree-shaking": "node ./tests/tree-shaking/test",
     "prepublishOnly": "yarn test && yarn build",
     "test:watch": "npm test -- --watchAll",
@@ -52,6 +52,7 @@
     "react-popper": "^1.0.2",
     "react-spring": "^5.9.2",
     "rheostat": "2.2.0",
+    "ts-jest": "^23.10.4",
     "utility-types": "^2.1.0"
   },
   "devDependencies": {
@@ -90,7 +91,6 @@
     "@types/storybook__react": "^3.0.9",
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.4.2",
     "babel-loader": "^8.0.0",
     "babel-plugin-emotion": "^9.2.11",
     "babel-plugin-require-context-hook": "^1.0.0",
@@ -138,11 +138,12 @@
     "svgo": "^1.1.1",
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
-    "typescript": "3.1.6",
+    "typescript": "3.2.0-dev.20181117",
     "webfonts-generator": "^0.4.0",
     "webpack": "^4.21.0"
   },
   "jest": {
+    "preset": "ts-jest",
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
@@ -151,17 +152,8 @@
       "<rootDir>/tests/__setup__/setup.ts"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/tests/__setup__/setupFramework.ts",
-    "transform": {
-      ".[jt]sx?$": "<rootDir>/node_modules/babel-jest"
-    },
-    "testRegex": "(<rootDir>/(tests|src)/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
+    "testMatch": [
+      "**/?(*.)+(spec|test).(j|t)s?(x)"
     ],
     "moduleNameMapper": {
       "@src/(.*)": "<rootDir>/src/$1",

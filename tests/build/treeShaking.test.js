@@ -10,6 +10,7 @@ async function compress() {
     external: ["react", "react-calendar/dist/entry.nostyle"].concat(
       Object.keys(pkg.dependencies)
     ),
+    pureExternalModules: true,
     plugins: [
       terser({
         toplevel: true,
@@ -34,7 +35,6 @@ async function compress() {
   });
 
   return output.code
-    .replace(/\n^import \"[^\"]*\";$\n/gm, "") // Webpack will remove unused imports
     .replace(/,[^\n]/g, ",\n")
     .replace(/\n\n/g, "\n")
     .trim();
