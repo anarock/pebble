@@ -2,7 +2,7 @@ import * as React from "react";
 import Calendar from "../Calendar";
 import sinon from "sinon";
 import { mount } from "enzyme";
-import { format, getTime } from "date-fns";
+import { format, getTime, startOfDay, endOfDay } from "date-fns";
 
 const date = [new Date(2012, 11, 1), new Date(2012, 12, 1)];
 
@@ -87,7 +87,10 @@ describe("Calendar", () => {
       .simulate("click");
 
     const argument = applySpy.getCall(0).args[0].map((x: Date) => getTime(x));
-    expect(argument).toEqual([1354300200000, 1354386599999]);
+    expect(argument).toEqual([
+      getTime(startOfDay("12/01/2012")),
+      getTime(endOfDay("12/01/2012"))
+    ]); // MM/DD/YYYY
   });
 
   test("should return correct value on apply", () => {
