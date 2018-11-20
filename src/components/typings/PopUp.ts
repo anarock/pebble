@@ -1,8 +1,8 @@
 export interface PopUpProps {
   visible: boolean;
-  headingText: string;
   onApprove?: () => void;
+  onReject?: () => void;
   onClose?: () => void;
   approveButtonText?: string;
-  closeButtonText?: string;
+  rejectButtonText?: string;
 }
