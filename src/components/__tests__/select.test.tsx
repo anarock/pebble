@@ -59,7 +59,7 @@ describe("Component: Select", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test("sinle-select with searchbox: snapshot", () => {
+  test("single-select with searchbox: snapshot", () => {
     const select = renderer.create(
       getComponent(undefined, {
         searchBox: true,
