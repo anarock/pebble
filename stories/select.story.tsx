@@ -30,6 +30,7 @@ storiesOf("Select", module)
             selected={store.state.selected} // The value selected
             value={store.state.value} // To show in input box after selection
             fullWidthDropdown
+            onDropdownToggle={action("onDropdownToggle")}
             onChange={(selected: SingleSelected, e: Extras) => {
               if (selected) {
                 store.set({

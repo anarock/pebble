@@ -28,7 +28,7 @@ const Select: React.SFC<SelectProps> = props => {
     dropdownClassName,
     inputProps,
     fullWidthDropdown,
-    onToggle = noop
+    onDropdownToggle = noop
   } = props;
 
   return (
@@ -41,7 +41,7 @@ const Select: React.SFC<SelectProps> = props => {
         dropDownClassName={cx(dropDownClass, dropdownClassName, {
           [fullWidth]: fullWidthDropdown
         })}
-        onOutsideClick={isOpen => onToggle(isOpen)}
+        onOutsideClick={isOpen => onDropdownToggle(isOpen)}
         labelComponent={({ toggleDropdown, isOpen }) => {
           const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {
             __pebble__select__open: isOpen
@@ -51,7 +51,7 @@ const Select: React.SFC<SelectProps> = props => {
               className={inputWrapper}
               onClick={() => {
                 toggleDropdown();
-                onToggle(isOpen);
+                onDropdownToggle(isOpen);
               }}
             >
               <Input
@@ -78,7 +78,7 @@ const Select: React.SFC<SelectProps> = props => {
               onClear &&
               (() => {
                 onClear();
-                onToggle(isOpen);
+                onDropdownToggle(isOpen);
                 toggle();
               }),
             searchBox,
@@ -115,7 +115,7 @@ const Select: React.SFC<SelectProps> = props => {
                   props.onApply &&
                   (_value => {
                     if (props.onApply) props.onApply(_value, props);
-                    onToggle(isOpen);
+                    onDropdownToggle(isOpen);
                     toggle();
                   })
                 }
@@ -130,7 +130,7 @@ const Select: React.SFC<SelectProps> = props => {
                 selected={props.selected}
                 onChange={(_value, extras) => {
                   if (_value) props.onChange(_value, extras);
-                  onToggle(isOpen);
+                  onDropdownToggle(isOpen);
                   toggle();
                 }}
                 {...commonProps}
