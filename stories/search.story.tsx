@@ -24,10 +24,6 @@ storiesOf("Search", module).add(
       type={select("type", type, "small")}
       showSearchIcon={boolean("showSearchIcon", true)}
       clearable={boolean("showClearButton", true)}
-      onClear={() => {
-        action("clear")();
-        store.set({ query: "" });
-      }}
       value={store.state.query}
     />
   ))

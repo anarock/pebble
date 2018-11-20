@@ -6,5 +6,4 @@ export interface SearchProps {
   showSearchIcon?: boolean;
   className?: string;
   clearable?: boolean;
-  onClear: () => void;
 }

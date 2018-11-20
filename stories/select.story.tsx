@@ -46,7 +46,11 @@ storiesOf("Select", module)
             searchBox={boolean("searchBox", false)}
             searchBoxProps={{
               placeholder: text("searchBoxProps.placeholder", "Search"),
-              onChange: query => store.set({ searchQuery: query })
+              onChange: query => {
+                action("searchBoxProps.onChange")(query);
+                store.set({ searchQuery: query });
+              },
+              value: store.state.searchQuery
             }}
           >
             {options
@@ -108,10 +112,6 @@ storiesOf("Select", module)
               store.set({ searchQuery: query });
             },
             placeholder: "Search",
-            onClear: () => {
-              action("searchBoxProps.onClear")();
-              store.set({ searchQuery: "" });
-            },
             clearable: boolean("searchBoxProps.clearable", true)
           }}
         >

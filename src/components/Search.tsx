@@ -12,8 +12,7 @@ class Search extends React.PureComponent<SearchProps> {
 
   static defaultProps: Partial<SearchProps> = {
     showSearchIcon: true,
-    clearable: true,
-    onClear: () => {}
+    clearable: true
   };
 
   render() {
@@ -24,7 +23,6 @@ class Search extends React.PureComponent<SearchProps> {
       showSearchIcon,
       className,
       clearable,
-      onClear,
       value
     } = this.props;
 
@@ -57,7 +55,7 @@ class Search extends React.PureComponent<SearchProps> {
               if (this.searchInputRef.current) {
                 this.searchInputRef.current.value = "";
               }
-              onClear();
+              onChange("");
             }}
           >
             <i
