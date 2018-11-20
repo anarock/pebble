@@ -17,7 +17,7 @@ import {
   wrapperStyle
 } from "./styles/Calendar.styles";
 import Button from "./Button";
-import { isSameDay } from "date-fns";
+import { isSameDay, endOfDay, startOfDay } from "date-fns";
 
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   static defaultProps: Partial<CalendarProps> = {
@@ -46,7 +46,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
 
   private onDayClick = (day: Date) => {
     const { onClickDay } = this.props;
-    this.setState({ singleSelectedDate: day });
+    this.setState({ singleSelectedDate: [startOfDay(day), endOfDay(day)] });
     if (onClickDay) onClickDay(day);
   };
 

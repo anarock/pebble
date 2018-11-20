@@ -21,5 +21,5 @@ export interface CalendarProps extends CP {
 
 export interface CalendarState {
   value?: CalendarValue;
-  singleSelectedDate?: Date | null;
+  singleSelectedDate?: Date[] | null;
 }
