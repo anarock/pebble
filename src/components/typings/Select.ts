@@ -19,6 +19,7 @@ interface CommonSelectProps {
   dropdownClassName?: string;
   inputProps?: Partial<InputProps>;
   fullWidthDropdown?: boolean;
+  onDropdownToggle?: (isOpen: boolean) => void;
 }
 
 export interface SingleSelectProps extends CommonSelectProps {

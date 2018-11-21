@@ -4,7 +4,7 @@ import { ButtonType } from "./Button";
 type Toggle = () => void;
 
 export interface DropdownProps {
-  children: (args: { toggle: Toggle }) => JSX.Element | string;
+  children: (args: { toggle: Toggle; isOpen: boolean }) => JSX.Element | string;
   buttonLabel?: React.ReactChildren | string;
   closeOnOutsideClick?: boolean;
   type?: ButtonType;
@@ -18,6 +18,7 @@ export interface DropdownProps {
   isSelected?: boolean;
   disabled?: boolean;
   labelClassName?: string;
+  onOutsideClick?: (isOpen: boolean) => void;
 }
 
 export interface DropdownState {

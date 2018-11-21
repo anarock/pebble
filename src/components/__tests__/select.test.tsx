@@ -59,7 +59,7 @@ describe("Component: Select", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test("sinle-select with searchbox: snapshot", () => {
+  test("single-select with searchbox: snapshot", () => {
     const select = renderer.create(
       getComponent(undefined, {
         searchBox: true,
@@ -162,9 +162,10 @@ describe("Component: Select", () => {
     expect(select.find(Option)).toHaveLength(0);
   });
 
-  test("single select: should trigger onChange with correct onChange", () => {
+  test("single select: query change triggers onChange", () => {
     const spy = sinon.spy();
     const queryChangeSpy = sinon.spy();
+
     const select = mount(
       getComponent(spy, {
         searchBox: true,
@@ -185,5 +186,48 @@ describe("Component: Select", () => {
       });
 
     expect(queryChangeSpy.calledWith("hello")).toBeTruthy();
+  });
+
+  test("single select: clearing query triggers onChange", () => {
+    const spy = sinon.spy();
+    const clearQuerySpy = sinon.spy();
+    const select = mount(
+      getComponent(spy, {
+        searchBox: true,
+        searchBoxProps: {
+          placeholder: "Search",
+          onChange: clearQuerySpy,
+          value: "hello"
+        }
+      })
+    );
+    select.find(Input).simulate("click");
+
+    select
+      .find(Search)
+      .find(".pi-close")
+      .simulate("click");
+    expect(clearQuerySpy.calledWith("")).toBeTruthy();
+  });
+
+  test("single select: onDropdownToggle is triggered correctly", () => {
+    const spy = sinon.spy();
+    const toggleSpy = sinon.spy();
+
+    const select = mount(
+      getComponent(spy, {
+        searchBox: true,
+        onDropdownToggle: toggleSpy
+      })
+    );
+
+    expect(select.find(Option)).toHaveLength(0);
+
+    select.find(Input).simulate("click");
+    expect(select.find(Option)).toHaveLength(5);
+    expect(toggleSpy.calledWith(false)).toBeTruthy();
+
+    select.find(Input).simulate("click");
+    expect(toggleSpy.calledWith(true)).toBeTruthy();
   });
 });
