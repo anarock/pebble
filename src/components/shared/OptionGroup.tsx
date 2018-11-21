@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as ReactDOM from "react-dom";
 import { OptionProps } from "../typings/Option";
 import { OptionGroupProps, OptionGroupState } from "../typings/OptionGroup";
 import scrollIntoView from "scroll-into-view-if-needed";
@@ -16,7 +17,6 @@ class OptionGroup extends React.PureComponent<
   OptionGroupState
 > {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
-  optionsRefsSet = new Map<number, React.RefObject<HTMLDivElement>>();
   observer: IntersectionObserver;
 
   state = {
@@ -63,17 +63,17 @@ class OptionGroup extends React.PureComponent<
         return { selected: _selected };
       },
       () => {
-        const currentRef = this.optionsRefsSet.get(selected);
-        if (
-          this.optionRef.current &&
-          (which === 40 || which === 38) &&
-          currentRef &&
-          currentRef.current
-        ) {
-          scrollIntoView(currentRef.current, {
-            behavior: "smooth",
-            boundary: this.optionRef.current
-          });
+        if (this.optionRef.current && (which === 40 || which === 38)) {
+          scrollIntoView(
+            ReactDOM.findDOMNode(
+              // @ts-ignore
+              this[`option-ref-${selected}`].current
+            ) as Element,
+            {
+              behavior: "smooth",
+              boundary: this.optionRef.current
+            }
+          );
         }
       }
     );
@@ -123,18 +123,15 @@ class OptionGroup extends React.PureComponent<
     const _children = React.Children.map(
       children,
       (option: React.ReactElement<OptionProps>, i) => {
-        let ref = this.optionsRefsSet.get(i);
-        if (!ref) {
-          ref = React.createRef<HTMLDivElement>();
-          this.optionsRefsSet.set(i, ref);
-        }
+        // @ts-ignore
+        this[`option-ref-${i}`] = React.createRef();
         return React.cloneElement(option, {
           onChange: handleChange,
           isActive: selected === i,
           isSelected: isSelected(option.props.value),
           multiSelect,
           // @ts-ignore
-          ref
+          ref: this[`option-ref-${i}`]
         });
       }
     );
