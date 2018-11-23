@@ -9,7 +9,7 @@ import { withState } from "@dump247/storybook-state";
 const type = ["small", "large", "table"] as Array<SearchProps["type"]>;
 
 interface State {
-  query?: string;
+  query: string;
 }
 
 storiesOf("Search", module).add(

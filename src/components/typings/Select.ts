@@ -1,6 +1,7 @@
 import { InputProps } from "./Input";
 import { SearchProps } from "./Search";
 import { Extras } from "./OptionGroup";
+import { Omit } from "utility-types";
 
 export type Selected = SingleSelected | MultiSelected;
 
@@ -15,7 +16,7 @@ interface CommonSelectProps {
   value?: string;
   onClear?: () => void;
   searchBox?: boolean;
-  searchBoxProps?: Partial<SearchProps>;
+  searchBoxProps?: Omit<SearchProps, "type">;
   dropdownClassName?: string;
   inputProps?: Partial<InputProps>;
   fullWidthDropdown?: boolean;

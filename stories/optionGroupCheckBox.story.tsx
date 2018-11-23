@@ -7,7 +7,10 @@ import * as React from "react";
 
 storiesOf("OptionGroupCheckBox", module).add(
   "with Searchbox",
-  withState({ value: ["option-2"] })(({ store }) => (
+  withState({
+    value: ["option-2"],
+    searchBoxValue: ""
+  })(({ store }) => (
     <div
       style={{
         boxShadow: constants.boxShadow.elevated,
@@ -19,7 +22,11 @@ storiesOf("OptionGroupCheckBox", module).add(
         selected={store.state.value}
         searchBox
         searchBoxProps={{
-          placeholder: "Search"
+          placeholder: "Search",
+          onChange: v => {
+            store.set({ searchBoxValue: v });
+          },
+          value: store.state.searchBoxValue
         }}
         onChange={value =>
           store.set({
