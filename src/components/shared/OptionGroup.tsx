@@ -17,6 +17,7 @@ class OptionGroup extends React.PureComponent<
   OptionGroupState
 > {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
+  optionsRefsSet = new Map<number, React.RefObject<React.ReactInstance>>();
   observer: IntersectionObserver;
 
   state = {
@@ -63,17 +64,20 @@ class OptionGroup extends React.PureComponent<
         return { selected: _selected };
       },
       () => {
-        if (this.optionRef.current && (which === 40 || which === 38)) {
-          scrollIntoView(
-            ReactDOM.findDOMNode(
-              // @ts-ignore
-              this[`option-ref-${selected}`].current
-            ) as Element,
-            {
+        const currentRef = this.optionsRefsSet.get(selected);
+        if (
+          this.optionRef.current &&
+          (which === 40 || which === 38) &&
+          currentRef &&
+          currentRef.current
+        ) {
+          const element = ReactDOM.findDOMNode(currentRef.current) as Element;
+          if (element) {
+            scrollIntoView(element, {
               behavior: "smooth",
               boundary: this.optionRef.current
-            }
-          );
+            });
+          }
         }
       }
     );
@@ -123,15 +127,18 @@ class OptionGroup extends React.PureComponent<
     const _children = React.Children.map(
       children,
       (option: React.ReactElement<OptionProps>, i) => {
-        // @ts-ignore
-        this[`option-ref-${i}`] = React.createRef();
+        let ref = this.optionsRefsSet.get(i);
+        if (!ref) {
+          ref = React.createRef<HTMLDivElement>();
+          this.optionsRefsSet.set(i, ref);
+        }
         return React.cloneElement(option, {
           onChange: handleChange,
           isActive: selected === i,
           isSelected: isSelected(option.props.value),
           multiSelect,
           // @ts-ignore
-          ref: this[`option-ref-${i}`]
+          ref
         });
       }
     );
@@ -142,11 +149,12 @@ class OptionGroup extends React.PureComponent<
 
     return (
       <React.Fragment>
-        {searchBox && (
-          <div className={searchBoxClassName}>
-            <Search type="small" {...searchBoxProps} />
-          </div>
-        )}
+        {searchBox &&
+          searchBoxProps && (
+            <div className={searchBoxClassName}>
+              <Search type="small" {...searchBoxProps} />
+            </div>
+          )}
         {!!React.Children.count(children) && (
           <div
             ref={this.optionRef}
