@@ -9,6 +9,11 @@ import { startOfDay, endOfDay } from "date-fns";
 
 // TO-DO: Write separately stories for both Calendars.
 
+const quickCalProps = {
+  hideShadow: true,
+  className: css({ padding: "10px 0 0 0" })
+};
+
 storiesOf("Calendar", module).add("Default", () => (
   <Calendar
     quickDates
@@ -39,8 +44,7 @@ storiesOf("Calendar", module).add("Default", () => (
     onApply={action("apply")}
     onClear={action("clear")}
     maxDate={new Date()}
-    hideShadow
-    className={css({ padding: "10px 0 0 0" })}
+    {...quickCalProps}
     tileDots={object("tileDots", [
       {
         timeStamp: Date.now(),
