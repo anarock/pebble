@@ -234,10 +234,17 @@ describe("Component: Select", () => {
 
 test("should not open if disabled when input is clicked", () => {
   const spy = sinon.spy();
-  const select = mount(getComponent(spy));
+  const toggleSpy = sinon.spy();
+
+  const select = mount(
+    getComponent(spy, {
+      searchBox: true,
+      onDropdownToggle: toggleSpy
+    })
+  );
 
   expect(select.find(Option)).toHaveLength(0);
 
   select.find(Input).simulate("click");
-  expect(select.find(Option)).toHaveLength(0);
+  expect(toggleSpy.calledWith(false)).toBeTruthy();
 });
