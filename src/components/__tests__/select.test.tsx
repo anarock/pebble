@@ -231,3 +231,13 @@ describe("Component: Select", () => {
     expect(toggleSpy.calledWith(true)).toBeTruthy();
   });
 });
+
+test("should not open if disabled when input is clicked", () => {
+  const spy = sinon.spy();
+  const select = mount(getComponent(spy));
+
+  expect(select.find(Option)).toHaveLength(0);
+
+  select.find(Input).simulate("click");
+  expect(select.find(Option)).toHaveLength(0);
+});
