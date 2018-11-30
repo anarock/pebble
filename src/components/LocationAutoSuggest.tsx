@@ -1,47 +1,12 @@
-import * as React from "react";
-import googleMapsPromise from "./utils/googleMaps";
+import React from "react";
 import PlacesAutocomplete from "react-places-autocomplete";
-import Input from "./Input";
+import TypeAhead from "./TypeAhead";
+import Option from "./Option";
 import Loader from "./Loader";
-import { cx, css } from "react-emotion";
-import { typography, mixins, colors } from "../theme";
+import { css } from "react-emotion";
+import googleMapsPromise from "../utils/googleMapsPromise";
 
-export const optionRow = css({
-  ...typography.normal.regular,
-  lineHeight: "10px",
-  cursor: "pointer",
-  padding: "0 18px",
-  position: "relative",
-  zIndex: 999,
-  ...mixins.textEllipsis,
-  ...mixins.flexSpaceBetween,
-  alignItems: "center",
-  display: "flex",
-  height: 52,
-  "&:last-of-type": {
-    border: 0
-  },
-  "&:hover": {
-    backgroundColor: colors.gray.lightest
-  }
-});
-
-export const activeRow = css({
-  backgroundColor: colors.gray.lightest,
-  cursor: "pointer"
-});
-
-export const generalRow = css({
-  backgroundColor: "#ffffff",
-  cursor: "pointer"
-});
-
-export const localityOptionsWrap = css({
-  maxHeight: "200px",
-  overflowY: "scroll"
-});
-
-export const loaderWrapper = css({
+const loaderWrapper = css({
   display: "flex",
   flex: 1,
   height: "100vh",
@@ -55,14 +20,23 @@ export interface Props {
   onSelect: (value: string, id: string) => void;
 }
 
+export interface Suggestion {
+  description: string;
+  id: string;
+  placeId: string;
+}
+
 export interface State {
   isPromiseCompleted: boolean;
 }
 
-class LocationAutoComplete extends React.PureComponent<Props, State> {
-  state = {
-    isPromiseCompleted: false
-  };
+class LocationSearchInput extends React.Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      isPromiseCompleted: false
+    };
+  }
 
   componentDidMount() {
     this.initialMount();
@@ -91,15 +65,26 @@ class LocationAutoComplete extends React.PureComponent<Props, State> {
           value,
           onChange
         }}
-        onSelect={onSelect}
+        // @ts-ignore
+        onChange={onChange}
+        value={value}
       >
-        //@ts-ignore
-        {({ getInputProps, suggestions, getSuggestionItemProps }) => {
+        {(opts: {}) => {
+          const {
+            // @ts-ignore
+            getInputProps,
+            // @ts-ignore
+            suggestions,
+            // @ts-ignore
+            getSuggestionItemProps,
+            // @ts-ignore
+            loading
+          } = opts;
           const inputProps = getInputProps();
           return (
             <React.Fragment>
-              <Input
-                value={value}
+              <TypeAhead
+                placeholder="Search Locality"
                 onChange={val => {
                   inputProps.onChange({
                     target: {
@@ -107,27 +92,35 @@ class LocationAutoComplete extends React.PureComponent<Props, State> {
                     }
                   });
                 }}
-                placeholder="Search Locality"
-                inputProps={inputProps}
-              />
-              <div className={localityOptionsWrap}>
-                //@ts-ignore
-                {suggestions.map(suggestion => {
-                  const className = suggestion.active
-                    ? cx(optionRow, activeRow)
-                    : cx(optionRow, generalRow);
-                  return (
-                    <div
-                      {...getSuggestionItemProps(suggestion, {
-                        className
-                      })}
-                      key={suggestion}
-                    >
-                      <span>{suggestion.description}</span>
-                    </div>
+                onClear={() => {
+                  onSelect("", "");
+                }}
+                onSelect={placeId => {
+                  // @ts-ignore
+                  const selected = suggestions.find(
+                    // @ts-ignore
+                    suggestion => suggestion.placeId === placeId
                   );
-                })}
-              </div>
+                  onSelect(selected.description, placeId as string);
+                }}
+                valueExtractor={placeId => {
+                  // @ts-ignore
+                  const selected = suggestions.find(
+                    // @ts-ignore
+                    suggestion => suggestion.placeId === placeId
+                  );
+                  return selected.description;
+                }}
+                loading={loading}
+              >
+                {suggestions.map((suggestion: Suggestion) => (
+                  <Option
+                    key={suggestion.id}
+                    label={suggestion.description}
+                    value={suggestion.placeId}
+                  />
+                ))}
+              </TypeAhead>
             </React.Fragment>
           );
         }}
@@ -135,4 +128,4 @@ class LocationAutoComplete extends React.PureComponent<Props, State> {
     );
   }
 }
-export default LocationAutoComplete;
+export default LocationSearchInput;
