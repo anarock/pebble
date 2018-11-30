@@ -53,6 +53,7 @@ storiesOf("Select", module)
               },
               value: store.state.searchQuery
             }}
+            disabled={boolean("disabled", false)}
           >
             {options
               .filter(option => {
