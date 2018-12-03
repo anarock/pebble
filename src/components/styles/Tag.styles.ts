@@ -1,13 +1,12 @@
-import { constants, mixins, typography } from "../../theme";
+import { constants, mixins, typography, colors } from "../../theme";
 import { css } from "emotion";
 
 export const tagStyle = css({
-  ...typography.xs.bold,
+  ...typography.s.bold,
   ...mixins.flexSpaceBetween,
   borderRadius: constants.borderRadius,
-  padding: "0 15px",
-  height: 25,
-  textTransform: "uppercase",
+  padding: "0 10px",
+  height: 28,
   alignItems: "center",
   justifyContent: "center",
   display: "inline-flex",
@@ -19,8 +18,13 @@ export const tagStyle = css({
     fontSize: 7,
     marginLeft: 5,
     height: "inherit",
-    padding: "9px 10px",
+    padding: "10px 10px",
     cursor: "pointer",
-    position: "relative"
+    position: "relative",
+    ":hover": {
+      backgroundColor: colors.violet.lighter,
+      borderTopRightRadius: constants.borderRadius,
+      borderBottomRightRadius: constants.borderRadius
+    }
   }
 });

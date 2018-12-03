@@ -84,6 +84,11 @@ export const typography: Typography = {
       color: colors.gray.darker,
       fontSize: fontSize.s
     },
+    bold: {
+      fontWeight: FontWeight.BOLD,
+      color: colors.gray.darker,
+      fontSize: fontSize.s
+    },
     light: {
       fontWeight: FontWeight.NORMAL,
       color: colors.gray.dark,
