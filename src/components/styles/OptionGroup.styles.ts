@@ -13,7 +13,7 @@ export const optionsWrapper = css({
   width: "inherit",
   zIndex: 9,
   maxHeight: optionWrapperMaxHeight,
-  minWidth: 200,
+  minWidth: 100,
   overflowY: "auto",
   padding: "20px 1px"
 });
