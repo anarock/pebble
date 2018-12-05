@@ -11,8 +11,8 @@ function noop() {}
 
 describe("TimePicker", () => {
   const _props = {
-    selectedHour: [...Array(12).keys()].map(val => val + 1),
-    selectedMinute: [...Array(4).keys()].map(val => val * 15)
+    selectedHour: [...Array(12)].map((_, i) => i + 1),
+    selectedMinute: [...Array(4)].map((_, i) => i * 15)
   };
 
   const _combos = combos(_props);

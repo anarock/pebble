@@ -13,8 +13,8 @@ import {
 } from "./styles/TimePicker.styles";
 import { TimePickerProps } from "./typings/TimePicker";
 
-const HOURS = [...Array(12).keys()].map(val => val + 1);
-const MINUTES = [...Array(4).keys()].map(val => val * 15);
+const HOURS = [...Array(12)].map((_, i) => i + 1);
+const MINUTES = [...Array(4)].map((_, i) => i * 15);
 
 const TimePicker: React.SFC<TimePickerProps> = props => {
   const { selectedHour, selectedMinute, onHourChange, onMinuteChange } = props;
@@ -22,9 +22,10 @@ const TimePicker: React.SFC<TimePickerProps> = props => {
 
   return (
     <div
-      className={
-        selected ? cx(timePickerWrap, timePickerSelected) : timePickerWrap
-      }
+      className={cx({
+        [timePickerWrap]: true,
+        [timePickerSelected]: selected
+      })}
     >
       <DropDown
         buttonLabel={`${selectedHour ? selectedHour : "Hrs"}`}

@@ -17,7 +17,10 @@ const Toggle: React.SFC<ToggleProps> = props => {
         onClick={onChange}
         type="secondary"
         size="x-small"
-        className={value === "OFF" ? cx(offButton, selectedButton) : offButton}
+        className={cx({
+          [offButton]: true,
+          [selectedButton]: value === "OFF"
+        })}
         showRipple={false}
       >
         {onButtonText}
@@ -26,7 +29,10 @@ const Toggle: React.SFC<ToggleProps> = props => {
         onClick={onChange}
         type="secondary"
         size="x-small"
-        className={value === "ON" ? cx(onButton, selectedButton) : onButton}
+        className={cx({
+          [onButton]: true,
+          [selectedButton]: value === "ON"
+        })}
         showRipple={false}
       >
         {offButtonText}
