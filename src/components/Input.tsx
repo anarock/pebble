@@ -54,7 +54,11 @@ class Input extends React.PureComponent<InputProps, InputState> {
     });
   };
 
-  private handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  private handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     this.props.onChange(e.target.value || "");
   };
 
@@ -64,7 +68,6 @@ class Input extends React.PureComponent<InputProps, InputState> {
       placeholder,
       className,
       inputClassName,
-      inputProps,
       fixLabelAtTop,
       value,
       readOnly,
@@ -80,8 +83,6 @@ class Input extends React.PureComponent<InputProps, InputState> {
     const { isFocused } = this.state;
 
     const _message = errorMessage || successMessage || message;
-
-    const InputElement = textArea ? "textarea" : "input";
 
     const _inputClassName = cx(
       inputStyle,
@@ -119,16 +120,28 @@ class Input extends React.PureComponent<InputProps, InputState> {
         onBlur={this.removeFocus}
         onClick={onClick}
       >
-        <InputElement
-          className={_inputClassName}
-          {...inputProps}
-          type={type}
-          aria-label={placeholder}
-          value={value || ""}
-          onChange={this.handleChange}
-          disabled={disabled}
-          readOnly={readOnly}
-        />
+        {this.props.textArea ? (
+          <textarea
+            className={_inputClassName}
+            {...this.props.inputProps}
+            aria-label={placeholder}
+            value={value || ""}
+            onChange={this.handleChange}
+            disabled={disabled}
+            readOnly={readOnly}
+          />
+        ) : (
+          <input
+            className={_inputClassName}
+            type={type}
+            {...this.props.inputProps}
+            aria-label={placeholder}
+            value={value || ""}
+            onChange={this.handleChange}
+            disabled={disabled}
+            readOnly={readOnly}
+          />
+        )}
 
         <label className={labelClassName}>
           {placeholder}

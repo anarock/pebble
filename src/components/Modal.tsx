@@ -36,14 +36,16 @@ class Modal extends React.PureComponent<ModalProps> {
       this.node = document.createElement("div");
     }
 
-    return visible
-      ? ReactDOM.createPortal(
+    return visible ? (
+      <>
+        {ReactDOM.createPortal(
           <div className={cx(modalContainer, "ReactPortal", className)}>
             {children}
           </div>,
           this.node
-        )
-      : null;
+        )}
+      </>
+    ) : null;
   }
 }
 
