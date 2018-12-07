@@ -16,6 +16,9 @@ export const controlStyle = css({
   "&[data-disabled='true']": {
     cursor: "not-allowed",
     pointerEvents: "none",
+
+    // Try not to use cx with radioIconStyle
+    // As cx merges styles into one className.
     [`.${radioIconStyle}`]: {
       color: colors.gray.light
     }

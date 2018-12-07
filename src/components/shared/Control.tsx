@@ -43,6 +43,8 @@ export const ControlView: React.SFC<ControlProps> = ({
 }) => {
   const isRadio = type === "radio";
 
+  // Ensure that other styles are not emotion styles.
+  // As cx merges styles into one className.
   const iconClass = cx(radioIconStyle, "pi", {
     "pi-radio": isRadio && !checked,
     "pi-radio-selected": isRadio && checked,

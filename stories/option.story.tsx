@@ -2,6 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { Option } from "../src";
 import { withState } from "@dump247/storybook-state";
+import { boolean } from "@storybook/addon-knobs";
 import { css } from "emotion";
 
 storiesOf("Option", module).add(
@@ -14,6 +15,7 @@ storiesOf("Option", module).add(
         value="option"
         label="I am an option"
         multiSelect
+        disabled={boolean("disabled", false)}
       />
       <Option
         isSelected={store.state.checked}
@@ -24,6 +26,7 @@ storiesOf("Option", module).add(
         labelClassName={css({
           whiteSpace: "normal"
         })}
+        disabled={boolean("disabled", false)}
       />
       <Option
         isSelected={store.state.checked}
@@ -31,6 +34,7 @@ storiesOf("Option", module).add(
         value="option"
         label="I am an option with very long text wrapped"
         multiSelect
+        disabled={boolean("disabled", false)}
       />
     </div>
   ))
