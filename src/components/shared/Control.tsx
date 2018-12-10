@@ -1,5 +1,5 @@
 import * as React from "react";
-import { controlContentStyle, controlStyle } from "../styles/Control.styles";
+import { controlStyle, radioIconStyle } from "../styles/Control.styles";
 import { ControlProps } from "../typings/Control";
 import { colors } from "../../theme";
 import { cx } from "emotion";
@@ -43,7 +43,9 @@ export const ControlView: React.SFC<ControlProps> = ({
 }) => {
   const isRadio = type === "radio";
 
-  const iconClass = cx("pi", {
+  // Ensure that other styles are not emotion styles.
+  // As cx merges styles into one className.
+  const iconClass = cx(radioIconStyle, "pi", {
     "pi-radio": isRadio && !checked,
     "pi-radio-selected": isRadio && checked,
     "pi-checkbox-selected": !isRadio && checked,
@@ -51,7 +53,7 @@ export const ControlView: React.SFC<ControlProps> = ({
   });
 
   return (
-    <div className={controlContentStyle}>
+    <>
       <i
         style={{
           color: checked ? colors.violet.base : colors.gray.light,
@@ -60,7 +62,7 @@ export const ControlView: React.SFC<ControlProps> = ({
         className={iconClass}
       />{" "}
       {label}
-    </div>
+    </>
   );
 };
 
