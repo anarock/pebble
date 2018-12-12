@@ -21,19 +21,12 @@
     "preserveConstEnums": true,
     "pretty": true,
     "removeComments": false,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "sourceMap": true,
     "strictNullChecks": true,
     "target": "esnext",
     "typeRoots": ["./node_modules/@types", "./typings/npm"]
   },
-  "include": ["src", "typings"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "stories",
-    "tests",
-    "compiled",
-    "src/**/__tests__"
-  ]
+  "include": ["src", "typings", "stories"],
+  "exclude": ["node_modules", "dist", "tests", "compiled", "src/**/__tests__"]
 }
