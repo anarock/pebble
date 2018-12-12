@@ -29,7 +29,6 @@ interface GroupedOptionGroupState<D extends DataPoint, G extends Group<D>> {
   isSelected: (value: number | string) => boolean;
   groupMapping: Map<string, G>;
   dataPointMapping: Map<number, D>;
-  dataPointGroupMapping: Map<D, G>;
   propOptions?: G[];
   propSelected?: number[];
   searchBoxValue: string;
@@ -50,7 +49,6 @@ class GroupedOptionGroup<
     isSelected: () => false,
     groupMapping: new Map(),
     dataPointMapping: new Map(),
-    dataPointGroupMapping: new Map(),
     propOptions: undefined,
     searchBoxValue: ""
   };
@@ -77,49 +75,22 @@ class GroupedOptionGroup<
           .map(dataPointPair)
       );
 
-      const dataPointGroupMapping = new Map<D, G>(
-        props.options
-          .filter(group => group.group_label)
-          .map(group =>
-            group.options.map(dataPoint => [dataPoint, group] as [D, G])
-          )
-          .reduce((arr, cur) => [...arr, ...cur], []) // flatten
-      );
-
       newState.groupMapping = groupMapping;
       newState.dataPointMapping = dataPointMapping;
-      newState.dataPointGroupMapping = dataPointGroupMapping;
       newState.propOptions = props.options;
     }
     if (props.selected !== state.propSelected) {
-      let selectedDataPoints = props.selected
+      const selectedDataPoints = props.selected
         .map(id => newState.dataPointMapping.get(id) as D)
         .filter(f => f);
 
-      const selectedGroups = [
-        ...selectedDataPoints
-          .reduce((map, dataPoint) => {
-            const parentGroup = newState.dataPointGroupMapping.get(dataPoint);
-            if (parentGroup) {
-              const selectedInGroup = map.get(parentGroup);
-              if (selectedInGroup) {
-                selectedInGroup.push(dataPoint);
-              } else {
-                map.set(parentGroup, [dataPoint]);
-              }
-            }
-            return map;
-          }, new Map<G, D[]>())
-          .entries()
-      ]
-        .filter(
-          ([group, dataPoints]) => group.options.length === dataPoints.length
-        )
-        .map(([group, _]) => group);
-
-      selectedDataPoints = selectedDataPoints.filter(d => {
-        const parentGroup = newState.dataPointGroupMapping.get(d);
-        return !parentGroup || !selectedGroups.includes(parentGroup);
+      const selectedGroups = props.options.filter(group => {
+        return (
+          group.group_label &&
+          !group.options.some(
+            dataPoint => !selectedDataPoints.includes(dataPoint)
+          )
+        );
       });
 
       newState.isSelected = (value: number | string) => {
@@ -128,11 +99,7 @@ class GroupedOptionGroup<
           return selectedGroups.includes(group);
         }
         const dataPoint = newState.dataPointMapping.get(value) as D;
-        const parentGroup = newState.dataPointGroupMapping.get(dataPoint);
-        return (
-          selectedDataPoints.includes(dataPoint) ||
-          (!!parentGroup && selectedGroups.includes(parentGroup))
-        );
+        return selectedDataPoints.includes(dataPoint);
       };
 
       newState.selectedDataPoints = selectedDataPoints;
@@ -148,67 +115,34 @@ class GroupedOptionGroup<
     value: string | number;
     checked: boolean;
   }) => {
+    const { selectedDataPoints } = this.state;
     if (typeof value === "string") {
       const group = this.state.groupMapping.get(value) as G;
       if (checked) {
         return this.triggerOnChange(
-          this.state.selectedGroups.concat([group]),
-          this.state.selectedDataPoints.filter(
-            dataPoint =>
-              group !== this.state.dataPointGroupMapping.get(dataPoint)
+          selectedDataPoints.concat(
+            group.options.filter(d => !selectedDataPoints.includes(d))
           )
         );
       } else {
         return this.triggerOnChange(
-          this.state.selectedGroups.filter(g => g !== group),
-          this.state.selectedDataPoints
+          selectedDataPoints.filter(d => !group.options.includes(d))
         );
       }
     } else {
       const dataPoint = this.state.dataPointMapping.get(value) as D;
-      const parentGroup = this.state.dataPointGroupMapping.get(dataPoint);
       if (checked) {
-        if (parentGroup) {
-          const selectedInGroup = parentGroup.options.filter(d =>
-            this.state.selectedDataPoints.includes(d)
-          );
-          if (selectedInGroup.length === parentGroup.options.length - 1) {
-            return this.triggerOnChange(
-              this.state.selectedGroups.concat([parentGroup]),
-              this.state.selectedDataPoints.filter(
-                d => !parentGroup.options.includes(d)
-              )
-            );
-          }
-        }
-        return this.triggerOnChange(
-          this.state.selectedGroups,
-          this.state.selectedDataPoints.concat([dataPoint])
-        );
+        return this.triggerOnChange(selectedDataPoints.concat([dataPoint]));
       } else {
-        if (parentGroup && this.state.selectedGroups.includes(parentGroup)) {
-          return this.triggerOnChange(
-            this.state.selectedGroups.filter(g => g !== parentGroup),
-            this.state.selectedDataPoints.concat(
-              parentGroup.options.filter(d => d !== dataPoint)
-            )
-          );
-        } else {
-          return this.triggerOnChange(
-            this.state.selectedGroups,
-            this.state.selectedDataPoints.filter(d => d !== dataPoint)
-          );
-        }
+        return this.triggerOnChange(
+          selectedDataPoints.filter(d => d !== dataPoint)
+        );
       }
     }
   };
 
-  triggerOnChange(selectedGroups: G[], selectedDataPoints: D[]) {
-    const selected = ([] as number[]).concat(
-      ...selectedGroups.map(g => g.options.map(d => d.id)),
-      selectedDataPoints.map(d => d.id)
-    );
-    this.props.onChange(selected);
+  triggerOnChange(selectedDataPoints: D[]) {
+    this.props.onChange(selectedDataPoints.map(d => d.id));
   }
 
   render() {

@@ -21,26 +21,27 @@ class OptionGroup extends React.PureComponent<
   observer: IntersectionObserver;
 
   state = {
-    selected: 0,
+    selected: -1,
     isScrolled: false
   };
 
-  private handleKeyPress = (e: KeyboardEvent) => {
-    const { children, handleChange } = this.props;
+  private handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const { handleChange, isSelected } = this.props;
+    const children = React.Children.toArray(this.props.children);
     const { selected } = this.state;
     const { which } = e;
 
     if (which === 13) {
       // Enter key
       // @ts-ignore
-      const { value, isSelected } =
+      const { value } =
         // @ts-ignore
         (children && children[selected] && children[selected].props) || {};
 
       handleChange(
         {
           value,
-          checked: !isSelected
+          checked: !isSelected(value)
         },
         e
       );
@@ -50,14 +51,12 @@ class OptionGroup extends React.PureComponent<
       () => {
         let _selected = selected;
         if (which === 40) {
-          e.preventDefault();
           _selected = Math.min(
             _selected + 1,
             React.Children.count(children) - 1
           );
         }
         if (which === 38) {
-          e.preventDefault();
           _selected = Math.max(_selected - 1, 0);
         }
 
@@ -84,8 +83,6 @@ class OptionGroup extends React.PureComponent<
   };
 
   componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyPress);
-
     this.observer = new IntersectionObserver(
       entries => {
         this.setState({
@@ -108,7 +105,6 @@ class OptionGroup extends React.PureComponent<
   }
 
   componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyPress);
     this.observer.disconnect();
   }
 
@@ -152,7 +148,14 @@ class OptionGroup extends React.PureComponent<
         {searchBox &&
           searchBoxProps && (
             <div className={searchBoxClassName}>
-              <Search type="small" {...searchBoxProps} />
+              <Search
+                type="small"
+                {...searchBoxProps}
+                inputProps={{
+                  ...(searchBoxProps && searchBoxProps.inputProps),
+                  onKeyDown: this.handleKeyPress
+                }}
+              />
             </div>
           )}
         {!!React.Children.count(children) && (
