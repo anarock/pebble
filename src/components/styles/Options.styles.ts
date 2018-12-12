@@ -3,22 +3,26 @@ import { css } from "emotion";
 
 export const rowWrapper = css({
   ...typography.normal.regular,
-  lineHeight: "10px",
   cursor: "pointer",
-  padding: "0 18px",
+  padding: "12px 18px",
   position: "relative",
+  lineHeight: "28px",
   zIndex: 999,
   ...mixins.textEllipsis,
   ...mixins.flexSpaceBetween,
   alignItems: "center",
   display: "flex",
-  height: 52,
   "&:last-of-type": {
     border: 0
   },
   "&:hover": {
     backgroundColor: colors.gray.lightest
   }
+});
+
+export const labelWrap = css({
+  overflow: "hidden",
+  textOverflow: "ellipsis"
 });
 
 export const activeRow = css({

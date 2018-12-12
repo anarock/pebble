@@ -64,7 +64,9 @@ describe("Component: Select", () => {
       getComponent(undefined, {
         searchBox: true,
         searchBoxProps: {
-          placeholder: "Search"
+          placeholder: "Search",
+          onChange: () => {},
+          value: ""
         }
       })
     );
@@ -171,7 +173,8 @@ describe("Component: Select", () => {
         searchBox: true,
         searchBoxProps: {
           placeholder: "Search",
-          onChange: queryChangeSpy
+          onChange: queryChangeSpy,
+          value: ""
         }
       })
     );
