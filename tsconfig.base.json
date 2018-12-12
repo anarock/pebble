@@ -27,6 +27,6 @@
     "target": "esnext",
     "typeRoots": ["./node_modules/@types", "./typings/npm"]
   },
-  "include": ["src", "typings", "stories"],
+  "include": ["src", "typings"],
   "exclude": ["node_modules", "dist", "tests", "compiled", "src/**/__tests__"]
 }
