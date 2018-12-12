@@ -50,12 +50,14 @@ const Select: React.SFC<SelectProps> = props => {
           return (
             <div
               className={inputWrapper}
-              onClick={() => {
-                if (!disabled) {
-                  toggleDropdown();
-                  onDropdownToggle(isOpen);
-                }
-              }}
+              onClick={
+                (!disabled &&
+                  (() => {
+                    toggleDropdown();
+                    onDropdownToggle(isOpen);
+                  })) ||
+                undefined
+              }
             >
               <Input
                 className={selectInputWrapper}
@@ -68,7 +70,7 @@ const Select: React.SFC<SelectProps> = props => {
                 errorMessage={errorMessage}
                 readOnly
                 {...inputProps}
-                disabled={disabled}
+                disabled={disabled || (inputProps && inputProps.disabled)}
               />
               <i className={chevron} />
             </div>
