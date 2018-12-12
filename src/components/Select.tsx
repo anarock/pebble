@@ -51,12 +51,12 @@ const Select: React.SFC<SelectProps> = props => {
             <div
               className={inputWrapper}
               onClick={
-                (!disabled &&
-                  (() => {
-                    toggleDropdown();
-                    onDropdownToggle(isOpen);
-                  })) ||
-                undefined
+                disabled
+                  ? undefined
+                  : () => {
+                      toggleDropdown();
+                      onDropdownToggle(isOpen);
+                    }
               }
             >
               <Input
