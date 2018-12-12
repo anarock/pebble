@@ -69,8 +69,8 @@ const Select: React.SFC<SelectProps> = props => {
                 message={isOpen ? " " : ""}
                 errorMessage={errorMessage}
                 readOnly
+                disabled={disabled}
                 {...inputProps}
-                disabled={disabled || (inputProps && inputProps.disabled)}
               />
               <i className={chevron} />
             </div>
