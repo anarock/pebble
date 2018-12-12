@@ -13,18 +13,19 @@ export const tagStyle = css({
   lineHeight: "10px",
   "&.__pebble__tag__with__close": {
     paddingRight: 0
-  },
-  i: {
-    fontSize: 7,
-    marginLeft: 5,
-    height: "inherit",
-    padding: "10px 10px",
-    cursor: "pointer",
-    position: "relative",
-    ":hover": {
-      backgroundColor: colors.violet.lighter,
-      borderTopRightRadius: constants.borderRadius,
-      borderBottomRightRadius: constants.borderRadius
-    }
+  }
+});
+
+export const iconClass = css({
+  fontSize: 7,
+  marginLeft: 5,
+  height: "inherit",
+  padding: "10px 10px",
+  cursor: "pointer",
+  position: "relative",
+  ":hover": {
+    backgroundColor: colors.violet.lighter,
+    borderTopRightRadius: constants.borderRadius,
+    borderBottomRightRadius: constants.borderRadius
   }
 });
