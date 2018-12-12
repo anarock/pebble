@@ -2,29 +2,13 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { Radio, RadioGroup } from "../src";
 import { withState } from "@dump247/storybook-state";
-import { cx, css } from "emotion";
-import { colors, typography } from "../src/theme";
-
-export const switchWrap = css({
-  display: "flex",
-  ...typography.s.regular
-});
-
-export const offButton = css({
-  border: `1px solid ${colors.gray.lighter}`,
-  borderRadius: "3px 0px 0px 3px",
-  padding: "10px 20px"
-});
-
-export const onButton = css({
-  border: `1px solid ${colors.gray.lighter}`,
-  borderRadius: "0px 3px 3px 0px",
-  padding: "10px 20px"
-});
-
-export const selectedButton = css({
-  backgroundColor: colors.gray.lighter
-});
+import { cx } from "emotion";
+import {
+  switchWrap,
+  offButton,
+  selectedButton,
+  onButton
+} from "../src/components/__tests__/fixtures/switch.style";
 
 storiesOf("RadioGroup", module).add(
   "Default",
