@@ -22,6 +22,7 @@ function getComponent(props: Partial<PhoneNumberInputProps> = {}) {
       {...props}
       selectProps={{
         inputProps: {
+          textArea: false,
           inputProps: {
             id: SELECT_INPUT_ID
           }

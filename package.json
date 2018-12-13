@@ -19,7 +19,7 @@
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'yarn build'",
     "test:cover": "yarn test && codecov",
     "pretest": "tslint ./src/**/*.{ts,tsx} ./stories/**/*.tsx ./{tests,typings}/**/*.ts",
-    "test": "tsc && jest",
+    "test": "jest",
     "prepublishOnly": "yarn test && yarn build",
     "test:watch": "yarn jest --watchAll",
     "format": "pretty-quick",
@@ -55,9 +55,9 @@
     "utility-types": "^2.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.1.0",
     "@dump247/storybook-state": "^1.5.1",
@@ -91,8 +91,8 @@
     "@types/storybook__react": "^4.0.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.4.2",
     "babel-loader": "^8.0.0",
+    "babel-plugin-emotion": "^9.2.11",
     "babel-plugin-require-context-hook": "^1.0.0",
     "chokidar-cli": "^1.2.1",
     "codecov": "^3.1.0",
@@ -126,15 +126,17 @@
     "rimraf": "^2.6.2",
     "rollup": "^0.67.4",
     "rollup-plugin-alias": "^1.4.0",
-    "rollup-plugin-babel": "^4.0.1",
+    "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-cleanup": "^3.0.0",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-filesize": "^5.0.1",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-terser": "^3.0.0",
     "serve": "^10.0.2",
     "sinon": "^7.0.0",
     "svgo": "^1.1.1",
+    "ts-jest": "^23.10.5",
     "tslint": "^5.11.0",
     "tslint-react": "^3.6.0",
     "typescript": "^3.2.1",
@@ -142,6 +144,7 @@
     "webpack": "^4.21.0"
   },
   "jest": {
+    "preset": "ts-jest",
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
@@ -150,17 +153,8 @@
       "<rootDir>/tests/__setup__/setup.ts"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/tests/__setup__/setupFramework.ts",
-    "transform": {
-      ".[jt]sx?$": "<rootDir>/node_modules/babel-jest"
-    },
-    "testRegex": "(<rootDir>/(tests|src)/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
+    "testMatch": [
+      "**/?(*.)+(spec|test).(j|t)s?(x)"
     ],
     "moduleNameMapper": {
       "@src/(.*)": "<rootDir>/src/$1",

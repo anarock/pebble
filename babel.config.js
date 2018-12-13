@@ -3,13 +3,19 @@ module.exports = {
     [
       "@babel/preset-env",
       {
-        targets: { node: "6" }
+        targets: {
+          node: "10"
+        }
       }
     ],
-    "@babel/preset-react",
     "@babel/preset-typescript"
   ],
-  plugins: [["@babel/plugin-proposal-class-properties", { loose: false }]],
+  plugins: [
+    ["@babel/plugin-proposal-class-properties", { loose: false }],
+    "@babel/plugin-syntax-jsx",
+    ["@babel/plugin-transform-react-jsx", { useBuiltIns: true }],
+    "emotion"
+  ],
   env: {
     test: {
       plugins: ["require-context-hook"]

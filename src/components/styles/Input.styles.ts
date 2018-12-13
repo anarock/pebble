@@ -37,7 +37,7 @@ export const inputStyle = css({
     webkitAppearance: "none",
     display: "none"
   },
-  ...mixins.getPlaceholderStyle(colors.gray.light)
+  .../*#__PURE__*/ mixins.getPlaceholderStyle(colors.gray.light)
 });
 
 export const inputReadOnlyStyle = css({
