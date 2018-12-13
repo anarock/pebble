@@ -5,6 +5,7 @@ import * as React from "react";
 import OptionGroup from "../src/components/shared/OptionGroup";
 import { css } from "emotion";
 import { withState } from "@dump247/storybook-state";
+import matchSorter from "match-sorter";
 
 interface DataPoint {
   id: number;
@@ -32,7 +33,20 @@ interface GroupedOptionGroupState<D extends DataPoint, G extends Group<D>> {
   propOptions?: G[];
   propSelected?: number[];
   searchBoxValue: string;
+  optionGroupChildren: JSX.Element[];
 }
+
+const subOptionClass = css({
+  paddingLeft: "20px",
+  "::before": {
+    background: colors.gray.lighter,
+    content: '" "',
+    width: "2px",
+    top: 0,
+    position: "absolute",
+    bottom: 0
+  }
+});
 
 // This is just an example of how grouping can be done.
 // Pebble remains agnostic of the data flow.
@@ -50,7 +64,8 @@ class GroupedOptionGroup<
     groupMapping: new Map(),
     dataPointMapping: new Map(),
     propOptions: undefined,
-    searchBoxValue: ""
+    searchBoxValue: "",
+    optionGroupChildren: []
   };
 
   static getDerivedStateFromProps<D extends DataPoint, G extends Group<D>>(
@@ -78,6 +93,10 @@ class GroupedOptionGroup<
       newState.groupMapping = groupMapping;
       newState.dataPointMapping = dataPointMapping;
       newState.propOptions = props.options;
+      newState.optionGroupChildren = newState.optionGroupChildren = GroupedOptionGroup.generateGroupedOption(
+        state.searchBoxValue,
+        props.options
+      );
     }
     if (props.selected !== state.propSelected) {
       const selectedDataPoints = props.selected
@@ -145,6 +164,53 @@ class GroupedOptionGroup<
     this.props.onChange(selectedDataPoints.map(d => d.id));
   }
 
+  onSearchBoxValueChange = (v: string) => {
+    this.setState({
+      searchBoxValue: v,
+      optionGroupChildren: GroupedOptionGroup.generateGroupedOption(
+        v,
+        this.props.options
+      )
+    });
+  };
+
+  static generateGroupedOption<D extends DataPoint, G extends Group<D>>(
+    searchBoxValue: string,
+    options: G[]
+  ) {
+    if (searchBoxValue) {
+      return matchSorter(
+        ([] as D[]).concat(...options.map(o => o.options)),
+        searchBoxValue,
+        { keys: ["label"] }
+      ).map(o => <Option key={o.id} value={o.id} label={o.label} />);
+    }
+    return ([] as JSX.Element[]).concat(
+      ...options
+        .filter(group => group.options.length)
+        .map(
+          group =>
+            [
+              group.group_label && (
+                <Option
+                  key={`group_${group.id}`}
+                  value={`group_${group.group_label}`}
+                  label={group.group_label}
+                />
+              ),
+              ...group.options.map(o => (
+                <Option
+                  key={o.id}
+                  value={o.id}
+                  label={o.label}
+                  className={group.group_label && subOptionClass}
+                />
+              ))
+            ].filter(f => f) as JSX.Element[]
+        )
+    );
+  }
+
   render() {
     return (
       <OptionGroup
@@ -154,48 +220,14 @@ class GroupedOptionGroup<
         searchBox
         searchBoxProps={{
           placeholder: "Search",
-          onChange: v => this.setState({ searchBoxValue: v }),
+          onChange: this.onSearchBoxValueChange,
           value: this.state.searchBoxValue
         }}
         className={css({
           maxHeight: "none"
         })}
       >
-        {this.props.options
-          .filter(group => group.options.length)
-          .map(group => [
-            group.group_label && (
-              <Option
-                key={`group_${group.id}`}
-                value={`group_${group.group_label}`}
-                label={group.group_label}
-                className={css()}
-              />
-            ),
-            ...group.options.map(o => (
-              <Option
-                key={o.id}
-                value={o.id}
-                label={o.label}
-                className={
-                  group.group_label &&
-                  css({
-                    paddingLeft: "20px",
-                    "::before": {
-                      background: colors.gray.lighter,
-                      content: '" "',
-                      width: "2px",
-                      top: 0,
-                      position: "absolute",
-                      bottom: 0
-                    }
-                  })
-                }
-              />
-            ))
-          ])
-          .reduce((arr, cur) => [...arr, ...cur], [])
-          .filter(f => f)}
+        {this.state.optionGroupChildren}
       </OptionGroup>
     );
   }

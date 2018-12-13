@@ -1361,6 +1361,11 @@
   resolved "https://registry.yarnpkg.com/@types/just-debounce-it/-/just-debounce-it-1.1.0.tgz#9cc45455c1c1fd9da4c70ab36fb10b6e073436ad"
   integrity sha512-TyGi8O02lh99xYXljp7GAMkyK7GOhA+OXQbmpEjZh/QKWA8JH5mow7t515VUYkpeaZR6uBmUGic3XUHs9Eq2Ug==
 
+"@types/match-sorter@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@types/match-sorter/-/match-sorter-2.2.0.tgz#f7231ea775ec8401f65153e4f8a37b7b1c06860d"
+  integrity sha512-1dGCs7vmVbC4XIcImF4/ZYSPlDSjV21pi8PuYk8sRAtWepmPNGwPZcJCcM77U27X9B2qo38DvN1IamPaJDI2bg==
+
 "@types/node@*":
   version "10.5.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.5.1.tgz#d578446f4abff5c0b49ade9b4e5274f6badaadfc"
@@ -4377,6 +4382,11 @@ detect-port@^1.2.3:
   dependencies:
     address "^1.0.1"
     debug "^2.6.0"
+
+diacritic@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/diacritic/-/diacritic-0.0.2.tgz#fc2a887b5a5bc0a0a854fb614c7c2f209061ee04"
+  integrity sha1-/CqIe1pbwKCoVPthTHwvIJBh7gQ=
 
 diff@^3.2.0, diff@^3.5.0:
   version "3.5.0"
@@ -8238,6 +8248,13 @@ marksy@^6.1.0:
     babel-standalone "^6.26.0"
     he "^1.1.1"
     marked "^0.3.12"
+
+match-sorter@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/match-sorter/-/match-sorter-2.3.0.tgz#99eaf386689f75bf976f6bbf7f49afb9a7ffecc8"
+  integrity sha512-0/F1ezfjs5vegTvdH0sJEDrIi+w7wvUeDW/yqLMsK6jQWgNNJRv8jYCLBc8QrCxQNpSEpei6vrOcnJwAbnYhkw==
+  dependencies:
+    diacritic "0.0.2"
 
 matched@^0.4.1:
   version "0.4.4"
