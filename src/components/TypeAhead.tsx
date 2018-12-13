@@ -11,49 +11,55 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   static defaultProps: Partial<TypeaheadProps> = {
     debounceTime: 500,
     onClear: () => {},
-    searchBox: ({ registerChange, onFocus, value }, props) => (
+    searchBox: ({ registerChange, onFocus }, props) => (
       <Input
-        onChange={registerChange}
+        onChange={value => {
+          if (props.inputProps && props.inputProps.onChange) {
+            props.inputProps.onChange(value);
+          }
+          registerChange(value);
+        }}
         placeholder={props.placeholder}
+        value={(props.inputProps && props.inputProps.value) || ""}
+        errorMessage={props.errorMessage}
+        loading={props.loading}
+        required={props.required}
+        disabled={props.disabled}
+        {...props.inputProps}
         inputProps={{
+          ...(props.inputProps && props.inputProps.inputProps),
           onFocus,
           onKeyDown: e => {
             if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
             if (e.keyCode === 8 && props.selected) {
               // keyCode for delete
+              if (props.inputProps && props.inputProps.onChange) {
+                props.inputProps.onChange("");
+              }
               registerChange("");
               props.onClear();
             }
           }
         }}
-        value={value}
-        errorMessage={props.errorMessage}
-        loading={props.loading}
-        required={props.required}
-        disabled={props.disabled}
       />
     )
   };
 
   state: TypeaheadState = {
-    value: this.props.initialValue || "",
     showSuggestions: false
   };
+  /*
+  private onChange = (value: string) => {
+    this.props.onChange(value, this.props);
+  }; */
 
-  private onChange = () => {
-    this.props.onChange(this.state.value, this.props);
-  };
-
-  private debouncedChange = debounce(this.onChange, this.props.debounceTime);
-
-  private registerChange = (value: string) => {
-    this.setState(
-      {
-        value
-      },
-      this.debouncedChange
+  private debouncedChange = (value: string) =>
+    debounce(
+      () => this.props.onChange(value, this.props),
+      this.props.debounceTime
     );
-  };
+
+  private registerChange = (value: string) => this.debouncedChange(value)();
 
   private onFocus = () => {
     this.setState({
@@ -64,16 +70,18 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   private onSelect = (_value?: React.ReactText) => {
     this.props.onSelect(_value, this.props);
 
+    if (this.props.valueExtractor && _value) {
+      this.props.valueExtractor(_value);
+    }
     this.setState({
-      showSuggestions: false,
-      value: (_value && this.props.valueExtractor(_value)) || ""
+      showSuggestions: false
     });
   };
 
   render() {
     const { className, searchBox, dropdownClassName, children } = this.props;
 
-    const { showSuggestions, value } = this.state;
+    const { showSuggestions } = this.state;
 
     return (
       <OutsideClick
@@ -88,8 +96,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
         {searchBox(
           {
             registerChange: this.registerChange,
-            onFocus: this.onFocus,
-            value
+            onFocus: this.onFocus
           },
           this.props
         )}

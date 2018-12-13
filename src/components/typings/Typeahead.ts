@@ -1,4 +1,5 @@
 import * as React from "react";
+import { InputProps } from "./Input";
 
 type FocusEvent = (
   event: React.KeyboardEvent<HTMLInputElement> | React.FocusEvent<HTMLElement>
@@ -10,7 +11,6 @@ export interface TypeaheadProps {
     args: {
       registerChange: (text: string) => void;
       onFocus: FocusEvent;
-      value: string;
     },
     props: TypeaheadProps
   ) => JSX.Element;
@@ -26,11 +26,11 @@ export interface TypeaheadProps {
   selected?: number | string;
   required?: boolean;
   children: React.ReactNodeArray;
-  valueExtractor: (value: string | number) => string;
+  valueExtractor: (value: string | number) => void;
   onClear: () => void;
+  inputProps: Partial<InputProps>;
 }
 
 export interface TypeaheadState {
-  value: string;
   showSuggestions: boolean;
 }
