@@ -51,6 +51,6 @@ describe("Sidebar func tests", () => {
       .find(".pi.pi-close")
       .at(0)
       .simulate("click");
-    expect(spy.calledOnce);
+    expect(spy.calledOnce).toBeTruthy();
   });
 });

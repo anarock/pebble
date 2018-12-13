@@ -27,12 +27,5 @@
     "typeRoots": ["./node_modules/@types", "./typings/npm"]
   },
   "include": ["src", "typings"],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "stories",
-    "tests",
-    "compiled",
-    "src/**/__tests__"
-  ]
+  "exclude": ["node_modules", "dist", "tests", "compiled", "src/**/__tests__"]
 }

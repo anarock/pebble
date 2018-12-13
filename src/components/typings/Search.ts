@@ -6,4 +6,5 @@ export interface SearchProps {
   showSearchIcon?: boolean;
   className?: string;
   clearable?: boolean;
+  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
 }

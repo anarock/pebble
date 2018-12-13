@@ -88,18 +88,37 @@ describe("Component: Select", () => {
         phone: "99997876",
         countryCode: "+1"
       })
+    ).toBeTruthy();
+  });
+
+  test("should not trigger unnecessary renders", () => {
+    const spy = sinon.spy();
+    const component = mount(
+      getComponent({
+        phone: "99997876",
+        onChange: spy
+      })
     );
 
-    // should not trigger unnecessary renders
+    const phoneInput = component.find(`#${PHONE_INPUT_ID}`);
     phoneInput.simulate("change", {
       target: {
         value: "99997876a"
       }
     });
 
-    expect(spy.notCalled);
+    expect(spy.notCalled).toBeTruthy();
+  });
 
-    // should be able to empty the input
+  test("should be able to empty the input", () => {
+    const spy = sinon.spy();
+    const component = mount(
+      getComponent({
+        phone: "99997876",
+        onChange: spy
+      })
+    );
+    const phoneInput = component.find(`#${PHONE_INPUT_ID}`);
     phoneInput.simulate("change", {
       target: {
         value: ""
@@ -111,7 +130,7 @@ describe("Component: Select", () => {
         phone: "",
         countryCode: "+1"
       })
-    );
+    ).toBeTruthy();
   });
 
   test("should be able to select country", () => {
@@ -132,7 +151,7 @@ describe("Component: Select", () => {
         phone: "",
         countryCode: countries[0].country_code
       })
-    );
+    ).toBeTruthy();
   });
 
   test("controlled input", () => {
