@@ -21,6 +21,7 @@ export const rowWrapper = css({
 });
 
 export const labelWrap = css({
+  userSelect: "none",
   overflow: "hidden",
   textOverflow: "ellipsis"
 });

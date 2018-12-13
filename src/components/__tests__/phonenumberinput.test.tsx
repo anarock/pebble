@@ -89,29 +89,48 @@ describe("Component: Select", () => {
         countryCode: "+1"
       })
     ).toBeTruthy();
+  });
 
-    // // should not trigger unnecessary renders
-    // phoneInput.simulate("change", {
-    //   target: {
-    //     value: "99997876a"
-    //   }
-    // });
+  test("should not trigger unnecessary renders", () => {
+    const spy = sinon.spy();
+    const component = mount(
+      getComponent({
+        phone: "99997876",
+        onChange: spy
+      })
+    );
 
-    // expect(spy.calledOnce).toBeTruthy();
+    const phoneInput = component.find(`#${PHONE_INPUT_ID}`);
+    phoneInput.simulate("change", {
+      target: {
+        value: "99997876a"
+      }
+    });
 
-    // // should be able to empty the input
-    // phoneInput.simulate("change", {
-    //   target: {
-    //     value: ""
-    //   }
-    // });
+    expect(spy.notCalled).toBeTruthy();
+  });
 
-    // expect(
-    //   spy.calledWith({
-    //     phone: "",
-    //     countryCode: "+1"
-    //   })
-    // ).toBeTruthy();
+  test("should be able to empty the input", () => {
+    const spy = sinon.spy();
+    const component = mount(
+      getComponent({
+        phone: "99997876",
+        onChange: spy
+      })
+    );
+    const phoneInput = component.find(`#${PHONE_INPUT_ID}`);
+    phoneInput.simulate("change", {
+      target: {
+        value: ""
+      }
+    });
+
+    expect(
+      spy.calledWith({
+        phone: "",
+        countryCode: "+1"
+      })
+    ).toBeTruthy();
   });
 
   test("should be able to select country", () => {

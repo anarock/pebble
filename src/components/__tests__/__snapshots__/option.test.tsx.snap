@@ -2,6 +2,10 @@
 
 exports[`Option component snapshot for multi select 1`] = `
 .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -108,6 +112,10 @@ exports[`Option component snapshot for multi select 1`] = `
 
 exports[`Option component snapshot in active state 1`] = `
 .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -207,6 +215,10 @@ exports[`Option component snapshot in active state 1`] = `
 
 exports[`Option component snapshot in selected state 1`] = `
 .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   overflow: hidden;
   text-overflow: ellipsis;
 }

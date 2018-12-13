@@ -2,6 +2,10 @@
 
 exports[`Component: OptionGroup default snapshot 1`] = `
 .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -624,6 +628,10 @@ Array [
     </div>
   </div>,
   .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -1288,6 +1296,10 @@ Array [
     </div>
   </div>,
   .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   overflow: hidden;
   text-overflow: ellipsis;
 }
