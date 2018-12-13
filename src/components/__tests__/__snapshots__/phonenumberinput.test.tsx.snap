@@ -59,10 +59,6 @@ exports[`Component: Select default snapshot 1`] = `
   background-color: #ffffff;
 }
 
-.emotion-8[type='date'] {
-  -webkit-appearance: textfield;
-}
-
 .emotion-8[type='date']::-webkit-inner-spin-button,
 .emotion-8[type='date']::-webkit-calendar-picker-indicator {
   webkit-appearance: none;
@@ -196,10 +192,6 @@ exports[`Component: Select default snapshot 1`] = `
 
 .emotion-1:disabled {
   background-color: #ffffff;
-}
-
-.emotion-1[type='date'] {
-  -webkit-appearance: textfield;
 }
 
 .emotion-1[type='date']::-webkit-inner-spin-button,

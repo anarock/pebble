@@ -112,7 +112,7 @@ describe("Calendar", () => {
       .at(0)
       .simulate("click");
 
-    expect(changeSpy.calledOnce);
+    expect(changeSpy.calledOnce).toBeTruthy();
 
     calendar
       .find(".calendar-test > div")

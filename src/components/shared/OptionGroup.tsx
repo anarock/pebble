@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as ReactDOM from "react-dom";
 import { OptionProps } from "../typings/Option";
 import { OptionGroupProps, OptionGroupState } from "../typings/OptionGroup";
 import scrollIntoView from "scroll-into-view-if-needed";
@@ -16,30 +17,31 @@ class OptionGroup extends React.PureComponent<
   OptionGroupState
 > {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
-  optionsRefsSet = new Map<number, React.RefObject<HTMLDivElement>>();
+  optionsRefsSet = new Map<number, React.RefObject<React.ReactInstance>>();
   observer: IntersectionObserver;
 
   state = {
-    selected: 0,
+    selected: -1,
     isScrolled: false
   };
 
-  private handleKeyPress = (e: KeyboardEvent) => {
-    const { children, handleChange } = this.props;
+  private handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const { handleChange, isSelected } = this.props;
+    const children = React.Children.toArray(this.props.children);
     const { selected } = this.state;
     const { which } = e;
 
-    if (which === 13) {
+    if (which === 13 && children && children[selected]) {
       // Enter key
       // @ts-ignore
-      const { value, isSelected } =
+      const { value } =
         // @ts-ignore
-        (children && children[selected] && children[selected].props) || {};
+        children && children[selected] && children[selected].props;
 
       handleChange(
         {
           value,
-          checked: !isSelected
+          checked: !isSelected(value)
         },
         e
       );
@@ -49,14 +51,12 @@ class OptionGroup extends React.PureComponent<
       () => {
         let _selected = selected;
         if (which === 40) {
-          e.preventDefault();
           _selected = Math.min(
             _selected + 1,
             React.Children.count(children) - 1
           );
         }
         if (which === 38) {
-          e.preventDefault();
           _selected = Math.max(_selected - 1, 0);
         }
 
@@ -70,18 +70,19 @@ class OptionGroup extends React.PureComponent<
           currentRef &&
           currentRef.current
         ) {
-          scrollIntoView(currentRef.current, {
-            behavior: "smooth",
-            boundary: this.optionRef.current
-          });
+          const element = ReactDOM.findDOMNode(currentRef.current) as Element;
+          if (element) {
+            scrollIntoView(element, {
+              behavior: "smooth",
+              boundary: this.optionRef.current
+            });
+          }
         }
       }
     );
   };
 
   componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyPress);
-
     this.observer = new IntersectionObserver(
       entries => {
         this.setState({
@@ -104,7 +105,6 @@ class OptionGroup extends React.PureComponent<
   }
 
   componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyPress);
     this.observer.disconnect();
   }
 
@@ -145,11 +145,19 @@ class OptionGroup extends React.PureComponent<
 
     return (
       <React.Fragment>
-        {searchBox && (
-          <div className={searchBoxClassName}>
-            <Search type="small" {...searchBoxProps} />
-          </div>
-        )}
+        {searchBox &&
+          searchBoxProps && (
+            <div className={searchBoxClassName}>
+              <Search
+                type="small"
+                {...searchBoxProps}
+                inputProps={{
+                  ...(searchBoxProps && searchBoxProps.inputProps),
+                  onKeyDown: this.handleKeyPress
+                }}
+              />
+            </div>
+          )}
         {!!React.Children.count(children) && (
           <div
             ref={this.optionRef}

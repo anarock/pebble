@@ -1,24 +1,35 @@
 import * as React from "react";
 
-export interface InputProps {
-  type?: "text" | "date" | "password" | "number" | "email";
-  required?: boolean;
+interface CommonInputProps {
   placeholder: string;
   onChange: (text: string) => void;
-  className?: string;
-  inputClassName?: string;
-  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
-  fixLabelAtTop?: boolean;
   value?: string | number;
-  readOnly?: boolean;
+  className?: string;
   disabled?: boolean;
-  message?: string;
   errorMessage?: string;
-  successMessage?: string;
-  textArea?: boolean;
-  onClick?: React.MouseEventHandler<HTMLDivElement>;
+  fixLabelAtTop?: boolean;
+  inputClassName?: string;
   loading?: boolean;
+  message?: string;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
+  readOnly?: boolean;
+  required?: boolean;
+  successMessage?: string;
 }
+
+interface SimpleInputProps extends CommonInputProps {
+  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+  textArea?: false;
+  type?: "text" | "date" | "password" | "number" | "email";
+}
+
+interface TextAreaInputProps extends CommonInputProps {
+  inputProps?: React.InputHTMLAttributes<HTMLTextAreaElement>;
+  textArea: true;
+  type?: undefined;
+}
+
+export type InputProps = SimpleInputProps | TextAreaInputProps;
 
 export interface InputState {
   isFocused: boolean;

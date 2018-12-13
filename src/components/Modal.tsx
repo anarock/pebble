@@ -27,7 +27,7 @@ class Modal extends React.PureComponent<ModalProps> {
     }
   }
 
-  render() {
+  render(): React.ReactNode {
     if (!isBrowser) return null;
 
     const { children, visible, className } = this.props;

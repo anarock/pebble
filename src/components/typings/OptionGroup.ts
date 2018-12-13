@@ -5,7 +5,7 @@ import { Omit } from "utility-types";
 export interface OptionGroupProps {
   className?: string;
   searchBox?: boolean;
-  searchBoxProps?: Partial<SearchProps>;
+  searchBoxProps?: Omit<SearchProps, "type">;
   isSelected: (value: React.ReactText) => boolean;
   handleChange: (
     args: { value: React.ReactText; checked: boolean },

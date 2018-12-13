@@ -6,7 +6,7 @@ import { Transition, animated } from "react-spring";
 import { cx } from "emotion";
 import Mitt from "mitt";
 
-const emitter = new Mitt();
+const emitter = /*#__PURE__*/ new Mitt();
 
 const _colors = {
   success: colors.emerald.base,
