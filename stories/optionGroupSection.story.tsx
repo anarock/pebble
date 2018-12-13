@@ -37,14 +37,15 @@ interface GroupedOptionGroupState<D extends DataPoint, G extends Group<D>> {
 }
 
 const subOptionClass = css({
-  paddingLeft: "20px",
+  paddingLeft: "40px",
   "::before": {
     background: colors.gray.lighter,
     content: '" "',
     width: "2px",
-    top: 0,
     position: "absolute",
-    bottom: 0
+    top: 0,
+    bottom: 0,
+    left: "20px"
   }
 });
 
