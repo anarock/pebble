@@ -37,8 +37,9 @@ async function compress() {
   });
 
   return output.code
-    .replace(/,[^\n]/g, ",\n")
     .replace(/\n\n/g, "\n")
+    .replace(/^import [^;]*;\n?/gm, "")
+    .replace(/,[^\n]/g, ",\n")
     .trim();
 }
 

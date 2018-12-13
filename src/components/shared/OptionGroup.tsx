@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as ReactDOM from "react-dom";
 import { OptionProps } from "../typings/Option";
 import { OptionGroupProps, OptionGroupState } from "../typings/OptionGroup";
 import scrollIntoView from "scroll-into-view-if-needed";
@@ -16,7 +17,7 @@ class OptionGroup extends React.PureComponent<
   OptionGroupState
 > {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
-  optionsRefsSet = new Map<number, React.RefObject<HTMLDivElement>>();
+  optionsRefsSet = new Map<number, React.RefObject<React.ReactInstance>>();
   observer: IntersectionObserver;
 
   state = {
@@ -70,10 +71,13 @@ class OptionGroup extends React.PureComponent<
           currentRef &&
           currentRef.current
         ) {
-          scrollIntoView(currentRef.current, {
-            behavior: "smooth",
-            boundary: this.optionRef.current
-          });
+          const element = ReactDOM.findDOMNode(currentRef.current) as Element;
+          if (element) {
+            scrollIntoView(element, {
+              behavior: "smooth",
+              boundary: this.optionRef.current
+            });
+          }
         }
       }
     );
@@ -145,11 +149,12 @@ class OptionGroup extends React.PureComponent<
 
     return (
       <React.Fragment>
-        {searchBox && (
-          <div className={searchBoxClassName}>
-            <Search type="small" {...searchBoxProps} />
-          </div>
-        )}
+        {searchBox &&
+          searchBoxProps && (
+            <div className={searchBoxClassName}>
+              <Search type="small" {...searchBoxProps} />
+            </div>
+          )}
         {!!React.Children.count(children) && (
           <div
             ref={this.optionRef}

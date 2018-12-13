@@ -188,7 +188,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
 </div>
 `;
 
-exports[`Component: Select single-select: snapshot 1`] = `
+exports[`Component: Select single-select with searchbox: snapshot 1`] = `
 .emotion-6 {
   margin-bottom: 20px;
 }
@@ -376,7 +376,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
 </div>
 `;
 
-exports[`Component: Select sinle-select with searchbox: snapshot 1`] = `
+exports[`Component: Select single-select: snapshot 1`] = `
 .emotion-6 {
   margin-bottom: 20px;
 }

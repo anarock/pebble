@@ -54,7 +54,11 @@ class Input extends React.PureComponent<InputProps, InputState> {
     });
   };
 
-  private handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  private handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     this.props.onChange(e.target.value || "");
   };
 
@@ -64,7 +68,6 @@ class Input extends React.PureComponent<InputProps, InputState> {
       placeholder,
       className,
       inputClassName,
-      inputProps,
       fixLabelAtTop,
       value,
       readOnly,
@@ -81,8 +84,6 @@ class Input extends React.PureComponent<InputProps, InputState> {
 
     const _message = errorMessage || successMessage || message;
 
-    const InputElement = textArea ? "textarea" : "input";
-
     const _inputClassName = cx(
       inputStyle,
       {
@@ -92,6 +93,15 @@ class Input extends React.PureComponent<InputProps, InputState> {
       },
       inputClassName
     );
+
+    const _inputProps = {
+      "aria-label": placeholder,
+      className: _inputClassName,
+      disabled,
+      onChange: this.handleChange,
+      readOnly,
+      value: value || ""
+    };
 
     const highlightClassName = cx(highlightStyle, {
       _pebble_input_highlight_focused: isFocused,
@@ -119,16 +129,11 @@ class Input extends React.PureComponent<InputProps, InputState> {
         onBlur={this.removeFocus}
         onClick={onClick}
       >
-        {React.createElement(InputElement, {
-          className: _inputClassName,
-          ...inputProps,
-          type,
-          disabled,
-          readOnly,
-          "aria-label": placeholder,
-          value: value || "",
-          onChange: this.handleChange
-        })}
+        {this.props.textArea ? (
+          <textarea {..._inputProps} {...this.props.inputProps} />
+        ) : (
+          <input type={type} {..._inputProps} {...this.props.inputProps} />
+        )}
 
         <label className={labelClassName}>
           {placeholder}

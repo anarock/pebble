@@ -27,7 +27,8 @@ const Select: React.SFC<SelectProps> = props => {
     value,
     dropdownClassName,
     inputProps,
-    fullWidthDropdown
+    fullWidthDropdown,
+    onDropdownToggle = noop
   } = props;
 
   return (
@@ -40,12 +41,19 @@ const Select: React.SFC<SelectProps> = props => {
         dropDownClassName={cx(dropDownClass, dropdownClassName, {
           [fullWidth]: fullWidthDropdown
         })}
+        onOutsideClick={isOpen => onDropdownToggle(isOpen)}
         labelComponent={({ toggleDropdown, isOpen }) => {
           const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {
             __pebble__select__open: isOpen
           });
           return (
-            <div className={inputWrapper} onClick={toggleDropdown}>
+            <div
+              className={inputWrapper}
+              onClick={() => {
+                toggleDropdown();
+                onDropdownToggle(isOpen);
+              }}
+            >
               <Input
                 className={selectInputWrapper}
                 inputClassName={selectInput}
@@ -63,13 +71,14 @@ const Select: React.SFC<SelectProps> = props => {
           );
         }}
       >
-        {({ toggle }) => {
+        {({ toggle, isOpen }) => {
           const { children, onClear, searchBox, searchBoxProps } = props;
           const commonProps = {
             onClear:
               onClear &&
               (() => {
                 onClear();
+                onDropdownToggle(isOpen);
                 toggle();
               }),
             searchBox,
@@ -106,6 +115,7 @@ const Select: React.SFC<SelectProps> = props => {
                   props.onApply &&
                   (_value => {
                     if (props.onApply) props.onApply(_value, props);
+                    onDropdownToggle(isOpen);
                     toggle();
                   })
                 }
@@ -120,6 +130,7 @@ const Select: React.SFC<SelectProps> = props => {
                 selected={props.selected}
                 onChange={(_value, extras) => {
                   if (_value) props.onChange(_value, extras);
+                  onDropdownToggle(isOpen);
                   toggle();
                 }}
                 {...commonProps}
