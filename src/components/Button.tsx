@@ -22,7 +22,7 @@ const Button: React.SFC<ButtonProps> = ({
   showRipple = true,
   loading,
   size = "small"
-}) => {
+}: ButtonProps) => {
   const disableAction = disabled || loading;
 
   const filled = size !== "x-small";
