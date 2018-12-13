@@ -93,8 +93,12 @@ class GroupedOptionGroup<
       newState.groupMapping = groupMapping;
       newState.dataPointMapping = dataPointMapping;
       newState.propOptions = props.options;
+
+      // Comment this line if you don't want to retain search input retained when options are changed.
+      newState.searchBoxValue = "";
+
       newState.optionGroupChildren = newState.optionGroupChildren = GroupedOptionGroup.generateGroupedOption(
-        state.searchBoxValue,
+        newState.searchBoxValue,
         props.options
       );
     }
