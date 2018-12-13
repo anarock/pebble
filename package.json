@@ -20,7 +20,6 @@
     "test:cover": "yarn test && codecov",
     "pretest": "tslint ./src/**/*.{ts,tsx} ./stories/**/*.tsx ./{tests,typings}/**/*.ts",
     "test": "jest",
-    "test:tree-shaking": "node ./tests/tree-shaking/test",
     "prepublishOnly": "yarn test && yarn build",
     "test:watch": "npm test -- --watchAll",
     "format": "pretty-quick",
