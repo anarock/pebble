@@ -21,7 +21,7 @@
     "pretest": "tslint ./src/**/*.{ts,tsx} ./stories/**/*.tsx ./{tests,typings}/**/*.ts",
     "test": "tsc && jest",
     "prepublishOnly": "yarn test && yarn build",
-    "test:watch": "npm test -- --watchAll",
+    "test:watch": "yarn jest --watchAll",
     "format": "pretty-quick",
     "now-build": "yarn build-storybook",
     "now-start": "cd storybook-static && serve",

@@ -31,12 +31,12 @@ class OptionGroup extends React.PureComponent<
     const { selected } = this.state;
     const { which } = e;
 
-    if (which === 13) {
+    if (which === 13 && children && children[selected]) {
       // Enter key
       // @ts-ignore
       const { value } =
         // @ts-ignore
-        (children && children[selected] && children[selected].props) || {};
+        children && children[selected] && children[selected].props;
 
       handleChange(
         {

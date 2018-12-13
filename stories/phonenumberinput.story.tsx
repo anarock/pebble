@@ -6,6 +6,7 @@ import PhoneNumberInput from "../src/components/PhoneNumberInput";
 import { withState } from "@dump247/storybook-state";
 import Option from "../src/components/Option";
 import countries from "../src/components/__tests__/fixtures/countrycodes";
+import { action } from "@storybook/addon-actions";
 
 interface State {
   countryCode: string;
@@ -19,12 +20,14 @@ storiesOf("PhoneNumberInput", module).add(
       countryCode={store.state.countryCode}
       phone={store.state.phone}
       placeholder="Alternate Phone Number"
-      onChange={({ countryCode, phone }) =>
+      onChange={arg => {
+        const { countryCode, phone } = arg;
+        action("onChange")(arg);
         store.set({
           countryCode: `${countryCode}`,
           phone
-        })
-      }
+        });
+      }}
     >
       {countries.map(country => (
         <Option
