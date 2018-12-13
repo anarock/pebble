@@ -4,11 +4,11 @@ import { Radio, RadioGroup } from "../src";
 import { withState } from "@dump247/storybook-state";
 import { cx } from "emotion";
 import {
-  switchWrap,
+  setWrap,
   offButton,
   selectedButton,
   onButton
-} from "../src/components/__tests__/fixtures/switch.style";
+} from "../src/components/__tests__/fixtures/radioSet.style";
 
 storiesOf("RadioGroup", module).add(
   "Default",
@@ -45,8 +45,8 @@ storiesOf("RadioGroup", module).add(
         // @ts-ignore
         store.set({ value });
       }}
-      name="Toggle"
-      className={switchWrap}
+      name="set of radios"
+      className={setWrap}
     >
       <Radio value="OFF" label="">
         {() => (
@@ -85,8 +85,8 @@ storiesOf("RadioGroup", module).add(
         // @ts-ignore
         store.set({ value });
       }}
-      name="Toggle"
-      className={switchWrap}
+      name="set of radios"
+      className={setWrap}
     >
       <Radio value="C" label="">
         {() => (

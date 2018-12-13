@@ -6,11 +6,11 @@ import combos from "combos";
 import renderer from "react-test-renderer";
 import { cx } from "emotion";
 import {
-  switchWrap,
+  setWrap,
   offButton,
   selectedButton,
   onButton
-} from "./fixtures/switch.style";
+} from "./fixtures/radioSet.style";
 
 function noop() {}
 
@@ -58,7 +58,7 @@ describe("RadioGroup", () => {
   });
 });
 
-describe("Switch", () => {
+describe("set of radios", () => {
   const _props = {
     value: ["ON", "OFF"]
   };
@@ -69,8 +69,8 @@ describe("Switch", () => {
       <RadioGroup
         selected={props.value}
         onChange={noop}
-        name="Toggle"
-        className={switchWrap}
+        name="set of radios"
+        className={setWrap}
       >
         <Radio value="OFF" label="">
           {() => (

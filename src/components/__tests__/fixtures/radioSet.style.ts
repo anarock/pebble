@@ -1,7 +1,7 @@
 import { css } from "emotion";
 import { colors, typography } from "../../../theme";
 
-export const switchWrap = css({
+export const setWrap = css({
   display: "flex",
   ...typography.s.regular
 });
