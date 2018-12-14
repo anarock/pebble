@@ -14,33 +14,15 @@ import {
   dotStyle,
   dotWrapper,
   tileStyle,
-  wrapperStyle
+  wrapperStyle,
+  quickDateTags,
+  customChevronIcon,
+  customSelected
 } from "./styles/Calendar.styles";
 import Button from "./Button";
 import { isSameDay, endOfDay, startOfDay } from "date-fns";
 import Popper from "./Popper";
-import { mixins, colors, constants } from "../theme";
-
-const selectedTag = {
-  background: colors.violet.lightest,
-  color: colors.violet.base
-};
-
-const quickDateTags = css({
-  padding: "10px 15px",
-  marginRight: 5,
-  fontSize: 14,
-  borderRadius: constants.borderRadius,
-  cursor: "pointer",
-  ":hover": selectedTag
-});
-
-const customChevronIcon = css({
-  fontSize: 10,
-  display: "inline-flex",
-  marginLeft: 5,
-  color: colors.gray.base
-});
+import { mixins } from "../theme";
 
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   static defaultProps: Partial<CalendarProps> = {
@@ -236,7 +218,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
                     })}
                   <div
                     className={cx(quickDateTags, {
-                      [css(selectedTag)]: isCustomSelected
+                      [customSelected]: isCustomSelected
                     })}
                     onClick={() =>
                       this.setState({ isCustomSelected: !isCustomSelected })
