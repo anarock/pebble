@@ -10,7 +10,7 @@ import {
   onButton
 } from "../src/components/__tests__/fixtures/radioSet.style";
 
-storiesOf("recipes/RadioGroup", module).add(
+storiesOf("Components/RadioGroup", module).add(
   "Default",
   withState({ value: "radio" })(({ store }) => (
     <RadioGroup
@@ -36,7 +36,7 @@ interface ThreeState {
   value: "A" | "B" | "C";
 }
 
-storiesOf("recipes/RadioGroup", module).add(
+storiesOf("Components/RadioGroup", module).add(
   "two options",
   withState<TwoState>({ value: "ON" })(({ store }) => (
     <RadioGroup
@@ -76,7 +76,7 @@ storiesOf("recipes/RadioGroup", module).add(
   ))
 );
 
-storiesOf("recipes/RadioGroup", module).add(
+storiesOf("Components/RadioGroup", module).add(
   "three options",
   withState<ThreeState>({ value: "A" })(({ store }) => (
     <RadioGroup

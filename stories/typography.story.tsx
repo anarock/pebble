@@ -37,7 +37,7 @@ const section = css({
 const text =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.";
 
-storiesOf("theme/typography", module).add("List", () => (
+storiesOf("Theme/typography", module).add("List", () => (
   <div className={wrapper}>
     <h2 style={{ marginBottom: 40 }}>Typography</h2>
     {Object.keys(typography).map((x: keyof typeof typography) =>
