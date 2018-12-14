@@ -65,7 +65,7 @@ export const tileStyle = css({
 
 export const dateStyle = css({
   width: 356,
-  margin: 10,
+  margin: "10px auto",
   position: "relative",
   ".react-calendar__month-view__weekdays__weekday": {
     color: colors.gray.dark,

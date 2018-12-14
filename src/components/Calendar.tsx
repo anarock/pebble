@@ -19,19 +19,20 @@ import {
 import Button from "./Button";
 import { isSameDay, endOfDay, startOfDay } from "date-fns";
 import Popper from "./Popper";
-import { mixins, colors } from "../theme";
+import { mixins, colors, constants } from "../theme";
 
-// TO-DO: Write separately props for both Calendars and move css.
+const selectedTag = {
+  background: colors.violet.lightest,
+  color: colors.violet.base
+};
 
 const quickDateTags = css({
-  padding: "10px 20px",
+  padding: "10px 15px",
+  marginRight: 5,
   fontSize: 14,
-  borderRadius: 3,
+  borderRadius: constants.borderRadius,
   cursor: "pointer",
-  ":hover": {
-    background: colors.violet.lightest,
-    color: colors.violet.base
-  }
+  ":hover": selectedTag
 });
 
 const customChevronIcon = css({
@@ -41,16 +42,29 @@ const customChevronIcon = css({
   color: colors.gray.base
 });
 
-const selectedTag = css({
-  background: colors.violet.lightest,
-  color: colors.violet.base
-});
-
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   static defaultProps: Partial<CalendarProps> = {
     onChange: () => {},
+    onApply: () => {},
     tileDots: [],
-    quickDates: false
+    quickDates: false,
+    quickDateOptions: [
+      {
+        label: "Yesterday",
+        valueExtractor: () => {
+          const date = new Date().setDate(new Date().getDate() - 1);
+          return [startOfDay(date), endOfDay(date)];
+        }
+      },
+      {
+        label: "Past Week",
+        valueExtractor: () => {
+          const startDate = new Date().setDate(new Date().getDate() - 7);
+          const endDate = new Date().setDate(new Date().getDate() - 1);
+          return [startOfDay(startDate), endOfDay(endDate)];
+        }
+      }
+    ]
   };
 
   state: CalendarState = {
@@ -125,7 +139,8 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         className={cx(
           wrapperStyle,
           {
-            [css({ boxShadow: "none" })]: hideShadow
+            [css({ boxShadow: "none" })]: hideShadow || quickDates,
+            [css({ padding: "10px 0 0 0" })]: quickDates
           },
           className
         )}
@@ -177,12 +192,26 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   };
 
   render() {
-    const { quickDates, quickDateOptions } = this.props;
+    const {
+      quickDates,
+      quickDateOptions,
+      customDateInputLabel,
+      onApply
+    } = this.props;
     const { isCustomSelected } = this.state;
     if (quickDates) {
       return (
         <Popper
-          label={({ toggle }) => <div onClick={toggle}>Custom Label</div>}
+          label={({ toggle, isOpen }) => {
+            if (customDateInputLabel) {
+              return customDateInputLabel(toggle, isOpen);
+            }
+            return (
+              <div onClick={toggle} className={css({ cursor: "pointer" })}>
+                Date Input
+              </div>
+            );
+          }}
           popperClassName={css({ padding: 20 })}
         >
           {({ toggle }) => {
@@ -196,7 +225,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
                           key={i}
                           onClick={() => {
                             toggle();
-                            date.valueExtractor();
+                            onApply(date.valueExtractor());
                             this.setState({ isCustomSelected: false });
                           }}
                           className={quickDateTags}
@@ -207,7 +236,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
                     })}
                   <div
                     className={cx(quickDateTags, {
-                      [selectedTag]: isCustomSelected
+                      [css(selectedTag)]: isCustomSelected
                     })}
                     onClick={() =>
                       this.setState({ isCustomSelected: !isCustomSelected })
