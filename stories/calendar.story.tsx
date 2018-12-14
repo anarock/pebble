@@ -9,7 +9,7 @@ import { colors } from "../src/theme";
 
 storiesOf("Calendar", module).add("Default", () => (
   <Calendar
-    quickDates
+    quickDates={boolean("quickDates", true)}
     onChange={action("change")}
     range={boolean("range", true)}
     onApply={action("apply")}
