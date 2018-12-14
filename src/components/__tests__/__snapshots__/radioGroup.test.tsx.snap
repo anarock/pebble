@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Switch { value: 'OFF' } 1`] = `
+exports[`set of radios { value: 'OFF' } 1`] = `
 .emotion-1 {
   cursor: pointer;
   display: -webkit-box;
@@ -48,7 +48,7 @@ exports[`Switch { value: 'OFF' } 1`] = `
 }
 
 <div
-  aria-label="Toggle"
+  aria-label="set of radios"
   className="emotion-4"
   role="radiogroup"
 >
@@ -81,7 +81,7 @@ exports[`Switch { value: 'OFF' } 1`] = `
 </div>
 `;
 
-exports[`Switch { value: 'ON' } 1`] = `
+exports[`set of radios { value: 'ON' } 1`] = `
 .emotion-1 {
   cursor: pointer;
   display: -webkit-box;
@@ -129,7 +129,7 @@ exports[`Switch { value: 'ON' } 1`] = `
 }
 
 <div
-  aria-label="Toggle"
+  aria-label="set of radios"
   className="emotion-4"
   role="radiogroup"
 >
