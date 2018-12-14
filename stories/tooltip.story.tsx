@@ -23,7 +23,7 @@ const placements = [
   "left-start"
 ] as Placement[];
 
-storiesOf("Tooltip", module).add("simple", () => (
+storiesOf("Components/Tooltip", module).add("simple", () => (
   <Tooltip
     label={({ ref }) => (
       <div ref={ref}>

@@ -8,7 +8,7 @@ interface State {
   selectedMinute?: number;
 }
 
-storiesOf("TimePicker", module).add(
+storiesOf("Components/TimePicker", module).add(
   "simple",
   withState<State>({ selectedHour: undefined, selectedMinute: undefined })(
     ({ store }) => (

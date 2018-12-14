@@ -287,7 +287,7 @@ const GROUPED_OPTIONS: Array<Group<DataPoint>> = [
   }
 ];
 
-storiesOf("OptionGroupCheckBoxSections", module).add(
+storiesOf("recipes/OptionGroupCheckBoxSections", module).add(
   "Grouping and Select All",
   withState({
     selected: [] as number[]

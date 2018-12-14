@@ -33,7 +33,7 @@ const section = css({
   marginRight: 20
 });
 
-storiesOf("Colors", module).add("List", () => (
+storiesOf("theme/colors", module).add("List", () => (
   <div className={wrapper}>
     <h2 style={{ marginBottom: 40 }}>Colors</h2>
     {Object.keys(colors).map((x: keyof Colors) => {
