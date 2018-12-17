@@ -8,37 +8,43 @@ import OutsideClick from "./OutsideClick";
 import OptionGroupRadio from "./OptionGroupRadio";
 
 class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
-  debouncedChange: () => void;
-
   static defaultProps: Partial<TypeaheadProps> = {
     debounceTime: 500,
+    onClear: () => {},
     searchBox: ({ registerChange, onFocus, value }, props) => (
       <Input
         onChange={registerChange}
         placeholder={props.placeholder}
-        inputProps={{ onFocus }}
+        inputProps={{
+          onFocus,
+          onKeyDown: (e: React.KeyboardEvent) => {
+            if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+            if (e.keyCode === 8 && props.selected) {
+              // keyCode for delete
+              registerChange("");
+              props.onClear();
+            }
+          }
+        }}
         value={value}
         errorMessage={props.errorMessage}
         loading={props.loading}
         required={props.required}
+        disabled={props.disabled}
       />
     )
   };
 
-  constructor(props) {
-    super(props);
-
-    this.debouncedChange = debounce(this.onChange, props.debounceTime);
-  }
-
   state: TypeaheadState = {
-    value: this.props.initialValue,
+    value: this.props.initialValue || "",
     showSuggestions: false
   };
 
-  onChange = () => {
+  private onChange = () => {
     this.props.onChange(this.state.value, this.props);
   };
+
+  private debouncedChange = debounce(this.onChange, this.props.debounceTime);
 
   private registerChange = (value: string) => {
     this.setState(
@@ -55,12 +61,12 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
     });
   };
 
-  private onSelect = _value => {
+  private onSelect = (_value?: React.ReactText) => {
     this.props.onSelect(_value, this.props);
 
     this.setState({
       showSuggestions: false,
-      value: this.props.valueExtractor(_value)
+      value: (_value && this.props.valueExtractor(_value)) || ""
     });
   };
 

@@ -2,6 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { css } from "emotion";
 import { colors, constants, typography } from "../src/theme";
+import { Colors } from "../src/theme/typings/colors";
 
 const wrapper = css({
   padding: 30,
@@ -32,35 +33,38 @@ const section = css({
   marginRight: 20
 });
 
-storiesOf("Colors", module).add("List", () => (
+storiesOf("Theme/colors", module).add("List", () => (
   <div className={wrapper}>
     <h2 style={{ marginBottom: 40 }}>Colors</h2>
-    {Object.keys(colors).map(x => (
-      <div>
-        <h4 style={{ marginBottom: 10 }}>{x}</h4>
-        <div style={{ overflow: "auto" }}>
-          {Object.keys(colors[x]).map(y => {
-            const color = colors[x][y];
-            return (
-              <div className={section}>
-                <div
-                  style={{
-                    backgroundColor: color,
-                    flex: 1,
-                    height: 100
-                  }}
-                />
-                <div className={titleStyle}>
-                  <div style={{ borderBottom: constants.border.base }}>
-                    {color}
+    {Object.keys(colors).map((x: keyof Colors) => {
+      const group = colors[x];
+      return (
+        <div key={x}>
+          <h4 style={{ marginBottom: 10 }}>{x}</h4>
+          <div style={{ overflow: "auto" }}>
+            {Object.keys(colors[x]).map((y: keyof typeof group) => {
+              const color = group[y];
+              return (
+                <div className={section} key={y}>
+                  <div
+                    style={{
+                      backgroundColor: color,
+                      flex: 1,
+                      height: 100
+                    }}
+                  />
+                  <div className={titleStyle}>
+                    <div style={{ borderBottom: constants.border.base }}>
+                      {color}
+                    </div>
+                    <div style={typography.s.light}>{`colors.${x}.${y}`}</div>
                   </div>
-                  <div style={typography.s.light}>{`colors.${x}.${y}`}</div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
-    ))}
+      );
+    })}
   </div>
 ));

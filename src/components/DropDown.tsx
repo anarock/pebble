@@ -7,7 +7,7 @@ import OutsideClick from "./OutsideClick";
 
 class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
   state: DropdownState = {
-    isOpen: this.props.initiallyOpen
+    isOpen: !!this.props.initiallyOpen
   };
 
   static defaultProps: Partial<DropdownProps> = {
@@ -30,17 +30,19 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
       dropDownClassName,
       isSelected,
       disabled,
-      labelClassName
+      labelClassName,
+      onOutsideClick
     } = this.props;
     const { isOpen } = this.state;
 
     return (
       <OutsideClick
-        onOutsideClick={() =>
+        onOutsideClick={() => {
           this.setState({
             isOpen: false
-          })
-        }
+          });
+          if (onOutsideClick) onOutsideClick(isOpen);
+        }}
         disabled={!isOpen}
       >
         <div className={className}>
@@ -48,7 +50,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
             labelComponent({ isOpen, toggleDropdown: this.toggleDropdown })
           ) : (
             <DropDownButton
-              isSelected={isSelected}
+              isSelected={!!isSelected}
               isOpen={isOpen}
               onClick={this.toggleDropdown}
               disabled={disabled}
@@ -57,12 +59,12 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
               {buttonLabel}
             </DropDownButton>
           )}
-          {this.state.isOpen && (
+          {isOpen && (
             <div
               className={cx(dropDownStyle, dropDownClassName)}
               style={{ padding }}
             >
-              {children({ toggle: this.toggleDropdown })}
+              {children({ toggle: this.toggleDropdown, isOpen })}
             </div>
           )}
         </div>

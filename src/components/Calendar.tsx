@@ -1,7 +1,13 @@
 import * as React from "react";
-import RCalendar from "react-calendar/dist/entry.nostyle";
+import RCalendar, {
+  CalendarTileProperties
+} from "react-calendar/dist/entry.nostyle";
 import { css, cx } from "emotion";
-import { CalendarProps, CalendarState } from "./typings/Calendar";
+import {
+  CalendarProps,
+  CalendarState,
+  CalendarValue
+} from "./typings/Calendar";
 import {
   buttonsWrapper,
   dateStyle,
@@ -11,7 +17,7 @@ import {
   wrapperStyle
 } from "./styles/Calendar.styles";
 import Button from "./Button";
-import { isSameDay } from "date-fns";
+import { isSameDay, endOfDay, startOfDay } from "date-fns";
 
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   static defaultProps: Partial<CalendarProps> = {
@@ -20,44 +26,56 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   };
 
   state: CalendarState = {
-    value: this.props.selected
+    value: this.props.selected,
+    singleSelectedDate: null
   };
 
-  private onChange = value => {
+  private onChange = (value: CalendarValue) => {
     const { range, onChange } = this.props;
     this.setState(
       {
-        value
+        value,
+        singleSelectedDate: null
       },
-      () => (range ? value.length === 2 && onChange(value) : onChange(value))
+      () =>
+        range && Array.isArray(value)
+          ? value.length === 2 && onChange(value)
+          : onChange(value)
     );
   };
 
-  private getTileContent = ({ date }): JSX.Element => {
-    const dot = this.props.tileDots.find(datum =>
-      isSameDay(date, datum.timeStamp)
+  private onDayClick = (day: Date) => {
+    const { onClickDay } = this.props;
+    this.setState({ singleSelectedDate: [startOfDay(day), endOfDay(day)] });
+    if (onClickDay) onClickDay(day);
+  };
+
+  private getTileContent = ({ date }: CalendarTileProperties) => {
+    const dot = this.props.tileDots.find(
+      datum => !!datum.timeStamp && isSameDay(date, datum.timeStamp)
     );
 
     return dot ? (
       <div className={dotWrapper}>
-        {dot.colors.map((color, i) => (
-          <span
-            key={i}
-            className={dotStyle}
-            style={{ backgroundColor: color }}
-          />
-        ))}
+        {dot.colors &&
+          dot.colors.map((color, i) => (
+            <span
+              key={i}
+              className={dotStyle}
+              style={{ backgroundColor: color }}
+            />
+          ))}
       </div>
     ) : null;
   };
 
-  private getDisabledDays = ({ date }) => {
+  private getDisabledDays = ({ date }: CalendarTileProperties) => {
     const { disabledDays } = this.props;
     return (
       (disabledDays &&
         disabledDays.length &&
         disabledDays.some(_date => isSameDay(_date, date))) ||
-      null
+      false
     );
   };
 
@@ -95,11 +113,12 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
           showNeighboringMonth={false}
           tileContent={this.getTileContent}
           tileDisabled={this.getDisabledDays}
+          onClickDay={this.onDayClick}
           prevLabel={
-            <i style={{ fontSize: 14 }} className="icon-chevron-left" />
+            <i style={{ fontSize: 14 }} className="pi pi-chevron-left" />
           }
           nextLabel={
-            <i style={{ fontSize: 14 }} className="icon-arrow-right" />
+            <i style={{ fontSize: 14 }} className="pi pi-arrow-right" />
           }
         />
 
@@ -111,7 +130,15 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
               </Button>
             )}
             {onApply && (
-              <Button onClick={() => onApply(this.state.value)}>Apply</Button>
+              <Button
+                onClick={() => {
+                  range && this.state.singleSelectedDate
+                    ? onApply(this.state.singleSelectedDate)
+                    : onApply(this.state.value);
+                }}
+              >
+                Apply
+              </Button>
             )}
           </div>
         )}

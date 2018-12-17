@@ -1,16 +1,18 @@
 import * as React from "react";
-import { controlContentStyle, controlStyle } from "../styles/Control.styles";
+import { controlStyle, radioIconStyle } from "../styles/Control.styles";
 import { ControlProps } from "../typings/Control";
 import { colors } from "../../theme";
 import { cx } from "emotion";
 
-const Control: React.SFC<ControlProps> = props => {
+const renderProps = (props: ControlProps) => <ControlView {...props} />;
+
+const Control: React.FunctionComponent<ControlProps> = props => {
   const {
     checked,
     onChange,
     value,
     disabled,
-    children,
+    children = renderProps,
     type,
     className
   } = props;
@@ -24,7 +26,8 @@ const Control: React.SFC<ControlProps> = props => {
       tabIndex={checked ? 0 : -1}
       onClick={
         !disabled
-          ? (e: React.MouseEvent) => onChange({ value, checked: !checked }, e)
+          ? (e: React.MouseEvent) =>
+              onChange && onChange({ value, checked: !checked }, e)
           : undefined
       }
     >
@@ -33,22 +36,24 @@ const Control: React.SFC<ControlProps> = props => {
   );
 };
 
-export const ControlView: React.SFC<ControlProps> = ({
+export const ControlView: React.FunctionComponent<ControlProps> = ({
   checked,
   label,
   type
 }) => {
   const isRadio = type === "radio";
 
-  const iconClass = cx({
-    "icon-radio": isRadio && !checked,
-    "icon-radio-selected": isRadio && checked,
-    "icon-checkbox-selected": !isRadio && checked,
-    "icon-checkbox-unselected": !isRadio && !checked
+  // Ensure that other styles are not emotion styles.
+  // As cx merges styles into one className.
+  const iconClass = cx(radioIconStyle, "pi", {
+    "pi-radio": isRadio && !checked,
+    "pi-radio-selected": isRadio && checked,
+    "pi-checkbox-selected": !isRadio && checked,
+    "pi-checkbox-unselected": !isRadio && !checked
   });
 
   return (
-    <div className={controlContentStyle}>
+    <>
       <i
         style={{
           color: checked ? colors.violet.base : colors.gray.light,
@@ -57,12 +62,8 @@ export const ControlView: React.SFC<ControlProps> = ({
         className={iconClass}
       />{" "}
       {label}
-    </div>
+    </>
   );
-};
-
-Control.defaultProps = {
-  children: props => <ControlView {...props} />
 };
 
 export default Control;

@@ -14,6 +14,7 @@ export const tileStyle = css({
   ...typography.normal.regular,
   height: 48,
   width: 48,
+  padding: 0,
   position: "relative",
   textAlign: "center",
   cursor: "pointer",

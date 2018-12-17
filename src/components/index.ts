@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button, { DropDownButton } from "./Button";
 import Calendar from "./Calendar";
 import Controls from "./Controls";
 import DropDown from "./DropDown";
@@ -16,6 +16,7 @@ import DateInput from "./DateInput";
 import Tooltip from "./Tooltip";
 import Logo from "./Logo";
 import Popper from "./Popper";
+import PopUp from "./PopUp";
 import Loader from "./Loader";
 import Radio from "./Radio";
 import RadioGroup from "./RadioGroup";
@@ -25,9 +26,12 @@ import Option from "./Option";
 import OptionGroupRadio from "./OptionGroupRadio";
 import OptionGroupCheckBox from "./OptionGroupCheckBox";
 import OutsideClick from "./OutsideClick";
+import PhoneNumberInput from "./PhoneNumberInput";
+import TimePicker from "./TimePicker";
 
 export {
   Button,
+  DropDownButton,
   Calendar,
   Controls,
   DropDown,
@@ -38,6 +42,7 @@ export {
   Slider,
   Stepper,
   Tag,
+  TimePicker,
   Toast,
   TypeAhead,
   SideBar,
@@ -45,6 +50,7 @@ export {
   Tooltip,
   Logo,
   Popper,
+  PopUp,
   Loader,
   Radio,
   RadioGroup,
@@ -53,5 +59,6 @@ export {
   Option,
   OptionGroupRadio,
   OptionGroupCheckBox,
-  OutsideClick
+  OutsideClick,
+  PhoneNumberInput
 };

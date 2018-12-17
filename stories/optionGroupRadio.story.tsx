@@ -5,7 +5,7 @@ import OptionGroupRadio from "../src/components/OptionGroupRadio";
 import Option from "../src/components/Option";
 import * as React from "react";
 
-storiesOf("OptionGroupRadio", module).add(
+storiesOf("Components/OptionGroupRadio", module).add(
   "Default",
   withState({ value: "option-2" })(({ store }) => (
     <div
@@ -19,7 +19,7 @@ storiesOf("OptionGroupRadio", module).add(
         selected={store.state.value}
         onChange={value =>
           store.set({
-            value
+            value: value as string
           })
         }
       >

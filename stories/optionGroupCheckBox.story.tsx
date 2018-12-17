@@ -5,9 +5,12 @@ import OptionGroupCheckBox from "../src/components/OptionGroupCheckBox";
 import Option from "../src/components/Option";
 import * as React from "react";
 
-storiesOf("OptionGroupCheckBox", module).add(
+storiesOf("Components/OptionGroupCheckBox", module).add(
   "with Searchbox",
-  withState({ value: ["option-2"] })(({ store }) => (
+  withState({
+    value: ["option-2"],
+    searchBoxValue: ""
+  })(({ store }) => (
     <div
       style={{
         boxShadow: constants.boxShadow.elevated,
@@ -18,10 +21,16 @@ storiesOf("OptionGroupCheckBox", module).add(
       <OptionGroupCheckBox
         selected={store.state.value}
         searchBox
-        searchBoxPlaceholder="Search"
+        searchBoxProps={{
+          placeholder: "Search",
+          onChange: v => {
+            store.set({ searchBoxValue: v });
+          },
+          value: store.state.searchBoxValue
+        }}
         onChange={value =>
           store.set({
-            value
+            value: value as string[]
           })
         }
         onApply={() => {}}
@@ -35,6 +44,14 @@ storiesOf("OptionGroupCheckBox", module).add(
         <Option value="option-6" label="I am an option" />
         <Option value="option-7" label="I am an option" />
         <Option value="option-8" label="I am an option" />
+        <Option value="option-11" label="I am an option" />
+        <Option value="option-21" label="I am an option" />
+        <Option value="option-31" label="I am an option" />
+        <Option value="option-41" label="I am an option" />
+        <Option value="option-51" label="I am an option" />
+        <Option value="option-61" label="I am an option" />
+        <Option value="option-71" label="I am an option" />
+        <Option value="option-81" label="I am an option" />
       </OptionGroupCheckBox>
     </div>
   ))

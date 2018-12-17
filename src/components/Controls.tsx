@@ -5,18 +5,18 @@ import { colors } from "../theme";
 import { controlViewStyle, iconStyle } from "./styles/Controls.styles";
 import { messageStyle } from "./styles/Input.styles";
 
-const ControlView: React.SFC<ControlViewProps> = ({
+const ControlView: React.FunctionComponent<ControlViewProps> = ({
   label,
   type,
   isSelected,
   className
 }) => {
   const isRadio = type === "radio";
-  const iconClass = cx(iconStyle, {
-    "icon-radio": isRadio && !isSelected,
-    "icon-radio-selected": isRadio && isSelected,
-    "icon-checkbox-selected": !isRadio && isSelected,
-    "icon-checkbox-unselected": !isRadio && !isSelected
+  const iconClass = cx(iconStyle, "pi", {
+    "pi-radio": isRadio && !isSelected,
+    "pi-radio-selected": isRadio && isSelected,
+    "pi-checkbox-selected": !isRadio && isSelected,
+    "pi-checkbox-unselected": !isRadio && !isSelected
   });
 
   return (
@@ -48,27 +48,29 @@ class Controls extends React.PureComponent<ControlsProps> {
     labelExtractor: item => item.label || item.name
   };
 
-  constructor(props) {
+  constructor(props: ControlsProps) {
     super(props);
 
+    // tslint:disable-next-line no-console
     console.warn(
       "pebble: Controls component is deprecated. Instead use RadioGroup or CheckboxGroup."
     );
   }
 
-  private handleClick = (id: string | number) => {
+  private handleClick = (id: string | number | null) => {
     const { onChange, allowToggle, selected } = this.props;
 
     let result;
     if (this.isRadio()) {
       if (allowToggle && id === selected) {
-        id = null;
+        result = null;
+      } else {
+        result = id;
       }
-      result = id;
     } else {
       const _selected = selected || [];
       // @ts-ignore
-      let cloned = _selected.slice(0);
+      const cloned = _selected.slice(0);
       // @ts-ignore
       const index = _selected.findIndex(datum => datum === id);
       if (index >= 0) {

@@ -28,20 +28,7 @@ export const inputStyle = css({
   width: "100%",
   ...mixins.textEllipsis,
   "&:disabled": {
-    backgroundColor: colors.white
-  },
-  "&._pebble_input_read_only": {
-    color: colors.gray.dark
-  },
-  "&._pebble_input_disabled": {
-    cursor: "not-allowed",
-    pointerEvents: "none",
-    color: colors.gray.base
-  },
-  "&._pebble_input_textarea": {
-    height: 88,
-    padding: "24px 0 52px 0",
-    resize: "none"
+    backgroundColor: colors.white.base
   },
   "&[type='date']": {
     ...(!isDesktop ? { "-webkit-appearance": "textfield" } : {})
@@ -50,7 +37,23 @@ export const inputStyle = css({
     webkitAppearance: "none",
     display: "none"
   },
-  ...mixins.getPlaceholderStyle(colors.gray.light)
+  .../*#__PURE__*/ mixins.getPlaceholderStyle(colors.gray.light)
+});
+
+export const inputReadOnlyStyle = css({
+  color: colors.gray.dark
+});
+
+export const inputDisabledStyle = css({
+  cursor: "not-allowed",
+  pointerEvents: "none",
+  color: colors.gray.base
+});
+
+export const inputTextAreaStyle = css({
+  height: 88,
+  padding: "24px 0 52px 0",
+  resize: "none"
 });
 
 export const highlightStyle = css({

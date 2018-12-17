@@ -2,6 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { colors, constants, mixins, typography } from "../src/theme";
 import { css } from "emotion";
+import { Type } from "../src/theme/typings/typography";
 
 const wrapper = css({
   padding: 30,
@@ -36,14 +37,14 @@ const section = css({
 const text =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.";
 
-storiesOf("Typography", module).add("List", () => (
+storiesOf("Theme/typography", module).add("List", () => (
   <div className={wrapper}>
     <h2 style={{ marginBottom: 40 }}>Typography</h2>
-    {Object.keys(typography).map(x =>
-      Object.keys(typography[x]).map(y => {
-        const style = typography[x][y];
+    {Object.keys(typography).map((x: keyof typeof typography) =>
+      Object.keys(typography[x]).map((y: keyof Type) => {
+        const style = typography[x][y] as React.CSSProperties;
         return (
-          <div className={section}>
+          <div className={section} key={`${x}.${y}`}>
             <div
               style={{
                 ...style,

@@ -1,8 +1,8 @@
 import * as React from "react";
 
 export interface CheckboxGroupProps {
-  selected: (number | string)[];
-  onChange: (value: (number | string)[], e: React.MouseEvent) => void;
+  selected: Array<number | string>;
+  onChange: (value: Array<number | string>, e: React.MouseEvent) => void;
   children: React.ReactNode | React.ReactNodeArray;
   className?: string;
   name: string;

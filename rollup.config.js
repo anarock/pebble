@@ -1,3 +1,5 @@
+const babelConfig = require("./babel.config");
+
 import resolve from "rollup-plugin-node-resolve";
 import filesize from "rollup-plugin-filesize";
 import sourceMaps from "rollup-plugin-sourcemaps";
@@ -9,39 +11,39 @@ import cleanup from "rollup-plugin-cleanup";
 const input = "compiled/index.js";
 const external = ["react", "react-calendar/dist/entry.nostyle"];
 
-const plugins = ({ dev } = {}) => [
-  babel({
-    babelrc: false,
-    presets: [
-      [
-        "env",
-        {
-          targets: { node: "6" },
-          modules: false
-        }
+function getPlugins({ targets, dev }) {
+  return [
+    babel({
+      ...babelConfig,
+      presets: [
+        ...babelConfig.presets.filter(preset => {
+          Array.isArray(preset)
+            ? preset[0] !== "@babel/preset-env"
+            : preset !== "@babel/preset-env";
+        }),
+        ["@babel/preset-env", { targets }]
       ],
-      "stage-0",
-      "react"
-    ],
-    plugins: [
-      "external-helpers",
-      dev && [
-        "emotion",
-        {
-          autoLabel: true,
-          labelFormat: "[filename]-[local]"
-        }
-      ]
-    ].filter(p => p)
-  }),
-  resolve({
-    extensions: [".js", ".jsx", ".json"]
-  }),
-  commonjs(),
-  cleanup(),
-  sourceMaps(),
-  filesize()
-];
+      plugins: [
+        dev && [
+          "emotion",
+          {
+            autoLabel: true,
+            labelFormat: "[filename]-[local]"
+          }
+        ]
+      ].filter(p => p)
+    }),
+    resolve({
+      extensions: [".js", ".jsx", ".json"]
+    }),
+    commonjs(),
+    cleanup({
+      comments: [/^\*#__PURE__/, /^\*@__PURE__/]
+    }),
+    sourceMaps(),
+    filesize()
+  ];
+}
 
 export default [
   {
@@ -59,7 +61,9 @@ export default [
         }
       }
     ],
-    plugins: plugins()
+    plugins: getPlugins({
+      targets: { node: "6" }
+    })
   },
   {
     input,
@@ -76,7 +80,10 @@ export default [
         sourcemap: true
       }
     ],
-    plugins: plugins({ dev: true })
+    plugins: plugins({
+      dev: true,
+      targets: { node: "10" }
+    })
   },
   {
     input,
@@ -86,13 +93,24 @@ export default [
         file: "dist/pebble.es.min.js",
         format: "es",
         sourcemap: true
-      },
+      }
+    ],
+    plugins: getPlugins({
+      targets: { node: "10" }
+    })
+  },
+  {
+    input,
+    external: external.concat(Object.keys(pkg.dependencies)),
+    output: [
       {
         file: "dist/pebble.min.js",
         format: "cjs",
         sourcemap: true
       }
     ],
-    plugins: plugins()
+    plugins: getPlugins({
+      targets: { node: "6" }
+    })
   }
 ];

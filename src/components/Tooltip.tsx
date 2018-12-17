@@ -6,9 +6,10 @@ import { popperStyle, textStyle } from "./styles/Tooltip.styles";
 
 class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
   state = {
-    isOpen: this.props.isOpen
+    isOpen: !!this.props.isOpen
   };
 
+  // tslint:disable-next-line no-any
   labelRef: React.RefObject<any> = React.createRef();
 
   private showTooltip = () =>

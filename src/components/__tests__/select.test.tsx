@@ -4,12 +4,20 @@ import Option from "../Option";
 import Select from "../Select";
 import { mount } from "enzyme";
 import sinon from "sinon";
-import { SelectProps } from "../typings/Select";
+import { SingleSelectProps, MultiSelectProps } from "../typings/Select";
 import Button from "../Button";
 import Input from "../Input";
 import Search from "../Search";
 
-function getComponent(spy = () => {}, props: Partial<SelectProps> = {}) {
+const options = new Array(5)
+  .fill(1)
+  .map((_x, i) => (
+    <Option key={i + 1} value={`option-${i + 1}`} label="I am an option" />
+  ));
+
+const noop = () => {};
+
+function getComponent(spy = noop, props: Partial<SingleSelectProps> = {}) {
   return (
     <Select
       onChange={spy}
@@ -17,9 +25,18 @@ function getComponent(spy = () => {}, props: Partial<SelectProps> = {}) {
       selected={"option-2"}
       {...props}
     >
-      {new Array(5).fill(1).map((_x, i) => (
-        <Option key={i + 1} value={`option-${i + 1}`} label="I am an option" />
-      ))}
+      {options}
+    </Select>
+  );
+}
+
+function getMultiSelectComponent(
+  spy = noop,
+  props: Partial<MultiSelectProps> = {}
+) {
+  return (
+    <Select onChange={spy} placeholder="Choose Option" multiSelect {...props}>
+      {options}
     </Select>
   );
 }
@@ -33,7 +50,7 @@ describe("Component: Select", () => {
 
   test("multi-select: snapshot", () => {
     const select = renderer.create(
-      getComponent(undefined, {
+      getMultiSelectComponent(undefined, {
         multiSelect: true,
         selected: []
       })
@@ -42,11 +59,15 @@ describe("Component: Select", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test("sinle-select with searchbox: snapshot", () => {
+  test("single-select with searchbox: snapshot", () => {
     const select = renderer.create(
       getComponent(undefined, {
         searchBox: true,
-        searchBoxPlaceholder: "Search"
+        searchBoxProps: {
+          placeholder: "Search",
+          onChange: () => {},
+          value: ""
+        }
       })
     );
     const tree = select.toJSON();
@@ -81,7 +102,7 @@ describe("Component: Select", () => {
     const applySpy = sinon.spy();
     const clearSpy = sinon.spy();
     const select = mount(
-      getComponent(spy, {
+      getMultiSelectComponent(spy, {
         multiSelect: true,
         onApply: applySpy,
         onClear: clearSpy,
@@ -143,14 +164,18 @@ describe("Component: Select", () => {
     expect(select.find(Option)).toHaveLength(0);
   });
 
-  test("single select: should trigger onChange with correct onChange", () => {
+  test("single select: query change triggers onChange", () => {
     const spy = sinon.spy();
     const queryChangeSpy = sinon.spy();
+
     const select = mount(
       getComponent(spy, {
         searchBox: true,
-        searchBoxPlaceholder: "Search",
-        onSearchBoxQueryChange: queryChangeSpy
+        searchBoxProps: {
+          placeholder: "Search",
+          onChange: queryChangeSpy,
+          value: ""
+        }
       })
     );
     select.find(Input).simulate("click");
@@ -165,4 +190,64 @@ describe("Component: Select", () => {
 
     expect(queryChangeSpy.calledWith("hello")).toBeTruthy();
   });
+
+  test("single select: clearing query triggers onChange", () => {
+    const spy = sinon.spy();
+    const clearQuerySpy = sinon.spy();
+    const select = mount(
+      getComponent(spy, {
+        searchBox: true,
+        searchBoxProps: {
+          placeholder: "Search",
+          onChange: clearQuerySpy,
+          value: "hello"
+        }
+      })
+    );
+    select.find(Input).simulate("click");
+
+    select
+      .find(Search)
+      .find(".pi-close")
+      .simulate("click");
+    expect(clearQuerySpy.calledWith("")).toBeTruthy();
+  });
+
+  test("single select: onDropdownToggle is triggered correctly", () => {
+    const spy = sinon.spy();
+    const toggleSpy = sinon.spy();
+
+    const select = mount(
+      getComponent(spy, {
+        searchBox: true,
+        onDropdownToggle: toggleSpy
+      })
+    );
+
+    expect(select.find(Option)).toHaveLength(0);
+
+    select.find(Input).simulate("click");
+    expect(select.find(Option)).toHaveLength(5);
+    expect(toggleSpy.calledWith(false)).toBeTruthy();
+
+    select.find(Input).simulate("click");
+    expect(toggleSpy.calledWith(true)).toBeTruthy();
+  });
+});
+
+test("should not open if disabled when input is clicked", () => {
+  const spy = sinon.spy();
+  const toggleSpy = sinon.spy();
+
+  const select = mount(
+    getComponent(spy, {
+      searchBox: true,
+      onDropdownToggle: toggleSpy
+    })
+  );
+
+  expect(select.find(Option)).toHaveLength(0);
+
+  select.find(Input).simulate("click");
+  expect(toggleSpy.calledWith(false)).toBeTruthy();
 });

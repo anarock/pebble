@@ -7,5 +7,6 @@ export interface OptionProps
   isActive?: boolean;
   isSelected?: boolean;
   multiSelect?: boolean;
-  rightElement?: (props: OptionProps) => React.ReactNode;
+  labelClassName?: string;
+  rightElement: (props: OptionProps) => React.ReactNode;
 }
