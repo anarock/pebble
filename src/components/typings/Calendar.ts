@@ -9,7 +9,7 @@ export type CalendarValue = Date[] | Date;
 
 interface QuickDates {
   label: string;
-  valueExtractor: () => CalendarValue;
+  dateRange: () => CalendarValue;
 }
 
 export interface CalendarProps extends CP {
@@ -23,8 +23,10 @@ export interface CalendarProps extends CP {
   tileDots: TileDot[];
   disabledDays?: Array<number | Date>;
   quickDates: boolean;
-  quickDateOptions?: QuickDates[];
-  customDateInputLabel?: (toggle: () => void, isOpen: boolean) => JSX.Element;
+  quickDateOptions: QuickDates[];
+  customDateInputLabel?: (
+    args: { toggle: () => void; isOpen: boolean }
+  ) => JSX.Element;
 }
 
 export interface CalendarState {

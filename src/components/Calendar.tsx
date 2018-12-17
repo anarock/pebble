@@ -20,7 +20,13 @@ import {
   customSelected
 } from "./styles/Calendar.styles";
 import Button from "./Button";
-import { isSameDay, endOfDay, startOfDay } from "date-fns";
+import {
+  isSameDay,
+  endOfDay,
+  startOfDay,
+  endOfYesterday,
+  startOfYesterday
+} from "date-fns";
 import Popper from "./Popper";
 import { mixins } from "../theme";
 
@@ -33,14 +39,11 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     quickDateOptions: [
       {
         label: "Yesterday",
-        valueExtractor: () => {
-          const date = new Date().setDate(new Date().getDate() - 1);
-          return [startOfDay(date), endOfDay(date)];
-        }
+        dateRange: () => [startOfYesterday(), endOfYesterday()]
       },
       {
         label: "Past Week",
-        valueExtractor: () => {
+        dateRange: () => {
           const startDate = new Date().setDate(new Date().getDate() - 7);
           const endDate = new Date().setDate(new Date().getDate() - 1);
           return [startOfDay(startDate), endOfDay(endDate)];
@@ -104,7 +107,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     );
   };
 
-  private getCalendar = () => {
+  private getCalendar = (toggle?: () => void) => {
     const {
       range,
       selected,
@@ -159,6 +162,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
             {onApply && (
               <Button
                 onClick={() => {
+                  if (toggle) toggle();
                   range && this.state.singleSelectedDate
                     ? onApply(this.state.singleSelectedDate)
                     : onApply(this.state.value);
@@ -186,7 +190,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         <Popper
           label={({ toggle, isOpen }) => {
             if (customDateInputLabel) {
-              return customDateInputLabel(toggle, isOpen);
+              return customDateInputLabel({ toggle, isOpen });
             }
             return (
               <div onClick={toggle} className={css({ cursor: "pointer" })}>
@@ -200,22 +204,21 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
             return (
               <>
                 <div className={css({ ...mixins.flexSpaceBetween })}>
-                  {quickDateOptions &&
-                    quickDateOptions.map((date, i) => {
-                      return (
-                        <div
-                          key={i}
-                          onClick={() => {
-                            toggle();
-                            onApply(date.valueExtractor());
-                            this.setState({ isCustomSelected: false });
-                          }}
-                          className={quickDateTags}
-                        >
-                          {date.label}
-                        </div>
-                      );
-                    })}
+                  {quickDateOptions.map((date, i) => {
+                    return (
+                      <div
+                        key={i}
+                        onClick={() => {
+                          toggle();
+                          onApply(date.dateRange());
+                          this.setState({ isCustomSelected: false });
+                        }}
+                        className={quickDateTags}
+                      >
+                        {date.label}
+                      </div>
+                    );
+                  })}
                   <div
                     className={cx(quickDateTags, {
                       [customSelected]: isCustomSelected
@@ -234,15 +237,14 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
                     />
                   </div>
                 </div>
-                {isCustomSelected && this.getCalendar()}
+                {isCustomSelected && this.getCalendar(toggle)}
               </>
             );
           }}
         </Popper>
       );
-    } else {
-      return this.getCalendar();
     }
+    return this.getCalendar();
   }
 }
 
