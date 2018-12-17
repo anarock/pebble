@@ -5,7 +5,9 @@ import OptionGroup from "./shared/OptionGroup";
 import { OptionGroupCheckBoxProps } from "./typings/OptionGroupCheckBox";
 import * as styles from "../components/styles/OptionGroupCheckBox.styles";
 
-const OptionGroupCheckBox: React.SFC<OptionGroupCheckBoxProps> = props => {
+const OptionGroupCheckBox: React.FunctionComponent<
+  OptionGroupCheckBoxProps
+> = props => {
   const { onApply, onClear, selected = [], onChange, ...rest } = props;
   return (
     <div className={styles.optionGroupCheckBoxWrap}>

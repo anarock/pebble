@@ -11,7 +11,7 @@ const style = css({
   backgroundColor: colors.white.base
 });
 
-storiesOf("Modal", module).add("simple", () => (
+storiesOf("Components/Modal", module).add("simple", () => (
   <Modal visible={boolean("Visible", false)}>
     <div className={style} />
   </Modal>

@@ -16,7 +16,6 @@ Make sure the below code is executed at the very beginning.
 The easier way is to use the cdn:
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@anarock/pebble@[version]/dist/pebble.css"/>
 ```
 

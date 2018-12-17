@@ -27,6 +27,7 @@ import OptionGroupRadio from "./OptionGroupRadio";
 import OptionGroupCheckBox from "./OptionGroupCheckBox";
 import OutsideClick from "./OutsideClick";
 import PhoneNumberInput from "./PhoneNumberInput";
+import TimePicker from "./TimePicker";
 
 export {
   Button,
@@ -41,6 +42,7 @@ export {
   Slider,
   Stepper,
   Tag,
+  TimePicker,
   Toast,
   TypeAhead,
   SideBar,

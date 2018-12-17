@@ -21,6 +21,7 @@ interface CommonSelectProps {
   inputProps?: Omit<InputProps, "onChange" | "value" | "placeholder">;
   fullWidthDropdown?: boolean;
   onDropdownToggle?: (isOpen: boolean) => void;
+  disabled?: boolean;
 }
 
 export interface SingleSelectProps extends CommonSelectProps {

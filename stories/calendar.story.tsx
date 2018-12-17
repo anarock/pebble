@@ -18,7 +18,7 @@ interface State {
   selected?: Date[] | Date;
 }
 
-storiesOf("Calendar", module)
+storiesOf("Components/Calendar", module)
   .add("Default", () => (
     <Calendar
       quickDates={boolean("quickDates", true)}
