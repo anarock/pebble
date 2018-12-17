@@ -28,7 +28,8 @@ const Select: React.SFC<SelectProps> = props => {
     dropdownClassName,
     inputProps,
     fullWidthDropdown,
-    onDropdownToggle = noop
+    onDropdownToggle = noop,
+    disabled
   } = props;
 
   return (
@@ -49,10 +50,14 @@ const Select: React.SFC<SelectProps> = props => {
           return (
             <div
               className={inputWrapper}
-              onClick={() => {
-                toggleDropdown();
-                onDropdownToggle(isOpen);
-              }}
+              onClick={
+                disabled
+                  ? undefined
+                  : () => {
+                      toggleDropdown();
+                      onDropdownToggle(isOpen);
+                    }
+              }
             >
               <Input
                 className={selectInputWrapper}
@@ -64,6 +69,7 @@ const Select: React.SFC<SelectProps> = props => {
                 message={isOpen ? " " : ""}
                 errorMessage={errorMessage}
                 readOnly
+                disabled={disabled}
                 {...inputProps}
               />
               <i className={chevron} />
