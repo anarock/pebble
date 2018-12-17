@@ -5,7 +5,7 @@ import { colors } from "../theme";
 import { controlViewStyle, iconStyle } from "./styles/Controls.styles";
 import { messageStyle } from "./styles/Input.styles";
 
-const ControlView: React.SFC<ControlViewProps> = ({
+const ControlView: React.FunctionComponent<ControlViewProps> = ({
   label,
   type,
   isSelected,

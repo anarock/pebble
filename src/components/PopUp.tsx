@@ -9,7 +9,7 @@ import {
 } from "./styles/PopUp.styles";
 import { PopUpProps } from "./typings/PopUp";
 
-const PopUp: React.SFC<PopUpProps> = props => {
+const PopUp: React.FunctionComponent<PopUpProps> = props => {
   const {
     onClose,
     onApprove,

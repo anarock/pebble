@@ -12,7 +12,7 @@ function overrideRheostatStyles() {
   rheostatStylesOverriden = true;
 }
 
-const Slider: React.SFC<SliderProps> = ({
+const Slider: React.FunctionComponent<SliderProps> = ({
   className,
   large,
   title,

@@ -16,7 +16,7 @@ import { TimePickerProps } from "./typings/TimePicker";
 const HOURS = [...Array(12)].map((_, i) => i + 1);
 const MINUTES = [...Array(4)].map((_, i) => i * 15);
 
-const TimePicker: React.SFC<TimePickerProps> = props => {
+const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
   const { selectedHour, selectedMinute, onHourChange, onMinuteChange } = props;
   const selected = !!selectedHour || selectedMinute !== undefined;
 

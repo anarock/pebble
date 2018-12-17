@@ -6,7 +6,7 @@ import { cx } from "emotion";
 
 const renderProps = (props: ControlProps) => <ControlView {...props} />;
 
-const Control: React.SFC<ControlProps> = props => {
+const Control: React.FunctionComponent<ControlProps> = props => {
   const {
     checked,
     onChange,
@@ -36,7 +36,7 @@ const Control: React.SFC<ControlProps> = props => {
   );
 };
 
-export const ControlView: React.SFC<ControlProps> = ({
+export const ControlView: React.FunctionComponent<ControlProps> = ({
   checked,
   label,
   type
