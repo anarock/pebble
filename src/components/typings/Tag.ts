@@ -1,4 +1,5 @@
-import { colors } from "../../theme";
+import { Colors } from "../../theme/typings/colors";
+
 import { SetDifference } from "utility-types";
 
 export interface TagProps {

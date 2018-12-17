@@ -3,7 +3,6 @@ import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 import SideBar from "../Sidebar";
 import sinon from "sinon";
-import combos from "combos";
 
 function noop() {}
 
@@ -51,6 +50,6 @@ describe("Sidebar func tests", () => {
       .find(".pi.pi-close")
       .at(0)
       .simulate("click");
-    expect(spy.calledOnce);
+    expect(spy.calledOnce).toBeTruthy();
   });
 });

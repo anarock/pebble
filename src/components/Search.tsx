@@ -18,6 +18,7 @@ class Search extends React.PureComponent<SearchProps> {
   render() {
     const {
       type,
+      inputProps,
       onChange,
       placeholder,
       showSearchIcon,
@@ -45,6 +46,7 @@ class Search extends React.PureComponent<SearchProps> {
           }}
           ref={this.searchInputRef}
           value={value}
+          {...inputProps}
         />
         {clearable && (
           <div

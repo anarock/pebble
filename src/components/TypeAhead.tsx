@@ -17,7 +17,7 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
         placeholder={props.placeholder}
         inputProps={{
           onFocus,
-          onKeyDown: e => {
+          onKeyDown: (e: React.KeyboardEvent) => {
             if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
             if (e.keyCode === 8 && props.selected) {
               // keyCode for delete

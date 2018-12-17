@@ -18,7 +18,7 @@ interface CommonSelectProps {
   searchBox?: boolean;
   searchBoxProps?: Omit<SearchProps, "type">;
   dropdownClassName?: string;
-  inputProps?: Partial<InputProps>;
+  inputProps?: Omit<InputProps, "onChange" | "value" | "placeholder">;
   fullWidthDropdown?: boolean;
   onDropdownToggle?: (isOpen: boolean) => void;
 }

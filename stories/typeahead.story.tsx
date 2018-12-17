@@ -11,7 +11,7 @@ interface State {
   selected?: number;
 }
 
-storiesOf("Typeahead", module).add(
+storiesOf("Components/Typeahead", module).add(
   "simple",
   withState<State>({ selected: undefined })(({ store }) => (
     <TypeAhead

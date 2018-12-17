@@ -17,7 +17,7 @@ interface DateInputStoryState {
   value?: number;
 }
 
-storiesOf("Input", module)
+storiesOf("Components/Input", module)
   .add(
     "Material",
     withState({ value: "" })(({ store }) => (
@@ -34,7 +34,26 @@ storiesOf("Input", module)
         message={text("message", "Info Message")}
         errorMessage={text("errorMessage", "Error Message")}
         successMessage={text("successMessage", "Success Message")}
-        textArea={boolean("textArea", false)}
+        loading={boolean("loading", false)}
+      />
+    ))
+  )
+  .add(
+    "TextArea",
+    withState({ value: "" })(({ store }) => (
+      <Input
+        textArea
+        className={className}
+        onChange={value => store.set({ value })}
+        placeholder={text("placeholder", "Name")}
+        fixLabelAtTop={boolean("fixLabelAtTop", false)}
+        required={boolean("required", false)}
+        value={store.state.value}
+        readOnly={boolean("readOnly", false)}
+        disabled={boolean("disabled", false)}
+        message={text("message", "Info Message")}
+        errorMessage={text("errorMessage", "Error Message")}
+        successMessage={text("successMessage", "Success Message")}
         loading={boolean("loading", false)}
       />
     ))

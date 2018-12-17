@@ -10,7 +10,7 @@ const fontSize = {
   xll: 22
 };
 
-enum FontWeight {
+const enum FontWeight {
   NORMAL = 400,
   BOLD = 500
 }
