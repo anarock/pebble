@@ -7,6 +7,7 @@ import pkg from "./package.json";
 import babel from "rollup-plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import cleanup from "rollup-plugin-cleanup";
+import replace from "rollup-plugin-replace";
 
 const input = "compiled/index.js";
 const external = ["react", "react-calendar/dist/entry.nostyle"];
@@ -35,6 +36,11 @@ function getPlugins({ targets, dev }) {
     }),
     resolve({
       extensions: [".js", ".jsx", ".json"]
+    }),
+    replace({
+      "process.env.NODE_ENV": dev
+        ? JSON.stringify("development")
+        : JSON.stringify("production")
     }),
     commonjs(),
     cleanup({
@@ -80,7 +86,7 @@ export default [
         sourcemap: true
       }
     ],
-    plugins: plugins({
+    plugins: getPlugins({
       dev: true,
       targets: { node: "10" }
     })

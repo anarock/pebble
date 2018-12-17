@@ -22,6 +22,11 @@ The easier way is to use the cdn:
 :boom: Warning: Pebble adds `box-sizing: border-box` by default to every element by using [`inherit`](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
 If you have some elements whose children which need default box-sizing you can reset it's box-sizing to `content-box`
 
+## Tree Shaking
+
+Pebble is fully tree shakeable with this [rollup config](/tests/build/treeShaking.test.js) present in tests.
+//TODO Create config and tests for webpack as well.
+
 ### Polyfill
 
 Pebble intends to have a very small footprint while maintaining performance.

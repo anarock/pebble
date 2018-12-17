@@ -1,6 +1,8 @@
 const path = require("path");
 const { rollup } = require("rollup");
 const terser = require("rollup-plugin-terser").terser;
+const replace = require("rollup-plugin-replace");
+const commonjs = require("rollup-plugin-commonjs");
 
 const pkg = require("../../package.json");
 
@@ -14,6 +16,10 @@ async function compress() {
       pureExternalModules: true
     },
     plugins: [
+      replace({
+        "process.env.NODE_ENV": JSON.stringify("production")
+      }),
+      commonjs(),
       terser({
         toplevel: true,
         mangle: false,
