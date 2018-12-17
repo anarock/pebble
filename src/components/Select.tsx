@@ -18,7 +18,7 @@ import OptionGroupRadio from "./OptionGroupRadio";
 
 function noop() {}
 
-const Select: React.SFC<SelectProps> = props => {
+const Select: React.FunctionComponent<SelectProps> = props => {
   const {
     className,
     placeholder,
