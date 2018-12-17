@@ -5,7 +5,7 @@ import { withState } from "@dump247/storybook-state";
 import { boolean } from "@storybook/addon-knobs";
 import { css } from "emotion";
 
-storiesOf("Option", module).add(
+storiesOf("Components/Option", module).add(
   "Default",
   withState({ checked: false })(({ store }) => (
     <div style={{ width: 200 }}>

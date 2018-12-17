@@ -9,7 +9,7 @@ const _colors = Object.keys(colors).filter(x => "white" !== x) as Array<
   TagProps["color"]
 >;
 
-storiesOf("Tag", module)
+storiesOf("Components/Tag", module)
   .add("simple", () => (
     <Tag
       label={text("Tag", "Anarock Tag")}

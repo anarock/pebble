@@ -13,7 +13,7 @@ interface State {
   phone: string;
 }
 
-storiesOf("PhoneNumberInput", module).add(
+storiesOf("Components/PhoneNumberInput", module).add(
   "Material",
   withState<State>({ countryCode: "+91", phone: "" })(({ store }) => (
     <PhoneNumberInput

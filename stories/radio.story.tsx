@@ -4,7 +4,7 @@ import { Radio } from "../src";
 import { withState } from "@dump247/storybook-state";
 import { boolean } from "@storybook/addon-knobs";
 
-storiesOf("Radio", module).add(
+storiesOf("Components/Radio", module).add(
   "Default",
   withState({ checked: false })(({ store }) => (
     <Radio

@@ -17,7 +17,7 @@ interface DateInputStoryState {
   value?: number;
 }
 
-storiesOf("Input", module)
+storiesOf("Components/Input", module)
   .add(
     "Material",
     withState({ value: "" })(({ store }) => (

@@ -20,7 +20,7 @@ interface State {
   multiSelected?: string[] | number[];
 }
 
-storiesOf("Select", module)
+storiesOf("Components/Select", module)
   .add(
     "Single Select",
     withState<State>({ searchQuery: "", selected: "", value: "" })(

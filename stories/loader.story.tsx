@@ -3,6 +3,6 @@ import { storiesOf } from "@storybook/react";
 import { color, number } from "@storybook/addon-knobs";
 import Loader from "../src/components/Loader";
 
-storiesOf("Loader", module).add("test", () => (
+storiesOf("Components/Loader", module).add("test", () => (
   <Loader color={color("color", "#000")} scale={number("scale", 1)} />
 ));

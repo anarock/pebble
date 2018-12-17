@@ -12,7 +12,7 @@ interface State {
   query: string;
 }
 
-storiesOf("Search", module).add(
+storiesOf("Components/Search", module).add(
   "Default",
   withState<State>({ query: "" })(({ store }) => (
     <Search
