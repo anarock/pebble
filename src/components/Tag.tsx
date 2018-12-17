@@ -1,6 +1,6 @@
 import * as React from "react";
 import { colors } from "../theme";
-import { tagStyle } from "./styles/Tag.styles";
+import { tagStyle, iconClass } from "./styles/Tag.styles";
 import { TagProps } from "./typings/Tag";
 import { cx } from "emotion";
 import Ink from "react-ink";
@@ -21,7 +21,7 @@ const Tag: React.SFC<TagProps> = ({ label, color, onClose, className }) => {
     >
       {label}{" "}
       {onClose && (
-        <i onClick={onClose} className="pi pi-close">
+        <i onClick={onClose} className={cx("pi", "pi-close", iconClass)}>
           <Ink />
         </i>
       )}
