@@ -85,10 +85,6 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   background-color: #ffffff;
 }
 
-.emotion-0[type='date'] {
-  -webkit-appearance: textfield;
-}
-
 .emotion-0[type='date']::-webkit-inner-spin-button,
 .emotion-0[type='date']::-webkit-calendar-picker-indicator {
   webkit-appearance: none;
@@ -277,10 +273,6 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   background-color: #ffffff;
 }
 
-.emotion-0[type='date'] {
-  -webkit-appearance: textfield;
-}
-
 .emotion-0[type='date']::-webkit-inner-spin-button,
 .emotion-0[type='date']::-webkit-calendar-picker-indicator {
   webkit-appearance: none;
@@ -467,10 +459,6 @@ exports[`Component: Select single-select: snapshot 1`] = `
 
 .emotion-0:disabled {
   background-color: #ffffff;
-}
-
-.emotion-0[type='date'] {
-  -webkit-appearance: textfield;
 }
 
 .emotion-0[type='date']::-webkit-inner-spin-button,

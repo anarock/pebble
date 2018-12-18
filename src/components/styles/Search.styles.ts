@@ -39,7 +39,7 @@ export const searchStyle = css({
   flexGrow: 1,
   ...mixins.textEllipsis,
   ...typography.s.regular,
-  ...getPlaceholderStyle(colors.gray.base),
+  .../*#__PURE__*/ getPlaceholderStyle(colors.gray.base),
   backgroundColor: "transparent"
 });
 

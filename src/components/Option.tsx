@@ -35,12 +35,17 @@ class Option extends React.Component<OptionProps> {
       isActive,
       isSelected,
       rightElement,
-      labelClassName
+      labelClassName,
+      className
     } = this.props;
-    const _class = cx(rowWrapper, {
-      [activeRow]: isActive,
-      [selectedRow]: isSelected
-    });
+    const _class = cx(
+      rowWrapper,
+      {
+        [activeRow]: isActive,
+        [selectedRow]: isSelected
+      },
+      className
+    );
     return (
       <Control
         {...this.props}

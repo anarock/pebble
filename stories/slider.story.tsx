@@ -13,7 +13,7 @@ interface State {
   value: [number, number];
 }
 
-storiesOf("Slider", module).add(
+storiesOf("Components/Slider", module).add(
   "simple",
   withState<State>({ value: [10, 20] })(({ store }) => (
     <Slider

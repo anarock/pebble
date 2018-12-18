@@ -20,7 +20,7 @@ interface State {
   multiSelected?: string[] | number[];
 }
 
-storiesOf("Select", module)
+storiesOf("Components/Select", module)
   .add(
     "Single Select",
     withState<State>({ searchQuery: "", selected: "", value: "" })(
@@ -53,6 +53,7 @@ storiesOf("Select", module)
               },
               value: store.state.searchQuery
             }}
+            disabled={boolean("disabled", false)}
           >
             {options
               .filter(option => {

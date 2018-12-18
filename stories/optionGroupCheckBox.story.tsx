@@ -5,7 +5,7 @@ import OptionGroupCheckBox from "../src/components/OptionGroupCheckBox";
 import Option from "../src/components/Option";
 import * as React from "react";
 
-storiesOf("OptionGroupCheckBox", module).add(
+storiesOf("Components/OptionGroupCheckBox", module).add(
   "with Searchbox",
   withState({
     value: ["option-2"],

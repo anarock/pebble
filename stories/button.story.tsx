@@ -8,7 +8,7 @@ import { ButtonType, ButtonProps } from "../src/components/typings/Button";
 const t = ["primary", "secondary", "link", "success", "alert"] as ButtonType[];
 const size = ["x-small", "small", "large"];
 
-storiesOf("Button", module).add("Playground", () => (
+storiesOf("Components/Button", module).add("Playground", () => (
   <Button
     size={select("size", size, "small") as ButtonProps["size"]}
     disabled={boolean("Disabled", false)}

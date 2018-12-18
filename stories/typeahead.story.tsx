@@ -12,7 +12,7 @@ interface State {
   value: string;
 }
 
-storiesOf("Typeahead", module).add(
+storiesOf("Components/Typeahead", module).add(
   "simple",
   withState<State>({ selected: undefined, value: "" })(({ store }) => (
     <>

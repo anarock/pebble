@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { Checkbox } from "../src";
 import { withState } from "@dump247/storybook-state";
 
-storiesOf("Checkbox", module).add(
+storiesOf("Components/Checkbox", module).add(
   "Default",
   withState({ checked: false })(({ store }) => (
     <Checkbox

@@ -2,7 +2,10 @@ import * as React from "react";
 import { css } from "emotion";
 import { LogoProps } from "./typings/Logo";
 
-const Logo: React.SFC<LogoProps> = ({ height = 40, color = "#000000" }) => {
+const Logo: React.FunctionComponent<LogoProps> = ({
+  height = 40,
+  color = "#000000"
+}) => {
   const style = css({
     fill: color
   });
