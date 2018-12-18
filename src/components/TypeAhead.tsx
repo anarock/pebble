@@ -13,12 +13,6 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
     onClear: () => {},
     searchBox: ({ registerChange, onFocus }, props) => (
       <Input
-        onChange={value => {
-          if (props.inputProps && props.inputProps.onChange) {
-            props.inputProps.onChange(value);
-          }
-          registerChange(value);
-        }}
         placeholder={props.placeholder}
         value={(props.inputProps && props.inputProps.value) || ""}
         errorMessage={props.errorMessage}
@@ -26,6 +20,12 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
         required={props.required}
         disabled={props.disabled}
         {...props.inputProps}
+        onChange={(value: string) => {
+          if (props.inputProps && props.inputProps.onChange) {
+            props.inputProps.onChange(value);
+          }
+          registerChange(value);
+        }}
         inputProps={{
           ...(props.inputProps && props.inputProps.inputProps),
           onFocus,
@@ -48,18 +48,10 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
   state: TypeaheadState = {
     showSuggestions: false
   };
-  /*
-  private onChange = (value: string) => {
+
+  private registerChange = debounce((value: string) => {
     this.props.onChange(value, this.props);
-  }; */
-
-  private debouncedChange = (value: string) =>
-    debounce(
-      () => this.props.onChange(value, this.props),
-      this.props.debounceTime
-    );
-
-  private registerChange = (value: string) => this.debouncedChange(value)();
+  }, this.props.debounceTime);
 
   private onFocus = () => {
     this.setState({

@@ -6,6 +6,7 @@ import { css } from "emotion";
 import Option from "../src/components/Option";
 import { withState } from "@dump247/storybook-state";
 import { boolean } from "@storybook/addon-knobs";
+import { Button } from "../src";
 
 interface State {
   selected?: number;
@@ -31,7 +32,7 @@ storiesOf("Components/Typeahead", module).add(
             action("inputProps.onChange")();
           }
         }}
-        onSelect={val => {
+        onSelect={(val: number) => {
           action("onSelect")(val);
           store.set({ selected: val as number });
         }}
@@ -51,14 +52,15 @@ storiesOf("Components/Typeahead", module).add(
           />
         ))}
       </TypeAhead>
-      <div
+      <Button
+        type="link"
         onClick={() => {
           action("clear")();
           store.set({ selected: undefined, value: "" });
         }}
       >
         CLEAR
-      </div>
+      </Button>
     </>
   ))
 );

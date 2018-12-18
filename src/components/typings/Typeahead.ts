@@ -1,5 +1,5 @@
 import * as React from "react";
-import { InputProps } from "./Input";
+import { SimpleInputProps } from "./Input";
 
 type FocusEvent = (
   event: React.KeyboardEvent<HTMLInputElement> | React.FocusEvent<HTMLElement>
@@ -28,7 +28,7 @@ export interface TypeaheadProps {
   children: React.ReactNodeArray;
   valueExtractor: (value: string | number) => void;
   onClear: () => void;
-  inputProps: Partial<InputProps>;
+  inputProps: Partial<SimpleInputProps>;
 }
 
 export interface TypeaheadState {

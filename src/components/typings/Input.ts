@@ -17,7 +17,7 @@ interface CommonInputProps {
   successMessage?: string;
 }
 
-interface SimpleInputProps extends CommonInputProps {
+export interface SimpleInputProps extends CommonInputProps {
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
   textArea?: false;
   type?: "text" | "date" | "password" | "number" | "email";
