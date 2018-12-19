@@ -6,6 +6,6 @@ import Toast from "../src/components/Toast";
 storiesOf("Components/Toast", module).add("Default", () => (
   <React.Fragment>
     <Button onClick={() => Toast.show("hello", "success")}>Show Toast</Button>
-    <Toast />
+    <Toast time={10000} />
   </React.Fragment>
 ));
