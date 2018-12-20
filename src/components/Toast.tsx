@@ -61,7 +61,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
         this.setState({
           show: false
         }),
-      time ? time : 2000
+      time ? time : 5000
     );
   };
 

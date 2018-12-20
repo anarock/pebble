@@ -17,7 +17,7 @@ describe("Component: Toast", () => {
       type: "success"
     });
 
-    clock.tick(2000);
+    clock.tick(5000);
     expect(toast.state("show")).toBeFalsy();
   });
 
