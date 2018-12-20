@@ -50,6 +50,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
       type,
       show: true
     });
+    const { time } = this.props;
 
     if (this.showTimer) {
       clearTimeout(this.showTimer);
@@ -61,7 +62,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
         this.setState({
           show: false
         }),
-      2000
+      time ? time : 5000
     );
   };
 
