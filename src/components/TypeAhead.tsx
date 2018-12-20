@@ -6,7 +6,7 @@ import Input from "./Input";
 import { optionsWrapper, wrapper } from "./styles/TypeAhead.styles";
 import OutsideClick from "./OutsideClick";
 import OptionGroupRadio from "./OptionGroupRadio";
-import { Transition } from "react-spring";
+import { Transition, animated } from "react-spring";
 import { animationConfig } from "../utils/animation";
 
 class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
@@ -96,18 +96,18 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
           this.props
         )}
 
-        <Transition items={showSuggestions} {...animationConfig}>
+        <Transition items={showSuggestions} {...animationConfig} native>
           {show =>
             show &&
             (styles => (
-              <div
+              <animated.div
                 style={styles}
                 className={cx(optionsWrapper, dropdownClassName)}
               >
                 <OptionGroupRadio onChange={this.onSelect}>
                   {children}
                 </OptionGroupRadio>
-              </div>
+              </animated.div>
             ))
           }
         </Transition>
