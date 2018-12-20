@@ -4,8 +4,8 @@ import { DropDownButton } from "./Button";
 import { dropDownStyle } from "./styles/Dropdown.styles";
 import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
-import { Transition, animated } from "react-spring";
-import { animationConfig } from "../utils/animation";
+import { animated } from "react-spring";
+import MountTransition from "./shared/MountTransition";
 
 class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
   state: DropdownState = {
@@ -61,19 +61,16 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
               {buttonLabel}
             </DropDownButton>
           )}
-          <Transition items={isOpen} {...animationConfig} native>
-            {show =>
-              show &&
-              (styles => (
-                <animated.div
-                  className={cx(dropDownStyle, dropDownClassName)}
-                  style={{ padding, ...(styles as React.CSSProperties) }}
-                >
-                  {children({ toggle: this.toggleDropdown, isOpen })}
-                </animated.div>
-              ))
-            }
-          </Transition>
+          <MountTransition visible={isOpen} native>
+            {transitionStyles => (
+              <animated.div
+                className={cx(dropDownStyle, dropDownClassName)}
+                style={{ padding, ...transitionStyles }}
+              >
+                {children({ toggle: this.toggleDropdown, isOpen })}
+              </animated.div>
+            )}
+          </MountTransition>
         </div>
       </OutsideClick>
     );

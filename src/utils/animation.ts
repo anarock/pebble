@@ -6,6 +6,6 @@ export const animationConfig = {
   leave: { opacity: 0, transform: "scale(0.95)", pointerEvents: "none" },
   config: ((_a: string, motion: State) =>
     motion === "leave" ? { duration: 50 } : config.stiff) as (
-    a: string
+    key: string
   ) => SpringConfig
 };

@@ -4,8 +4,7 @@ import { modalContainer } from "./styles/Modal.styles";
 import { cx } from "emotion";
 import isBrowser from "is-in-browser";
 import * as ReactDOM from "react-dom";
-import { Transition } from "react-spring";
-import { animationConfig } from "../utils/animation";
+import MountTransition from "./shared/MountTransition";
 
 class Modal extends React.PureComponent<ModalProps> {
   node: HTMLDivElement;
@@ -39,23 +38,22 @@ class Modal extends React.PureComponent<ModalProps> {
     }
 
     return ReactDOM.createPortal(
-      <Transition items={visible} {...animationConfig}>
-        {show =>
-          show &&
-          (styles => (
+      <MountTransition visible={visible}>
+        {transitionStyles => (
+          <div
+            style={{
+              opacity: transitionStyles.opacity
+            }}
+            className={cx(modalContainer, "ReactPortal", className)}
+          >
             <div
-              style={{
-                opacity: styles.opacity
-              }}
-              className={cx(modalContainer, "ReactPortal", className)}
+              style={{ transform: transitionStyles.transform, display: "flex" }}
             >
-              <div style={{ transform: styles.transform, display: "flex" }}>
-                {children}
-              </div>
+              {children}
             </div>
-          ))
-        }
-      </Transition>,
+          </div>
+        )}
+      </MountTransition>,
       this.node
     );
   }

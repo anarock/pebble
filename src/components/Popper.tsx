@@ -5,8 +5,7 @@ import { arrowStyle, popperStyle } from "./styles/Popper.styles";
 import { colors } from "../theme";
 import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
-import { Transition } from "react-spring";
-import { animationConfig } from "../utils/animation";
+import MountTransition from "./shared/MountTransition";
 
 export default class extends React.PureComponent<PopperProps, PopperState> {
   static defaultProps: Partial<PopperProps> = {
@@ -58,24 +57,25 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
             )}
           </Reference>
 
-          <Transition items={_isPopperOpen} {...animationConfig}>
-            {show =>
-              show &&
-              (styles => (
-                <Popper {...props} positionFixed>
-                  {({ ref, style, placement, arrowProps }) => (
+          <MountTransition visible={_isPopperOpen}>
+            {transitionStyles => (
+              <Popper {...props} positionFixed>
+                {({ ref, style, placement, arrowProps }) => {
+                  const wrapperStyle = {
+                    ...style,
+                    ...transitionStyles,
+                    backgroundColor: popperBackgroundColor,
+                    transform: `${style.transform ||
+                      ""} ${transitionStyles.transform || ""}`,
+                    transformOrigin: `${arrowProps.style.left ||
+                      0}px ${arrowProps.style.top || 0}px`
+                  };
+
+                  return (
                     <div
                       className={cx(popperStyle, popperClassName)}
                       ref={ref}
-                      style={{
-                        ...style,
-                        backgroundColor: popperBackgroundColor,
-                        ...(styles as React.CSSProperties),
-                        transform: `${style.transform ||
-                          ""} ${styles.transform || ""}`,
-                        transformOrigin: `${arrowProps.style.left ||
-                          0}px ${arrowProps.style.top || 0}px`
-                      }}
+                      style={wrapperStyle}
                       data-placement={placement}
                     >
                       {children({
@@ -94,11 +94,11 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
                         ▶
                       </div>
                     </div>
-                  )}
-                </Popper>
-              ))
-            }
-          </Transition>
+                  );
+                }}
+              </Popper>
+            )}
+          </MountTransition>
         </Manager>
       </OutsideClick>
     );
