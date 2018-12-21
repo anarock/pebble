@@ -21,6 +21,7 @@
     "removeComments": false,
     "sourceMap": true,
     "strictNullChecks": true,
+    "strictFunctionTypes": true,
     "target": "ESNEXT",
     "typeRoots": ["./node_modules/@types", "./typings/npm"]
   },

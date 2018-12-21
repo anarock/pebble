@@ -120,24 +120,26 @@ class OptionGroup extends React.PureComponent<
     } = this.props;
     const { isScrolled, selected } = this.state;
 
-    const _children = React.Children.map(
-      children,
-      (option: React.ReactElement<OptionProps>, i) => {
-        let ref = this.optionsRefsSet.get(i);
-        if (!ref) {
-          ref = React.createRef<HTMLDivElement>();
-          this.optionsRefsSet.set(i, ref);
-        }
-        return React.cloneElement(option, {
-          onChange: handleChange,
-          isActive: selected === i,
-          isSelected: isSelected(option.props.value),
-          multiSelect,
-          // @ts-ignore
-          ref
-        });
+    const _children = React.Children.map(children, (_option, i) => {
+      // `_option as React.ReactElement<OptionProps>` is a hack
+      // Because React does not allow us to specify what sort of elements
+      // you can allow as children and leaves it on you to figure out
+      // all various types of children provided.
+      const option = _option as React.ReactElement<OptionProps>;
+      let ref = this.optionsRefsSet.get(i);
+      if (!ref) {
+        ref = React.createRef<HTMLDivElement>();
+        this.optionsRefsSet.set(i, ref);
       }
-    );
+      return React.cloneElement(option, {
+        onChange: handleChange,
+        isActive: selected === i,
+        isSelected: isSelected(option.props.value),
+        multiSelect,
+        // @ts-ignore
+        ref
+      });
+    });
 
     const searchBoxClassName = cx(searchBoxWrapper, {
       [searchBoxScrolledStyle]: isScrolled
