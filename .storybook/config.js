@@ -1,6 +1,8 @@
 import { configure } from "@storybook/react";
 import { setOptions } from "@storybook/addon-options";
 import "@storybook/addon-console";
+import "storybook-chromatic";
+
 setOptions({
   /**
    * name to display in the top left corner

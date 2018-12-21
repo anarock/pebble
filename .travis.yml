@@ -9,3 +9,9 @@ git:
 script:
   - yarn build
   - yarn test:cover
+  - if [ "${CIRCLE_BRANCH}" != "master" ];
+    then
+    yarn chromatic
+    else
+    yarn chromatic --auto-accept-changes
+    fi
