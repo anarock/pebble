@@ -5,9 +5,10 @@ import { withState } from "@dump247/storybook-state";
 import { cx } from "emotion";
 import {
   setWrap,
-  offButton,
+  leftButton,
   selectedButton,
-  onButton
+  rightButton,
+  middleButton
 } from "../src/components/__tests__/fixtures/radioSet.style";
 
 storiesOf("Components/RadioGroup", module).add(
@@ -52,7 +53,7 @@ storiesOf("Components/RadioGroup", module).add(
         {() => (
           <div
             className={cx({
-              [offButton]: true,
+              [leftButton]: true,
               [selectedButton]: store.state.value === "OFF"
             })}
           >
@@ -64,7 +65,7 @@ storiesOf("Components/RadioGroup", module).add(
         {() => (
           <div
             className={cx({
-              [onButton]: true,
+              [rightButton]: true,
               [selectedButton]: store.state.value === "ON"
             })}
           >
@@ -92,7 +93,7 @@ storiesOf("Components/RadioGroup", module).add(
         {() => (
           <div
             className={cx({
-              [offButton]: true,
+              [leftButton]: true,
               [selectedButton]: store.state.value === "C"
             })}
           >
@@ -104,7 +105,7 @@ storiesOf("Components/RadioGroup", module).add(
         {() => (
           <div
             className={cx({
-              [onButton]: true,
+              [middleButton]: true,
               [selectedButton]: store.state.value === "B"
             })}
           >
@@ -116,7 +117,7 @@ storiesOf("Components/RadioGroup", module).add(
         {() => (
           <div
             className={cx({
-              [onButton]: true,
+              [rightButton]: true,
               [selectedButton]: store.state.value === "A"
             })}
           >

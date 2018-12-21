@@ -6,15 +6,21 @@ export const setWrap = css({
   ...typography.s.regular
 });
 
-export const offButton = css({
+export const leftButton = css({
   border: `1px solid ${colors.gray.lighter}`,
   borderRadius: "3px 0px 0px 3px",
   padding: "10px 20px"
 });
 
-export const onButton = css({
+export const rightButton = css({
   border: `1px solid ${colors.gray.lighter}`,
   borderRadius: "0px 3px 3px 0px",
+  padding: "10px 20px"
+});
+
+export const middleButton = css({
+  borderTop: `1px solid ${colors.gray.lighter}`,
+  borderBottom: `1px solid ${colors.gray.lighter}`,
   padding: "10px 20px"
 });
 
