@@ -99,7 +99,7 @@ describe("Component: Select", () => {
     clock.tick(1000);
 
     // This means that Option is no more rendered in DOM.
-    expect(select).toNotHaveHtmlWithSelector("[data-test-id='optiongroup']");
+    expect(select).toNotBeInDOM("[data-test-id='optiongroup']");
   });
 
   test("multi select: should trigger onChange with correct onChange", () => {
@@ -169,7 +169,7 @@ describe("Component: Select", () => {
     clock.tick(1000);
 
     // ensure the dropdown is closed
-    expect(select).toNotHaveHtmlWithSelector("[data-test-id='optiongroup']");
+    expect(select).toNotBeInDOM("[data-test-id='optiongroup']");
   });
 
   test("single select: query change triggers onChange", () => {
