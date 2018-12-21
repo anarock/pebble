@@ -18,7 +18,7 @@ class OptionGroup extends React.PureComponent<
 > {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
   optionsRefsSet = new Map<number, React.RefObject<React.ReactInstance>>();
-  observer: IntersectionObserver;
+  observer?: IntersectionObserver;
 
   state = {
     selected: -1,
@@ -105,7 +105,9 @@ class OptionGroup extends React.PureComponent<
   }
 
   componentWillUnmount() {
-    this.observer.disconnect();
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   }
 
   render() {

@@ -1,8 +1,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "strict": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": true,
+    "alwaysStrict": true,
     "declaration": true,
     "declarationDir": "dist",
     "esModuleInterop": true,
@@ -13,7 +15,6 @@
     "lib": ["dom", "es2015", "es2016"],
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "compiled",
