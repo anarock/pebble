@@ -9,4 +9,5 @@ export interface ToastState {
   type: ToastType;
   text: string;
   show: boolean;
+  time?: number;
 }
