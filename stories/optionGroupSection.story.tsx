@@ -87,7 +87,7 @@ class GroupedOptionGroup<
       }
       const dataPointMapping = new Map<number, D>(
         props.options
-          .reduce((arr, cur) => [...arr, ...cur.options], [])
+          .reduce((arr, cur) => [...arr, ...cur.options], [] as D[])
           .map(dataPointPair)
       );
 

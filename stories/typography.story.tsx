@@ -40,9 +40,11 @@ const text =
 storiesOf("Theme/typography", module).add("List", () => (
   <div className={wrapper}>
     <h2 style={{ marginBottom: 40 }}>Typography</h2>
-    {Object.keys(typography).map((x: keyof typeof typography) =>
-      Object.keys(typography[x]).map((y: keyof Type) => {
-        const style = typography[x][y] as React.CSSProperties;
+    {Object.keys(typography).map(x =>
+      Object.keys(typography[x as keyof typeof typography]).map(y => {
+        const style = typography[x as keyof typeof typography][
+          y as keyof Type
+        ] as React.CSSProperties;
         return (
           <div className={section} key={`${x}.${y}`}>
             <div
