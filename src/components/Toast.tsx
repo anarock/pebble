@@ -44,7 +44,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
     text,
     type = "success",
     time
-  }: Partial<ToastState> & { text: string }) => {
+  }: Partial<ToastState> & { text: string; time?: number }) => {
     this.setState({
       text,
       type,
@@ -61,7 +61,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
         this.setState({
           show: false
         }),
-      time ? time : this.props.time ? this.props.time : 5000
+      time ? time : this.props.defaultTime ? this.props.defaultTime : 5000
     );
   };
 
