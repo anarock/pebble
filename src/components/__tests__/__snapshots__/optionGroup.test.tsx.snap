@@ -31,6 +31,10 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   outline: none;
   padding: 10px 0;
   position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 400;
   color: #101721;
   font-size: 14px;
@@ -659,6 +663,10 @@ Array [
   outline: none;
   padding: 10px 0;
   position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 400;
   color: #101721;
   font-size: 14px;
@@ -1329,6 +1337,10 @@ Array [
   outline: none;
   padding: 10px 0;
   position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 400;
   color: #101721;
   font-size: 14px;
