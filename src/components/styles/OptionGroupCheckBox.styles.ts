@@ -7,6 +7,7 @@ import {
   onScrollPadding
 } from "./OptionGroup.styles";
 import { smallButtonHeight } from "./Button.styles";
+import { colors } from "../../theme";
 export const optionGroupCheckBoxButtonWrapPadding = 20;
 
 export const optionGroupCheckBoxWrap = css({
@@ -20,5 +21,6 @@ export const optionGroupCheckBoxWrap = css({
 
 export const optionGroupCheckBoxButtonWrap = css({
   ...mixins.flexSpaceBetween,
-  padding: `${optionGroupCheckBoxButtonWrapPadding}`
+  padding: `${optionGroupCheckBoxButtonWrapPadding}`,
+  backgroundColor: colors.white.base
 });
