@@ -35,7 +35,7 @@ interface ThreeState {
   value: "A" | "B" | "C";
 }
 
-storiesOf("Components/RadioGroup", module).add(
+storiesOf("Recipes/RadioGroup", module).add(
   "two options",
   withState<TwoState>({ value: "ON" })(({ store }) => (
     <RadioGroup
@@ -71,7 +71,7 @@ storiesOf("Components/RadioGroup", module).add(
   ))
 );
 
-storiesOf("Components/RadioGroup", module).add(
+storiesOf("Recipes/RadioGroup", module).add(
   "three options",
   withState<ThreeState>({ value: "A" })(({ store }) => (
     <RadioGroup
