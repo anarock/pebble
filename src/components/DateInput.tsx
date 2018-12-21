@@ -1,5 +1,5 @@
 import * as React from "react";
-import { DateInputProps } from "./typings/Date";
+import { DateInputProps } from "./typings/DateInput";
 import DropDown from "./DropDown";
 import { dateClass, dropDownClassName } from "./styles/Date.styles";
 import { format } from "date-fns";
