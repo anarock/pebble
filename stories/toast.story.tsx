@@ -8,6 +8,6 @@ storiesOf("Components/Toast", module).add("Default", () => (
     <Button onClick={() => Toast.show("hello", "success", 10000)}>
       Show Toast
     </Button>
-    <Toast time={10000} />
+    <Toast defaultTime={10000} />
   </React.Fragment>
 ));
