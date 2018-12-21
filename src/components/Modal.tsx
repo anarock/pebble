@@ -44,7 +44,7 @@ class Modal extends React.PureComponent<ModalProps> {
             style={{
               opacity: transitionStyles.opacity
             }}
-            className={cx(modalContainer, "ReactPortal", className)}
+            className={cx(modalContainer, className)}
           >
             <div
               style={{ transform: transitionStyles.transform, display: "flex" }}
