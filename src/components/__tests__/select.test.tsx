@@ -8,6 +8,7 @@ import { SingleSelectProps, MultiSelectProps } from "../typings/Select";
 import Button from "../Button";
 import Input from "../Input";
 import Search from "../Search";
+import "../../../tests/__setup__/matchers";
 
 const options = new Array(5)
   .fill(1)
@@ -78,8 +79,6 @@ describe("Component: Select", () => {
     const spy = sinon.spy();
     const select = mount(getComponent(spy));
 
-    expect(() => select.find(Option).html()).toThrow();
-
     select.find(Input).simulate("click");
     expect(select.find(Option)).toHaveLength(5);
   });
@@ -100,7 +99,7 @@ describe("Component: Select", () => {
     clock.tick(1000);
 
     // This means that Option is no more rendered in DOM.
-    expect(() => select.find(Option).html()).toThrow();
+    expect(select).toNotHaveHtmlWithSelector("[data-test-id='optiongroup']");
   });
 
   test("multi select: should trigger onChange with correct onChange", () => {
@@ -170,7 +169,7 @@ describe("Component: Select", () => {
     clock.tick(1000);
 
     // ensure the dropdown is closed
-    expect(() => select.find(Option).html()).toThrow();
+    expect(select).toNotHaveHtmlWithSelector("[data-test-id='optiongroup']");
   });
 
   test("single select: query change triggers onChange", () => {

@@ -84,6 +84,8 @@ exports[`Component: OptionGroup default snapshot 1`] = `
 
 <div
   className="emotion-24"
+  data-test-id="optiongroup"
+  role="radiogroup"
   style={
     Object {
       "paddingTop": undefined,
@@ -715,6 +717,8 @@ Array [
 
 <div
     className="emotion-36"
+    data-test-id="optiongroup"
+    role="group"
     style={
       Object {
         "paddingTop": 80,
@@ -1378,6 +1382,8 @@ Array [
 
 <div
     className="emotion-24"
+    data-test-id="optiongroup"
+    role="radiogroup"
     style={
       Object {
         "paddingTop": 80,
