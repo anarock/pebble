@@ -19,8 +19,7 @@ export const rightButton = css({
 });
 
 export const middleButton = css({
-  borderTop: `1px solid ${colors.gray.lighter}`,
-  borderBottom: `1px solid ${colors.gray.lighter}`,
+  border: `1px solid ${colors.gray.lighter}`,
   padding: "10px 20px"
 });
 
