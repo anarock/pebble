@@ -1,6 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`set of radios { value: 'OFF' } 1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  color: #101721;
+  font-size: 12px;
+}
+
 .emotion-1 {
   cursor: pointer;
   display: -webkit-box;
@@ -13,6 +23,9 @@ exports[`set of radios { value: 'OFF' } 1`] = `
   font-weight: 400;
   color: #101721;
   font-size: 14px;
+  padding: 10px 20px;
+  border: 1px solid #EDEDED;
+  border-right: none;
 }
 
 .emotion-1[data-disabled='true'] {
@@ -24,46 +37,64 @@ exports[`set of radios { value: 'OFF' } 1`] = `
   color: #E0E0E0;
 }
 
-.emotion-4 {
+.emotion-1:first-of-type {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.emotion-1:last-of-type {
+  border-radius: 0px 3px 3px 0px;
+  border-right: 1px solid #EDEDED;
+}
+
+.emotion-0 {
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
   font-weight: 400;
   color: #101721;
-  font-size: 12px;
-}
-
-.emotion-2 {
-  border: 1px solid #EDEDED;
-  border-radius: 0px 3px 3px 0px;
+  font-size: 14px;
   padding: 10px 20px;
-}
-
-.emotion-0 {
   border: 1px solid #EDEDED;
-  border-radius: 3px 0px 0px 3px;
-  padding: 10px 20px;
+  border-right: none;
   background-color: #EDEDED;
+}
+
+.emotion-0[data-disabled='true'] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-0[data-disabled='true'] .css-qatnln {
+  color: #E0E0E0;
+}
+
+.emotion-0:first-of-type {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.emotion-0:last-of-type {
+  border-radius: 0px 3px 3px 0px;
+  border-right: 1px solid #EDEDED;
 }
 
 <div
   aria-label="set of radios"
-  className="emotion-4"
+  className="emotion-2"
   role="radiogroup"
 >
   <div
     aria-checked={true}
-    className="emotion-1"
+    className="emotion-0"
     onClick={[Function]}
     role="radio"
     tabIndex={0}
   >
-    <div
-      className="emotion-0"
-    >
-      OFF
-    </div>
+    OFF
   </div>
   <div
     aria-checked={false}
@@ -72,16 +103,57 @@ exports[`set of radios { value: 'OFF' } 1`] = `
     role="radio"
     tabIndex={-1}
   >
-    <div
-      className="emotion-2"
-    >
-      ON
-    </div>
+    ON
   </div>
 </div>
 `;
 
 exports[`set of radios { value: 'ON' } 1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  color: #101721;
+  font-size: 12px;
+}
+
+.emotion-0 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 1px solid #EDEDED;
+  border-right: none;
+}
+
+.emotion-0[data-disabled='true'] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-0[data-disabled='true'] .css-qatnln {
+  color: #E0E0E0;
+}
+
+.emotion-0:first-of-type {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.emotion-0:last-of-type {
+  border-radius: 0px 3px 3px 0px;
+  border-right: 1px solid #EDEDED;
+}
+
 .emotion-1 {
   cursor: pointer;
   display: -webkit-box;
@@ -94,6 +166,10 @@ exports[`set of radios { value: 'ON' } 1`] = `
   font-weight: 400;
   color: #101721;
   font-size: 14px;
+  padding: 10px 20px;
+  border: 1px solid #EDEDED;
+  border-right: none;
+  background-color: #EDEDED;
 }
 
 .emotion-1[data-disabled='true'] {
@@ -105,46 +181,28 @@ exports[`set of radios { value: 'ON' } 1`] = `
   color: #E0E0E0;
 }
 
-.emotion-4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: 400;
-  color: #101721;
-  font-size: 12px;
-}
-
-.emotion-0 {
-  border: 1px solid #EDEDED;
+.emotion-1:first-of-type {
   border-radius: 3px 0px 0px 3px;
-  padding: 10px 20px;
 }
 
-.emotion-2 {
-  border: 1px solid #EDEDED;
+.emotion-1:last-of-type {
   border-radius: 0px 3px 3px 0px;
-  padding: 10px 20px;
-  background-color: #EDEDED;
+  border-right: 1px solid #EDEDED;
 }
 
 <div
   aria-label="set of radios"
-  className="emotion-4"
+  className="emotion-2"
   role="radiogroup"
 >
   <div
     aria-checked={false}
-    className="emotion-1"
+    className="emotion-0"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
-    <div
-      className="emotion-0"
-    >
-      OFF
-    </div>
+    OFF
   </div>
   <div
     aria-checked={true}
@@ -153,11 +211,7 @@ exports[`set of radios { value: 'ON' } 1`] = `
     role="radio"
     tabIndex={0}
   >
-    <div
-      className="emotion-2"
-    >
-      ON
-    </div>
+    ON
   </div>
 </div>
 `;

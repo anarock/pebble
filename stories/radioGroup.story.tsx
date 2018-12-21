@@ -5,10 +5,8 @@ import { withState } from "@dump247/storybook-state";
 import { cx } from "emotion";
 import {
   setWrap,
-  leftButton,
   selectedButton,
-  rightButton,
-  middleButton
+  unSelectedButton
 } from "../src/components/__tests__/fixtures/radioSet.style";
 
 storiesOf("Components/RadioGroup", module).add(
@@ -49,29 +47,25 @@ storiesOf("Components/RadioGroup", module).add(
       name="set of radios"
       className={setWrap}
     >
-      <Radio value="OFF" label="">
-        {() => (
-          <div
-            className={cx({
-              [leftButton]: true,
-              [selectedButton]: store.state.value === "OFF"
-            })}
-          >
-            {"OFF"}
-          </div>
-        )}
+      <Radio
+        value="OFF"
+        label=""
+        className={cx({
+          [unSelectedButton]: true,
+          [selectedButton]: store.state.value === "OFF"
+        })}
+      >
+        {() => "OFF"}
       </Radio>
-      <Radio value="ON" label="">
-        {() => (
-          <div
-            className={cx({
-              [rightButton]: true,
-              [selectedButton]: store.state.value === "ON"
-            })}
-          >
-            {"ON"}
-          </div>
-        )}
+      <Radio
+        value="ON"
+        label=""
+        className={cx({
+          [unSelectedButton]: true,
+          [selectedButton]: store.state.value === "ON"
+        })}
+      >
+        {() => "ON"}
       </Radio>
     </RadioGroup>
   ))
@@ -89,41 +83,35 @@ storiesOf("Components/RadioGroup", module).add(
       name="set of radios"
       className={setWrap}
     >
-      <Radio value="C" label="">
-        {() => (
-          <div
-            className={cx({
-              [leftButton]: true,
-              [selectedButton]: store.state.value === "C"
-            })}
-          >
-            {"C"}
-          </div>
-        )}
+      <Radio
+        value="C"
+        label=""
+        className={cx({
+          [unSelectedButton]: true,
+          [selectedButton]: store.state.value === "C"
+        })}
+      >
+        {() => "C"}
       </Radio>
-      <Radio value="B" label="">
-        {() => (
-          <div
-            className={cx({
-              [middleButton]: true,
-              [selectedButton]: store.state.value === "B"
-            })}
-          >
-            {"B"}
-          </div>
-        )}
+      <Radio
+        value="B"
+        label=""
+        className={cx({
+          [unSelectedButton]: true,
+          [selectedButton]: store.state.value === "B"
+        })}
+      >
+        {() => "B"}
       </Radio>
-      <Radio value="A" label="">
-        {() => (
-          <div
-            className={cx({
-              [rightButton]: true,
-              [selectedButton]: store.state.value === "A"
-            })}
-          >
-            {"A"}
-          </div>
-        )}
+      <Radio
+        value="A"
+        label=""
+        className={cx({
+          [unSelectedButton]: true,
+          [selectedButton]: store.state.value === "A"
+        })}
+      >
+        {() => "A"}
       </Radio>
     </RadioGroup>
   ))

@@ -7,9 +7,8 @@ import renderer from "react-test-renderer";
 import { cx } from "emotion";
 import {
   setWrap,
-  leftButton,
   selectedButton,
-  rightButton
+  unSelectedButton
 } from "./fixtures/radioSet.style";
 
 function noop() {}
@@ -72,29 +71,25 @@ describe("set of radios", () => {
         name="set of radios"
         className={setWrap}
       >
-        <Radio value="OFF" label="">
-          {() => (
-            <div
-              className={cx({
-                [leftButton]: true,
-                [selectedButton]: props.value === "OFF"
-              })}
-            >
-              OFF
-            </div>
-          )}
+        <Radio
+          value="OFF"
+          label=""
+          className={cx({
+            [unSelectedButton]: true,
+            [selectedButton]: props.value === "OFF"
+          })}
+        >
+          {() => "OFF"}
         </Radio>
-        <Radio value="ON" label="">
-          {() => (
-            <div
-              className={cx({
-                [rightButton]: true,
-                [selectedButton]: props.value === "ON"
-              })}
-            >
-              ON
-            </div>
-          )}
+        <Radio
+          value="ON"
+          label=""
+          className={cx({
+            [unSelectedButton]: true,
+            [selectedButton]: props.value === "ON"
+          })}
+        >
+          {() => "ON"}
         </Radio>
       </RadioGroup>
     );
