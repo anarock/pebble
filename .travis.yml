@@ -9,12 +9,4 @@ git:
 script:
   - yarn build
   - yarn test:cover
-  - if [ "${CIRCLE_BRANCH}" != "master" ];
-    then
-    if [[ $TRAVIS_EVENT_TYPE != 'pull_request' ||  $TRAVIS_PULL_REQUEST_SLUG != $TRAVIS_REPO_SLUG ]];
-    then
-    npm run chromatic
-    fi
-    else
-    yarn chromatic --auto-accept-changes
-    fi
+  - ./build.sh
