@@ -1,7 +1,7 @@
 import * as React from "react";
 import { DropdownProps, DropdownState } from "./typings/Dropdown";
 import { DropDownButton } from "./Button";
-import { dropDownStyle } from "./styles/Dropdown.styles";
+import { dropDownStyle, wrapperStyle } from "./styles/Dropdown.styles";
 import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
 import { animated } from "react-spring";
@@ -39,6 +39,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
 
     return (
       <OutsideClick
+        className={cx(wrapperStyle, className)}
         onOutsideClick={() => {
           this.setState({
             isOpen: false
@@ -47,31 +48,29 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
         }}
         disabled={!isOpen}
       >
-        <div className={className}>
-          {labelComponent ? (
-            labelComponent({ isOpen, toggleDropdown: this.toggleDropdown })
-          ) : (
-            <DropDownButton
-              isSelected={!!isSelected}
-              isOpen={isOpen}
-              onClick={this.toggleDropdown}
-              disabled={disabled}
-              className={labelClassName}
+        {labelComponent ? (
+          labelComponent({ isOpen, toggleDropdown: this.toggleDropdown })
+        ) : (
+          <DropDownButton
+            isSelected={!!isSelected}
+            isOpen={isOpen}
+            onClick={this.toggleDropdown}
+            disabled={disabled}
+            className={labelClassName}
+          >
+            {buttonLabel}
+          </DropDownButton>
+        )}
+        <MountTransition visible={isOpen} native>
+          {transitionStyles => (
+            <animated.div
+              className={cx(dropDownStyle, dropDownClassName)}
+              style={{ padding, ...transitionStyles }}
             >
-              {buttonLabel}
-            </DropDownButton>
+              {children({ toggle: this.toggleDropdown, isOpen })}
+            </animated.div>
           )}
-          <MountTransition visible={isOpen} native>
-            {transitionStyles => (
-              <animated.div
-                className={cx(dropDownStyle, dropDownClassName)}
-                style={{ padding, ...transitionStyles }}
-              >
-                {children({ toggle: this.toggleDropdown, isOpen })}
-              </animated.div>
-            )}
-          </MountTransition>
-        </div>
+        </MountTransition>
       </OutsideClick>
     );
   }
