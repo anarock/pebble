@@ -7,15 +7,18 @@ import * as ReactDOM from "react-dom";
 import MountTransition from "./shared/MountTransition";
 
 class Modal extends React.PureComponent<ModalProps> {
-  node: HTMLDivElement;
+  node = isBrowser ? document.createElement("div") : null;
 
   componentDidMount() {
-    this.node = document.createElement("div");
-    document.body.appendChild(this.node);
+    if (this.node) {
+      document.body.appendChild(this.node);
+    }
   }
 
   componentWillUnmount() {
-    document.body.removeChild(this.node);
+    if (this.node) {
+      document.body.removeChild(this.node);
+    }
   }
 
   componentDidUpdate(prevProps: ModalProps) {
@@ -32,10 +35,7 @@ class Modal extends React.PureComponent<ModalProps> {
     if (!isBrowser) return null;
 
     const { children, visible, className } = this.props;
-
-    if (!this.node) {
-      this.node = document.createElement("div");
-    }
+    const node = this.node;
 
     return ReactDOM.createPortal(
       <MountTransition visible={visible}>
@@ -54,7 +54,7 @@ class Modal extends React.PureComponent<ModalProps> {
           </div>
         )}
       </MountTransition>,
-      this.node
+      node as NonNullable<typeof node>
     );
   }
 }

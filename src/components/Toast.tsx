@@ -19,7 +19,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
     emitter.emit("showToast", { text, type, time });
   }
 
-  showTimer: number | null;
+  showTimer?: number | null;
 
   static hide() {
     emitter.emit("hideToast");
