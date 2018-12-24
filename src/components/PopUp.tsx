@@ -15,8 +15,8 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
     onApprove,
     onReject,
     visible,
-    approveButtonText,
-    rejectButtonText,
+    approveButtonText = "Yes",
+    rejectButtonText = "No",
     children
   } = props;
   return (
@@ -33,12 +33,12 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
           <div className={buttonsContainer}>
             {onReject && (
               <Button size="large" type="secondary" onClick={onReject}>
-                {rejectButtonText || "No"}
+                {rejectButtonText}
               </Button>
             )}
             {onApprove && (
               <Button size="large" type="primary" onClick={onApprove}>
-                {approveButtonText || "Yes"}
+                {approveButtonText}
               </Button>
             )}
           </div>

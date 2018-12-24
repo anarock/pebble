@@ -3,8 +3,6 @@ import { SearchProps } from "./Search";
 import { Extras } from "./OptionGroup";
 import { Omit } from "utility-types";
 
-export type Selected = SingleSelected | MultiSelected;
-
 export type SingleSelected = number | string;
 export type MultiSelected = Array<number | string>;
 

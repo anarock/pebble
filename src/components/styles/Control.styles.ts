@@ -12,6 +12,7 @@ export const controlStyle = css({
   outline: "none",
   padding: "10px 0",
   position: "relative",
+  alignItems: "center",
   ...typography.normal.regular,
   "&[data-disabled='true']": {
     cursor: "not-allowed",

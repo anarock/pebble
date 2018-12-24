@@ -24,6 +24,10 @@ exports[`Option component snapshot for multi select 1`] = `
   outline: none;
   padding: 10px 0;
   position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 400;
   color: #101721;
   font-size: 14px;
@@ -129,6 +133,10 @@ exports[`Option component snapshot in active state 1`] = `
   outline: none;
   padding: 10px 0;
   position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 400;
   color: #101721;
   font-size: 14px;
@@ -232,6 +240,10 @@ exports[`Option component snapshot in selected state 1`] = `
   outline: none;
   padding: 10px 0;
   position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 400;
   color: #101721;
   font-size: 14px;

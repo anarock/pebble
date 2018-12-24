@@ -5,6 +5,7 @@ import { ToastProps, ToastState, ToastType } from "./typings/Toast";
 import { Transition, animated } from "react-spring";
 import { cx } from "emotion";
 import Mitt from "mitt";
+import { animationConfig } from "../utils/animation";
 
 const emitter = /*#__PURE__*/ new Mitt();
 
@@ -14,11 +15,11 @@ const _colors = {
 };
 
 class Toast extends React.PureComponent<ToastProps, ToastState> {
-  static show(text: string, type: ToastType) {
-    emitter.emit("showToast", { text, type });
+  static show(text: string, type: ToastType, time?: number) {
+    emitter.emit("showToast", { text, type, time });
   }
 
-  showTimer: number | null;
+  showTimer?: number | null;
 
   static hide() {
     emitter.emit("hideToast");
@@ -42,14 +43,14 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
 
   private show = ({
     text,
-    type = "success"
-  }: Partial<ToastState> & { text: string }) => {
+    type = "success",
+    time
+  }: Partial<ToastState> & { text: string; time?: number }) => {
     this.setState({
       text,
       type,
       show: true
     });
-    const { time } = this.props;
 
     if (this.showTimer) {
       clearTimeout(this.showTimer);
@@ -61,7 +62,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
         this.setState({
           show: false
         }),
-      time ? time : 5000
+      time ? time : this.props.defaultTime || 5000
     );
   };
 
@@ -76,23 +77,33 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
     });
 
     return (
-      // @ts-ignore
       <Transition
         native
+        items={this.state.show}
         from={{ opacity: 0, transform: "translateX(-50%) translateY(10px)" }}
         enter={{ opacity: 1, transform: "translateX(-50%) translateY(0)" }}
-        leave={{ opacity: 0, transform: "translateX(-50%) translateY(10px)" }}
+        leave={{
+          opacity: 0,
+          transform: "translateX(-50%) translateY(10px)",
+          pointerEvents: "none"
+        }}
+        config={animationConfig.config}
       >
-        {this.state.show &&
+        {show =>
+          show &&
           (styles => (
             <animated.div
               className={cx(toastWrapper, this.props.className)}
-              style={{ backgroundColor: bColor, ...styles }}
+              style={{
+                backgroundColor: bColor,
+                ...(styles as React.CSSProperties)
+              }}
             >
               <i className={iconClass} />
               {this.state.text}
             </animated.div>
-          ))}
+          ))
+        }
       </Transition>
     );
   }
