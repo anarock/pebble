@@ -6,16 +6,18 @@ export const setWrap = css({
   ...typography.s.regular
 });
 
-export const offButton = css({
+export const unSelectedButton = css({
+  padding: "15px 20px",
+  lineHeight: "8px",
   border: `1px solid ${colors.gray.lighter}`,
-  borderRadius: "3px 0px 0px 3px",
-  padding: "10px 20px"
-});
-
-export const onButton = css({
-  border: `1px solid ${colors.gray.lighter}`,
-  borderRadius: "0px 3px 3px 0px",
-  padding: "10px 20px"
+  borderRight: "none",
+  "&:first-of-type": {
+    borderRadius: "3px 0px 0px 3px"
+  },
+  "&:last-of-type": {
+    borderRadius: "0px 3px 3px 0px",
+    borderRight: `1px solid ${colors.gray.lighter}`
+  }
 });
 
 export const selectedButton = css({
