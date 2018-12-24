@@ -23,7 +23,8 @@ exports[`set of radios { value: 'OFF' } 1`] = `
   font-weight: 400;
   color: #101721;
   font-size: 14px;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  line-height: 8px;
   border: 1px solid #EDEDED;
   border-right: none;
 }
@@ -58,7 +59,8 @@ exports[`set of radios { value: 'OFF' } 1`] = `
   font-weight: 400;
   color: #101721;
   font-size: 14px;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  line-height: 8px;
   border: 1px solid #EDEDED;
   border-right: none;
   background-color: #EDEDED;
@@ -131,7 +133,8 @@ exports[`set of radios { value: 'ON' } 1`] = `
   font-weight: 400;
   color: #101721;
   font-size: 14px;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  line-height: 8px;
   border: 1px solid #EDEDED;
   border-right: none;
 }
@@ -166,7 +169,8 @@ exports[`set of radios { value: 'ON' } 1`] = `
   font-weight: 400;
   color: #101721;
   font-size: 14px;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  line-height: 8px;
   border: 1px solid #EDEDED;
   border-right: none;
   background-color: #EDEDED;
