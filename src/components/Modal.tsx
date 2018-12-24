@@ -6,15 +6,18 @@ import isBrowser from "is-in-browser";
 import * as ReactDOM from "react-dom";
 
 class Modal extends React.PureComponent<ModalProps> {
-  node: HTMLDivElement;
+  node = isBrowser ? document.createElement("div") : null;
 
   componentDidMount() {
-    this.node = document.createElement("div");
-    document.body.appendChild(this.node);
+    if (this.node) {
+      document.body.appendChild(this.node);
+    }
   }
 
   componentWillUnmount() {
-    document.body.removeChild(this.node);
+    if (this.node) {
+      document.body.removeChild(this.node);
+    }
   }
 
   componentDidUpdate(prevProps: ModalProps) {
@@ -31,17 +34,14 @@ class Modal extends React.PureComponent<ModalProps> {
     if (!isBrowser) return null;
 
     const { children, visible, className } = this.props;
-
-    if (!this.node) {
-      this.node = document.createElement("div");
-    }
+    const node = this.node;
 
     return visible
       ? ReactDOM.createPortal(
           <div className={cx(modalContainer, "ReactPortal", className)}>
             {children}
           </div>,
-          this.node
+          node as NonNullable<typeof node>
         )
       : null;
   }

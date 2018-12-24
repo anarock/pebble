@@ -36,14 +36,14 @@ const section = css({
 storiesOf("Theme/colors", module).add("List", () => (
   <div className={wrapper}>
     <h2 style={{ marginBottom: 40 }}>Colors</h2>
-    {Object.keys(colors).map((x: keyof Colors) => {
-      const group = colors[x];
+    {Object.keys(colors).map(x => {
+      const group = colors[x as keyof Colors];
       return (
         <div key={x}>
           <h4 style={{ marginBottom: 10 }}>{x}</h4>
           <div style={{ overflow: "auto" }}>
-            {Object.keys(colors[x]).map((y: keyof typeof group) => {
-              const color = group[y];
+            {Object.keys(colors[x as keyof Colors]).map(y => {
+              const color = group[y as keyof typeof group];
               return (
                 <div className={section} key={y}>
                   <div
