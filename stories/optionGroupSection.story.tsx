@@ -25,8 +25,7 @@ interface GroupedOptionGroupProps<D extends DataPoint, G extends Group<D>> {
 }
 
 interface GroupedOptionGroupState<D extends DataPoint, G extends Group<D>> {
-  selectedGroups: G[];
-  selectedDataPoints: D[];
+  selectedDataPoints: Set<D>;
   isSelected: (value: number | string) => boolean;
   groupMapping: Map<string, G>;
   dataPointMapping: Map<number, D>;
@@ -59,8 +58,7 @@ class GroupedOptionGroup<
   GroupedOptionGroupState<D, G>
 > {
   state: Readonly<GroupedOptionGroupState<D, G>> = {
-    selectedGroups: [],
-    selectedDataPoints: [],
+    selectedDataPoints: new Set<D>(),
     isSelected: () => false,
     groupMapping: new Map(),
     dataPointMapping: new Map(),
@@ -104,30 +102,30 @@ class GroupedOptionGroup<
       );
     }
     if (props.selected !== state.propSelected) {
-      const selectedDataPoints = props.selected
-        .map(id => newState.dataPointMapping.get(id) as D)
-        .filter(f => f);
+      const selectedDataPoints = new Set<D>(
+        props.selected
+          .map(id => newState.dataPointMapping.get(id) as D)
+          .filter(f => f)
+      );
 
-      const selectedGroups = props.options.filter(group => {
-        return (
-          group.group_label &&
-          !group.options.some(
-            dataPoint => !selectedDataPoints.includes(dataPoint)
-          )
-        );
-      });
+      const selectedGroups = new Set<G>(
+        props.options.filter(group => {
+          return (
+            group.group_label &&
+            !group.options.some(dataPoint => !selectedDataPoints.has(dataPoint))
+          );
+        })
+      );
 
       newState.isSelected = (value: number | string) => {
         if (typeof value === "string") {
           const group = newState.groupMapping.get(value) as G;
-          return selectedGroups.includes(group);
+          return selectedGroups.has(group);
         }
         const dataPoint = newState.dataPointMapping.get(value) as D;
-        return selectedDataPoints.includes(dataPoint);
+        return selectedDataPoints.has(dataPoint);
       };
-
       newState.selectedDataPoints = selectedDataPoints;
-      newState.selectedGroups = selectedGroups;
     }
     return newState;
   }
@@ -140,33 +138,34 @@ class GroupedOptionGroup<
     checked: boolean;
   }) => {
     const { selectedDataPoints } = this.state;
+    const _selectedDataPoints = new Set(selectedDataPoints);
     if (typeof value === "string") {
       const group = this.state.groupMapping.get(value) as G;
       if (checked) {
-        return this.triggerOnChange(
-          selectedDataPoints.concat(
-            group.options.filter(d => !selectedDataPoints.includes(d))
-          )
-        );
+        group.options.forEach(d => {
+          _selectedDataPoints.add(d);
+        });
+        return this.triggerOnChange(_selectedDataPoints);
       } else {
-        return this.triggerOnChange(
-          selectedDataPoints.filter(d => !group.options.includes(d))
-        );
+        group.options.forEach(d => {
+          _selectedDataPoints.delete(d);
+        });
+        return this.triggerOnChange(_selectedDataPoints);
       }
     } else {
       const dataPoint = this.state.dataPointMapping.get(value) as D;
       if (checked) {
-        return this.triggerOnChange(selectedDataPoints.concat([dataPoint]));
+        _selectedDataPoints.add(dataPoint);
+        return this.triggerOnChange(_selectedDataPoints);
       } else {
-        return this.triggerOnChange(
-          selectedDataPoints.filter(d => d !== dataPoint)
-        );
+        _selectedDataPoints.delete(dataPoint);
+        return this.triggerOnChange(_selectedDataPoints);
       }
     }
   };
 
-  triggerOnChange(selectedDataPoints: D[]) {
-    this.props.onChange(selectedDataPoints.map(d => d.id));
+  triggerOnChange(selectedDataPoints: Set<D>) {
+    this.props.onChange(Array.from(selectedDataPoints).map(d => d.id));
   }
 
   onSearchBoxValueChange = (v: string) => {
