@@ -10,3 +10,4 @@ native
 coverage
 .docz
 .cache
+.DS_Store
