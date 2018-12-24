@@ -9,7 +9,7 @@
   "call",
   "camera",
   "car",
-  "channel-partner",
+  "channel-partners",
   "check",
   "checkbox-selected",
   "checkbox-unfilled",
@@ -20,7 +20,7 @@
   "close-circle",
   "close",
   "copy",
-  "digital",
+  "digital-leads",
   "direct-walkins",
   "direction",
   "document-uploaded",
@@ -90,7 +90,7 @@
   "update",
   "updating",
   "upload",
-  "warning-1",
+  "warning-line",
   "warning",
   "whatsapp"
 ]
