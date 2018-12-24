@@ -42,15 +42,14 @@ describe("TimePicker: functionality test", () => {
       .at(0)
       .simulate("click");
     expect(timePicker.find(Option)).toHaveLength(12);
+    timePicker.unmount();
 
-    timePicker
-      .find(DropDownButton)
-      .at(0)
-      .simulate("click");
+    timePicker.mount();
     timePicker
       .find(DropDownButton)
       .at(1)
       .simulate("click");
+
     expect(timePicker.find(Option)).toHaveLength(4);
   });
 });

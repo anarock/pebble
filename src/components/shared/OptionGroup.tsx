@@ -149,19 +149,18 @@ class OptionGroup extends React.PureComponent<
 
     return (
       <React.Fragment>
-        {searchBox &&
-          searchBoxProps && (
-            <div className={searchBoxClassName}>
-              <Search
-                type="small"
-                {...searchBoxProps}
-                inputProps={{
-                  ...(searchBoxProps && searchBoxProps.inputProps),
-                  onKeyDown: this.handleKeyPress
-                }}
-              />
-            </div>
-          )}
+        {searchBox && searchBoxProps && (
+          <div className={searchBoxClassName}>
+            <Search
+              type="small"
+              {...searchBoxProps}
+              inputProps={{
+                ...(searchBoxProps && searchBoxProps.inputProps),
+                onKeyDown: this.handleKeyPress
+              }}
+            />
+          </div>
+        )}
         {!!React.Children.count(children) && (
           <div
             ref={this.optionRef}
@@ -169,6 +168,8 @@ class OptionGroup extends React.PureComponent<
               paddingTop: searchBox ? searchBoxHeight : undefined
             }}
             className={cx(optionsWrapper, className)}
+            role={multiSelect ? "group" : "radiogroup"}
+            data-test-id="optiongroup"
           >
             {_children}
           </div>

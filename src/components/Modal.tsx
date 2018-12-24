@@ -4,6 +4,7 @@ import { modalContainer } from "./styles/Modal.styles";
 import { cx } from "emotion";
 import isBrowser from "is-in-browser";
 import * as ReactDOM from "react-dom";
+import MountTransition from "./shared/MountTransition";
 
 class Modal extends React.PureComponent<ModalProps> {
   node = isBrowser ? document.createElement("div") : null;
@@ -36,14 +37,25 @@ class Modal extends React.PureComponent<ModalProps> {
     const { children, visible, className } = this.props;
     const node = this.node;
 
-    return visible
-      ? ReactDOM.createPortal(
-          <div className={cx(modalContainer, "ReactPortal", className)}>
-            {children}
-          </div>,
-          node as NonNullable<typeof node>
-        )
-      : null;
+    return ReactDOM.createPortal(
+      <MountTransition visible={visible}>
+        {transitionStyles => (
+          <div
+            style={{
+              opacity: transitionStyles.opacity
+            }}
+            className={cx(modalContainer, className)}
+          >
+            <div
+              style={{ transform: transitionStyles.transform, display: "flex" }}
+            >
+              {children}
+            </div>
+          </div>
+        )}
+      </MountTransition>,
+      node as NonNullable<typeof node>
+    );
   }
 }
 
