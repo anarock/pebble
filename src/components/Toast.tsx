@@ -5,6 +5,7 @@ import { ToastProps, ToastState, ToastType } from "./typings/Toast";
 import { Transition, animated } from "react-spring";
 import { cx } from "emotion";
 import Mitt from "mitt";
+import { animationConfig } from "../utils/animation";
 
 const emitter = /*#__PURE__*/ new Mitt();
 
@@ -18,7 +19,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
     emitter.emit("showToast", { text, type, time });
   }
 
-  showTimer: number | null;
+  showTimer?: number | null;
 
   static hide() {
     emitter.emit("hideToast");
@@ -76,23 +77,33 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
     });
 
     return (
-      // @ts-ignore
       <Transition
         native
+        items={this.state.show}
         from={{ opacity: 0, transform: "translateX(-50%) translateY(10px)" }}
         enter={{ opacity: 1, transform: "translateX(-50%) translateY(0)" }}
-        leave={{ opacity: 0, transform: "translateX(-50%) translateY(10px)" }}
+        leave={{
+          opacity: 0,
+          transform: "translateX(-50%) translateY(10px)",
+          pointerEvents: "none"
+        }}
+        config={animationConfig.config}
       >
-        {this.state.show &&
+        {show =>
+          show &&
           (styles => (
             <animated.div
               className={cx(toastWrapper, this.props.className)}
-              style={{ backgroundColor: bColor, ...styles }}
+              style={{
+                backgroundColor: bColor,
+                ...(styles as React.CSSProperties)
+              }}
             >
               <i className={iconClass} />
               {this.state.text}
             </animated.div>
-          ))}
+          ))
+        }
       </Transition>
     );
   }
