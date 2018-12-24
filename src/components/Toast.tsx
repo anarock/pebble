@@ -15,8 +15,8 @@ const _colors = {
 };
 
 class Toast extends React.PureComponent<ToastProps, ToastState> {
-  static show(text: string, type: ToastType) {
-    emitter.emit("showToast", { text, type });
+  static show(text: string, type: ToastType, time?: number) {
+    emitter.emit("showToast", { text, type, time });
   }
 
   showTimer: number | null;
@@ -43,14 +43,14 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
 
   private show = ({
     text,
-    type = "success"
-  }: Partial<ToastState> & { text: string }) => {
+    type = "success",
+    time
+  }: Partial<ToastState> & { text: string; time?: number }) => {
     this.setState({
       text,
       type,
       show: true
     });
-    const { time } = this.props;
 
     if (this.showTimer) {
       clearTimeout(this.showTimer);
@@ -62,7 +62,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
         this.setState({
           show: false
         }),
-      time ? time : 5000
+      time ? time : this.props.defaultTime || 5000
     );
   };
 

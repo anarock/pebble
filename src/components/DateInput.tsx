@@ -1,5 +1,5 @@
 import * as React from "react";
-import { DateInputProps } from "./typings/Date";
+import { DateInputProps } from "./typings/DateInput";
 import DropDown from "./DropDown";
 import { dateClass, dropDownClassName } from "./styles/Date.styles";
 import { format } from "date-fns";
@@ -14,7 +14,7 @@ class DateInput extends React.PureComponent<DateInputProps> {
   };
 
   render() {
-    const { value } = this.props;
+    const { value, calendarProps } = this.props;
 
     const dropDownClass = cx(dropDownClassName, {
       [css({
@@ -44,6 +44,7 @@ class DateInput extends React.PureComponent<DateInputProps> {
             hideShadow
             className={dateClass}
             selected={value ? new Date(value) : undefined}
+            {...calendarProps}
             onChange={(date: Date) => {
               this.onChange(date);
               toggle();
