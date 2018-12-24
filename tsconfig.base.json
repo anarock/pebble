@@ -3,6 +3,7 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": true,
+    "alwaysStrict": true,
     "declaration": true,
     "declarationDir": "dist",
     "esModuleInterop": true,
@@ -13,14 +14,13 @@
     "lib": ["dom", "es2015", "es2016"],
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "compiled",
     "pretty": true,
     "removeComments": false,
     "sourceMap": true,
-    "strictNullChecks": true,
+    "strict": true,
     "target": "ESNEXT",
     "typeRoots": ["./node_modules/@types", "./typings/npm"]
   },

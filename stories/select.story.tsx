@@ -97,9 +97,9 @@ storiesOf("Components/Select", module)
     withState<State>({ searchQuery: "", multiSelected: undefined })(
       ({ store }) => (
         <Select
-          onChange={(val: number[] | string[]) => {
+          onChange={val => {
             action("onSelect")(val);
-            store.set({ multiSelected: val });
+            store.set({ multiSelected: val as number[] | string[] });
           }}
           placeholder="Choose Option"
           multiSelect

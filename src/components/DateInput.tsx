@@ -45,7 +45,10 @@ class DateInput extends React.PureComponent<DateInputProps> {
             className={dateClass}
             selected={value ? new Date(value) : undefined}
             {...calendarProps}
-            onChange={(date: Date) => {
+            onChange={_date => {
+              // _date as Date is a hack.
+              // TODO:Aziz this is fixable, fix this.
+              const date = _date as Date;
               this.onChange(date);
               toggle();
             }}
