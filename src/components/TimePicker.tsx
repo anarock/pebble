@@ -24,7 +24,8 @@ export const iconStyle = css({
   transition: "transform ease-out .2s",
   willTransform: "transform",
   marginTop: 2,
-  color: colors.gray.dark
+  color: colors.gray.dark,
+  display: "inline-block"
 });
 
 export const buttonStyle = css({
@@ -58,10 +59,12 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
             <span className={css({ marginRight: "15px" })}>
               {selectedHour ? selectedHour : "Hrs"}
             </span>
-            <i
-              className={cx("pi pi-arrow-drop-down", iconStyle)}
-              style={{ transform: isOpen ? "rotate(180deg)" : "none" }}
-            />
+            <span>
+              <i
+                className={cx("pi pi-arrow-drop-down", iconStyle)}
+                style={{ transform: isOpen ? "rotate(180deg)" : "none" }}
+              />
+            </span>
           </div>
         )}
       >
@@ -87,9 +90,6 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
       </DropDown>
       <span className={seperator}>:</span>
       <DropDown
-        buttonLabel={`${
-          selectedMinute !== undefined ? selectedMinute : "mins"
-        }`}
         labelClassName={minutePicker}
         isSelected={selected}
         labelComponent={({ isOpen, toggleDropdown }) => (

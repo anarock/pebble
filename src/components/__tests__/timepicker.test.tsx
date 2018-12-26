@@ -4,8 +4,9 @@ import TimePicker from "../TimePicker";
 import * as React from "react";
 import { mount } from "enzyme";
 import sinon from "sinon";
-import { DropDownButton } from "../Button";
+// import { DropDownButton } from "../Button";
 import Option from "../Option";
+import DropDown from "../DropDown";
 
 function noop() {}
 
@@ -31,26 +32,40 @@ describe("TimePicker: functionality test", () => {
   test("should call onHourChange/onMinuteChange on click", () => {
     const spyHour = sinon.spy();
     const spyMinute = sinon.spy();
+    const clock = sinon.useFakeTimers();
 
     const timePicker = mount(
       <TimePicker onHourChange={spyHour} onMinuteChange={spyMinute} />
     );
-    expect(timePicker.find(Option)).toHaveLength(0);
-
     timePicker
-      .find(DropDownButton)
+      .find(DropDown)
       .at(0)
       .simulate("click");
-    expect(timePicker.find(Option)).toHaveLength(12);
+
+    clock.tick(10000);
 
     timePicker
-      .find(DropDownButton)
+      .find(Option)
       .at(0)
       .simulate("click");
+
+    expect(spyHour.calledOnce).toBeTruthy();
+
     timePicker
-      .find(DropDownButton)
+      .find(DropDown)
+      .at(0)
+      .simulate("click");
+
+    timePicker
+      .find(DropDown)
       .at(1)
       .simulate("click");
-    expect(timePicker.find(Option)).toHaveLength(4);
+
+    timePicker
+      .find(Option)
+      .at(0)
+      .simulate("click");
+
+    expect(spyMinute.calledOnce).toBeTruthy();
   });
 });

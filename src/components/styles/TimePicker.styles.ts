@@ -7,7 +7,7 @@ export const timePickerWrap = css({
   border: `1px solid ${colors.gray.light}`,
   borderRadius: "3px",
   cursor: "pointer",
-  "&:onhover": {
+  "&:not([disabled]):hover": {
     background: colors.gray.light
   }
 });
