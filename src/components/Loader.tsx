@@ -4,7 +4,7 @@ import { spinnerStyle } from "./styles/Loader.styles";
 import { colors } from "../theme";
 import { cx } from "emotion";
 
-const Loader: React.SFC<LoaderProps> = ({
+const Loader: React.FunctionComponent<LoaderProps> = ({
   color = colors.gray.darker,
   scale = 1,
   className

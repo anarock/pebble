@@ -5,6 +5,10 @@ export const selectWrapper = css({
   marginBottom: 20
 });
 
+export const relativePosition = css({
+  position: "relative"
+});
+
 export const selectInputWrapper = css({
   pointerEvents: "none"
 });
@@ -16,6 +20,10 @@ export const selectInput = css({
 
 export const dropDownClass = css({
   marginTop: -40
+});
+
+export const fullWidth = css({
+  width: "100%"
 });
 
 export const inputWrapper = css({

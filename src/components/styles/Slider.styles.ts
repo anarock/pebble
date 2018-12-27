@@ -1,7 +1,7 @@
-import { injectGlobal, css } from "emotion";
+import { css } from "emotion";
 import { colors, constants, mixins } from "../../theme";
 
-injectGlobal`
+export const rheostatOverrides = `
 .rheostat {
   overflow: visible;
 }
@@ -11,7 +11,7 @@ injectGlobal`
   position: relative;
   border-radius: 2px;
   overflow: hidden;
- 	height: 4px;
+  height: 4px;
   top: 0;
   width: 100%;
 }
@@ -39,19 +39,19 @@ injectGlobal`
 }
 
 .__pebble__slider__large .rheostat-handle {
-	width: 24px;
-	height: 24px;
-	margin-left: -12px;
-	top: -10px;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  top: -10px;
 }
 
 .rheostat-handle:hover {
-	background-color: ${colors.violet.light};
+  background-color: ${colors.violet.light};
 }
 
 .__pebble__slider__disabled .rheostat-handle {
-	background-color: ${colors.violet.lighter};
-	cursor: inherit;
+  background-color: ${colors.violet.lighter};
+  cursor: inherit;
 }
 
 .rheostat-horizontal {

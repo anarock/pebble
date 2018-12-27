@@ -5,7 +5,7 @@ import { colors } from "../theme";
 import { controlViewStyle, iconStyle } from "./styles/Controls.styles";
 import { messageStyle } from "./styles/Input.styles";
 
-const ControlView: React.SFC<ControlViewProps> = ({
+const ControlView: React.FunctionComponent<ControlViewProps> = ({
   label,
   type,
   isSelected,
@@ -48,9 +48,10 @@ class Controls extends React.PureComponent<ControlsProps> {
     labelExtractor: item => item.label || item.name
   };
 
-  constructor(props) {
+  constructor(props: ControlsProps) {
     super(props);
 
+    // tslint:disable-next-line no-console
     console.warn(
       "pebble: Controls component is deprecated. Instead use RadioGroup or CheckboxGroup."
     );
@@ -62,13 +63,14 @@ class Controls extends React.PureComponent<ControlsProps> {
     let result;
     if (this.isRadio()) {
       if (allowToggle && id === selected) {
-        id = null;
+        result = null;
+      } else {
+        result = id;
       }
-      result = id;
     } else {
       const _selected = selected || [];
       // @ts-ignore
-      let cloned = _selected.slice(0);
+      const cloned = _selected.slice(0);
       // @ts-ignore
       const index = _selected.findIndex(datum => datum === id);
       if (index >= 0) {

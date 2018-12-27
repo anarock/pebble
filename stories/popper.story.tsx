@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { Popper, Button, OptionGroupRadio, Option } from "../src";
 
-storiesOf("Popper", module).add("simple", () => (
+storiesOf("Components/Popper", module).add("simple", () => (
   <Popper
     label={({ toggle }) => <Button onClick={toggle}>Click Me</Button>}
     placement="left"

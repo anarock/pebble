@@ -24,7 +24,7 @@ const data = [
   }
 ];
 
-storiesOf("Stepper", module).add("Default", () => (
+storiesOf("Components/Stepper", module).add("Default", () => (
   <Stepper
     className={x}
     data={data}

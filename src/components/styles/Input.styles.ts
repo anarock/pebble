@@ -28,7 +28,7 @@ export const inputStyle = css({
   width: "100%",
   ...mixins.textEllipsis,
   "&:disabled": {
-    backgroundColor: colors.white
+    backgroundColor: colors.white.base
   },
   "&[type='date']": {
     ...(!isDesktop ? { "-webkit-appearance": "textfield" } : {})
@@ -37,7 +37,7 @@ export const inputStyle = css({
     webkitAppearance: "none",
     display: "none"
   },
-  ...mixins.getPlaceholderStyle(colors.gray.light)
+  .../*#__PURE__*/ mixins.getPlaceholderStyle(colors.gray.light)
 });
 
 export const inputReadOnlyStyle = css({
@@ -52,7 +52,8 @@ export const inputDisabledStyle = css({
 
 export const inputTextAreaStyle = css({
   height: 88,
-  padding: "24px 0 52px 0",
+  padding: "0 0 52px 0",
+  marginTop: 22,
   resize: "none"
 });
 

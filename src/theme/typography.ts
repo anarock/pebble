@@ -10,7 +10,7 @@ const fontSize = {
   xll: 22
 };
 
-enum FontWeight {
+const enum FontWeight {
   NORMAL = 400,
   BOLD = 500
 }
@@ -81,6 +81,11 @@ export const typography: Typography = {
   s: {
     regular: {
       fontWeight: FontWeight.NORMAL,
+      color: colors.gray.darker,
+      fontSize: fontSize.s
+    },
+    bold: {
+      fontWeight: FontWeight.BOLD,
       color: colors.gray.darker,
       fontSize: fontSize.s
     },

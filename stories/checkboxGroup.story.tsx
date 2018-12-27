@@ -3,14 +3,14 @@ import { storiesOf } from "@storybook/react";
 import { Checkbox, CheckboxGroup } from "../src";
 import { withState } from "@dump247/storybook-state";
 
-storiesOf("CheckboxGroup", module).add(
+storiesOf("Components/CheckboxGroup", module).add(
   "Default",
   withState({ value: ["radio"] })(({ store }) => (
     <CheckboxGroup
       selected={store.state.value}
       onChange={value =>
         store.set({
-          value
+          value: value as string[]
         })
       }
       name="test"

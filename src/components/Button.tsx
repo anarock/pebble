@@ -1,12 +1,17 @@
 import * as React from "react";
-import { css, cx } from "emotion";
-import { iconStyle, getButtonStyle } from "./styles/Button.styles";
+import { cx } from "emotion";
+import {
+  iconStyle,
+  getButtonStyle,
+  dropDownButtonStyle,
+  dropDownButtonDefaultStyle
+} from "./styles/Button.styles";
 import Ink from "react-ink";
 import { ButtonProps, DropDownButtonProps } from "./typings/Button";
 import Loader from "./Loader";
-import { colors, constants } from "../theme";
+import { colors } from "../theme";
 
-const Button: React.SFC<ButtonProps> = ({
+const Button: React.FunctionComponent<ButtonProps> = ({
   type = "primary",
   disabled,
   children,
@@ -17,12 +22,12 @@ const Button: React.SFC<ButtonProps> = ({
   showRipple = true,
   loading,
   size = "small"
-}) => {
+}: ButtonProps) => {
   const disableAction = disabled || loading;
 
   const filled = size !== "x-small";
   const _className = cx(
-    getButtonStyle(size, type, showShadow, filled),
+    getButtonStyle(size, type, !!showShadow, filled),
     className
   );
 
@@ -39,24 +44,16 @@ const Button: React.SFC<ButtonProps> = ({
   );
 };
 
-export const DropDownButton: React.SFC<DropDownButtonProps> = ({
+export const DropDownButton: React.FunctionComponent<DropDownButtonProps> = ({
   isOpen,
   isSelected,
   children,
   className,
   ...props
 }) => {
-  const _className = cx(
-    css({
-      border: constants.border.base
-    }),
-    {
-      [css({
-        backgroundColor: colors.white.base,
-        color: colors.gray.darker
-      })]: !(isOpen || isSelected)
-    }
-  );
+  const _className = cx(dropDownButtonStyle, {
+    [dropDownButtonDefaultStyle]: !(isOpen || isSelected)
+  });
 
   return (
     <Button {...props} type="secondary" className={cx(_className, className)}>

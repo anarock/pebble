@@ -1,11 +1,18 @@
 import * as React from "react";
 import Rheostat from "rheostat";
-import { cx } from "emotion";
+import { cx, injectGlobal } from "emotion";
 import { typography } from "../theme";
 import { SliderProps } from "./typings/Slider";
-import { sliderHeader } from "./styles/Slider.styles";
+import { sliderHeader, rheostatOverrides } from "./styles/Slider.styles";
 
-const Slider: React.SFC<SliderProps> = ({
+let rheostatStylesOverriden = false;
+function overrideRheostatStyles() {
+  if (rheostatStylesOverriden) return;
+  injectGlobal(rheostatOverrides);
+  rheostatStylesOverriden = true;
+}
+
+const Slider: React.FunctionComponent<SliderProps> = ({
   className,
   large,
   title,
@@ -15,12 +22,13 @@ const Slider: React.SFC<SliderProps> = ({
   onValuesUpdated,
   ...rest
 }) => {
+  overrideRheostatStyles();
   const mainClass = cx(className, {
     __pebble__slider__disabled: disabled,
     __pebble__slider__large: large
   });
 
-  let _values = Array.isArray(values) ? values.slice(0) : values || [];
+  const _values = Array.isArray(values) ? values.slice(0) : values || [];
 
   if (Array.isArray(values)) {
     if (!values[0] && rest.min) {
@@ -48,11 +56,11 @@ const Slider: React.SFC<SliderProps> = ({
         onValuesUpdated={
           onValuesUpdated &&
           (args => {
-            const { min, max, values } = args;
+            const { min, max } = args;
             if (
-              Array.isArray(values) &&
-              values[0] === rest.min &&
-              values[1] === rest.max
+              Array.isArray(args.values) &&
+              args.values[0] === rest.min &&
+              args.values[1] === rest.max
             ) {
               onValuesUpdated({ min, max, values: [] });
             } else {

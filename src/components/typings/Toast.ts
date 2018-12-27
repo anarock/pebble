@@ -1,7 +1,12 @@
 export type ToastType = "success" | "error";
 
+export interface ToastProps {
+  className?: string;
+  defaultTime?: number;
+}
+
 export interface ToastState {
-  type: string;
+  type: ToastType;
   text: string;
   show: boolean;
 }

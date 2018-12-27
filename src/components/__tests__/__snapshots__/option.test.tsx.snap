@@ -1,19 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Option component snapshot for multi select 1`] = `
-.emotion-1 {
-  outline: none;
-  position: relative;
+.emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-0 {
+.emotion-1 {
+  margin-left: 10px;
+  color: #E0E0E0;
+}
+
+.emotion-2 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 400;
   color: #101721;
   font-size: 14px;
-  line-height: 10px;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
   cursor: pointer;
-  padding: 0 18px;
+  padding: 12px 18px;
   position: relative;
+  line-height: 28px;
   z-index: 999;
   overflow-x: hidden;
   text-overflow: ellipsis;
@@ -36,80 +60,93 @@ exports[`Option component snapshot for multi select 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 52px;
 }
 
-.emotion-0:last-of-type {
+.emotion-2[data-disabled='true'] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-2[data-disabled='true'] .css-qatnln {
+  color: #E0E0E0;
+}
+
+.emotion-2:last-of-type {
   border: 0;
 }
 
-.emotion-0:hover {
+.emotion-2:hover {
   background-color: #F7F7F9;
 }
 
 <div
-  className="emotion-1"
+  className="emotion-2"
   onClick={[Function]}
   role="checkbox"
   tabIndex={-1}
 >
   <div
     className="emotion-0"
-    style={
-      Object {
-        "alignContent": "initial",
-        "display": "flex",
-        "flexDirection": "row",
-        "justifyContent": "space-between",
-      }
-    }
   >
     I am an option
-     
-    <i
-      className="pi pi-checkbox-unselected"
-      style={
-        Object {
-          "color": "#E0E0E0",
-        }
-      }
-    />
-    <canvas
-      height={0}
-      onDragOver={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      style={
-        Object {
-          "borderRadius": "inherit",
-          "height": "100%",
-          "left": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": "100%",
-        }
-      }
-      width={0}
-    />
   </div>
+  <i
+    className="pi pi-checkbox-unselected emotion-1"
+  />
+  <canvas
+    height={0}
+    onDragOver={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "borderRadius": "inherit",
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+    width={0}
+  />
 </div>
 `;
 
 exports[`Option component snapshot in active state 1`] = `
-.emotion-1 {
-  outline: none;
-  position: relative;
+.emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-0 {
+.emotion-1 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 400;
   color: #101721;
   font-size: 14px;
-  line-height: 10px;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
   cursor: pointer;
-  padding: 0 18px;
+  padding: 12px 18px;
   position: relative;
+  line-height: 28px;
   z-index: 999;
   overflow-x: hidden;
   text-overflow: ellipsis;
@@ -132,15 +169,23 @@ exports[`Option component snapshot in active state 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 52px;
   background-color: #F7F7F9;
 }
 
-.emotion-0:last-of-type {
+.emotion-1[data-disabled='true'] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-1[data-disabled='true'] .css-qatnln {
+  color: #E0E0E0;
+}
+
+.emotion-1:last-of-type {
   border: 0;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #F7F7F9;
 }
 
@@ -152,53 +197,63 @@ exports[`Option component snapshot in active state 1`] = `
 >
   <div
     className="emotion-0"
-    style={
-      Object {
-        "alignContent": "initial",
-        "display": "flex",
-        "flexDirection": "row",
-        "justifyContent": "space-between",
-      }
-    }
   >
     I am an option
-     
-    <canvas
-      height={0}
-      onDragOver={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      style={
-        Object {
-          "borderRadius": "inherit",
-          "height": "100%",
-          "left": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": "100%",
-        }
-      }
-      width={0}
-    />
   </div>
+  <canvas
+    height={0}
+    onDragOver={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "borderRadius": "inherit",
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+    width={0}
+  />
 </div>
 `;
 
 exports[`Option component snapshot in selected state 1`] = `
-.emotion-1 {
-  outline: none;
-  position: relative;
+.emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.emotion-0 {
+.emotion-1 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-weight: 400;
   color: #101721;
   font-size: 14px;
-  line-height: 10px;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
   cursor: pointer;
-  padding: 0 18px;
+  padding: 12px 18px;
   position: relative;
+  line-height: 28px;
   z-index: 999;
   overflow-x: hidden;
   text-overflow: ellipsis;
@@ -221,17 +276,25 @@ exports[`Option component snapshot in selected state 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 52px;
   color: #101721;
   font-weight: 500;
   font-size: 14px;
 }
 
-.emotion-0:last-of-type {
+.emotion-1[data-disabled='true'] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-1[data-disabled='true'] .css-qatnln {
+  color: #E0E0E0;
+}
+
+.emotion-1:last-of-type {
   border: 0;
 }
 
-.emotion-0:hover {
+.emotion-1:hover {
   background-color: #F7F7F9;
 }
 
@@ -244,35 +307,26 @@ exports[`Option component snapshot in selected state 1`] = `
 >
   <div
     className="emotion-0"
-    style={
-      Object {
-        "alignContent": "initial",
-        "display": "flex",
-        "flexDirection": "row",
-        "justifyContent": "space-between",
-      }
-    }
   >
     I am an option
-     
-    <canvas
-      height={0}
-      onDragOver={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      style={
-        Object {
-          "borderRadius": "inherit",
-          "height": "100%",
-          "left": 0,
-          "position": "absolute",
-          "top": 0,
-          "width": "100%",
-        }
-      }
-      width={0}
-    />
   </div>
+  <canvas
+    height={0}
+    onDragOver={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "borderRadius": "inherit",
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+    width={0}
+  />
 </div>
 `;

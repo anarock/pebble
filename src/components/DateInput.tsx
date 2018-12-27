@@ -1,5 +1,5 @@
 import * as React from "react";
-import { DateInputProps } from "./typings/Date";
+import { DateInputProps } from "./typings/DateInput";
 import DropDown from "./DropDown";
 import { dateClass, dropDownClassName } from "./styles/Date.styles";
 import { format } from "date-fns";
@@ -14,7 +14,7 @@ class DateInput extends React.PureComponent<DateInputProps> {
   };
 
   render() {
-    const { value } = this.props;
+    const { value, calendarProps } = this.props;
 
     const dropDownClass = cx(dropDownClassName, {
       [css({
@@ -28,8 +28,8 @@ class DateInput extends React.PureComponent<DateInputProps> {
         labelComponent={({ toggleDropdown }) => (
           <Input
             onChange={this.onChange}
-            type="date"
-            value={(value && format(value, "YYYY-MM-DD")) || ""}
+            type="text"
+            value={(value && format(value, "DD/MM/YYYY")) || ""}
             placeholder={this.props.placeholder}
             fixLabelAtTop
             inputProps={{
@@ -44,7 +44,11 @@ class DateInput extends React.PureComponent<DateInputProps> {
             hideShadow
             className={dateClass}
             selected={value ? new Date(value) : undefined}
-            onChange={date => {
+            {...calendarProps}
+            onChange={_date => {
+              // _date as Date is a hack.
+              // TODO:Aziz this is fixable, fix this.
+              const date = _date as Date;
               this.onChange(date);
               toggle();
             }}

@@ -9,6 +9,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     isOpen: !!this.props.isOpen
   };
 
+  // tslint:disable-next-line no-any
   labelRef: React.RefObject<any> = React.createRef();
 
   private showTooltip = () =>

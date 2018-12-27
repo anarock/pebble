@@ -11,14 +11,12 @@ export interface TypeaheadProps {
       registerChange: (text: string) => void;
       onFocus: FocusEvent;
       value: string;
-      typeaheadInputRef: React.RefObject<HTMLInputElement>;
-      onBlur: FocusEvent;
     },
     props: TypeaheadProps
   ) => JSX.Element;
   debounceTime: number;
   onChange: (text: string, props: TypeaheadProps) => void;
-  onSelect: (value, props: TypeaheadProps) => void;
+  onSelect: (value: number | string | undefined, props: TypeaheadProps) => void;
   dropdownClassName?: string;
   initialValue?: string;
   disabled?: boolean;
@@ -35,5 +33,4 @@ export interface TypeaheadProps {
 export interface TypeaheadState {
   value: string;
   showSuggestions: boolean;
-  focussedElement?: Element | null;
 }

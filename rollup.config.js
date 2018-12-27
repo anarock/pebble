@@ -1,3 +1,5 @@
+const babelConfig = require("./babel.config");
+
 import resolve from "rollup-plugin-node-resolve";
 import filesize from "rollup-plugin-filesize";
 import sourceMaps from "rollup-plugin-sourcemaps";
@@ -9,30 +11,30 @@ import cleanup from "rollup-plugin-cleanup";
 const input = "compiled/index.js";
 const external = ["react", "react-calendar/dist/entry.nostyle"];
 
-const plugins = [
-  babel({
-    babelrc: false,
-    presets: [
-      [
-        "env",
-        {
-          targets: { node: "6" },
-          modules: false
-        }
-      ],
-      "stage-0",
-      "react"
-    ],
-    plugins: ["external-helpers"]
-  }),
-  resolve({
-    extensions: [".js", ".jsx", ".json"]
-  }),
-  commonjs(),
-  cleanup(),
-  sourceMaps(),
-  filesize()
-];
+function getPlugins(targets) {
+  return [
+    babel({
+      ...babelConfig,
+      presets: [
+        ...babelConfig.presets.filter(preset => {
+          Array.isArray(preset)
+            ? preset[0] !== "@babel/preset-env"
+            : preset !== "@babel/preset-env";
+        }),
+        ["@babel/preset-env", { targets }]
+      ]
+    }),
+    resolve({
+      extensions: [".js", ".jsx", ".json"]
+    }),
+    commonjs(),
+    cleanup({
+      comments: [/^\*#__PURE__/, /^\*@__PURE__/]
+    }),
+    sourceMaps(),
+    filesize()
+  ];
+}
 
 export default [
   {
@@ -50,7 +52,7 @@ export default [
         }
       }
     ],
-    plugins
+    plugins: getPlugins({ node: "6" })
   },
   {
     input,
@@ -60,13 +62,20 @@ export default [
         file: pkg.module,
         format: "es",
         sourcemap: true
-      },
+      }
+    ],
+    plugins: getPlugins({ node: "10" })
+  },
+  {
+    input,
+    external: external.concat(Object.keys(pkg.dependencies)),
+    output: [
       {
         file: pkg.main,
         format: "cjs",
         sourcemap: true
       }
     ],
-    plugins
+    plugins: getPlugins({ node: "6" })
   }
 ];

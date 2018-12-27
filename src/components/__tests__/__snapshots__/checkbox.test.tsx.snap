@@ -1,40 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox snapshot 1`] = `
-.emotion-1 {
-  outline: none;
-  position: relative;
-}
-
 .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-weight: 400;
-  color: #101721;
-  font-size: 14px;
-  cursor: pointer;
-  padding: 10px 0;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-
-.emotion-0 i {
   margin-right: 10px;
   font-size: 16px;
 }
 
-.emotion-0[data-disabled='true'] {
+.emotion-1 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+}
+
+.emotion-1[data-disabled='true'] {
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.emotion-0[data-disabled='true'] i {
+.emotion-1[data-disabled='true'] .emotion-0 {
   color: #E0E0E0;
 }
 
@@ -45,20 +40,16 @@ exports[`Checkbox snapshot 1`] = `
   role="checkbox"
   tabIndex={0}
 >
-  <div
-    className="emotion-0"
-  >
-    <i
-      className="pi pi-checkbox-selected"
-      style={
-        Object {
-          "color": "#6161FF",
-          "paddingTop": 2,
-        }
+  <i
+    className="emotion-0 pi pi-checkbox-selected"
+    style={
+      Object {
+        "color": "#6161FF",
+        "paddingTop": 2,
       }
-    />
-     
-    I am a checkbox
-  </div>
+    }
+  />
+   
+  I am a checkbox
 </div>
 `;

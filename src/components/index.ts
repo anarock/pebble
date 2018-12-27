@@ -16,6 +16,7 @@ import DateInput from "./DateInput";
 import Tooltip from "./Tooltip";
 import Logo from "./Logo";
 import Popper from "./Popper";
+import PopUp from "./PopUp";
 import Loader from "./Loader";
 import Radio from "./Radio";
 import RadioGroup from "./RadioGroup";
@@ -26,6 +27,7 @@ import OptionGroupRadio from "./OptionGroupRadio";
 import OptionGroupCheckBox from "./OptionGroupCheckBox";
 import OutsideClick from "./OutsideClick";
 import PhoneNumberInput from "./PhoneNumberInput";
+import TimePicker from "./TimePicker";
 
 export {
   Button,
@@ -40,6 +42,7 @@ export {
   Slider,
   Stepper,
   Tag,
+  TimePicker,
   Toast,
   TypeAhead,
   SideBar,
@@ -47,6 +50,7 @@ export {
   Tooltip,
   Logo,
   Popper,
+  PopUp,
   Loader,
   Radio,
   RadioGroup,
