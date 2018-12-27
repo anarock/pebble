@@ -1,6 +1,5 @@
 import Button, { DropDownButton } from "./Button";
 import Calendar from "./Calendar";
-import Controls from "./Controls";
 import DropDown from "./DropDown";
 import Input from "./Input";
 import Modal from "./Modal";
@@ -33,7 +32,6 @@ export {
   Button,
   DropDownButton,
   Calendar,
-  Controls,
   DropDown,
   Input,
   Modal,
