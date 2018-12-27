@@ -4,7 +4,7 @@ declare global {
   interface Window {
     ga: {
       // tslint:disable-next-line no-any
-      function(args: any[]): void;
+      (...args: any[]): void;
       // tslint:disable-next-line no-any
       q: any[];
       l: number;
@@ -30,9 +30,7 @@ export function initGoogleAnalytics(gaId: string) {
       if (m.parentNode) m.parentNode.insertBefore(a, m);
     })(document, "script", "https://www.google-analytics.com/analytics.js");
 
-    // @ts-ignore
     window.ga("create", gaId, "auto");
-    // @ts-ignore
     window.ga("send", "pageview");
   }
 }
