@@ -1,7 +1,7 @@
 import * as PopperJS from "popper.js";
 
 export interface TooltipProps {
-  text: string | React.ReactNode;
+  text: React.ReactNode;
   placement?: PopperJS.Placement;
   modifiers?: PopperJS.Modifiers;
   isOpen?: boolean;

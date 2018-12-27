@@ -2,14 +2,14 @@ import * as React from "react";
 
 export interface ControlProps {
   onChange?: (
-    args: { value: React.ReactText; checked: boolean },
+    args: { value: string | number; checked: boolean },
     e: React.MouseEvent
   ) => void;
-  value: React.ReactText;
-  label: React.ReactText | React.ReactNode;
+  value: string | number;
+  label: React.ReactNode;
   checked?: boolean;
   disabled?: boolean;
-  children?: (props: ControlProps) => React.ReactNode | React.ReactNodeArray;
+  children?: (props: ControlProps) => React.ReactNode;
   type: "radio" | "checkbox";
   className?: string;
 }

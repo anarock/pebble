@@ -8,7 +8,7 @@ export interface OptionsProps {
     item: Option,
     index?: number,
     selected?: boolean
-  ) => React.ReactNode | string;
+  ) => React.ReactNode;
   dropdownClassName?: string;
   width?: number | string;
   selected?: Option;
