@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio snapshot 1`] = `
+.emotion-0 {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.emotion-1 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+}
+
+.emotion-1[data-disabled='true'] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.emotion-1[data-disabled='true'] .emotion-0 {
+  color: #E0E0E0;
+}
+
+<div
+  aria-checked={true}
+  className="emotion-1"
+  onClick={[Function]}
+  role="radio"
+  tabIndex={0}
+>
+  <i
+    className="emotion-0 pi pi-radio-selected"
+    style={
+      Object {
+        "color": "#6161FF",
+        "paddingTop": 2,
+      }
+    }
+  />
+   
+  I am radio button
+</div>
+`;

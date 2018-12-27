@@ -1,0 +1,19 @@
+{
+  "name": "pebble-theme",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && tsc && node ./scripts/generateIcon.js && yarn copy:fonts",
+    "copy:fonts": "copy './dist/fonts/*.ttf' ./native/icons",
+    "test": "exit 0"
+  },
+  "devDependencies": {
+    "copy": "^0.3.2",
+    "moment": "^2.23.0",
+    "react-native-vector-icons": "^6.1.0",
+    "svgo": "^1.1.1",
+    "webfonts-generator": "^0.4.0"
+  }
+}
