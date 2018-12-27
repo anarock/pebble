@@ -32,7 +32,7 @@ interface GroupedOptionGroupState<D extends DataPoint, G extends Group<D>> {
   propOptions?: G[];
   propSelected?: number[];
   searchBoxValue: string;
-  optionGroupChildren: JSX.Element[];
+  optionGroupChildren: React.ReactNode[];
 }
 
 const subOptionClass = css({
@@ -189,7 +189,7 @@ class GroupedOptionGroup<
         { keys: ["label"] }
       ).map(o => <Option key={o.id} value={o.id} label={o.label} />);
     }
-    return ([] as JSX.Element[]).concat(
+    return ([] as React.ReactNode[]).concat(
       ...options
         .filter(group => group.options.length)
         .map(
@@ -210,7 +210,7 @@ class GroupedOptionGroup<
                   className={group.group_label && subOptionClass}
                 />
               ))
-            ].filter(f => f) as JSX.Element[]
+            ].filter(f => f) as React.ReactNode[]
         )
     );
   }
