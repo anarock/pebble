@@ -9,5 +9,6 @@ export const animationConfig = {
       ? { duration: 0.1 }
       : {
           duration: 200
+          // currently the types of react-spring are outdated and don't mention the second parameter.
         }) as (key: string) => SpringConfig
 };
