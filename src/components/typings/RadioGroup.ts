@@ -6,7 +6,7 @@ export interface RadioGroupProps {
     value: number | string | undefined,
     event: React.MouseEvent
   ) => void;
-  children: React.ReactNode | React.ReactNodeArray;
+  children: React.ReactNode;
   toggle?: boolean;
   className?: string;
   name: string;
