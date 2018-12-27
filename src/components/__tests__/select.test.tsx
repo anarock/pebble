@@ -8,6 +8,7 @@ import { SingleSelectProps, MultiSelectProps } from "../typings/Select";
 import Button from "../Button";
 import Input from "../Input";
 import Search from "../Search";
+import "../../../tests/__setup__/matchers";
 
 const options = new Array(5)
   .fill(1)
@@ -78,13 +79,12 @@ describe("Component: Select", () => {
     const spy = sinon.spy();
     const select = mount(getComponent(spy));
 
-    expect(select.find(Option)).toHaveLength(0);
-
     select.find(Input).simulate("click");
     expect(select.find(Option)).toHaveLength(5);
   });
 
   test("single select: should trigger onChange with correct onChange", () => {
+    const clock = sinon.useFakeTimers();
     const spy = sinon.spy();
     const select = mount(getComponent(spy));
     select.find(Input).simulate("click");
@@ -94,10 +94,16 @@ describe("Component: Select", () => {
       .simulate("click");
 
     expect(spy.calledWith("option-3")).toBeTruthy();
-    expect(select.find(Option)).toHaveLength(0);
+
+    // wait for the dropdown animation to get over.
+    clock.tick(1000);
+
+    // This means that Option is no more rendered in DOM.
+    expect(select).toNotBeInDOM("[data-test-id='optiongroup']");
   });
 
   test("multi select: should trigger onChange with correct onChange", () => {
+    const clock = sinon.useFakeTimers();
     const spy = sinon.spy();
     const applySpy = sinon.spy();
     const clearSpy = sinon.spy();
@@ -160,8 +166,10 @@ describe("Component: Select", () => {
       .simulate("click");
     expect(applySpy.calledWith(["option-3"])).toBeTruthy();
 
+    clock.tick(1000);
+
     // ensure the dropdown is closed
-    expect(select.find(Option)).toHaveLength(0);
+    expect(select).toNotBeInDOM("[data-test-id='optiongroup']");
   });
 
   test("single select: query change triggers onChange", () => {
@@ -224,6 +232,7 @@ describe("Component: Select", () => {
       })
     );
 
+    // The animation hasn't run yet so the component won't be even present in the vDOM
     expect(select.find(Option)).toHaveLength(0);
 
     select.find(Input).simulate("click");
@@ -246,6 +255,7 @@ test("should not open if disabled when input is clicked", () => {
     })
   );
 
+  // The animation hasn't run yet so the component won't be even present in the vDOM
   expect(select.find(Option)).toHaveLength(0);
 
   select.find(Input).simulate("click");

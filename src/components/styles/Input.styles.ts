@@ -52,7 +52,8 @@ export const inputDisabledStyle = css({
 
 export const inputTextAreaStyle = css({
   height: 88,
-  padding: "24px 0 52px 0",
+  padding: "0 0 52px 0",
+  marginTop: 22,
   resize: "none"
 });
 

@@ -23,7 +23,9 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
     console.log(err);
   }
 
-  const files = data.map(x => `./svgs/${x}`);
+  const files = data
+    .filter(file => file.endsWith("svg"))
+    .map(x => `./svgs/${x}`);
 
   fs.writeFile(
     "./icons.json",
