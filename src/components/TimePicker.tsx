@@ -70,8 +70,11 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
       >
         {({ toggle }) => (
           <OptionGroupRadio
-            onChange={(value: number) => {
-              onHourChange(value);
+            onChange={value => {
+              // `value as number` is a escape hack because we have to handle number | string
+              // and OptionGroupRadio cannot determine its type on its own.
+              // TODO: Remove all `as`.
+              onHourChange(value as number);
               toggle();
             }}
             selected={selectedHour}
@@ -111,8 +114,11 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
       >
         {({ toggle }) => (
           <OptionGroupRadio
-            onChange={(value: number) => {
-              onMinuteChange(value);
+            onChange={value => {
+              // `value as number` is a escape hack because we have to handle number | string
+              // and OptionGroupRadio cannot determine its type on its own.
+              // TODO: Remove all `as`.
+              onMinuteChange(value as number);
               toggle();
             }}
             selected={selectedMinute}

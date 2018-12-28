@@ -13,7 +13,7 @@ export interface TypeaheadProps {
       value: string;
     },
     props: TypeaheadProps
-  ) => JSX.Element;
+  ) => React.ReactNode;
   debounceTime: number;
   onChange: (text: string, props: TypeaheadProps) => void;
   onSelect: (value: number | string | undefined, props: TypeaheadProps) => void;

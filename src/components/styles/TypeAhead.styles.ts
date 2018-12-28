@@ -10,5 +10,6 @@ export const optionsWrapper = css({
   position: "absolute",
   marginTop: -40,
   zIndex: 999,
-  boxShadow: constants.boxShadow.elevated
+  boxShadow: constants.boxShadow.elevated,
+  transformOrigin: "0 0"
 });

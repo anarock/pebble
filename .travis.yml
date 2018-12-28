@@ -6,6 +6,9 @@ env:
 cache: yarn
 git:
   depth: 5
+before_install:
+  - chmod +x build.sh
 script:
   - yarn build
   - yarn test:cover
+  - ./build.sh
