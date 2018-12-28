@@ -14,8 +14,12 @@ import {
 import { TimePickerProps } from "./typings/TimePicker";
 import { colors } from "../theme/colors";
 
-const HOURS = [...Array(12)].map((_, i) => ("00" + (i + 1)).slice(-2));
-const MINUTES = [...Array(4)].map((_, i) => ("00" + i * 15).slice(-2));
+const HOURS = /*#__PURE__*/ [...Array(12)].map((_, i) =>
+  ("00" + (i + 1)).slice(-2)
+);
+const MINUTES = /*#__PURE__*/ [...Array(4)].map((_, i) =>
+  ("00" + i * 15).slice(-2)
+);
 
 export const iconStyle = css({
   marginLeft: 15,
