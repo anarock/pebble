@@ -721,6 +721,7 @@ Array [
 .emotion-1 {
   margin-left: 10px;
   color: #E0E0E0;
+  font-size: 20px;
 }
 
 <div
