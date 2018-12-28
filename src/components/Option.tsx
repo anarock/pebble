@@ -22,7 +22,8 @@ class Option extends React.Component<OptionProps> {
         },
         css({
           marginLeft: "10px",
-          color: isSelected ? colors.violet.base : colors.gray.light
+          color: isSelected ? colors.violet.base : colors.gray.light,
+          fontSize: "20px"
         })
       );
       return multiSelect ? <i className={iconClass} /> : null;
