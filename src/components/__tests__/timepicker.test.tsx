@@ -4,7 +4,6 @@ import TimePicker from "../TimePicker";
 import * as React from "react";
 import { mount } from "enzyme";
 import sinon from "sinon";
-// import { DropDownButton } from "../Button";
 import Option from "../Option";
 import DropDown from "../DropDown";
 
