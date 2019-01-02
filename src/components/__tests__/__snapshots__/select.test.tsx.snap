@@ -1,33 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Select multi-select: snapshot 1`] = `
-.emotion-7 {
-  margin-bottom: 20px;
-}
-
-.emotion-6 {
-  position: relative;
-}
-
-.emotion-5 {
-  cursor: pointer;
-  position: relative;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 25px;
-  right: 7px;
-  color: #9FA6B0;
-  font-size: 10px;
-}
-
-.emotion-4.__pebble__select__open {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
 .emotion-2 {
   height: 2px;
   background-color: #6161FF;
@@ -64,6 +37,33 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   -ms-transform: translate(0,0);
   transform: translate(0,0);
   color: #6B7785;
+}
+
+.emotion-7 {
+  margin-bottom: 20px;
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-5 {
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 25px;
+  right: 7px;
+  color: #9FA6B0;
+  font-size: 10px;
+}
+
+.emotion-4.__pebble__select__open {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .emotion-0 {
@@ -193,33 +193,6 @@ exports[`Component: Select multi-select: snapshot 1`] = `
 `;
 
 exports[`Component: Select single-select with searchbox: snapshot 1`] = `
-.emotion-7 {
-  margin-bottom: 20px;
-}
-
-.emotion-6 {
-  position: relative;
-}
-
-.emotion-5 {
-  cursor: pointer;
-  position: relative;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 25px;
-  right: 7px;
-  color: #9FA6B0;
-  font-size: 10px;
-}
-
-.emotion-4.__pebble__select__open {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
 .emotion-2 {
   height: 2px;
   background-color: #6161FF;
@@ -256,6 +229,33 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   -ms-transform: translate(0,0);
   transform: translate(0,0);
   color: #6B7785;
+}
+
+.emotion-7 {
+  margin-bottom: 20px;
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-5 {
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 25px;
+  right: 7px;
+  color: #9FA6B0;
+  font-size: 10px;
+}
+
+.emotion-4.__pebble__select__open {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .emotion-0 {
@@ -385,33 +385,6 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
 `;
 
 exports[`Component: Select single-select: snapshot 1`] = `
-.emotion-7 {
-  margin-bottom: 20px;
-}
-
-.emotion-6 {
-  position: relative;
-}
-
-.emotion-5 {
-  cursor: pointer;
-  position: relative;
-}
-
-.emotion-4 {
-  position: absolute;
-  top: 25px;
-  right: 7px;
-  color: #9FA6B0;
-  font-size: 10px;
-}
-
-.emotion-4.__pebble__select__open {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
 .emotion-2 {
   height: 2px;
   background-color: #6161FF;
@@ -448,6 +421,33 @@ exports[`Component: Select single-select: snapshot 1`] = `
   -ms-transform: translate(0,0);
   transform: translate(0,0);
   color: #6B7785;
+}
+
+.emotion-7 {
+  margin-bottom: 20px;
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-5 {
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-4 {
+  position: absolute;
+  top: 25px;
+  right: 7px;
+  color: #9FA6B0;
+  font-size: 10px;
+}
+
+.emotion-4.__pebble__select__open {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .emotion-0 {
