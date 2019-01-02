@@ -26,6 +26,7 @@ class PresetCalendar extends React.PureComponent<
 > {
   static defaultProps: Partial<PresetCalendarProps> = {
     onApply: () => {},
+    isOpen: false,
     presetDateOptions: [
       {
         label: "Yesterday",
@@ -68,6 +69,7 @@ class PresetCalendar extends React.PureComponent<
       <Popper
         label={({ toggle, isOpen }) => customDateInputLabel({ toggle, isOpen })}
         popperClassName={css({ padding: 20 })}
+        isOpen={this.props.isOpen}
       >
         {({ toggle }) => {
           return (

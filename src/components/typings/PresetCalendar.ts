@@ -12,6 +12,7 @@ export interface PresetCalendarProps {
   ) => JSX.Element;
   onApply: (value?: CalendarValue) => void;
   calendarProps: CalendarProps;
+  isOpen: boolean;
 }
 
 export interface PresetCalendarState {

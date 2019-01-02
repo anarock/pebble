@@ -23,7 +23,7 @@ storiesOf("Recipes/PresetCalendar", module).add("Default", () => (
     customDateInputLabel={({ toggle }) => {
       return (
         <div onClick={toggle} className={css({ cursor: "pointer" })}>
-          Date Input
+          Custom Date Input
         </div>
       );
     }}
