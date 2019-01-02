@@ -14,48 +14,20 @@ import {
   dotStyle,
   dotWrapper,
   tileStyle,
-  wrapperStyle,
-  quickDateTags,
-  customChevronIcon,
-  customSelected
+  wrapperStyle
 } from "./styles/Calendar.styles";
 import Button from "./Button";
-import {
-  isSameDay,
-  endOfDay,
-  startOfDay,
-  endOfYesterday,
-  startOfYesterday
-} from "date-fns";
-import Popper from "./Popper";
-import { mixins } from "../theme";
+import { isSameDay, endOfDay, startOfDay } from "date-fns";
 
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   static defaultProps: Partial<CalendarProps> = {
     onChange: () => {},
-    onApply: () => {},
-    tileDots: [],
-    quickDates: false,
-    quickDateOptions: [
-      {
-        label: "Yesterday",
-        dateRange: () => [startOfYesterday(), endOfYesterday()]
-      },
-      {
-        label: "Past Week",
-        dateRange: () => {
-          const startDate = new Date().setDate(new Date().getDate() - 7);
-          const endDate = new Date().setDate(new Date().getDate() - 1);
-          return [startOfDay(startDate), endOfDay(endDate)];
-        }
-      }
-    ]
+    tileDots: []
   };
 
   state: CalendarState = {
     value: this.props.selected,
-    singleSelectedDate: null,
-    isCustomSelected: false
+    singleSelectedDate: null
   };
 
   private onChange = (value: CalendarValue) => {
@@ -107,7 +79,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     );
   };
 
-  private getCalendar = (toggle?: () => void) => {
+  render() {
     const {
       range,
       selected,
@@ -115,7 +87,6 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
       className,
       onApply,
       onClear,
-      quickDates,
       ...rest
     } = this.props;
 
@@ -124,8 +95,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         className={cx(
           wrapperStyle,
           {
-            [css({ boxShadow: "none" })]: hideShadow || quickDates,
-            [css({ padding: "10px 0 0 0" })]: quickDates
+            [css({ boxShadow: "none" })]: hideShadow
           },
           className
         )}
@@ -162,7 +132,6 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
             {onApply && (
               <Button
                 onClick={() => {
-                  if (toggle) toggle();
                   range && this.state.singleSelectedDate
                     ? onApply(this.state.singleSelectedDate)
                     : onApply(this.state.value);
@@ -175,76 +144,6 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         )}
       </div>
     );
-  };
-
-  render() {
-    const {
-      quickDates,
-      quickDateOptions,
-      customDateInputLabel,
-      onApply
-    } = this.props;
-    const { isCustomSelected } = this.state;
-    if (quickDates) {
-      return (
-        <Popper
-          label={({ toggle, isOpen }) => {
-            if (customDateInputLabel) {
-              return customDateInputLabel({ toggle, isOpen });
-            }
-            return (
-              <div onClick={toggle} className={css({ cursor: "pointer" })}>
-                Date Input
-              </div>
-            );
-          }}
-          popperClassName={css({ padding: 20 })}
-        >
-          {({ toggle }) => {
-            return (
-              <>
-                <div className={css({ ...mixins.flexSpaceBetween })}>
-                  {quickDateOptions.map((date, i) => {
-                    return (
-                      <div
-                        key={i}
-                        onClick={() => {
-                          toggle();
-                          onApply(date.dateRange());
-                          this.setState({ isCustomSelected: false });
-                        }}
-                        className={quickDateTags}
-                      >
-                        {date.label}
-                      </div>
-                    );
-                  })}
-                  <div
-                    className={cx(quickDateTags, {
-                      [customSelected]: isCustomSelected
-                    })}
-                    onClick={() =>
-                      this.setState({ isCustomSelected: !isCustomSelected })
-                    }
-                  >
-                    Custom{" "}
-                    <i
-                      className={cx(
-                        "pi",
-                        "pi-arrow-drop-down",
-                        customChevronIcon
-                      )}
-                    />
-                  </div>
-                </div>
-                {isCustomSelected && this.getCalendar(toggle)}
-              </>
-            );
-          }}
-        </Popper>
-      );
-    }
-    return this.getCalendar();
   }
 }
 

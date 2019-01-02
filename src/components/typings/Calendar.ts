@@ -7,11 +7,6 @@ interface TileDot {
 
 export type CalendarValue = Date[] | Date;
 
-interface QuickDates {
-  label: string;
-  dateRange: () => CalendarValue;
-}
-
 export interface CalendarProps extends CP {
   onChange: (value: CalendarValue) => void;
   range?: boolean;
@@ -19,18 +14,12 @@ export interface CalendarProps extends CP {
   hideShadow?: boolean;
   className?: string;
   onClear?: () => void;
-  onApply: (value?: CalendarValue) => void;
+  onApply?: (value?: CalendarValue) => void;
   tileDots: TileDot[];
   disabledDays?: Array<number | Date>;
-  quickDates: boolean;
-  quickDateOptions: QuickDates[];
-  customDateInputLabel?: (
-    args: { toggle: () => void; isOpen: boolean }
-  ) => JSX.Element;
 }
 
 export interface CalendarState {
   value?: CalendarValue;
   singleSelectedDate?: Date[] | null;
-  isCustomSelected: boolean;
 }

@@ -65,7 +65,7 @@ export const tileStyle = css({
 
 export const dateStyle = css({
   width: 356,
-  margin: "10px auto",
+  margin: 10,
   position: "relative",
   ".react-calendar__month-view__weekdays__weekday": {
     color: colors.gray.dark,
@@ -131,26 +131,3 @@ export const buttonsWrapper = css({
   ...mixins.flexSpaceBetween,
   marginTop: 20
 });
-
-const selectedTag = {
-  background: colors.violet.lightest,
-  color: colors.violet.base
-};
-
-export const quickDateTags = css({
-  padding: "10px 15px",
-  marginRight: 5,
-  fontSize: 14,
-  borderRadius: constants.borderRadius,
-  cursor: "pointer",
-  ":hover": selectedTag
-});
-
-export const customChevronIcon = css({
-  fontSize: 10,
-  display: "inline-flex",
-  marginLeft: 5,
-  color: colors.gray.base
-});
-
-export const customSelected = css(selectedTag);
