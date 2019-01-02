@@ -7,7 +7,7 @@ export interface PresetDates {
 
 export interface PresetCalendarProps {
   presetDateOptions: PresetDates[];
-  customDateInputLabel?: (
+  customDateInputLabel: (
     args: { toggle: () => void; isOpen: boolean }
   ) => JSX.Element;
   onApply: (value?: CalendarValue) => void;

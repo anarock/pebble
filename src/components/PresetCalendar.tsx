@@ -66,16 +66,7 @@ class PresetCalendar extends React.PureComponent<
 
     return (
       <Popper
-        label={({ toggle, isOpen }) => {
-          if (customDateInputLabel) {
-            return customDateInputLabel({ toggle, isOpen });
-          }
-          return (
-            <div onClick={toggle} className={css({ cursor: "pointer" })}>
-              Date Input
-            </div>
-          );
-        }}
+        label={({ toggle, isOpen }) => customDateInputLabel({ toggle, isOpen })}
         popperClassName={css({ padding: 20 })}
       >
         {({ toggle }) => {

@@ -4,6 +4,7 @@ import { object } from "@storybook/addon-knobs";
 import PresetCalendar from "../src/components/PresetCalendar";
 import { action } from "@storybook/addon-actions";
 import { colors } from "../src/theme";
+import { css } from "emotion";
 
 storiesOf("Recipes/PresetCalendar", module).add("Default", () => (
   <PresetCalendar
@@ -19,5 +20,12 @@ storiesOf("Recipes/PresetCalendar", module).add("Default", () => (
       ])
     }}
     onApply={action("apply")}
+    customDateInputLabel={({ toggle }) => {
+      return (
+        <div onClick={toggle} className={css({ cursor: "pointer" })}>
+          Date Input
+        </div>
+      );
+    }}
   />
 ));
