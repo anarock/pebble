@@ -70,8 +70,8 @@ Array [
   .emotion-0 {
   background-color: #ffffff;
   border-radius: 3px;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,13 +85,13 @@ Array [
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
-  margin-left: -70px;
+  margin-left: -60px;
   margin-top: 20px;
   position: absolute;
 }
 
 .emotion-0 i {
-  font-size: 25px;
+  font-size: 14px;
   color: #101721;
 }
 
@@ -114,7 +114,7 @@ Array [
   .emotion-0 i {
     float: right;
     color: #6B7785;
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 

@@ -3,7 +3,13 @@ import { colors } from "../../theme";
 
 export const timePickerWrap = css({
   display: "flex",
-  alignItems: "center"
+  alignItems: "center",
+  border: `1px solid ${colors.gray.light}`,
+  borderRadius: "3px",
+  cursor: "pointer",
+  "&:not([disabled]):hover": {
+    background: colors.gray.light
+  }
 });
 
 export const timePickerSelected = css({
@@ -16,10 +22,8 @@ export const hourPicker = css({
 });
 
 export const seperator = css({
-  borderTop: `1px solid ${colors.gray.light}`,
-  borderBottom: `1px solid ${colors.gray.light}`,
-  padding: "10px 0px",
-  color: colors.gray.dark
+  color: colors.gray.dark,
+  lineHeight: "40px"
 });
 
 export const minutePicker = css({

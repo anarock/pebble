@@ -28,7 +28,7 @@ type Item = any;
 export interface StepperProps {
   keyExtractor: (item: Item) => number | string;
   data: Item[];
-  renderContentElement: (args: ArgsRenderContent) => JSX.Element;
+  renderContentElement: (args: ArgsRenderContent) => React.ReactNode;
   headingExtractor: (obj: { item: Item }) => string;
   renderFooterElement: (
     args: ArgsRenderFooter,

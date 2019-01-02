@@ -4,13 +4,13 @@ import { ButtonType } from "./Button";
 type Toggle = () => void;
 
 export interface DropdownProps {
-  children: (args: { toggle: Toggle; isOpen: boolean }) => JSX.Element | string;
-  buttonLabel?: React.ReactChildren | string;
+  children: (args: { toggle: Toggle; isOpen: boolean }) => React.ReactNode;
+  buttonLabel?: React.ReactNode;
   closeOnOutsideClick?: boolean;
   type?: ButtonType;
   labelComponent?: (
     arg: { isOpen: boolean; toggleDropdown: Toggle }
-  ) => JSX.Element;
+  ) => React.ReactNode;
   padding?: number | string;
   className?: string;
   dropDownClassName?: string;
