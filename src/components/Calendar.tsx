@@ -20,11 +20,6 @@ import Button from "./Button";
 import { isSameDay, endOfDay, startOfDay } from "date-fns";
 
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
-  static defaultProps: Partial<CalendarProps> = {
-    onChange: () => {},
-    tileDots: []
-  };
-
   state: CalendarState = {
     value: this.props.selected,
     singleSelectedDate: null
@@ -39,8 +34,8 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
       },
       () =>
         range && Array.isArray(value)
-          ? value.length === 2 && onChange(value)
-          : onChange(value)
+          ? value.length === 2 && onChange && onChange(value)
+          : onChange && onChange(value)
     );
   };
 
@@ -51,7 +46,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   };
 
   private getTileContent = ({ date }: CalendarTileProperties) => {
-    const dot = this.props.tileDots.find(
+    const dot = this.props.tileDots && this.props.tileDots.find(
       datum => !!datum.timeStamp && isSameDay(date, datum.timeStamp)
     );
 
