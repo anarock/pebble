@@ -4,13 +4,15 @@ import { isDesktop } from "../../utils";
 
 const animation = "all 0.3s cubic-bezier(.64,.09,.08,1)";
 
+export const inputMarginBottom = 20;
+
 export const wrapperStyle = css({
   position: "relative",
   display: "flex",
   backgroundColor: colors.white.base,
   width: "100%",
   flexDirection: "column",
-  marginBottom: 20,
+  marginBottom: inputMarginBottom,
   height: 68,
   "&._pebble_input_wrapper_textarea": {
     height: 110
