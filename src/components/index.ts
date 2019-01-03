@@ -22,6 +22,7 @@ import RadioGroup from "./RadioGroup";
 import Checkbox from "./Checkbox";
 import CheckboxGroup from "./CheckboxGroup";
 import Option from "./Option";
+import OptionGroup from "./shared/OptionGroup";
 import OptionGroupRadio from "./OptionGroupRadio";
 import OptionGroupCheckBox from "./OptionGroupCheckBox";
 import OutsideClick from "./OutsideClick";
@@ -55,6 +56,7 @@ export {
   Checkbox,
   CheckboxGroup,
   Option,
+  OptionGroup,
   OptionGroupRadio,
   OptionGroupCheckBox,
   OutsideClick,
