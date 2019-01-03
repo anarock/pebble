@@ -5,7 +5,7 @@ export interface ControlProps {
     args: { value: string | number; checked: boolean },
     e: React.MouseEvent
   ) => void;
-  value: any;
+  value: number | string | {[key : string | number ]: stirng | number};
   label: React.ReactNode;
   checked?: boolean;
   disabled?: boolean;
