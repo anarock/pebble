@@ -1,5 +1,6 @@
 import { css } from "emotion";
 import { colors } from "../../theme";
+import { inputMarginBottom } from "./Input.styles";
 
 export const selectWrapper = css({
   marginBottom: 20
@@ -19,7 +20,7 @@ export const selectInput = css({
 });
 
 export const dropDownClass = css({
-  marginTop: -40
+  marginTop: -inputMarginBottom
 });
 
 export const fullWidth = css({

@@ -1,29 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Select default snapshot 1`] = `
-.emotion-7 {
-  position: relative;
-}
-
-.emotion-6 {
-  cursor: pointer;
-  position: relative;
-}
-
-.emotion-5 {
-  position: absolute;
-  top: 25px;
-  right: 7px;
-  color: #9FA6B0;
-  font-size: 10px;
-}
-
-.emotion-5.__pebble__select__open {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
 .emotion-12 {
   position: relative;
   display: -webkit-box;
@@ -137,6 +114,29 @@ exports[`Component: Select default snapshot 1`] = `
   -ms-transform: translate(0,0);
   transform: translate(0,0);
   color: #6B7785;
+}
+
+.emotion-7 {
+  position: relative;
+}
+
+.emotion-6 {
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-5 {
+  position: absolute;
+  top: 25px;
+  right: 7px;
+  color: #9FA6B0;
+  font-size: 10px;
+}
+
+.emotion-5.__pebble__select__open {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .emotion-13 {
