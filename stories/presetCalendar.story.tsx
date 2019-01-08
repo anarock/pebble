@@ -6,8 +6,9 @@ import { action } from "@storybook/addon-actions";
 import { colors } from "../src/theme";
 import { css } from "emotion";
 
-storiesOf("Recipes/PresetCalendar", module).add("Default", () => (
+storiesOf("Components/PresetCalendar", module).add("Default", () => (
   <PresetCalendar
+    isOpen
     onChange={action("change")}
     maxDate={new Date()}
     onClear={action("clear")}

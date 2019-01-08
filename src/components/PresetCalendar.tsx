@@ -68,6 +68,7 @@ class PresetCalendar extends React.PureComponent<
         label={({ toggle, isOpen }) => customDateInputLabel({ toggle, isOpen })}
         popperClassName={popperWrap}
         isOpen={this.props.isOpen}
+        onOutsideClick={() => this.setState({ isCustomSelected: false })}
       >
         {({ toggle }) => {
           return (
@@ -115,6 +116,7 @@ class PresetCalendar extends React.PureComponent<
                   range
                   onApply={value => {
                     toggle();
+                    this.setState({ isCustomSelected: false });
                     this.props.onApply(value);
                   }}
                 />

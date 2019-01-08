@@ -27,7 +27,7 @@ export const openIcon = css({ transform: "rotate(180deg)" });
 
 export const customSelected = css(selectedTag);
 
-export const popperWrap = css({ padding: 20 });
+export const popperWrap = css({ padding: 20, minWidth: 416 });
 
 export const presetCalWrap = css({ padding: "10px 0 0 0" });
 

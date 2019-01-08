@@ -32,6 +32,7 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
       controlled,
       isOpen,
       popperClassName,
+      onOutsideClick,
       ...props
     } = this.props;
 
@@ -39,11 +40,14 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
 
     return (
       <OutsideClick
-        onOutsideClick={() =>
+        onOutsideClick={() => {
           this.setState({
             isOpen: false
-          })
-        }
+          });
+          if (onOutsideClick) {
+            onOutsideClick();
+          }
+        }}
         disabled={!_isPopperOpen}
       >
         <Manager>
