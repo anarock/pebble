@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { colors, constants } from "../../theme";
+import { colors, constants, mixins } from "../../theme";
 
 const selectedTag = {
   background: colors.violet.lightest,
@@ -30,3 +30,5 @@ export const customSelected = css(selectedTag);
 export const popperWrap = css({ padding: 20 });
 
 export const presetCalWrap = css({ padding: "10px 0 0 0" });
+
+export const popperContent = css({ ...mixins.flexSpaceBetween });
