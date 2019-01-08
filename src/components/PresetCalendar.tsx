@@ -1,8 +1,7 @@
 import * as React from "react";
 import Calendar from "./Calendar";
-import { css, cx } from "emotion";
+import { cx } from "emotion";
 import Popper from "./Popper";
-import { mixins } from "../theme";
 import {
   PresetCalendarProps,
   PresetCalendarState,
@@ -20,7 +19,8 @@ import {
   customChevronIcon,
   popperWrap,
   presetCalWrap,
-  openIcon
+  openIcon,
+  popperContent
 } from "./styles/PresetCalendar.styles";
 
 class PresetCalendar extends React.PureComponent<
@@ -72,7 +72,7 @@ class PresetCalendar extends React.PureComponent<
         {({ toggle }) => {
           return (
             <>
-              <div className={css({ ...mixins.flexSpaceBetween })}>
+              <div className={popperContent}>
                 {presetDateOptions.map((date: PresetDates, i: number) => {
                   return (
                     <div
