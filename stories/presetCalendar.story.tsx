@@ -8,17 +8,15 @@ import { css } from "emotion";
 
 storiesOf("Recipes/PresetCalendar", module).add("Default", () => (
   <PresetCalendar
-    calendarProps={{
-      onChange: action("change"),
-      maxDate: new Date(),
-      onClear: action("clear"),
-      tileDots: object("tileDots", [
-        {
-          timeStamp: Date.now(),
-          colors: [colors.blue.base, colors.emerald.base, colors.yellow.base]
-        }
-      ])
-    }}
+    onChange={action("change")}
+    maxDate={new Date()}
+    onClear={action("clear")}
+    tileDots={object("tileDots", [
+      {
+        timeStamp: Date.now(),
+        colors: [colors.blue.base, colors.emerald.base, colors.yellow.base]
+      }
+    ])}
     onApply={action("apply")}
     customDateInputLabel={({ toggle }) => {
       return (

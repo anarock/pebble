@@ -5,13 +5,12 @@ export interface PresetDates {
   dateRange: () => CalendarValue;
 }
 
-export interface PresetCalendarProps {
+export interface PresetCalendarProps extends CalendarProps {
   presetDateOptions: PresetDates[];
   customDateInputLabel: (
     args: { toggle: () => void; isOpen: boolean }
   ) => JSX.Element;
   onApply: (value?: CalendarValue) => void;
-  calendarProps: CalendarProps;
   isOpen: boolean;
 }
 

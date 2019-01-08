@@ -19,7 +19,14 @@ export const customChevronIcon = css({
   fontSize: 10,
   display: "inline-flex",
   marginLeft: 5,
-  color: colors.gray.base
+  color: colors.gray.base,
+  transition: "transform 0.5s"
 });
 
+export const openIcon = css({ transform: "rotate(180deg)" });
+
 export const customSelected = css(selectedTag);
+
+export const popperWrap = css({ padding: 20 });
+
+export const presetCalWrap = css({ padding: "10px 0 0 0" });

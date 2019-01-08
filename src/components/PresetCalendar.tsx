@@ -17,7 +17,10 @@ import {
 import {
   quickDateTags,
   customSelected,
-  customChevronIcon
+  customChevronIcon,
+  popperWrap,
+  presetCalWrap,
+  openIcon
 } from "./styles/PresetCalendar.styles";
 
 class PresetCalendar extends React.PureComponent<
@@ -41,10 +44,8 @@ class PresetCalendar extends React.PureComponent<
         }
       }
     ],
-    calendarProps: {
-      onChange: () => {},
-      tileDots: []
-    }
+    onChange: () => {},
+    tileDots: []
   };
 
   state: PresetCalendarState = {
@@ -56,19 +57,16 @@ class PresetCalendar extends React.PureComponent<
       customDateInputLabel,
       presetDateOptions,
       onApply,
-      calendarProps
+      className
     } = this.props;
     const { isCustomSelected } = this.state;
 
-    const className = cx(
-      calendarProps.className,
-      css({ padding: "10px 0 0 0" })
-    );
+    const _className = cx(className, presetCalWrap);
 
     return (
       <Popper
         label={({ toggle, isOpen }) => customDateInputLabel({ toggle, isOpen })}
-        popperClassName={css({ padding: 20 })}
+        popperClassName={popperWrap}
         isOpen={this.props.isOpen}
       >
         {({ toggle }) => {
@@ -103,21 +101,22 @@ class PresetCalendar extends React.PureComponent<
                     className={cx(
                       "pi",
                       "pi-arrow-drop-down",
-                      customChevronIcon
+                      customChevronIcon,
+                      { [openIcon]: isCustomSelected }
                     )}
                   />
                 </div>
               </div>
               {isCustomSelected && (
                 <Calendar
-                  className={className}
+                  {...this.props}
+                  className={_className}
                   hideShadow
                   range
                   onApply={value => {
                     toggle();
                     this.props.onApply(value);
                   }}
-                  {...calendarProps}
                 />
               )}
             </>
