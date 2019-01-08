@@ -14,6 +14,10 @@ const contentWrapper = css({
   textAlign: "center"
 });
 
+const label = css({ marginBottom: 20 });
+
+const iconSize = css({ fontSize: 25 });
+
 const data = [
   {
     id: 1,
@@ -39,8 +43,8 @@ storiesOf("Components/Stepper", module).add("Default", () => (
     keyExtractor={item => item.id}
     renderContentElement={({ item }) => (
       <div className={contentWrapper}>
-        <div className={css({ marginBottom: 20 })}>{item.label}</div>
-        <div className={css({ fontSize: 25 })}>
+        <div className={label}>{item.label}</div>
+        <div className={iconSize}>
           <i className={cx("pi", item.icon)} />
         </div>
       </div>
