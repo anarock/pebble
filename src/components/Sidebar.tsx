@@ -35,6 +35,12 @@ class SideBar extends React.PureComponent<SidebarProps> {
     }
   }
 
+  componentWillUnmount() {
+    if (this.props.isOpen) {
+      document.body.classList.remove(disableScrollY);
+    }
+  }
+
   render() {
     const {
       width,
