@@ -34,7 +34,7 @@ class Modal extends React.PureComponent<ModalProps> {
   render(): React.ReactNode {
     if (!isBrowser) return null;
 
-    const { children, visible, className } = this.props;
+    const { children, visible, backDropClassName, modalClassName } = this.props;
     const node = this.node;
 
     return ReactDOM.createPortal(
@@ -44,10 +44,11 @@ class Modal extends React.PureComponent<ModalProps> {
             style={{
               opacity: transitionStyles.opacity
             }}
-            className={cx(modalContainer, className)}
+            className={cx(modalContainer, backDropClassName)}
           >
             <div
-              style={{ transform: transitionStyles.transform, display: "flex" }}
+              className={modalClassName}
+              style={{ transform: transitionStyles.transform }}
             >
               {children}
             </div>

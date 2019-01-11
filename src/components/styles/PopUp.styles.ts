@@ -12,6 +12,11 @@ export const modalContainer = css({
   position: "relative"
 });
 
+export const flexCenter = css({
+  display: "flex",
+  alignItems: "center"
+});
+
 export const buttonsContainer = css({
   ...mixins.flexSpaceBetween,
   marginTop: "40px"

@@ -5,7 +5,8 @@ import Button from "./Button";
 import {
   modalContainer,
   buttonsContainer,
-  iconCloseClassName
+  iconCloseClassName,
+  flexCenter
 } from "./styles/PopUp.styles";
 import { PopUpProps } from "./typings/PopUp";
 
@@ -20,7 +21,7 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
     children
   } = props;
   return (
-    <Modal visible={visible}>
+    <Modal visible={visible} modalClassName={flexCenter}>
       <div className={modalContainer}>
         {onClose && (
           <i
