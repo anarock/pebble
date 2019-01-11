@@ -14,7 +14,9 @@ export const modalContainer = css({
 
 export const flexCenter = css({
   display: "flex",
-  alignItems: "center"
+  alignItems: "center",
+  justifyContent: "center",
+  height: "100%"
 });
 
 export const buttonsContainer = css({
