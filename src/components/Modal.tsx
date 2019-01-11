@@ -1,13 +1,13 @@
 import * as React from "react";
 import { ModalProps } from "./typings/Modal";
 import { modalContainer } from "./styles/Modal.styles";
-import { cx } from "emotion";
+import { cx, css } from "emotion";
 import isBrowser from "is-in-browser";
 import * as ReactDOM from "react-dom";
 import MountTransition from "./shared/MountTransition";
 
 class Modal extends React.PureComponent<ModalProps> {
-  node = isBrowser ? document.createElement("div") : null;
+  private node = isBrowser ? document.createElement("div") : null;
 
   componentDidMount() {
     if (this.node) {
@@ -47,8 +47,12 @@ class Modal extends React.PureComponent<ModalProps> {
             className={cx(modalContainer, backDropClassName)}
           >
             <div
-              className={modalClassName}
-              style={{ transform: transitionStyles.transform }}
+              className={cx(
+                css({
+                  transform: transitionStyles.transform
+                }),
+                modalClassName
+              )}
             >
               {children}
             </div>
