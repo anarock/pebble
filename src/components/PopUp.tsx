@@ -20,7 +20,7 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
     children
   } = props;
   return (
-    <Modal visible={visible}>
+    <Modal visible={visible} align="flexCenter">
       <div className={modalContainer}>
         {onClose && (
           <i
