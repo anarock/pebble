@@ -1,6 +1,6 @@
 export interface ModalProps {
   visible: boolean;
-  className?: string;
+  backDropClassName?: string;
+  modalClassName?: string;
   children: React.ReactNode;
-  align?: "absoluteCenter" | "flexCenter";
 }

@@ -13,16 +13,3 @@ export const modalContainer = css({
   WebkitOverflowScrolling: "touch",
   zIndex: 99998
 });
-
-export const absoluteCenter = css({
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  margin: "auto",
-  transform: "translate(-50%, -50%)"
-});
-
-export const flexCenter = css({
-  display: "flex",
-  alignItems: "center"
-});

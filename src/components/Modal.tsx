@@ -1,10 +1,6 @@
 import * as React from "react";
 import { ModalProps } from "./typings/Modal";
-import {
-  modalContainer,
-  flexCenter,
-  absoluteCenter
-} from "./styles/Modal.styles";
+import { modalContainer } from "./styles/Modal.styles";
 import { cx } from "emotion";
 import isBrowser from "is-in-browser";
 import * as ReactDOM from "react-dom";
@@ -38,7 +34,7 @@ class Modal extends React.PureComponent<ModalProps> {
   render(): React.ReactNode {
     if (!isBrowser) return null;
 
-    const { children, visible, className, align } = this.props;
+    const { children, visible, backDropClassName, modalClassName } = this.props;
     const node = this.node;
 
     return ReactDOM.createPortal(
@@ -48,13 +44,10 @@ class Modal extends React.PureComponent<ModalProps> {
             style={{
               opacity: transitionStyles.opacity
             }}
-            className={cx(modalContainer, className)}
+            className={cx(modalContainer, backDropClassName)}
           >
             <div
-              className={cx({
-                [absoluteCenter]: align === "absoluteCenter",
-                [flexCenter]: align === "flexCenter"
-              })}
+              className={modalClassName}
               style={{ transform: transitionStyles.transform }}
             >
               {children}
