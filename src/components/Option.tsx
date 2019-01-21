@@ -11,25 +11,34 @@ import {
 import Ink from "react-ink";
 import { colors } from "../theme";
 
-class Option extends React.Component<OptionProps> {
-  static defaultProps: Partial<OptionProps> = {
-    rightElement: ({ isSelected, multiSelect }) => {
-      const iconClass = cx(
-        "pi",
-        {
-          "pi-checkbox-selected": isSelected,
-          "pi-checkbox-unselected": !isSelected
-        },
-        css({
-          marginLeft: "10px",
-          color: isSelected ? colors.violet.base : colors.gray.light,
-          fontSize: "20px"
-        })
-      );
-      return multiSelect ? <i className={iconClass} /> : null;
-    }
-  };
+const defaultProps = {
+  rightElement: ({
+    isSelected,
+    multiSelect
+  }: {
+    isSelected: boolean;
+    multiSelect: boolean;
+  }) => {
+    const iconClass = cx(
+      "pi",
+      {
+        "pi-checkbox-selected": isSelected,
+        "pi-checkbox-unselected": !isSelected
+      },
+      css({
+        marginLeft: "10px",
+        color: isSelected ? colors.violet.base : colors.gray.light,
+        fontSize: "20px"
+      })
+    );
+    return multiSelect ? <i className={iconClass} /> : null;
+  }
+};
 
+class Option<OptionType> extends React.Component<
+  OptionProps<OptionType> & Required<typeof defaultProps>
+> {
+  static defaultProps = defaultProps;
   render() {
     const {
       label,

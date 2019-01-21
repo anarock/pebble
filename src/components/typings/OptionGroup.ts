@@ -2,13 +2,13 @@ import * as React from "react";
 import { SearchProps } from "./Search";
 import { Omit } from "utility-types";
 
-export interface OptionGroupProps {
+export interface OptionGroupProps<OptionType = string | number> {
   className?: string;
   searchBox?: boolean;
   searchBoxProps?: Omit<SearchProps, "type">;
-  isSelected: (value: React.ReactText) => boolean;
+  isSelected: (value: OptionType) => boolean;
   handleChange: (
-    args: { value: React.ReactText; checked: boolean },
+    args: { value: OptionType; checked: boolean },
     e: React.SyntheticEvent | Event
   ) => void;
   multiSelect?: boolean;

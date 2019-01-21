@@ -1674,6 +1674,11 @@
   resolved "https://registry.yarnpkg.com/@types/sinon/-/sinon-7.0.2.tgz#234c03dd39bfa97616b28215caea3de043c63310"
   integrity sha512-YvJOqPk4kh1eQyxuASDD4MDK27XWAhtw6hJ7rRayEOkkTpZkqDWpDb4OjLVzFGdapOuUgZdnqO+71Q3utCJtcA==
 
+"@types/starwars-names@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@types/starwars-names/-/starwars-names-1.6.0.tgz#9fef2b6b1068e94b4468b9311c9567223dc86783"
+  integrity sha512-nuJc4vEVSdrdHXAlEWbGMwg6qJkqCaVqJxEccMUpLdl6UwjQzycblGnY8Ey4MPJWTdg3cBegKdSwJMVmD4i2+w==
+
 "@types/storybook__addon-a11y@^3.3.1":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@types/storybook__addon-a11y/-/storybook__addon-a11y-3.3.1.tgz#7b22a8d6636aba9e4f0e158aea410ed4f8090716"
@@ -11628,6 +11633,13 @@ staged-git-files@1.1.2:
   resolved "https://registry.yarnpkg.com/staged-git-files/-/staged-git-files-1.1.2.tgz#4326d33886dc9ecfa29a6193bf511ba90a46454b"
   integrity sha512-0Eyrk6uXW6tg9PYkhi/V/J4zHp33aNyi2hOCmhFLqLTIhbgqWn5jlSzI+IU0VqrZq6+DbHcabQl/WP6P3BG0QA==
 
+starwars-names@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/starwars-names/-/starwars-names-1.6.0.tgz#5f984b5a954714eb383b4d6c19234efea6398335"
+  integrity sha1-X5hLWpVHFOs4O01sGSNO/qY5gzU=
+  dependencies:
+    unique-random-array "1.0.0"
+
 stat-mode@^0.2.0:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/stat-mode/-/stat-mode-0.2.2.tgz#e6c80b623123d7d80cf132ce538f346289072502"
@@ -12606,6 +12618,18 @@ unique-filename@^1.1.1:
   integrity sha512-Vmp0jIp2ln35UTXuryvjzkjGdRyf9b2lTXuSYUiPmzRcl3FDtYqAwOnTJkAngD9SWhnoJzDbTKwaOrZ+STtxNQ==
   dependencies:
     unique-slug "^2.0.0"
+
+unique-random-array@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/unique-random-array/-/unique-random-array-1.0.0.tgz#42b3721c579388d8b667c93c2dbde3d5d81a9136"
+  integrity sha1-QrNyHFeTiNi2Z8k8Lb3j1dgakTY=
+  dependencies:
+    unique-random "^1.0.0"
+
+unique-random@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/unique-random/-/unique-random-1.0.0.tgz#ce3e224c8242cd33a0e77b0d7180d77e6b62d0c4"
+  integrity sha1-zj4iTIJCzTOg53sNcYDXfmti0MQ=
 
 unique-slug@^2.0.0:
   version "2.0.1"

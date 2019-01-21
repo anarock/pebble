@@ -18,7 +18,7 @@ import OptionGroupRadio from "./OptionGroupRadio";
 
 function noop() {}
 
-const Select: React.FunctionComponent<SelectProps> = props => {
+function Select<OptionType>(props: SelectProps<OptionType>) {
   const {
     className,
     placeholder,
@@ -91,7 +91,7 @@ const Select: React.FunctionComponent<SelectProps> = props => {
             searchBoxProps
           };
 
-          // This would have been the ideal way to write this but tyepscript is crying.
+          // This would have been the ideal way to write this but typescript is crying.
           // const OptionGroup = props.multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
           // return (
           //   <OptionGroup
@@ -100,7 +100,7 @@ const Select: React.FunctionComponent<SelectProps> = props => {
           //       props.onChange(_value, extras)
           //       props.multiSelect && toggle();
           //     }}
-          //     onApply={props.multiSelect && ((_value) => {
+          //     onApply={props.multiSelect && props.onApply && ((_value) => {
           //       props.onApply && props.onApply(_value, props);
           //       toggle();
           //     })}
@@ -112,7 +112,7 @@ const Select: React.FunctionComponent<SelectProps> = props => {
 
           if (props.multiSelect === true) {
             return (
-              <OptionGroupCheckBox
+              <OptionGroupCheckBox<OptionType>
                 selected={props.selected}
                 onChange={(_value, extras) => {
                   props.onChange(_value, extras);
@@ -149,6 +149,6 @@ const Select: React.FunctionComponent<SelectProps> = props => {
       </DropDown>
     </div>
   );
-};
+}
 
 export default Select;

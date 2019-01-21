@@ -12,8 +12,8 @@ import {
   searchBoxHeight
 } from "../styles/OptionGroup.styles";
 
-class OptionGroup extends React.PureComponent<
-  OptionGroupProps,
+class OptionGroup<OptionType> extends React.PureComponent<
+  OptionGroupProps<OptionType>,
   OptionGroupState
 > {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
@@ -127,7 +127,7 @@ class OptionGroup extends React.PureComponent<
       // Because React does not allow us to specify what sort of elements
       // you can allow as children and leaves it on you to figure out
       // all various types of children provided.
-      const option = _option as React.ReactElement<OptionProps>;
+      const option = _option as React.ReactElement<OptionProps<OptionType>>;
       let ref = this.optionsRefsSet.get(i);
       if (!ref) {
         ref = React.createRef<HTMLDivElement>();
