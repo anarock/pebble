@@ -6,7 +6,7 @@ interface TileDot {
   colors?: string[];
 }
 
-export type CalendarValue = Date[] | Date;
+export type CalendarValue = [Date, Date] | Date;
 
 interface CommonCalendarProps extends Omit<CP, "onChange"> {
   hideShadow?: boolean;
@@ -25,14 +25,14 @@ export interface DateSingle extends CommonCalendarProps {
 
 export interface DateRange extends CommonCalendarProps {
   range: true;
-  selected?: Date[];
-  onChange: (value: Date[]) => void;
-  onApply?: (value?: Date[]) => void;
+  selected?: [Date, Date];
+  onChange: (value: [Date, Date]) => void;
+  onApply?: (value?: [Date, Date]) => void;
 }
 
 export type CalendarProps = DateSingle | DateRange;
 
 export interface CalendarState {
-  value?: Date[] | Date;
-  singleSelectedDate?: Date[] | null;
+  value?: [Date, Date] | Date;
+  singleSelectedDate?: [Date, Date] | null;
 }

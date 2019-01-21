@@ -2,7 +2,7 @@ import { DateRange } from "./Calendar";
 
 export interface PresetDates {
   label: string;
-  dateRange: () => Date[];
+  dateRange: () => [Date, Date];
 }
 
 export type PresetCalendarProps = DateRange & {
@@ -10,7 +10,7 @@ export type PresetCalendarProps = DateRange & {
   customDateInputLabel: (
     args: { toggle: () => void; isOpen: boolean }
   ) => JSX.Element;
-  onApply: (value?: Date[]) => void;
+  onApply: (value?: [Date, Date]) => void;
   isOpen: boolean;
 };
 
