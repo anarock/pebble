@@ -4,12 +4,6 @@ import { ControlProps } from "../typings/Control";
 import { colors } from "../../theme";
 import { cx } from "emotion";
 
-function renderProps<OptionType = string | number>(
-  props: ControlProps<OptionType>
-) {
-  return <ControlView {...props} />;
-}
-
 function Control<OptionType = string | number>(
   props: ControlProps<OptionType>
 ) {
@@ -18,7 +12,7 @@ function Control<OptionType = string | number>(
     onChange,
     value,
     disabled,
-    children = renderProps,
+    children = ControlView,
     type,
     className
   } = props;

@@ -12,7 +12,7 @@ import {
   searchBoxHeight
 } from "../styles/OptionGroup.styles";
 
-class OptionGroup<OptionType> extends React.PureComponent<
+class OptionGroup<OptionType = string | number> extends React.PureComponent<
   OptionGroupProps<OptionType>,
   OptionGroupState
 > {
