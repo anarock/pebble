@@ -9,7 +9,7 @@ import { cx, css } from "emotion";
 import { isDesktop } from "../utils";
 
 class DateInput extends React.PureComponent<DateInputProps> {
-  onChange = (date: Date | string) => {
+  private onChange = (date: Date | string) => {
     this.props.onChange(date ? new Date(date).getTime() : undefined);
   };
 
@@ -43,12 +43,10 @@ class DateInput extends React.PureComponent<DateInputProps> {
           <Calendar
             hideShadow
             className={dateClass}
-            selected={value ? new Date(value) : undefined}
             {...calendarProps}
-            onChange={_date => {
-              // _date as Date is a hack.
-              // TODO:Aziz this is fixable, fix this.
-              const date = _date as Date;
+            range={false}
+            selected={value ? new Date(value) : undefined}
+            onChange={date => {
               this.onChange(date);
               toggle();
             }}

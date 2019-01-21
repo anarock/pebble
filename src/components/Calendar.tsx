@@ -31,16 +31,17 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   };
 
   private onChange = (value: CalendarValue) => {
-    const { range, onChange } = this.props;
+    // tslint:disable-next-line no-this-assignment Doing this to reduce lookups on this, not avoiding to use fat arrow functions
+    const { props } = this;
     this.setState(
       {
         value,
         singleSelectedDate: null
       },
       () =>
-        range && Array.isArray(value)
-          ? value.length === 2 && onChange(value)
-          : onChange(value)
+        props.range
+          ? Array.isArray(value) && value.length === 2 && props.onChange(value)
+          : !Array.isArray(value) && props.onChange(value)
     );
   };
 
@@ -132,9 +133,17 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
             {onApply && (
               <Button
                 onClick={() => {
-                  range && this.state.singleSelectedDate
-                    ? onApply(this.state.singleSelectedDate)
-                    : onApply(this.state.value);
+                  if (this.props.onApply) {
+                    if (this.props.range) {
+                      if (this.state.singleSelectedDate) {
+                        this.props.onApply(this.state.singleSelectedDate);
+                      } else if (Array.isArray(this.state.value)) {
+                        this.props.onApply(this.state.value);
+                      }
+                    } else if (!Array.isArray(this.state.value)) {
+                      this.props.onApply(this.state.value);
+                    }
+                  }
                 }}
               >
                 Apply

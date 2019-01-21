@@ -1,4 +1,5 @@
 import { CalendarProps as CP } from "react-calendar";
+import { Omit } from "utility-types";
 
 interface TileDot {
   timeStamp?: number | Date;
@@ -7,19 +8,31 @@ interface TileDot {
 
 export type CalendarValue = Date[] | Date;
 
-export interface CalendarProps extends CP {
-  onChange: (value: CalendarValue) => void;
-  range?: boolean;
-  selected?: CalendarValue;
+interface CommonCalendarProps extends Omit<CP, "onChange"> {
   hideShadow?: boolean;
   className?: string;
   onClear?: () => void;
-  onApply?: (value?: CalendarValue) => void;
   tileDots: TileDot[];
   disabledDays?: Array<number | Date>;
 }
 
+export interface DateSingle extends CommonCalendarProps {
+  range?: false;
+  selected?: Date;
+  onChange: (value: Date) => void;
+  onApply?: (value?: Date) => void;
+}
+
+export interface DateRange extends CommonCalendarProps {
+  range: true;
+  selected?: Date[];
+  onChange: (value: Date[]) => void;
+  onApply?: (value?: Date[]) => void;
+}
+
+export type CalendarProps = DateSingle | DateRange;
+
 export interface CalendarState {
-  value?: CalendarValue;
+  value?: Date[] | Date;
   singleSelectedDate?: Date[] | null;
 }
