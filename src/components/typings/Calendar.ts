@@ -6,8 +6,6 @@ interface TileDot {
   colors?: string[];
 }
 
-export type CalendarValue = [Date, Date] | Date;
-
 interface CommonCalendarProps extends Omit<CP, "onChange"> {
   hideShadow?: boolean;
   className?: string;
