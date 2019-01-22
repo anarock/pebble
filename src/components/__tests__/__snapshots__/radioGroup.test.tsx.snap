@@ -35,7 +35,6 @@ exports[`set of radios { value: 'OFF' } 1`] = `
 
 .emotion-1[data-disabled='true'] {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .emotion-1[data-disabled='true'] .css-qatnln {
@@ -76,7 +75,6 @@ exports[`set of radios { value: 'OFF' } 1`] = `
 
 .emotion-0[data-disabled='true'] {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .emotion-0[data-disabled='true'] .css-qatnln {
@@ -153,7 +151,6 @@ exports[`set of radios { value: 'ON' } 1`] = `
 
 .emotion-0[data-disabled='true'] {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .emotion-0[data-disabled='true'] .css-qatnln {
@@ -194,7 +191,6 @@ exports[`set of radios { value: 'ON' } 1`] = `
 
 .emotion-1[data-disabled='true'] {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .emotion-1[data-disabled='true'] .css-qatnln {

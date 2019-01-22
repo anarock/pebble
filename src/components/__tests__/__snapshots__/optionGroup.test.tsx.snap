@@ -71,7 +71,6 @@ exports[`Component: OptionGroup default snapshot 1`] = `
 
 .emotion-1[data-disabled='true'] {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .emotion-1[data-disabled='true'] .css-qatnln {
@@ -704,7 +703,6 @@ Array [
 
 .emotion-2[data-disabled='true'] {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .emotion-2[data-disabled='true'] .css-qatnln {
@@ -1380,7 +1378,6 @@ Array [
 
 .emotion-1[data-disabled='true'] {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .emotion-1[data-disabled='true'] .css-qatnln {
