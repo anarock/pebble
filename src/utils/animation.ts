@@ -5,10 +5,5 @@ export const animationConfig = {
   enter: { opacity: 1, transform: "scale(1)" },
   leave: { opacity: 0, transform: "scale(0.95)", pointerEvents: "none" },
   config: (_a: boolean, motion: State) =>
-    motion === "leave"
-      ? { duration: 0.1 }
-      : {
-          duration: 200
-          // currently the types of react-spring are outdated and don't mention the second parameter.
-        }
+    motion === "leave" ? { duration: 0.1 } : { duration: 200 }
 };
