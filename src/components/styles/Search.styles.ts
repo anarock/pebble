@@ -3,6 +3,7 @@ import { colors, constants, mixins, typography } from "../../theme";
 import { getPlaceholderStyle } from "../../theme/mixins";
 
 export const searchWrapperStyle = css({
+  minWidth: "200px",
   borderRadius: constants.borderRadius,
   padding: "0 20px",
   ...mixins.flexRow,

@@ -474,6 +474,7 @@ exports[`Component: OptionGroup default snapshot 1`] = `
 exports[`Component: OptionGroup multi option group 1`] = `
 Array [
   .emotion-2 {
+  min-width: 200px;
   border-radius: 3px;
   padding: 0 20px;
   display: -webkit-box;
@@ -1149,6 +1150,7 @@ Array [
 exports[`Component: OptionGroup with searchbox 1`] = `
 Array [
   .emotion-2 {
+  min-width: 200px;
   border-radius: 3px;
   padding: 0 20px;
   display: -webkit-box;
