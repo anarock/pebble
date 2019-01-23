@@ -39,10 +39,10 @@ storiesOf("Components/Select", module)
             value={store.state.value} // To show in input box after selection
             fullWidthDropdown
             onDropdownToggle={action("onDropdownToggle")}
-            onChange={(selected: string | number, e: Extras) => {
+            onChange={(selected: string, e: Extras) => {
               if (selected) {
                 store.set({
-                  selected: selected as string,
+                  selected,
                   value: (() => {
                     const option = options.find(o => o.value === selected);
                     return option && option.label;

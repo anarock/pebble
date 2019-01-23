@@ -5,10 +5,10 @@ import { TypeaheadProps } from "../typings/Typeahead";
 import TypeAhead from "../TypeAhead";
 import Option from "../Option";
 
-function getComponent(
+function getComponent<T>(
   changeSpy = () => {},
   selectSpy = () => {},
-  props: Partial<TypeaheadProps> = {}
+  props: Partial<TypeaheadProps<T>> = {}
 ) {
   return (
     <TypeAhead
