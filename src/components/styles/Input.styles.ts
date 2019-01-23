@@ -1,6 +1,6 @@
 import { colors, mixins, typography } from "../../theme";
 import { css } from "emotion";
-import { isDesktop } from "../../utils";
+// import { isDesktop } from "../../utils";
 
 const animation = "all 0.3s cubic-bezier(.64,.09,.08,1)";
 
@@ -32,13 +32,15 @@ export const inputStyle = css({
   "&:disabled": {
     backgroundColor: colors.white.base
   },
-  "&[type='date']": {
-    ...(!isDesktop ? { "-webkit-appearance": "textfield" } : {})
-  },
-  "&[type='date']::-webkit-inner-spin-button, &[type='date']::-webkit-calendar-picker-indicator": {
-    webkitAppearance: "none",
-    display: "none"
-  },
+  // ...(isDesktop && {
+  //   "&[type='date']": {
+  //     "-webkit-appearance": "textfield"
+  //   },
+  //   "&[type='date']::-webkit-inner-spin-button, &[type='date']::-webkit-calendar-picker-indicator": {
+  //     webkitAppearance: "none",
+  //     display: "none"
+  //   },
+  // }),
   .../*#__PURE__*/ mixins.getPlaceholderStyle(colors.gray.light)
 });
 
