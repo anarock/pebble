@@ -40,12 +40,6 @@ exports[`Component: Select default snapshot 1`] = `
   background-color: #ffffff;
 }
 
-.emotion-9[type='date']::-webkit-inner-spin-button,
-.emotion-9[type='date']::-webkit-calendar-picker-indicator {
-  webkit-appearance: none;
-  display: none;
-}
-
 .emotion-9::-webkit-input-placeholder {
   color: #E0E0E0;
 }
@@ -196,12 +190,6 @@ exports[`Component: Select default snapshot 1`] = `
 
 .emotion-1:disabled {
   background-color: #ffffff;
-}
-
-.emotion-1[type='date']::-webkit-inner-spin-button,
-.emotion-1[type='date']::-webkit-calendar-picker-indicator {
-  webkit-appearance: none;
-  display: none;
 }
 
 .emotion-1::-webkit-input-placeholder {
