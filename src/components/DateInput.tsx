@@ -5,8 +5,8 @@ import { dateClass, dropDownClassName } from "./styles/Date.styles";
 import { format } from "date-fns";
 import Calendar from "./Calendar";
 import Input from "./Input";
-import { cx, css } from "emotion";
-import { isDesktop } from "../utils";
+// import { cx, css } from "emotion";
+// import { isDesktop } from "../utils";
 
 class DateInput extends React.PureComponent<DateInputProps> {
   onChange = (date: Date | string) => {
@@ -16,15 +16,16 @@ class DateInput extends React.PureComponent<DateInputProps> {
   render() {
     const { value, calendarProps } = this.props;
 
-    const dropDownClass = cx(dropDownClassName, {
-      [css({
-        display: "none"
-      })]: !isDesktop
-    });
+    // const dropDownClass = cx(dropDownClassName, {
+    //   [css({
+    //     display: "none"
+    //   })]: !isDesktop
+    // });
 
     return (
       <DropDown
-        dropDownClassName={dropDownClass}
+        // dropDownClassName={dropDownClass}
+        dropDownClassName={dropDownClassName}
         labelComponent={({ toggleDropdown }) => (
           <Input
             onChange={this.onChange}
