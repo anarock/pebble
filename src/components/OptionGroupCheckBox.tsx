@@ -5,7 +5,7 @@ import OptionGroup from "./shared/OptionGroup";
 import { OptionGroupCheckBoxProps } from "./typings/OptionGroupCheckBox";
 import * as styles from "../components/styles/OptionGroupCheckBox.styles";
 
-function OptionGroupCheckBox<OptionType = string | number>(
+function OptionGroupCheckBox<OptionType>(
   props: OptionGroupCheckBoxProps<OptionType>
 ) {
   const { onApply, onClear, selected = [], onChange, ...rest } = props;

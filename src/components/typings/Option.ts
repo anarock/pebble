@@ -2,7 +2,7 @@ import { ControlProps } from "./Control";
 import { Omit } from "utility-types";
 import * as React from "react";
 
-export interface OptionProps<OptionType = string | number>
+export interface OptionProps<OptionType>
   extends Omit<ControlProps<OptionType>, "checked" | "type"> {
   isActive?: boolean;
   isSelected?: boolean;

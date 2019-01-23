@@ -4,9 +4,7 @@ import { ControlProps } from "../typings/Control";
 import { colors } from "../../theme";
 import { cx } from "emotion";
 
-function Control<OptionType = string | number>(
-  props: ControlProps<OptionType>
-) {
+function Control<OptionType>(props: ControlProps<OptionType>) {
   const {
     checked,
     onChange,
@@ -36,7 +34,11 @@ function Control<OptionType = string | number>(
   );
 }
 
-type ControlViewProps = Pick<ControlProps, "checked" | "label" | "type">;
+interface ControlViewProps {
+  label: React.ReactNode;
+  checked?: boolean;
+  type: "radio" | "checkbox";
+}
 
 export const ControlView: React.FunctionComponent<ControlViewProps> = ({
   checked,

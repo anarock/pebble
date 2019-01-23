@@ -1,4 +1,4 @@
-export function getSelectedCheckboxes<OptionType = string | number>(
+export function getSelectedCheckboxes<OptionType>(
   changedValue: OptionType,
   prevSelected?: OptionType[]
 ): OptionType[] {

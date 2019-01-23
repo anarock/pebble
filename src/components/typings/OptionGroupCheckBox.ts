@@ -1,7 +1,6 @@
 import { CommonProps, Extras } from "./OptionGroup";
 
-export interface OptionGroupCheckBoxProps<OptionType = string | number>
-  extends CommonProps {
+export interface OptionGroupCheckBoxProps<OptionType> extends CommonProps {
   onChange: (value: OptionType[], extras: Extras) => void;
   selected?: OptionType[];
   onApply?: (

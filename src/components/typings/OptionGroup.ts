@@ -2,10 +2,13 @@ import * as React from "react";
 import { SearchProps } from "./Search";
 import { Omit } from "utility-types";
 
-export interface OptionGroupProps<OptionType = string | number> {
+export interface CommonProps {
   className?: string;
   searchBox?: boolean;
   searchBoxProps?: Omit<SearchProps, "type">;
+}
+
+export interface OptionGroupProps<OptionType> extends CommonProps {
   isSelected: (value: OptionType) => boolean;
   handleChange: (
     args: { value: OptionType; checked: boolean },
@@ -13,11 +16,6 @@ export interface OptionGroupProps<OptionType = string | number> {
   ) => void;
   multiSelect?: boolean;
 }
-
-export type CommonProps = Omit<
-  OptionGroupProps,
-  "multiSelect" | "isSelected" | "handleChange"
->;
 
 export interface Extras {
   props: CommonProps;

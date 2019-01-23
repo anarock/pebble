@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export interface ControlProps<OptionType = string | number> {
+export interface ControlProps<OptionType> {
   onChange?: (
     args: { value: OptionType; checked: boolean },
     e: React.MouseEvent

@@ -23,21 +23,19 @@ interface CommonSelectProps {
   children: React.ReactNode;
 }
 
-export interface SingleSelectProps<OptionType = string | number>
-  extends CommonSelectProps {
+export interface SingleSelectProps<OptionType> extends CommonSelectProps {
   multiSelect?: false;
   onChange: (value: OptionType, extras: Extras) => void;
   selected?: OptionType;
 }
 
-export interface MultiSelectProps<OptionType = string | number>
-  extends CommonSelectProps {
+export interface MultiSelectProps<OptionType> extends CommonSelectProps {
   multiSelect: true;
   onChange: (value: OptionType[], extras: Extras) => void;
   onApply?: (value: OptionType[], props: SelectProps<OptionType>) => void;
   selected?: OptionType[];
 }
 
-export type SelectProps<OptionType = string | number> =
+export type SelectProps<OptionType> =
   | SingleSelectProps<OptionType>
   | MultiSelectProps<OptionType>;

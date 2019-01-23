@@ -6,7 +6,7 @@ import sinon from "sinon";
 import Option from "../Option";
 import OptionGroup from "../shared/OptionGroup";
 
-function getComponent(props: Partial<OptionGroup["props"]> = {}) {
+function getComponent<T>(props: Partial<OptionGroup<T>["props"]> = {}) {
   return (
     <OptionGroup isSelected={() => false} handleChange={() => {}} {...props}>
       {[...Array(12)].map((_, i) => (
