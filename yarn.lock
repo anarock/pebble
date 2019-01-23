@@ -1605,6 +1605,11 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
+"@types/google.analytics@^0.0.39":
+  version "0.0.39"
+  resolved "https://registry.yarnpkg.com/@types/google.analytics/-/google.analytics-0.0.39.tgz#19a952003dbf3c7373d655a5c3203b4726b8b802"
+  integrity sha512-AwVtVYACQg26MJz+752H6uskn53BR7eilCOHksUGkzobZNKc7O3RFTJrbD3yKAluXy6favVdynnr9btijjcakQ==
+
 "@types/jest@^23.0.2", "@types/jest@^23.3.10":
   version "23.3.10"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.10.tgz#4897974cc317bf99d4fe6af1efa15957fa9c94de"
@@ -10346,9 +10351,9 @@ react-split-pane@^0.1.84:
     react-style-proptype "^3.0.0"
 
 react-spring@^7.2.1:
-  version "7.2.5"
-  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-7.2.5.tgz#3e68b575caee1af4465b54566ee97c33c1eceac8"
-  integrity sha512-J14PEJmkTOKLqN03+y7nM9szUrnQhZnapyQu4Tr8Ncq5wpKUB4ASZ4pRU/amNVKf0WVPkYeD62FqZFIrDjELJg==
+  version "7.2.10"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-7.2.10.tgz#eacbf429327bea058677c3a01af87b9c387f4aa6"
+  integrity sha512-bsbgQh1DzTqjwuD1tDZ7Nu04G5JhNNXdezkcJ5xXNboedN/MPe0K+X/MtypUxXBUCLYT0r5oKT3zj4STqVpnPA==
   dependencies:
     "@babel/runtime" "^7.0.0"
 

@@ -15,10 +15,10 @@ import { TimePickerProps } from "./typings/TimePicker";
 import { colors } from "../theme/colors";
 
 const HOURS = /*#__PURE__*/ [...Array(12)].map((_, i) =>
-  ("00" + (i + 1)).slice(-2)
+  ("00" + (i + 1).toString(10)).slice(-2)
 );
 const MINUTES = /*#__PURE__*/ [...Array(4)].map((_, i) =>
-  ("00" + i * 15).slice(-2)
+  ("00" + (i * 15).toString(10)).slice(-2)
 );
 
 export const iconStyle = css({
@@ -59,6 +59,7 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
               toggleDropdown();
             }}
             className={buttonStyle}
+            data-test-id="hour-label"
           >
             <span className={css({ marginRight: "15px" })}>
               {selectedHour ? selectedHour : "Hrs"}
@@ -87,7 +88,7 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
             {HOURS.map(hour => (
               <Option
                 key={hour}
-                value={hour}
+                value={parseInt(hour, 10)}
                 label={hour}
                 className={optionStyle}
               />
@@ -105,6 +106,7 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
               toggleDropdown();
             }}
             className={buttonStyle}
+            data-test-id="minute-label"
           >
             <span className={css({ marginRight: "15px" })}>
               {selectedMinute !== undefined ? selectedMinute : "mins"}
@@ -131,7 +133,7 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
             {MINUTES.map(min => (
               <Option
                 key={min}
-                value={min}
+                value={parseInt(min, 10)}
                 label={min}
                 className={optionStyle}
               />
