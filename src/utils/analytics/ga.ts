@@ -1,5 +1,4 @@
 import isBrowser from "is-in-browser";
-import "google.analytics";
 
 declare global {
   interface Window {
