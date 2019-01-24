@@ -1,8 +1,10 @@
 import isBrowser from "is-in-browser";
+import "google.analytics";
 
 declare global {
   interface Window {
     GoogleAnalyticsObject: string;
+    ga: UniversalAnalytics.ga;
   }
 }
 
@@ -10,12 +12,12 @@ export function initGoogleAnalytics(gaId: string) {
   if (isBrowser) {
     ((s, o, g) => {
       window.GoogleAnalyticsObject = "ga";
-      ga =
-        ga ||
+      window.ga =
+        window.ga ||
         (() => {
-          (ga.q = ga.q || []).push(arguments);
+          (window.ga.q = window.ga.q || []).push(arguments);
         });
-      ga.l = Date.now();
+      window.ga.l = Date.now();
       const a = s.createElement(o) as HTMLScriptElement;
       const m = s.getElementsByTagName(o)[0];
       a.async = true;
@@ -23,7 +25,7 @@ export function initGoogleAnalytics(gaId: string) {
       if (m.parentNode) m.parentNode.insertBefore(a, m);
     })(document, "script", "https://www.google-analytics.com/analytics.js");
 
-    ga("create", gaId, "auto");
-    ga("send", "pageview");
+    window.ga("create", gaId, "auto");
+    window.ga("send", "pageview");
   }
 }
