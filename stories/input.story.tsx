@@ -66,6 +66,7 @@ storiesOf("Components/Input", module)
           placeholder="Date"
           value={store.state.value}
           onChange={value => store.set({ value })}
+          useBrowserControls
         />
       </div>
     ))
