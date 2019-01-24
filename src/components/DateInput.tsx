@@ -27,8 +27,8 @@ function checkMobileDevice(): boolean {
   );
 }
 
-const hasDateInputSupport = /*__PURE__*/ checkDateInputSupport();
-const isMobileDevice = /*__PURE__*/ checkMobileDevice();
+const hasDateInputSupport = /*@__PURE__*/ checkDateInputSupport();
+const isMobileDevice = /*@__PURE__*/ checkMobileDevice();
 
 class DateInput extends React.PureComponent<DateInputProps> {
   inputRef = React.createRef<HTMLInputElement>();
