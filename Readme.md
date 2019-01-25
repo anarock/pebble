@@ -52,6 +52,9 @@ import { Icon } from "@anarock/pebble/native"
 // Usage
 <Icon name="iconName" size={20} color="#000000" />
 ```
+## Acknowledgements
+
+We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing and it is awesome.
 
 ## License
 
