@@ -16,10 +16,10 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   position: relative;
   width: inherit;
   z-index: 9;
-  max-height: 352px;
+  max-height: 316px;
   min-width: 100px;
   overflow-y: auto;
-  padding: 20px 1px;
+  padding: 10px 1px;
 }
 
 .emotion-1 {
@@ -71,7 +71,6 @@ exports[`Component: OptionGroup default snapshot 1`] = `
 
 .emotion-1[data-disabled='true'] {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .emotion-1[data-disabled='true'] .css-qatnln {
@@ -474,6 +473,7 @@ exports[`Component: OptionGroup default snapshot 1`] = `
 exports[`Component: OptionGroup multi option group 1`] = `
 Array [
   .emotion-2 {
+  min-width: 200px;
   border-radius: 3px;
   padding: 0 20px;
   display: -webkit-box;
@@ -648,10 +648,10 @@ Array [
   position: relative;
   width: inherit;
   z-index: 9;
-  max-height: 352px;
+  max-height: 316px;
   min-width: 100px;
   overflow-y: auto;
-  padding: 20px 1px;
+  padding: 10px 1px;
 }
 
 .emotion-2 {
@@ -703,7 +703,6 @@ Array [
 
 .emotion-2[data-disabled='true'] {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .emotion-2[data-disabled='true'] .css-qatnln {
@@ -1149,6 +1148,7 @@ Array [
 exports[`Component: OptionGroup with searchbox 1`] = `
 Array [
   .emotion-2 {
+  min-width: 200px;
   border-radius: 3px;
   padding: 0 20px;
   display: -webkit-box;
@@ -1323,10 +1323,10 @@ Array [
   position: relative;
   width: inherit;
   z-index: 9;
-  max-height: 352px;
+  max-height: 316px;
   min-width: 100px;
   overflow-y: auto;
-  padding: 20px 1px;
+  padding: 10px 1px;
 }
 
 .emotion-1 {
@@ -1378,7 +1378,6 @@ Array [
 
 .emotion-1[data-disabled='true'] {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .emotion-1[data-disabled='true'] .css-qatnln {
