@@ -1,5 +1,6 @@
 [
   "add",
+  "admin",
   "arrow-down",
   "arrow-drop-down",
   "arrow-drop-up",
@@ -36,6 +37,7 @@
   "follow-up-2",
   "follow-up",
   "history",
+  "home-filled-2",
   "home-filled",
   "home",
   "incoming-call",
@@ -48,6 +50,7 @@
   "logout-door",
   "logout",
   "mail",
+  "mandates",
   "mic",
   "more",
   "not-called",
@@ -72,6 +75,7 @@
   "radio-check",
   "radio-selected",
   "radio",
+  "reimbursements",
   "reschedule",
   "reset",
   "revisit",
@@ -90,6 +94,7 @@
   "update",
   "updating",
   "upload",
+  "user",
   "warning-line",
   "warning",
   "whatsapp"
