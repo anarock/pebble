@@ -5,7 +5,7 @@ import Calendar from "../src/components/Calendar";
 import { action } from "@storybook/addon-actions";
 import { colors } from "../src/theme";
 
-storiesOf("Calendar", module).add("Default", () => (
+storiesOf("Components/Calendar", module).add("Default", () => (
   <Calendar
     onChange={action("change")}
     range={boolean("range", true)}

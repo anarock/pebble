@@ -1,7 +1,7 @@
 import { colors, constants } from "../../theme";
 import { css } from "emotion";
 
-export const optionWrapperMaxHeight = 352;
+export const optionWrapperMaxHeight = 316;
 export const searchBoxHeight = 80;
 export const initialPadding = 20;
 export const onScrollPadding = 10;
@@ -13,9 +13,9 @@ export const optionsWrapper = css({
   width: "inherit",
   zIndex: 9,
   maxHeight: optionWrapperMaxHeight,
-  minWidth: 200,
+  minWidth: 100,
   overflowY: "auto",
-  padding: "20px 1px"
+  padding: "10px 1px"
 });
 
 export const searchBoxWrapper = css({

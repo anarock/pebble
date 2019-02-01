@@ -4,7 +4,7 @@ exports[`Component: Tag snapshot 1`] = `
 .emotion-0 {
   font-weight: 500;
   color: #101721;
-  font-size: 10px;
+  font-size: 12px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -20,9 +20,8 @@ exports[`Component: Tag snapshot 1`] = `
   -ms-flex-line-pack: initial;
   align-content: initial;
   border-radius: 3px;
-  padding: 0 15px;
-  height: 25px;
-  text-transform: uppercase;
+  padding: 0 10px;
+  height: 28px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -32,15 +31,6 @@ exports[`Component: Tag snapshot 1`] = `
 
 .emotion-0.__pebble__tag__with__close {
   padding-right: 0;
-}
-
-.emotion-0 i {
-  font-size: 7px;
-  margin-left: 5px;
-  height: inherit;
-  padding: 9px 10px;
-  cursor: pointer;
-  position: relative;
 }
 
 <div
@@ -58,10 +48,10 @@ exports[`Component: Tag snapshot 1`] = `
 `;
 
 exports[`Component: Tag snapshot 2`] = `
-.emotion-0 {
+.emotion-1 {
   font-weight: 500;
   color: #101721;
-  font-size: 10px;
+  font-size: 12px;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -77,9 +67,8 @@ exports[`Component: Tag snapshot 2`] = `
   -ms-flex-line-pack: initial;
   align-content: initial;
   border-radius: 3px;
-  padding: 0 15px;
-  height: 25px;
-  text-transform: uppercase;
+  padding: 0 10px;
+  height: 28px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -87,21 +76,27 @@ exports[`Component: Tag snapshot 2`] = `
   line-height: 10px;
 }
 
-.emotion-0.__pebble__tag__with__close {
+.emotion-1.__pebble__tag__with__close {
   padding-right: 0;
 }
 
-.emotion-0 i {
+.emotion-0 {
   font-size: 7px;
   margin-left: 5px;
   height: inherit;
-  padding: 9px 10px;
+  padding: 10px 10px;
   cursor: pointer;
   position: relative;
 }
 
+.emotion-0:hover {
+  background-color: #C0C0FF;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
 <div
-  className="emotion-0 __pebble__tag__with__close"
+  className="emotion-1 __pebble__tag__with__close"
   style={
     Object {
       "backgroundColor": "#DBF3E7",
@@ -112,7 +107,7 @@ exports[`Component: Tag snapshot 2`] = `
   Anarock
    
   <i
-    className="pi pi-close"
+    className="pi pi-close emotion-0"
     onClick={[Function]}
   >
     <e

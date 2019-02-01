@@ -1,0 +1,233 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`set of radios { value: 'OFF' } 1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  color: #101721;
+  font-size: 12px;
+}
+
+.emotion-1 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+  padding: 15px 20px;
+  line-height: 8px;
+  border: 1px solid #EDEDED;
+  border-right: none;
+}
+
+.emotion-1[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-1[data-disabled='true'] .css-qatnln {
+  color: #E0E0E0;
+}
+
+.emotion-1:first-of-type {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.emotion-1:last-of-type {
+  border-radius: 0px 3px 3px 0px;
+  border-right: 1px solid #EDEDED;
+}
+
+.emotion-0 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+  padding: 15px 20px;
+  line-height: 8px;
+  border: 1px solid #EDEDED;
+  border-right: none;
+  background-color: #EDEDED;
+}
+
+.emotion-0[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-0[data-disabled='true'] .css-qatnln {
+  color: #E0E0E0;
+}
+
+.emotion-0:first-of-type {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.emotion-0:last-of-type {
+  border-radius: 0px 3px 3px 0px;
+  border-right: 1px solid #EDEDED;
+}
+
+<div
+  aria-label="set of radios"
+  className="emotion-2"
+  role="radiogroup"
+>
+  <div
+    aria-checked={true}
+    className="emotion-0"
+    onClick={[Function]}
+    role="radio"
+    tabIndex={0}
+  >
+    OFF
+  </div>
+  <div
+    aria-checked={false}
+    className="emotion-1"
+    onClick={[Function]}
+    role="radio"
+    tabIndex={-1}
+  >
+    ON
+  </div>
+</div>
+`;
+
+exports[`set of radios { value: 'ON' } 1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  color: #101721;
+  font-size: 12px;
+}
+
+.emotion-0 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+  padding: 15px 20px;
+  line-height: 8px;
+  border: 1px solid #EDEDED;
+  border-right: none;
+}
+
+.emotion-0[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-0[data-disabled='true'] .css-qatnln {
+  color: #E0E0E0;
+}
+
+.emotion-0:first-of-type {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.emotion-0:last-of-type {
+  border-radius: 0px 3px 3px 0px;
+  border-right: 1px solid #EDEDED;
+}
+
+.emotion-1 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+  padding: 15px 20px;
+  line-height: 8px;
+  border: 1px solid #EDEDED;
+  border-right: none;
+  background-color: #EDEDED;
+}
+
+.emotion-1[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-1[data-disabled='true'] .css-qatnln {
+  color: #E0E0E0;
+}
+
+.emotion-1:first-of-type {
+  border-radius: 3px 0px 0px 3px;
+}
+
+.emotion-1:last-of-type {
+  border-radius: 0px 3px 3px 0px;
+  border-right: 1px solid #EDEDED;
+}
+
+<div
+  aria-label="set of radios"
+  className="emotion-2"
+  role="radiogroup"
+>
+  <div
+    aria-checked={false}
+    className="emotion-0"
+    onClick={[Function]}
+    role="radio"
+    tabIndex={-1}
+  >
+    OFF
+  </div>
+  <div
+    aria-checked={true}
+    className="emotion-1"
+    onClick={[Function]}
+    role="radio"
+    tabIndex={0}
+  >
+    ON
+  </div>
+</div>
+`;

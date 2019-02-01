@@ -1,36 +1,31 @@
 import * as React from "react";
 import { cx } from "emotion";
-import { SearchProps, SearchState } from "./typings/Search";
+import { SearchProps } from "./typings/Search";
 import {
   searchStyle,
   searchWrapperStyle,
   clearContainer
 } from "./styles/Search.styles";
 
-class Search extends React.PureComponent<SearchProps, SearchState> {
+class Search extends React.PureComponent<SearchProps> {
   searchInputRef: React.RefObject<HTMLInputElement> = React.createRef();
 
-  static defaultProps: Partial<SearchProps> = {
+  static defaultProps = {
     showSearchIcon: true,
-    clearable: true,
-    onClear: () => {}
-  };
-
-  state: SearchState = {
-    searchValue: ""
+    clearable: true
   };
 
   render() {
     const {
       type,
+      inputProps,
       onChange,
       placeholder,
       showSearchIcon,
       className,
       clearable,
-      onClear
+      value
     } = this.props;
-    const { searchValue } = this.state;
 
     const wrapperClassName = cx(searchWrapperStyle, {
       __pebble__search__small: type === "small",
@@ -47,20 +42,22 @@ class Search extends React.PureComponent<SearchProps, SearchState> {
           aria-label={placeholder}
           placeholder={placeholder}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-            this.setState({ searchValue: e.target.value });
             onChange(e.target.value);
           }}
           ref={this.searchInputRef}
+          value={value}
+          {...inputProps}
         />
         {clearable && (
           <div
-            className={cx(clearContainer, { __display: !!searchValue.length })}
+            className={cx(clearContainer, {
+              __display: value && !!value.length
+            })}
             onClick={() => {
-              this.setState({ searchValue: "" });
               if (this.searchInputRef.current) {
                 this.searchInputRef.current.value = "";
               }
-              onClear();
+              onChange("");
             }}
           >
             <i

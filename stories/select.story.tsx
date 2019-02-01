@@ -15,11 +15,12 @@ const options = new Array(20).fill(1).map((_x, i) => ({
 
 interface State {
   searchQuery: string;
-  selected: string;
-  value: string;
+  selected?: string | number;
+  value?: string;
+  multiSelected?: string[] | number[];
 }
 
-storiesOf("Select", module)
+storiesOf("Components/Select", module)
   .add(
     "Single Select",
     withState<State>({ searchQuery: "", selected: "", value: "" })(
@@ -29,6 +30,7 @@ storiesOf("Select", module)
             selected={store.state.selected} // The value selected
             value={store.state.value} // To show in input box after selection
             fullWidthDropdown
+            onDropdownToggle={action("onDropdownToggle")}
             onChange={(selected: SingleSelected, e: Extras) => {
               if (selected) {
                 store.set({
@@ -45,8 +47,13 @@ storiesOf("Select", module)
             searchBox={boolean("searchBox", false)}
             searchBoxProps={{
               placeholder: text("searchBoxProps.placeholder", "Search"),
-              onChange: query => store.set({ searchQuery: query })
+              onChange: query => {
+                action("searchBoxProps.onChange")(query);
+                store.set({ searchQuery: query });
+              },
+              value: store.state.searchQuery
             }}
+            disabled={boolean("disabled", false)}
           >
             {options
               .filter(option => {
@@ -85,28 +92,39 @@ storiesOf("Select", module)
       ))}
     </Select>
   ))
-  .add("Multi Select with searchbox", () => (
-    <Select
-      onChange={action("onSelect")}
-      placeholder="Choose Option"
-      multiSelect
-      searchBox
-      selected={undefined} // TODO:Aziz add withState
-      onApply={action("onApply")}
-      onClear={action("onClear")}
-      searchBoxProps={{
-        onChange: action("searchBoxProps.onChange"),
-        placeholder: "Search",
-        onClear: action("searchBoxProps.onClear"),
-        clearable: boolean("searchBoxProps.clearable", true)
-      }}
-    >
-      {new Array(20).fill(1).map((_x, i) => (
-        <Option
-          key={i + 1}
-          value={`option-${i + 1}`}
-          label={`I am an option-${i + 1}`}
-        />
-      ))}
-    </Select>
-  ));
+  .add(
+    "Multi Select with searchbox",
+    withState<State>({ searchQuery: "", multiSelected: undefined })(
+      ({ store }) => (
+        <Select
+          onChange={val => {
+            action("onSelect")(val);
+            store.set({ multiSelected: val as number[] | string[] });
+          }}
+          placeholder="Choose Option"
+          multiSelect
+          searchBox
+          selected={store.state.multiSelected} // TODO:Aziz add withState
+          onApply={action("onApply")}
+          onClear={action("onClear")}
+          searchBoxProps={{
+            value: store.state.searchQuery,
+            onChange: query => {
+              action("searchBoxProps.onChange")(query);
+              store.set({ searchQuery: query });
+            },
+            placeholder: "Search",
+            clearable: boolean("searchBoxProps.clearable", true)
+          }}
+        >
+          {new Array(20).fill(1).map((_x, i) => (
+            <Option
+              key={i + 1}
+              value={`option-${i + 1}`}
+              label={`I am an option-${i + 1}`}
+            />
+          ))}
+        </Select>
+      )
+    )
+  );

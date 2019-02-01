@@ -1,26 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Select default snapshot 1`] = `
-.emotion-6 {
-  cursor: pointer;
-  position: relative;
-}
-
-.emotion-5 {
-  position: absolute;
-  top: 25px;
-  right: 7px;
-  color: #9FA6B0;
-  font-size: 10px;
-}
-
-.emotion-5.__pebble__select__open {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.emotion-11 {
+.emotion-12 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -35,11 +16,11 @@ exports[`Component: Select default snapshot 1`] = `
   height: 68px;
 }
 
-.emotion-11._pebble_input_wrapper_textarea {
+.emotion-12._pebble_input_wrapper_textarea {
   height: 110px;
 }
 
-.emotion-8 {
+.emotion-9 {
   outline: 0;
   border: 0;
   border-bottom: 1px solid #EDEDED;
@@ -55,49 +36,39 @@ exports[`Component: Select default snapshot 1`] = `
   white-space: nowrap;
 }
 
-.emotion-8:disabled {
+.emotion-9:disabled {
   background-color: #ffffff;
 }
 
-.emotion-8[type='date'] {
-  -webkit-appearance: textfield;
-}
-
-.emotion-8[type='date']::-webkit-inner-spin-button,
-.emotion-8[type='date']::-webkit-calendar-picker-indicator {
-  webkit-appearance: none;
-  display: none;
-}
-
-.emotion-8::-webkit-input-placeholder {
+.emotion-9::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-8::-moz-placeholder {
+.emotion-9::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-8:-ms-input-placeholder {
+.emotion-9:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-8:-moz-placeholder {
+.emotion-9:-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-8::-webkit-input-placeholder {
+.emotion-9::-webkit-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-8::-moz-placeholder {
+.emotion-9::-moz-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-8:-ms-input-placeholder {
+.emotion-9:-ms-input-placeholder {
   color: #E0E0E0;
 }
 
-.emotion-8::placeholder {
+.emotion-9::placeholder {
   color: #E0E0E0;
 }
 
@@ -139,7 +110,30 @@ exports[`Component: Select default snapshot 1`] = `
   color: #6B7785;
 }
 
-.emotion-12 {
+.emotion-7 {
+  position: relative;
+}
+
+.emotion-6 {
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-5 {
+  position: absolute;
+  top: 25px;
+  right: 7px;
+  color: #9FA6B0;
+  font-size: 10px;
+}
+
+.emotion-5.__pebble__select__open {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -169,7 +163,7 @@ exports[`Component: Select default snapshot 1`] = `
   color: #6B7785;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin-bottom: 20px;
   width: 80px;
   margin-bottom: 0;
@@ -196,16 +190,6 @@ exports[`Component: Select default snapshot 1`] = `
 
 .emotion-1:disabled {
   background-color: #ffffff;
-}
-
-.emotion-1[type='date'] {
-  -webkit-appearance: textfield;
-}
-
-.emotion-1[type='date']::-webkit-inner-spin-button,
-.emotion-1[type='date']::-webkit-calendar-picker-indicator {
-  webkit-appearance: none;
-  display: none;
 }
 
 .emotion-1::-webkit-input-placeholder {
@@ -261,7 +245,7 @@ exports[`Component: Select default snapshot 1`] = `
 }
 
 <div
-  className="emotion-12"
+  className="emotion-13"
 >
   <label
     className="_pebble_input_label_focused emotion-0"
@@ -269,57 +253,57 @@ exports[`Component: Select default snapshot 1`] = `
     Phone No.
   </label>
   <div
-    className="emotion-7"
+    className="emotion-8"
   >
-    <div>
-      <div>
+    <div
+      className="emotion-7"
+    >
+      <div
+        className="emotion-6"
+        onClick={[Function]}
+      >
         <div
-          className="emotion-6"
-          onClick={[Function]}
+          className="emotion-4"
+          onBlur={[Function]}
+          onFocus={[Function]}
         >
-          <div
-            className="emotion-4"
-            onBlur={[Function]}
-            onFocus={[Function]}
-          >
-            <input
-              aria-label=""
-              className="emotion-1"
-              id="phone-select-input-test"
-              onChange={[Function]}
-              readOnly={true}
-              value="+1"
-            />
-            <label
-              className="emotion-2 _pebble_input_label_focused"
-            >
-              
-            </label>
-            <div
-              className="emotion-3 _pebble_input_highlight_read_only"
-              style={
-                Object {
-                  "backgroundColor": "#6161FF",
-                }
-              }
-            />
-            
-          </div>
-          <i
-            className="emotion-5 pi pi-arrow-drop-down"
+          <input
+            aria-label=""
+            className="emotion-1"
+            id="phone-select-input-test"
+            onChange={[Function]}
+            readOnly={true}
+            value="+1"
           />
+          <label
+            className="emotion-2 _pebble_input_label_focused"
+          >
+            
+          </label>
+          <div
+            className="emotion-3 _pebble_input_highlight_read_only"
+            style={
+              Object {
+                "backgroundColor": "#6161FF",
+              }
+            }
+          />
+          
         </div>
+        <i
+          className="emotion-5 pi pi-arrow-drop-down"
+        />
       </div>
     </div>
   </div>
   <div
-    className="emotion-11"
+    className="emotion-12"
     onBlur={[Function]}
     onFocus={[Function]}
   >
     <input
       aria-label=""
-      className="emotion-8"
+      className="emotion-9"
       id="phone-test-input-test"
       onChange={[Function]}
       readOnly={false}

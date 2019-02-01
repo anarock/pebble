@@ -11,7 +11,7 @@ import { ButtonProps, DropDownButtonProps } from "./typings/Button";
 import Loader from "./Loader";
 import { colors } from "../theme";
 
-const Button: React.SFC<ButtonProps> = ({
+const Button: React.FunctionComponent<ButtonProps> = ({
   type = "primary",
   disabled,
   children,
@@ -22,7 +22,7 @@ const Button: React.SFC<ButtonProps> = ({
   showRipple = true,
   loading,
   size = "small"
-}) => {
+}: ButtonProps) => {
   const disableAction = disabled || loading;
 
   const filled = size !== "x-small";
@@ -44,7 +44,7 @@ const Button: React.SFC<ButtonProps> = ({
   );
 };
 
-export const DropDownButton: React.SFC<DropDownButtonProps> = ({
+export const DropDownButton: React.FunctionComponent<DropDownButtonProps> = ({
   isOpen,
   isSelected,
   children,

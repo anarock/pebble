@@ -10,23 +10,23 @@ const wrapperStyle = css({
 });
 
 interface State {
-  value: [number, number];
+  values: number[];
 }
 
-storiesOf("Slider", module).add(
+storiesOf("Components/Slider", module).add(
   "simple",
-  withState<State>({ value: [10, 20] })(({ store }) => (
+  withState<State>({ values: [10, 20] })(({ store }) => (
     <Slider
-      onValuesUpdated={({ min, max }) => store.set({ value: [min, max] })}
+      onValuesUpdated={({ values }) => store.set({ values })}
       min={number("min", 0)}
       max={number("max", 100)}
-      values={store.state.value}
+      values={store.state.values}
       disabled={boolean("disabled", false)}
       large={boolean("large", false)}
       className={wrapperStyle}
       title={text("title", "Select Range")}
       valueLabelExtractor={() =>
-        `${store.state.value[0]}-${store.state.value[1]}`
+        `${store.state.values[0]}-${store.state.values[1]}`
       }
     />
   ))

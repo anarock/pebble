@@ -21,7 +21,7 @@ describe("DateInput", () => {
       .at(0)
       .simulate("click");
 
-    expect(changeSpy.calledOnce);
+    expect(changeSpy.calledOnce).toBeTruthy();
 
     const argument = format(changeSpy.getCall(0).args[0], "DD-MM-YYYY");
     expect(argument).toEqual("01-12-2012");

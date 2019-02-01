@@ -1,8 +1,7 @@
 import { InputProps } from "./Input";
 import { SearchProps } from "./Search";
 import { Extras } from "./OptionGroup";
-
-export type Selected = SingleSelected | MultiSelected;
+import { Omit } from "utility-types";
 
 export type SingleSelected = number | string;
 export type MultiSelected = Array<number | string>;
@@ -15,10 +14,12 @@ interface CommonSelectProps {
   value?: string;
   onClear?: () => void;
   searchBox?: boolean;
-  searchBoxProps?: Partial<SearchProps>;
+  searchBoxProps?: Omit<SearchProps, "type">;
   dropdownClassName?: string;
-  inputProps?: Partial<InputProps>;
+  inputProps?: Omit<InputProps, "onChange" | "value" | "placeholder">;
   fullWidthDropdown?: boolean;
+  onDropdownToggle?: (isOpen: boolean) => void;
+  disabled?: boolean;
 }
 
 export interface SingleSelectProps extends CommonSelectProps {

@@ -14,17 +14,17 @@ export const sidebarWrapperStyle = css({
 export const closeStyle = css({
   backgroundColor: colors.white.base,
   borderRadius: constants.borderRadius,
-  height: 50,
-  width: 50,
+  height: 40,
+  width: 40,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   cursor: "pointer",
-  marginLeft: -70,
+  marginLeft: -60,
   marginTop: 20,
   position: "absolute",
   i: {
-    fontSize: 25,
+    fontSize: 14,
     color: colors.gray.darker
   },
   "@media (max-width: 800px)": {
@@ -37,7 +37,7 @@ export const closeStyle = css({
     i: {
       float: "right",
       color: colors.gray.dark,
-      fontSize: 20
+      fontSize: 14
     }
   }
 });

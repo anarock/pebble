@@ -10,6 +10,7 @@ import Ink from "react-ink";
 import { css, cx } from "emotion";
 import { disableScrollY } from "../theme/styles";
 import OutsideClick from "./OutsideClick";
+import { animationConfig } from "../utils/animation";
 
 const transitionProps = {
   from: { opacity: 0 },
@@ -30,6 +31,12 @@ class SideBar extends React.PureComponent<SidebarProps> {
     if (this.props.isOpen) {
       document.body.classList.add(disableScrollY);
     } else {
+      document.body.classList.remove(disableScrollY);
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.props.isOpen) {
       document.body.classList.remove(disableScrollY);
     }
   }
@@ -56,11 +63,17 @@ class SideBar extends React.PureComponent<SidebarProps> {
 
     return (
       <React.Fragment>
-        <Transition {...transitionProps}>
-          {isOpen &&
+        <Transition
+          items={isOpen}
+          {...transitionProps}
+          config={animationConfig.config}
+        >
+          {show =>
+            show &&
             (styles => (
               <animated.div style={styles} className={sidebarWrapperStyle} />
-            ))}
+            ))
+          }
         </Transition>
 
         <OutsideClick
@@ -68,8 +81,9 @@ class SideBar extends React.PureComponent<SidebarProps> {
           disabled={!closeOnOutsideClick || !isOpen}
         >
           <div className={_sidebarStyle}>
-            <Transition {...transitionProps}>
-              {isOpen &&
+            <Transition items={isOpen} {...transitionProps}>
+              {show =>
+                show &&
                 (styles => (
                   <animated.div
                     style={styles}
@@ -79,7 +93,8 @@ class SideBar extends React.PureComponent<SidebarProps> {
                     <i className="pi pi-close" />
                     <Ink />
                   </animated.div>
-                ))}
+                ))
+              }
             </Transition>
             <div style={{ overflowY: "scroll", height: "100vh" }}>
               {children}

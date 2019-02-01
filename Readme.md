@@ -16,8 +16,10 @@ Make sure the below code is executed at the very beginning.
 The easier way is to use the cdn:
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/@anarock/pebble@[version]/dist/pebble.css"/>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@anarock/pebble@[version]/dist/pebble.css"
+/>
 ```
 
 :boom: Warning: Pebble adds `box-sizing: border-box` by default to every element by using [`inherit`](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
@@ -48,11 +50,15 @@ Then run `react-native link`.
 and then it can be used by importing the Icon component.
 
 ```jsx
-import { Icon } from "@anarock/pebble/native"
+import { Icon } from "@anarock/pebble/native";
 
 // Usage
-<Icon name="iconName" size={20} color="#000000" />
+<Icon name="iconName" size={20} color="#000000" />;
 ```
+
+## Acknowledgements
+
+We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing and it is awesome.
 
 ## License
 

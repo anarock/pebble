@@ -12,7 +12,7 @@ const wrapperStyle = css({
   backgroundColor: "white"
 });
 
-storiesOf("SideBar", module).add(
+storiesOf("Components/SideBar", module).add(
   "simple",
   withState({ value: false })(({ store }) => (
     <React.Fragment>
