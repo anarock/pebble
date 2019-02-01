@@ -29,7 +29,8 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
     inputProps,
     fullWidthDropdown,
     onDropdownToggle = noop,
-    disabled
+    disabled,
+    isSelected
   } = props;
 
   return (
@@ -114,6 +115,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
             return (
               <OptionGroupCheckBox<OptionType>
                 selected={props.selected}
+                isSelected={isSelected}
                 onChange={(_value, extras) => {
                   props.onChange(_value, extras);
                 }}
@@ -134,6 +136,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
             return (
               <OptionGroupRadio
                 selected={props.selected}
+                isSelected={isSelected}
                 onChange={(_value, extras) => {
                   if (_value) props.onChange(_value, extras);
                   onDropdownToggle(isOpen);

@@ -6,7 +6,7 @@ import { Omit } from "utility-types";
 export type SingleSelected = number | string;
 export type MultiSelected = Array<number | string>;
 
-interface CommonSelectProps {
+interface CommonSelectProps<OptionType> {
   className?: string;
   placeholder: string;
   required?: boolean;
@@ -21,15 +21,18 @@ interface CommonSelectProps {
   onDropdownToggle?: (isOpen: boolean) => void;
   disabled?: boolean;
   children: React.ReactNode;
+  isSelected?: (value: OptionType) => boolean;
 }
 
-export interface SingleSelectProps<OptionType> extends CommonSelectProps {
+export interface SingleSelectProps<OptionType>
+  extends CommonSelectProps<OptionType> {
   multiSelect?: false;
   onChange: (value: OptionType, extras: Extras) => void;
   selected?: OptionType;
 }
 
-export interface MultiSelectProps<OptionType> extends CommonSelectProps {
+export interface MultiSelectProps<OptionType>
+  extends CommonSelectProps<OptionType> {
   multiSelect: true;
   onChange: (value: OptionType[], extras: Extras) => void;
   onApply?: (value: OptionType[], props: SelectProps<OptionType>) => void;
