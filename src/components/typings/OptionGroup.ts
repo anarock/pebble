@@ -5,6 +5,7 @@ import { Omit } from "utility-types";
 export interface CommonProps {
   className?: string;
   searchBox?: boolean;
+  children?: React.ReactNode;
   searchBoxProps?: Omit<SearchProps, "type">;
 }
 
