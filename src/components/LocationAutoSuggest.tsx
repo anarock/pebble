@@ -24,13 +24,13 @@ class LocationSearchInput extends React.Component<
     this.initialMount();
   }
 
-  initialMount = async () => {
+  async initialMount() {
     await googleMapsPromise(this.props.googleMapsApiKey).then(() => {
       this.setState({
         isPromiseCompleted: true
       });
     });
-  };
+  }
 
   render() {
     if (!this.state.isPromiseCompleted) {
