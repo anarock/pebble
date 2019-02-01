@@ -46,6 +46,7 @@ class Search extends React.PureComponent<SearchProps> {
           }}
           ref={this.searchInputRef}
           value={value}
+          autoFocus
           {...inputProps}
         />
         {clearable && (
