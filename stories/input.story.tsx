@@ -6,6 +6,7 @@ import { css } from "emotion";
 import DateInput from "../src/components/DateInput";
 import { withState } from "@dump247/storybook-state";
 import { InputProps } from "../src/components/typings/Input";
+import { action } from "@storybook/addon-actions";
 
 const className = css({
   width: 400
@@ -65,8 +66,10 @@ storiesOf("Components/Input", module)
         <DateInput
           placeholder="Date"
           value={store.state.value}
-          onChange={value => store.set({ value })}
-          useBrowserControls
+          onChange={value => {
+            store.set({ value });
+            action("date")(value);
+          }}
         />
       </div>
     ))
