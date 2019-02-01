@@ -3,47 +3,29 @@ import PlacesAutocomplete from "react-places-autocomplete";
 import TypeAhead from "./TypeAhead";
 import Option from "./Option";
 import Loader from "./Loader";
-import { css } from "react-emotion";
-import googleMapsPromise from "../utils/googleMapsPromise";
+import googleMapsPromise from "../utils/googleMaps";
+import { loaderWrapper } from "./styles/LocationAutoSuggest.styles";
+import {
+  LocationSearchProps,
+  LocationSearchState,
+  Suggestion
+} from "./typings/LocationAutoSuggest";
 
-const loaderWrapper = css({
-  display: "flex",
-  flex: 1,
-  height: "100vh",
-  alignItems: "center",
-  justifyContent: "center"
-});
-
-export interface Props {
-  value: string;
-  onChange: (query: string) => void;
-  onSelect: (value: string, id: string) => void;
-}
-
-export interface Suggestion {
-  description: string;
-  id: string;
-  placeId: string;
-}
-
-export interface State {
-  isPromiseCompleted: boolean;
-}
-
-class LocationSearchInput extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      isPromiseCompleted: false
-    };
-  }
+class LocationSearchInput extends React.Component<
+  LocationSearchProps,
+  LocationSearchState
+> {
+  state: Readonly<LocationSearchState> = {
+    isPromiseCompleted: false,
+    errorStatus: ""
+  };
 
   componentDidMount() {
     this.initialMount();
   }
 
   initialMount = async () => {
-    await googleMapsPromise().then(() => {
+    await googleMapsPromise(this.props.googleMapsApiKey).then(() => {
       this.setState({
         isPromiseCompleted: true
       });
@@ -58,70 +40,72 @@ class LocationSearchInput extends React.Component<Props, State> {
         </div>
       );
     }
-    const { value, onChange, onSelect } = this.props;
+    const { value, onChange, onSelect, className } = this.props;
     return (
       <PlacesAutocomplete
-        inputProps={{
-          value,
-          onChange
-        }}
-        // @ts-ignore
-        onChange={onChange}
         value={value}
+        onChange={onChange}
+        onError={(status, clearSuggestions) => {
+          this.setState({
+            errorStatus: status
+          });
+          clearSuggestions();
+          if (status !== "ZERO_RESULTS") {
+            const e = new Error();
+            e.message = status;
+            throw e;
+          }
+        }}
       >
-        {(opts: {}) => {
-          const {
-            // @ts-ignore
-            getInputProps,
-            // @ts-ignore
-            suggestions,
-            // @ts-ignore
-            getSuggestionItemProps,
-            // @ts-ignore
-            loading
-          } = opts;
+        {({ getInputProps, suggestions, loading }) => {
           const inputProps = getInputProps();
           return (
-            <React.Fragment>
-              <TypeAhead
-                placeholder="Search Locality"
-                onChange={val => {
-                  inputProps.onChange({
-                    target: {
-                      value: val
-                    }
-                  });
-                }}
-                onClear={() => {
-                  onSelect("", "");
-                }}
-                onSelect={placeId => {
-                  // @ts-ignore
-                  const selected = suggestions.find(
-                    // @ts-ignore
-                    suggestion => suggestion.placeId === placeId
-                  );
+            <TypeAhead
+              placeholder="Search Locality"
+              onChange={val => {
+                inputProps.onChange({
+                  target: {
+                    value: val
+                  }
+                });
+              }}
+              onClear={() => {
+                onSelect("", "");
+              }}
+              initialValue={value}
+              onSelect={placeId => {
+                const selected = suggestions.find(
+                  suggestion => suggestion.placeId === placeId
+                );
+                this.setState({
+                  errorStatus: ""
+                });
+                if (selected) {
                   onSelect(selected.description, placeId as string);
-                }}
-                valueExtractor={placeId => {
-                  // @ts-ignore
-                  const selected = suggestions.find(
-                    // @ts-ignore
-                    suggestion => suggestion.placeId === placeId
-                  );
-                  return selected.description;
-                }}
-                loading={loading}
-              >
-                {suggestions.map((suggestion: Suggestion) => (
-                  <Option
-                    key={suggestion.id}
-                    label={suggestion.description}
-                    value={suggestion.placeId}
-                  />
-                ))}
-              </TypeAhead>
-            </React.Fragment>
+                }
+              }}
+              valueExtractor={placeId => {
+                const selected = suggestions.find(
+                  suggestion => suggestion.placeId === placeId
+                );
+                return (selected && selected.description) || "";
+              }}
+              loading={loading}
+              errorMessage={
+                (this.state.errorStatus === "ZERO_RESULTS" &&
+                  "No Results Found") ||
+                undefined
+              }
+              className={className}
+            >
+              {suggestions.map((suggestion: Suggestion) => (
+                <Option
+                  key={suggestion.id}
+                  label={suggestion.description}
+                  value={suggestion.placeId}
+                />
+              ))}
+            </TypeAhead>
           );
         }}
       </PlacesAutocomplete>

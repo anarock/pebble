@@ -1652,10 +1652,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-places-autocomplete@^6.1.3":
-  version "6.1.3"
-  resolved "https://registry.yarnpkg.com/@types/react-places-autocomplete/-/react-places-autocomplete-6.1.3.tgz#181d77f3b0be23a8962738d60bfa8de7299356bf"
-  integrity sha512-sQj5x9pBG7mFkwsWZ6oVm5VOnW6C+gW8VMXkXdsGjJngBJD06tZBDpCk0U8nTfUbUz/2w9Hb8idK/d+DDdbMpA==
+"@types/react-places-autocomplete@^7.2.2":
+  version "7.2.3"
+  resolved "https://registry.yarnpkg.com/@types/react-places-autocomplete/-/react-places-autocomplete-7.2.3.tgz#79d44b801bdaf25a957313790c6e2eec3bbd4a2b"
+  integrity sha512-95t3sn29X2BqGAwMFQzg3dHTGHhZtLiPzIx/q/nhpOqOYsjKIW6eUgUpYfgHtTmeqQl+uLURTeORg6G/KZ3R3g==
   dependencies:
     "@types/googlemaps" "*"
     "@types/react" "*"
@@ -11148,6 +11148,11 @@ schema-utils@^1.0.0:
     ajv "^6.1.0"
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
+
+scriptjs@^2.5.9:
+  version "2.5.9"
+  resolved "https://registry.yarnpkg.com/scriptjs/-/scriptjs-2.5.9.tgz#343915cd2ec2ed9bfdde2b9875cd28f59394b35f"
+  integrity sha512-qGVDoreyYiP1pkQnbnFAUIS5AjenNwwQBdl7zeos9etl+hYKWahjRTfzAZZYBv5xNHx7vNKCmaLDQZ6Fr2AEXg==
 
 scroll-into-view-if-needed@^2.2.20:
   version "2.2.20"
