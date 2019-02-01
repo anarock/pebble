@@ -20,23 +20,23 @@ class OptionGroup<OptionType> extends React.PureComponent<
   optionsRefsSet = new Map<number, React.RefObject<React.ReactInstance>>();
   observer?: IntersectionObserver;
 
-  state = {
-    selected: -1,
+  state: Readonly<OptionGroupState> = {
+    highlighted: -1,
     isScrolled: false
   };
 
   private handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     const { handleChange, isSelected } = this.props;
     const children = React.Children.toArray(this.props.children);
-    const { selected } = this.state;
+    const { highlighted } = this.state;
     const { which } = e;
 
-    if (which === 13 && children && children[selected]) {
+    if (which === 13 && children && children[highlighted]) {
       // Enter key
       // @ts-ignore
       const { value } =
         // @ts-ignore
-        children && children[selected] && children[selected].props;
+        children && children[highlighted] && children[highlighted].props;
 
       handleChange(
         {
@@ -49,21 +49,21 @@ class OptionGroup<OptionType> extends React.PureComponent<
 
     this.setState(
       () => {
-        let _selected = selected;
+        let _highlighted = highlighted;
         if (which === 40) {
-          _selected = Math.min(
-            _selected + 1,
+          _highlighted = Math.min(
+            _highlighted + 1,
             React.Children.count(children) - 1
           );
         }
         if (which === 38) {
-          _selected = Math.max(_selected - 1, 0);
+          _highlighted = Math.max(_highlighted - 1, 0);
         }
 
-        return { selected: _selected };
+        return { highlighted: _highlighted };
       },
       () => {
-        const currentRef = this.optionsRefsSet.get(selected);
+        const currentRef = this.optionsRefsSet.get(highlighted);
         if (
           this.optionRef.current &&
           (which === 40 || which === 38) &&
@@ -120,7 +120,7 @@ class OptionGroup<OptionType> extends React.PureComponent<
       handleChange,
       searchBoxProps
     } = this.props;
-    const { isScrolled, selected } = this.state;
+    const { isScrolled, highlighted } = this.state;
 
     const _children = React.Children.map(children, (_option, i) => {
       // `_option as React.ReactElement<OptionProps>` is a hack
@@ -135,7 +135,7 @@ class OptionGroup<OptionType> extends React.PureComponent<
       }
       return React.cloneElement(option, {
         onChange: handleChange,
-        isActive: selected === i,
+        isActive: highlighted === i,
         isSelected: isSelected(option.props.value),
         multiSelect,
         // @ts-ignore

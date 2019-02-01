@@ -24,6 +24,6 @@ export interface Extras {
 }
 
 export interface OptionGroupState {
-  selected: number;
+  highlighted: number;
   isScrolled: boolean;
 }
