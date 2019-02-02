@@ -26,7 +26,6 @@ exports[`Checkbox snapshot 1`] = `
 
 .emotion-1[data-disabled='true'] {
   cursor: not-allowed;
-  pointer-events: none;
 }
 
 .emotion-1[data-disabled='true'] .emotion-0 {

@@ -45,7 +45,7 @@ export default class DateInput extends React.PureComponent<
   DateInputProps,
   DateInputState
 > {
-  inputRef = React.createRef<HTMLInputElement>();
+  private inputRef = React.createRef<HTMLInputElement>();
 
   state: Readonly<DateInputState> = {
     stringInput: "",
@@ -90,15 +90,15 @@ export default class DateInput extends React.PureComponent<
     return newState;
   }
 
-  onCalendarDateChange = (date: Date) => {
+  private onCalendarDateChange = (date: Date) => {
     this.props.onChange(date.getTime());
   };
 
-  onDateInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  private onDateInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.props.onChange(e.currentTarget.valueAsDate.getTime());
   };
 
-  onInputChange = (input: string) => {
+  private onInputChange = (input: string) => {
     this.setState({ stringInput: input });
     // TODO: Modify when close to year 9999
     if (input.length === 10) {
@@ -120,7 +120,12 @@ export default class DateInput extends React.PureComponent<
   }
 
   render() {
-    const { calendarProps, inputProps, placeholder } = this.props;
+    const {
+      calendarProps,
+      inputProps,
+      placeholder,
+      value: propsValue
+    } = this.props;
 
     const commonProps = {
       fixLabelAtTop: true,
@@ -177,12 +182,10 @@ export default class DateInput extends React.PureComponent<
           <Calendar
             hideShadow
             className={dateClass}
-            selected={this.props.value ? new Date(this.props.value) : undefined}
+            selected={propsValue ? new Date(propsValue) : undefined}
             {...calendarProps}
-            onChange={_date => {
-              // _date as Date is a hack.
-              // TODO:Aziz this is fixable, fix this.
-              const date = _date as Date;
+            range={false}
+            onChange={date => {
               this.onCalendarDateChange(date);
               toggle();
             }}
