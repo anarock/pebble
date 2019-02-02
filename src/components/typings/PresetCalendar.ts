@@ -1,18 +1,18 @@
-import { CalendarValue, CalendarProps } from "./Calendar";
+import { DateRange } from "./Calendar";
 
 export interface PresetDates {
   label: string;
-  dateRange: () => CalendarValue;
+  dateRange: () => [Date, Date];
 }
 
-export interface PresetCalendarProps extends CalendarProps {
+export type PresetCalendarProps = DateRange & {
   presetDateOptions: PresetDates[];
   customDateInputLabel: (
     args: { toggle: () => void; isOpen: boolean }
   ) => JSX.Element;
-  onApply: (value?: CalendarValue) => void;
+  onApply: (value?: [Date, Date]) => void;
   isOpen: boolean;
-}
+};
 
 export interface PresetCalendarState {
   isCustomSelected: boolean;

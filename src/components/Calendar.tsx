@@ -3,11 +3,7 @@ import RCalendar, {
   CalendarTileProperties
 } from "react-calendar/dist/entry.nostyle";
 import { css, cx } from "emotion";
-import {
-  CalendarProps,
-  CalendarState,
-  CalendarValue
-} from "./typings/Calendar";
+import { CalendarProps, CalendarState } from "./typings/Calendar";
 import {
   buttonsWrapper,
   dateStyle,
@@ -30,18 +26,32 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     singleSelectedDate: null
   };
 
-  private onChange = (value: CalendarValue) => {
-    const { range, onChange } = this.props;
-    this.setState(
-      {
-        value,
-        singleSelectedDate: null
-      },
-      () =>
-        range && Array.isArray(value)
-          ? value.length === 2 && onChange(value)
-          : onChange(value)
-    );
+  private onChange = (value: Date | Date[]) => {
+    // tslint:disable-next-line no-this-assignment Doing this to reduce lookups on this, not avoiding to use fat arrow functions
+    const { props } = this;
+    // The following is exactly the same code.
+    // But Typescript cannot merge into one.
+    if (props.range) {
+      if (Array.isArray(value) && value.length === 2) {
+        this.setState(
+          {
+            value: value as [Date, Date],
+            singleSelectedDate: null
+          },
+          () => props.onChange(value as [Date, Date])
+        );
+      }
+    } else {
+      if (!Array.isArray(value)) {
+        this.setState(
+          {
+            value,
+            singleSelectedDate: null
+          },
+          () => props.onChange(value)
+        );
+      }
+    }
   };
 
   private onDayClick = (day: Date) => {
@@ -77,6 +87,21 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         disabledDays.some(_date => isSameDay(_date, date))) ||
       false
     );
+  };
+
+  private onApply = () => {
+    // tslint:disable-next-line no-this-assignment
+    const { props } = this;
+    const { value, singleSelectedDate } = this.state;
+    if (props.range && props.onApply) {
+      if (singleSelectedDate) {
+        props.onApply(singleSelectedDate);
+      } else if (Array.isArray(value)) {
+        props.onApply(value);
+      }
+    } else if (!props.range && props.onApply && !Array.isArray(value)) {
+      props.onApply(value);
+    }
   };
 
   render() {
@@ -129,17 +154,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
                 Clear
               </Button>
             )}
-            {onApply && (
-              <Button
-                onClick={() => {
-                  range && this.state.singleSelectedDate
-                    ? onApply(this.state.singleSelectedDate)
-                    : onApply(this.state.value);
-                }}
-              >
-                Apply
-              </Button>
-            )}
+            {onApply && <Button onClick={this.onApply}>Apply</Button>}
           </div>
         )}
       </div>
