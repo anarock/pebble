@@ -89,6 +89,21 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     );
   };
 
+  private onApply = () => {
+    // tslint:disable-next-line no-this-assignment
+    const { props } = this;
+    const { value, singleSelectedDate } = this.state;
+    if (props.range && props.onApply) {
+      if (singleSelectedDate) {
+        props.onApply(singleSelectedDate);
+      } else if (Array.isArray(value)) {
+        props.onApply(value);
+      }
+    } else if (!props.range && props.onApply && !Array.isArray(value)) {
+      props.onApply(value);
+    }
+  };
+
   render() {
     const {
       range,
@@ -139,25 +154,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
                 Clear
               </Button>
             )}
-            {onApply && (
-              <Button
-                onClick={() => {
-                  if (this.props.onApply) {
-                    if (this.props.range) {
-                      if (this.state.singleSelectedDate) {
-                        this.props.onApply(this.state.singleSelectedDate);
-                      } else if (Array.isArray(this.state.value)) {
-                        this.props.onApply(this.state.value);
-                      }
-                    } else if (!Array.isArray(this.state.value)) {
-                      this.props.onApply(this.state.value);
-                    }
-                  }
-                }}
-              >
-                Apply
-              </Button>
-            )}
+            {onApply && <Button onClick={this.onApply}>Apply</Button>}
           </div>
         )}
       </div>
