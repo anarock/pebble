@@ -1,12 +1,8 @@
 import * as React from "react";
 
-export interface RadioGroupProps {
-  selected: number | string;
-  onChange: (
-    value: number | string | undefined,
-    event: React.MouseEvent
-  ) => void;
-  children: React.ReactNode;
+export interface RadioGroupProps<OptionType> {
+  selected: OptionType;
+  onChange: (value: OptionType | undefined, event: React.MouseEvent) => void;
   toggle?: boolean;
   className?: string;
   name: string;

@@ -20,19 +20,22 @@ interface CommonSelectProps {
   fullWidthDropdown?: boolean;
   onDropdownToggle?: (isOpen: boolean) => void;
   disabled?: boolean;
+  children: React.ReactNode;
 }
 
-export interface SingleSelectProps extends CommonSelectProps {
+export interface SingleSelectProps<OptionType> extends CommonSelectProps {
   multiSelect?: false;
-  onChange: (value: SingleSelected, extras: Extras) => void;
-  selected?: SingleSelected;
+  onChange: (value: OptionType, extras: Extras) => void;
+  selected?: OptionType;
 }
 
-export interface MultiSelectProps extends CommonSelectProps {
+export interface MultiSelectProps<OptionType> extends CommonSelectProps {
   multiSelect: true;
-  onChange: (value: MultiSelected, extras: Extras) => void;
-  onApply?: (value: MultiSelected, props: SelectProps) => void;
-  selected?: MultiSelected;
+  onChange: (value: OptionType[], extras: Extras) => void;
+  onApply?: (value: OptionType[], props: SelectProps<OptionType>) => void;
+  selected?: OptionType[];
 }
 
-export type SelectProps = SingleSelectProps | MultiSelectProps;
+export type SelectProps<OptionType> =
+  | SingleSelectProps<OptionType>
+  | MultiSelectProps<OptionType>;

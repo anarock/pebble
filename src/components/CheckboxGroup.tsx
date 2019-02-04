@@ -3,11 +3,11 @@ import { CheckboxGroupProps } from "./typings/CheckboxGroup";
 import { CheckboxProps } from "./typings/Checkbox";
 import { getSelectedCheckboxes } from "./utils/getSelectedCheckboxes";
 
-export default class RadioGroup extends React.PureComponent<
-  CheckboxGroupProps
+export default class CheckboxGroup<OptionType> extends React.PureComponent<
+  CheckboxGroupProps<OptionType>
 > {
   private handleChange = (
-    { value }: { value: React.ReactText },
+    { value }: { value: OptionType },
     event: React.MouseEvent
   ) => {
     const { onChange, selected } = this.props;
@@ -22,7 +22,9 @@ export default class RadioGroup extends React.PureComponent<
       // Because React does not allow us to specify what sort of elements
       // you can allow as children and leaves it on you to figure out
       // all various types of children provided.
-      const checkbox = _checkbox as React.ReactElement<CheckboxProps>;
+      const checkbox = _checkbox as React.ReactElement<
+        CheckboxProps<OptionType>
+      >;
       return React.cloneElement(checkbox, {
         onChange: this.handleChange,
         checked: selected.indexOf(checkbox.props.value) >= 0,

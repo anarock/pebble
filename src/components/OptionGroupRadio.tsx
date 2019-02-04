@@ -2,12 +2,12 @@ import * as React from "react";
 import OptionGroup from "./shared/OptionGroup";
 import { OptionGroupRadio as OptionGroupRadioProps } from "./typings/OptionGroupRadio";
 
-const OptionGroupRadio: React.FunctionComponent<
-  OptionGroupRadioProps
-> = props => {
+function OptionGroupRadio<OptionType>(
+  props: OptionGroupRadioProps<OptionType>
+) {
   const { selected, onChange, ...rest } = props;
   return (
-    <OptionGroup
+    <OptionGroup<OptionType>
       {...rest}
       isSelected={value => {
         return selected === value;
@@ -20,6 +20,6 @@ const OptionGroupRadio: React.FunctionComponent<
       }}
     />
   );
-};
+}
 
 export default OptionGroupRadio;

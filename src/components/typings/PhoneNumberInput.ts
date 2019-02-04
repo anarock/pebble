@@ -3,15 +3,15 @@ import { InputProps } from "./Input";
 import { Omit } from "utility-types";
 
 export interface PhoneNumberInputProps {
-  countryCode: string | number;
+  countryCode: string;
   phone: string;
   onChange: (
-    { countryCode, phone }: { countryCode: string | number; phone: string }
+    { countryCode, phone }: { countryCode: string; phone: string }
   ) => void;
 
   // Optional
   className?: string;
-  selectProps?: Partial<SingleSelectProps>;
+  selectProps?: Partial<SingleSelectProps<string>>;
   inputProps?: Omit<InputProps, "value" | "onChange" | "placeholder">;
   placeholder?: string;
   required?: boolean;

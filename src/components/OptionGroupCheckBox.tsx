@@ -5,17 +5,20 @@ import OptionGroup from "./shared/OptionGroup";
 import { OptionGroupCheckBoxProps } from "./typings/OptionGroupCheckBox";
 import * as styles from "../components/styles/OptionGroupCheckBox.styles";
 
-const OptionGroupCheckBox: React.FunctionComponent<
-  OptionGroupCheckBoxProps
-> = props => {
+function OptionGroupCheckBox<OptionType>(
+  props: OptionGroupCheckBoxProps<OptionType>
+) {
   const { onApply, onClear, selected = [], onChange, ...rest } = props;
   return (
     <div className={styles.optionGroupCheckBoxWrap}>
-      <OptionGroup
+      <OptionGroup<OptionType>
         {...rest}
-        isSelected={value => !!selected && selected.indexOf(value) >= 0}
+        isSelected={value => !!selected && selected.includes(value)}
         handleChange={({ value }, event) => {
-          onChange(getSelectedCheckboxes(value, selected), { props, event });
+          onChange(getSelectedCheckboxes<OptionType>(value, selected), {
+            props,
+            event
+          });
         }}
         multiSelect
       />
@@ -36,6 +39,6 @@ const OptionGroupCheckBox: React.FunctionComponent<
       )}
     </div>
   );
-};
+}
 
 export default OptionGroupCheckBox;
