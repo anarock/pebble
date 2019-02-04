@@ -16,9 +16,9 @@ const defaultContext: UserAgentInfo = {
   userAgent: ""
 };
 
-export const UserAgentInfoContext = React.createContext<UserAgentInfo>(
-  defaultContext
-);
+export const UserAgentInfoContext = /*@__PURE__*/ React.createContext<
+  UserAgentInfo
+>(defaultContext);
 
 function computeUserAgentInfo(userAgent: string): UserAgentInfo {
   return {
