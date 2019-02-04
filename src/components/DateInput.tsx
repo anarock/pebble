@@ -6,30 +6,10 @@ import Calendar from "./Calendar";
 import Input from "./Input";
 import { Rifm } from "rifm";
 import { startOfDay, format } from "date-fns";
-// import { isDesktop } from "../utils";
+import NativeDateInput from "./NativeDateInput";
+import { UserAgentInfoContext } from "../utils/useragent";
 
 const noop = () => {};
-
-function checkDateInputSupport(): boolean {
-  const input = document.createElement("input");
-  if (!("valueAsDate" in input)) return false;
-  const type = "date";
-  input.setAttribute("type", "date");
-  input.value = "\x01";
-  return (
-    input.type === type && (input.value !== "\x01" || !input.checkValidity())
-  );
-}
-
-function checkMobileDevice(): boolean {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
-    navigator.userAgent
-  );
-}
-
-const hasDateInputSupport = /*@__PURE__*/ checkDateInputSupport();
-const isMobileDevice = /*@__PURE__*/ checkMobileDevice();
-const useBrowserControls = isMobileDevice && hasDateInputSupport;
 
 function dateFormat(str: string) {
   const clean = str.replace(/[^\d]+/gi, "");
@@ -45,12 +25,8 @@ export default class DateInput extends React.PureComponent<
   DateInputProps,
   DateInputState
 > {
-  private inputRef = React.createRef<HTMLInputElement>();
-
   state: Readonly<DateInputState> = {
-    stringInput: "",
-    propsRef: null,
-    inputRef: this.inputRef
+    stringInput: ""
   };
 
   static getDerivedStateFromProps(
@@ -58,31 +34,8 @@ export default class DateInput extends React.PureComponent<
     state: DateInputState
   ): Partial<DateInputState> | null {
     let newState: Partial<DateInputState> | null = null;
-    if (
-      useBrowserControls &&
-      props.inputProps &&
-      props.inputProps.inputProps &&
-      props.inputProps.inputProps.ref &&
-      props.inputProps.inputProps.ref !== state.propsRef
-    ) {
-      const propsRef = props.inputProps.inputProps.ref;
-      newState = {
-        propsRef,
-        inputRef: (el: HTMLInputElement) => {
-          // @ts-ignore
-          this.inputRef.current = el;
-          if (typeof propsRef === "function") {
-            propsRef(el);
-          } else {
-            // @ts-ignore
-            propsRef.current = el;
-          }
-        }
-      };
-    }
     if (props.value && props.value !== state.propsValue) {
       newState = {
-        ...newState,
         propsValue: props.value,
         stringInput: (props.value && format(props.value, "DD/MM/YYYY")) || ""
       };
@@ -92,10 +45,6 @@ export default class DateInput extends React.PureComponent<
 
   private onCalendarDateChange = (date: Date) => {
     this.props.onChange(date.getTime());
-  };
-
-  private onDateInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    this.props.onChange(e.currentTarget.valueAsDate.getTime());
   };
 
   private onInputChange = (input: string) => {
@@ -113,12 +62,6 @@ export default class DateInput extends React.PureComponent<
     }
   };
 
-  componentDidUpdate() {
-    if (useBrowserControls && this.inputRef.current && this.props.value) {
-      this.inputRef.current.valueAsDate = new Date(this.props.value);
-    }
-  }
-
   render() {
     const {
       calendarProps,
@@ -126,29 +69,6 @@ export default class DateInput extends React.PureComponent<
       placeholder,
       value: propsValue
     } = this.props;
-
-    const commonProps = {
-      fixLabelAtTop: true,
-      ...inputProps
-    };
-
-    if (useBrowserControls) {
-      return (
-        <Input
-          onChange={noop}
-          type="date"
-          value={undefined}
-          placeholder={placeholder}
-          {...commonProps}
-          inputProps={{
-            value: undefined,
-            onChange: this.onDateInputChange,
-            ...(inputProps && inputProps.inputProps),
-            ref: this.state.inputRef
-          }}
-        />
-      );
-    }
 
     return (
       <DropDown
@@ -192,6 +112,39 @@ export default class DateInput extends React.PureComponent<
           />
         )}
       </DropDown>
+    );
+  }
+}
+
+function checkDateInputSupport(): boolean {
+  try {
+    const input = document.createElement("input");
+    const type = "date";
+    input.setAttribute("type", "date");
+    input.value = "\x01";
+    return (
+      input.type === type && (input.value !== "\x01" || !input.checkValidity())
+    );
+  } catch (e) {
+    return true;
+  }
+}
+
+const hasDateInputSupport = /*@__PURE__*/ checkDateInputSupport();
+
+// tslint:disable-next-line max-classes-per-file
+export class BrowserBasedDateInput extends React.PureComponent<DateInputProps> {
+  static contextType = UserAgentInfoContext;
+  render() {
+    return (
+      <UserAgentInfoContext.Consumer>
+        {({ userAgent }) => {
+          if (/Android|iPhone|iPad/i.test(userAgent) && hasDateInputSupport) {
+            return <NativeDateInput {...this.props} />;
+          }
+          return <DateInput {...this.props} />;
+        }}
+      </UserAgentInfoContext.Consumer>
     );
   }
 }

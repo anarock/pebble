@@ -13,6 +13,4 @@ export interface DateInputProps {
 export interface DateInputState {
   stringInput: string;
   propsValue?: number | Date;
-  inputRef: React.Ref<HTMLInputElement>;
-  propsRef: React.Ref<HTMLInputElement> | null;
 }
