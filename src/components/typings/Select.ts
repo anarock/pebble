@@ -28,6 +28,9 @@ export interface SingleSelectProps<OptionType>
   extends CommonSelectProps<OptionType> {
   multiSelect?: false;
   onChange: (value: OptionType, extras: Extras) => void;
+  /**
+   * @deprecated use isSelected
+   */
   selected?: OptionType;
 }
 
@@ -36,6 +39,9 @@ export interface MultiSelectProps<OptionType>
   multiSelect: true;
   onChange: (value: OptionType[], extras: Extras) => void;
   onApply?: (value: OptionType[], props: SelectProps<OptionType>) => void;
+  /**
+   * @deprecated use isSelected
+   */
   selected?: OptionType[];
 }
 

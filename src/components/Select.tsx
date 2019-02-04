@@ -81,6 +81,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
         {({ toggle, isOpen }) => {
           const { children, onClear, searchBox, searchBoxProps } = props;
           const commonProps = {
+            isSelected,
             onClear:
               onClear &&
               (() => {
@@ -111,11 +112,10 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
           //   </OptionGroup>
           // )
 
-          if (props.multiSelect === true) {
+          if (props.multiSelect) {
             return (
               <OptionGroupCheckBox<OptionType>
                 selected={props.selected}
-                isSelected={isSelected}
                 onChange={(_value, extras) => {
                   props.onChange(_value, extras);
                 }}
@@ -136,7 +136,6 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
             return (
               <OptionGroupRadio
                 selected={props.selected}
-                isSelected={isSelected}
                 onChange={(_value, extras) => {
                   if (_value) props.onChange(_value, extras);
                   onDropdownToggle(isOpen);
