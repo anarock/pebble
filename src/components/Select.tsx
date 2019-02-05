@@ -29,7 +29,8 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
     inputProps,
     fullWidthDropdown,
     onDropdownToggle = noop,
-    disabled
+    disabled,
+    isSelected
   } = props;
 
   return (
@@ -80,6 +81,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
         {({ toggle, isOpen }) => {
           const { children, onClear, searchBox, searchBoxProps } = props;
           const commonProps = {
+            isSelected,
             onClear:
               onClear &&
               (() => {
@@ -110,7 +112,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
           //   </OptionGroup>
           // )
 
-          if (props.multiSelect === true) {
+          if (props.multiSelect) {
             return (
               <OptionGroupCheckBox<OptionType>
                 selected={props.selected}
