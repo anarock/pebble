@@ -11,7 +11,8 @@ import Stepper from "./Stepper";
 import Tag from "./Tag";
 import Toast from "./Toast";
 import TypeAhead from "./TypeAhead";
-import DateInput from "./DateInput";
+import DateInput, { BrowserBasedDateInput } from "./DateInput";
+import NativeDateInput from "./NativeDateInput";
 import Tooltip from "./Tooltip";
 import Logo from "./Logo";
 import Popper from "./Popper";
@@ -47,6 +48,8 @@ export {
   TypeAhead,
   SideBar,
   DateInput,
+  BrowserBasedDateInput,
+  NativeDateInput,
   Tooltip,
   Logo,
   Popper,

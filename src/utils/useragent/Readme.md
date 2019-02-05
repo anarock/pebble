@@ -5,8 +5,7 @@ Set userAgent from top level component so that it is accessible within component
 Similar to [@quentin-sommer/react-useragent](https://github.com/quentin-sommer/react-useragent) but with type definitions and reduced scope.
 
 ```tsx
-import { utils } from "@anarock/pebble";
-const { UserAgentInfoContext } = utils;
+import { UserAgentInfoContext } from "@anarock/pebble";
 
 class Component extends React.PureComponent {
   static context = UserAgentInfoContext;
@@ -27,7 +26,7 @@ class Component extends React.PureComponent {
 ```tsx
 import App, { Container, NextAppContext } from "next/app";
 import * as React from "react";
-import { utils } from "@anarock/pebble";
+import { UserAgentInfoProvider } from "@anarock/pebble";
 
 interface RootProps {
   Component: React.ComponentClass;
@@ -35,8 +34,6 @@ interface RootProps {
   // tslint:disable-next-line no-any
   pageProps: any;
 }
-
-const { UserAgentInfoProvider } = utils;
 
 export default class MyApp extends App<RootProps> {
   static async getInitialProps({ Component, ctx }: NextAppContext) {
