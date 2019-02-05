@@ -10916,6 +10916,13 @@ rheostat@2.2.0:
     object.assign "^4.1.0"
     prop-types "^15.6.0"
 
+rifm@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/rifm/-/rifm-0.5.1.tgz#623b7709918f8dabb3a2f7301ddc9db71c4669bb"
+  integrity sha512-ETxyCV6FaYD9oa8HGlJuFmDNedm0/yA7z4CGO1lAAPmDDzMOIymxMcaNae2tTr3jvOjJleTuG/KT8KyFwyl8eA==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 right-pad@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/right-pad/-/right-pad-1.0.1.tgz#8ca08c2cbb5b55e74dafa96bf7fd1a27d568c8d0"
