@@ -5,7 +5,7 @@ import { TextProps } from "./typings/Text";
 
 const Text: React.FunctionComponent<TextProps> = ({
   typography,
-  color = colors.gray.base,
+  color = colors.gray.darker,
   children,
   className
 }) => {
