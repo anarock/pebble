@@ -28,6 +28,7 @@ import OptionGroupCheckBox from "./OptionGroupCheckBox";
 import OutsideClick from "./OutsideClick";
 import PhoneNumberInput from "./PhoneNumberInput";
 import TimePicker from "./TimePicker";
+import Text from "./Text";
 
 export {
   Button,
@@ -60,5 +61,6 @@ export {
   OptionGroupRadio,
   OptionGroupCheckBox,
   OutsideClick,
-  PhoneNumberInput
+  PhoneNumberInput,
+  Text
 };
