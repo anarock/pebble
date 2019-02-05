@@ -4,15 +4,13 @@ import { ControlProps } from "../typings/Control";
 import { colors } from "../../theme";
 import { cx } from "emotion";
 
-const renderProps = (props: ControlProps) => <ControlView {...props} />;
-
-const Control: React.FunctionComponent<ControlProps> = props => {
+function Control<OptionType>(props: ControlProps<OptionType>) {
   const {
     checked,
     onChange,
     value,
     disabled,
-    children = renderProps,
+    children = ControlView,
     type,
     className
   } = props;
@@ -34,9 +32,15 @@ const Control: React.FunctionComponent<ControlProps> = props => {
       {children(props)}
     </div>
   );
-};
+}
 
-export const ControlView: React.FunctionComponent<ControlProps> = ({
+interface ControlViewProps {
+  label: React.ReactNode;
+  checked?: boolean;
+  type: "radio" | "checkbox";
+}
+
+export const ControlView: React.FunctionComponent<ControlViewProps> = ({
   checked,
   label,
   type

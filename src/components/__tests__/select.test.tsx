@@ -18,7 +18,10 @@ const options = new Array(5)
 
 const noop = () => {};
 
-function getComponent(spy = noop, props: Partial<SingleSelectProps> = {}) {
+function getComponent(
+  spy = noop,
+  props: Partial<SingleSelectProps<string>> = {}
+) {
   return (
     <Select
       onChange={spy}
@@ -31,12 +34,17 @@ function getComponent(spy = noop, props: Partial<SingleSelectProps> = {}) {
   );
 }
 
-function getMultiSelectComponent(
+function getMultiSelectComponent<T>(
   spy = noop,
-  props: Partial<MultiSelectProps> = {}
+  props: Partial<MultiSelectProps<T>> = {}
 ) {
   return (
-    <Select onChange={spy} placeholder="Choose Option" multiSelect {...props}>
+    <Select<T>
+      onChange={spy}
+      placeholder="Choose Option"
+      multiSelect
+      {...props}
+    >
       {options}
     </Select>
   );

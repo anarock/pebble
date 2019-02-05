@@ -2,22 +2,21 @@ import * as React from "react";
 import { SearchProps } from "./Search";
 import { Omit } from "utility-types";
 
-export interface OptionGroupProps {
+export interface CommonProps {
   className?: string;
   searchBox?: boolean;
+  children?: React.ReactNode;
   searchBoxProps?: Omit<SearchProps, "type">;
-  isSelected: (value: React.ReactText) => boolean;
+}
+
+export interface OptionGroupProps<OptionType> extends CommonProps {
+  isSelected: (value: OptionType) => boolean;
   handleChange: (
-    args: { value: React.ReactText; checked: boolean },
+    args: { value: OptionType; checked: boolean },
     e: React.SyntheticEvent | Event
   ) => void;
   multiSelect?: boolean;
 }
-
-export type CommonProps = Omit<
-  OptionGroupProps,
-  "multiSelect" | "isSelected" | "handleChange"
->;
 
 export interface Extras {
   props: CommonProps;
@@ -25,6 +24,6 @@ export interface Extras {
 }
 
 export interface OptionGroupState {
-  selected: number;
+  highlighted: number;
   isScrolled: boolean;
 }
