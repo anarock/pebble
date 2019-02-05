@@ -156,7 +156,8 @@ class OptionGroup<OptionType> extends React.PureComponent<
               {...searchBoxProps}
               inputProps={{
                 ...(searchBoxProps && searchBoxProps.inputProps),
-                onKeyDown: this.handleKeyPress
+                onKeyDown: this.handleKeyPress,
+                autoFocus: true
               }}
             />
           </div>
