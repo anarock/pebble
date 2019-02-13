@@ -4,7 +4,7 @@ import DropDown from "../src/components/DropDown";
 import Option from "../src/components/Option";
 import OptionGroupRadio from "../src/components/OptionGroupRadio";
 
-storiesOf("Dropdown", module).add("simple", () => (
+storiesOf("Components/Dropdown", module).add("simple", () => (
   <DropDown buttonLabel="Hello" initiallyOpen>
     {() => (
       <OptionGroupRadio onChange={() => {}}>

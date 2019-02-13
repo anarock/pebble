@@ -5,16 +5,17 @@ import { arrowStyle, popperStyle } from "./styles/Popper.styles";
 import { colors } from "../theme";
 import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
+import MountTransition from "./shared/MountTransition";
 
 export default class extends React.PureComponent<PopperProps, PopperState> {
   static defaultProps: Partial<PopperProps> = {
     placement: "bottom",
     popperBackgroundColor: colors.white.base,
-    closeOnClickOutside: true
+    closeOnOutsideClick: true
   };
 
   state: PopperState = {
-    isOpen: this.props.isOpen
+    isOpen: !!this.props.isOpen
   };
 
   private toggle = () => {
@@ -31,18 +32,22 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
       controlled,
       isOpen,
       popperClassName,
+      onOutsideClick,
       ...props
     } = this.props;
 
-    const _isPopperOpen = controlled ? isOpen : this.state.isOpen;
+    const _isPopperOpen = controlled ? !!isOpen : this.state.isOpen;
 
     return (
       <OutsideClick
-        onOutsideClick={() =>
+        onOutsideClick={() => {
           this.setState({
             isOpen: false
-          })
-        }
+          });
+          if (onOutsideClick) {
+            onOutsideClick();
+          }
+        }}
         disabled={!_isPopperOpen}
       >
         <Manager>
@@ -55,37 +60,49 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
               </div>
             )}
           </Reference>
-          {_isPopperOpen && (
-            <Popper {...props}>
-              {({ ref, style, placement, arrowProps }) => (
-                <div
-                  className={cx(popperStyle, popperClassName)}
-                  ref={ref}
-                  style={{
+
+          <MountTransition visible={_isPopperOpen}>
+            {transitionStyles => (
+              <Popper {...props} positionFixed>
+                {({ ref, style, placement, arrowProps }) => {
+                  const wrapperStyle = {
                     ...style,
-                    backgroundColor: popperBackgroundColor
-                  }}
-                  data-placement={placement}
-                >
-                  {children({
-                    toggle: this.toggle,
-                    isOpen: this.state.isOpen
-                  })}
-                  <div
-                    className={arrowStyle}
-                    ref={arrowProps.ref}
-                    style={{
-                      ...arrowProps.style,
-                      color: popperBackgroundColor
-                    }}
-                    data-placement={placement}
-                  >
-                    ▶
-                  </div>
-                </div>
-              )}
-            </Popper>
-          )}
+                    ...transitionStyles,
+                    backgroundColor: popperBackgroundColor,
+                    transform: `${style.transform ||
+                      ""} ${transitionStyles.transform || ""}`,
+                    transformOrigin: `${arrowProps.style.left ||
+                      0}px ${arrowProps.style.top || 0}px`
+                  };
+
+                  return (
+                    <div
+                      className={cx(popperStyle, popperClassName)}
+                      ref={ref}
+                      style={wrapperStyle}
+                      data-placement={placement}
+                    >
+                      {children({
+                        toggle: this.toggle,
+                        isOpen: this.state.isOpen
+                      })}
+                      <div
+                        className={arrowStyle}
+                        ref={arrowProps.ref}
+                        style={{
+                          ...arrowProps.style,
+                          color: popperBackgroundColor
+                        }}
+                        data-placement={placement}
+                      >
+                        ▶
+                      </div>
+                    </div>
+                  );
+                }}
+              </Popper>
+            )}
+          </MountTransition>
         </Manager>
       </OutsideClick>
     );

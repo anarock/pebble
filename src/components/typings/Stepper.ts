@@ -14,35 +14,38 @@ interface ArgsCommon {
 }
 
 interface ArgsRenderContent extends ArgsCommon {
-  item: any;
+  item: Item;
   isSelected: boolean;
 }
 
-interface ArgsRenderFooter extends ArgsCommon {
+export interface ArgsRenderFooter extends ArgsCommon {
   activeIndex: number;
 }
 
+// tslint:disable-next-line no-any
+type Item = any;
+
 export interface StepperProps {
-  keyExtractor: (item: any) => number | string;
-  data: any[];
-  renderContentElement: (args: ArgsRenderContent) => JSX.Element;
-  headingExtractor: ({ item: any }) => string;
-  renderFooterElement?: (
+  keyExtractor: (item: Item) => number | string;
+  data: Item[];
+  renderContentElement: (args: ArgsRenderContent) => React.ReactNode;
+  headingExtractor: (obj: { item: Item }) => string;
+  renderFooterElement: (
     args: ArgsRenderFooter,
     props: StepperProps
-  ) => JSX.Element;
+  ) => React.ReactNode;
   className?: string;
   initialSelectedIndex?: number;
-  allowSkip?: boolean;
-  cancelLabel?: string;
-  onCancel?: () => void;
-  nextLabel?: string;
-  prevLabel?: string;
-  doneLabel?: string;
-  onDone?: () => void;
-  onBeforeNext?: (index: number) => boolean;
-  onBeforePrev?: (index: number) => boolean;
-  onChange?: (args: { prev: number; current: number }) => void;
+  allowSkip: boolean;
+  cancelLabel: string;
+  onCancel: () => void;
+  nextLabel: string;
+  prevLabel: string;
+  doneLabel: string;
+  onDone: () => void;
+  onBeforeNext: (index: number) => boolean;
+  onBeforePrev: (index: number) => boolean;
+  onChange: (args: { prev: number; current: number }) => void;
   isRightButtonLoading?: boolean;
 }
 

@@ -27,17 +27,17 @@ const divs = css({
   }
 });
 
-storiesOf("Icons", module).add("List", () => (
+storiesOf("Theme/icons", module).add("List", () => (
   <div className={wrapper}>
-    {iconNames.map(iconName => (
+    {iconNames.map((iconName: string) => (
       <div key={iconName} style={{ width: "33%" }}>
         <Tooltip
           label={({ ref }) => (
             <div className={divs} ref={ref}>
-              <i className={`icon icon-${iconName}`} /> <span>{iconName}</span>
+              <i className={`pi pi-${iconName}`} /> <span>{iconName}</span>
             </div>
           )}
-          text={`<i className="icon-${iconName}" />`}
+          text={`<i className="pi pi-${iconName}" />`}
         />
       </div>
     ))}

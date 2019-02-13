@@ -1,5 +1,7 @@
 import * as React from "react";
-import RCalendar from "react-calendar/dist/entry.nostyle";
+import RCalendar, {
+  CalendarTileProperties
+} from "react-calendar/dist/entry.nostyle";
 import { css, cx } from "emotion";
 import { CalendarProps, CalendarState } from "./typings/Calendar";
 import {
@@ -11,7 +13,7 @@ import {
   wrapperStyle
 } from "./styles/Calendar.styles";
 import Button from "./Button";
-import { isSameDay } from "date-fns";
+import { isSameDay, endOfDay, startOfDay } from "date-fns";
 
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   static defaultProps: Partial<CalendarProps> = {
@@ -20,45 +22,86 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   };
 
   state: CalendarState = {
-    value: this.props.selected
+    value: this.props.selected,
+    singleSelectedDate: null
   };
 
-  private onChange = value => {
-    const { range, onChange } = this.props;
-    this.setState(
-      {
-        value
-      },
-      () => (range ? value.length === 2 && onChange(value) : onChange(value))
-    );
+  private onChange = (value: Date | Date[]) => {
+    // tslint:disable-next-line no-this-assignment Doing this to reduce lookups on this, not avoiding to use fat arrow functions
+    const { props } = this;
+    // The following is exactly the same code.
+    // But Typescript cannot merge into one.
+    if (props.range) {
+      if (Array.isArray(value) && value.length === 2) {
+        this.setState(
+          {
+            value: value as [Date, Date],
+            singleSelectedDate: null
+          },
+          () => props.onChange(value as [Date, Date])
+        );
+      }
+    } else {
+      if (!Array.isArray(value)) {
+        this.setState(
+          {
+            value,
+            singleSelectedDate: null
+          },
+          () => props.onChange(value)
+        );
+      }
+    }
   };
 
-  private getTileContent = ({ date }): JSX.Element => {
-    const dot = this.props.tileDots.find(datum =>
-      isSameDay(date, datum.timeStamp)
+  private onDayClick = (day: Date) => {
+    const { onClickDay } = this.props;
+    this.setState({ singleSelectedDate: [startOfDay(day), endOfDay(day)] });
+    if (onClickDay) onClickDay(day);
+  };
+
+  private getTileContent = ({ date }: CalendarTileProperties) => {
+    const dot = this.props.tileDots.find(
+      datum => !!datum.timeStamp && isSameDay(date, datum.timeStamp)
     );
 
     return dot ? (
       <div className={dotWrapper}>
-        {dot.colors.map((color, i) => (
-          <span
-            key={i}
-            className={dotStyle}
-            style={{ backgroundColor: color }}
-          />
-        ))}
+        {dot.colors &&
+          dot.colors.map((color, i) => (
+            <span
+              key={i}
+              className={dotStyle}
+              style={{ backgroundColor: color }}
+            />
+          ))}
       </div>
     ) : null;
   };
 
-  private getDisabledDays = ({ date }) => {
+  private getDisabledDays = ({ date }: CalendarTileProperties) => {
     const { disabledDays } = this.props;
     return (
       (disabledDays &&
         disabledDays.length &&
         disabledDays.some(_date => isSameDay(_date, date))) ||
-      null
+      false
     );
+  };
+
+  private onApply = () => {
+    // tslint:disable-next-line no-this-assignment
+    const { props } = this;
+    const { value, singleSelectedDate } = this.state;
+    if (props.range && props.onApply) {
+      if (singleSelectedDate) {
+        props.onApply(singleSelectedDate);
+      } else if (Array.isArray(value)) {
+        props.onApply(value);
+      }
+    } else if (!props.range && props.onApply && !Array.isArray(value)) {
+      props.onApply(value);
+    }
   };
 
   render() {
@@ -95,11 +138,12 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
           showNeighboringMonth={false}
           tileContent={this.getTileContent}
           tileDisabled={this.getDisabledDays}
+          onClickDay={this.onDayClick}
           prevLabel={
-            <i style={{ fontSize: 14 }} className="icon-chevron-left" />
+            <i style={{ fontSize: 14 }} className="pi pi-chevron-left" />
           }
           nextLabel={
-            <i style={{ fontSize: 14 }} className="icon-arrow-right" />
+            <i style={{ fontSize: 14 }} className="pi pi-arrow-right" />
           }
         />
 
@@ -110,9 +154,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
                 Clear
               </Button>
             )}
-            {onApply && (
-              <Button onClick={() => onApply(this.state.value)}>Apply</Button>
-            )}
+            {onApply && <Button onClick={this.onApply}>Apply</Button>}
           </div>
         )}
       </div>

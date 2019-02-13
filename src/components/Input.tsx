@@ -7,12 +7,19 @@ import {
   wrapperStyle,
   messageStyle,
   inputStyle,
+  inputReadOnlyStyle,
+  inputDisabledStyle,
+  inputTextAreaStyle,
   loadingStyle
 } from "./styles/Input.styles";
 import { colors } from "../theme";
 import Loader from "./Loader";
 
-function getColor(error: string, success: string, isUnderlineColor?: boolean) {
+function getColor(
+  error: string | undefined,
+  success: string | undefined,
+  isUnderlineColor?: boolean
+) {
   let color = colors.gray.dark;
   if (error) {
     color = colors.red.base;
@@ -47,7 +54,11 @@ class Input extends React.PureComponent<InputProps, InputState> {
     });
   };
 
-  private handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  private handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     this.props.onChange(e.target.value || "");
   };
 
@@ -56,7 +67,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
       type,
       placeholder,
       className,
-      inputProps,
+      inputClassName,
       fixLabelAtTop,
       value,
       readOnly,
@@ -73,13 +84,24 @@ class Input extends React.PureComponent<InputProps, InputState> {
 
     const _message = errorMessage || successMessage || message;
 
-    const Input_ = textArea ? "textarea" : "input";
+    const _inputClassName = cx(
+      inputStyle,
+      {
+        [inputDisabledStyle]: disabled,
+        [inputReadOnlyStyle]: readOnly,
+        [inputTextAreaStyle]: textArea
+      },
+      inputClassName
+    );
 
-    const inputClassName = cx(inputStyle, {
-      _pebble_input_disabled: disabled,
-      _pebble_input_read_only: readOnly,
-      _pebble_input_textarea: textArea
-    });
+    const _inputProps = {
+      "aria-label": placeholder,
+      className: _inputClassName,
+      disabled,
+      onChange: this.handleChange,
+      readOnly,
+      value: value || ""
+    };
 
     const highlightClassName = cx(highlightStyle, {
       _pebble_input_highlight_focused: isFocused,
@@ -107,21 +129,16 @@ class Input extends React.PureComponent<InputProps, InputState> {
         onBlur={this.removeFocus}
         onClick={onClick}
       >
+        {this.props.textArea ? (
+          <textarea {..._inputProps} {...this.props.inputProps} />
+        ) : (
+          <input type={type} {..._inputProps} {...this.props.inputProps} />
+        )}
+
         <label className={labelClassName}>
           {placeholder}
           {required && <span style={{ color: colors.red.base }}>&nbsp;*</span>}
         </label>
-
-        <Input_
-          className={inputClassName}
-          {...inputProps}
-          type={type}
-          aria-label={placeholder}
-          value={value || ""}
-          onChange={this.handleChange}
-          disabled={disabled}
-          readOnly={readOnly}
-        />
 
         <div
           className={highlightClassName}

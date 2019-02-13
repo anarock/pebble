@@ -1,79 +1,88 @@
 import * as React from "react";
-import { OptionProps } from "../typings/Option";
 import * as ReactDOM from "react-dom";
-import { OptionGroupProps_, OptionGroupState_ } from "../typings/OptionGroup";
+import { OptionProps } from "../typings/Option";
+import { OptionGroupProps, OptionGroupState } from "../typings/OptionGroup";
 import scrollIntoView from "scroll-into-view-if-needed";
 import { cx } from "emotion";
 import Search from "../Search";
 import {
   searchBoxScrolledStyle,
   searchBoxWrapper,
-  optionsWrapper
+  optionsWrapper,
+  searchBoxHeight
 } from "../styles/OptionGroup.styles";
 
-class OptionGroup extends React.PureComponent<
-  OptionGroupProps_,
-  OptionGroupState_
+class OptionGroup<OptionType> extends React.PureComponent<
+  OptionGroupProps<OptionType>,
+  OptionGroupState
 > {
   optionRef: React.RefObject<HTMLDivElement> = React.createRef();
-  observer: IntersectionObserver;
+  optionsRefsSet = new Map<number, React.RefObject<React.ReactInstance>>();
+  observer?: IntersectionObserver;
 
-  state = {
-    selected: 0,
+  state: Readonly<OptionGroupState> = {
+    highlighted: -1,
     isScrolled: false
   };
 
-  private handleKeyPress = (e: KeyboardEvent) => {
-    const { children, handleChange } = this.props;
-    const { selected } = this.state;
+  private handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const { handleChange, isSelected } = this.props;
+    const children = React.Children.toArray(this.props.children);
+    const { highlighted } = this.state;
+    const { which } = e;
 
-    if (e.which === 13) {
-      const {
-        props: { value, isSelected }
-      }: Partial<React.ReactElement<OptionProps>> = children[selected];
+    if (which === 13 && children && children[highlighted]) {
+      // Enter key
+      // @ts-ignore
+      const { value } =
+        // @ts-ignore
+        children && children[highlighted] && children[highlighted].props;
 
-      handleChange({
-        value,
-        checked: !isSelected
-      });
+      handleChange(
+        {
+          value,
+          checked: !isSelected(value)
+        },
+        e
+      );
     }
 
     this.setState(
       () => {
-        let _selected = selected;
-        if (e.which === 40) {
-          e.preventDefault();
-          _selected = Math.min(
-            _selected + 1,
+        let _highlighted = highlighted;
+        if (which === 40) {
+          _highlighted = Math.min(
+            _highlighted + 1,
             React.Children.count(children) - 1
           );
         }
-        if (e.which === 38) {
-          e.preventDefault();
-          _selected = Math.max(_selected - 1, 0);
+        if (which === 38) {
+          _highlighted = Math.max(_highlighted - 1, 0);
         }
 
-        return { selected: _selected };
+        return { highlighted: _highlighted };
       },
       () => {
-        if (this.optionRef.current && (e.which === 40 || e.which === 38)) {
-          scrollIntoView(
-            ReactDOM.findDOMNode(
-              this[`option-ref-${selected}`].current
-            ) as Element,
-            {
+        const currentRef = this.optionsRefsSet.get(highlighted);
+        if (
+          this.optionRef.current &&
+          (which === 40 || which === 38) &&
+          currentRef &&
+          currentRef.current
+        ) {
+          const element = ReactDOM.findDOMNode(currentRef.current) as Element;
+          if (element) {
+            scrollIntoView(element, {
               behavior: "smooth",
               boundary: this.optionRef.current
-            }
-          );
+            });
+          }
         }
       }
     );
   };
 
   componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyPress);
-
     this.observer = new IntersectionObserver(
       entries => {
         this.setState({
@@ -96,8 +105,9 @@ class OptionGroup extends React.PureComponent<
   }
 
   componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyPress);
-    this.observer.disconnect();
+    if (this.observer) {
+      this.observer.disconnect();
+    }
   }
 
   render() {
@@ -105,28 +115,33 @@ class OptionGroup extends React.PureComponent<
       searchBox,
       children,
       multiSelect,
-      onSearchBoxQueryChange,
       className,
-      searchBoxPlaceholder,
       isSelected,
-      handleChange
+      handleChange,
+      searchBoxProps
     } = this.props;
-    const { isScrolled, selected } = this.state;
+    const { isScrolled, highlighted } = this.state;
 
-    const _children = React.Children.map(
-      children,
-      (option: React.ReactElement<OptionProps>, i) => {
-        this[`option-ref-${i}`] = React.createRef();
-        return React.cloneElement(option, {
-          onChange: handleChange,
-          isActive: selected === i,
-          isSelected: isSelected(option.props.value),
-          multiSelect,
-          // @ts-ignore
-          ref: this[`option-ref-${i}`]
-        });
+    const _children = React.Children.map(children, (_option, i) => {
+      // `_option as React.ReactElement<OptionProps>` is a hack
+      // Because React does not allow us to specify what sort of elements
+      // you can allow as children and leaves it on you to figure out
+      // all various types of children provided.
+      const option = _option as React.ReactElement<OptionProps<OptionType>>;
+      let ref = this.optionsRefsSet.get(i);
+      if (!ref) {
+        ref = React.createRef<HTMLDivElement>();
+        this.optionsRefsSet.set(i, ref);
       }
-    );
+      return React.cloneElement(option, {
+        onChange: handleChange,
+        isActive: highlighted === i,
+        isSelected: isSelected(option.props.value),
+        multiSelect,
+        // @ts-ignore
+        ref
+      });
+    });
 
     const searchBoxClassName = cx(searchBoxWrapper, {
       [searchBoxScrolledStyle]: isScrolled
@@ -134,24 +149,32 @@ class OptionGroup extends React.PureComponent<
 
     return (
       <React.Fragment>
-        {searchBox && (
+        {searchBox && searchBoxProps && (
           <div className={searchBoxClassName}>
             <Search
               type="small"
-              onChange={onSearchBoxQueryChange}
-              placeholder={searchBoxPlaceholder}
+              {...searchBoxProps}
+              inputProps={{
+                ...(searchBoxProps && searchBoxProps.inputProps),
+                onKeyDown: this.handleKeyPress,
+                autoFocus: true
+              }}
             />
           </div>
         )}
-        <div
-          ref={this.optionRef}
-          style={{
-            paddingTop: searchBox ? 0 : undefined
-          }}
-          className={cx(optionsWrapper, className)}
-        >
-          {_children}
-        </div>
+        {!!React.Children.count(children) && (
+          <div
+            ref={this.optionRef}
+            style={{
+              paddingTop: searchBox ? searchBoxHeight : undefined
+            }}
+            className={cx(optionsWrapper, className)}
+            role={multiSelect ? "group" : "radiogroup"}
+            data-test-id="optiongroup"
+          >
+            {_children}
+          </div>
+        )}
       </React.Fragment>
     );
   }

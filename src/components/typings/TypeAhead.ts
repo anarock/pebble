@@ -4,47 +4,37 @@ type FocusEvent = (
   event: React.KeyboardEvent<HTMLInputElement> | React.FocusEvent<HTMLElement>
 ) => void;
 
-export interface TypeaheadProps {
+export interface SearchBoxArgs {
+  registerChange: (text: string) => void;
+  onFocus: FocusEvent;
+  value: string;
+}
+
+export interface TypeaheadProps<OptionType> {
   className?: string;
   searchBox?: (
-    args: {
-      registerChange: (text: string) => void;
-      onFocus: FocusEvent;
-      value: string;
-    },
-    props: TypeaheadProps
-  ) => JSX.Element;
-  debounceTime?: number;
-  onChange: (text: string, props: TypeaheadProps) => void;
-  onSelect: (value, props: TypeaheadProps) => void;
+    args: SearchBoxArgs,
+    props: TypeaheadProps<OptionType>
+  ) => React.ReactNode;
+  debounceTime: number;
+  onChange: (text: string, props: TypeaheadProps<OptionType>) => void;
+  onSelect: (
+    value: OptionType | undefined,
+    props: TypeaheadProps<OptionType>
+  ) => void;
   dropdownClassName?: string;
   initialValue?: string;
   disabled?: boolean;
   errorMessage?: string;
   placeholder: string;
   loading?: boolean;
-  selected?: number | string;
+  selected?: OptionType;
   required?: boolean;
-  children: React.ReactNodeArray;
-  valueExtractor: (value: string | number) => string;
+  valueExtractor: (value: OptionType) => string;
+  onClear: () => void;
 }
 
 export interface TypeaheadState {
   value: string;
   showSuggestions: boolean;
-}
-
-type keys = Exclude<keyof TypeaheadProps, "onChange" | "children">;
-export interface CachedTypeAheadProps extends Pick<TypeaheadProps, keys> {
-  children: (query: string) => Promise<React.ReactNodeArray>;
-}
-
-export interface CacheTypeAheadState {
-  query: string;
-  cache: {
-    [query: string]: {
-      promise: Promise<React.ReactNodeArray>;
-      options?: React.ReactNodeArray;
-    };
-  };
 }

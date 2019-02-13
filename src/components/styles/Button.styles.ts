@@ -4,6 +4,8 @@ import { ButtonType, MappingColorByType } from "../typings/Button";
 
 const { violet, gray, white, red, emerald } = colors;
 
+export const smallButtonHeight = 40;
+
 const commonButtonStyle = css({
   lineHeight: "23px",
   height: constants.buttonHeight,
@@ -104,7 +106,7 @@ const styleBasedOnSize = {
     ...typography.xs.light
   },
   small: {
-    height: 40,
+    height: smallButtonHeight,
     minWidth: 100,
     ...typography.s.regular
   },
@@ -115,7 +117,12 @@ const styleBasedOnSize = {
   }
 };
 
-export const getButtonStyle = (size, type, showShadow, filled) => {
+export const getButtonStyle = (
+  size: keyof typeof styleBasedOnSize,
+  type: ButtonType,
+  showShadow: boolean,
+  filled: boolean
+) => {
   return css([
     commonButtonStyle,
     {
@@ -129,8 +136,24 @@ export const getButtonStyle = (size, type, showShadow, filled) => {
 export const iconStyle = css({
   marginLeft: 15,
   fontWeight: "bold",
-  fontSize: 12,
+  fontSize: 8,
   transition: "transform ease-out .2s",
   willTransform: "transform",
-  marginTop: 2
+  marginTop: 2,
+  color: colors.gray.dark
+});
+
+export const dropDownButtonStyle = css({
+  border: constants.border.base,
+  "&:not([disabled]):hover": {
+    backgroundColor: colors.gray.lighter
+  }
+});
+
+export const dropDownButtonDefaultStyle = css({
+  backgroundColor: colors.white.base,
+  color: colors.gray.darker,
+  "&:not([disabled]):hover": {
+    backgroundColor: colors.gray.lighter
+  }
 });

@@ -8,7 +8,7 @@ const prettier = require("prettier");
 async function createRNFont() {
   try {
     await execa.shell(
-      "rimraf native && mkdir native && ./node_modules/.bin/generate-icon ./dist/pebble.css --componentName=PebbleIcons --fontFamily=pebble -t ./scripts/templates/native-font.tpl -o ./native/Icon.js"
+      "rimraf native && mkdir native && ./node_modules/.bin/generate-icon ./dist/pebble.css --componentName=PebbleIcons --fontFamily=pebble -t ./scripts/templates/native-font.tpl -o ./native/Icon.js -p '.pi-'"
     );
     console.log(
       colors.green.bold("created PebbleIcons component for React Native.")
@@ -23,7 +23,9 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
     console.log(err);
   }
 
-  const files = data.map(x => `./svgs/${x}`);
+  const files = data
+    .filter(file => file.endsWith("svg"))
+    .map(x => `./svgs/${x}`);
 
   fs.writeFile(
     "./icons.json",
@@ -46,7 +48,8 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
       cssDest: "./dist/pebble.css",
       cssTemplate: "./scripts/templates/pebble-css.hbs",
       templateOptions: {
-        baseSelector: "i"
+        baseSelector: ".pi",
+        classPrefix: "pi-"
       }
     },
     err => {

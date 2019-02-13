@@ -1,8 +1,10 @@
 import { colors, mixins, typography } from "../../theme";
 import { css } from "emotion";
-import { isDesktop } from "../../utils";
+// import { isDesktop } from "../../utils";
 
 const animation = "all 0.3s cubic-bezier(.64,.09,.08,1)";
+
+export const inputMarginBottom = 20;
 
 export const wrapperStyle = css({
   position: "relative",
@@ -10,7 +12,7 @@ export const wrapperStyle = css({
   backgroundColor: colors.white.base,
   width: "100%",
   flexDirection: "column",
-  marginBottom: 20,
+  marginBottom: inputMarginBottom,
   height: 68,
   "&._pebble_input_wrapper_textarea": {
     height: 110
@@ -28,29 +30,33 @@ export const inputStyle = css({
   width: "100%",
   ...mixins.textEllipsis,
   "&:disabled": {
-    backgroundColor: colors.white
+    backgroundColor: colors.white.base
   },
-  "&._pebble_input_read_only": {
-    color: colors.gray.dark
-  },
-  "&._pebble_input_disabled": {
-    cursor: "not-allowed",
-    pointerEvents: "none",
-    color: colors.gray.base
-  },
-  "&._pebble_input_textarea": {
-    height: 88,
-    padding: "24px 0 52px 0",
-    resize: "none"
-  },
-  "&[type='date']": {
-    ...(!isDesktop ? { "-webkit-appearance": "textfield" } : {})
-  },
-  "&[type='date']::-webkit-inner-spin-button, &[type='date']::-webkit-calendar-picker-indicator": {
-    webkitAppearance: "none",
-    display: "none"
-  },
-  ...mixins.getPlaceholderStyle(colors.gray.light)
+  .../*#__PURE__*/ mixins.getPlaceholderStyle(colors.gray.light)
+  // "&[type='date']": {
+  //   "-webkit-appearance": "textfield"
+  // },
+  // "&[type='date']::-webkit-inner-spin-button, &[type='date']::-webkit-calendar-picker-indicator": {
+  //   webkitAppearance: "none",
+  //   display: "none"
+  // }
+});
+
+export const inputReadOnlyStyle = css({
+  color: colors.gray.dark
+});
+
+export const inputDisabledStyle = css({
+  cursor: "not-allowed",
+  pointerEvents: "none",
+  color: colors.gray.base
+});
+
+export const inputTextAreaStyle = css({
+  height: 88,
+  padding: "0 0 52px 0",
+  marginTop: 22,
+  resize: "none"
 });
 
 export const highlightStyle = css({

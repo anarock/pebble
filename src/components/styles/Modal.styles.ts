@@ -7,8 +7,7 @@ export const modalContainer = css({
   bottom: 0,
   left: 0,
   backgroundColor: "rgba(0,0,0,0.4)",
-  display: "flex",
-  justifyContent: "center",
   overflowY: "scroll",
-  zIndex: 99999
+  WebkitOverflowScrolling: "touch",
+  zIndex: 99998
 });

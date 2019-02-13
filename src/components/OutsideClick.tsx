@@ -6,7 +6,7 @@ class OutsideClick extends React.PureComponent<OutsideClickProps> {
 
   handleClick = (e: MouseEvent) => {
     if (
-      this.childRef &&
+      this.childRef.current &&
       !this.childRef.current.contains(e.target as HTMLElement)
     ) {
       this.props.onOutsideClick();
@@ -15,12 +15,10 @@ class OutsideClick extends React.PureComponent<OutsideClickProps> {
 
   addListener = () => {
     document.addEventListener("mousedown", this.handleClick);
-    document.addEventListener("touchstart", this.handleClick);
   };
 
   removeListener = () => {
     document.removeEventListener("mousedown", this.handleClick);
-    document.removeEventListener("touchstart", this.handleClick);
   };
 
   componentDidMount() {
@@ -40,7 +38,12 @@ class OutsideClick extends React.PureComponent<OutsideClickProps> {
   }
 
   render() {
-    return <div ref={this.childRef}>{this.props.children}</div>;
+    const { className, children } = this.props;
+    return (
+      <div ref={this.childRef} className={className}>
+        {children}
+      </div>
+    );
   }
 }
 
