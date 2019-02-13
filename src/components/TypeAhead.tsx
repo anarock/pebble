@@ -15,7 +15,7 @@ import MountTransition from "./shared/MountTransition";
 
 function defaultSearchBox<OptionType>(
   { registerChange, onFocus, value }: SearchBoxArgs,
-  props: TypeaheadProps<OptionType>
+  props: TypeaheadProps<OptionType> & Required<typeof TypeAhead.defaultProps>
 ) {
   return (
     <Input
@@ -42,7 +42,7 @@ function defaultSearchBox<OptionType>(
 }
 
 export default class TypeAhead<OptionType> extends React.PureComponent<
-  TypeaheadProps<OptionType>,
+  TypeaheadProps<OptionType> & Required<typeof TypeAhead.defaultProps>,
   TypeaheadState
 > {
   static defaultProps = {

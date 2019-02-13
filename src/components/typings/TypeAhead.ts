@@ -16,7 +16,7 @@ export interface TypeaheadProps<OptionType> {
     args: SearchBoxArgs,
     props: TypeaheadProps<OptionType>
   ) => React.ReactNode;
-  debounceTime: number;
+  debounceTime?: number;
   onChange: (text: string, props: TypeaheadProps<OptionType>) => void;
   onSelect: (
     value: OptionType | undefined,
@@ -31,7 +31,7 @@ export interface TypeaheadProps<OptionType> {
   selected?: OptionType;
   required?: boolean;
   valueExtractor: (value: OptionType) => string;
-  onClear: () => void;
+  onClear?: () => void;
 }
 
 export interface TypeaheadState {
