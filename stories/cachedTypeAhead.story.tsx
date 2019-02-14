@@ -7,14 +7,14 @@ import { storiesOf } from "@storybook/react";
 import { TypeaheadProps } from "../src/components/typings/Typeahead";
 import { TypeAhead, Option } from "../src";
 
-export interface CachedTypeAheadProps<OptionType>
+interface CachedTypeAheadProps<OptionType>
   extends Omit<TypeaheadProps<OptionType>, "onChange"> {
   children: (query: string) => Promise<React.ReactNode>;
   noResultsMessage?: string;
   failMessage?: string | ((err: Error) => string);
 }
 
-export interface CacheTypeAheadState {
+interface CacheTypeAheadState {
   query: string;
   cache: {
     [query: string]: {
@@ -25,7 +25,7 @@ export interface CacheTypeAheadState {
   };
 }
 
-export class CachedTypeAhead<OptionType> extends React.PureComponent<
+class CachedTypeAhead<OptionType> extends React.PureComponent<
   CachedTypeAheadProps<OptionType>,
   CacheTypeAheadState
 > {
