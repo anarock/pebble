@@ -90,7 +90,7 @@ class CachedTypeAhead<OptionType> extends React.PureComponent<
     const options = cache[query] && cache[query].options;
     let errorMessage = cache[query] && cache[query].errorMessage;
     if (options && Array.isArray(options) && !options.length) {
-      errorMessage = "No Results Found";
+      errorMessage = noResultsMessage || "No Results Found";
     }
 
     return (
