@@ -66,8 +66,19 @@ class Option<OptionType> extends React.Component<
         {() => {
           return (
             <>
-              <div className={cx(labelWrap, labelClassName)}>{label}</div>
-              {rightElement(this.props)}
+              {this.props.children ? (
+                <>
+                  {this.props.children({
+                    ...this.props,
+                    type: this.props.multiSelect ? "checkbox" : "radio"
+                  })}
+                </>
+              ) : (
+                <>
+                  <div className={cx(labelWrap, labelClassName)}>{label}</div>
+                  {rightElement(this.props)}
+                </>
+              )}
               <Ink />
             </>
           );
