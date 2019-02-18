@@ -62,7 +62,11 @@ storiesOf("Components/Option", module).add(
             <i
               className={cx(
                 "pi pi-arrow-drop-down",
-                css({ color: colors.gray.base, fontSize: "8px" })
+                css({
+                  color: colors.gray.base,
+                  fontSize: "8px",
+                  transform: "rotate(270deg)"
+                })
               )}
             />
           </div>
