@@ -58,15 +58,21 @@ export const ControlView: React.FunctionComponent<ControlViewProps> = ({
     "pi-checkbox-unselected": !isRadio && !checked && !disabled
   });
 
+  const getColor = () => {
+    if (disabled) {
+      return colors.gray.base;
+    }
+    if (checked) {
+      return colors.violet.base;
+    }
+    return colors.gray.light;
+  };
+
   return (
     <>
       <i
         style={{
-          color: disabled
-            ? colors.gray.lighter
-            : checked
-            ? colors.violet.base
-            : colors.gray.light,
+          color: getColor(),
           paddingTop: 2
         }}
         className={iconClass}
