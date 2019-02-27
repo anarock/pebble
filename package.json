@@ -1,6 +1,6 @@
 {
   "name": "@anarock/pebble",
-  "version": "0.39.1",
+  "version": "0.39.2",
   "author": "ritz078 <rkritesh078@gmail.com>",
   "license": "MIT",
   "main": "dist/pebble.js",
@@ -9,7 +9,8 @@
   "unpkg": "dist/pebble.umd.js",
   "files": [
     "dist",
-    "native"
+    "native",
+    "src"
   ],
   "scripts": {
     "storybook": "start-storybook -p 6006 -s ./dist",
