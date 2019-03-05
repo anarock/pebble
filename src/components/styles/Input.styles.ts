@@ -32,16 +32,14 @@ export const inputStyle = css({
   "&:disabled": {
     backgroundColor: colors.white.base
   },
-  // ...(isDesktop && {
-  //   "&[type='date']": {
-  //     "-webkit-appearance": "textfield"
-  //   },
-  //   "&[type='date']::-webkit-inner-spin-button, &[type='date']::-webkit-calendar-picker-indicator": {
-  //     webkitAppearance: "none",
-  //     display: "none"
-  //   },
-  // }),
   .../*#__PURE__*/ mixins.getPlaceholderStyle(colors.gray.light)
+  // "&[type='date']": {
+  //   "-webkit-appearance": "textfield"
+  // },
+  // "&[type='date']::-webkit-inner-spin-button, &[type='date']::-webkit-calendar-picker-indicator": {
+  //   webkitAppearance: "none",
+  //   display: "none"
+  // }
 });
 
 export const inputReadOnlyStyle = css({

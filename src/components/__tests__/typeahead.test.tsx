@@ -8,7 +8,7 @@ import Option from "../Option";
 function getComponent(
   changeSpy = () => {},
   selectSpy = () => {},
-  props: Partial<TypeaheadProps> = {}
+  props: Partial<TypeaheadProps<string>> = {}
 ) {
   return (
     <TypeAhead

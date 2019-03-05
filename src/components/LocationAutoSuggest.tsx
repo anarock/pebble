@@ -112,8 +112,12 @@ class LocationSearchInput extends React.Component<
               ))}
               <Option
                 key="google-logo"
-                rightElement={() => <div>Powered By Google</div>}
+                rightElement={() => (
+                  <img src="https://developers.google.com/maps/documentation/images/powered_by_google_on_white.png" />
+                )}
                 className={googleLogoOption}
+                value={undefined}
+                label=""
               />
             </TypeAhead>
           );

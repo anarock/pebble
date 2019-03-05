@@ -1,9 +1,15 @@
-import * as React from "react";
 import { CommonProps, Extras } from "./OptionGroup";
 
-export interface OptionGroupCheckBoxProps extends CommonProps {
-  onChange: (value: React.ReactText[], extras: Extras) => void;
-  selected?: React.ReactText[];
-  onApply?: (value: React.ReactText[], props: OptionGroupCheckBoxProps) => void;
+export interface OptionGroupCheckBoxProps<OptionType> extends CommonProps {
+  onChange: (value: OptionType[], extras: Extras) => void;
+  /**
+   * @deprecated use isSelected
+   */
+  selected?: OptionType[];
+  isSelected?: (value: OptionType) => boolean;
+  onApply?: (
+    value: OptionType[],
+    props: OptionGroupCheckBoxProps<OptionType>
+  ) => void;
   onClear?: () => void;
 }

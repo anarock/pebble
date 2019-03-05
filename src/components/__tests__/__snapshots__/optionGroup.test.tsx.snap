@@ -610,6 +610,7 @@ Array [
       />
       <input
         aria-label="Search"
+        autoFocus={true}
         className="emotion-0"
         onChange={[Function]}
         onKeyDown={[Function]}
@@ -1285,6 +1286,7 @@ Array [
       />
       <input
         aria-label="Search"
+        autoFocus={true}
         className="emotion-0"
         onChange={[Function]}
         onKeyDown={[Function]}

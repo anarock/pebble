@@ -1,3 +1,5 @@
+import * as React from "react";
+
 export interface SearchProps {
   type: "small" | "large" | "table";
   onChange: (text: string) => void;

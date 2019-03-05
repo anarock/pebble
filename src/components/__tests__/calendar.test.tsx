@@ -4,7 +4,7 @@ import sinon from "sinon";
 import { mount } from "enzyme";
 import { format, getTime, startOfDay, endOfDay } from "date-fns";
 
-const date = [new Date(2012, 11, 1), new Date(2012, 12, 1)];
+const date: [Date, Date] = [new Date(2012, 11, 1), new Date(2012, 12, 1)];
 
 describe("Calendar", () => {
   test("should return correct range value on apply", () => {

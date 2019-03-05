@@ -1,9 +1,8 @@
 import * as React from "react";
 
-export interface CheckboxGroupProps {
-  selected: Array<number | string>;
-  onChange: (value: Array<number | string>, e: React.MouseEvent) => void;
-  children: React.ReactNode;
+export interface CheckboxGroupProps<OptionType> {
+  selected: OptionType[];
+  onChange: (value: OptionType[], e: React.MouseEvent) => void;
   className?: string;
   name: string;
   disabled?: boolean;
