@@ -4,7 +4,10 @@ import TypeAhead from "./TypeAhead";
 import Option from "./Option";
 import Loader from "./Loader";
 import googleMapsPromise from "../utils/googleMaps";
-import { loaderWrapper } from "./styles/LocationAutoSuggest.styles";
+import {
+  loaderWrapper,
+  googleLogoOption
+} from "./styles/LocationAutoSuggest.styles";
 import {
   LocationSearchProps,
   LocationSearchState,
@@ -24,13 +27,25 @@ class LocationSearchInput extends React.Component<
     this.initialMount();
   }
 
-  async initialMount() {
-    await googleMapsPromise(this.props.googleMapsApiKey).then(() => {
+  initialMount() {
+    googleMapsPromise(this.props.googleMapsApiKey).then(() => {
       this.setState({
         isPromiseCompleted: true
       });
     });
   }
+
+  _onError = (status: string, clearSuggestions: () => void) => {
+    this.setState({
+      errorStatus: status
+    });
+    clearSuggestions();
+    if (status !== "ZERO_RESULTS") {
+      const e = new Error();
+      e.message = status;
+      throw e;
+    }
+  };
 
   render() {
     if (!this.state.isPromiseCompleted) {
@@ -45,17 +60,7 @@ class LocationSearchInput extends React.Component<
       <PlacesAutocomplete
         value={value}
         onChange={onChange}
-        onError={(status, clearSuggestions) => {
-          this.setState({
-            errorStatus: status
-          });
-          clearSuggestions();
-          if (status !== "ZERO_RESULTS") {
-            const e = new Error();
-            e.message = status;
-            throw e;
-          }
-        }}
+        onError={this._onError}
       >
         {({ getInputProps, suggestions, loading }) => {
           const inputProps = getInputProps();
@@ -105,6 +110,11 @@ class LocationSearchInput extends React.Component<
                   value={suggestion.placeId}
                 />
               ))}
+              <Option
+                key="google-logo"
+                rightElement={() => <div>Powered By Google</div>}
+                className={googleLogoOption}
+              />
             </TypeAhead>
           );
         }}
