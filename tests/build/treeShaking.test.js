@@ -32,11 +32,11 @@ async function compress() {
     }
   });
 
-  const output = await bundle.generate({
+  const { output } = await bundle.generate({
     format: "esm"
   });
 
-  return output.code
+  return output[0].code
     .replace(/\n\n/g, "\n")
     .replace(/^import [^;]*;\n?/gm, "")
     .replace(/,[^\n]/g, ",\n")
