@@ -94,23 +94,37 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
           };
 
           // This would have been the ideal way to write this but typescript is crying.
-          // const OptionGroup = props.multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
+          // const OptionGroup = props.multiSelect
+          //   ? OptionGroupCheckBox
+          //   : OptionGroupRadio;
           // return (
           //   <OptionGroup
           //     selected={props.selected}
           //     onChange={(_value, extras) => {
-          //       props.onChange(_value, extras)
-          //       props.multiSelect && toggle();
+          //       if (_value) {
+          //         props.onChange(_value, extras);
+          //       }
+          //       if (!props.multiSelect) {
+          //         onDropdownToggle(isOpen);
+          //         toggle();
+          //       }
           //     }}
-          //     onApply={props.multiSelect && props.onApply && ((_value) => {
-          //       props.onApply && props.onApply(_value, props);
-          //       toggle();
-          //     })}
+          //     onApply={
+          //       props.multiSelect &&
+          //       props.onApply &&
+          //       (_value => {
+          //         if (props.onApply) {
+          //           props.onApply(_value, props);
+          //         }
+          //         onDropdownToggle(isOpen);
+          //         toggle();
+          //       })
+          //     }
           //     {...commonProps}
           //   >
           //     {children}
           //   </OptionGroup>
-          // )
+          // );
 
           if (props.multiSelect) {
             return (
