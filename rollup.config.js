@@ -27,7 +27,12 @@ function getPlugins(targets) {
     resolve({
       extensions: [".js", ".jsx", ".json"]
     }),
-    commonjs(),
+    commonjs({
+      include: "node_modules/**",
+      namedExports: {
+        "react-ink": ["default"]
+      }
+    }),
     cleanup({
       comments: [/^\*#__PURE__/, /^\*@__PURE__/]
     }),
@@ -37,23 +42,23 @@ function getPlugins(targets) {
 }
 
 export default [
-  {
-    input,
-    external: ["react", "react-dom"],
-    output: [
-      {
-        file: pkg.unpkg,
-        format: "umd",
-        sourcemap: true,
-        name: "pebble",
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM"
-        }
-      }
-    ],
-    plugins: getPlugins({ node: "6" })
-  },
+  // {
+  //   input,
+  //   external: ["react", "react-dom"],
+  //   output: [
+  //     {
+  //       file: pkg.unpkg,
+  //       format: "umd",
+  //       sourcemap: true,
+  //       name: "pebble",
+  //       globals: {
+  //         react: "React",
+  //         "react-dom": "ReactDOM"
+  //       }
+  //     }
+  //   ],
+  //   plugins: getPlugins({ node: "6" })
+  // },
   {
     input,
     external: external.concat(Object.keys(pkg.dependencies)),
@@ -76,6 +81,10 @@ export default [
         sourcemap: true
       }
     ],
-    plugins: getPlugins({ node: "6" })
+    plugins: getPlugins({
+      chrome: "49",
+      safari: "9",
+      ie: "11"
+    })
   }
 ];
