@@ -27,12 +27,7 @@ function getPlugins(targets) {
     resolve({
       extensions: [".js", ".jsx", ".json"]
     }),
-    commonjs({
-      include: "node_modules/**",
-      namedExports: {
-        "react-ink": ["default"]
-      }
-    }),
+    commonjs(),
     cleanup({
       comments: [/^\*#__PURE__/, /^\*@__PURE__/]
     }),
