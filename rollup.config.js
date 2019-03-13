@@ -15,6 +15,7 @@ function getPlugins(targets) {
   return [
     babel({
       ...babelConfig,
+      exclude: "node_modules/**",
       presets: [
         ...babelConfig.presets.filter(preset => {
           Array.isArray(preset)
@@ -37,29 +38,33 @@ function getPlugins(targets) {
 }
 
 export default [
-  // {
-  //   input,
-  //   external: ["react", "react-dom"],
-  //   output: [
-  //     {
-  //       file: pkg.unpkg,
-  //       format: "umd",
-  //       sourcemap: true,
-  //       name: "pebble",
-  //       globals: {
-  //         react: "React",
-  //         "react-dom": "ReactDOM"
-  //       }
-  //     }
-  //   ],
-  //   plugins: getPlugins({ node: "6" })
-  // },
+  {
+    input,
+    external: ["react", "react-dom"],
+    output: [
+      {
+        file: pkg.unpkg,
+        format: "umd",
+        sourcemap: true,
+        name: "pebble",
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM"
+        }
+      }
+    ],
+    plugins: getPlugins({
+      chrome: "49",
+      safari: "9",
+      ie: "11"
+    })
+  },
   {
     input,
     external: external.concat(Object.keys(pkg.dependencies)),
     output: [
       {
-        file: pkg.module,
+        file: pkg.esnext,
         format: "es",
         sourcemap: true
       }
