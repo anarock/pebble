@@ -4,7 +4,7 @@
   "author": "ritz078 <rkritesh078@gmail.com>",
   "license": "MIT",
   "main": "dist/pebble.js",
-  "module": "dist/pebble.es.js",
+  "esnext": "dist/pebble.es.js",
   "typings": "dist/index.d.ts",
   "unpkg": "dist/pebble.umd.js",
   "files": [
