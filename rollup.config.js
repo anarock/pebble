@@ -7,6 +7,8 @@ import pkg from "./package.json";
 import babel from "rollup-plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import cleanup from "rollup-plugin-cleanup";
+import replace from "rollup-plugin-replace";
+import { terser } from "rollup-plugin-terser";
 
 const input = "compiled/index.js";
 const umdGlobals = {
@@ -122,6 +124,21 @@ export default [
           )
         ]
       }),
+      replace({
+        "process.env.NODE_ENV": JSON.stringify("production")
+      }),
+      // terser({
+      //   sourcemap: true,
+      //   compress: {
+      //     keep_infinity: true,
+      //     pure_getters: true,
+      //     side_effects: true,
+      //     passes: 5
+      //   },
+      //   warnings: true,
+      //   ecma: 5
+      //   // toplevel: format === 'cjs' || format === 'es',
+      // }),
       ...plugins
     ]
   }
