@@ -9,13 +9,22 @@ import commonjs from "rollup-plugin-commonjs";
 import cleanup from "rollup-plugin-cleanup";
 
 const input = "compiled/index.js";
-const external = ["react", "react-calendar/dist/entry.nostyle"];
+const umdGlobals = {
+  react: "React",
+  "react-dom": "ReactDOM"
+};
+const external = [
+  "react-calendar/dist/entry.nostyle",
+  ...Object.keys(pkg.peerDependencies),
+  ...Object.keys(pkg.dependencies)
+];
 
 function getPlugins(targets) {
   return [
     babel({
       ...babelConfig,
       exclude: "node_modules/**",
+      runtimeHelpers: true,
       presets: [
         ...babelConfig.presets.filter(preset => {
           Array.isArray(preset)
@@ -40,17 +49,14 @@ function getPlugins(targets) {
 export default [
   {
     input,
-    external: ["react", "react-dom"],
+    external: Object.keys(umdGlobals),
     output: [
       {
         file: pkg.unpkg,
         format: "umd",
         sourcemap: true,
         name: "pebble",
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM"
-        }
+        globals: umdGlobals
       }
     ],
     plugins: getPlugins({
@@ -61,7 +67,7 @@ export default [
   },
   {
     input,
-    external: external.concat(Object.keys(pkg.dependencies)),
+    external,
     output: [
       {
         file: pkg.esnext,
@@ -73,7 +79,7 @@ export default [
   },
   {
     input,
-    external: external.concat(Object.keys(pkg.dependencies)),
+    external,
     output: [
       {
         file: pkg.main,

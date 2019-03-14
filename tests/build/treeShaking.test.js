@@ -3,13 +3,16 @@ const { rollup } = require("rollup");
 const terser = require("rollup-plugin-terser").terser;
 
 const pkg = require("../../package.json");
+const external = [
+  "react-calendar/dist/entry.nostyle",
+  ...Object.keys(pkg.peerDependencies),
+  ...Object.keys(pkg.dependencies)
+];
 
 async function compress() {
   const bundle = await rollup({
     input: path.resolve(__dirname, "fixture.js"),
-    external: ["react", "react-calendar/dist/entry.nostyle"].concat(
-      Object.keys(pkg.dependencies)
-    ),
+    external,
     treeshake: {
       pureExternalModules: true
     },
