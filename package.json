@@ -4,7 +4,8 @@
   "author": "ritz078 <rkritesh078@gmail.com>",
   "license": "MIT",
   "main": "dist/pebble.js",
-  "module": "dist/pebble.es.js",
+  "esnext": "dist/pebble.es.js",
+  "module": "dist/pebble.module.js",
   "typings": "dist/index.d.ts",
   "unpkg": "dist/pebble.umd.js",
   "files": [
@@ -40,15 +41,18 @@
       "git add"
     ]
   },
+  "peerDependencies": {
+    "@babel/runtime": "^7.3.4",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
   "dependencies": {
     "date-fns": "^1.29.0",
     "emotion": "^9.2.12",
     "is-in-browser": "^1.1.3",
     "just-debounce-it": "^1.1.0",
     "mitt": "^1.1.3",
-    "react": "^16.8.4",
     "react-calendar": "^2.18.1",
-    "react-dom": "^16.8.4",
     "react-ink": "^6.4.0",
     "react-popper": "^1.3.2",
     "react-spring": "^7.2.1",
@@ -60,9 +64,11 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
+    "@babel/runtime": "^7.3.4",
     "@dump247/storybook-state": "^1.5.1",
     "@storybook/addon-a11y": "^5.0.1",
     "@storybook/addon-actions": "^5.0.1",
@@ -122,6 +128,8 @@
     "prettier": "^1.16.4",
     "pretty-quick": "^1.10.0",
     "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
     "react-native-vector-icons": "^6.3.0",
     "react-test-renderer": "^16.8.4",
     "rimraf": "^2.6.3",
