@@ -8,7 +8,7 @@ import babel from "rollup-plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import cleanup from "rollup-plugin-cleanup";
 import replace from "rollup-plugin-replace";
-import { terser } from "rollup-plugin-terser";
+// import { terser } from "rollup-plugin-terser";
 
 const input = "compiled/index.js";
 const umdGlobals = {
@@ -127,6 +127,7 @@ export default [
       replace({
         "process.env.NODE_ENV": JSON.stringify("production")
       }),
+      // Can uncomment to minify UMD build.
       // terser({
       //   sourcemap: true,
       //   compress: {
