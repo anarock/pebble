@@ -13,38 +13,35 @@ const umdGlobals = {
   react: "React",
   "react-dom": "ReactDOM"
 };
-const external = [
+const externals = [
   "react-calendar/dist/entry.nostyle",
   ...Object.keys(pkg.peerDependencies),
   ...Object.keys(pkg.dependencies)
 ];
 
-function getPlugins(targets) {
-  return [
-    babel({
-      ...babelConfig,
-      exclude: "node_modules/**",
-      runtimeHelpers: true,
-      presets: [
-        ...babelConfig.presets.filter(preset => {
-          Array.isArray(preset)
-            ? preset[0] !== "@babel/preset-env"
-            : preset !== "@babel/preset-env";
-        }),
-        ["@babel/preset-env", { targets }]
-      ]
-    }),
-    resolve({
-      extensions: [".js", ".jsx", ".json"]
-    }),
-    commonjs(),
-    cleanup({
-      comments: [/^\*#__PURE__/, /^\*@__PURE__/]
-    }),
-    sourceMaps(),
-    filesize()
-  ];
+function external(id) {
+  if (externals.includes(id)) return true;
+  return /^@babel\/runtime/.test(id);
 }
+
+const plugins = [
+  resolve({
+    extensions: [".js", ".jsx", ".json"]
+  }),
+  commonjs(),
+  cleanup({
+    comments: [/^\*#__PURE__/, /^\*@__PURE__/]
+  }),
+  sourceMaps(),
+  filesize()
+];
+
+const babelPlugins = babelConfig.plugins.filter(
+  plugin =>
+    (Array.isArray(plugin) ? plugin[0] : plugin) !==
+    "@babel/plugin-transform-runtime"
+);
+console.log(babelPlugins);
 
 export default [
   {
@@ -59,11 +56,26 @@ export default [
         globals: umdGlobals
       }
     ],
-    plugins: getPlugins({
-      chrome: "49",
-      safari: "9",
-      ie: "11"
-    })
+    plugins: [
+      babel({
+        ...babelConfig,
+        babelrc: false,
+        exclude: "node_modules/**",
+        runtimeHelpers: true,
+        presets: [
+          [
+            "@babel/preset-env",
+            { targets: { chrome: "49", safari: "9", ie: "11" } }
+          ],
+          ...babelConfig.presets.filter(
+            preset =>
+              (Array.isArray(preset) ? preset[0] : preset) !==
+              "@babel/preset-env"
+          )
+        ]
+      }),
+      ...plugins
+    ]
   },
   {
     input,
@@ -71,26 +83,72 @@ export default [
     output: [
       {
         file: pkg.esnext,
-        format: "es",
+        format: "esm",
         sourcemap: true
       }
     ],
-    plugins: getPlugins({ node: "10" })
+    plugins: [
+      babel({
+        ...babelConfig,
+        // babelrc: false,
+        exclude: "node_modules/**",
+        runtimeHelpers: true,
+        // plugins: babelConfig.plugins.filter(
+        //   plugin =>
+        //     (Array.isArray(plugin) ? plugin[0] : plugin) !== "@babel/plugin-transform-runtime"
+        // ),
+        plugins: [
+          ["@babel/plugin-proposal-class-properties", { loose: false }],
+          "@babel/plugin-syntax-jsx",
+          ["@babel/plugin-transform-react-jsx", { useBuiltIns: true }],
+          "emotion"
+        ],
+        presets: [
+          ["@babel/preset-env", { targets: { node: "10" } }],
+          ...babelConfig.presets.filter(
+            preset =>
+              (Array.isArray(preset) ? preset[0] : preset) !==
+              "@babel/preset-env"
+          )
+        ]
+      }),
+      ...plugins
+    ]
   },
   {
     input,
     external,
     output: [
       {
+        file: pkg.module,
+        format: "esm",
+        sourcemap: true
+      },
+      {
         file: pkg.main,
         format: "cjs",
         sourcemap: true
       }
     ],
-    plugins: getPlugins({
-      chrome: "49",
-      safari: "9",
-      ie: "11"
-    })
+    plugins: [
+      babel({
+        ...babelConfig,
+        babelrc: false,
+        exclude: "node_modules/**",
+        runtimeHelpers: true,
+        presets: [
+          [
+            "@babel/preset-env",
+            { targets: { chrome: "49", safari: "9", ie: "11" } }
+          ],
+          ...babelConfig.presets.filter(
+            preset =>
+              (Array.isArray(preset) ? preset[0] : preset) !==
+              "@babel/preset-env"
+          )
+        ]
+      }),
+      ...plugins
+    ]
   }
 ];

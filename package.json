@@ -5,6 +5,7 @@
   "license": "MIT",
   "main": "dist/pebble.js",
   "esnext": "dist/pebble.es.js",
+  "module": "dist/pebble.module.js",
   "typings": "dist/index.d.ts",
   "unpkg": "dist/pebble.umd.js",
   "files": [
@@ -41,6 +42,7 @@
     ]
   },
   "peerDependencies": {
+    "@babel/runtime": "^7.3.4",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },
@@ -61,6 +63,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@babel/plugin-external-helpers": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-transform-runtime": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
