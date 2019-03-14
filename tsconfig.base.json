@@ -22,7 +22,7 @@
     "removeComments": false,
     "sourceMap": true,
     "strict": true,
-    "target": "es2018",
+    "target": "esnext",
     "typeRoots": ["./node_modules/@types", "./typings/npm"]
   },
   "include": ["src", "typings"],

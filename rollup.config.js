@@ -36,24 +36,39 @@ const plugins = [
   filesize()
 ];
 
-const babelPlugins = babelConfig.plugins.filter(
-  plugin =>
-    (Array.isArray(plugin) ? plugin[0] : plugin) !==
-    "@babel/plugin-transform-runtime"
-);
-console.log(babelPlugins);
-
 export default [
   {
     input,
-    external: Object.keys(umdGlobals),
+    external,
     output: [
       {
-        file: pkg.unpkg,
-        format: "umd",
-        sourcemap: true,
-        name: "pebble",
-        globals: umdGlobals
+        file: pkg.esnext,
+        format: "esm",
+        sourcemap: true
+      }
+    ],
+    plugins: [
+      babel({
+        ...babelConfig,
+        exclude: "node_modules/**",
+        runtimeHelpers: true
+      }),
+      ...plugins
+    ]
+  },
+  {
+    input,
+    external,
+    output: [
+      {
+        file: pkg.module,
+        format: "esm",
+        sourcemap: true
+      },
+      {
+        file: pkg.main,
+        format: "cjs",
+        sourcemap: true
       }
     ],
     plugins: [
@@ -79,55 +94,14 @@ export default [
   },
   {
     input,
-    external,
+    external: Object.keys(umdGlobals),
     output: [
       {
-        file: pkg.esnext,
-        format: "esm",
-        sourcemap: true
-      }
-    ],
-    plugins: [
-      babel({
-        ...babelConfig,
-        // babelrc: false,
-        exclude: "node_modules/**",
-        runtimeHelpers: true,
-        // plugins: babelConfig.plugins.filter(
-        //   plugin =>
-        //     (Array.isArray(plugin) ? plugin[0] : plugin) !== "@babel/plugin-transform-runtime"
-        // ),
-        plugins: [
-          ["@babel/plugin-proposal-class-properties", { loose: false }],
-          "@babel/plugin-syntax-jsx",
-          ["@babel/plugin-transform-react-jsx", { useBuiltIns: true }],
-          "emotion"
-        ],
-        presets: [
-          ["@babel/preset-env", { targets: { node: "10" } }],
-          ...babelConfig.presets.filter(
-            preset =>
-              (Array.isArray(preset) ? preset[0] : preset) !==
-              "@babel/preset-env"
-          )
-        ]
-      }),
-      ...plugins
-    ]
-  },
-  {
-    input,
-    external,
-    output: [
-      {
-        file: pkg.module,
-        format: "esm",
-        sourcemap: true
-      },
-      {
-        file: pkg.main,
-        format: "cjs",
-        sourcemap: true
+        file: pkg.unpkg,
+        format: "umd",
+        sourcemap: true,
+        name: "pebble",
+        globals: umdGlobals
       }
     ],
     plugins: [
