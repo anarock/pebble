@@ -31,7 +31,33 @@ Pebble intends to have a very small footprint while maintaining performance.
 This, however, comes at a cost of supporting only modern browsers. If you need to support legacy browsers, you would need to add polyfills.
 
 ```html
-<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find,Array.prototype.findIndex,IntersectionObserver,Intl.~locale.en"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.find,Array.prototype.findIndex,IntersectionObserver,Intl.~locale.en,Object.entries,default"></script>
+```
+
+### UMD Usage
+
+```html
+<script src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.find,Array.prototype.findIndex,IntersectionObserver,Intl.~locale.en,Object.entries,default"></script>
+<script src="https://unpkg.com/react@latest/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@latest/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@anarock/pebble@latest/dist/pebble.umd.js"></script>
+<script>
+  // Components are available in window.pebble
+  var Button = pebble.Button;
+  var h = React.createElement;
+  ReactDOM.render(
+    h(
+      Button,
+      {
+        onClick: function() {
+          alert("You clicked the button");
+        }
+      },
+      "Click Me!"
+    ),
+    document.getElementById("root")
+  );
+</script>
 ```
 
 ## Using icons in React Native

@@ -11,6 +11,7 @@ module.exports = {
     "@babel/preset-typescript"
   ],
   plugins: [
+    "@babel/plugin-transform-runtime",
     ["@babel/plugin-proposal-class-properties", { loose: false }],
     "@babel/plugin-syntax-jsx",
     ["@babel/plugin-transform-react-jsx", { useBuiltIns: true }],

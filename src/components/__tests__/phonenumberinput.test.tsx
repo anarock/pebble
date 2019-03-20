@@ -8,7 +8,6 @@ import Option from "../Option";
 import Select from "../Select";
 import PhoneNumberInput from "../PhoneNumberInput";
 import countries from "./fixtures/countrycodes";
-import { SelectProps } from "../typings/Select";
 
 const SELECT_INPUT_ID = "phone-select-input-test";
 const PHONE_INPUT_ID = "phone-test-input-test";
@@ -169,7 +168,7 @@ describe("Component: Select", () => {
       (component.find(`#${PHONE_INPUT_ID}`).getDOMNode() as HTMLInputElement)
         .value
     ).toEqual("998127");
-    const props = component.find(Select).props() as SelectProps<string>;
+    const props = component.find(Select).props();
     expect(props.selected).toEqual(countries[0].country_code);
   });
 });
