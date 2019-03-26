@@ -1,8 +1,8 @@
 export type ToastType = "success" | "error";
 
-export const enum ToastPosition {
-  bottom = "bottom",
-  right = "right"
+export enum ToastPosition {
+  BOTTOM = "BOTTOM",
+  RIGHT = "RIGHT"
 }
 
 export interface ToastProps {

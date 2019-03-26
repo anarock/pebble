@@ -20,7 +20,7 @@ const _colors = {
 };
 
 const customStyles = {
-  bottom: {
+  [ToastPosition.BOTTOM]: {
     style: {
       bottom: 50,
       left: "50%"
@@ -33,7 +33,7 @@ const customStyles = {
     }
   },
 
-  right: {
+  [ToastPosition.RIGHT]: {
     style: {
       right: 20,
       top: 20
@@ -48,6 +48,8 @@ const customStyles = {
 };
 
 class Toast extends React.PureComponent<ToastProps, ToastState> {
+  static Position = ToastPosition;
+
   static show(
     text: string,
     type: ToastType,
@@ -66,7 +68,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
     text: "",
     type: "success",
     show: false,
-    position: ToastPosition.bottom
+    position: ToastPosition.BOTTOM
   };
 
   componentDidMount() {
