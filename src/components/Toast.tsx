@@ -20,9 +20,48 @@ const _colors = {
 };
 
 const customStyles = {
+  [ToastPosition.TOP]: {
+    style: {
+      top: 20,
+      left: "50%"
+    },
+
+    transitions: {
+      from: { transform: "translateX(-50%) translateY(-10px)" },
+      enter: { transform: "translateX(-50%) translateY(0)" },
+      leave: { transform: "translateX(-50%) translateY(-10px)" }
+    }
+  },
+
+  [ToastPosition.TOP_LEFT]: {
+    style: {
+      top: 20,
+      left: 20
+    },
+
+    transitions: {
+      from: { transform: "translateX(-10px)" },
+      enter: { transform: "translateX(0)" },
+      leave: { transform: "translateX(-10px)" }
+    }
+  },
+
+  [ToastPosition.TOP_RIGHT]: {
+    style: {
+      top: 20,
+      right: 20
+    },
+
+    transitions: {
+      from: { transform: "translateX(10px)" },
+      enter: { transform: "translateX(0)" },
+      leave: { transform: "translateX(10px)" }
+    }
+  },
+
   [ToastPosition.BOTTOM]: {
     style: {
-      bottom: 50,
+      bottom: 20,
       left: "50%"
     },
 
@@ -33,10 +72,23 @@ const customStyles = {
     }
   },
 
-  [ToastPosition.RIGHT]: {
+  [ToastPosition.BOTTOM_LEFT]: {
     style: {
-      right: 20,
-      top: 20
+      bottom: 20,
+      left: 20
+    },
+
+    transitions: {
+      from: { transform: "translateX(-10px)" },
+      enter: { transform: "translateX(0)" },
+      leave: { transform: "translateX(-10px)" }
+    }
+  },
+
+  [ToastPosition.BOTTOM_RIGHT]: {
+    style: {
+      bottom: 20,
+      right: 20
     },
 
     transitions: {
