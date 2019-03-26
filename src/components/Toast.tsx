@@ -19,6 +19,34 @@ const _colors = {
   error: colors.red.base
 };
 
+const customStyles = {
+  bottom: {
+    style: {
+      bottom: 50,
+      left: "50%"
+    },
+
+    transitions: {
+      from: { transform: "translateX(-50%) translateY(10px)" },
+      enter: { transform: "translateX(-50%) translateY(0)" },
+      leave: { transform: "translateX(-50%) translateY(10px)" }
+    }
+  },
+
+  right: {
+    style: {
+      right: 20,
+      top: 20
+    },
+
+    transitions: {
+      from: { transform: "translateX(10px)" },
+      enter: { transform: "translateX(0)" },
+      leave: { transform: "translateX(10px)" }
+    }
+  }
+};
+
 class Toast extends React.PureComponent<ToastProps, ToastState> {
   static show(
     text: string,
@@ -86,33 +114,6 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
 
   render() {
     const bColor = _colors[this.state.type];
-
-    const customStyles = {
-      bottom: {
-        style: {
-          bottom: 50,
-          left: "50%"
-        },
-
-        transitions: {
-          from: { transform: "translateX(-50%) translateY(10px)" },
-          enter: { transform: "translateX(-50%) translateY(0)" },
-          leave: { transform: "translateX(-50%) translateY(10px)" }
-        }
-      },
-      right: {
-        style: {
-          right: 20,
-          top: 20
-        },
-
-        transitions: {
-          from: { transform: "translateX(10px)" },
-          enter: { transform: "translateX(0)" },
-          leave: { transform: "translateX(10px)" }
-        }
-      }
-    };
 
     const iconClass = cx("pi", {
       "pi-radio-check-filled": this.state.type === "success",
