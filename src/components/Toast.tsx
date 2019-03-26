@@ -38,7 +38,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
     text: "",
     type: "success",
     show: false,
-    position: "bottom"
+    position: ToastPosition.bottom
   };
 
   componentDidMount() {
