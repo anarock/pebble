@@ -1,7 +1,12 @@
 import * as React from "react";
 import { toastWrapper } from "./styles/Toast.styles";
 import { colors } from "../theme";
-import { ToastProps, ToastState, ToastType } from "./typings/Toast";
+import {
+  ToastProps,
+  ToastState,
+  ToastType,
+  ToastPosition
+} from "./typings/Toast";
 import { Transition, animated } from "react-spring";
 import { cx } from "emotion";
 import Mitt from "mitt";
@@ -15,8 +20,12 @@ const _colors = {
 };
 
 class Toast extends React.PureComponent<ToastProps, ToastState> {
-  static show(text: string, type: ToastType, time?: number) {
-    emitter.emit("showToast", { text, type, time });
+  static show(
+    text: string,
+    type: ToastType,
+    { time, position }: { time?: number; position: ToastPosition }
+  ) {
+    emitter.emit("showToast", { text, type, time, position });
   }
 
   showTimer?: number | null;
@@ -28,7 +37,8 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
   state: ToastState = {
     text: "",
     type: "success",
-    show: false
+    show: false,
+    position: "bottom"
   };
 
   componentDidMount() {
@@ -44,11 +54,17 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
   private show = ({
     text,
     type = "success",
+    position,
     time
-  }: Partial<ToastState> & { text: string; time?: number }) => {
+  }: Partial<ToastState> & {
+    text: string;
+    time?: number;
+    position: ToastPosition;
+  }) => {
     this.setState({
       text,
       type,
+      position,
       show: true
     });
 
@@ -71,6 +87,33 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
   render() {
     const bColor = _colors[this.state.type];
 
+    const customStyles = {
+      bottom: {
+        style: {
+          bottom: 50,
+          left: "50%"
+        },
+
+        transitions: {
+          from: { transform: "translateX(-50%) translateY(10px)" },
+          enter: { transform: "translateX(-50%) translateY(0)" },
+          leave: { transform: "translateX(-50%) translateY(10px)" }
+        }
+      },
+      right: {
+        style: {
+          right: 20,
+          top: 20
+        },
+
+        transitions: {
+          from: { transform: "translateX(10px)" },
+          enter: { transform: "translateX(0)" },
+          leave: { transform: "translateX(10px)" }
+        }
+      }
+    };
+
     const iconClass = cx("pi", {
       "pi-radio-check-filled": this.state.type === "success",
       "pi-close-circle-filled": this.state.type === "error"
@@ -80,12 +123,18 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
       <Transition
         native
         items={this.state.show}
-        from={{ opacity: 0, transform: "translateX(-50%) translateY(10px)" }}
-        enter={{ opacity: 1, transform: "translateX(-50%) translateY(0)" }}
+        from={{
+          opacity: 0,
+          ...customStyles[this.state.position].transitions.from
+        }}
+        enter={{
+          opacity: 1,
+          ...customStyles[this.state.position].transitions.enter
+        }}
         leave={{
           opacity: 0,
-          transform: "translateX(-50%) translateY(10px)",
-          pointerEvents: "none"
+          pointerEvents: "none",
+          ...customStyles[this.state.position].transitions.leave
         }}
         config={animationConfig.config}
       >
@@ -96,7 +145,8 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
               className={cx(toastWrapper, this.props.className)}
               style={{
                 backgroundColor: bColor,
-                ...(styles as React.CSSProperties)
+                ...(styles as React.CSSProperties),
+                ...customStyles[this.state.position].style
               }}
             >
               <i className={iconClass} />
