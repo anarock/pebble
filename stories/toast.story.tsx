@@ -13,17 +13,16 @@ storiesOf("Components/Toast", module).add("Default", () => (
           position: select(
             "bottom",
 
-            {
-              BOTTOM_LEFT: Toast.Position.BOTTOM_LEFT,
-              BOTTOM_CENTER: Toast.Position.BOTTOM_CENTER,
-              BOTTOM_RIGHT: Toast.Position.BOTTOM_RIGHT,
+            [
+              Toast.Position.BOTTOM,
+              Toast.Position.BOTTOM_LEFT,
+              Toast.Position.BOTTOM_RIGHT,
 
-              TOP_LEFT: Toast.Position.TOP_LEFT,
-              TOP_CENTER: Toast.Position.TOP_CENTER,
-              TOP_RIGHT: Toast.Position.TOP_RIGHT
-            },
-
-            Toast.Position.BOTTOM_CENTER
+              Toast.Position.TOP,
+              Toast.Position.TOP_LEFT,
+              Toast.Position.TOP_RIGHT
+            ],
+            Toast.Position.BOTTOM
           )
         })
       }
