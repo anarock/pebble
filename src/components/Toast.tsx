@@ -19,85 +19,91 @@ const _colors = {
   error: colors.red.base
 };
 
-const customStyles = {
-  [ToastPosition.TOP]: {
-    style: {
-      top: 20,
-      left: "50%"
-    },
+function foo(position: ToastPosition) {
+  const style: React.CSSProperties = {};
 
-    transitions: {
-      from: { transform: "translateX(-50%) translateY(-10px)" },
-      enter: { transform: "translateX(-50%) translateY(0)" },
-      leave: { transform: "translateX(-50%) translateY(-10px)" }
-    }
-  },
+  const transitions: { [_: string]: React.CSSProperties } = {
+    from: {},
+    enter: {},
+    leave: {}
+  };
 
-  [ToastPosition.TOP_LEFT]: {
-    style: {
-      top: 20,
-      left: 20
-    },
+  // vertical positioning
+  switch (position) {
+    case ToastPosition.TOP_CENTER:
+    case ToastPosition.TOP_LEFT:
+    case ToastPosition.TOP_RIGHT:
+      style.top = 20;
 
-    transitions: {
-      from: { transform: "translateX(-10px)" },
-      enter: { transform: "translateX(0)" },
-      leave: { transform: "translateX(-10px)" }
-    }
-  },
+      break;
 
-  [ToastPosition.TOP_RIGHT]: {
-    style: {
-      top: 20,
-      right: 20
-    },
-
-    transitions: {
-      from: { transform: "translateX(10px)" },
-      enter: { transform: "translateX(0)" },
-      leave: { transform: "translateX(10px)" }
-    }
-  },
-
-  [ToastPosition.BOTTOM]: {
-    style: {
-      bottom: 20,
-      left: "50%"
-    },
-
-    transitions: {
-      from: { transform: "translateX(-50%) translateY(10px)" },
-      enter: { transform: "translateX(-50%) translateY(0)" },
-      leave: { transform: "translateX(-50%) translateY(10px)" }
-    }
-  },
-
-  [ToastPosition.BOTTOM_LEFT]: {
-    style: {
-      bottom: 20,
-      left: 20
-    },
-
-    transitions: {
-      from: { transform: "translateX(-10px)" },
-      enter: { transform: "translateX(0)" },
-      leave: { transform: "translateX(-10px)" }
-    }
-  },
-
-  [ToastPosition.BOTTOM_RIGHT]: {
-    style: {
-      bottom: 20,
-      right: 20
-    },
-
-    transitions: {
-      from: { transform: "translateX(10px)" },
-      enter: { transform: "translateX(0)" },
-      leave: { transform: "translateX(10px)" }
-    }
+    case ToastPosition.BOTTOM_CENTER:
+    case ToastPosition.BOTTOM_LEFT:
+    case ToastPosition.BOTTOM_RIGHT:
+      style.bottom = 20;
+      break;
   }
-};
+
+  // horizontal positioning
+  switch (position) {
+    case ToastPosition.TOP_LEFT:
+    case ToastPosition.BOTTOM_LEFT:
+      style.left = 0;
+
+      break;
+
+    case ToastPosition.TOP_CENTER:
+    case ToastPosition.BOTTOM_CENTER:
+      style.left = "50%";
+      style.transform = "translateX(-50%)";
+
+      break;
+
+    case ToastPosition.TOP_RIGHT:
+    case ToastPosition.BOTTOM_RIGHT:
+      style.right = 0;
+
+      break;
+  }
+
+  // transitions
+  switch (position) {
+    case ToastPosition.TOP_CENTER:
+      transitions.from.transform = "translateX(-50%) translateY(-10px)";
+      transitions.enter.transform = "translateX(-50%) translateY(0)";
+      transitions.leave.transform = "translateX(-50%) translateY(-10px)";
+
+      break;
+
+    case ToastPosition.BOTTOM_CENTER:
+      transitions.from.transform = "translateX(-50%) translateY(10px)";
+      transitions.enter.transform = "translateX(-50%) translateY(0)";
+      transitions.leave.transform = "translateX(-50%) translateY(10px)";
+
+      break;
+
+    case ToastPosition.TOP_LEFT:
+    case ToastPosition.BOTTOM_LEFT:
+      transitions.from.transform = "translateX(-10px)";
+      transitions.enter.transform = "translateX(0)";
+      transitions.leave.transform = "translateX(-10px)";
+
+      break;
+
+    case ToastPosition.TOP_RIGHT:
+    case ToastPosition.BOTTOM_RIGHT:
+      transitions.from.transform = "translateX(10px)";
+      transitions.enter.transform = "translateX(0)";
+      transitions.leave.transform = "translateX(10px)";
+
+      break;
+  }
+
+  return {
+    style,
+    transitions
+  };
+}
 
 class Toast extends React.PureComponent<ToastProps, ToastState> {
   static Position = ToastPosition;
@@ -120,7 +126,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
     text: "",
     type: "success",
     show: false,
-    position: ToastPosition.BOTTOM
+    position: ToastPosition.BOTTOM_CENTER
   };
 
   componentDidMount() {
@@ -174,22 +180,24 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
       "pi-close-circle-filled": this.state.type === "error"
     });
 
+    const customStyles = foo(this.state.position);
+
     return (
       <Transition
         native
         items={this.state.show}
         from={{
           opacity: 0,
-          ...customStyles[this.state.position].transitions.from
+          ...customStyles.transitions.from
         }}
         enter={{
           opacity: 1,
-          ...customStyles[this.state.position].transitions.enter
+          ...customStyles.transitions.enter
         }}
         leave={{
           opacity: 0,
           pointerEvents: "none",
-          ...customStyles[this.state.position].transitions.leave
+          ...customStyles.transitions.leave
         }}
         config={animationConfig.config}
       >
@@ -201,7 +209,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
               style={{
                 backgroundColor: bColor,
                 ...(styles as React.CSSProperties),
-                ...customStyles[this.state.position].style
+                ...customStyles.style
               }}
             >
               <i className={iconClass} />

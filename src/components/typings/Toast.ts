@@ -1,13 +1,13 @@
 export type ToastType = "success" | "error";
 
 export enum ToastPosition {
-  BOTTOM = "BOTTOM",
-  BOTTOM_LEFT = "BOTTOM_LEFT",
-  BOTTOM_RIGHT = "BOTTOM_RIGHT",
+  TOP_LEFT,
+  TOP_CENTER,
+  TOP_RIGHT,
 
-  TOP = "TOP",
-  TOP_LEFT = "TOP_LEFT",
-  TOP_RIGHT = "TOP_RIGHT"
+  BOTTOM_LEFT,
+  BOTTOM_CENTER,
+  BOTTOM_RIGHT
 }
 
 export interface ToastProps {
