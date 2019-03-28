@@ -174,6 +174,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
       <Transition
         native
         items={this.state.show}
+        key={this.state.position}
         from={{
           opacity: 0,
           ...customStyles[this.state.position].transitions.from
