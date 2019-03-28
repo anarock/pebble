@@ -9,13 +9,12 @@ describe("Component: Toast", () => {
 
     const toast = mount(<Toast />);
 
-    Toast.show("Hello there", "success", { position: Toast.Position.BOTTOM });
+    Toast.show("Hello there", "success");
 
     expect(toast.state()).toEqual({
       text: "Hello there",
       show: true,
-      type: "success",
-      position: Toast.Position.BOTTOM
+      type: "success"
     });
 
     clock.tick(5000);
@@ -25,7 +24,7 @@ describe("Component: Toast", () => {
   test("manually hide toast", () => {
     const toast = mount(<Toast />);
 
-    Toast.show("Hello there", "success", { position: Toast.Position.BOTTOM });
+    Toast.show("Hello there", "success");
     expect(toast.state("show")).toBeTruthy();
 
     Toast.hide();
@@ -37,13 +36,12 @@ describe("Component: Toast", () => {
 
     const toast = mount(<Toast defaultTime={10000} />);
 
-    Toast.show("Hello there", "success", { position: Toast.Position.BOTTOM });
+    Toast.show("Hello there", "success");
 
     expect(toast.state()).toEqual({
       text: "Hello there",
       show: true,
-      type: "success",
-      position: Toast.Position.BOTTOM
+      type: "success"
     });
 
     clock.tick(10000);
@@ -55,16 +53,12 @@ describe("Component: Toast", () => {
 
     const toast = mount(<Toast defaultTime={10000} />);
 
-    Toast.show("Hello there", "success", {
-      time: 15000,
-      position: Toast.Position.BOTTOM
-    });
+    Toast.show("Hello there", "success", { time: 15000 });
 
     expect(toast.state()).toEqual({
       text: "Hello there",
       show: true,
-      type: "success",
-      position: Toast.Position.BOTTOM
+      type: "success"
     });
 
     clock.tick(10000);

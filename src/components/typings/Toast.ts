@@ -13,6 +13,7 @@ export enum ToastPosition {
 export interface ToastProps {
   className?: string;
   defaultTime?: number;
+  defaultPosition?: ToastPosition;
 }
 
 export interface ToastState {

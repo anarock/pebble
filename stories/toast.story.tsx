@@ -30,6 +30,6 @@ storiesOf("Components/Toast", module).add("Default", () => (
     >
       Show Toast
     </Button>
-    <Toast defaultTime={10000} />
+    <Toast defaultTime={10000} defaultPosition={Toast.Position.TOP} />
   </React.Fragment>
 ));

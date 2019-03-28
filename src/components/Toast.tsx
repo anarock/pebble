@@ -101,7 +101,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
   static show(
     text: string,
     type: ToastType,
-    { time, position }: { time?: number; position: ToastPosition }
+    { time, position }: { time?: number; position?: ToastPosition } = {}
   ) {
     emitter.emit("showToast", { text, type, time, position });
   }
@@ -170,23 +170,26 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
       "pi-close-circle-filled": this.state.type === "error"
     });
 
+    const position =
+      this.state.position || this.props.defaultPosition || ToastPosition.BOTTOM;
+
     return (
       <Transition
         native
         items={this.state.show}
-        key={this.state.position}
+        key={position}
         from={{
           opacity: 0,
-          ...customStyles[this.state.position].transitions.from
+          ...customStyles[position].transitions.from
         }}
         enter={{
           opacity: 1,
-          ...customStyles[this.state.position].transitions.enter
+          ...customStyles[position].transitions.enter
         }}
         leave={{
           opacity: 0,
           pointerEvents: "none",
-          ...customStyles[this.state.position].transitions.leave
+          ...customStyles[position].transitions.leave
         }}
         config={animationConfig.config}
       >
@@ -198,7 +201,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
               style={{
                 backgroundColor: bColor,
                 ...(styles as React.CSSProperties),
-                ...customStyles[this.state.position].style
+                ...customStyles[position].style
               }}
             >
               <i className={iconClass} />
