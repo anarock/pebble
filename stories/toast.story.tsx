@@ -13,23 +13,22 @@ storiesOf("Components/Toast", module).add("Default", () => (
           position: select(
             "position",
 
-            {
-              BOTTOM: Toast.Position.BOTTOM,
-              BOTTOM_LEFT: Toast.Position.BOTTOM_LEFT,
-              BOTTOM_RIGHT: Toast.Position.BOTTOM_RIGHT,
+            [
+              "BOTTOM",
+              "BOTTOM_LEFT",
+              "BOTTOM_RIGHT",
+              "TOP",
+              "TOP_LEFT",
+              "TOP_RIGHT"
+            ],
 
-              TOP: Toast.Position.TOP,
-              TOP_LEFT: Toast.Position.TOP_LEFT,
-              TOP_RIGHT: Toast.Position.TOP_RIGHT
-            },
-
-            Toast.Position.BOTTOM
+            "BOTTOM"
           )
         })
       }
     >
       Show Toast
     </Button>
-    <Toast defaultTime={10000} defaultPosition={Toast.Position.TOP} />
+    <Toast defaultTime={10000} defaultPosition={"TOP"} />
   </React.Fragment>
 ));

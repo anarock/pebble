@@ -32,7 +32,7 @@ const toastTransitionsRight = {
 };
 
 const customStyles = {
-  [ToastPosition.TOP]: {
+  TOP: {
     style: {
       top: 20,
       left: "50%"
@@ -45,7 +45,7 @@ const customStyles = {
     }
   },
 
-  [ToastPosition.TOP_LEFT]: {
+  TOP_LEFT: {
     style: {
       top: 20,
       left: 20
@@ -54,7 +54,7 @@ const customStyles = {
     transitions: toastTransitionsLeft
   },
 
-  [ToastPosition.TOP_RIGHT]: {
+  TOP_RIGHT: {
     style: {
       top: 20,
       right: 20
@@ -63,7 +63,7 @@ const customStyles = {
     transitions: toastTransitionsRight
   },
 
-  [ToastPosition.BOTTOM]: {
+  BOTTOM: {
     style: {
       bottom: 20,
       left: "50%"
@@ -76,7 +76,7 @@ const customStyles = {
     }
   },
 
-  [ToastPosition.BOTTOM_LEFT]: {
+  BOTTOM_LEFT: {
     style: {
       bottom: 20,
       left: 20
@@ -85,7 +85,7 @@ const customStyles = {
     transitions: toastTransitionsLeft
   },
 
-  [ToastPosition.BOTTOM_RIGHT]: {
+  BOTTOM_RIGHT: {
     style: {
       bottom: 20,
       right: 20
@@ -96,8 +96,6 @@ const customStyles = {
 };
 
 class Toast extends React.PureComponent<ToastProps, ToastState> {
-  static Position = ToastPosition;
-
   static show(
     text: string,
     type: ToastType,
@@ -116,7 +114,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
     text: "",
     type: "success",
     show: false,
-    position: ToastPosition.BOTTOM
+    position: "BOTTOM"
   };
 
   componentDidMount() {
@@ -171,7 +169,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
     });
 
     const position =
-      this.state.position || this.props.defaultPosition || ToastPosition.BOTTOM;
+      this.state.position || this.props.defaultPosition || "BOTTOM";
 
     return (
       <Transition
