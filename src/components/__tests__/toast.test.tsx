@@ -53,7 +53,7 @@ describe("Component: Toast", () => {
 
     const toast = mount(<Toast defaultTime={10000} />);
 
-    Toast.show("Hello there", "success", 15000);
+    Toast.show("Hello there", "success", { time: 15000 });
 
     expect(toast.state()).toEqual({
       text: "Hello there",
