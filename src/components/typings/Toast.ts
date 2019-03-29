@@ -1,14 +1,17 @@
 export type ToastType = "success" | "error";
 
-export enum ToastPosition {
-  BOTTOM,
-  BOTTOM_LEFT,
-  BOTTOM_RIGHT,
+export const ToastPosition = (function () {
+  enum X {
+    BOTTOM,
+    BOTTOM_LEFT,
+    BOTTOM_RIGHT,
 
-  TOP,
-  TOP_LEFT,
-  TOP_RIGHT
-}
+    TOP,
+    TOP_LEFT,
+    TOP_RIGHT
+  }
+  return X;
+})();
 
 export interface ToastProps {
   className?: string;
