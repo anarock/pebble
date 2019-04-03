@@ -105,7 +105,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
 
     const highlightClassName = cx(highlightStyle, {
       _pebble_input_highlight_focused: isFocused,
-      _pebble_input_highlight_state: !!_message,
+      _pebble_input_highlight_state: !!errorMessage || !!successMessage,
       _pebble_input_highlight_read_only: readOnly,
       _pebble_input_highlight_disabled: disabled
     });
