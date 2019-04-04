@@ -2,14 +2,7 @@ import * as React from "react";
 import Popper from "./Popper";
 import { TooltipProps, TooltipState } from "./typings/Tooltip";
 import { colors } from "../theme";
-import {
-  popperStyle,
-  textStyle,
-  contentWrap,
-  headingStyle,
-  iconStyle
-} from "./styles/Tooltip.styles";
-import { css, cx } from "emotion";
+import { popperStyle, textStyle } from "./styles/Tooltip.styles";
 
 class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
   state = {
@@ -55,31 +48,6 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     }
   }
 
-  private getTooltip = () => {
-    const { text, textHeading, onClose } = this.props;
-    return (
-      <div className={contentWrap}>
-        <div>
-          {textHeading && <div className={headingStyle}>{textHeading}</div>}
-          <span
-            className={cx({
-              [textStyle]: true,
-              [css({ color: colors.gray.base })]: !!textHeading
-            })}
-          >
-            {text}
-          </span>
-        </div>
-        {onClose && (
-          <i
-            className={cx("pi pi-close-circle-filled", iconStyle)}
-            onClick={onClose}
-          />
-        )}
-      </div>
-    );
-  };
-
   render() {
     const { placement, label, modifiers, isError } = this.props;
 
@@ -95,7 +63,8 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
         popperClassName={popperStyle}
         closeOnOutsideClick={false}
       >
-        {this.getTooltip}
+        {this.props.getTooltip ||
+          (() => <span className={textStyle}>{this.props.text}</span>)}
       </Popper>
     );
   }

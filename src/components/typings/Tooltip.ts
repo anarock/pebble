@@ -9,8 +9,10 @@ export interface TooltipProps {
   disabled?: boolean;
   // tslint:disable-next-line no-any
   label: (args: { ref: React.RefObject<any> }) => React.ReactNode;
-  textHeading?: string;
-  onClose?: () => void;
+  getTooltip?: (args: {
+    toggle: () => void;
+    isOpen: boolean;
+  }) => React.ReactNode;
 }
 
 export interface TooltipState {
