@@ -16,8 +16,7 @@ export const popperStyle = css({
 
 export const contentWrap = css({
   display: "flex",
-  padding: "14px 15px",
-  alignItems: "center"
+  padding: "15px"
 });
 
 export const headingStyle = css({
