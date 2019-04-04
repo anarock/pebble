@@ -2,10 +2,10 @@ import { css } from "emotion";
 import { colors, typography } from "../../theme";
 
 export const textStyle = css({
-  ...typography.xs.bold,
+  ...typography.s.regular,
   color: colors.white.base,
   display: "block",
-  lineHeight: "15px"
+  padding: "10px 16px"
 });
 
 export const popperStyle = css({
