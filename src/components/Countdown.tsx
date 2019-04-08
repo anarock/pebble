@@ -1,8 +1,8 @@
 import * as React from "react";
 
 interface CountdownProps {
-  time: number; // in seconds
-  counter: number; // in seconds
+  time?: number; // in seconds
+  counter?: number; // in seconds
   onFinish: () => void;
 }
 
@@ -11,15 +11,15 @@ interface CountdownState {
 }
 
 export default class Countdown extends React.PureComponent<
-  CountdownProps,
+  CountdownProps & typeof Countdown.defaultProps,
   CountdownState
 > {
   static defaultProps = {
     time: 30,
-    counter: 1000
+    counter: 1
   };
 
-  state = {
+  state: Readonly<CountdownState> = {
     timeRemaining: this.props.time
   };
 
@@ -29,7 +29,7 @@ export default class Countdown extends React.PureComponent<
     this.startCountdown();
   }
 
-  startCountdown() {
+  private startCountdown() {
     const { counter, onFinish, time } = this.props;
 
     const startTime = Date.now();
@@ -41,7 +41,7 @@ export default class Countdown extends React.PureComponent<
         this.clearInterval();
         onFinish();
       }
-    }, counter);
+    }, counter * 1000);
   }
 
   private clearInterval() {
