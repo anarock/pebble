@@ -21,7 +21,8 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   className,
   showRipple = true,
   loading,
-  size = "small"
+  size = "small",
+  buttonProps
 }: ButtonProps) => {
   const disableAction = disabled || loading;
 
@@ -37,6 +38,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       onClick={!disableAction ? onClick : undefined}
       style={{ width }}
       disabled={disabled}
+      {...buttonProps}
     >
       {loading ? <Loader color={colors.white.base} scale={0.4} /> : children}
       {!disableAction && showRipple && type !== "link" && <Ink />}
