@@ -60,25 +60,34 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 0 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="hour-label"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
-      <span
-        className="emotion-0"
+      <div
+        className="emotion-2"
+        data-test-id="hour-label"
+        onClick={[Function]}
       >
-        1
-      </span>
-      <span>
-        <i
-          className="pi pi-arrow-drop-down emotion-1"
-          style={
-            Object {
-              "transform": "none",
+        <span
+          className="emotion-0"
+        >
+          1
+        </span>
+        <span>
+          <i
+            className="pi pi-arrow-drop-down emotion-1"
+            style={
+              Object {
+                "transform": "none",
+              }
             }
-          }
-        />
-      </span>
+          />
+        </span>
+      </div>
     </div>
   </div>
   <span
@@ -90,23 +99,32 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 0 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="minute-label"
-      onClick={[Function]}
-    >
-      <span
-        className="emotion-0"
-      >
-        0
-      </span>
-      <i
-        className="pi pi-arrow-drop-down emotion-1"
-        style={
-          Object {
-            "transform": "none",
-          }
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
         }
-      />
+      }
+    >
+      <div
+        className="emotion-2"
+        data-test-id="minute-label"
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-0"
+        >
+          0
+        </span>
+        <i
+          className="pi pi-arrow-drop-down emotion-1"
+          style={
+            Object {
+              "transform": "none",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -172,25 +190,34 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 15 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="hour-label"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
-      <span
-        className="emotion-0"
+      <div
+        className="emotion-2"
+        data-test-id="hour-label"
+        onClick={[Function]}
       >
-        1
-      </span>
-      <span>
-        <i
-          className="pi pi-arrow-drop-down emotion-1"
-          style={
-            Object {
-              "transform": "none",
+        <span
+          className="emotion-0"
+        >
+          1
+        </span>
+        <span>
+          <i
+            className="pi pi-arrow-drop-down emotion-1"
+            style={
+              Object {
+                "transform": "none",
+              }
             }
-          }
-        />
-      </span>
+          />
+        </span>
+      </div>
     </div>
   </div>
   <span
@@ -202,23 +229,32 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 15 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="minute-label"
-      onClick={[Function]}
-    >
-      <span
-        className="emotion-0"
-      >
-        15
-      </span>
-      <i
-        className="pi pi-arrow-drop-down emotion-1"
-        style={
-          Object {
-            "transform": "none",
-          }
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
         }
-      />
+      }
+    >
+      <div
+        className="emotion-2"
+        data-test-id="minute-label"
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-0"
+        >
+          15
+        </span>
+        <i
+          className="pi pi-arrow-drop-down emotion-1"
+          style={
+            Object {
+              "transform": "none",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -284,25 +320,34 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: undefined } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="hour-label"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
-      <span
-        className="emotion-0"
+      <div
+        className="emotion-2"
+        data-test-id="hour-label"
+        onClick={[Function]}
       >
-        1
-      </span>
-      <span>
-        <i
-          className="pi pi-arrow-drop-down emotion-1"
-          style={
-            Object {
-              "transform": "none",
+        <span
+          className="emotion-0"
+        >
+          1
+        </span>
+        <span>
+          <i
+            className="pi pi-arrow-drop-down emotion-1"
+            style={
+              Object {
+                "transform": "none",
+              }
             }
-          }
-        />
-      </span>
+          />
+        </span>
+      </div>
     </div>
   </div>
   <span
@@ -314,23 +359,32 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: undefined } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="minute-label"
-      onClick={[Function]}
-    >
-      <span
-        className="emotion-0"
-      >
-        mins
-      </span>
-      <i
-        className="pi pi-arrow-drop-down emotion-1"
-        style={
-          Object {
-            "transform": "none",
-          }
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
         }
-      />
+      }
+    >
+      <div
+        className="emotion-2"
+        data-test-id="minute-label"
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-0"
+        >
+          mins
+        </span>
+        <i
+          className="pi pi-arrow-drop-down emotion-1"
+          style={
+            Object {
+              "transform": "none",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -396,25 +450,34 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 0 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="hour-label"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
-      <span
-        className="emotion-0"
+      <div
+        className="emotion-2"
+        data-test-id="hour-label"
+        onClick={[Function]}
       >
-        12
-      </span>
-      <span>
-        <i
-          className="pi pi-arrow-drop-down emotion-1"
-          style={
-            Object {
-              "transform": "none",
+        <span
+          className="emotion-0"
+        >
+          12
+        </span>
+        <span>
+          <i
+            className="pi pi-arrow-drop-down emotion-1"
+            style={
+              Object {
+                "transform": "none",
+              }
             }
-          }
-        />
-      </span>
+          />
+        </span>
+      </div>
     </div>
   </div>
   <span
@@ -426,23 +489,32 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 0 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="minute-label"
-      onClick={[Function]}
-    >
-      <span
-        className="emotion-0"
-      >
-        0
-      </span>
-      <i
-        className="pi pi-arrow-drop-down emotion-1"
-        style={
-          Object {
-            "transform": "none",
-          }
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
         }
-      />
+      }
+    >
+      <div
+        className="emotion-2"
+        data-test-id="minute-label"
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-0"
+        >
+          0
+        </span>
+        <i
+          className="pi pi-arrow-drop-down emotion-1"
+          style={
+            Object {
+              "transform": "none",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -508,25 +580,34 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 15 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="hour-label"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
-      <span
-        className="emotion-0"
+      <div
+        className="emotion-2"
+        data-test-id="hour-label"
+        onClick={[Function]}
       >
-        12
-      </span>
-      <span>
-        <i
-          className="pi pi-arrow-drop-down emotion-1"
-          style={
-            Object {
-              "transform": "none",
+        <span
+          className="emotion-0"
+        >
+          12
+        </span>
+        <span>
+          <i
+            className="pi pi-arrow-drop-down emotion-1"
+            style={
+              Object {
+                "transform": "none",
+              }
             }
-          }
-        />
-      </span>
+          />
+        </span>
+      </div>
     </div>
   </div>
   <span
@@ -538,23 +619,32 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 15 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="minute-label"
-      onClick={[Function]}
-    >
-      <span
-        className="emotion-0"
-      >
-        15
-      </span>
-      <i
-        className="pi pi-arrow-drop-down emotion-1"
-        style={
-          Object {
-            "transform": "none",
-          }
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
         }
-      />
+      }
+    >
+      <div
+        className="emotion-2"
+        data-test-id="minute-label"
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-0"
+        >
+          15
+        </span>
+        <i
+          className="pi pi-arrow-drop-down emotion-1"
+          style={
+            Object {
+              "transform": "none",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -620,25 +710,34 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: undefined } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="hour-label"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
-      <span
-        className="emotion-0"
+      <div
+        className="emotion-2"
+        data-test-id="hour-label"
+        onClick={[Function]}
       >
-        12
-      </span>
-      <span>
-        <i
-          className="pi pi-arrow-drop-down emotion-1"
-          style={
-            Object {
-              "transform": "none",
+        <span
+          className="emotion-0"
+        >
+          12
+        </span>
+        <span>
+          <i
+            className="pi pi-arrow-drop-down emotion-1"
+            style={
+              Object {
+                "transform": "none",
+              }
             }
-          }
-        />
-      </span>
+          />
+        </span>
+      </div>
     </div>
   </div>
   <span
@@ -650,23 +749,32 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: undefined } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="minute-label"
-      onClick={[Function]}
-    >
-      <span
-        className="emotion-0"
-      >
-        mins
-      </span>
-      <i
-        className="pi pi-arrow-drop-down emotion-1"
-        style={
-          Object {
-            "transform": "none",
-          }
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
         }
-      />
+      }
+    >
+      <div
+        className="emotion-2"
+        data-test-id="minute-label"
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-0"
+        >
+          mins
+        </span>
+        <i
+          className="pi pi-arrow-drop-down emotion-1"
+          style={
+            Object {
+              "transform": "none",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -732,25 +840,34 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 0 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="hour-label"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
-      <span
-        className="emotion-0"
+      <div
+        className="emotion-2"
+        data-test-id="hour-label"
+        onClick={[Function]}
       >
-        Hrs
-      </span>
-      <span>
-        <i
-          className="pi pi-arrow-drop-down emotion-1"
-          style={
-            Object {
-              "transform": "none",
+        <span
+          className="emotion-0"
+        >
+          Hrs
+        </span>
+        <span>
+          <i
+            className="pi pi-arrow-drop-down emotion-1"
+            style={
+              Object {
+                "transform": "none",
+              }
             }
-          }
-        />
-      </span>
+          />
+        </span>
+      </div>
     </div>
   </div>
   <span
@@ -762,23 +879,32 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 0 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="minute-label"
-      onClick={[Function]}
-    >
-      <span
-        className="emotion-0"
-      >
-        0
-      </span>
-      <i
-        className="pi pi-arrow-drop-down emotion-1"
-        style={
-          Object {
-            "transform": "none",
-          }
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
         }
-      />
+      }
+    >
+      <div
+        className="emotion-2"
+        data-test-id="minute-label"
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-0"
+        >
+          0
+        </span>
+        <i
+          className="pi pi-arrow-drop-down emotion-1"
+          style={
+            Object {
+              "transform": "none",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -844,25 +970,34 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 15 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="hour-label"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
-      <span
-        className="emotion-0"
+      <div
+        className="emotion-2"
+        data-test-id="hour-label"
+        onClick={[Function]}
       >
-        Hrs
-      </span>
-      <span>
-        <i
-          className="pi pi-arrow-drop-down emotion-1"
-          style={
-            Object {
-              "transform": "none",
+        <span
+          className="emotion-0"
+        >
+          Hrs
+        </span>
+        <span>
+          <i
+            className="pi pi-arrow-drop-down emotion-1"
+            style={
+              Object {
+                "transform": "none",
+              }
             }
-          }
-        />
-      </span>
+          />
+        </span>
+      </div>
     </div>
   </div>
   <span
@@ -874,23 +1009,32 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 15 } 1`] = `
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="minute-label"
-      onClick={[Function]}
-    >
-      <span
-        className="emotion-0"
-      >
-        15
-      </span>
-      <i
-        className="pi pi-arrow-drop-down emotion-1"
-        style={
-          Object {
-            "transform": "none",
-          }
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
         }
-      />
+      }
+    >
+      <div
+        className="emotion-2"
+        data-test-id="minute-label"
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-0"
+        >
+          15
+        </span>
+        <i
+          className="pi pi-arrow-drop-down emotion-1"
+          style={
+            Object {
+              "transform": "none",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -955,25 +1099,34 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: undefined } 1`] =
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="hour-label"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
-      <span
-        className="emotion-0"
+      <div
+        className="emotion-2"
+        data-test-id="hour-label"
+        onClick={[Function]}
       >
-        Hrs
-      </span>
-      <span>
-        <i
-          className="pi pi-arrow-drop-down emotion-1"
-          style={
-            Object {
-              "transform": "none",
+        <span
+          className="emotion-0"
+        >
+          Hrs
+        </span>
+        <span>
+          <i
+            className="pi pi-arrow-drop-down emotion-1"
+            style={
+              Object {
+                "transform": "none",
+              }
             }
-          }
-        />
-      </span>
+          />
+        </span>
+      </div>
     </div>
   </div>
   <span
@@ -985,23 +1138,32 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: undefined } 1`] =
     className="emotion-3"
   >
     <div
-      className="emotion-2"
-      data-test-id="minute-label"
-      onClick={[Function]}
-    >
-      <span
-        className="emotion-0"
-      >
-        mins
-      </span>
-      <i
-        className="pi pi-arrow-drop-down emotion-1"
-        style={
-          Object {
-            "transform": "none",
-          }
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
         }
-      />
+      }
+    >
+      <div
+        className="emotion-2"
+        data-test-id="minute-label"
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-0"
+        >
+          mins
+        </span>
+        <i
+          className="pi pi-arrow-drop-down emotion-1"
+          style={
+            Object {
+              "transform": "none",
+            }
+          }
+        />
+      </div>
     </div>
   </div>
 </div>
