@@ -4,6 +4,7 @@ import { DropDownButton } from "./Button";
 import { dropDownStyle, wrapperStyle } from "./styles/Dropdown.styles";
 import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
+import { animated } from "react-spring";
 import MountTransition from "./shared/MountTransition";
 import { Manager, Reference, Popper } from "react-popper";
 import { colors } from "../theme";
@@ -74,36 +75,41 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
             )}
           </Reference>
 
-          <MountTransition visible={isOpen}>
+          <MountTransition visible={isOpen} native>
             {transitionStyles => (
-              <Popper {...this.props}>
-                {({ ref, style, placement, arrowProps }) => {
-                  const popperWrapperStyle = {
-                    ...style,
-                    ...transitionStyles,
-                    backgroundColor: colors.white.base,
-                    transform: `${style.transform ||
-                      ""} ${transitionStyles.transform || ""}`,
-                    transformOrigin: `${arrowProps.style.left ||
-                      0}px ${arrowProps.style.top || 0}px`,
-                    padding: `${padding}`
-                  };
+              <animated.div
+                className={cx(dropDownStyle, dropDownClassName)}
+                style={{ padding, ...transitionStyles }}
+              >
+                <Popper {...this.props}>
+                  {({ ref, style, placement, arrowProps }) => {
+                    const popperWrapperStyle = {
+                      ...style,
+                      ...transitionStyles,
+                      backgroundColor: colors.white.base,
+                      transform: `${style.transform ||
+                        ""} ${transitionStyles.transform || ""}`,
+                      transformOrigin: `${arrowProps.style.left ||
+                        0}px ${arrowProps.style.top || 0}px`,
+                      padding: `${padding}`
+                    };
 
-                  return (
-                    <div
-                      className={cx(dropDownStyle, dropDownClassName)}
-                      ref={ref}
-                      style={popperWrapperStyle}
-                      data-placement={placement}
-                    >
-                      {children({
-                        toggle: this.toggleDropdown,
-                        isOpen: this.state.isOpen
-                      })}
-                    </div>
-                  );
-                }}
-              </Popper>
+                    return (
+                      <div
+                        className={cx(dropDownStyle, dropDownClassName)}
+                        ref={ref}
+                        style={popperWrapperStyle}
+                        data-placement={placement}
+                      >
+                        {children({
+                          toggle: this.toggleDropdown,
+                          isOpen: this.state.isOpen
+                        })}
+                      </div>
+                    );
+                  }}
+                </Popper>
+              </animated.div>
             )}
           </MountTransition>
         </Manager>

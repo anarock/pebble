@@ -238,7 +238,6 @@ exports[`Component: Select default snapshot 1`] = `
   margin-bottom: 20px;
   height: 68px;
   pointer-events: none;
-  margin-bottom: 0;
 }
 
 .emotion-4._pebble_input_wrapper_textarea {

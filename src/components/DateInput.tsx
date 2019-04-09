@@ -8,7 +8,6 @@ import { Rifm } from "rifm";
 import { startOfDay, format } from "date-fns";
 import NativeDateInput from "./NativeDateInput";
 import { UserAgentInfoContext } from "../utils/useragent";
-import { css } from "emotion";
 
 const noop = () => {};
 
@@ -94,7 +93,6 @@ export default class DateInput extends React.PureComponent<
                   ...(inputProps && inputProps.inputProps),
                   onChange
                 }}
-                className={css({ marginBottom: 0 })}
               />
             )}
           </Rifm>

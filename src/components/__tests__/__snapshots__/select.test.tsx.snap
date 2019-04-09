@@ -135,7 +135,6 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   margin-bottom: 20px;
   height: 68px;
   pointer-events: none;
-  margin-bottom: 0;
 }
 
 .emotion-3._pebble_input_wrapper_textarea {
@@ -331,7 +330,6 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   margin-bottom: 20px;
   height: 68px;
   pointer-events: none;
-  margin-bottom: 0;
 }
 
 .emotion-3._pebble_input_wrapper_textarea {
@@ -527,7 +525,6 @@ exports[`Component: Select single-select: snapshot 1`] = `
   margin-bottom: 20px;
   height: 68px;
   pointer-events: none;
-  margin-bottom: 0;
 }
 
 .emotion-3._pebble_input_wrapper_textarea {
