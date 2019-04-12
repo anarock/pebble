@@ -276,7 +276,6 @@ exports[`Component: Select default snapshot 1`] = `
             onFocus={[Function]}
           >
             <input
-              aria-label=""
               className="emotion-1"
               id="phone-select-input-test"
               onChange={[Function]}
@@ -311,7 +310,6 @@ exports[`Component: Select default snapshot 1`] = `
     onFocus={[Function]}
   >
     <input
-      aria-label=""
       className="emotion-9"
       id="phone-test-input-test"
       onChange={[Function]}
