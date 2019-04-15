@@ -95,7 +95,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
     );
 
     const _inputProps = {
-      "aria-label": placeholder,
+      "aria-label": placeholder ? placeholder : undefined,
       className: _inputClassName,
       disabled,
       onChange: this.handleChange,

@@ -39,10 +39,6 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   color: #6B7785;
 }
 
-.emotion-7 {
-  margin-bottom: 20px;
-}
-
 .emotion-6 {
   position: relative;
 }
@@ -142,45 +138,54 @@ exports[`Component: Select multi-select: snapshot 1`] = `
 }
 
 <div
-  className="emotion-7"
+  className=""
 >
   <div
     className="emotion-6"
   >
     <div
-      className="emotion-5"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
       <div
-        className="emotion-3"
-        onBlur={[Function]}
-        onFocus={[Function]}
+        className="emotion-5"
+        onClick={[Function]}
       >
-        <input
-          aria-label="Choose Option"
-          className="emotion-0"
-          onChange={[Function]}
-          readOnly={true}
-          value=""
-        />
-        <label
-          className="emotion-1"
-        >
-          Choose Option
-        </label>
         <div
-          className="emotion-2 _pebble_input_highlight_read_only"
-          style={
-            Object {
-              "backgroundColor": "#6161FF",
+          className="emotion-3"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <input
+            aria-label="Choose Option"
+            className="emotion-0"
+            onChange={[Function]}
+            readOnly={true}
+            value=""
+          />
+          <label
+            className="emotion-1"
+          >
+            Choose Option
+          </label>
+          <div
+            className="emotion-2 _pebble_input_highlight_read_only"
+            style={
+              Object {
+                "backgroundColor": "#6161FF",
+              }
             }
-          }
+          />
+          
+        </div>
+        <i
+          className="emotion-4 pi pi-arrow-drop-down"
         />
-        
       </div>
-      <i
-        className="emotion-4 pi pi-arrow-drop-down"
-      />
     </div>
   </div>
 </div>
@@ -225,10 +230,6 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   color: #6B7785;
 }
 
-.emotion-7 {
-  margin-bottom: 20px;
-}
-
 .emotion-6 {
   position: relative;
 }
@@ -328,45 +329,54 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
 }
 
 <div
-  className="emotion-7"
+  className=""
 >
   <div
     className="emotion-6"
   >
     <div
-      className="emotion-5"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
       <div
-        className="emotion-3"
-        onBlur={[Function]}
-        onFocus={[Function]}
+        className="emotion-5"
+        onClick={[Function]}
       >
-        <input
-          aria-label="Choose Option"
-          className="emotion-0"
-          onChange={[Function]}
-          readOnly={true}
-          value=""
-        />
-        <label
-          className="emotion-1"
-        >
-          Choose Option
-        </label>
         <div
-          className="emotion-2 _pebble_input_highlight_read_only"
-          style={
-            Object {
-              "backgroundColor": "#6161FF",
+          className="emotion-3"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <input
+            aria-label="Choose Option"
+            className="emotion-0"
+            onChange={[Function]}
+            readOnly={true}
+            value=""
+          />
+          <label
+            className="emotion-1"
+          >
+            Choose Option
+          </label>
+          <div
+            className="emotion-2 _pebble_input_highlight_read_only"
+            style={
+              Object {
+                "backgroundColor": "#6161FF",
+              }
             }
-          }
+          />
+          
+        </div>
+        <i
+          className="emotion-4 pi pi-arrow-drop-down"
         />
-        
       </div>
-      <i
-        className="emotion-4 pi pi-arrow-drop-down"
-      />
     </div>
   </div>
 </div>
@@ -411,10 +421,6 @@ exports[`Component: Select single-select: snapshot 1`] = `
   color: #6B7785;
 }
 
-.emotion-7 {
-  margin-bottom: 20px;
-}
-
 .emotion-6 {
   position: relative;
 }
@@ -514,45 +520,54 @@ exports[`Component: Select single-select: snapshot 1`] = `
 }
 
 <div
-  className="emotion-7"
+  className=""
 >
   <div
     className="emotion-6"
   >
     <div
-      className="emotion-5"
-      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+          "width": "100%",
+        }
+      }
     >
       <div
-        className="emotion-3"
-        onBlur={[Function]}
-        onFocus={[Function]}
+        className="emotion-5"
+        onClick={[Function]}
       >
-        <input
-          aria-label="Choose Option"
-          className="emotion-0"
-          onChange={[Function]}
-          readOnly={true}
-          value=""
-        />
-        <label
-          className="emotion-1"
-        >
-          Choose Option
-        </label>
         <div
-          className="emotion-2 _pebble_input_highlight_read_only"
-          style={
-            Object {
-              "backgroundColor": "#6161FF",
+          className="emotion-3"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <input
+            aria-label="Choose Option"
+            className="emotion-0"
+            onChange={[Function]}
+            readOnly={true}
+            value=""
+          />
+          <label
+            className="emotion-1"
+          >
+            Choose Option
+          </label>
+          <div
+            className="emotion-2 _pebble_input_highlight_read_only"
+            style={
+              Object {
+                "backgroundColor": "#6161FF",
+              }
             }
-          }
+          />
+          
+        </div>
+        <i
+          className="emotion-4 pi pi-arrow-drop-down"
         />
-        
       </div>
-      <i
-        className="emotion-4 pi pi-arrow-drop-down"
-      />
     </div>
   </div>
 </div>

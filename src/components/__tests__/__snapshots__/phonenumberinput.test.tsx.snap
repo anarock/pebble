@@ -140,6 +140,11 @@ exports[`Component: Select default snapshot 1`] = `
   display: flex;
 }
 
+.emotion-8 {
+  width: 80px;
+  margin-bottom: 0;
+}
+
 .emotion-0 {
   color: #9FA6B0;
   font-size: 14px;
@@ -161,12 +166,6 @@ exports[`Component: Select default snapshot 1`] = `
   -ms-transform: translate(0,0);
   transform: translate(0,0);
   color: #6B7785;
-}
-
-.emotion-8 {
-  margin-bottom: 20px;
-  width: 80px;
-  margin-bottom: 0;
 }
 
 .emotion-1 {
@@ -259,40 +258,48 @@ exports[`Component: Select default snapshot 1`] = `
       className="emotion-7"
     >
       <div
-        className="emotion-6"
-        onClick={[Function]}
+        style={
+          Object {
+            "display": "inline-block",
+            "width": "100%",
+          }
+        }
       >
         <div
-          className="emotion-4"
-          onBlur={[Function]}
-          onFocus={[Function]}
+          className="emotion-6"
+          onClick={[Function]}
         >
-          <input
-            aria-label=""
-            className="emotion-1"
-            id="phone-select-input-test"
-            onChange={[Function]}
-            readOnly={true}
-            value="+1"
-          />
-          <label
-            className="emotion-2 _pebble_input_label_focused"
-          >
-            
-          </label>
           <div
-            className="emotion-3 _pebble_input_highlight_read_only"
-            style={
-              Object {
-                "backgroundColor": "#6161FF",
+            className="emotion-4"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <input
+              className="emotion-1"
+              id="phone-select-input-test"
+              onChange={[Function]}
+              readOnly={true}
+              value="+1"
+            />
+            <label
+              className="emotion-2 _pebble_input_label_focused"
+            >
+              
+            </label>
+            <div
+              className="emotion-3 _pebble_input_highlight_read_only"
+              style={
+                Object {
+                  "backgroundColor": "#6161FF",
+                }
               }
-            }
+            />
+            
+          </div>
+          <i
+            className="emotion-5 pi pi-arrow-drop-down"
           />
-          
         </div>
-        <i
-          className="emotion-5 pi pi-arrow-drop-down"
-        />
       </div>
     </div>
   </div>
@@ -302,7 +309,6 @@ exports[`Component: Select default snapshot 1`] = `
     onFocus={[Function]}
   >
     <input
-      aria-label=""
       className="emotion-9"
       id="phone-test-input-test"
       onChange={[Function]}
