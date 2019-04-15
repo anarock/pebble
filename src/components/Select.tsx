@@ -7,7 +7,6 @@ import {
   inputWrapper,
   selectInput,
   selectInputWrapper,
-  selectWrapper,
   fullWidth,
   relativePosition
 } from "./styles/Select.styles";
@@ -35,7 +34,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
 
   return (
     <div
-      className={cx(selectWrapper, className, {
+      className={cx(className, {
         [relativePosition]: fullWidthDropdown
       })}
     >

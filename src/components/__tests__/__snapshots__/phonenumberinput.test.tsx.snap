@@ -140,6 +140,11 @@ exports[`Component: Select default snapshot 1`] = `
   display: flex;
 }
 
+.emotion-8 {
+  width: 80px;
+  margin-bottom: 0;
+}
+
 .emotion-0 {
   color: #9FA6B0;
   font-size: 14px;
@@ -161,12 +166,6 @@ exports[`Component: Select default snapshot 1`] = `
   -ms-transform: translate(0,0);
   transform: translate(0,0);
   color: #6B7785;
-}
-
-.emotion-8 {
-  margin-bottom: 20px;
-  width: 80px;
-  margin-bottom: 0;
 }
 
 .emotion-1 {
