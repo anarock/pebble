@@ -67,7 +67,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
         popperClassName={popperStyle}
         closeOnOutsideClick={false}
       >
-        {this.props.getTooltip || this.defaultTooltip}
+        {this.props.renderElement || this.defaultTooltip}
       </Popper>
     );
   }
