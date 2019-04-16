@@ -1,7 +1,12 @@
 import * as React from "react";
 import { DateInputProps, DateInputState } from "./typings/DateInput";
 import DropDown from "./DropDown";
-import { dateClass, dropDownClassName, inputStyle } from "./styles/Date.styles";
+import {
+  dateClass,
+  dropDownClassName,
+  inputStyle,
+  wrapperStyle
+} from "./styles/Date.styles";
 import Calendar from "./Calendar";
 import Input from "./Input";
 import { Rifm } from "rifm";
@@ -98,6 +103,7 @@ export default class DateInput extends React.PureComponent<
             )}
           </Rifm>
         )}
+        className={wrapperStyle}
       >
         {({ toggle }) => (
           <Calendar

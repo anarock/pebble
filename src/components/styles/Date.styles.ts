@@ -13,3 +13,7 @@ export const dropDownClassName = css({
 export const inputStyle = css({
   marginBottom: 0
 });
+
+export const wrapperStyle = css({
+  marginBottom: 20
+});

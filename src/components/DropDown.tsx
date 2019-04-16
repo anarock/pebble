@@ -75,6 +75,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
             )}
           </Reference>
 
+          {/* TODO: Add native flag. */}
           <MountTransition visible={isOpen}>
             {transitionStyles => (
               <animated.div
