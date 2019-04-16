@@ -9,3 +9,11 @@ export const dateClass = css({
 export const dropDownClassName = css({
   marginTop: -inputMarginBottom
 });
+
+export const inputStyle = css({
+  marginBottom: 0
+});
+
+export const wrapperStyle = css({
+  marginBottom: 20
+});

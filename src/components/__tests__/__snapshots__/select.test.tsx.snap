@@ -39,6 +39,10 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   color: #6B7785;
 }
 
+.emotion-7 {
+  margin-bottom: 20px;
+}
+
 .emotion-6 {
   position: relative;
 }
@@ -131,6 +135,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   margin-bottom: 20px;
   height: 68px;
   pointer-events: none;
+  margin-bottom: 0;
 }
 
 .emotion-3._pebble_input_wrapper_textarea {
@@ -138,7 +143,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
 }
 
 <div
-  className=""
+  className="emotion-7"
 >
   <div
     className="emotion-6"
@@ -230,6 +235,10 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   color: #6B7785;
 }
 
+.emotion-7 {
+  margin-bottom: 20px;
+}
+
 .emotion-6 {
   position: relative;
 }
@@ -322,6 +331,7 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   margin-bottom: 20px;
   height: 68px;
   pointer-events: none;
+  margin-bottom: 0;
 }
 
 .emotion-3._pebble_input_wrapper_textarea {
@@ -329,7 +339,7 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
 }
 
 <div
-  className=""
+  className="emotion-7"
 >
   <div
     className="emotion-6"
@@ -421,6 +431,10 @@ exports[`Component: Select single-select: snapshot 1`] = `
   color: #6B7785;
 }
 
+.emotion-7 {
+  margin-bottom: 20px;
+}
+
 .emotion-6 {
   position: relative;
 }
@@ -513,6 +527,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
   margin-bottom: 20px;
   height: 68px;
   pointer-events: none;
+  margin-bottom: 0;
 }
 
 .emotion-3._pebble_input_wrapper_textarea {
@@ -520,7 +535,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
 }
 
 <div
-  className=""
+  className="emotion-7"
 >
   <div
     className="emotion-6"

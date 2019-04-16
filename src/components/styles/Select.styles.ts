@@ -2,12 +2,17 @@ import { css } from "emotion";
 import { colors } from "../../theme";
 import { inputMarginBottom } from "./Input.styles";
 
+export const selectWrapper = css({
+  marginBottom: 20
+});
+
 export const relativePosition = css({
   position: "relative"
 });
 
 export const selectInputWrapper = css({
-  pointerEvents: "none"
+  pointerEvents: "none",
+  marginBottom: 0
 });
 
 export const selectInput = css({
