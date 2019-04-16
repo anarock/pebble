@@ -75,13 +75,13 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
             )}
           </Reference>
 
-          <MountTransition visible={isOpen} native>
+          <MountTransition visible={isOpen}>
             {transitionStyles => (
               <animated.div
                 className={cx(dropDownStyle, dropDownClassName)}
                 style={{ padding, ...transitionStyles }}
               >
-                <Popper {...this.props}>
+                <Popper {...this.props} positionFixed>
                   {({ ref, style, placement, arrowProps }) => {
                     const popperWrapperStyle = {
                       ...style,
