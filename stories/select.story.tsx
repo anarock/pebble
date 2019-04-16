@@ -37,7 +37,7 @@ storiesOf("Components/Select", module)
           <Select
             selected={store.state.selected} // The value selected
             value={store.state.value} // To show in input box after selection
-            fullWidthDropdown
+            fullWidthDropdown={boolean("fullWidthDropdown", true)}
             onDropdownToggle={action("onDropdownToggle")}
             onChange={(selected: string, e: Extras) => {
               if (selected) {
@@ -89,6 +89,7 @@ storiesOf("Components/Select", module)
         <Select<OptionType>
           multiSelect
           selected={store.state.selected}
+          // tslint:disable-next-line
           onChange={(val: Array<unknown>) => {
             action("onSelect")(val);
             store.set({ selected: val as OptionType[] });

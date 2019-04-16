@@ -15,6 +15,7 @@ export interface ButtonProps {
   showRipple?: boolean;
   loading?: boolean;
   filled?: boolean;
+  buttonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
 }
 
 export interface DropDownButtonProps extends ButtonProps {

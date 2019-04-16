@@ -1,7 +1,12 @@
 import * as React from "react";
 import { toastWrapper } from "./styles/Toast.styles";
 import { colors } from "../theme";
-import { ToastProps, ToastState, ToastType } from "./typings/Toast";
+import {
+  ToastProps,
+  ToastState,
+  ToastType,
+  ToastPosition
+} from "./typings/Toast";
 import { Transition, animated } from "react-spring";
 import { cx } from "emotion";
 import Mitt from "mitt";
@@ -14,9 +19,89 @@ const _colors = {
   error: colors.red.base
 };
 
+const toastTransitionsLeft = {
+  from: { transform: "translateX(-10px)" },
+  enter: { transform: "translateX(0)" },
+  leave: { transform: "translateX(-10px)" }
+};
+
+const toastTransitionsRight = {
+  from: { transform: "translateX(10px)" },
+  enter: { transform: "translateX(0)" },
+  leave: { transform: "translateX(10px)" }
+};
+
+const customStyles = {
+  TOP: {
+    style: {
+      top: 20,
+      left: "50%"
+    },
+
+    transitions: {
+      from: { transform: "translateX(-50%) translateY(-10px)" },
+      enter: { transform: "translateX(-50%) translateY(0)" },
+      leave: { transform: "translateX(-50%) translateY(-10px)" }
+    }
+  },
+
+  TOP_LEFT: {
+    style: {
+      top: 20,
+      left: 20
+    },
+
+    transitions: toastTransitionsLeft
+  },
+
+  TOP_RIGHT: {
+    style: {
+      top: 20,
+      right: 20
+    },
+
+    transitions: toastTransitionsRight
+  },
+
+  BOTTOM: {
+    style: {
+      bottom: 20,
+      left: "50%"
+    },
+
+    transitions: {
+      from: { transform: "translateX(-50%) translateY(10px)" },
+      enter: { transform: "translateX(-50%) translateY(0)" },
+      leave: { transform: "translateX(-50%) translateY(10px)" }
+    }
+  },
+
+  BOTTOM_LEFT: {
+    style: {
+      bottom: 20,
+      left: 20
+    },
+
+    transitions: toastTransitionsLeft
+  },
+
+  BOTTOM_RIGHT: {
+    style: {
+      bottom: 20,
+      right: 20
+    },
+
+    transitions: toastTransitionsRight
+  }
+};
+
 class Toast extends React.PureComponent<ToastProps, ToastState> {
-  static show(text: string, type: ToastType, time?: number) {
-    emitter.emit("showToast", { text, type, time });
+  static show(
+    text: string,
+    type: ToastType,
+    { time, position }: { time?: number; position?: ToastPosition } = {}
+  ) {
+    emitter.emit("showToast", { text, type, time, position });
   }
 
   showTimer?: number | null;
@@ -28,7 +113,8 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
   state: ToastState = {
     text: "",
     type: "success",
-    show: false
+    show: false,
+    position: "BOTTOM"
   };
 
   componentDidMount() {
@@ -44,11 +130,17 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
   private show = ({
     text,
     type = "success",
+    position,
     time
-  }: Partial<ToastState> & { text: string; time?: number }) => {
+  }: Partial<ToastState> & {
+    text: string;
+    time?: number;
+    position: ToastPosition;
+  }) => {
     this.setState({
       text,
       type,
+      position,
       show: true
     });
 
@@ -76,16 +168,26 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
       "pi-close-circle-filled": this.state.type === "error"
     });
 
+    const position =
+      this.state.position || this.props.defaultPosition || "BOTTOM";
+
     return (
       <Transition
         native
         items={this.state.show}
-        from={{ opacity: 0, transform: "translateX(-50%) translateY(10px)" }}
-        enter={{ opacity: 1, transform: "translateX(-50%) translateY(0)" }}
+        key={position}
+        from={{
+          opacity: 0,
+          ...customStyles[position].transitions.from
+        }}
+        enter={{
+          opacity: 1,
+          ...customStyles[position].transitions.enter
+        }}
         leave={{
           opacity: 0,
-          transform: "translateX(-50%) translateY(10px)",
-          pointerEvents: "none"
+          pointerEvents: "none",
+          ...customStyles[position].transitions.leave
         }}
         config={animationConfig.config}
       >
@@ -96,7 +198,8 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
               className={cx(toastWrapper, this.props.className)}
               style={{
                 backgroundColor: bColor,
-                ...(styles as React.CSSProperties)
+                ...(styles as React.CSSProperties),
+                ...customStyles[position].style
               }}
             >
               <i className={iconClass} />

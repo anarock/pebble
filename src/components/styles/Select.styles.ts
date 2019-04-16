@@ -11,7 +11,8 @@ export const relativePosition = css({
 });
 
 export const selectInputWrapper = css({
-  pointerEvents: "none"
+  pointerEvents: "none",
+  marginBottom: 0
 });
 
 export const selectInput = css({
