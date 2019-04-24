@@ -1,9 +1,24 @@
-import { configure } from "@storybook/react";
-import { setOptions } from "@storybook/addon-options";
+import { configure, addParameters } from "@storybook/react";
+import { withOptions } from "@storybook/addon-options";
 import "@storybook/addon-console";
 import "storybook-chromatic";
+import { colors } from "../src/theme";
 
-setOptions({
+addParameters({
+  backgrounds: [
+    {
+      name: "Grey",
+      value: colors.gray.lighter
+    },
+    {
+      name: "White",
+      value: colors.white.base,
+      default: true
+    }
+  ]
+});
+
+withOptions({
   /**
    * name to display in the top left corner
    * @type {String}
