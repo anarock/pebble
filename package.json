@@ -69,6 +69,7 @@
     "@dump247/storybook-state": "^1.5.2",
     "@storybook/addon-a11y": "^5.0.10",
     "@storybook/addon-actions": "^5.0.10",
+    "@storybook/addon-backgrounds": "^5.0.10",
     "@storybook/addon-centered": "^5.0.10",
     "@storybook/addon-console": "^1.1.0",
     "@storybook/addon-info": "^5.0.10",
