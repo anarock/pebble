@@ -72,6 +72,15 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
             </span>
           </div>
         )}
+        placement="bottom-start"
+        modifiers={{
+          preventOverflow: {
+            enabled: false
+          },
+          flip: {
+            enabled: false
+          }
+        }}
       >
         {({ toggle }) => (
           <OptionGroupRadio
@@ -117,6 +126,15 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
             />
           </div>
         )}
+        placement="bottom-start"
+        modifiers={{
+          preventOverflow: {
+            enabled: false
+          },
+          flip: {
+            enabled: false
+          }
+        }}
       >
         {({ toggle }) => (
           <OptionGroupRadio

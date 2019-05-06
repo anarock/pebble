@@ -104,6 +104,15 @@ export default class DateInput extends React.PureComponent<
           </Rifm>
         )}
         className={wrapperStyle}
+        placement="bottom-start"
+        modifiers={{
+          preventOverflow: {
+            enabled: false
+          },
+          flip: {
+            enabled: false
+          }
+        }}
       >
         {({ toggle }) => (
           <Calendar

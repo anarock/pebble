@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ButtonType } from "./Button";
-import { Placement } from "popper.js";
+import { Placement, Modifiers } from "popper.js";
 
 type Toggle = () => void;
 
@@ -22,6 +22,7 @@ export interface DropdownProps {
   labelClassName?: string;
   onOutsideClick?: (isOpen: boolean) => void;
   placement?: Placement;
+  modifiers?: Modifiers;
 }
 
 export interface DropdownState {
