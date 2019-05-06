@@ -35,6 +35,7 @@
     ],
     "./svgs/*.svg": [
       "imagemin-lint-staged",
+      "yarn build:icons",
       "git add"
     ]
   },
