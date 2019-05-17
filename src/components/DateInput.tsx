@@ -26,6 +26,15 @@ function dateFormat(str: string) {
   );
 }
 
+const modifiers = {
+  preventOverflow: {
+    enabled: false
+  },
+  flip: {
+    enabled: false
+  }
+};
+
 export default class DateInput extends React.PureComponent<
   DateInputProps,
   DateInputState
@@ -105,14 +114,7 @@ export default class DateInput extends React.PureComponent<
         )}
         className={wrapperStyle}
         placement="bottom-start"
-        modifiers={{
-          preventOverflow: {
-            enabled: false
-          },
-          flip: {
-            enabled: false
-          }
-        }}
+        modifiers={modifiers}
       >
         {({ toggle }) => (
           <Calendar

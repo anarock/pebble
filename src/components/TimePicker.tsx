@@ -39,6 +39,15 @@ export const buttonStyle = css({
   lineHeight: "9px"
 });
 
+const modifiers = {
+  preventOverflow: {
+    enabled: false
+  },
+  flip: {
+    enabled: false
+  }
+};
+
 const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
   const { selectedHour, selectedMinute, onHourChange, onMinuteChange } = props;
   const selected = !!selectedHour || selectedMinute !== undefined;
@@ -127,14 +136,7 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
           </div>
         )}
         placement="bottom-start"
-        modifiers={{
-          preventOverflow: {
-            enabled: false
-          },
-          flip: {
-            enabled: false
-          }
-        }}
+        modifiers={modifiers}
       >
         {({ toggle }) => (
           <OptionGroupRadio
