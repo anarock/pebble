@@ -30,7 +30,9 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
     fullWidthDropdown,
     onDropdownToggle = noop,
     disabled,
-    isSelected
+    isSelected,
+    placement,
+    modifiers
   } = props;
 
   return (
@@ -77,6 +79,8 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
             </div>
           );
         }}
+        placement={placement}
+        modifiers={modifiers}
       >
         {({ toggle, isOpen }) => {
           const { children, onClear, searchBox, searchBoxProps } = props;
