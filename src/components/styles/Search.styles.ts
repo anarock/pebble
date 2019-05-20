@@ -3,6 +3,7 @@ import { colors, constants, mixins, typography } from "../../theme";
 import { getPlaceholderStyle } from "../../theme/mixins";
 
 export const searchWrapperStyle = css({
+  minWidth: "200px",
   borderRadius: constants.borderRadius,
   padding: "0 20px",
   ...mixins.flexRow,
@@ -19,8 +20,8 @@ export const searchWrapperStyle = css({
     backgroundColor: colors.white.base,
     height: 76,
     padding: "0 25px",
-    boxShadow: constants.boxShadow.base,
-    input: typography.normal.regular
+    boxShadow: constants.boxShadow.base
+    // input: typography.normal.regular
   },
   "&.__pebble__search__table": {
     border: `1px solid ${colors.gray.light}`,
@@ -39,7 +40,7 @@ export const searchStyle = css({
   flexGrow: 1,
   ...mixins.textEllipsis,
   ...typography.s.regular,
-  ...getPlaceholderStyle(colors.gray.base),
+  .../*#__PURE__*/ getPlaceholderStyle(colors.gray.base),
   backgroundColor: "transparent"
 });
 

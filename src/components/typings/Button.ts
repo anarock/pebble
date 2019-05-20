@@ -1,4 +1,5 @@
 import * as React from "react";
+import * as CSS from "csstype";
 
 export type ButtonType = "primary" | "secondary" | "link" | "success" | "alert";
 
@@ -9,11 +10,12 @@ export interface ButtonProps {
   disabled?: boolean;
   type?: ButtonType;
   size?: "x-small" | "small" | "large";
-  width?: number;
+  width?: CSS.WidthProperty<number>;
   className?: string;
   showRipple?: boolean;
   loading?: boolean;
   filled?: boolean;
+  buttonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
 }
 
 export interface DropDownButtonProps extends ButtonProps {

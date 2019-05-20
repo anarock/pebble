@@ -7,7 +7,9 @@ import {
   inputWrapper,
   selectInput,
   selectInputWrapper,
-  selectWrapper
+  selectWrapper,
+  fullWidth,
+  relativePosition
 } from "./styles/Select.styles";
 import DropDown from "./DropDown";
 import Input from "./Input";
@@ -16,37 +18,50 @@ import OptionGroupRadio from "./OptionGroupRadio";
 
 function noop() {}
 
-const Select: React.SFC<SelectProps> = props => {
+function Select<OptionType>(props: SelectProps<OptionType>) {
   const {
     className,
     placeholder,
     required,
     errorMessage,
-    onChange,
     value,
-    selected,
-    children,
-    multiSelect,
-    onClear,
-    onApply,
     dropdownClassName,
     inputProps,
-    searchBox,
-    searchBoxProps
+    fullWidthDropdown,
+    onDropdownToggle = noop,
+    disabled,
+    isSelected,
+    placement,
+    modifiers
   } = props;
 
-  const OptionGroup: any = multiSelect ? OptionGroupCheckBox : OptionGroupRadio;
-
   return (
-    <div className={cx(selectWrapper, className)}>
+    <div
+      className={cx(selectWrapper, className, {
+        [relativePosition]: fullWidthDropdown
+      })}
+    >
       <DropDown
-        dropDownClassName={cx(dropDownClass, dropdownClassName)}
+        dropDownClassName={cx(dropDownClass, dropdownClassName, {
+          [fullWidth]: fullWidthDropdown
+        })}
+        onOutsideClick={isOpen => onDropdownToggle(isOpen)}
         labelComponent={({ toggleDropdown, isOpen }) => {
           const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {
             __pebble__select__open: isOpen
           });
           return (
-            <div className={inputWrapper} onClick={toggleDropdown}>
+            <div
+              className={inputWrapper}
+              onClick={
+                disabled
+                  ? undefined
+                  : () => {
+                      toggleDropdown();
+                      onDropdownToggle(isOpen);
+                    }
+              }
+            >
               <Input
                 className={selectInputWrapper}
                 inputClassName={selectInput}
@@ -57,49 +72,103 @@ const Select: React.SFC<SelectProps> = props => {
                 message={isOpen ? " " : ""}
                 errorMessage={errorMessage}
                 readOnly
+                disabled={disabled}
                 {...inputProps}
               />
               <i className={chevron} />
             </div>
           );
         }}
+        placement={placement}
+        modifiers={modifiers}
       >
-        {({ toggle }) => (
-          <React.Fragment>
-            <OptionGroup
-              selected={selected}
-              onChange={(_value, event) => {
-                onChange(_value, event);
-                if (!multiSelect) {
-                  toggle();
+        {({ toggle, isOpen }) => {
+          const { children, onClear, searchBox, searchBoxProps } = props;
+          const commonProps = {
+            isSelected,
+            onClear:
+              onClear &&
+              (() => {
+                onClear();
+                onDropdownToggle(isOpen);
+                toggle();
+              }),
+            searchBox,
+            searchBoxProps
+          };
+
+          // This would have been the ideal way to write this but typescript is crying.
+          // const OptionGroup = props.multiSelect
+          //   ? OptionGroupCheckBox
+          //   : OptionGroupRadio;
+          // return (
+          //   <OptionGroup
+          //     selected={props.selected}
+          //     onChange={(_value, extras) => {
+          //       if (_value) {
+          //         props.onChange(_value, extras);
+          //       }
+          //       if (!props.multiSelect) {
+          //         onDropdownToggle(isOpen);
+          //         toggle();
+          //       }
+          //     }}
+          //     onApply={
+          //       props.multiSelect &&
+          //       props.onApply &&
+          //       (_value => {
+          //         if (props.onApply) {
+          //           props.onApply(_value, props);
+          //         }
+          //         onDropdownToggle(isOpen);
+          //         toggle();
+          //       })
+          //     }
+          //     {...commonProps}
+          //   >
+          //     {children}
+          //   </OptionGroup>
+          // );
+
+          if (props.multiSelect) {
+            return (
+              <OptionGroupCheckBox<OptionType>
+                selected={props.selected}
+                onChange={(_value, extras) => {
+                  props.onChange(_value, extras);
+                }}
+                onApply={
+                  props.onApply &&
+                  (_value => {
+                    if (props.onApply) props.onApply(_value, props);
+                    onDropdownToggle(isOpen);
+                    toggle();
+                  })
                 }
-              }}
-              onApply={
-                onApply
-                  ? _value => {
-                      onApply(_value, props);
-                      toggle();
-                    }
-                  : undefined
-              }
-              onClear={
-                onClear
-                  ? () => {
-                      onClear();
-                      toggle();
-                    }
-                  : undefined
-              }
-              searchBox={searchBox}
-              searchBoxProps={searchBoxProps}
-            >
-              {children}
-            </OptionGroup>
-          </React.Fragment>
-        )}
+                {...commonProps}
+              >
+                {children}
+              </OptionGroupCheckBox>
+            );
+          } else {
+            return (
+              <OptionGroupRadio
+                selected={props.selected}
+                onChange={(_value, extras) => {
+                  if (_value) props.onChange(_value, extras);
+                  onDropdownToggle(isOpen);
+                  toggle();
+                }}
+                {...commonProps}
+              >
+                {children}
+              </OptionGroupRadio>
+            );
+          }
+        }}
       </DropDown>
     </div>
   );
-};
+}
 
 export default Select;

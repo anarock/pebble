@@ -2,10 +2,11 @@ import { ControlProps } from "./Control";
 import { Omit } from "utility-types";
 import * as React from "react";
 
-export interface OptionProps
-  extends Omit<Omit<ControlProps, "checked">, "type"> {
+export interface OptionProps<OptionType>
+  extends Omit<ControlProps<OptionType>, "checked" | "type"> {
   isActive?: boolean;
   isSelected?: boolean;
   multiSelect?: boolean;
-  rightElement: (props: OptionProps) => React.ReactNode;
+  labelClassName?: string;
+  rightElement?: (props: OptionProps<OptionType>) => React.ReactNode;
 }

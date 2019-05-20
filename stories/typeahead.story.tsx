@@ -7,9 +7,13 @@ import Option from "../src/components/Option";
 import { withState } from "@dump247/storybook-state";
 import { boolean } from "@storybook/addon-knobs";
 
-storiesOf("Typeahead", module).add(
+interface State {
+  selected?: number;
+}
+
+storiesOf("Components/Typeahead", module).add(
   "simple",
-  withState({ selected: null })(({ store }) => (
+  withState<State>({ selected: undefined })(({ store }) => (
     <TypeAhead
       className={css({
         width: 400
@@ -17,14 +21,15 @@ storiesOf("Typeahead", module).add(
       placeholder="Typeahead"
       onChange={action("change")}
       onSelect={val => {
-        store.set({ selected: val });
+        action("onSelect")(val);
+        store.set({ selected: val as number });
       }}
       valueExtractor={value => `${value} is the best option`}
       selected={store.state.selected}
       onClear={action("clear")}
-      disabled={boolean("disabled")}
+      disabled={boolean("disabled", false)}
     >
-      {new Array(5).fill(1).map((_x, i) => (
+      {new Array(25).fill(1).map((_x, i) => (
         <Option key={i + 1} value={i + 1} label={`I am an option - ${i + 1}`} />
       ))}
     </TypeAhead>

@@ -1,26 +1,25 @@
 import { css } from "emotion";
 import { colors, typography } from "../../theme";
 
-export const controlStyle = css({
-  outline: "none",
-  position: "relative"
+export const radioIconStyle = css({
+  marginRight: 10,
+  fontSize: 16
 });
 
-export const controlContentStyle = css({
-  display: "flex",
-  justifyContent: "center",
-  ...typography.normal.regular,
+export const controlStyle = css({
   cursor: "pointer",
+  display: "flex",
+  outline: "none",
   padding: "10px 0",
-  transition: "all 200ms ease",
-  i: {
-    marginRight: 10,
-    fontSize: 16
-  },
+  position: "relative",
+  alignItems: "center",
+  ...typography.normal.regular,
   "&[data-disabled='true']": {
     cursor: "not-allowed",
-    pointerEvents: "none",
-    i: {
+
+    // Try not to use cx with radioIconStyle
+    // As cx merges styles into one className.
+    [`.${radioIconStyle}`]: {
       color: colors.gray.light
     }
   }

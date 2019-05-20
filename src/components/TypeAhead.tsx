@@ -1,64 +1,65 @@
 import * as React from "react";
 import debounce from "just-debounce-it";
-import { TypeaheadProps, TypeaheadState } from "./typings/Typeahead";
+import {
+  TypeaheadProps,
+  TypeaheadState,
+  SearchBoxArgs
+} from "./typings/Typeahead";
 import { cx } from "emotion";
 import Input from "./Input";
 import { optionsWrapper, wrapper } from "./styles/TypeAhead.styles";
 import OutsideClick from "./OutsideClick";
 import OptionGroupRadio from "./OptionGroupRadio";
+import { animated } from "react-spring";
+import MountTransition from "./shared/MountTransition";
 
-class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
-  typeaheadInputRef: React.RefObject<HTMLInputElement> = React.createRef();
-  debouncedChange: () => void;
+function defaultSearchBox<OptionType>(
+  { registerChange, onFocus, value }: SearchBoxArgs,
+  props: TypeaheadProps<OptionType>
+) {
+  return (
+    <Input
+      onChange={registerChange}
+      placeholder={props.placeholder}
+      inputProps={{
+        onFocus,
+        onKeyDown: (e: React.KeyboardEvent) => {
+          if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+          if (e.keyCode === 8 && props.selected) {
+            // keyCode for delete
+            registerChange("");
+            props.onClear();
+          }
+        }
+      }}
+      value={value}
+      errorMessage={props.errorMessage}
+      loading={props.loading}
+      required={props.required}
+      disabled={props.disabled}
+    />
+  );
+}
 
-  static defaultProps: Partial<TypeaheadProps> = {
+export default class TypeAhead<OptionType> extends React.PureComponent<
+  TypeaheadProps<OptionType>,
+  TypeaheadState
+> {
+  static defaultProps = {
     debounceTime: 500,
-    onClear: () => {},
-    searchBox: (
-      { registerChange, onFocus, value, typeaheadInputRef, onBlur },
-      props
-    ) => (
-      <Input
-        onChange={registerChange}
-        placeholder={props.placeholder}
-        inputProps={{
-          onFocus,
-          onKeyDown: e => {
-            if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
-            if (e.keyCode === 8 && props.selected) {
-              // keyCode for delete
-              registerChange("");
-              props.onClear();
-            }
-          },
-          //@ts-ignore
-          ref: typeaheadInputRef,
-          onBlur
-        }}
-        value={value}
-        errorMessage={props.errorMessage}
-        loading={props.loading}
-        required={props.required}
-        disabled={props.disabled}
-      />
-    )
+    onClear: () => {}
   };
-
-  constructor(props) {
-    super(props);
-
-    this.debouncedChange = debounce(this.onChange, props.debounceTime);
-  }
 
   state: TypeaheadState = {
     value: this.props.initialValue || "",
-    showSuggestions: false,
-    focussedElement: undefined
+    showSuggestions: false
   };
 
-  onChange = () => {
+  private onChange = () => {
     this.props.onChange(this.state.value, this.props);
   };
+
+  private debouncedChange = debounce(this.onChange, this.props.debounceTime);
 
   private registerChange = (value: string) => {
     this.setState(
@@ -71,28 +72,28 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
 
   private onFocus = () => {
     this.setState({
-      showSuggestions: true,
-      focussedElement: document.activeElement
+      showSuggestions: true
     });
   };
 
-  private onBlur = () => {
-    this.setState({ focussedElement: document.activeElement });
-  };
-
-  private onSelect = _value => {
+  private onSelect = (_value?: OptionType) => {
     this.props.onSelect(_value, this.props);
 
     this.setState({
       showSuggestions: false,
-      value: this.props.valueExtractor(_value)
+      value: (_value && this.props.valueExtractor(_value)) || ""
     });
   };
 
   render() {
-    const { className, searchBox, dropdownClassName, children } = this.props;
+    const {
+      className,
+      searchBox = defaultSearchBox,
+      dropdownClassName,
+      children
+    } = this.props;
 
-    const { showSuggestions, value, focussedElement } = this.state;
+    const { showSuggestions, value } = this.state;
 
     return (
       <OutsideClick
@@ -108,24 +109,24 @@ class TypeAhead extends React.PureComponent<TypeaheadProps, TypeaheadState> {
           {
             registerChange: this.registerChange,
             onFocus: this.onFocus,
-            onBlur: this.onBlur,
-            value,
-            typeaheadInputRef: this.typeaheadInputRef
+            value
           },
           this.props
         )}
 
-        {(focussedElement === this.typeaheadInputRef.current ||
-          showSuggestions) && (
-          <div className={cx(optionsWrapper, dropdownClassName)}>
-            <OptionGroupRadio onChange={this.onSelect}>
-              {children}
-            </OptionGroupRadio>
-          </div>
-        )}
+        <MountTransition visible={showSuggestions} native>
+          {transitionStyles => (
+            <animated.div
+              style={transitionStyles}
+              className={cx(optionsWrapper, dropdownClassName)}
+            >
+              <OptionGroupRadio onChange={this.onSelect}>
+                {children}
+              </OptionGroupRadio>
+            </animated.div>
+          )}
+        </MountTransition>
       </OutsideClick>
     );
   }
 }
-
-export default TypeAhead;

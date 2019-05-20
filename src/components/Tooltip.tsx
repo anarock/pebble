@@ -9,6 +9,11 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     isOpen: !!this.props.isOpen
   };
 
+  private defaultTooltip = () => (
+    <span className={textStyle}>{this.props.text}</span>
+  );
+
+  // tslint:disable-next-line no-any
   labelRef: React.RefObject<any> = React.createRef();
 
   private showTooltip = () =>
@@ -47,10 +52,6 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     }
   }
 
-  private getTooltip = () => (
-    <span className={textStyle}>{this.props.text}</span>
-  );
-
   render() {
     const { placement, label, modifiers, isError } = this.props;
 
@@ -66,7 +67,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
         popperClassName={popperStyle}
         closeOnOutsideClick={false}
       >
-        {this.getTooltip}
+        {this.props.renderElement || this.defaultTooltip}
       </Popper>
     );
   }

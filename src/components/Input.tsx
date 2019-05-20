@@ -54,7 +54,11 @@ class Input extends React.PureComponent<InputProps, InputState> {
     });
   };
 
-  private handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  private handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     this.props.onChange(e.target.value || "");
   };
 
@@ -64,7 +68,6 @@ class Input extends React.PureComponent<InputProps, InputState> {
       placeholder,
       className,
       inputClassName,
-      inputProps,
       fixLabelAtTop,
       value,
       readOnly,
@@ -81,8 +84,6 @@ class Input extends React.PureComponent<InputProps, InputState> {
 
     const _message = errorMessage || successMessage || message;
 
-    const Input_ = textArea ? "textarea" : "input";
-
     const _inputClassName = cx(
       inputStyle,
       {
@@ -93,9 +94,18 @@ class Input extends React.PureComponent<InputProps, InputState> {
       inputClassName
     );
 
+    const _inputProps = {
+      "aria-label": placeholder ? placeholder : undefined,
+      className: _inputClassName,
+      disabled,
+      onChange: this.handleChange,
+      readOnly,
+      value: value || ""
+    };
+
     const highlightClassName = cx(highlightStyle, {
       _pebble_input_highlight_focused: isFocused,
-      _pebble_input_highlight_state: !!_message,
+      _pebble_input_highlight_state: !!errorMessage || !!successMessage,
       _pebble_input_highlight_read_only: readOnly,
       _pebble_input_highlight_disabled: disabled
     });
@@ -119,16 +129,11 @@ class Input extends React.PureComponent<InputProps, InputState> {
         onBlur={this.removeFocus}
         onClick={onClick}
       >
-        <Input_
-          className={_inputClassName}
-          {...inputProps}
-          type={type}
-          aria-label={placeholder}
-          value={value || ""}
-          onChange={this.handleChange}
-          disabled={disabled}
-          readOnly={readOnly}
-        />
+        {this.props.textArea ? (
+          <textarea {..._inputProps} {...this.props.inputProps} />
+        ) : (
+          <input type={type} {..._inputProps} {...this.props.inputProps} />
+        )}
 
         <label className={labelClassName}>
           {placeholder}

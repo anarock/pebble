@@ -8,7 +8,7 @@ import Option from "../Option";
 function getComponent(
   changeSpy = () => {},
   selectSpy = () => {},
-  props: Partial<TypeaheadProps> = {}
+  props: Partial<TypeaheadProps<string>> = {}
 ) {
   return (
     <TypeAhead
@@ -31,6 +31,7 @@ function getComponent(
 }
 
 test("should open when input is clicked", () => {
+  const clock = sinon.useFakeTimers();
   const changeSpy = sinon.spy();
   const selectSpy = sinon.spy();
   const typeAhead = mount(getComponent(changeSpy, selectSpy));
@@ -38,6 +39,9 @@ test("should open when input is clicked", () => {
   expect(typeAhead.find(Option)).toHaveLength(0);
 
   typeAhead.find("input").simulate("focus");
+
+  // wait for the dropdown animation to get over.
+  clock.tick(1000);
   expect(typeAhead.find(Option)).toHaveLength(5);
 });
 
@@ -61,11 +65,11 @@ test("should trigger onSelect with correct onSelect", () => {
   const selectSpy = sinon.spy();
   const typeAhead = mount(getComponent(changeSpy, selectSpy));
   typeAhead.find("input").simulate("focus");
+
   typeAhead
     .find(Option)
     .at(2)
     .simulate("click");
 
   expect(selectSpy.calledWith("option-3")).toBeTruthy();
-  expect(typeAhead.find(Option)).toHaveLength(0);
 });

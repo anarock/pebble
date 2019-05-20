@@ -4,36 +4,37 @@ type FocusEvent = (
   event: React.KeyboardEvent<HTMLInputElement> | React.FocusEvent<HTMLElement>
 ) => void;
 
-export interface TypeaheadProps {
+export interface SearchBoxArgs {
+  registerChange: (text: string) => void;
+  onFocus: FocusEvent;
+  value: string;
+}
+
+export interface TypeaheadProps<OptionType> {
   className?: string;
-  searchBox: (
-    args: {
-      registerChange: (text: string) => void;
-      onFocus: FocusEvent;
-      value: string;
-      typeaheadInputRef: React.RefObject<HTMLInputElement>;
-      onBlur: FocusEvent;
-    },
-    props: TypeaheadProps
-  ) => JSX.Element;
+  searchBox?: (
+    args: SearchBoxArgs,
+    props: TypeaheadProps<OptionType>
+  ) => React.ReactNode;
   debounceTime: number;
-  onChange: (text: string, props: TypeaheadProps) => void;
-  onSelect: (value, props: TypeaheadProps) => void;
+  onChange: (text: string, props: TypeaheadProps<OptionType>) => void;
+  onSelect: (
+    value: OptionType | undefined,
+    props: TypeaheadProps<OptionType>
+  ) => void;
   dropdownClassName?: string;
   initialValue?: string;
   disabled?: boolean;
   errorMessage?: string;
   placeholder: string;
   loading?: boolean;
-  selected?: number | string;
+  selected?: OptionType;
   required?: boolean;
-  children: React.ReactNodeArray;
-  valueExtractor: (value: string | number) => string;
+  valueExtractor: (value: OptionType) => string;
   onClear: () => void;
 }
 
 export interface TypeaheadState {
   value: string;
   showSuggestions: boolean;
-  focussedElement?: Element | null;
 }

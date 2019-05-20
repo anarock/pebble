@@ -1,17 +1,17 @@
 import * as CSS from "csstype";
 
-interface Style {
-  fontSize: CSS.FontSizeProperty<any>;
+export interface TypographyStyle {
+  fontSize: CSS.FontSizeProperty<number>;
   fontWeight: CSS.FontWeightProperty;
   color: CSS.ColorProperty;
 }
 
-interface Type {
-  light?: Style;
-  bold?: Style;
-  lighter?: Style;
-  link?: Style;
-  regular?: Style;
+export interface Type {
+  light?: TypographyStyle;
+  bold?: TypographyStyle;
+  lighter?: TypographyStyle;
+  link?: TypographyStyle;
+  regular?: TypographyStyle;
 }
 
 export interface Typography {

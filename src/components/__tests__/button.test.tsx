@@ -5,13 +5,16 @@ import combos from "combos";
 import sinon from "sinon";
 import { mount } from "enzyme";
 import Ink from "react-ink";
+import { ButtonProps } from "../typings/Button";
 
 function noop() {}
 
 describe("Button Combos test", () => {
   const _props = {
     disabled: [true, false],
-    type: ["primary", "secondary", "alert", "link", "success"],
+    type: ["primary", "secondary", "alert", "link", "success"] as Array<
+      ButtonProps["type"]
+    >,
     showRipple: [true, false],
     loading: [true, false],
     large: [true, false]

@@ -1,5 +1,6 @@
-import { SelectProps } from "./Select";
+import { SingleSelectProps } from "./Select";
 import { InputProps } from "./Input";
+import { Omit } from "utility-types";
 
 export interface PhoneNumberInputProps {
   countryCode: string;
@@ -10,7 +11,8 @@ export interface PhoneNumberInputProps {
 
   // Optional
   className?: string;
-  selectProps?: Partial<SelectProps>;
-  inputProps?: Partial<InputProps>;
+  selectProps?: Partial<SingleSelectProps<string>>;
+  inputProps?: Omit<InputProps, "value" | "onChange" | "placeholder">;
   placeholder?: string;
+  required?: boolean;
 }

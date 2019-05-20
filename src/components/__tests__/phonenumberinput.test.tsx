@@ -8,7 +8,6 @@ import Option from "../Option";
 import Select from "../Select";
 import PhoneNumberInput from "../PhoneNumberInput";
 import countries from "./fixtures/countrycodes";
-import { SelectProps } from "../typings/Select";
 
 const SELECT_INPUT_ID = "phone-select-input-test";
 const PHONE_INPUT_ID = "phone-test-input-test";
@@ -22,6 +21,7 @@ function getComponent(props: Partial<PhoneNumberInputProps> = {}) {
       {...props}
       selectProps={{
         inputProps: {
+          textArea: false,
           inputProps: {
             id: SELECT_INPUT_ID
           }
@@ -88,18 +88,37 @@ describe("Component: Select", () => {
         phone: "99997876",
         countryCode: "+1"
       })
+    ).toBeTruthy();
+  });
+
+  test("should not trigger unnecessary renders", () => {
+    const spy = sinon.spy();
+    const component = mount(
+      getComponent({
+        phone: "99997876",
+        onChange: spy
+      })
     );
 
-    // should not trigger unnecessary renders
+    const phoneInput = component.find(`#${PHONE_INPUT_ID}`);
     phoneInput.simulate("change", {
       target: {
         value: "99997876a"
       }
     });
 
-    expect(spy.notCalled);
+    expect(spy.notCalled).toBeTruthy();
+  });
 
-    // should be able to empty the input
+  test("should be able to empty the input", () => {
+    const spy = sinon.spy();
+    const component = mount(
+      getComponent({
+        phone: "99997876",
+        onChange: spy
+      })
+    );
+    const phoneInput = component.find(`#${PHONE_INPUT_ID}`);
     phoneInput.simulate("change", {
       target: {
         value: ""
@@ -111,7 +130,7 @@ describe("Component: Select", () => {
         phone: "",
         countryCode: "+1"
       })
-    );
+    ).toBeTruthy();
   });
 
   test("should be able to select country", () => {
@@ -132,7 +151,7 @@ describe("Component: Select", () => {
         phone: "",
         countryCode: countries[0].country_code
       })
-    );
+    ).toBeTruthy();
   });
 
   test("controlled input", () => {
@@ -149,8 +168,7 @@ describe("Component: Select", () => {
       (component.find(`#${PHONE_INPUT_ID}`).getDOMNode() as HTMLInputElement)
         .value
     ).toEqual("998127");
-    expect((component.find(Select).props() as SelectProps).selected).toEqual(
-      countries[0].country_code
-    );
+    const props = component.find(Select).props();
+    expect(props.selected).toEqual(countries[0].country_code);
   });
 });

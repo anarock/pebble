@@ -9,3 +9,5 @@ package-lock.json
 native
 coverage
 .docz
+.cache
+.DS_Store

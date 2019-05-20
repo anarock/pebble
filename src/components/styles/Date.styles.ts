@@ -1,4 +1,5 @@
 import { css } from "emotion";
+import { inputMarginBottom } from "./Input.styles";
 
 export const dateClass = css({
   padding: 20,
@@ -6,5 +7,13 @@ export const dateClass = css({
 });
 
 export const dropDownClassName = css({
-  marginTop: -40
+  marginTop: -inputMarginBottom
+});
+
+export const inputStyle = css({
+  marginBottom: 0
+});
+
+export const wrapperStyle = css({
+  marginBottom: 20
 });

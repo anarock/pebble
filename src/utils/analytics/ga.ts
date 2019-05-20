@@ -1,31 +1,30 @@
 import isBrowser from "is-in-browser";
 
+declare global {
+  interface Window {
+    GoogleAnalyticsObject: string;
+    ga: UniversalAnalytics.ga;
+  }
+}
+
 export function initGoogleAnalytics(gaId: string) {
   if (isBrowser) {
-    (function(i, s, o, g, r) {
-      i["GoogleAnalyticsObject"] = r;
-      (i[r] =
-        i[r] ||
-        function() {
-          (i[r].q = i[r].q || []).push(arguments);
-        }),
-        (i[r].l = 1 * (new Date() as any));
-      const a = <HTMLScriptElement>s.createElement(o);
+    ((s, o, g) => {
+      window.GoogleAnalyticsObject = "ga";
+      window.ga =
+        window.ga ||
+        (() => {
+          (window.ga.q = window.ga.q || []).push(arguments);
+        });
+      window.ga.l = Date.now();
+      const a = s.createElement(o) as HTMLScriptElement;
       const m = s.getElementsByTagName(o)[0];
       a.async = true;
       a.src = g;
-      m.parentNode && m.parentNode.insertBefore(a, m);
-    })(
-      window,
-      document,
-      "script",
-      "https://www.google-analytics.com/analytics.js",
-      "ga"
-    );
+      if (m.parentNode) m.parentNode.insertBefore(a, m);
+    })(document, "script", "https://www.google-analytics.com/analytics.js");
 
-    // @ts-ignore
     window.ga("create", gaId, "auto");
-    // @ts-ignore
     window.ga("send", "pageview");
   }
 }

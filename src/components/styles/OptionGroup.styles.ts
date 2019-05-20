@@ -1,20 +1,25 @@
 import { colors, constants } from "../../theme";
 import { css } from "emotion";
 
+export const optionWrapperMaxHeight = 316;
+export const searchBoxHeight = 80;
+export const initialPadding = 20;
+export const onScrollPadding = 10;
+
 export const optionsWrapper = css({
   backgroundColor: colors.white.base,
   borderRadius: constants.borderRadius,
   position: "relative",
   width: "inherit",
   zIndex: 9,
-  maxHeight: 352,
-  minWidth: 200,
+  maxHeight: optionWrapperMaxHeight,
+  minWidth: 100,
   overflowY: "auto",
-  padding: "20px 1px"
+  padding: "10px 1px"
 });
 
 export const searchBoxWrapper = css({
-  padding: 20,
+  padding: initialPadding,
   boxShadow: "none",
   transition: "all 100ms linear",
   zIndex: 10,
@@ -28,5 +33,5 @@ export const searchBoxWrapper = css({
 
 export const searchBoxScrolledStyle = css({
   boxShadow: constants.boxShadow.base,
-  padding: 10
+  padding: onScrollPadding
 });

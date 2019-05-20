@@ -16,8 +16,10 @@ Make sure the below code is executed at the very beginning.
 The easier way is to use the cdn:
 
 ```html
-<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/@anarock/pebble@[version]/dist/pebble.css"/>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@anarock/pebble@[version]/dist/pebble.css"
+/>
 ```
 
 :boom: Warning: Pebble adds `box-sizing: border-box` by default to every element by using [`inherit`](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
@@ -29,7 +31,33 @@ Pebble intends to have a very small footprint while maintaining performance.
 This, however, comes at a cost of supporting only modern browsers. If you need to support legacy browsers, you would need to add polyfills.
 
 ```html
-<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.find,Array.prototype.findIndex,IntersectionObserver,Intl.~locale.en"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.find,Array.prototype.findIndex,IntersectionObserver,Intl.~locale.en,Object.entries,default"></script>
+```
+
+### UMD Usage
+
+```html
+<script src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.find,Array.prototype.findIndex,IntersectionObserver,Intl.~locale.en,Object.entries,default"></script>
+<script src="https://unpkg.com/react@latest/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@latest/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@anarock/pebble@latest/dist/pebble.umd.js"></script>
+<script>
+  // Components are available in window.pebble
+  var Button = pebble.Button;
+  var h = React.createElement;
+  ReactDOM.render(
+    h(
+      Button,
+      {
+        onClick: function() {
+          alert("You clicked the button");
+        }
+      },
+      "Click Me!"
+    ),
+    document.getElementById("root")
+  );
+</script>
 ```
 
 ## Using icons in React Native
@@ -48,11 +76,15 @@ Then run `react-native link`.
 and then it can be used by importing the Icon component.
 
 ```jsx
-import { Icon } from "@anarock/pebble/native"
+import { Icon } from "@anarock/pebble/native";
 
 // Usage
-<Icon name="iconName" size={20} color="#000000" />
+<Icon name="iconName" size={20} color="#000000" />;
 ```
+
+## Acknowledgements
+
+We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing and it is awesome.
 
 ## License
 

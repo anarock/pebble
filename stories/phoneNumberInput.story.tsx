@@ -6,20 +6,28 @@ import PhoneNumberInput from "../src/components/PhoneNumberInput";
 import { withState } from "@dump247/storybook-state";
 import Option from "../src/components/Option";
 import countries from "../src/components/__tests__/fixtures/countrycodes";
+import { action } from "@storybook/addon-actions";
 
-// const className = css({
-//   width: 400
-// });
+interface State {
+  countryCode: string;
+  phone: string;
+}
 
-// const type = ["text", "date", "password", "email"];
-
-storiesOf("PhoneNumberInput", module).add(
+storiesOf("Components/PhoneNumberInput", module).add(
   "Material",
-  withState({ countryCode: "+91", phone: "" })(({ store }) => (
+  withState<State>({ countryCode: "+91", phone: "" })(({ store }) => (
     <PhoneNumberInput
       countryCode={store.state.countryCode}
       phone={store.state.phone}
-      onChange={({ countryCode, phone }) => store.set({ countryCode, phone })}
+      placeholder="Alternate Phone Number"
+      onChange={arg => {
+        const { countryCode, phone } = arg;
+        action("onChange")(arg);
+        store.set({
+          countryCode: `${countryCode}`,
+          phone
+        });
+      }}
     >
       {countries.map(country => (
         <Option

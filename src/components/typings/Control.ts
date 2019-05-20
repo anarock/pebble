@@ -1,15 +1,15 @@
 import * as React from "react";
 
-export interface ControlProps {
+export interface ControlProps<OptionType> {
   onChange?: (
-    args: { value: React.ReactText; checked: boolean },
+    args: { value: OptionType; checked: boolean },
     e: React.MouseEvent
   ) => void;
-  value: React.ReactText;
-  label: React.ReactText | React.ReactNode;
+  value: OptionType;
+  label: React.ReactNode;
   checked?: boolean;
   disabled?: boolean;
-  children?: (props: ControlProps) => React.ReactNode | React.ReactNodeArray;
+  children?: (props: ControlProps<OptionType>) => React.ReactNode;
   type: "radio" | "checkbox";
   className?: string;
 }
