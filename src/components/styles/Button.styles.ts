@@ -60,7 +60,6 @@ const linkStyle = {
   color: violet.base,
   minWidth: 0,
   padding: 0,
-  fontSize: 14,
   ":not([disabled]):hover": {
     textDecoration: "underline"
   },
