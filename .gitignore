@@ -1,0 +1,13 @@
+node_modules
+.idea
+yarn-error.log
+compiled
+dist
+storybook-static
+optimized-svg
+package-lock.json
+native
+coverage
+.docz
+.cache
+.DS_Store

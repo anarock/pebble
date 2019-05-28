@@ -1,0 +1,39 @@
+{
+  "extends": ["tslint-react", "tslint:latest"],
+  "rules": {
+    "arrow-parens": false,
+    "curly": false,
+    "interface-name": [true, "never-prefix"],
+    "jsx-boolean-value": [true, "never"],
+    "jsx-curly-spacing": false,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    "jsx-no-string-ref": true,
+    "max-line-length": false,
+    "member-access": false,
+    "member-ordering": false,
+    "no-any": true,
+    "no-dynamic-delete": true,
+    "no-empty": false,
+    "no-implicit-dependencies": false,
+    "no-invalid-this": true,
+    "no-non-null-assertion": true,
+    "no-parameter-reassignment": true,
+    "no-submodule-imports": false,
+    "object-literal-key-quotes": [true, "as-needed"],
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "prefer-conditional-expression": false,
+    "semicolon": false,
+    "space-before-function-paren": false,
+    "switch-default": false,
+    "trailing-comma": false,
+    "variable-name": [
+      true,
+      "allow-leading-underscore",
+      "allow-pascal-case",
+      "ban-keywords",
+      "check-format"
+    ]
+  }
+}

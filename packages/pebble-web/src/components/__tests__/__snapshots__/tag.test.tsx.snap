@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Tag snapshot 1`] = `
+.emotion-0 {
+  font-weight: 500;
+  color: #101721;
+  font-size: 12px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  border-radius: 3px;
+  padding: 0 10px;
+  height: 28px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 10px;
+}
+
+.emotion-0.__pebble__tag__with__close {
+  padding-right: 0;
+}
+
+<div
+  className="emotion-0"
+  style={
+    Object {
+      "backgroundColor": "#E8E8FF",
+      "color": "#6161FF",
+    }
+  }
+>
+  Anarock
+   
+</div>
+`;
+
+exports[`Component: Tag snapshot 2`] = `
+.emotion-1 {
+  font-weight: 500;
+  color: #101721;
+  font-size: 12px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  border-radius: 3px;
+  padding: 0 10px;
+  height: 28px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 10px;
+}
+
+.emotion-1.__pebble__tag__with__close {
+  padding-right: 0;
+}
+
+.emotion-0 {
+  font-size: 7px;
+  margin-left: 5px;
+  height: inherit;
+  padding: 10px 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-0:hover {
+  background-color: #C0C0FF;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+<div
+  className="emotion-1 __pebble__tag__with__close"
+  style={
+    Object {
+      "backgroundColor": "#DBF3E7",
+      "color": "#10AC60",
+    }
+  }
+>
+  Anarock
+   
+  <i
+    className="pi pi-close emotion-0"
+    onClick={[Function]}
+  >
+    <e
+      background={true}
+      className="ink"
+      duration={1000}
+      opacity={0.25}
+      radius={150}
+      recenter={true}
+    />
+  </i>
+</div>
+`;
