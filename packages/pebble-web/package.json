@@ -1,5 +1,5 @@
 {
-  "name": "@anarock/pebble-web",
+  "name": "pebble-web",
   "version": "0.44.3",
   "author": "ritz078 <rkritesh078@gmail.com>",
   "license": "MIT",
@@ -20,10 +20,9 @@
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'yarn build'",
     "test:cover": "yarn test && codecov",
     "pretest": "tslint ./src/**/*.{ts,tsx} ./stories/**/*.tsx ./{tests,typings}/**/*.ts",
-    "test": "jest",
+    "test": "jest --coverage",
     "prepublishOnly": "yarn test && yarn build",
     "test:watch": "yarn jest --watchAll",
-    "format": "pretty-quick",
     "chromatic": "chromatic test"
   },
   "peerDependencies": {

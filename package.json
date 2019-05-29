@@ -7,7 +7,9 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "build": "lerna exec --parallel -- yarn build",
-    "test": "lerna run test"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "format": "pretty-quick"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

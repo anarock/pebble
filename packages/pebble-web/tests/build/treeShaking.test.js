@@ -1,3 +1,5 @@
+const replace = require("rollup-plugin-replace");
+
 const path = require("path");
 const { rollup } = require("rollup");
 const terser = require("rollup-plugin-terser").terser;
@@ -28,7 +30,10 @@ async function compress() {
         output: {
           beautify: true
         }
-      })
+      }),
+      replace({
+        "process.env.NODE_ENV": JSON.stringify("production")
+      }),
     ],
     onwarn: (warning, handle) => {
       if (warning.code !== "EMPTY_BUNDLE") handle(warning);
@@ -46,9 +51,12 @@ async function compress() {
     .trim();
 }
 
+
+
 describe("build", () => {
   it("should be tree shakeable", async () => {
     const code = await compress();
+
     expect(code).toEqual("");
   });
 });
