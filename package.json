@@ -7,7 +7,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
     "build": "lerna exec --parallel -- yarn build",
-    "test": "lerna exec yarn test"
+    "test": "lerna run test"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
@@ -19,10 +19,13 @@
     "@babel/runtime": "^7.3.4",
     "commitizen": "^3.1.1",
     "cz-conventional-changelog": "^2.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.2",
+    "enzyme-to-json": "^3.3.5",
     "husky": "^2.3.0",
     "imagemin-lint-staged": "^0.4.0",
     "jest": "^24.8.0",
-    "jest-emotion": "^10.0.11",
+    "jest-emotion": "^9.2.11",
     "lerna": "^3.5.1",
     "lint-staged": "^8.1.7",
     "prettier": "^1.17.1",
