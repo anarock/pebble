@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "declarationDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "pebble-shared": ["../pebble-shared/src"]
+    },
+    "outDir": "compiled",
+    "typeRoots": ["./typings/npm", "../../node_modules/@types"]
+  },
+  "include": ["./src", "./typings"],
+  "exclude": ["node_modules", "dist", "tests", "compiled", "src/**/__tests__"]
+}
