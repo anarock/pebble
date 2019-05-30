@@ -1,5 +1,6 @@
-import { colors, typography } from "../../theme";
+import { typography } from "../../theme";
 import { css } from "emotion";
+import { colors } from "pebble-shared";
 
 export const headStyle = css({
   display: "flex",

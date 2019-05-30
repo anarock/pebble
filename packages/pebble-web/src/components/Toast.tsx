@@ -1,6 +1,6 @@
 import * as React from "react";
 import { toastWrapper } from "./styles/Toast.styles";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 import {
   ToastProps,
   ToastState,

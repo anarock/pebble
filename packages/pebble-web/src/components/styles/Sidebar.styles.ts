@@ -1,5 +1,6 @@
 import { css } from "emotion";
-import { colors, constants } from "../../theme";
+import { constants } from "../../theme";
+import { colors } from "pebble-shared";
 
 export const sidebarWrapperStyle = css({
   backgroundColor: "rgba(16,23,33,0.3)",

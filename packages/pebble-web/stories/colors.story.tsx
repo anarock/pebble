@@ -1,8 +1,9 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { css } from "emotion";
-import { colors, constants, typography } from "../src/theme";
+import { constants, typography } from "../src/theme";
 import { Colors } from "../src/theme/typings/colors";
+import { colors } from "pebble-shared";
 
 const wrapper = css({
   padding: 30,

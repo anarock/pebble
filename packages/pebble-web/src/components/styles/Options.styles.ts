@@ -1,5 +1,6 @@
-import { colors, mixins, typography } from "../../theme";
+import { mixins, typography } from "../../theme";
 import { css } from "emotion";
+import { colors } from "pebble-shared";
 
 export const rowWrapper = css({
   ...typography.normal.regular,

@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { object } from "@storybook/addon-knobs";
 import Calendar from "../src/components/Calendar";
 import { action } from "@storybook/addon-actions";
-import { colors } from "../src/theme";
+import { colors } from "pebble-shared";
 
 const LAST_DATE_OF_2018 = new Date(2018, 11, 31);
 

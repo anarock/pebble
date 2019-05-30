@@ -1,6 +1,7 @@
 import { css } from "emotion";
-import { colors, constants, typography } from "../../theme";
+import { constants, typography } from "../../theme";
 import { ButtonType, MappingColorByType } from "../typings/Button";
+import { colors } from "pebble-shared";
 
 const { violet, gray, white, red, emerald } = colors;
 

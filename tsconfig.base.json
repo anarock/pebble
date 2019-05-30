@@ -5,7 +5,6 @@
     "allowUnreachableCode": true,
     "alwaysStrict": true,
     "declaration": true,
-    "declarationDir": "dist",
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "importHelpers": true,
@@ -23,6 +22,6 @@
     "sourceMap": true,
     "strict": true,
     "target": "esnext",
-    "typeRoots": ["./node_modules/@types", "./typings/npm"]
+    "typeRoots": ["./node_modules/@types"]
   }
 }

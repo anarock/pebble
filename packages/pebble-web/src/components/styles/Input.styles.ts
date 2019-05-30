@@ -1,5 +1,6 @@
-import { colors, mixins, typography } from "../../theme";
+import { mixins, typography } from "../../theme";
 import { css } from "emotion";
+import { colors } from "pebble-shared";
 // import { isDesktop } from "../../utils";
 
 const animation = "all 0.3s cubic-bezier(.64,.09,.08,1)";

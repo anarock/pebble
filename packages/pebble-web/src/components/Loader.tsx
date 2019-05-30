@@ -1,7 +1,7 @@
 import * as React from "react";
 import { LoaderProps } from "./typings/Loader";
 import { spinnerStyle } from "./styles/Loader.styles";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 import { cx } from "emotion";
 
 const Loader: React.FunctionComponent<LoaderProps> = ({

@@ -1,6 +1,6 @@
 import React from "react";
 import { css, cx } from "emotion";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 import { TextProps } from "./typings/Text";
 
 const Text: React.FunctionComponent<TextProps> = ({

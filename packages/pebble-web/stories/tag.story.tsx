@@ -2,8 +2,8 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { text, select } from "@storybook/addon-knobs";
 import Tag from "../src/components/Tag";
-import { colors } from "../src/theme";
 import { TagProps } from "../src/components/typings/Tag";
+import { colors } from "pebble-shared";
 
 const _colors = Object.keys(colors).filter(x => "white" !== x) as Array<
   TagProps["color"]

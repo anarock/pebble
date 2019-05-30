@@ -1,10 +1,10 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Modal from "../src/components/Modal";
-import { colors } from "../src/theme";
 import { css } from "emotion";
 import { withState } from "@dump247/storybook-state";
 import Button from "../src/components/Button";
+import { colors } from "pebble-shared";
 
 const style = css({
   height: 200,

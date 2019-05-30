@@ -1,5 +1,6 @@
 import { css } from "emotion";
-import { colors, constants, mixins } from "../../theme";
+import { constants, mixins } from "../../theme";
+import { colors } from "pebble-shared";
 
 const selectedTag = {
   background: colors.violet.lightest,

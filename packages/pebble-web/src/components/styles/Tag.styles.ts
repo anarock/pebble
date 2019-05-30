@@ -1,5 +1,6 @@
-import { constants, mixins, typography, colors } from "../../theme";
+import { constants, mixins, typography } from "../../theme";
 import { css } from "emotion";
+import { colors } from "pebble-shared";
 
 export const tagStyle = css({
   ...typography.s.bold,

@@ -9,7 +9,7 @@ import {
 import Ink from "react-ink";
 import { ButtonProps, DropDownButtonProps } from "./typings/Button";
 import Loader from "./Loader";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 
 const Button: React.FunctionComponent<ButtonProps> = ({
   type = "primary",

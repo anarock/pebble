@@ -1,5 +1,5 @@
 import * as React from "react";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 import { tagStyle, iconClass } from "./styles/Tag.styles";
 import { TagProps } from "./typings/Tag";
 import { cx } from "emotion";

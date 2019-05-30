@@ -2,7 +2,7 @@ import * as React from "react";
 import { PopperProps, PopperState } from "./typings/Popper";
 import { Manager, Reference, Popper } from "react-popper";
 import { arrowStyle, popperStyle } from "./styles/Popper.styles";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
 import MountTransition from "./shared/MountTransition";

@@ -1,7 +1,7 @@
 import { css } from "emotion";
 import { constants } from "./constants";
 import { typography } from "./typography";
-import { colors } from "./colors";
+import { colors } from "pebble-shared";
 
 export const tableStyle = css({
   borderRadius: constants.borderRadius,

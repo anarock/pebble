@@ -1,5 +1,5 @@
 import { Typography } from "./typings/typography";
-import { colors } from "./colors";
+import { colors } from "pebble-shared";
 
 const fontSize = {
   xs: 10,

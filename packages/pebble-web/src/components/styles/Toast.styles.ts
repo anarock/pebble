@@ -1,5 +1,6 @@
 import { css } from "emotion";
-import { colors, constants, typography } from "../../theme";
+import { constants, typography } from "../../theme";
+import { colors } from "pebble-shared";
 
 export const toastWrapper = css({
   position: "fixed",

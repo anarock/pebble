@@ -9,7 +9,7 @@ import {
   combinedLabelStyle
 } from "./styles/PhoneNumberInput.styles";
 import { labelStyle } from "./styles/Input.styles";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 
 export default class PhoneNumberInput extends React.Component<
   PhoneNumberInputProps

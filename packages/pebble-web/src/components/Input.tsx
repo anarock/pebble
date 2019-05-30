@@ -12,7 +12,7 @@ import {
   inputTextAreaStyle,
   loadingStyle
 } from "./styles/Input.styles";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 import Loader from "./Loader";
 
 function getColor(

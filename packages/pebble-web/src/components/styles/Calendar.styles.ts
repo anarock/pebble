@@ -1,5 +1,6 @@
 import { css } from "emotion";
-import { colors, constants, mixins, typography } from "../../theme";
+import { constants, mixins, typography } from "../../theme";
+import { colors } from "pebble-shared";
 
 export const wrapperStyle = css({
   backgroundColor: colors.white.base,

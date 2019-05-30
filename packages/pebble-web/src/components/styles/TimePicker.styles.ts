@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { colors } from "../../theme";
+import { colors } from "pebble-shared";
 
 export const timePickerWrap = css({
   display: "flex",

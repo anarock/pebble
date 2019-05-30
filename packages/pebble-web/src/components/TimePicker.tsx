@@ -12,7 +12,7 @@ import {
   seperator
 } from "./styles/TimePicker.styles";
 import { TimePickerProps } from "./typings/TimePicker";
-import { colors } from "../theme/colors";
+import { colors } from "pebble-shared";
 
 const HOURS = /*#__PURE__*/ [...Array(12)].map((_, i) =>
   ("00" + (i + 1).toString(10)).slice(-2)

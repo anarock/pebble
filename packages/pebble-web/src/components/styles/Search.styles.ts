@@ -1,6 +1,7 @@
 import { css } from "emotion";
-import { colors, constants, mixins, typography } from "../../theme";
+import { constants, mixins, typography } from "../../theme";
 import { getPlaceholderStyle } from "../../theme/mixins";
+import { colors } from "pebble-shared";
 
 export const searchWrapperStyle = css({
   minWidth: "200px",

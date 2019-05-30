@@ -1,11 +1,12 @@
 import { storiesOf } from "@storybook/react";
-import { constants, colors } from "../src";
+import { constants } from "../src";
 import Option from "../src/components/Option";
 import * as React from "react";
 import OptionGroup from "../src/components/shared/OptionGroup";
 import { css } from "emotion";
 import { withState } from "@dump247/storybook-state";
 import matchSorter from "match-sorter";
+import { colors } from "pebble-shared";
 
 interface DataPoint {
   id: number;

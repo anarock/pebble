@@ -1,8 +1,8 @@
 import * as React from "react";
 import { controlStyle, radioIconStyle } from "../styles/Control.styles";
 import { ControlProps } from "../typings/Control";
-import { colors } from "../../theme";
 import { cx } from "emotion";
+import { colors } from "pebble-shared";
 
 function Control<OptionType>(props: ControlProps<OptionType>) {
   const {

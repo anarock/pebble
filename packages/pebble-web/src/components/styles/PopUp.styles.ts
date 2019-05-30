@@ -1,5 +1,6 @@
 import { css } from "emotion";
-import { colors, mixins, constants } from "../../theme";
+import { mixins, constants } from "../../theme";
+import { colors } from "pebble-shared";
 
 const modalPadding = 30;
 

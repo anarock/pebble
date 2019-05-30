@@ -1,5 +1,6 @@
-import { colors, constants } from "../../theme";
+import { constants } from "../../theme";
 import { css } from "emotion";
+import { colors } from "pebble-shared";
 
 export const wrapperStyle = css({
   position: "relative"

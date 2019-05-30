@@ -1,5 +1,6 @@
 import { css } from "emotion";
-import { colors, typography } from "../../theme";
+import { typography } from "../../theme";
+import { colors } from "pebble-shared";
 
 export const textStyle = css({
   ...typography.s.regular,

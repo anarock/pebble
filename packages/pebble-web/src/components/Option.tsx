@@ -9,7 +9,7 @@ import {
   labelWrap
 } from "./styles/Options.styles";
 import Ink from "react-ink";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 
 const defaultProps = {
   rightElement: ({

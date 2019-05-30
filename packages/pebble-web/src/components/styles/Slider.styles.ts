@@ -1,5 +1,6 @@
 import { css } from "emotion";
-import { colors, constants, mixins } from "../../theme";
+import { constants, mixins } from "../../theme";
+import { colors } from "pebble-shared";
 
 export const rheostatOverrides = `
 .rheostat {

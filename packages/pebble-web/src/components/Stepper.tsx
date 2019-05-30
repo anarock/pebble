@@ -12,7 +12,7 @@ import {
   headStyle,
   stepperLineStyle
 } from "./styles/Stepper.styles";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 
 function noop() {}
 
@@ -144,8 +144,8 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
               i === active
                 ? colors.violet.base
                 : allowSkip
-                  ? colors.gray.base
-                  : undefined;
+                ? colors.gray.base
+                : undefined;
 
             return (
               <div

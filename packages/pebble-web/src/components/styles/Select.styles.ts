@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import { colors } from "../../theme";
+import { colors } from "pebble-shared";
 import { inputMarginBottom } from "./Input.styles";
 
 export const selectWrapper = css({

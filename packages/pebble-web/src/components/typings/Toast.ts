@@ -18,5 +18,5 @@ export interface ToastState {
   type: ToastType;
   text: string;
   show: boolean;
-  position: ToastPosition;
+  position?: ToastPosition;
 }

@@ -1,5 +1,5 @@
 import { ThemeConstants } from "./typings/constants";
-import { colors } from "./colors";
+import { colors } from "pebble-shared";
 
 export const constants: ThemeConstants = {
   borderRadius: 3,

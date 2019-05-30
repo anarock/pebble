@@ -7,7 +7,7 @@ import OutsideClick from "./OutsideClick";
 import { animated } from "react-spring";
 import MountTransition from "./shared/MountTransition";
 import { Manager, Reference, Popper } from "react-popper";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 
 class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
   state: DropdownState = {

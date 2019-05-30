@@ -7,7 +7,7 @@ import {
   onScrollPadding
 } from "./OptionGroup.styles";
 import { smallButtonHeight } from "./Button.styles";
-import { colors } from "../../theme";
+import { colors } from "pebble-shared";
 export const optionGroupCheckBoxButtonWrapPadding = 20;
 export const optionGroupCheckBoxButtonWrapPaddingTop = 10;
 

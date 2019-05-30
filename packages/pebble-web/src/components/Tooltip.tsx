@@ -1,7 +1,7 @@
 import * as React from "react";
 import Popper from "./Popper";
 import { TooltipProps, TooltipState } from "./typings/Tooltip";
-import { colors } from "../theme";
+import { colors } from "pebble-shared";
 import { popperStyle, textStyle } from "./styles/Tooltip.styles";
 
 class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
