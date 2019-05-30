@@ -15,7 +15,7 @@ export function getRollupConfig(pkg, babelConfig) {
   const externals = [
     "react-calendar/dist/entry.nostyle",
     ...Object.keys(pkg.peerDependencies || {}),
-    ...Object.keys(pkg.dependencies)
+    ...Object.keys(pkg.dependencies || {})
   ];
 
   function external(id) {
