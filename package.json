@@ -6,7 +6,7 @@
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap --use-workspaces",
-    "build": "lerna exec --parallel -- yarn build",
+    "build": "lerna exec -- yarn build",
     "test": "jest",
     "test:watch": "jest --watch",
     "format": "pretty-quick"

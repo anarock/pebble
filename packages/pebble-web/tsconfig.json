@@ -9,5 +9,6 @@
   ],
   "compilerOptions": {
     "jsx": "react"
-  }
+  },
+  "exclude": []
 }

@@ -2,10 +2,6 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "declarationDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "pebble-shared": ["../pebble-shared/src"]
-    },
     "outDir": "compiled",
     "typeRoots": ["./typings/npm", "../../node_modules/@types"]
   },
