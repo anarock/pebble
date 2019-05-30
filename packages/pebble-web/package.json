@@ -61,7 +61,6 @@
     "@storybook/addon-viewport": "^5.0.10",
     "@storybook/addons": "^5.0.10",
     "@storybook/react": "^5.0.10",
-    "@types/enzyme": "^3.9.0",
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/google.analytics": "^0.0.39",
     "@types/jest": "^24.0.11",
