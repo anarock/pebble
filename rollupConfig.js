@@ -5,8 +5,9 @@ import babel from "rollup-plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import cleanup from "rollup-plugin-cleanup";
 import replace from "rollup-plugin-replace";
+import babelConfig from "./babel.config";
 
-export function getRollupConfig(pkg, babelConfig) {
+export function getRollupConfig(pkg) {
   const input = "./compiled/index.js";
   const umdGlobals = {
     react: "React",
