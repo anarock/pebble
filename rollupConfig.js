@@ -32,7 +32,10 @@ export function getRollupConfig(pkg, babelConfig) {
       comments: [/^\*#__PURE__/, /^\*@__PURE__/]
     }),
     sourceMaps(),
-    filesize()
+    filesize(),
+    replace({
+      "process.env.NODE_ENV": JSON.stringify("production")
+    })
   ];
 
   return [
