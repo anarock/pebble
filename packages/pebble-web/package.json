@@ -20,8 +20,7 @@
     "pretest": "tslint ./src/**/*.{ts,tsx} ./stories/**/*.tsx ./{tests,typings}/**/*.ts",
     "test": "jest --coverage",
     "prepublishOnly": "yarn test && yarn build",
-    "test:watch": "yarn jest --watchAll",
-    "chromatic": "chromatic test"
+    "test:watch": "yarn jest --watchAll"
   },
   "peerDependencies": {
     "@babel/runtime": "^7.3.4",

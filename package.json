@@ -11,7 +11,8 @@
     "build": "lerna exec -- yarn build",
     "test": "jest",
     "test:watch": "jest --watch",
-    "format": "pretty-quick"
+    "format": "pretty-quick",
+    "chromatic": "chromatic test"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
