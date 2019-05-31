@@ -12,7 +12,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "format": "pretty-quick",
-    "chromatic": "chromatic test"
+    "chromatic": "chromatic test",
+    "test:cover": "yarn test && codecov"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

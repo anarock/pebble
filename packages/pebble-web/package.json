@@ -16,7 +16,6 @@
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json && rollup -c && rimraf compiled",
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'yarn build'",
-    "test:cover": "yarn test && codecov",
     "pretest": "tslint ./src/**/*.{ts,tsx} ./stories/**/*.tsx ./{tests,typings}/**/*.ts",
     "test": "jest --coverage",
     "prepublishOnly": "yarn test && yarn build",
