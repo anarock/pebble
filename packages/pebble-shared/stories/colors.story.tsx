@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { css } from "emotion";
-import { constants, typography } from "../src/theme";
+import { typography, constants } from "pebble-web/src";
 import { Colors } from "../src/theme/typings/colors";
 import { colors } from "pebble-shared";
 

@@ -14,8 +14,6 @@
     "src"
   ],
   "scripts": {
-    "storybook": "start-storybook -p 6006 -s ./dist",
-    "build-storybook": "yarn build && rimraf storybook-static && build-storybook -s ./dist",
     "build": "rimraf dist && tsc -p tsconfig.build.json && rollup -c && rimraf compiled",
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'yarn build'",
     "test:cover": "yarn test && codecov",

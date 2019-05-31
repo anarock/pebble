@@ -5,6 +5,8 @@
     "packages/*"
   ],
   "scripts": {
+    "build-storybook": "yarn build && rimraf storybook-static && build-storybook -s ./packages/pebble-shared/dist",
+    "storybook": "start-storybook -p 6006 -s ./packages/pebble-shared/dist",
     "bootstrap": "lerna bootstrap --use-workspaces",
     "build": "lerna exec -- yarn build",
     "test": "jest",
@@ -80,6 +82,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-emotion": "^9.2.11",
     "babel-plugin-require-context-hook": "^1.0.0",
     "chokidar-cli": "^1.2.2",
     "codecov": "^3.3.0",

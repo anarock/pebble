@@ -1,8 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { mixins } from "../src/theme";
 import { css } from "emotion";
-import Tooltip from "../src/components/Tooltip";
+import { Tooltip, mixins } from "../../pebble-web/src";
 // @ts-ignore
 import iconNames from "../icons.json";
 
