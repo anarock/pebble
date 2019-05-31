@@ -5,7 +5,12 @@ import babel from "rollup-plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import cleanup from "rollup-plugin-cleanup";
 import replace from "rollup-plugin-replace";
-const babelConfig = require("./babel.config");
+import path from "path";
+const babelConfig = require(path.resolve(
+  __dirname,
+  "../../",
+  "./babel.config"
+)); // TODO
 
 export function getRollupConfig(pkg) {
   const input = "./compiled/index.js";
