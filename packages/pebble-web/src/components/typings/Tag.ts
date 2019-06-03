@@ -1,5 +1,5 @@
 import { SetDifference } from "utility-types";
-import { Colors } from "../../theme/typings/colors";
+import { Colors } from "pebble-shared/dist/theme/typings/colors";
 
 export interface TagProps {
   label: React.ReactNode;
