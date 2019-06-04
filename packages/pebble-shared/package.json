@@ -1,6 +1,6 @@
 {
   "name": "pebble-shared",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "license": "MIT",
   "main": "dist/pebble-shared.js",
   "esnext": "dist/pebble-shared.es.js",
