@@ -30,6 +30,33 @@ import { Icon } from "@anarock/pebble/native";
 <Icon name="iconName" size={20} color="#000000" />;
 ```
 
+## Using in Expo
+
+````
+In your entry file `App.js`
+
+```js
+ export default class App extends Component {
+   state = {
+     fontsLoaded: false
+   };
+
+   async componentDidMount() {
+     await Font.loadAsync({
+       pebble: require("./node_modules/pebble-shared/native/icons/pebble.ttf")
+     });
+
+     this.setState({
+       fontsLoaded: true
+     });
+   }
+
+   render() {
+     return this.state.fontsLoaded && <Main />;
+   }
+ }
+````
+
 ## Acknowledgements
 
 We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing and it is awesome.
