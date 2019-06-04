@@ -13,7 +13,8 @@
     "test:watch": "jest --watch",
     "format": "pretty-quick",
     "chromatic": "chromatic test",
-    "test:cover": "yarn test && codecov"
+    "test:cover": "yarn test && codecov",
+    "clean": "rimraf node_modules && lerna clean"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",

@@ -23,9 +23,9 @@
   },
   "peerDependencies": {
     "@babel/runtime": "^7.3.4",
+    "pebble-shared": "0.1.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "pebble-shared": "0.1.0"
+    "react-dom": "^16.8.4"
   },
   "dependencies": {
     "date-fns": "^1.29.0",
@@ -43,6 +43,6 @@
     "utility-types": "^3.4.1"
   },
   "devDependencies": {
-    "pebble-shared": "0.1.0"
+    "pebble-shared": "^0.1.0"
   }
 }
