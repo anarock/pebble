@@ -2,7 +2,7 @@ import { configure, addParameters } from "@storybook/react";
 import { withOptions } from "@storybook/addon-options";
 import "@storybook/addon-console";
 import "storybook-chromatic";
-import { colors } from "../src/theme";
+import { colors } from "pebble-shared";
 
 addParameters({
   backgrounds: [
@@ -37,7 +37,7 @@ withOptions({
 });
 
 // automatically import all files ending in *.stories.tsx
-const req = require.context("../stories", true, /.stories.tsx$/);
+const req = require.context("../packages", true, /.stories.tsx$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

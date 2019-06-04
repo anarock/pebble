@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.build.json",
+  "include": [
+    "./src",
+    "./stories",
+    "./typings",
+    "./tests",
+    "./src/**/__tests__"
+  ],
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "exclude": []
+}
