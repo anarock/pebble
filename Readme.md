@@ -8,13 +8,14 @@ It consists of:
 
 # Development
 
-Install lerna and yarn globally.
+Install yarn globally.
 
 ```$xslt
-npm i -g lerna
 npm i -g yarn
 ```
 
 - Clone the repo.
-- Run `lerna bootstrap` at the root of the directory.
+- Install deps `yarn install`
+- Run `yarn lerna bootstrap` at the root of the directory.
 - Run `yarn storybook` to look at the preview of all the components and start development.
+- To run tests, run `yarn build` before `yarn jest`
