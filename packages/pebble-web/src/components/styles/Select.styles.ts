@@ -35,7 +35,10 @@ export const inputWrapper = css({
 
 export const chevronStyle = css({
   position: "absolute",
-  top: 25,
+  top: 0,
+  bottom: 0,
+  margin: "auto",
+  height: "10px",
   right: 7,
   color: colors.gray.base,
   fontSize: 10,
