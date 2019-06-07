@@ -12,10 +12,10 @@ Install yarn globally.
 
 ```$xslt
 npm i -g yarn
-yarn install
 ```
 
 - Clone the repo.
+- Install deps `yarn install`
 - Run `yarn lerna bootstrap` at the root of the directory.
 - Run `yarn storybook` to look at the preview of all the components and start development.
 - To run tests, run `yarn build` before `yarn jest`
