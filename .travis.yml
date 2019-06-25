@@ -7,7 +7,6 @@ cache: yarn
 git:
   depth: 5
 before_install:
-  - nvm install 10
   - chmod +x build.sh
 script:
   - yarn build
