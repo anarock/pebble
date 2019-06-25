@@ -14,7 +14,7 @@ import { animationConfig } from "../utils/animation";
 
 const emitter = /*#__PURE__*/ new Mitt();
 
-const _colors = {
+export const _colors = {
   success: colors.emerald.base,
   error: colors.red.base
 };
