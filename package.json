@@ -5,6 +5,9 @@
     "packages/*"
   ],
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/anarock/pebble"
+  },
   "scripts": {
     "build-storybook": "yarn build && rimraf storybook-static && build-storybook -s ./packages/pebble-shared/dist",
     "storybook": "start-storybook -p 6006 -s ./packages/pebble-shared/dist",
