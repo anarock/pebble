@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Tag snapshot 1`] = `
+<div>
+  <Text
+    key="xll-regular"
+    typography={
+      Object {
+        "color": "#101721",
+        "fontSize": 22,
+        "fontWeight": 400,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="xll-bold"
+    typography={
+      Object {
+        "color": "#101721",
+        "fontSize": 22,
+        "fontWeight": 500,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="xl-bold"
+    typography={
+      Object {
+        "color": "#101721",
+        "fontSize": 18,
+        "fontWeight": 500,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="l-bold"
+    typography={
+      Object {
+        "color": "#6B7785",
+        "fontSize": 16,
+        "fontWeight": 500,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="l-light"
+    typography={
+      Object {
+        "color": "#6B7785",
+        "fontSize": 16,
+        "fontWeight": 400,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="normal-regular"
+    typography={
+      Object {
+        "color": "#101721",
+        "fontSize": 14,
+        "fontWeight": 400,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="normal-bold"
+    typography={
+      Object {
+        "color": "#101721",
+        "fontSize": 14,
+        "fontWeight": 500,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="normal-light"
+    typography={
+      Object {
+        "color": "#6B7785",
+        "fontSize": 14,
+        "fontWeight": 400,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="normal-lighter"
+    typography={
+      Object {
+        "color": "#9FA6B0",
+        "fontSize": 14,
+        "fontWeight": 400,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="normal-link"
+    typography={
+      Object {
+        "color": "#6161FF",
+        "fontSize": 14,
+        "fontWeight": 400,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="s-regular"
+    typography={
+      Object {
+        "color": "#101721",
+        "fontSize": 12,
+        "fontWeight": 400,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="s-bold"
+    typography={
+      Object {
+        "color": "#101721",
+        "fontSize": 12,
+        "fontWeight": 500,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="s-light"
+    typography={
+      Object {
+        "color": "#6B7785",
+        "fontSize": 12,
+        "fontWeight": 400,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="s-lighter"
+    typography={
+      Object {
+        "color": "#9FA6B0",
+        "fontSize": 12,
+        "fontWeight": 400,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="s-link"
+    typography={
+      Object {
+        "color": "#6161FF",
+        "fontSize": 12,
+        "fontWeight": 400,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="xs-bold"
+    typography={
+      Object {
+        "color": "#101721",
+        "fontSize": 10,
+        "fontWeight": 500,
+      }
+    }
+  >
+    Hello World
+  </Text>
+  <Text
+    key="xs-light"
+    typography={
+      Object {
+        "color": "#6B7785",
+        "fontSize": 10,
+        "fontWeight": 400,
+      }
+    }
+  >
+    Hello World
+  </Text>
+</div>
+`;
