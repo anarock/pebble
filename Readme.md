@@ -6,7 +6,7 @@ It consists of:
 - [pebble-web](./packages/pebble-web)
 - [pebble-shared](./packages/pebble-shared)
 
-### development
+### Development
 
 Install yarn globally.
 
