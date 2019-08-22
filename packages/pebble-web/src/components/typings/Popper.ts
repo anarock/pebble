@@ -6,8 +6,8 @@ type Label =
   | number
   | ((args: { toggle: () => void; isOpen: boolean }) => React.ReactNode);
 
-export interface PopperProps
-  extends Omit<PopperProps_, "positionFixed" | "children"> {
+// @ts-ignore
+export interface PopperProps extends Partial<PopperProps_> {
   label: Label;
   popperBackgroundColor?: string;
   children: (args: { toggle: () => void; isOpen: boolean }) => React.ReactNode;

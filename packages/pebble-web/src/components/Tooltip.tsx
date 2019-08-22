@@ -59,6 +59,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
       <Popper
         label={() => label({ ref: this.labelRef })}
         placement={placement}
+        positionFixed
         controlled
         popperBackgroundColor={isError ? colors.red.base : colors.gray.darker}
         modifiers={modifiers}

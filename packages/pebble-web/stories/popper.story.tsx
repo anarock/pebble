@@ -6,6 +6,7 @@ storiesOf("Components/Popper", module).add("simple", () => (
   <Popper
     label={({ toggle }) => <Button onClick={toggle}>Click Me</Button>}
     placement="left"
+    positionFixed
     modifiers={{
       preventOverflow: {
         enabled: false
