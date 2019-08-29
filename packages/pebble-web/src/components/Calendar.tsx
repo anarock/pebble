@@ -104,6 +104,16 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     }
   };
 
+  private onClear = () => {
+    const { onClear } = this.props;
+    this.setState({
+      value: undefined
+    });
+    if (onClear) {
+      onClear();
+    }
+  };
+
   render() {
     const {
       range,
@@ -150,7 +160,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         {(onClear || onApply) && (
           <div className={buttonsWrapper}>
             {onClear && (
-              <Button onClick={onClear} type="secondary">
+              <Button onClick={this.onClear} type="secondary">
                 Clear
               </Button>
             )}
