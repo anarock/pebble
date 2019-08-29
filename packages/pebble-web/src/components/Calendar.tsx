@@ -98,6 +98,8 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         props.onApply(singleSelectedDate);
       } else if (Array.isArray(value)) {
         props.onApply(value);
+      } else if (value === undefined) {
+        props.onApply(value);
       }
     } else if (!props.range && props.onApply && !Array.isArray(value)) {
       props.onApply(value);

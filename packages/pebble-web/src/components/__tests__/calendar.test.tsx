@@ -133,4 +133,48 @@ describe("Calendar", () => {
 
     expect(clearSpy.calledOnce).toBeTruthy();
   });
+
+  test("onclear the previously selected value must get cleared", () => {
+    const clearSpy = sinon.spy();
+    const applySpy = sinon.spy();
+    const changeSpy = sinon.spy();
+
+    const calendar = mount(
+      <Calendar
+        className="calendar-test"
+        onApply={applySpy}
+        onClear={clearSpy}
+        onChange={changeSpy}
+      />
+    );
+
+    calendar
+      .find(".react-calendar__tile")
+      .at(0)
+      .simulate("click");
+
+    calendar
+      .find(".react-calendar__tile")
+      .at(10)
+      .simulate("click");
+
+    calendar
+      .find(".calendar-test > div")
+      .at(1)
+      .find("button")
+      .at(0)
+      .simulate("click");
+    expect(clearSpy.calledOnce).toBeTruthy();
+
+    calendar
+      .find(".calendar-test > div")
+      .at(1)
+      .find("button")
+      .at(1)
+      .simulate("click");
+    expect(applySpy.calledOnce).toBeTruthy();
+
+    const argument = applySpy.getCall(0).args[0];
+    expect(argument).toEqual(undefined);
+  });
 });
