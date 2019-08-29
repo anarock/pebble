@@ -145,6 +145,7 @@ describe("Calendar", () => {
         onApply={applySpy}
         onClear={clearSpy}
         onChange={changeSpy}
+        range
       />
     );
 
