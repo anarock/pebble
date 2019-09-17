@@ -1,6 +1,8 @@
 [
   "add",
   "admin",
+  "alert-filled",
+  "alert",
   "arrow-down",
   "arrow-drop-down",
   "arrow-drop-up",
@@ -42,6 +44,8 @@
   "follow-up-2-filled",
   "follow-up-2",
   "follow-up",
+  "hamburger-bold",
+  "hamburger",
   "help-and-support",
   "history",
   "home-filled-2",
