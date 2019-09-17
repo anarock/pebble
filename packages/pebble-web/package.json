@@ -1,6 +1,6 @@
 {
   "name": "pebble-web",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "ritz078 <rkritesh078@gmail.com>",
   "license": "MIT",
   "main": "dist/pebble-web.js",
@@ -43,6 +43,6 @@
     "utility-types": "^3.4.1"
   },
   "devDependencies": {
-    "pebble-shared": "^1.0.2"
+    "pebble-shared": "^1.0.3"
   }
 }
