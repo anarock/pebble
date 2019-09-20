@@ -3,6 +3,10 @@
   "version": "1.0.3",
   "license": "MIT",
   "main": "dist/pebble-shared.js",
+  "files": [
+    "dist",
+    "native"
+  ],
   "esnext": "dist/pebble-shared.es.js",
   "module": "dist/pebble-shared.module.js",
   "typings": "dist/index.d.ts",
