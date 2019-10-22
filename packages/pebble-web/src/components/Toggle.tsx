@@ -14,7 +14,7 @@ interface ToggleProps {
 }
 
 interface ToggleState {
-  value?: boolean;
+  value: boolean;
 }
 
 export default class Toggle extends React.PureComponent<
