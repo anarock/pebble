@@ -1,54 +1,19 @@
 import * as React from "react";
 import Calendar from "./Calendar";
-import { cx, css } from "emotion";
+import { cx } from "emotion";
 import {
   PresetCalendarProps,
   PresetCalendarState
 } from "./typings/PresetCalendar";
 import { Tabs, TabSection } from "./Tabs";
 import Button from "./Button";
-import { colors } from "pebble-shared";
 import { dateToEpoch } from "../utils";
-
-export const tabsStyle = css({
-  width: "100%",
-  textAlign: "center",
-  padding: "20px",
-  color: colors.gray.dark,
-  fontSize: "16px"
-});
-
-export const dateBtnsWrap = css({
-  display: "flex",
-  flexWrap: "wrap",
-  width: "416px",
-  padding: "20px 40px",
-  justifyContent: "space-between"
-});
-
-export const unSelectedDateButton = css({
-  marginBottom: "20px",
-  border: `1px solid ${colors.gray.light}`,
-  background: colors.white.base,
-  color: colors.gray.darker,
-  width: "158px",
-  "&:not([disabled]):hover": {
-    border: "none",
-    background: colors.gray.light,
-    color: colors.gray.darker
-  }
-});
-
-export const selectedDateButton = css({
-  border: "none",
-  background: colors.violet.lightest,
-  color: colors.violet.dark,
-  "&:not([disabled]):hover": {
-    border: "none",
-    background: colors.violet.lightest,
-    color: colors.violet.dark
-  }
-});
+import {
+  tabsStyle,
+  selectedDateButton,
+  unSelectedDateButton,
+  dateBtnsWrap
+} from "./styles/PresetCalendar.styles";
 
 const DATE_TABS = ["Presets", "Custom"];
 
