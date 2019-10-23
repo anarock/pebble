@@ -7,7 +7,6 @@ import {
 } from "./typings/PresetCalendar";
 import { Tabs, TabSection } from "./Tabs";
 import Button from "./Button";
-import { dateToEpoch } from "../utils";
 import {
   tabsStyle,
   selectedDateButton,
@@ -22,15 +21,13 @@ class PresetCalendar extends React.PureComponent<
   PresetCalendarState
 > {
   state = {
-    startTime: dateToEpoch(
-      this.props.initialValue && this.props.initialValue[0]
-    ),
-    endTime: dateToEpoch(this.props.initialValue && this.props.initialValue[1])
+    startTime: this.props.defaultValue && this.props.defaultValue[0],
+    endTime: this.props.defaultValue && this.props.defaultValue[1]
   };
 
   render() {
     const { startTime, endTime } = this.state;
-    const { initialValue } = this.props;
+    const { defaultValue } = this.props;
 
     return (
       <Tabs
@@ -44,8 +41,8 @@ class PresetCalendar extends React.PureComponent<
               <Button
                 onClick={() => {
                   this.setState({
-                    startTime: dateToEpoch(btn.dateRange[0]),
-                    endTime: dateToEpoch(btn.dateRange[1])
+                    startTime: btn.dateRange[0],
+                    endTime: btn.dateRange[1]
                   });
                   if (this.props.onApply) {
                     this.props.onApply(btn.dateRange as [Date, Date]);
@@ -56,8 +53,8 @@ class PresetCalendar extends React.PureComponent<
                 className={cx({
                   [unSelectedDateButton]: true,
                   [selectedDateButton]:
-                    dateToEpoch(btn.dateRange[0]) === this.state.startTime &&
-                    dateToEpoch(btn.dateRange[1]) === this.state.endTime
+                    btn.dateRange[0] === this.state.startTime &&
+                    btn.dateRange[1] === this.state.endTime
                 })}
                 key={`${btn.label}-${index}`}
               >
@@ -72,33 +69,29 @@ class PresetCalendar extends React.PureComponent<
             range
             onChange={(value: Date[] | Date | undefined) => {
               if (value && Array.isArray(value)) {
+                this.setState({
+                  startTime: value[0],
+                  endTime: value[1]
+                });
+                this.props.onChange(value as [Date, Date]);
               }
             }}
             selected={
-              (startTime &&
-                endTime && [
-                  new Date(startTime * 1000),
-                  new Date(endTime * 1000)
-                ]) ||
-              undefined
+              (startTime && endTime && [startTime, endTime]) || undefined
             }
             onApply={(value: Date[] | Date | undefined) => {
               if (value && Array.isArray(value)) {
                 this.setState({
-                  startTime: dateToEpoch(value[0]),
-                  endTime: dateToEpoch(value[1])
+                  startTime: value[0],
+                  endTime: value[1]
                 });
-                if (this.props.onApply) {
-                  this.props.onApply(value as [Date, Date]);
-                }
+                this.props.onApply(value as [Date, Date]);
               }
             }}
             onClear={() => {
               this.setState({
-                startTime: initialValue ? dateToEpoch(initialValue[0]) : 0,
-                endTime: initialValue
-                  ? dateToEpoch(initialValue[1])
-                  : dateToEpoch(new Date())
+                startTime: defaultValue && defaultValue[0],
+                endTime: defaultValue && defaultValue[1]
               });
               if (this.props.onClear) {
                 this.props.onClear();

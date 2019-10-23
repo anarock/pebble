@@ -30,8 +30,6 @@ describe("PresetCalendar", () => {
         maxDate={new Date()}
         onClear={clearSpy}
         onApply={applySpy}
-        range
-        tileDots={[{}]}
         presetDateOptions={[
           {
             label: "All Time",
@@ -54,15 +52,15 @@ describe("PresetCalendar", () => {
             dateRange: [startOfMonth(date), endOfMonth(date)]
           },
           {
-            label: "Year till date",
-            dateRange: [startOfYear(date), endOfYear(date)]
-          },
-          {
             label: "Quarter till date",
             dateRange: [startOfQuarter(date), endOfQuarter(date)]
+          },
+          {
+            label: "Year till date",
+            dateRange: [startOfYear(date), endOfYear(date)]
           }
         ]}
-        initialValue={[undefined, undefined]}
+        defaultValue={[undefined, undefined]}
       />
     );
 

@@ -1,9 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { object } from "@storybook/addon-knobs";
 import PresetCalendar from "../src/components/PresetCalendar";
 import { action } from "@storybook/addon-actions";
-import { colors } from "pebble-shared";
 import {
   startOfToday,
   endOfToday,
@@ -30,14 +28,7 @@ storiesOf("Components/PresetCalendar", module).add("Default", () => (
         onChange={action("change")}
         maxDate={new Date()}
         onClear={action("clear")}
-        tileDots={object("tileDots", [
-          {
-            timeStamp: Date.now(),
-            colors: [colors.blue.base, colors.emerald.base, colors.yellow.base]
-          }
-        ])}
         onApply={action("apply")}
-        range
         presetDateOptions={[
           {
             label: "All Time",
@@ -60,15 +51,15 @@ storiesOf("Components/PresetCalendar", module).add("Default", () => (
             dateRange: [startOfMonth(date), endOfMonth(date)]
           },
           {
-            label: "Year till date",
-            dateRange: [startOfYear(date), endOfYear(date)]
-          },
-          {
             label: "Quarter till date",
             dateRange: [startOfQuarter(date), endOfQuarter(date)]
+          },
+          {
+            label: "Year till date",
+            dateRange: [startOfYear(date), endOfYear(date)]
           }
         ]}
-        initialValue={[undefined, undefined]}
+        defaultValue={[undefined, undefined]}
       />
     )}
   </DropDown>
