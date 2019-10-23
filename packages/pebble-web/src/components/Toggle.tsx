@@ -5,12 +5,14 @@ import {
   selectedLabel,
   inputStyle,
   selectedSwitch,
-  switchStyle
+  switchStyle,
+  fixedLabelStyle
 } from "./styles/Toggle.styles";
 
 interface ToggleProps {
   initialValue?: boolean;
   onChange?: (value: boolean) => void;
+  className?: string;
 }
 
 interface ToggleState {
@@ -26,13 +28,12 @@ export default class Toggle extends React.PureComponent<
   };
 
   render() {
-    const { onChange } = this.props;
+    const { onChange, className } = this.props;
     const { value } = this.state;
 
     return (
       <label
-        className={cx({
-          [labelStyle]: true,
+        className={cx(labelStyle, className, fixedLabelStyle, {
           [selectedLabel]: value
         })}
       >

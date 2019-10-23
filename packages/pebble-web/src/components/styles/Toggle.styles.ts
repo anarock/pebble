@@ -10,6 +10,11 @@ export const labelStyle = css({
   borderRadius: "14px",
   cursor: "pointer"
 });
+// for accessible and touch areas for ios android
+export const fixedLabelStyle = css({
+  marginTop: "15px",
+  marginBottom: "15px"
+});
 
 export const inputStyle = css({
   width: 0,
