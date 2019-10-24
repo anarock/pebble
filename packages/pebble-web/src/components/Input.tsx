@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "emotion";
+import { cx, css } from "emotion";
 import { InputProps, InputState } from "./typings/Input";
 import {
   highlightStyle,
@@ -18,7 +18,8 @@ import Loader from "./Loader";
 function getColor(
   error: string | undefined,
   success: string | undefined,
-  isUnderlineColor?: boolean
+  isUnderlineColor?: boolean,
+  secondaryInput?: boolean
 ) {
   let color = colors.gray.dark;
   if (error) {
@@ -27,6 +28,8 @@ function getColor(
     color = colors.emerald.base;
   } else if (isUnderlineColor) {
     color = colors.violet.base;
+  } else if (secondaryInput) {
+    color = colors.gray.light;
   }
 
   return color;
@@ -78,7 +81,9 @@ class Input extends React.PureComponent<InputProps, InputState> {
       textArea,
       required,
       onClick,
-      loading
+      loading,
+      secondaryPlaceholder,
+      secondaryInput
     } = this.props;
     const { isFocused } = this.state;
 
@@ -89,7 +94,18 @@ class Input extends React.PureComponent<InputProps, InputState> {
       {
         [inputDisabledStyle]: disabled,
         [inputReadOnlyStyle]: readOnly,
-        [inputTextAreaStyle]: textArea
+        [inputTextAreaStyle]: textArea,
+        [css({
+          borderRadius: "3px",
+          height: "50px",
+          padding: "15px",
+          border: `1px solid ${getColor(
+            errorMessage,
+            successMessage,
+            isFocused,
+            true
+          )}`
+        })]: secondaryInput
       },
       inputClassName
     );
@@ -111,7 +127,8 @@ class Input extends React.PureComponent<InputProps, InputState> {
     });
 
     const labelClassName = cx(labelStyle, {
-      _pebble_input_label_focused: isFocused || !!value || fixLabelAtTop
+      _pebble_input_label_focused: isFocused || !!value || fixLabelAtTop,
+      [css({ paddingLeft: "15px" })]: secondaryInput
     });
 
     const _wrapperStyle = cx(
@@ -135,17 +152,38 @@ class Input extends React.PureComponent<InputProps, InputState> {
           <input type={type} {..._inputProps} {...this.props.inputProps} />
         )}
 
-        <label className={labelClassName}>
-          {placeholder}
-          {required && <span style={{ color: colors.red.base }}>&nbsp;*</span>}
-        </label>
+        {!(secondaryPlaceholder && isFocused) && (
+          <label className={labelClassName}>
+            {placeholder}
+            {required && (
+              <span style={{ color: colors.red.base }}>&nbsp;*</span>
+            )}
+          </label>
+        )}
 
-        <div
-          className={highlightClassName}
-          style={{
-            backgroundColor: getColor(errorMessage, successMessage, true)
-          }}
-        />
+        {secondaryPlaceholder && isFocused && !loading && (
+          <label
+            className={css({
+              color: colors.gray.base,
+              fontSize: 14,
+              lineHeight: "12px",
+              position: "absolute",
+              right: "15px",
+              top: "15px"
+            })}
+          >
+            {secondaryPlaceholder}
+          </label>
+        )}
+
+        {!secondaryInput && (
+          <div
+            className={highlightClassName}
+            style={{
+              backgroundColor: getColor(errorMessage, successMessage, true)
+            }}
+          />
+        )}
 
         {loading && (
           <Loader

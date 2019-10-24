@@ -98,4 +98,26 @@ storiesOf("Components/Input", module)
         </div>
       );
     })
+  )
+  .add(
+    "Secondary",
+    withState({ value: "" })(({ store }) => (
+      <Input
+        className={className}
+        onChange={value => store.set({ value })}
+        type={select("type", type, type[0]) as InputProps["type"]}
+        placeholder={text("placeholder", "Name")}
+        fixLabelAtTop={boolean("fixLabelAtTop", false)}
+        required={boolean("required", false)}
+        value={store.state.value}
+        readOnly={boolean("readOnly", false)}
+        disabled={boolean("disabled", false)}
+        message={text("message", "Info Message")}
+        errorMessage={text("errorMessage", "Error Message")}
+        successMessage={text("successMessage", "Success Message")}
+        loading={boolean("loading", false)}
+        secondaryPlaceholder={text("secondaryPlaceholder", "Full Name")}
+        secondaryInput={boolean("secondaryInput", true)}
+      />
+    ))
   );
