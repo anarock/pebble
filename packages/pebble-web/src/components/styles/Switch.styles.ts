@@ -1,5 +1,14 @@
 import { css } from "emotion";
 import { colors } from "pebble-shared";
+import { typography } from "../../theme";
+
+export const labelTextStyle = css({
+  ...typography.s.bold,
+  color: colors.gray.dark,
+  marginRight: "10px"
+});
+
+export const disabledStyle = css({ cursor: "not-allowed" });
 
 export const labelStyle = css({
   width: "28px",
@@ -12,8 +21,10 @@ export const labelStyle = css({
 });
 // for accessible and touch areas for ios android
 export const fixedLabelStyle = css({
-  marginTop: "15px",
-  marginBottom: "15px"
+  padding: "15px 0px",
+  display: "flex",
+  cursor: "pointer",
+  userSelect: "none"
 });
 
 export const inputStyle = css({
