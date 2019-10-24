@@ -128,7 +128,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
 
     const labelClassName = cx(labelStyle, {
       _pebble_input_label_focused: isFocused || !!value || fixLabelAtTop,
-      [css({ paddingLeft: "15px" })]: secondaryInput
+      [css({ paddingLeft: "15px", lineHeight: "0px" })]: secondaryInput
     });
 
     const _wrapperStyle = cx(
@@ -152,7 +152,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
           <input type={type} {..._inputProps} {...this.props.inputProps} />
         )}
 
-        {!(secondaryPlaceholder && isFocused) && (
+        {!(secondaryPlaceholder && (isFocused || !!value)) && (
           <label className={labelClassName}>
             {placeholder}
             {required && (
@@ -161,15 +161,14 @@ class Input extends React.PureComponent<InputProps, InputState> {
           </label>
         )}
 
-        {secondaryPlaceholder && isFocused && !loading && (
+        {secondaryPlaceholder && (isFocused || !!value) && !loading && (
           <label
             className={css({
               color: colors.gray.base,
               fontSize: 14,
-              lineHeight: "12px",
+              lineHeight: "50px",
               position: "absolute",
-              right: "15px",
-              top: "15px"
+              right: "15px"
             })}
           >
             {secondaryPlaceholder}
@@ -189,7 +188,9 @@ class Input extends React.PureComponent<InputProps, InputState> {
           <Loader
             color={colors.violet.base}
             scale={0.6}
-            className={loadingStyle}
+            className={cx(loadingStyle, {
+              [css({ marginRight: "20px" })]: secondaryInput
+            })}
           />
         )}
 
