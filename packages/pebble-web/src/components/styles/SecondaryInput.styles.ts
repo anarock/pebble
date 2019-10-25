@@ -39,7 +39,8 @@ export const inputStyle = css({
   width: "100%",
   fontSize: "14px",
   lineHeight: "12px",
-  ...mixins.textEllipsis
+  ...mixins.textEllipsis,
+  height: "48px"
 });
 
 export const inputWrapperStyle = css({
@@ -54,4 +55,4 @@ export const inputWrapperStyle = css({
   alignItems: "center"
 });
 
-export const wrapperStyle = css({ width: "100%", height: "69px" });
+export const wrapperStyle = css({ width: "100%", height: "70px" });
