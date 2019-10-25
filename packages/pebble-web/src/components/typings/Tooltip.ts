@@ -7,8 +7,10 @@ export interface TooltipProps {
   isOpen?: boolean;
   isError?: boolean;
   disabled?: boolean;
-  // tslint:disable-next-line no-any
-  label: (args: { ref: React.RefObject<any> }) => React.ReactNode;
+  label: (args: {
+    onMouseEnter: () => void;
+    onMouseLeave: () => void;
+  }) => React.ReactNode;
   renderElement?: (args: {
     toggle: () => void;
     isOpen: boolean;
