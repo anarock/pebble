@@ -7,9 +7,7 @@ export interface TooltipProps<T extends HTMLElement> {
   isOpen?: boolean;
   isError?: boolean;
   disabled?: boolean;
-  label: (args: {
-    ref: React.RefObject<T>;
-  }) => React.DetailedHTMLProps<React.HTMLAttributes<T>, T>;
+  label: (args: { ref: React.RefObject<T> }) => React.ReactNode;
   renderElement?: (args: {
     toggle: () => void;
     isOpen: boolean;

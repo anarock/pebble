@@ -24,7 +24,7 @@ const placements = [
 ] as Placement[];
 
 storiesOf("Components/Tooltip", module).add("simple", () => (
-  <Tooltip
+  <Tooltip<HTMLDivElement>
     label={({ ref }) => (
       <div ref={ref}>
         <Button type="link" onClick={() => {}}>
