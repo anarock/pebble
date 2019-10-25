@@ -12,6 +12,10 @@ import {
   messageStyle,
   placeholderStyle
 } from "./styles/SecondaryInput.styles";
+import {
+  SecondaryInputProps,
+  SecondaryInputState
+} from "./typings/SecondaryInput";
 
 function getColor(
   error: string | undefined,
@@ -31,34 +35,32 @@ function getColor(
   return color;
 }
 
-interface SecondaryInputProps {
-  placeholder: string;
-  value?: string | number;
-  onChange: (text: string) => void;
-  className?: string;
-  required?: boolean;
-  infoText?: string;
-  readOnly?: boolean;
-  successMessage?: string;
-  disabled?: boolean;
-  errorMessage?: string;
-  inputClassName?: string;
-  loading?: boolean;
-  message?: string;
-  inputProps?: React.InputHTMLAttributes<HTMLInputElement> &
-    React.RefAttributes<HTMLInputElement>;
-}
-
-interface SecondaryInputState {
-  isFocused: boolean;
-}
-
 export default class SecondaryInput extends React.PureComponent<
   SecondaryInputProps,
   SecondaryInputState
 > {
   state: Readonly<SecondaryInputState> = {
     isFocused: false
+  };
+
+  private addFocus = () => {
+    this.setState({
+      isFocused: true
+    });
+  };
+
+  private removeFocus = () => {
+    this.setState({
+      isFocused: false
+    });
+  };
+
+  private handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    this.props.onChange(e.target.value || "");
   };
 
   render() {
@@ -68,7 +70,6 @@ export default class SecondaryInput extends React.PureComponent<
       required,
       infoText,
       value,
-      onChange,
       disabled,
       errorMessage,
       successMessage,
@@ -82,8 +83,12 @@ export default class SecondaryInput extends React.PureComponent<
     const _message = errorMessage || successMessage || message;
 
     const _inputProps = {
+      "aria-label": placeholder ? placeholder : undefined,
       disabled,
-      readOnly
+      readOnly,
+      value: value || "",
+      className: inputStyle,
+      onChange: this.handleChange
     };
 
     const inputWrapperClassName = cx(
@@ -107,26 +112,10 @@ export default class SecondaryInput extends React.PureComponent<
               true
             )}`
           }}
-          onFocus={() => {
-            this.setState({
-              isFocused: true
-            });
-          }}
-          onBlur={() => {
-            this.setState({
-              isFocused: false
-            });
-          }}
+          onFocus={this.addFocus}
+          onBlur={this.removeFocus}
         >
-          <input
-            className={inputStyle}
-            value={value}
-            onChange={e => {
-              onChange(e.target.value || "");
-            }}
-            {..._inputProps}
-            {...this.props.inputProps}
-          />
+          <input {..._inputProps} {...this.props.inputProps} />
           {!value && !isFocused && (
             <label className={placeholderStyle}>
               {placeholder}

@@ -18,8 +18,7 @@ import Loader from "./Loader";
 function getColor(
   error: string | undefined,
   success: string | undefined,
-  isUnderlineColor?: boolean,
-  secondaryInput?: boolean
+  isUnderlineColor?: boolean
 ) {
   let color = colors.gray.dark;
   if (error) {
@@ -28,8 +27,6 @@ function getColor(
     color = colors.emerald.base;
   } else if (isUnderlineColor) {
     color = colors.violet.base;
-  } else if (secondaryInput) {
-    color = colors.gray.light;
   }
 
   return color;
