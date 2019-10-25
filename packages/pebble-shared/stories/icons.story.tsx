@@ -31,12 +31,8 @@ storiesOf("Theme/icons", module).add("List", () => (
     {iconNames.map((iconName: string) => (
       <div key={iconName} style={{ width: "33%" }}>
         <Tooltip
-          label={({ onMouseEnter, onMouseLeave }) => (
-            <div
-              className={divs}
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-            >
+          label={labelProps => (
+            <div className={divs} {...labelProps}>
               <i className={`pi pi-${iconName}`} /> <span>{iconName}</span>
             </div>
           )}

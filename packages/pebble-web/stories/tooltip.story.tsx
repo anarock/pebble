@@ -25,8 +25,8 @@ const placements = [
 
 storiesOf("Components/Tooltip", module).add("simple", () => (
   <Tooltip
-    label={({ onMouseEnter, onMouseLeave }) => (
-      <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+    label={labelProps => (
+      <div {...labelProps}>
         <Button type="link" onClick={() => {}}>
           Hover on me
         </Button>
