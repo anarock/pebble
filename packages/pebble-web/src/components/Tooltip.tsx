@@ -29,13 +29,13 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
   private addListeners = () => {
     if (!this.props.disabled) {
       this.labelRef.current.addEventListener("mouseenter", this.showTooltip);
-      this.labelRef.current.addEventListener("mouseout", this.hideTooltip);
+      this.labelRef.current.addEventListener("mouseleave", this.hideTooltip);
     }
   };
 
   private removeListeners = () => {
     this.labelRef.current.removeEventListener("mouseenter", this.showTooltip);
-    this.labelRef.current.removeEventListener("mouseout", this.showTooltip);
+    this.labelRef.current.removeEventListener("mouseleave", this.showTooltip);
   };
 
   componentDidMount() {
