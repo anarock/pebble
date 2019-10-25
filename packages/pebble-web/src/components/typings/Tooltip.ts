@@ -1,14 +1,15 @@
 import * as PopperJS from "popper.js";
 
-export interface TooltipProps {
+export interface TooltipProps<T extends HTMLElement> {
   text: React.ReactNode;
   placement?: PopperJS.Placement;
   modifiers?: PopperJS.Modifiers;
   isOpen?: boolean;
   isError?: boolean;
   disabled?: boolean;
-  // tslint:disable-next-line no-any
-  label: (args: { ref: React.RefObject<any> }) => React.ReactNode;
+  label: (args: {
+    ref: React.RefObject<T>;
+  }) => React.DetailedHTMLProps<React.HTMLAttributes<T>, T>;
   renderElement?: (args: {
     toggle: () => void;
     isOpen: boolean;

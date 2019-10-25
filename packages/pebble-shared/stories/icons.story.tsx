@@ -30,7 +30,7 @@ storiesOf("Theme/icons", module).add("List", () => (
   <div className={wrapper}>
     {iconNames.map((iconName: string) => (
       <div key={iconName} style={{ width: "33%" }}>
-        <Tooltip
+        <Tooltip<HTMLDivElement>
           label={({ ref }) => (
             <div className={divs} ref={ref}>
               <i className={`pi pi-${iconName}`} /> <span>{iconName}</span>

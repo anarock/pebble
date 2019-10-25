@@ -4,7 +4,10 @@ import { TooltipProps, TooltipState } from "./typings/Tooltip";
 import { colors } from "pebble-shared";
 import { popperStyle, textStyle } from "./styles/Tooltip.styles";
 
-class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
+class Tooltip<T extends HTMLElement> extends React.PureComponent<
+  TooltipProps<T>,
+  TooltipState
+> {
   state = {
     isOpen: !!this.props.isOpen
   };
@@ -13,8 +16,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     <span className={textStyle}>{this.props.text}</span>
   );
 
-  // tslint:disable-next-line no-any
-  labelRef: React.RefObject<any> = React.createRef();
+  labelRef: React.RefObject<T> = React.createRef();
 
   private showTooltip = () =>
     this.setState({
@@ -27,15 +29,17 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     });
 
   private addListeners = () => {
-    if (!this.props.disabled) {
+    if (!this.props.disabled && this.labelRef.current) {
       this.labelRef.current.addEventListener("mouseenter", this.showTooltip);
       this.labelRef.current.addEventListener("mouseleave", this.hideTooltip);
     }
   };
 
   private removeListeners = () => {
-    this.labelRef.current.removeEventListener("mouseenter", this.showTooltip);
-    this.labelRef.current.removeEventListener("mouseleave", this.showTooltip);
+    if (this.labelRef.current) {
+      this.labelRef.current.removeEventListener("mouseenter", this.showTooltip);
+      this.labelRef.current.removeEventListener("mouseleave", this.showTooltip);
+    }
   };
 
   componentDidMount() {
@@ -46,7 +50,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     this.removeListeners();
   }
 
-  componentDidUpdate(prevProps: TooltipProps) {
+  componentDidUpdate(prevProps: TooltipProps<T>) {
     if (prevProps.disabled !== this.props.disabled) {
       this.props.disabled ? this.removeListeners() : this.addListeners();
     }
