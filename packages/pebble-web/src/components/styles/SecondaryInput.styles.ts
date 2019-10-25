@@ -28,7 +28,7 @@ export const infoTextStyle = css({
 export const placeholderStyle = css({
   position: "absolute",
   left: "15px",
-  color: colors.gray.darker
+  color: colors.gray.base
 });
 
 export const inputStyle = css({
