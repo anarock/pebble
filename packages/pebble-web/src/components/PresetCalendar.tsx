@@ -1,130 +1,105 @@
 import * as React from "react";
 import Calendar from "./Calendar";
 import { cx } from "emotion";
-import Popper from "./Popper";
 import {
   PresetCalendarProps,
-  PresetCalendarState,
-  PresetDates
+  PresetCalendarState
 } from "./typings/PresetCalendar";
+import { Tabs, TabSection } from "./Tabs";
+import Button from "./Button";
 import {
-  startOfDay,
-  endOfDay,
-  startOfYesterday,
-  endOfYesterday
-} from "date-fns";
-import {
-  quickDateTags,
-  customSelected,
-  customChevronIcon,
-  popperWrap,
-  presetCalWrap,
-  openIcon,
-  popperContent
+  tabsStyle,
+  selectedDateButton,
+  unSelectedDateButton,
+  dateBtnsWrap
 } from "./styles/PresetCalendar.styles";
+
+const DATE_TABS = ["Presets", "Custom"];
 
 class PresetCalendar extends React.PureComponent<
   PresetCalendarProps,
   PresetCalendarState
 > {
-  static defaultProps: Partial<PresetCalendarProps> = {
-    onApply: () => {},
-    isOpen: false,
-    presetDateOptions: [
-      {
-        label: "Yesterday",
-        dateRange: () => [startOfYesterday(), endOfYesterday()]
-      },
-      {
-        label: "Past Week",
-        dateRange: () => {
-          const startDate = new Date().setDate(new Date().getDate() - 7);
-          const endDate = new Date().setDate(new Date().getDate() - 1);
-          return [startOfDay(startDate), endOfDay(endDate)];
-        }
-      }
-    ],
-    onChange: () => {},
-    tileDots: []
-  };
-
-  state: PresetCalendarState = {
-    isCustomSelected: false
+  state = {
+    startTime: this.props.defaultValue && this.props.defaultValue[0],
+    endTime: this.props.defaultValue && this.props.defaultValue[1]
   };
 
   render() {
-    const {
-      customDateInputLabel,
-      presetDateOptions,
-      onApply,
-      className
-    } = this.props;
-    const { isCustomSelected } = this.state;
-
-    const _className = cx(className, presetCalWrap);
+    const { startTime, endTime } = this.state;
+    const { defaultValue } = this.props;
 
     return (
-      <Popper
-        label={({ toggle, isOpen }) => customDateInputLabel({ toggle, isOpen })}
-        popperClassName={popperWrap}
-        isOpen={this.props.isOpen}
-        onOutsideClick={() => this.setState({ isCustomSelected: false })}
+      <Tabs
+        tabs={DATE_TABS}
+        initialSelectedTab="Presets"
+        tabClassName={tabsStyle}
       >
-        {({ toggle }) => {
-          return (
-            <>
-              <div className={popperContent}>
-                {presetDateOptions.map((date: PresetDates, i: number) => {
-                  return (
-                    <div
-                      key={i}
-                      onClick={() => {
-                        toggle();
-                        onApply(date.dateRange());
-                        this.setState({ isCustomSelected: false });
-                      }}
-                      className={quickDateTags}
-                    >
-                      {date.label}
-                    </div>
-                  );
-                })}
-                <div
-                  className={cx(quickDateTags, {
-                    [customSelected]: isCustomSelected
-                  })}
-                  onClick={() =>
-                    this.setState({ isCustomSelected: !isCustomSelected })
+        <TabSection section={DATE_TABS[0]}>
+          <div className={dateBtnsWrap}>
+            {this.props.presetDateOptions.map((btn, index) => (
+              <Button
+                onClick={() => {
+                  this.setState({
+                    startTime: btn.dateRange[0],
+                    endTime: btn.dateRange[1]
+                  });
+                  if (this.props.onApply) {
+                    this.props.onApply(btn.dateRange as [Date, Date]);
                   }
-                >
-                  Custom{" "}
-                  <i
-                    className={cx(
-                      "pi",
-                      "pi-arrow-drop-down",
-                      customChevronIcon,
-                      { [openIcon]: isCustomSelected }
-                    )}
-                  />
-                </div>
-              </div>
-              {isCustomSelected && (
-                <Calendar
-                  {...this.props}
-                  className={_className}
-                  hideShadow
-                  range
-                  onApply={value => {
-                    toggle();
-                    this.setState({ isCustomSelected: false });
-                    this.props.onApply(value);
-                  }}
-                />
-              )}
-            </>
-          );
-        }}
-      </Popper>
+                }}
+                type="primary"
+                size="large"
+                className={cx({
+                  [unSelectedDateButton]: true,
+                  [selectedDateButton]:
+                    btn.dateRange[0] === this.state.startTime &&
+                    btn.dateRange[1] === this.state.endTime
+                })}
+                key={`${btn.label}-${index}`}
+              >
+                {btn.label}
+              </Button>
+            ))}
+          </div>
+        </TabSection>
+        <TabSection section={DATE_TABS[1]}>
+          <Calendar
+            hideShadow
+            range
+            onChange={(value: Date[] | Date | undefined) => {
+              if (value && Array.isArray(value)) {
+                this.setState({
+                  startTime: value[0],
+                  endTime: value[1]
+                });
+                this.props.onChange(value as [Date, Date]);
+              }
+            }}
+            selected={
+              (startTime && endTime && [startTime, endTime]) || undefined
+            }
+            onApply={(value: Date[] | Date | undefined) => {
+              if (value && Array.isArray(value)) {
+                this.setState({
+                  startTime: value[0],
+                  endTime: value[1]
+                });
+                this.props.onApply(value as [Date, Date]);
+              }
+            }}
+            onClear={() => {
+              this.setState({
+                startTime: defaultValue && defaultValue[0],
+                endTime: defaultValue && defaultValue[1]
+              });
+              if (this.props.onClear) {
+                this.props.onClear();
+              }
+            }}
+          />
+        </TabSection>
+      </Tabs>
     );
   }
 }

@@ -93,7 +93,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                 className={cx(dropDownStyle, dropDownClassName)}
                 style={{ padding, ...transitionStyles }}
               >
-                <Popper {...this.props}>
+                <Popper {...this.props} positionFixed>
                   {({ ref, style, placement, arrowProps }) => {
                     const popperWrapperStyle = {
                       ...style,

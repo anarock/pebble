@@ -2,19 +2,17 @@ import { DateRange } from "./Calendar";
 
 export interface PresetDates {
   label: string;
-  dateRange: () => [Date, Date];
+  dateRange: [Date | undefined, Date | undefined];
 }
 
-export type PresetCalendarProps = DateRange & {
+export type PresetCalendarProps = Omit<DateRange, "range" | "tileDots"> & {
+  defaultValue?: [Date | undefined, Date | undefined];
   presetDateOptions: PresetDates[];
-  customDateInputLabel: (args: {
-    toggle: () => void;
-    isOpen: boolean;
-  }) => JSX.Element;
   onApply: (value?: [Date, Date]) => void;
   isOpen: boolean;
 };
 
 export interface PresetCalendarState {
-  isCustomSelected: boolean;
+  startTime?: Date;
+  endTime?: Date;
 }
