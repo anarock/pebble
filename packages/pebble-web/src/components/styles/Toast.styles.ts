@@ -7,10 +7,9 @@ export const toastWrapper = css({
   borderRadius: constants.borderRadius,
   ...typography.normal.regular,
   color: colors.white.base,
-  height: 46,
   display: "flex",
   alignItems: "center",
-  padding: 20,
+  padding: "15px 20px",
   zIndex: 99999,
 
   "> i": {
