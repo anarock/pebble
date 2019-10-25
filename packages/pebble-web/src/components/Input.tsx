@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx, css } from "emotion";
+import { cx } from "emotion";
 import { InputProps, InputState } from "./typings/Input";
 import {
   highlightStyle,
@@ -81,9 +81,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
       textArea,
       required,
       onClick,
-      loading,
-      secondaryPlaceholder,
-      secondaryInput
+      loading
     } = this.props;
     const { isFocused } = this.state;
 
@@ -94,18 +92,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
       {
         [inputDisabledStyle]: disabled,
         [inputReadOnlyStyle]: readOnly,
-        [inputTextAreaStyle]: textArea,
-        [css({
-          borderRadius: "3px",
-          height: "50px",
-          padding: "15px",
-          border: `1px solid ${getColor(
-            errorMessage,
-            successMessage,
-            isFocused,
-            true
-          )}`
-        })]: secondaryInput
+        [inputTextAreaStyle]: textArea
       },
       inputClassName
     );
@@ -127,8 +114,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
     });
 
     const labelClassName = cx(labelStyle, {
-      _pebble_input_label_focused: isFocused || !!value || fixLabelAtTop,
-      [css({ paddingLeft: "15px", lineHeight: "0px" })]: secondaryInput
+      _pebble_input_label_focused: isFocused || !!value || fixLabelAtTop
     });
 
     const _wrapperStyle = cx(
@@ -152,45 +138,23 @@ class Input extends React.PureComponent<InputProps, InputState> {
           <input type={type} {..._inputProps} {...this.props.inputProps} />
         )}
 
-        {!(secondaryPlaceholder && (isFocused || !!value)) && (
-          <label className={labelClassName}>
-            {placeholder}
-            {required && (
-              <span style={{ color: colors.red.base }}>&nbsp;*</span>
-            )}
-          </label>
-        )}
+        <label className={labelClassName}>
+          {placeholder}
+          {required && <span style={{ color: colors.red.base }}>&nbsp;*</span>}
+        </label>
 
-        {secondaryPlaceholder && (isFocused || !!value) && !loading && (
-          <label
-            className={css({
-              color: colors.gray.base,
-              fontSize: 14,
-              lineHeight: "50px",
-              position: "absolute",
-              right: "15px"
-            })}
-          >
-            {secondaryPlaceholder}
-          </label>
-        )}
-
-        {!secondaryInput && (
-          <div
-            className={highlightClassName}
-            style={{
-              backgroundColor: getColor(errorMessage, successMessage, true)
-            }}
-          />
-        )}
+        <div
+          className={highlightClassName}
+          style={{
+            backgroundColor: getColor(errorMessage, successMessage, true)
+          }}
+        />
 
         {loading && (
           <Loader
             color={colors.violet.base}
             scale={0.6}
-            className={cx(loadingStyle, {
-              [css({ marginRight: "20px" })]: secondaryInput
-            })}
+            className={loadingStyle}
           />
         )}
 
