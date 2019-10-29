@@ -19,3 +19,11 @@ npm i -g yarn
 - Run `yarn lerna bootstrap` at the root of the directory.
 - Run `yarn storybook` to look at the preview of all the components and start development.
 - To run tests, run `yarn build` before `yarn jest`
+
+## Acknowledgements
+
+We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing and it is awesome.
+
+## License
+
+MIT
