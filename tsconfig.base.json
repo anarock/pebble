@@ -5,13 +5,13 @@
     "allowUnreachableCode": true,
     "alwaysStrict": true,
     "declaration": true,
-    "declarationDir": "dist",
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "isolatedModules": false,
     "jsx": "preserve",
     "lib": ["dom", "es2015", "es2016"],
+    "module": "esnext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
@@ -21,9 +21,7 @@
     "removeComments": false,
     "sourceMap": true,
     "strict": true,
-    "target": "ESNEXT",
-    "typeRoots": ["./node_modules/@types", "./typings/npm"]
-  },
-  "include": ["src", "typings"],
-  "exclude": ["node_modules", "dist", "tests", "compiled", "src/**/__tests__"]
+    "target": "esnext",
+    "typeRoots": ["./node_modules/@types"]
+  }
 }

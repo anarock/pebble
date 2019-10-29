@@ -1,0 +1,48 @@
+{
+  "name": "pebble-web",
+  "version": "1.0.6",
+  "author": "ritz078 <rkritesh078@gmail.com>",
+  "license": "MIT",
+  "main": "dist/pebble-web.js",
+  "esnext": "dist/pebble-web.es.js",
+  "module": "dist/pebble-web.module.js",
+  "typings": "dist/index.d.ts",
+  "unpkg": "dist/pebble-web.umd.js",
+  "files": [
+    "dist",
+    "native",
+    "src"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json && rollup -c && rimraf compiled",
+    "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'yarn build'",
+    "pretest": "tslint ./src/**/*.{ts,tsx} ./stories/**/*.tsx ./{tests,typings}/**/*.ts",
+    "test": "jest --coverage",
+    "prepublishOnly": "yarn test && yarn build",
+    "test:watch": "yarn jest --watchAll"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7.3.4",
+    "pebble-shared": "0.1.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "dependencies": {
+    "date-fns": "^1.29.0",
+    "emotion": "^9.2.12",
+    "is-in-browser": "^1.1.3",
+    "just-debounce-it": "^1.1.0",
+    "mitt": "^1.1.3",
+    "react-calendar": "^2.18.1",
+    "react-ink": "^6.4.0",
+    "react-popper": "^1.3.3",
+    "react-spring": "^7.2.1",
+    "rheostat": "2.2.0",
+    "rifm": "^0.7.0",
+    "scroll-into-view-if-needed": "^2.2.20",
+    "utility-types": "^3.4.1"
+  },
+  "devDependencies": {
+    "pebble-shared": "^1.0.5"
+  }
+}
