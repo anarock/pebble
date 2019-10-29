@@ -3,9 +3,9 @@
   "version": "1.0.6",
   "author": "ritz078 <rkritesh078@gmail.com>",
   "license": "MIT",
-  "main": "npm/index.js",
-  "esnext": "npm/index.es.js",
-  "module": "npm/index.module.js",
+  "main": "dist/pebble-web.js",
+  "esnext": "dist/pebble-web.es.js",
+  "module": "dist/pebble-web.module.js",
   "typings": "dist/index.d.ts",
   "unpkg": "dist/pebble-web.umd.js",
   "files": [
