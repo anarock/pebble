@@ -5,7 +5,7 @@ module.exports = {
   name: pkg.name,
   preset: "ts-jest",
   snapshotSerializers: ["enzyme-to-json/serializer"],
-  testMatch: ["**/?(*.)+(spec|test).(t)s?(x)"],
+  testMatch: ["**/?(*.)+(spec|test).(t|j)s?(x)"],
   setupFiles: ["intersection-observer", "<rootDir>/tests/__setup__/setup.ts"],
   setupFilesAfterEnv: ["<rootDir>/tests/__setup__/setupFramework.ts"],
   moduleNameMapper: {
