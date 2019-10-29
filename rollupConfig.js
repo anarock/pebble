@@ -6,11 +6,11 @@ import commonjs from "rollup-plugin-commonjs";
 import cleanup from "rollup-plugin-cleanup";
 import replace from "rollup-plugin-replace";
 import path from "path";
-const babelConfig = require(path.resolve(
-  __dirname,
-  "../../",
-  "./babel.config"
-)); // TODO
+const babelConfig = {
+  ...require(path.resolve(__dirname, "../../babel.config")),
+  exclude: ["node_modules/**", "../../node_modules/**"],
+  runtimeHelpers: true
+};
 
 export function getRollupConfig(pkg) {
   const input = "./compiled/index.js";
@@ -38,103 +38,129 @@ export function getRollupConfig(pkg) {
       comments: [/^\*#__PURE__/, /^\*@__PURE__/]
     }),
     sourceMaps(),
-    filesize(),
-    replace({
-      "process.env.NODE_ENV": JSON.stringify("production")
-    })
+    filesize()
   ];
 
-  return [
-    {
-      input,
-      external,
-      output: [
-        {
-          file: pkg.esnext,
-          format: "esm",
-          sourcemap: true
-        }
+  const es2015BabelPreset = {
+    presets: [
+      [
+        "@babel/preset-env",
+        { targets: { chrome: "49", safari: "9", ie: "11" } }
       ],
-      plugins: [
-        babel({
-          ...babelConfig,
-          exclude: "node_modules/**",
-          runtimeHelpers: true
-        }),
-        ...plugins
-      ]
+      ...babelConfig.presets.filter(
+        preset =>
+          (Array.isArray(preset) ? preset[0] : preset) !== "@babel/preset-env"
+      )
+    ]
+  };
+
+  const configs = [
+    {
+      file: pkg.esnext,
+      external,
+      format: "esm"
     },
     {
-      input,
+      file: pkg.module,
       external,
-      output: [
-        {
-          file: pkg.module,
-          format: "esm",
-          sourcemap: true
-        },
-        {
-          file: pkg.main,
-          format: "cjs",
-          sourcemap: true
-        }
-      ],
-      plugins: [
-        babel({
-          ...babelConfig,
-          babelrc: false,
-          exclude: "node_modules/**",
-          runtimeHelpers: true,
-          presets: [
-            [
-              "@babel/preset-env",
-              { targets: { chrome: "49", safari: "9", ie: "11" } }
-            ],
-            ...babelConfig.presets.filter(
-              preset =>
-                (Array.isArray(preset) ? preset[0] : preset) !==
-                "@babel/preset-env"
-            )
-          ]
-        }),
-        ...plugins
-      ]
+      format: "esm",
+      babelConfig: {
+        ...es2015BabelPreset
+      }
     },
     {
-      input,
+      file: pkg.main,
+      external,
+      format: "cjs",
+      babelConfig: {
+        ...es2015BabelPreset
+      }
+    },
+    {
+      file: pkg.unpkg,
       external: Object.keys(umdGlobals),
-      output: [
-        {
-          file: pkg.unpkg,
-          format: "umd",
-          sourcemap: true,
-          name: "pebble",
-          globals: umdGlobals
-        }
-      ],
-      plugins: [
-        babel({
-          ...babelConfig,
-          babelrc: false,
-          exclude: ["node_modules/**", "../../node_modules/**"],
-          runtimeHelpers: true,
-          presets: [
-            [
-              "@babel/preset-env",
-              { targets: { chrome: "49", safari: "9", ie: "11" } }
-            ],
-            ...babelConfig.presets.filter(
-              preset =>
-                (Array.isArray(preset) ? preset[0] : preset) !==
-                "@babel/preset-env"
-            )
-          ]
-        }),
-        replace({
-          "process.env.NODE_ENV": JSON.stringify("production")
-        }),
-        ...plugins
-      ]
+      format: "umd",
+      name: "pebble",
+      globals: umdGlobals,
+      babelConfig: {
+        ...es2015BabelPreset
+      }
     }
   ];
+
+  const prodConfigs = configs.map(config => ({
+    input,
+    external: config.external,
+    output: [
+      {
+        file: config.file,
+        format: config.format,
+        sourcemap: true,
+        name: config.name,
+        globals: config.globals
+      }
+    ],
+    plugins: [
+      babel({
+        ...babelConfig,
+        ...config.babelConfig
+      }),
+      ...plugins,
+      replace({
+        "process.env.NODE_ENV": JSON.stringify("production")
+      })
+    ]
+  }));
+
+  const devConfigs = configs.map(config => ({
+    input,
+    external: config.external,
+    output: [
+      {
+        file: config.file.replace(/\.js$/, ".dev.js"),
+        format: config.format,
+        sourcemap: true,
+        name: config.name,
+        globals: config.globals
+      }
+    ],
+    plugins: [
+      babel({
+        ...babelConfig,
+        ...config.babelConfig,
+        plugins: [
+          ...babelConfig.plugins.map(plugin => {
+            if (Array.isArray(plugin)) {
+              if (plugin[0] === "emotion") {
+                return [
+                  "emotion",
+                  {
+                    autoLabel: true,
+                    labelFormat: "[filename]-[local]",
+                    ...plugin[1]
+                  }
+                ];
+              }
+            } else if (plugin === "emotion") {
+              return [
+                "emotion",
+                {
+                  autoLabel: true,
+                  labelFormat: "[filename]-[local]",
+                  ...plugin[1]
+                }
+              ];
+            }
+            return plugin;
+          })
+        ]
+      }),
+      ...plugins,
+      replace({
+        "process.env.NODE_ENV": JSON.stringify("development")
+      })
+    ]
+  }));
+
+  return [].concat(prodConfigs, devConfigs);
 }
