@@ -11,6 +11,11 @@ export default class PebblePopper extends React.PureComponent<
   PopperProps,
   PopperState
 > {
+  static defaultProps: Partial<PopperProps> = {
+    placement: "bottom",
+    closeOnOutsideClick: true
+  };
+
   state: PopperState = {
     isOpen: !!this.props.isOpen
   };
@@ -60,12 +65,7 @@ export default class PebblePopper extends React.PureComponent<
 
           <MountTransition visible={_isPopperOpen}>
             {transitionStyles => (
-              <Popper
-                placement="bottom"
-                closeOnOutsideClick
-                {...props}
-                positionFixed
-              >
+              <Popper {...props} positionFixed>
                 {({ ref, style, placement, arrowProps }) => {
                   const wrapperStyle = {
                     ...style,
