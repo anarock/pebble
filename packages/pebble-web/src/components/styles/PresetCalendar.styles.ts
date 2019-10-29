@@ -1,35 +1,42 @@
 import { css } from "emotion";
-import { constants, mixins } from "../../theme";
 import { colors } from "pebble-shared";
 
-const selectedTag = {
+export const tabsStyle = css({
+  width: "100%",
+  textAlign: "center",
+  padding: "20px",
+  color: colors.gray.dark,
+  fontSize: "16px"
+});
+
+export const dateBtnsWrap = css({
+  display: "flex",
+  flexWrap: "wrap",
+  width: "416px",
+  padding: "20px 40px",
+  justifyContent: "space-between"
+});
+
+export const unSelectedDateButton = css({
+  marginBottom: "20px",
+  border: `1px solid ${colors.gray.light}`,
+  background: colors.white.base,
+  color: colors.gray.darker,
+  width: "158px",
+  "&:not([disabled]):hover": {
+    border: "none",
+    background: colors.gray.light,
+    color: colors.gray.darker
+  }
+});
+
+export const selectedDateButton = css({
+  border: "none",
   background: colors.violet.lightest,
-  color: colors.violet.base
-};
-
-export const quickDateTags = css({
-  padding: "10px 15px",
-  marginRight: 5,
-  fontSize: 14,
-  borderRadius: constants.borderRadius,
-  cursor: "pointer",
-  ":hover": selectedTag
+  color: colors.violet.dark,
+  "&:not([disabled]):hover": {
+    border: "none",
+    background: colors.violet.lightest,
+    color: colors.violet.dark
+  }
 });
-
-export const customChevronIcon = css({
-  fontSize: 10,
-  display: "inline-flex",
-  marginLeft: 5,
-  color: colors.gray.base,
-  transition: "transform 0.5s"
-});
-
-export const openIcon = css({ transform: "rotate(180deg)" });
-
-export const customSelected = css(selectedTag);
-
-export const popperWrap = css({ padding: 20, minWidth: 416 });
-
-export const presetCalWrap = css({ padding: "10px 0 0 0" });
-
-export const popperContent = css({ ...mixins.flexSpaceBetween });

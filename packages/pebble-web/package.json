@@ -1,6 +1,6 @@
 {
   "name": "pebble-web",
-  "version": "0.44.3",
+  "version": "1.0.6",
   "author": "ritz078 <rkritesh078@gmail.com>",
   "license": "MIT",
   "main": "npm/index.js",
@@ -43,6 +43,6 @@
     "utility-types": "^3.4.1"
   },
   "devDependencies": {
-    "pebble-shared": "^0.1.0"
+    "pebble-shared": "^1.0.5"
   }
 }

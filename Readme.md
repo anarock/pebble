@@ -1,12 +1,12 @@
 # pebble
 
-A design system comprising of component and utilities creating using React and React Native.
+A design system comprising of component and utilities creating using React.
 It consists of:
 
 - [pebble-web](./packages/pebble-web)
 - [pebble-shared](./packages/pebble-shared)
 
-# Development
+### Development
 
 Install yarn globally.
 

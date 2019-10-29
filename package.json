@@ -5,6 +5,9 @@
     "packages/*"
   ],
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/anarock/pebble"
+  },
   "scripts": {
     "build-storybook": "yarn build && rimraf storybook-static && build-storybook -s ./packages/pebble-shared/dist",
     "storybook": "start-storybook -p 6006 -s ./packages/pebble-shared/dist",
@@ -105,7 +108,7 @@
     "ts-jest": "^24.0.2",
     "tslint": "^5.16.0",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.4.5",
+    "typescript": "^3.5.3",
     "webfonts-generator": "^0.4.0",
     "webpack": "^4.29.6"
   },

@@ -1,7 +1,6 @@
 import * as React from "react";
-import { storiesOf } from "@storybook/react";
-import PresetCalendar from "../src/components/PresetCalendar";
-import { action } from "@storybook/addon-actions";
+import PresetCalendar from "../PresetCalendar";
+import { mount } from "enzyme";
 import {
   startOfToday,
   endOfToday,
@@ -16,19 +15,21 @@ import {
   startOfQuarter,
   endOfQuarter
 } from "date-fns";
-import { DropDown } from "../src";
+import sinon from "sinon";
 
-const date = new Date();
-
-storiesOf("Components/PresetCalendar", module).add("Default", () => (
-  <DropDown buttonLabel="PresetCalendar">
-    {() => (
+describe("PresetCalendar", () => {
+  test("should return correct range value on apply", () => {
+    const date = new Date();
+    const applySpy = sinon.spy();
+    const clearSpy = sinon.spy();
+    const changeSpy = sinon.spy();
+    const presetCalendar = mount(
       <PresetCalendar
         isOpen
-        onChange={action("change")}
+        onChange={changeSpy}
         maxDate={new Date()}
-        onClear={action("clear")}
-        onApply={action("apply")}
+        onClear={clearSpy}
+        onApply={applySpy}
         presetDateOptions={[
           {
             label: "All Time",
@@ -61,6 +62,14 @@ storiesOf("Components/PresetCalendar", module).add("Default", () => (
         ]}
         defaultValue={[undefined, undefined]}
       />
-    )}
-  </DropDown>
-));
+    );
+
+    presetCalendar
+      .find("button")
+      .at(1)
+      .simulate("click");
+    expect(applySpy.calledOnce).toBeTruthy();
+    const argument = applySpy.getCall(0).args[0];
+    expect(argument).toEqual([startOfToday(), endOfToday()]);
+  });
+});

@@ -98,9 +98,21 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         props.onApply(singleSelectedDate);
       } else if (Array.isArray(value)) {
         props.onApply(value);
+      } else if (value === undefined) {
+        props.onApply(value);
       }
     } else if (!props.range && props.onApply && !Array.isArray(value)) {
       props.onApply(value);
+    }
+  };
+
+  private onClear = () => {
+    const { onClear } = this.props;
+    this.setState({
+      value: undefined
+    });
+    if (onClear) {
+      onClear();
     }
   };
 
@@ -150,7 +162,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         {(onClear || onApply) && (
           <div className={buttonsWrapper}>
             {onClear && (
-              <Button onClick={onClear} type="secondary">
+              <Button onClick={this.onClear} type="secondary">
                 Clear
               </Button>
             )}

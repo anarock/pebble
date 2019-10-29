@@ -1,8 +1,12 @@
 {
   "name": "pebble-shared",
-  "version": "0.1.0",
+  "version": "1.0.5",
   "license": "MIT",
   "main": "dist/pebble-shared.js",
+  "files": [
+    "dist",
+    "native"
+  ],
   "esnext": "dist/pebble-shared.es.js",
   "module": "dist/pebble-shared.module.js",
   "typings": "dist/index.d.ts",
