@@ -32,6 +32,7 @@ export const placeholderStyle = css({
   cursor: "text",
   transition: "transform 100ms ease",
   transform: "translate(0, 0px)",
+  pointerEvents: "none",
   "&._pebble_secondary_input_label_focused": {
     fontSize: "12px",
     transform: "translate(0, -10px)"
