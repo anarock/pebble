@@ -100,6 +100,10 @@ export default class SecondaryInput extends React.PureComponent<
       inputClassName
     );
 
+    const placeholderClassName = cx(placeholderStyle, {
+      _pebble_secondary_input_label_focused: isFocused || !!value
+    });
+
     return (
       <div className={cx(wrapperStyle, className)}>
         <div
@@ -116,14 +120,12 @@ export default class SecondaryInput extends React.PureComponent<
           onBlur={this.removeFocus}
         >
           <input {..._inputProps} {...this.props.inputProps} />
-          {!value && !isFocused && (
-            <label className={placeholderStyle}>
-              {placeholder}
-              {required && (
-                <span style={{ color: colors.red.base }}>&nbsp;*</span>
-              )}
-            </label>
-          )}
+          <label className={placeholderClassName}>
+            {placeholder}
+            {required && (
+              <span style={{ color: colors.red.base }}>&nbsp;*</span>
+            )}
+          </label>
           {infoText && !loading && (value || isFocused) && (
             <label className={infoTextStyle}>{infoText}</label>
           )}
