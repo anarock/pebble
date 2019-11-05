@@ -9,7 +9,6 @@ import { Transition, animated } from "react-spring";
 import Ink from "react-ink";
 import { css, cx } from "emotion";
 import { disableScrollY } from "../theme/styles";
-import OutsideClick from "./OutsideClick";
 import { animationConfig } from "../utils/animation";
 
 const transitionProps = {
@@ -41,14 +40,16 @@ class SideBar extends React.PureComponent<SidebarProps> {
     }
   }
 
+  onOutsideClick = () => {
+    const { onOutsideClick, closeOnOutsideClick, onClose } = this.props;
+    if (closeOnOutsideClick) {
+      onClose();
+    }
+    if (onOutsideClick) onOutsideClick();
+  };
+
   render() {
-    const {
-      width,
-      isOpen,
-      children,
-      onClose,
-      closeOnOutsideClick
-    } = this.props;
+    const { width, isOpen, children, onClose } = this.props;
     const _sidebarOverride = css({
       width,
       transform: isOpen ? `translateX(0)` : `translateX(${width}px)`
@@ -71,36 +72,33 @@ class SideBar extends React.PureComponent<SidebarProps> {
           {show =>
             show &&
             (styles => (
-              <animated.div style={styles} className={sidebarWrapperStyle} />
+              <animated.div
+                style={styles}
+                className={sidebarWrapperStyle}
+                onClick={this.onOutsideClick}
+              />
             ))
           }
         </Transition>
 
-        <OutsideClick
-          onOutsideClick={this.props.onClose}
-          disabled={!closeOnOutsideClick || !isOpen}
-        >
-          <div className={_sidebarStyle}>
-            <Transition items={isOpen} {...transitionProps}>
-              {show =>
-                show &&
-                (styles => (
-                  <animated.div
-                    style={styles}
-                    className={closeStyle}
-                    onClick={onClose}
-                  >
-                    <i className="pi pi-close" />
-                    <Ink />
-                  </animated.div>
-                ))
-              }
-            </Transition>
-            <div style={{ overflowY: "scroll", height: "100vh" }}>
-              {children}
-            </div>
-          </div>
-        </OutsideClick>
+        <div className={_sidebarStyle}>
+          <Transition items={isOpen} {...transitionProps}>
+            {show =>
+              show &&
+              (styles => (
+                <animated.div
+                  style={styles}
+                  className={closeStyle}
+                  onClick={onClose}
+                >
+                  <i className="pi pi-close" />
+                  <Ink />
+                </animated.div>
+              ))
+            }
+          </Transition>
+          <div style={{ overflowY: "scroll", height: "100vh" }}>{children}</div>
+        </div>
       </React.Fragment>
     );
   }
