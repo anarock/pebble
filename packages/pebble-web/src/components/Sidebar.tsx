@@ -49,7 +49,14 @@ class SideBar extends React.PureComponent<SidebarProps> {
   };
 
   render() {
-    const { width, isOpen, children, onClose } = this.props;
+    const {
+      width,
+      isOpen,
+      children,
+      onClose,
+      onOutsideClick,
+      closeOnOutsideClick
+    } = this.props;
     const _sidebarOverride = css({
       width,
       transform: isOpen ? `translateX(0)` : `translateX(${width}px)`
@@ -75,7 +82,11 @@ class SideBar extends React.PureComponent<SidebarProps> {
               <animated.div
                 style={styles}
                 className={sidebarWrapperStyle}
-                onClick={this.onOutsideClick}
+                onClick={
+                  onOutsideClick || closeOnOutsideClick
+                    ? this.onOutsideClick
+                    : undefined
+                }
               />
             ))
           }
