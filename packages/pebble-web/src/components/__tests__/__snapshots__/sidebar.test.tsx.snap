@@ -29,20 +29,18 @@ exports[`Sidebar snapshot tests closed 1`] = `
   }
 }
 
-<div>
+<div
+  className="emotion-0"
+>
   <div
-    className="emotion-0"
-  >
-    <div
-      style={
-        Object {
-          "height": "100vh",
-          "overflowY": "scroll",
-        }
+    style={
+      Object {
+        "height": "100vh",
+        "overflowY": "scroll",
       }
-    >
-      Sidebar
-    </div>
+    }
+  >
+    Sidebar
   </div>
 </div>
 `;
@@ -61,6 +59,7 @@ Array [
 
 <div
     className="emotion-0"
+    onClick={[Function]}
     style={
       Object {
         "opacity": 1,
@@ -146,51 +145,49 @@ Array [
   }
 }
 
-<div>
+<div
+    className="emotion-1"
+  >
     <div
-      className="emotion-1"
+      className="emotion-0"
+      onClick={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
     >
-      <div
-        className="emotion-0"
-        onClick={[Function]}
+      <i
+        className="pi pi-close"
+      />
+      <canvas
+        height={0}
+        onDragOver={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
         style={
           Object {
-            "opacity": 1,
+            "borderRadius": "inherit",
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+            "width": "100%",
           }
         }
-      >
-        <i
-          className="pi pi-close"
-        />
-        <canvas
-          height={0}
-          onDragOver={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          style={
-            Object {
-              "borderRadius": "inherit",
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "top": 0,
-              "width": "100%",
-            }
-          }
-          width={0}
-        />
-      </div>
-      <div
-        style={
-          Object {
-            "height": "100vh",
-            "overflowY": "scroll",
-          }
+        width={0}
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "height": "100vh",
+          "overflowY": "scroll",
         }
-      >
-        Sidebar
-      </div>
+      }
+    >
+      Sidebar
     </div>
   </div>,
 ]
