@@ -87,6 +87,7 @@ class SideBar extends React.PureComponent<SidebarProps> {
                     ? this.onOutsideClick
                     : undefined
                 }
+                data-testid="shadowArea"
               />
             ))
           }
@@ -108,7 +109,11 @@ class SideBar extends React.PureComponent<SidebarProps> {
               ))
             }
           </Transition>
-          <div style={{ overflowY: "scroll", height: "100vh" }}>{children}</div>
+          {isOpen && (
+            <div style={{ overflowY: "scroll", height: "100vh" }}>
+              {children}
+            </div>
+          )}
         </div>
       </React.Fragment>
     );
