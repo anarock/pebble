@@ -7,10 +7,12 @@ import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
 import MountTransition from "./shared/MountTransition";
 
-export default class extends React.PureComponent<PopperProps, PopperState> {
+export default class PebblePopper extends React.PureComponent<
+  PopperProps,
+  PopperState
+> {
   static defaultProps: Partial<PopperProps> = {
     placement: "bottom",
-    popperBackgroundColor: colors.white.base,
     closeOnOutsideClick: true
   };
 
@@ -27,7 +29,7 @@ export default class extends React.PureComponent<PopperProps, PopperState> {
   render() {
     const {
       label,
-      popperBackgroundColor,
+      popperBackgroundColor = colors.white.base,
       children,
       controlled,
       isOpen,
