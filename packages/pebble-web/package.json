@@ -1,6 +1,6 @@
 {
   "name": "pebble-web",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "author": "ritz078 <rkritesh078@gmail.com>",
   "license": "MIT",
   "main": "dist/pebble-web.js",
