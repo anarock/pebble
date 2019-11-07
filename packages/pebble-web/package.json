@@ -18,7 +18,7 @@
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'yarn build'",
     "pretest": "tslint ./src/**/*.{js,jsx,ts,tsx} ./stories/**/*.{js,jsx,ts,tsx} ./{tests,typings}/**/*.{js,jsx,ts,tsx}",
     "test": "jest --coverage",
-    "prepublishOnly": "yarn test && yarn build",
+    "prepublishOnly": "yarn build && yarn test",
     "test:watch": "yarn jest --watchAll"
   },
   "peerDependencies": {
