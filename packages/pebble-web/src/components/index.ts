@@ -32,6 +32,7 @@ import TimePicker from "./TimePicker";
 import Text from "./Text";
 import Message from "./Message";
 import PresetCalendar from "./PresetCalendar";
+import SecondaryInput from "./SecondaryInput";
 
 export {
   Button,
@@ -69,5 +70,6 @@ export {
   PhoneNumberInput,
   Text,
   Message,
-  PresetCalendar
+  PresetCalendar,
+  SecondaryInput
 };
