@@ -11,6 +11,7 @@
   "module": "dist/pebble-shared.module.js",
   "typings": "dist/index.d.ts",
   "unpkg": "dist/pebble-shared.umd.js",
+  "sideEffects": false,
   "scripts": {
     "build": "rm -rf dist && tsc && rollup -c && yarn build:icons && yarn copy:fonts",
     "build:icons": "node ./scripts/generateIcon.js",
