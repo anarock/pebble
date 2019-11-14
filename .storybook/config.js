@@ -1,7 +1,6 @@
 import { configure, addParameters } from "@storybook/react";
 import { withOptions } from "@storybook/addon-options";
 import "@storybook/addon-console";
-import "storybook-chromatic";
 import { colors } from "pebble-shared";
 
 addParameters({
@@ -28,7 +27,7 @@ withOptions({
    * URL for name in top left corner to link to
    * @type {String}
    */
-  url: "https://github.com/ritz078/pebble",
+  url: "https://github.com/anarock/pebble",
   /**
    * show addon panel as a vertical panel on the right
    * @type {Boolean}

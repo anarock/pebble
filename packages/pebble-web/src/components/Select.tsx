@@ -38,12 +38,12 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
   return (
     <div
       className={cx(selectWrapper, className, {
-        [relativePosition]: fullWidthDropdown
+        [relativePosition]: !!fullWidthDropdown
       })}
     >
       <DropDown
         dropDownClassName={cx(dropDownClass, dropdownClassName, {
-          [fullWidth]: fullWidthDropdown
+          [fullWidth]: !!fullWidthDropdown
         })}
         onOutsideClick={isOpen => onDropdownToggle(isOpen)}
         labelComponent={({ toggleDropdown, isOpen }) => {

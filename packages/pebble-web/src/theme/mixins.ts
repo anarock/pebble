@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CSSObject } from "create-emotion/types";
+import { CSSObject } from "@emotion/css";
 
 type Styles = CSSObject | React.CSSProperties;
 

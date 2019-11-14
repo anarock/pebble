@@ -46,13 +46,13 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   );
 };
 
-export const DropDownButton: React.FunctionComponent<DropDownButtonProps> = ({
+export const DropDownButton = ({
   isOpen,
   isSelected,
   children,
   className,
   ...props
-}) => {
+}: DropDownButtonProps) => {
   const _className = cx(dropDownButtonStyle, {
     [dropDownButtonDefaultStyle]: !(isOpen || isSelected)
   });

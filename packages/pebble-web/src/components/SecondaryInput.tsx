@@ -94,8 +94,8 @@ export default class SecondaryInput extends React.PureComponent<
     const inputWrapperClassName = cx(
       inputWrapperStyle,
       {
-        [inputDisabledStyle]: disabled,
-        [inputReadOnlyStyle]: readOnly
+        [inputDisabledStyle]: !!disabled,
+        [inputReadOnlyStyle]: !!readOnly
       },
       inputClassName
     );

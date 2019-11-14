@@ -19,18 +19,20 @@ export function getRollupConfig(pkg) {
     "react-dom": "ReactDOM"
   };
   const externals = [
-    "react-calendar/dist/entry.nostyle",
+    "react-calendar/dist/Calendar",
     ...Object.keys(pkg.peerDependencies || {}),
     ...Object.keys(pkg.dependencies || {})
   ];
 
   function external(id) {
     if (externals.includes(id)) return true;
+    if (/^date-fns/.test(id)) return true;
     return /^@babel\/runtime/.test(id);
   }
 
   const plugins = [
     resolve({
+      browser: true,
       extensions: [".js", ".jsx", ".json"]
     }),
     commonjs(),

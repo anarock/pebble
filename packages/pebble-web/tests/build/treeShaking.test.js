@@ -5,11 +5,17 @@ const { rollup } = require("rollup");
 const terser = require("rollup-plugin-terser").terser;
 
 const pkg = require("../../package.json");
-const external = [
-  "react-calendar/dist/entry.nostyle",
+const externalDeps = [
+  "react-calendar/dist/Calendar",
   ...Object.keys(pkg.peerDependencies),
   ...Object.keys(pkg.dependencies)
 ];
+
+function external(id) {
+  if (externalDeps.includes(id)) return true;
+  if (/^date-fns/.test(id)) return true;
+  return false;
+}
 
 async function compress() {
   const bundle = await rollup({
