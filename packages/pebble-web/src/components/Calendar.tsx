@@ -1,7 +1,6 @@
 import * as React from "react";
-import RCalendar, {
-  CalendarTileProperties
-} from "react-calendar/dist/entry.nostyle";
+import { CalendarTileProperties } from "react-calendar/dist/entry.nostyle";
+import RCalendar from "react-calendar/dist/Calendar";
 import { css, cx } from "emotion";
 import { CalendarProps, CalendarState } from "./typings/Calendar";
 import {
@@ -132,7 +131,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         className={cx(
           wrapperStyle,
           {
-            [css({ boxShadow: "none" })]: hideShadow
+            [css({ boxShadow: "none" })]: !!hideShadow
           },
           className
         )}
