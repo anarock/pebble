@@ -1,4 +1,4 @@
-const replace = require("rollup-plugin-replace");
+const replace = require("@rollup/plugin-replace");
 
 const path = require("path");
 const { rollup } = require("rollup");
