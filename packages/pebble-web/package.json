@@ -8,6 +8,7 @@
   "module": "dist/pebble-web.module.js",
   "typings": "dist/index.d.ts",
   "unpkg": "dist/pebble-web.umd.js",
+  "sideEffects": false,
   "files": [
     "dist",
     "native",

@@ -3,8 +3,8 @@
   "compilerOptions": {
     "declarationDir": "dist",
     "outDir": "compiled",
-    "typeRoots": ["./typings/npm", "../../node_modules/@types"]
+    "typeRoots": ["../../typings/npm", "../../node_modules/@types"]
   },
-  "include": ["./src", "./typings"],
+  "include": ["./src", "../../typings/npm"],
   "exclude": ["node_modules", "dist", "tests", "compiled", "src/**/__tests__"]
 }
