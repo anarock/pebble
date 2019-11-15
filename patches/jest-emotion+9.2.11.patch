@@ -1,0 +1,13 @@
+diff --git a/node_modules/jest-emotion/types/index.d.ts b/node_modules/jest-emotion/types/index.d.ts
+index 22d8657..a0eace2 100644
+--- a/node_modules/jest-emotion/types/index.d.ts
++++ b/node_modules/jest-emotion/types/index.d.ts
+@@ -15,7 +15,7 @@ export function createMatchers(emotion: Emotion): jest.ExpectExtendMap;
+ 
+ declare global {
+   namespace jest {
+-    interface Matchers<R> {
++    interface Matchers<R, T> {
+       toHaveStyleRule(property: string, value: any): R;
+     }
+   }
