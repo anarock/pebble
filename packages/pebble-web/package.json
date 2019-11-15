@@ -1,6 +1,6 @@
 {
   "name": "pebble-web",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "ritz078 <rkritesh078@gmail.com>",
   "license": "MIT",
   "main": "dist/pebble-web.js",
@@ -17,7 +17,7 @@
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json && rollup -c && rimraf compiled",
     "build:watch": "chokidar 'src/**/*.ts' 'src/**/*.tsx' -c 'yarn build'",
-    "pretest": "tslint ./src/**/*.{js,jsx,ts,tsx} ./stories/**/*.{js,jsx,ts,tsx} ./{tests,typings}/**/*.{js,jsx,ts,tsx}",
+    "pretest": "tslint ./src/**/*.{ts,tsx} ./stories/**/*.{ts,tsx} ./{tests,typings}/**/*.{ts,tsx}",
     "test": "jest --coverage",
     "prepublishOnly": "yarn build && yarn test",
     "test:watch": "yarn jest --watchAll"

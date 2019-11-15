@@ -19,30 +19,32 @@ function external(id) {
 
 async function compress() {
   const bundle = await rollup({
-    input: path.resolve(__dirname, "fixture.js"),
     external,
-    treeshake: {
-      pureExternalModules: true
+    input: path.resolve(__dirname, "fixture.js"),
+    onwarn: (warning, handle) => {
+      if (warning.code !== "EMPTY_BUNDLE") {
+        handle(warning);
+      }
     },
     plugins: [
       terser({
-        toplevel: true,
-        mangle: false,
         compress: {
           passes: 3,
           pure_getters: true,
           side_effects: true
         },
+        mangle: false,
         output: {
           beautify: true
-        }
+        },
+        toplevel: true
       }),
       replace({
         "process.env.NODE_ENV": JSON.stringify("production")
       })
     ],
-    onwarn: (warning, handle) => {
-      if (warning.code !== "EMPTY_BUNDLE") handle(warning);
+    treeshake: {
+      pureExternalModules: true
     }
   });
 
