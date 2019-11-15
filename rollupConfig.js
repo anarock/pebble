@@ -26,6 +26,7 @@ export function getRollupConfig(pkg) {
 
   function external(id) {
     if (externals.includes(id)) return true;
+    if (/^date-fns/.test(id)) return true;
     return /^@babel\/runtime/.test(id);
   }
 

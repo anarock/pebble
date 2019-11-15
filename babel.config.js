@@ -15,7 +15,8 @@ module.exports = {
     ["@babel/plugin-proposal-class-properties", { loose: false }],
     "@babel/plugin-syntax-jsx",
     ["@babel/plugin-transform-react-jsx", { useBuiltIns: true }],
-    "emotion"
+    "emotion",
+    "date-fns"
   ],
   env: {
     test: {
