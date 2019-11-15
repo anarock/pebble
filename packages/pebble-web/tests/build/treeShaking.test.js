@@ -6,7 +6,7 @@ const terser = require("rollup-plugin-terser").terser;
 
 const pkg = require("../../package.json");
 const external = [
-  "react-calendar/dist/entry.nostyle",
+  "react-calendar/dist/Calendar",
   ...Object.keys(pkg.peerDependencies),
   ...Object.keys(pkg.dependencies)
 ];

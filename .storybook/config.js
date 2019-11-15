@@ -28,7 +28,7 @@ withOptions({
    * URL for name in top left corner to link to
    * @type {String}
    */
-  url: "https://github.com/ritz078/pebble",
+  url: "https://github.com/anarock/pebble",
   /**
    * show addon panel as a vertical panel on the right
    * @type {Boolean}
