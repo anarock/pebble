@@ -11,3 +11,4 @@ coverage
 .docz
 .cache
 .DS_Store
+.awcache

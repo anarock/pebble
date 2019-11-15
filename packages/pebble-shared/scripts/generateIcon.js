@@ -7,8 +7,9 @@ const prettier = require("prettier");
 
 async function createRNFont() {
   try {
-    await execa.shell(
-      "rimraf native && mkdir native && ../../node_modules/.bin/generate-icon ./dist/pebble.css --componentName=PebbleIcons --fontFamily=pebble -t ./scripts/templates/native-font.tpl -o ./native/Icon.js -p '.pi-'"
+    await execa(
+      "rimraf native && mkdir native && ../../node_modules/.bin/generate-icon ./dist/pebble.css --componentName=PebbleIcons --fontFamily=pebble -t ./scripts/templates/native-font.tpl -o ./native/Icon.js -p '.pi-'",
+      { shell: true }
     );
     console.log(
       colors.green.bold("created PebbleIcons component for React Native.")

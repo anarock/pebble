@@ -1,4 +1,4 @@
-import { InputProps } from "./Input";
+import { SimpleInputProps } from "./Input";
 import { SearchProps } from "./Search";
 import { Extras } from "./OptionGroup";
 import { Omit } from "utility-types";
@@ -17,7 +17,7 @@ interface CommonSelectProps<OptionType> {
   searchBox?: boolean;
   searchBoxProps?: Omit<SearchProps, "type">;
   dropdownClassName?: string;
-  inputProps?: Omit<InputProps, "onChange" | "value" | "placeholder">;
+  inputProps?: Omit<SimpleInputProps, "onChange" | "value" | "placeholder">;
   fullWidthDropdown?: boolean;
   onDropdownToggle?: (isOpen: boolean) => void;
   disabled?: boolean;
