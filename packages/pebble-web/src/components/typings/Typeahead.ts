@@ -1,4 +1,5 @@
 import * as React from "react";
+import { SimpleInputProps } from "./Input";
 
 type FocusEvent = (
   event: React.KeyboardEvent<HTMLInputElement> | React.FocusEvent<HTMLElement>
@@ -32,8 +33,7 @@ export interface TypeaheadProps<OptionType> {
   required?: boolean;
   valueExtractor: (value: OptionType) => string;
   onClear: () => void;
-  inputProps?: React.InputHTMLAttributes<HTMLInputElement> &
-    React.RefAttributes<HTMLInputElement>;
+  inputProps?: Omit<SimpleInputProps, "onChange" | "value" | "placeholder">;
 }
 
 export interface TypeaheadState {
