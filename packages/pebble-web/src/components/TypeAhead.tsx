@@ -22,6 +22,7 @@ function defaultSearchBox<OptionType>(
       onChange={registerChange}
       placeholder={props.placeholder}
       inputProps={{
+        ...props.inputProps,
         onFocus,
         onKeyDown: (e: React.KeyboardEvent) => {
           if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;

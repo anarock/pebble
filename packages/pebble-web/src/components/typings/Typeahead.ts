@@ -32,6 +32,8 @@ export interface TypeaheadProps<OptionType> {
   required?: boolean;
   valueExtractor: (value: OptionType) => string;
   onClear: () => void;
+  inputProps?: React.InputHTMLAttributes<HTMLInputElement> &
+    React.RefAttributes<HTMLInputElement>;
 }
 
 export interface TypeaheadState {
