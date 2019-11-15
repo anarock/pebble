@@ -17,11 +17,18 @@ function defaultSearchBox<OptionType>(
   { registerChange, onFocus, value }: SearchBoxArgs,
   props: TypeaheadProps<OptionType>
 ) {
+  const _inputProps = props.inputProps
+    ? {
+        ...props.inputProps.inputProps
+      }
+    : {};
   return (
     <Input
+      {...props.inputProps}
       onChange={registerChange}
       placeholder={props.placeholder}
       inputProps={{
+        ..._inputProps,
         onFocus,
         onKeyDown: (e: React.KeyboardEvent) => {
           if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
