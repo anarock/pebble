@@ -51,7 +51,7 @@ export default class DateInput extends React.PureComponent<
     if (props.value && props.value !== state.propsValue) {
       newState = {
         propsValue: props.value,
-        stringInput: (props.value && format(props.value, "DD/MM/YYYY")) || ""
+        stringInput: (props.value && format(props.value, "dd/MM/yyyy")) || ""
       };
     }
     return newState;
