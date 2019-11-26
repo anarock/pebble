@@ -51,8 +51,8 @@ class Option<OptionType> extends React.Component<
     const _class = cx(
       rowWrapper,
       {
-        [activeRow]: isActive,
-        [selectedRow]: isSelected
+        [activeRow]: !!isActive,
+        [selectedRow]: !!isSelected
       },
       className
     );

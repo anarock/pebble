@@ -156,7 +156,7 @@ export class BrowserBasedDateInput extends React.PureComponent<DateInputProps> {
   render() {
     return (
       <UserAgentInfoContext.Consumer>
-        {({ userAgent }) => {
+        {({ userAgent }: { userAgent: string }) => {
           if (/Android|iPhone|iPad/i.test(userAgent) && hasDateInputSupport) {
             return <NativeDateInput {...this.props} />;
           }

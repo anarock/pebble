@@ -41,20 +41,20 @@ interface ControlViewProps {
   disabled?: boolean;
 }
 
-export const ControlView: React.FunctionComponent<ControlViewProps> = ({
+export const ControlView = ({
   checked,
   label,
   type,
   disabled
-}) => {
+}: ControlViewProps) => {
   const isRadio = type === "radio";
 
   // Ensure that other styles are not emotion styles.
   // As cx merges styles into one className.
   const iconClass = cx(radioIconStyle, "pi", {
-    "pi-radio": isRadio && !checked && !disabled,
-    "pi-radio-selected": isRadio && (checked || disabled),
-    "pi-checkbox-selected": !isRadio && (checked || disabled),
+    "pi-radio": !!isRadio && !checked && !disabled,
+    "pi-radio-selected": !!isRadio && !!(checked || disabled),
+    "pi-checkbox-selected": !isRadio && !!(checked || disabled),
     "pi-checkbox-unselected": !isRadio && !checked && !disabled
   });
 

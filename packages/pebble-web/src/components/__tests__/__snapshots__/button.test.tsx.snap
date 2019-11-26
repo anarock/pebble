@@ -157,6 +157,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -180,8 +194,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -298,6 +312,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -321,8 +349,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -627,6 +655,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -650,8 +692,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -768,6 +810,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -791,8 +847,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -1045,6 +1101,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1068,8 +1138,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -1178,6 +1248,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1201,8 +1285,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -1447,6 +1531,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1470,8 +1568,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -1580,6 +1678,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1603,8 +1715,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -1865,6 +1977,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1888,8 +2014,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -2006,6 +2132,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2029,8 +2169,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -2335,6 +2475,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2358,8 +2512,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -2476,6 +2630,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2499,8 +2667,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -2769,6 +2937,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2792,8 +2974,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -2910,6 +3092,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2933,8 +3129,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -3051,100 +3247,6 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: false,
   large: false } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #101721;
-  font-size: 12px;
-  background-color: #EDEDED;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  color: #101721;
-  background-color: #F7F7F9;
-  border-color: #F7F7F9;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #101721;
-  background-color: #9FA6B0;
-  border-color: #9FA6B0;
-}
-
-.emotion-0[disabled] {
-  color: #101721;
-  background-color: #EDEDED;
-  border-color: #EDEDED;
-}
-
-<button
-  className="emotion-0"
-  disabled={false}
-  onClick={[Function]}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-  <canvas
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
-</button>
-`;
-
-exports[`Button Combos test { disabled: false,
-  type: 'secondary',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -3237,8 +3339,116 @@ exports[`Button Combos test { disabled: false,
 exports[`Button Combos test { disabled: false,
   type: 'secondary',
   showRipple: true,
+  loading: false,
+  large: true } 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #101721;
+  font-size: 12px;
+  background-color: #EDEDED;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #101721;
+  background-color: #F7F7F9;
+  border-color: #F7F7F9;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #101721;
+  background-color: #9FA6B0;
+  border-color: #9FA6B0;
+}
+
+.emotion-0[disabled] {
+  color: #101721;
+  background-color: #EDEDED;
+  border-color: #EDEDED;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+  <canvas
+    height={0}
+    onDragOver={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "borderRadius": "inherit",
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+    width={0}
+  />
+</button>
+`;
+
+exports[`Button Combos test { disabled: false,
+  type: 'secondary',
+  showRipple: true,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3262,8 +3472,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -3380,6 +3590,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3403,8 +3627,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -3673,6 +3897,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3696,8 +3934,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -3814,6 +4052,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3837,8 +4089,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -4143,6 +4395,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4166,8 +4432,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -4284,6 +4550,20 @@ exports[`Button Combos test { disabled: false,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4307,8 +4587,8 @@ exports[`Button Combos test { disabled: false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -4575,6 +4855,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4598,8 +4892,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -4716,6 +5010,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4739,8 +5047,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -5007,6 +5315,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5030,8 +5352,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -5148,6 +5470,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5171,8 +5507,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -5423,6 +5759,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5446,8 +5796,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -5556,6 +5906,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5579,8 +5943,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -5823,6 +6187,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5846,8 +6224,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -5956,6 +6334,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5979,8 +6371,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -6239,6 +6631,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6262,8 +6668,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -6380,6 +6786,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6403,8 +6823,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -6671,6 +7091,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6694,8 +7128,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -6812,6 +7246,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6835,8 +7283,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -7103,6 +7551,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7126,8 +7588,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -7244,6 +7706,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7267,8 +7743,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -7535,6 +8011,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7558,8 +8048,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -7676,6 +8166,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7699,8 +8203,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -7967,6 +8471,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7990,8 +8508,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -8108,6 +8626,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: false,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8131,8 +8663,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -8399,6 +8931,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: false } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8422,8 +8968,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -8540,6 +9086,20 @@ exports[`Button Combos test { disabled: true,
   showRipple: true,
   loading: true,
   large: true } 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8563,8 +9123,8 @@ exports[`Button Combos test { disabled: true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
