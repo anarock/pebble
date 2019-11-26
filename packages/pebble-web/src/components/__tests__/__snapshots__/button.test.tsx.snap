@@ -1,10 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'alert',
   showRipple: false,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -76,11 +78,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'alert',
   showRipple: false,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -152,11 +156,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'alert',
   showRipple: false,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -293,11 +299,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'alert',
   showRipple: false,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -434,105 +442,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'alert',
   showRipple: true,
   loading: false,
-  large: false } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #D32F02;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #D94C26;
-  border-color: #D94C26;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #ffffff;
-  background-color: #BD2900;
-  border-color: #BD2900;
-}
-
-.emotion-0[disabled] {
-  color: #ffffff;
-  background-color: #EFBBAD;
-  border-color: #EFBBAD;
-}
-
-<button
-  className="emotion-0"
-  disabled={false}
-  onClick={[Function]}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-  <canvas
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
-</button>
-`;
-
-exports[`Button Combos test { disabled: false,
-  type: 'alert',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -622,11 +538,109 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
+  type: 'alert',
+  showRipple: true,
+  loading: false,
+  large: true
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #D32F02;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #D94C26;
+  border-color: #D94C26;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
+  background-color: #BD2900;
+  border-color: #BD2900;
+}
+
+.emotion-0[disabled] {
+  color: #ffffff;
+  background-color: #EFBBAD;
+  border-color: #EFBBAD;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+  <canvas
+    height={0}
+    onDragOver={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "borderRadius": "inherit",
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+    width={0}
+  />
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: false,
   type: 'alert',
   showRipple: true,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -763,11 +777,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'alert',
   showRipple: true,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -904,11 +920,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'link',
   showRipple: false,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -972,11 +990,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'link',
   showRipple: false,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -1040,11 +1060,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'link',
   showRipple: false,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1173,11 +1195,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'link',
   showRipple: false,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1306,11 +1330,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'link',
   showRipple: true,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -1374,11 +1400,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'link',
   showRipple: true,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -1442,11 +1470,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'link',
   showRipple: true,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1575,11 +1605,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'link',
   showRipple: true,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1708,11 +1740,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'primary',
   showRipple: false,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -1784,11 +1818,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'primary',
   showRipple: false,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -1860,11 +1896,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'primary',
   showRipple: false,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2001,11 +2039,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'primary',
   showRipple: false,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2142,11 +2182,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'primary',
   showRipple: true,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -2236,11 +2278,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'primary',
   showRipple: true,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -2330,11 +2374,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'primary',
   showRipple: true,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2471,11 +2517,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'primary',
   showRipple: true,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2612,11 +2660,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'secondary',
   showRipple: false,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -2688,11 +2738,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'secondary',
   showRipple: false,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -2764,11 +2816,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'secondary',
   showRipple: false,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2905,11 +2959,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'secondary',
   showRipple: false,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3046,105 +3102,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'secondary',
   showRipple: true,
   loading: false,
-  large: false } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #101721;
-  font-size: 12px;
-  background-color: #EDEDED;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  color: #101721;
-  background-color: #F7F7F9;
-  border-color: #F7F7F9;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #101721;
-  background-color: #9FA6B0;
-  border-color: #9FA6B0;
-}
-
-.emotion-0[disabled] {
-  color: #101721;
-  background-color: #EDEDED;
-  border-color: #EDEDED;
-}
-
-<button
-  className="emotion-0"
-  disabled={false}
-  onClick={[Function]}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-  <canvas
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
-</button>
-`;
-
-exports[`Button Combos test { disabled: false,
-  type: 'secondary',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -3234,11 +3198,109 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
+  type: 'secondary',
+  showRipple: true,
+  loading: false,
+  large: true
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #101721;
+  font-size: 12px;
+  background-color: #EDEDED;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #101721;
+  background-color: #F7F7F9;
+  border-color: #F7F7F9;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #101721;
+  background-color: #9FA6B0;
+  border-color: #9FA6B0;
+}
+
+.emotion-0[disabled] {
+  color: #101721;
+  background-color: #EDEDED;
+  border-color: #EDEDED;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+  <canvas
+    height={0}
+    onDragOver={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "borderRadius": "inherit",
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+    width={0}
+  />
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: false,
   type: 'secondary',
   showRipple: true,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3375,11 +3437,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'secondary',
   showRipple: true,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3516,11 +3580,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'success',
   showRipple: false,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -3592,11 +3658,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'success',
   showRipple: false,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -3668,11 +3736,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'success',
   showRipple: false,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3809,11 +3879,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'success',
   showRipple: false,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3950,11 +4022,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'success',
   showRipple: true,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -4044,11 +4118,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'success',
   showRipple: true,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -4138,11 +4214,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'success',
   showRipple: true,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4279,11 +4357,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
+exports[`Button Combos test {
+  disabled: false,
   type: 'success',
   showRipple: true,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4420,11 +4500,13 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'alert',
   showRipple: false,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -4495,11 +4577,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'alert',
   showRipple: false,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -4570,152 +4654,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'alert',
   showRipple: false,
   loading: true,
-  large: false } 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-content: initial;
-  -ms-flex-line-pack: initial;
-  align-content: initial;
-  width: 70px;
-}
-
-.emotion-0 > div {
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
-}
-
-.emotion-0 > div:first-of-type {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.emotion-0 > div:nth-of-type(2n) {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
-.emotion-1 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #D32F02;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-1[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-1:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #D94C26;
-  border-color: #D94C26;
-}
-
-.emotion-1:not([disabled]):active {
-  color: #ffffff;
-  background-color: #BD2900;
-  border-color: #BD2900;
-}
-
-.emotion-1[disabled] {
-  color: #ffffff;
-  background-color: #EFBBAD;
-  border-color: #EFBBAD;
-}
-
-<button
-  className="emotion-1"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div
-    className="emotion-0"
-    style={
-      Object {
-        "transform": "scale(0.4)",
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-  </div>
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'alert',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4852,161 +4797,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'alert',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #D32F02;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #D94C26;
-  border-color: #D94C26;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #ffffff;
-  background-color: #BD2900;
-  border-color: #BD2900;
-}
-
-.emotion-0[disabled] {
-  color: #ffffff;
-  background-color: #EFBBAD;
-  border-color: #EFBBAD;
-}
-
-<button
-  className="emotion-0"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'alert',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #D32F02;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #D94C26;
-  border-color: #D94C26;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #ffffff;
-  background-color: #BD2900;
-  border-color: #BD2900;
-}
-
-.emotion-0[disabled] {
-  color: #ffffff;
-  background-color: #EFBBAD;
-  border-color: #EFBBAD;
-}
-
-<button
-  className="emotion-0"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'alert',
-  showRipple: true,
+  showRipple: false,
   loading: true,
-  large: false } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5143,11 +4940,167 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
+  type: 'alert',
+  showRipple: true,
+  loading: false,
+  large: false
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #D32F02;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #D94C26;
+  border-color: #D94C26;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
+  background-color: #BD2900;
+  border-color: #BD2900;
+}
+
+.emotion-0[disabled] {
+  color: #ffffff;
+  background-color: #EFBBAD;
+  border-color: #EFBBAD;
+}
+
+<button
+  className="emotion-0"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'alert',
+  showRipple: true,
+  loading: false,
+  large: true
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #D32F02;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #D94C26;
+  border-color: #D94C26;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
+  background-color: #BD2900;
+  border-color: #BD2900;
+}
+
+.emotion-0[disabled] {
+  color: #ffffff;
+  background-color: #EFBBAD;
+  border-color: #EFBBAD;
+}
+
+<button
+  className="emotion-0"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
   type: 'alert',
   showRipple: true,
   loading: true,
-  large: true } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5284,961 +5237,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 0;
-  font-weight: 400;
-  color: #6161FF;
-  font-size: 12px;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-0[disabled] {
-  color: #C0C0FF;
-}
-
-<button
-  className="emotion-0"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 0;
-  font-weight: 400;
-  color: #6161FF;
-  font-size: 12px;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-0[disabled] {
-  color: #C0C0FF;
-}
-
-<button
-  className="emotion-0"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-content: initial;
-  -ms-flex-line-pack: initial;
-  align-content: initial;
-  width: 70px;
-}
-
-.emotion-0 > div {
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
-}
-
-.emotion-0 > div:first-of-type {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.emotion-0 > div:nth-of-type(2n) {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
-.emotion-1 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 0;
-  font-weight: 400;
-  color: #6161FF;
-  font-size: 12px;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-.emotion-1[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-1:not([disabled]):hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-1[disabled] {
-  color: #C0C0FF;
-}
-
-<button
-  className="emotion-1"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div
-    className="emotion-0"
-    style={
-      Object {
-        "transform": "scale(0.4)",
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-  </div>
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-content: initial;
-  -ms-flex-line-pack: initial;
-  align-content: initial;
-  width: 70px;
-}
-
-.emotion-0 > div {
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
-}
-
-.emotion-0 > div:first-of-type {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.emotion-0 > div:nth-of-type(2n) {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
-.emotion-1 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 0;
-  font-weight: 400;
-  color: #6161FF;
-  font-size: 12px;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-.emotion-1[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-1:not([disabled]):hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-1[disabled] {
-  color: #C0C0FF;
-}
-
-<button
-  className="emotion-1"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div
-    className="emotion-0"
-    style={
-      Object {
-        "transform": "scale(0.4)",
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-  </div>
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 0;
-  font-weight: 400;
-  color: #6161FF;
-  font-size: 12px;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-0[disabled] {
-  color: #C0C0FF;
-}
-
-<button
-  className="emotion-0"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 0;
-  font-weight: 400;
-  color: #6161FF;
-  font-size: 12px;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-0[disabled] {
-  color: #C0C0FF;
-}
-
-<button
-  className="emotion-0"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'link',
+exports[`Button Combos test {
+  disabled: true,
+  type: 'alert',
   showRipple: true,
   loading: true,
-  large: false } 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-content: initial;
-  -ms-flex-line-pack: initial;
-  align-content: initial;
-  width: 70px;
-}
-
-.emotion-0 > div {
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
-}
-
-.emotion-0 > div:first-of-type {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.emotion-0 > div:nth-of-type(2n) {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
-.emotion-1 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 0;
-  font-weight: 400;
-  color: #6161FF;
-  font-size: 12px;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-.emotion-1[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-1:not([disabled]):hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-1[disabled] {
-  color: #C0C0FF;
-}
-
-<button
-  className="emotion-1"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div
-    className="emotion-0"
-    style={
-      Object {
-        "transform": "scale(0.4)",
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-  </div>
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: true,
-  loading: true,
-  large: true } 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-content: initial;
-  -ms-flex-line-pack: initial;
-  align-content: initial;
-  width: 70px;
-}
-
-.emotion-0 > div {
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
-}
-
-.emotion-0 > div:first-of-type {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.emotion-0 > div:nth-of-type(2n) {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
-.emotion-1 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 0;
-  font-weight: 400;
-  color: #6161FF;
-  font-size: 12px;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
-  box-shadow: none;
-}
-
-.emotion-1[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-1:not([disabled]):hover {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-1[disabled] {
-  color: #C0C0FF;
-}
-
-<button
-  className="emotion-1"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div
-    className="emotion-0"
-    style={
-      Object {
-        "transform": "scale(0.4)",
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-  </div>
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #6161FF;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #7070FF;
-  border-color: #7070FF;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #ffffff;
-  background-color: #5656ED;
-  border-color: #5656ED;
-}
-
-.emotion-0[disabled] {
-  color: #ffffff;
-  background-color: #C0C0FF;
-  border-color: #C0C0FF;
-}
-
-<button
-  className="emotion-0"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #6161FF;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #7070FF;
-  border-color: #7070FF;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #ffffff;
-  background-color: #5656ED;
-  border-color: #5656ED;
-}
-
-.emotion-0[disabled] {
-  color: #ffffff;
-  background-color: #C0C0FF;
-  border-color: #C0C0FF;
-}
-
-<button
-  className="emotion-0"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6306,7 +5311,7 @@ exports[`Button Combos test { disabled: true,
   font-weight: 400;
   color: #ffffff;
   font-size: 12px;
-  background-color: #6161FF;
+  background-color: #D32F02;
   border: none;
   box-shadow: none;
 }
@@ -6317,20 +5322,20 @@ exports[`Button Combos test { disabled: true,
 
 .emotion-1:not([disabled]):hover {
   color: #ffffff;
-  background-color: #7070FF;
-  border-color: #7070FF;
+  background-color: #D94C26;
+  border-color: #D94C26;
 }
 
 .emotion-1:not([disabled]):active {
   color: #ffffff;
-  background-color: #5656ED;
-  border-color: #5656ED;
+  background-color: #BD2900;
+  border-color: #BD2900;
 }
 
 .emotion-1[disabled] {
   color: #ffffff;
-  background-color: #C0C0FF;
-  border-color: #C0C0FF;
+  background-color: #EFBBAD;
+  border-color: #EFBBAD;
 }
 
 <button
@@ -6375,11 +5380,151 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
+exports[`Button Combos test {
+  disabled: true,
+  type: 'link',
+  showRipple: false,
+  loading: false,
+  large: false
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 0;
+  font-weight: 400;
+  color: #6161FF;
+  font-size: 12px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0[disabled] {
+  color: #C0C0FF;
+}
+
+<button
+  className="emotion-0"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'link',
+  showRipple: false,
+  loading: false,
+  large: true
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 0;
+  font-weight: 400;
+  color: #6161FF;
+  font-size: 12px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0[disabled] {
+  color: #C0C0FF;
+}
+
+<button
+  className="emotion-0"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'link',
   showRipple: false,
   loading: true,
-  large: true } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6443,12 +5588,13 @@ exports[`Button Combos test { disabled: true,
   justify-content: center;
   border: 0;
   height: 40px;
-  min-width: 100px;
+  min-width: 0;
   font-weight: 400;
-  color: #ffffff;
+  color: #6161FF;
   font-size: 12px;
-  background-color: #6161FF;
-  border: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
   box-shadow: none;
 }
 
@@ -6457,21 +5603,12 @@ exports[`Button Combos test { disabled: true,
 }
 
 .emotion-1:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #7070FF;
-  border-color: #7070FF;
-}
-
-.emotion-1:not([disabled]):active {
-  color: #ffffff;
-  background-color: #5656ED;
-  border-color: #5656ED;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .emotion-1[disabled] {
-  color: #ffffff;
-  background-color: #C0C0FF;
-  border-color: #C0C0FF;
+  color: #C0C0FF;
 }
 
 <button
@@ -6516,11 +5653,148 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
+exports[`Button Combos test {
+  disabled: true,
+  type: 'link',
+  showRipple: false,
+  loading: true,
+  large: true
+} 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  width: 70px;
+}
+
+.emotion-0 > div {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+}
+
+.emotion-0 > div:first-of-type {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.emotion-0 > div:nth-of-type(2n) {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.emotion-1 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 0;
+  font-weight: 400;
+  color: #6161FF;
+  font-size: 12px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.emotion-1[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-1:not([disabled]):hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-1[disabled] {
+  color: #C0C0FF;
+}
+
+<button
+  className="emotion-1"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div
+    className="emotion-0"
+    style={
+      Object {
+        "transform": "scale(0.4)",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+  </div>
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'link',
   showRipple: true,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -6547,12 +5821,13 @@ exports[`Button Combos test { disabled: true,
   justify-content: center;
   border: 0;
   height: 40px;
-  min-width: 100px;
+  min-width: 0;
   font-weight: 400;
-  color: #ffffff;
+  color: #6161FF;
   font-size: 12px;
-  background-color: #6161FF;
-  border: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
   box-shadow: none;
 }
 
@@ -6561,21 +5836,12 @@ exports[`Button Combos test { disabled: true,
 }
 
 .emotion-0:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #7070FF;
-  border-color: #7070FF;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #ffffff;
-  background-color: #5656ED;
-  border-color: #5656ED;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .emotion-0[disabled] {
-  color: #ffffff;
-  background-color: #C0C0FF;
-  border-color: #C0C0FF;
+  color: #C0C0FF;
 }
 
 <button
@@ -6591,11 +5857,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
+exports[`Button Combos test {
+  disabled: true,
+  type: 'link',
   showRipple: true,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -6622,12 +5890,13 @@ exports[`Button Combos test { disabled: true,
   justify-content: center;
   border: 0;
   height: 40px;
-  min-width: 100px;
+  min-width: 0;
   font-weight: 400;
-  color: #ffffff;
+  color: #6161FF;
   font-size: 12px;
-  background-color: #6161FF;
-  border: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
   box-shadow: none;
 }
 
@@ -6636,21 +5905,12 @@ exports[`Button Combos test { disabled: true,
 }
 
 .emotion-0:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #7070FF;
-  border-color: #7070FF;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #ffffff;
-  background-color: #5656ED;
-  border-color: #5656ED;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
 }
 
 .emotion-0[disabled] {
-  color: #ffffff;
-  background-color: #C0C0FF;
-  border-color: #C0C0FF;
+  color: #C0C0FF;
 }
 
 <button
@@ -6666,11 +5926,437 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
+exports[`Button Combos test {
+  disabled: true,
+  type: 'link',
   showRipple: true,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  width: 70px;
+}
+
+.emotion-0 > div {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+}
+
+.emotion-0 > div:first-of-type {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.emotion-0 > div:nth-of-type(2n) {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.emotion-1 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 0;
+  font-weight: 400;
+  color: #6161FF;
+  font-size: 12px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.emotion-1[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-1:not([disabled]):hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-1[disabled] {
+  color: #C0C0FF;
+}
+
+<button
+  className="emotion-1"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div
+    className="emotion-0"
+    style={
+      Object {
+        "transform": "scale(0.4)",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+  </div>
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'link',
+  showRipple: true,
+  loading: true,
+  large: true
+} 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  width: 70px;
+}
+
+.emotion-0 > div {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+}
+
+.emotion-0 > div:first-of-type {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.emotion-0 > div:nth-of-type(2n) {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.emotion-1 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 0;
+  font-weight: 400;
+  color: #6161FF;
+  font-size: 12px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.emotion-1[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-1:not([disabled]):hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-1[disabled] {
+  color: #C0C0FF;
+}
+
+<button
+  className="emotion-1"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div
+    className="emotion-0"
+    style={
+      Object {
+        "transform": "scale(0.4)",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+  </div>
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'primary',
+  showRipple: false,
+  loading: false,
+  large: false
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #6161FF;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #7070FF;
+  border-color: #7070FF;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
+  background-color: #5656ED;
+  border-color: #5656ED;
+}
+
+.emotion-0[disabled] {
+  color: #ffffff;
+  background-color: #C0C0FF;
+  border-color: #C0C0FF;
+}
+
+<button
+  className="emotion-0"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'primary',
+  showRipple: false,
+  loading: false,
+  large: true
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #6161FF;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #7070FF;
+  border-color: #7070FF;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
+  background-color: #5656ED;
+  border-color: #5656ED;
+}
+
+.emotion-0[disabled] {
+  color: #ffffff;
+  background-color: #C0C0FF;
+  border-color: #C0C0FF;
+}
+
+<button
+  className="emotion-0"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'primary',
+  showRipple: false,
+  loading: true,
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6807,11 +6493,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'primary',
-  showRipple: true,
+  showRipple: false,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6948,11 +6636,453 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
+  type: 'primary',
+  showRipple: true,
+  loading: false,
+  large: false
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #6161FF;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #7070FF;
+  border-color: #7070FF;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
+  background-color: #5656ED;
+  border-color: #5656ED;
+}
+
+.emotion-0[disabled] {
+  color: #ffffff;
+  background-color: #C0C0FF;
+  border-color: #C0C0FF;
+}
+
+<button
+  className="emotion-0"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'primary',
+  showRipple: true,
+  loading: false,
+  large: true
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #6161FF;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #7070FF;
+  border-color: #7070FF;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
+  background-color: #5656ED;
+  border-color: #5656ED;
+}
+
+.emotion-0[disabled] {
+  color: #ffffff;
+  background-color: #C0C0FF;
+  border-color: #C0C0FF;
+}
+
+<button
+  className="emotion-0"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'primary',
+  showRipple: true,
+  loading: true,
+  large: false
+} 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  width: 70px;
+}
+
+.emotion-0 > div {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+}
+
+.emotion-0 > div:first-of-type {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.emotion-0 > div:nth-of-type(2n) {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.emotion-1 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #6161FF;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-1[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-1:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #7070FF;
+  border-color: #7070FF;
+}
+
+.emotion-1:not([disabled]):active {
+  color: #ffffff;
+  background-color: #5656ED;
+  border-color: #5656ED;
+}
+
+.emotion-1[disabled] {
+  color: #ffffff;
+  background-color: #C0C0FF;
+  border-color: #C0C0FF;
+}
+
+<button
+  className="emotion-1"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div
+    className="emotion-0"
+    style={
+      Object {
+        "transform": "scale(0.4)",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+  </div>
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'primary',
+  showRipple: true,
+  loading: true,
+  large: true
+} 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  width: 70px;
+}
+
+.emotion-0 > div {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+}
+
+.emotion-0 > div:first-of-type {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.emotion-0 > div:nth-of-type(2n) {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.emotion-1 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #6161FF;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-1[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-1:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #7070FF;
+  border-color: #7070FF;
+}
+
+.emotion-1:not([disabled]):active {
+  color: #ffffff;
+  background-color: #5656ED;
+  border-color: #5656ED;
+}
+
+.emotion-1[disabled] {
+  color: #ffffff;
+  background-color: #C0C0FF;
+  border-color: #C0C0FF;
+}
+
+<button
+  className="emotion-1"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div
+    className="emotion-0"
+    style={
+      Object {
+        "transform": "scale(0.4)",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+  </div>
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
   type: 'secondary',
   showRipple: false,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -7023,11 +7153,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'secondary',
   showRipple: false,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -7098,11 +7230,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'secondary',
   showRipple: false,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7239,11 +7373,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'secondary',
   showRipple: false,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7380,11 +7516,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'secondary',
   showRipple: true,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -7455,11 +7593,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'secondary',
   showRipple: true,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -7530,11 +7670,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'secondary',
   showRipple: true,
   loading: true,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7671,11 +7813,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'secondary',
   showRipple: true,
   loading: true,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7812,11 +7956,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'success',
   showRipple: false,
   loading: false,
-  large: false } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -7887,11 +8033,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'success',
   showRipple: false,
   loading: false,
-  large: true } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -7962,152 +8110,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'success',
   showRipple: false,
   loading: true,
-  large: false } 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-content: initial;
-  -ms-flex-line-pack: initial;
-  align-content: initial;
-  width: 70px;
-}
-
-.emotion-0 > div {
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-  display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
-}
-
-.emotion-0 > div:first-of-type {
-  -webkit-animation-delay: -0.32s;
-  animation-delay: -0.32s;
-}
-
-.emotion-0 > div:nth-of-type(2n) {
-  -webkit-animation-delay: -0.16s;
-  animation-delay: -0.16s;
-}
-
-.emotion-1 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #10AC60;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-1[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-1:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #40BD80;
-  border-color: #40BD80;
-}
-
-.emotion-1:not([disabled]):active {
-  color: #ffffff;
-  background-color: #0E9A56;
-  border-color: #0E9A56;
-}
-
-.emotion-1[disabled] {
-  color: #ffffff;
-  background-color: #9DDCBE;
-  border-color: #9DDCBE;
-}
-
-<button
-  className="emotion-1"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  <div
-    className="emotion-0"
-    style={
-      Object {
-        "transform": "scale(0.4)",
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-    <div
-      style={
-        Object {
-          "backgroundColor": "#ffffff",
-        }
-      }
-    />
-  </div>
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'success',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+  large: false
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8244,161 +8253,13 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
   type: 'success',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #10AC60;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #40BD80;
-  border-color: #40BD80;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #ffffff;
-  background-color: #0E9A56;
-  border-color: #0E9A56;
-}
-
-.emotion-0[disabled] {
-  color: #ffffff;
-  background-color: #9DDCBE;
-  border-color: #9DDCBE;
-}
-
-<button
-  className="emotion-0"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'success',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #10AC60;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #40BD80;
-  border-color: #40BD80;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #ffffff;
-  background-color: #0E9A56;
-  border-color: #0E9A56;
-}
-
-.emotion-0[disabled] {
-  color: #ffffff;
-  background-color: #9DDCBE;
-  border-color: #9DDCBE;
-}
-
-<button
-  className="emotion-0"
-  disabled={true}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-</button>
-`;
-
-exports[`Button Combos test { disabled: true,
-  type: 'success',
-  showRipple: true,
+  showRipple: false,
   loading: true,
-  large: false } 1`] = `
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8535,11 +8396,310 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
+exports[`Button Combos test {
+  disabled: true,
+  type: 'success',
+  showRipple: true,
+  loading: false,
+  large: false
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #10AC60;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #40BD80;
+  border-color: #40BD80;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
+  background-color: #0E9A56;
+  border-color: #0E9A56;
+}
+
+.emotion-0[disabled] {
+  color: #ffffff;
+  background-color: #9DDCBE;
+  border-color: #9DDCBE;
+}
+
+<button
+  className="emotion-0"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'success',
+  showRipple: true,
+  loading: false,
+  large: true
+} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #10AC60;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #40BD80;
+  border-color: #40BD80;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
+  background-color: #0E9A56;
+  border-color: #0E9A56;
+}
+
+.emotion-0[disabled] {
+  color: #ffffff;
+  background-color: #9DDCBE;
+  border-color: #9DDCBE;
+}
+
+<button
+  className="emotion-0"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
   type: 'success',
   showRipple: true,
   loading: true,
-  large: true } 1`] = `
+  large: false
+} 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  width: 70px;
+}
+
+.emotion-0 > div {
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+}
+
+.emotion-0 > div:first-of-type {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.emotion-0 > div:nth-of-type(2n) {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.emotion-1 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #10AC60;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-1[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-1:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #40BD80;
+  border-color: #40BD80;
+}
+
+.emotion-1:not([disabled]):active {
+  color: #ffffff;
+  background-color: #0E9A56;
+  border-color: #0E9A56;
+}
+
+.emotion-1[disabled] {
+  color: #ffffff;
+  background-color: #9DDCBE;
+  border-color: #9DDCBE;
+}
+
+<button
+  className="emotion-1"
+  disabled={true}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  <div
+    className="emotion-0"
+    style={
+      Object {
+        "transform": "scale(0.4)",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffffff",
+        }
+      }
+    />
+  </div>
+</button>
+`;
+
+exports[`Button Combos test {
+  disabled: true,
+  type: 'success',
+  showRipple: true,
+  loading: true,
+  large: true
+} 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
