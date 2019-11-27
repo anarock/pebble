@@ -22,7 +22,7 @@ describe("Button Combos test", () => {
 
   const _combos = combos(_props);
 
-  test.each(_combos)("%o", props => {
+  test.each(_combos)("%p", props => {
     const button = renderer.create(
       <Button {...props} onClick={noop}>
         Submit
