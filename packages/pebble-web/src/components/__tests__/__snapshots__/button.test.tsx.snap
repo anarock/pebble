@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button Combos test { disabled: false,
-  type: 'alert',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -76,11 +72,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'alert',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -152,11 +144,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'alert',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -307,11 +295,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'alert',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -462,105 +446,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'alert',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #D32F02;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #D94C26;
-  border-color: #D94C26;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #ffffff;
-  background-color: #BD2900;
-  border-color: #BD2900;
-}
-
-.emotion-0[disabled] {
-  color: #ffffff;
-  background-color: #EFBBAD;
-  border-color: #EFBBAD;
-}
-
-<button
-  className="emotion-0"
-  disabled={false}
-  onClick={[Function]}
-  style={
-    Object {
-      "width": undefined,
-    }
-  }
->
-  Submit
-  <canvas
-    height={0}
-    onDragOver={[Function]}
-    onMouseDown={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "borderRadius": "inherit",
-        "height": "100%",
-        "left": 0,
-        "position": "absolute",
-        "top": 0,
-        "width": "100%",
-      }
-    }
-    width={0}
-  />
-</button>
-`;
-
-exports[`Button Combos test { disabled: false,
-  type: 'alert',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -650,11 +536,97 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'alert',
-  showRipple: true,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"loading":false,"large":true} 1`] = `
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #D32F02;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #D94C26;
+  border-color: #D94C26;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
+  background-color: #BD2900;
+  border-color: #BD2900;
+}
+
+.emotion-0[disabled] {
+  color: #ffffff;
+  background-color: #EFBBAD;
+  border-color: #EFBBAD;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onClick={[Function]}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
+>
+  Submit
+  <canvas
+    height={0}
+    onDragOver={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "borderRadius": "inherit",
+        "height": "100%",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+    width={0}
+  />
+</button>
+`;
+
+exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -805,11 +777,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'alert',
-  showRipple: true,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -960,11 +928,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'link',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -1028,11 +992,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'link',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -1096,11 +1056,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'link',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -1243,11 +1199,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'link',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -1390,11 +1342,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'link',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -1458,11 +1406,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'link',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -1526,11 +1470,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'link',
-  showRipple: true,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -1673,11 +1613,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'link',
-  showRipple: true,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -1820,11 +1756,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'primary',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":false,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -1896,11 +1828,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'primary',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":false,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -1972,11 +1900,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'primary',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":false,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -2127,11 +2051,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'primary',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":false,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -2282,11 +2202,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'primary',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -2376,11 +2292,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'primary',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -2470,11 +2382,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'primary',
-  showRipple: true,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -2625,11 +2533,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'primary',
-  showRipple: true,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -2780,11 +2684,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'secondary',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":false,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -2856,11 +2756,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'secondary',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":false,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -2932,11 +2828,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'secondary',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":false,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -3087,11 +2979,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'secondary',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":false,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -3242,11 +3130,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'secondary',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":true,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -3336,11 +3220,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'secondary',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":true,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -3430,11 +3310,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'secondary',
-  showRipple: true,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":true,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -3585,11 +3461,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'secondary',
-  showRipple: true,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":true,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -3740,11 +3612,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'success',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"success","showRipple":false,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -3816,11 +3684,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'success',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"success","showRipple":false,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -3892,11 +3756,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'success',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"success","showRipple":false,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -4047,11 +3907,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'success',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"success","showRipple":false,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -4202,11 +4058,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'success',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -4296,11 +4148,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'success',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -4390,11 +4238,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'success',
-  showRipple: true,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -4545,11 +4389,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: false,
-  type: 'success',
-  showRipple: true,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -4700,11 +4540,7 @@ exports[`Button Combos test { disabled: false,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'alert',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -4775,11 +4611,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'alert',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -4850,11 +4682,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'alert',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -5005,11 +4833,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'alert',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -5160,11 +4984,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'alert',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -5235,11 +5055,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'alert',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -5310,11 +5126,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'alert',
-  showRipple: true,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -5465,11 +5277,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'alert',
-  showRipple: true,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -5620,11 +5428,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -5687,11 +5491,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -5754,11 +5554,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -5901,11 +5697,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -6048,11 +5840,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -6115,11 +5903,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -6182,11 +5966,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: true,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -6329,11 +6109,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'link',
-  showRipple: true,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -6476,11 +6252,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -6551,11 +6323,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -6626,11 +6394,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -6781,11 +6545,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -6936,11 +6696,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -7011,11 +6767,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -7086,11 +6838,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
-  showRipple: true,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -7241,11 +6989,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'primary',
-  showRipple: true,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -7396,11 +7140,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'secondary',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":false,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -7471,11 +7211,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'secondary',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":false,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -7546,11 +7282,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'secondary',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":false,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -7701,11 +7433,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'secondary',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":false,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -7856,11 +7584,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'secondary',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":true,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -7931,11 +7655,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'secondary',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":true,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -8006,11 +7726,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'secondary',
-  showRipple: true,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":true,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -8161,11 +7877,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'secondary',
-  showRipple: true,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":true,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -8316,11 +8028,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'success',
-  showRipple: false,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -8391,11 +8099,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'success',
-  showRipple: false,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -8466,11 +8170,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'success',
-  showRipple: false,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -8621,11 +8321,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'success',
-  showRipple: false,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -8776,11 +8472,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'success',
-  showRipple: true,
-  loading: false,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,"loading":false,"large":false} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -8851,11 +8543,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'success',
-  showRipple: true,
-  loading: false,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,"loading":false,"large":true} 1`] = `
 .emotion-0 {
   line-height: 23px;
   height: 40px;
@@ -8926,11 +8614,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'success',
-  showRipple: true,
-  loading: true,
-  large: false } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,"loading":true,"large":false} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
@@ -9081,11 +8765,7 @@ exports[`Button Combos test { disabled: true,
 </button>
 `;
 
-exports[`Button Combos test { disabled: true,
-  type: 'success',
-  showRipple: true,
-  loading: true,
-  large: true } 1`] = `
+exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,"loading":true,"large":true} 1`] = `
 @keyframes animation-0 {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
