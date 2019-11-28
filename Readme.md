@@ -1,5 +1,7 @@
 # pebble
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/anarock/pebble.svg)](https://greenkeeper.io/)
+
 A design system comprising of component and utilities creating using React.
 It consists of:
 

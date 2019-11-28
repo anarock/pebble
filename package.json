@@ -45,7 +45,7 @@
     "@storybook/addon-viewport": "^5.0.10",
     "@storybook/addons": "^5.0.10",
     "@storybook/react": "^5.0.10",
-    "@testing-library/jest-dom": "4.2.3",
+    "@testing-library/jest-dom": "4.2.4",
     "@testing-library/react": "^9.3.0",
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
@@ -81,7 +81,7 @@
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",
     "execa": "^3.3.0",
-    "file-loader": "^4.2.0",
+    "file-loader": "^5.0.2",
     "husky": "^3.0.9",
     "imagemin-lint-staged": "^0.4.0",
     "intersection-observer": "^0.7.0",
@@ -135,6 +135,11 @@
       "imagemin-lint-staged",
       "yarn build:icons",
       "git add"
+    ]
+  },
+  "greenkeeper": {
+    "ignore": [
+      "@types/rheostat"
     ]
   }
 }

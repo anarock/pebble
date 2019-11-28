@@ -45,5 +45,10 @@
   },
   "devDependencies": {
     "pebble-shared": "^1.0.7"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "rheostat"
+    ]
   }
 }
