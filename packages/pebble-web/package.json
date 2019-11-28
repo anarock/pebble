@@ -30,20 +30,25 @@
   },
   "dependencies": {
     "date-fns": "^2.7.0",
-    "emotion": "^10.0.23",
+    "emotion": "^9.2.12",
     "is-in-browser": "^1.1.3",
     "just-debounce-it": "^1.1.0",
     "mitt": "^1.2.0",
     "react-calendar": "^2.19.2",
     "react-ink": "^6.4.0",
     "react-popper": "^1.3.6",
-    "react-spring": "^8.0.27",
-    "rheostat": "4.1.0",
+    "react-spring": "^7.2.1",
+    "rheostat": "2.2.0",
     "rifm": "^0.10.1",
     "scroll-into-view-if-needed": "^2.2.20",
     "utility-types": "^3.10.0"
   },
   "devDependencies": {
     "pebble-shared": "^1.0.7"
+  },
+  "greenkeeper": {
+    "ignore": [
+      "rheostat"
+    ]
   }
 }
