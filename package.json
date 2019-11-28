@@ -30,6 +30,7 @@
     "@babel/preset-typescript": "^7.6.0",
     "@babel/runtime": "^7.6.0",
     "@dump247/storybook-state": "^1.5.2",
+    "@emotion/core": "^10.0.22",
     "@rollup/plugin-replace": "^2.2.1",
     "@storybook/addon-a11y": "^5.0.10",
     "@storybook/addon-actions": "^5.0.10",
