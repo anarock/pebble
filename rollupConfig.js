@@ -20,6 +20,7 @@ export function getRollupConfig(pkg) {
   };
   const externals = [
     "react-calendar/dist/Calendar",
+    "react-spring/renderprops.cjs",
     ...Object.keys(pkg.peerDependencies || {}),
     ...Object.keys(pkg.dependencies || {})
   ];

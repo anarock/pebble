@@ -7,7 +7,7 @@ import {
   ToastType,
   ToastPosition
 } from "./typings/Toast";
-import { Transition, animated } from "react-spring";
+import { Transition, animated } from "react-spring/renderprops.cjs";
 import { cx } from "emotion";
 import mitt from "mitt";
 import { animationConfig } from "../utils/animation";
