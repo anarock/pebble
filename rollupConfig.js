@@ -4,7 +4,7 @@ import sourceMaps from "rollup-plugin-sourcemaps";
 import babel from "rollup-plugin-babel";
 import commonjs from "rollup-plugin-commonjs";
 import cleanup from "rollup-plugin-cleanup";
-import replace from "rollup-plugin-replace";
+import replace from "@rollup/plugin-replace";
 import path from "path";
 const babelConfig = {
   ...require(path.resolve(__dirname, "../../babel.config")),
@@ -19,18 +19,20 @@ export function getRollupConfig(pkg) {
     "react-dom": "ReactDOM"
   };
   const externals = [
-    "react-calendar/dist/entry.nostyle",
+    "react-calendar/dist/Calendar",
     ...Object.keys(pkg.peerDependencies || {}),
     ...Object.keys(pkg.dependencies || {})
   ];
 
   function external(id) {
     if (externals.includes(id)) return true;
+    if (/^date-fns/.test(id)) return true;
     return /^@babel\/runtime/.test(id);
   }
 
   const plugins = [
     resolve({
+      browser: true,
       extensions: [".js", ".jsx", ".json"]
     }),
     commonjs(),

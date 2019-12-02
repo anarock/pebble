@@ -4,7 +4,7 @@ import cheerio from "cheerio";
 
 declare global {
   namespace jest {
-    interface Matchers<R> {
+    interface Matchers<R, T> {
       toNotBeInDOM(selector: string): R;
     }
   }
@@ -16,12 +16,13 @@ expect.extend({
 
     if ($.html(selector)) {
       return {
-        message: colors.green(`${received.name()} is not present in the DOM.`),
+        message: () =>
+          colors.green(`${received.name()} is not present in the DOM.`),
         pass: true
       };
     } else {
       return {
-        message: colors.red(`${received.name()} is present in the DOM.`),
+        message: () => colors.red(`${received.name()} is present in the DOM.`),
         pass: false
       };
     }

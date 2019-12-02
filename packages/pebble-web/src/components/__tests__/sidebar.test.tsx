@@ -46,10 +46,10 @@ describe("Sidebar", () => {
     );
 
     fireEvent.click(getByText("Open Sidebar"));
-    jest.runAllTimers();
+    jest.runOnlyPendingTimers();
     await waitForElement(() => getByText("Sidebar Content"));
     fireEvent.click(getByTestId("shadowArea"));
-    jest.runAllTimers();
+    jest.runOnlyPendingTimers();
     await waitForElement(() => getByText("Sidebar Content"));
   });
 
@@ -60,7 +60,7 @@ describe("Sidebar", () => {
     );
 
     fireEvent.click(getByText("Open Sidebar"));
-    jest.runAllTimers();
+    jest.runOnlyPendingTimers();
     await waitForElement(() => getByText("Sidebar Content"));
     const waitToBeRemovedPromise = waitForElementToBeRemoved(() =>
       getByText("Sidebar Content")

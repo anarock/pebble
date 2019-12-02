@@ -9,10 +9,10 @@ import {
 } from "./typings/Toast";
 import { Transition, animated } from "react-spring";
 import { cx } from "emotion";
-import Mitt from "mitt";
+import mitt from "mitt";
 import { animationConfig } from "../utils/animation";
 
-const emitter = /*#__PURE__*/ new Mitt();
+const emitter = /*#__PURE__*/ mitt();
 
 export const _colors = {
   success: colors.emerald.base,

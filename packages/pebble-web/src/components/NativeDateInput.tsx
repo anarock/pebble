@@ -1,5 +1,5 @@
 import * as React from "react";
-import { format, parse } from "date-fns";
+import { format, parseISO } from "date-fns";
 import { DateInputProps } from "./typings/DateInput";
 import Input from "./Input";
 
@@ -7,7 +7,7 @@ export default class NativeDateInput extends React.PureComponent<
   DateInputProps
 > {
   private onDateInputChange = (value: string) => {
-    const date = parse(value);
+    const date = parseISO(value);
     this.props.onChange(date && date.getTime());
   };
 

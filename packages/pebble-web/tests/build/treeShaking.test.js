@@ -1,42 +1,50 @@
-const replace = require("rollup-plugin-replace");
+const replace = require("@rollup/plugin-replace");
 
 const path = require("path");
 const { rollup } = require("rollup");
 const terser = require("rollup-plugin-terser").terser;
 
 const pkg = require("../../package.json");
-const external = [
-  "react-calendar/dist/entry.nostyle",
+const externalDeps = [
+  "react-calendar/dist/Calendar",
   ...Object.keys(pkg.peerDependencies),
   ...Object.keys(pkg.dependencies)
 ];
 
+function external(id) {
+  if (externalDeps.includes(id)) return true;
+  if (/^date-fns/.test(id)) return true;
+  return false;
+}
+
 async function compress() {
   const bundle = await rollup({
-    input: path.resolve(__dirname, "fixture.js"),
     external,
-    treeshake: {
-      pureExternalModules: true
+    input: path.resolve(__dirname, "fixture.js"),
+    onwarn: (warning, handle) => {
+      if (warning.code !== "EMPTY_BUNDLE") {
+        handle(warning);
+      }
     },
     plugins: [
       terser({
-        toplevel: true,
-        mangle: false,
         compress: {
           passes: 3,
           pure_getters: true,
           side_effects: true
         },
+        mangle: false,
         output: {
           beautify: true
-        }
+        },
+        toplevel: true
       }),
       replace({
         "process.env.NODE_ENV": JSON.stringify("production")
       })
     ],
-    onwarn: (warning, handle) => {
-      if (warning.code !== "EMPTY_BUNDLE") handle(warning);
+    treeshake: {
+      pureExternalModules: true
     }
   });
 
