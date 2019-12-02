@@ -51,7 +51,7 @@ class Search extends React.PureComponent<SearchProps> {
         {clearable && (
           <div
             className={cx(clearContainer, {
-              __display: value && !!value.length
+              __display: !!value && !!value.length
             })}
             onClick={() => {
               if (this.searchInputRef.current) {

@@ -87,9 +87,9 @@ class Input extends React.PureComponent<InputProps, InputState> {
     const _inputClassName = cx(
       inputStyle,
       {
-        [inputDisabledStyle]: disabled,
-        [inputReadOnlyStyle]: readOnly,
-        [inputTextAreaStyle]: textArea
+        [inputDisabledStyle]: !!disabled,
+        [inputReadOnlyStyle]: !!readOnly,
+        [inputTextAreaStyle]: !!textArea
       },
       inputClassName
     );
@@ -104,20 +104,20 @@ class Input extends React.PureComponent<InputProps, InputState> {
     };
 
     const highlightClassName = cx(highlightStyle, {
-      _pebble_input_highlight_focused: isFocused,
+      _pebble_input_highlight_focused: !!isFocused,
       _pebble_input_highlight_state: !!errorMessage || !!successMessage,
-      _pebble_input_highlight_read_only: readOnly,
-      _pebble_input_highlight_disabled: disabled
+      _pebble_input_highlight_read_only: !!readOnly,
+      _pebble_input_highlight_disabled: !!disabled
     });
 
     const labelClassName = cx(labelStyle, {
-      _pebble_input_label_focused: isFocused || !!value || fixLabelAtTop
+      _pebble_input_label_focused: !!(isFocused || !!value || fixLabelAtTop)
     });
 
     const _wrapperStyle = cx(
       wrapperStyle,
       {
-        _pebble_input_wrapper_textarea: textArea
+        _pebble_input_wrapper_textarea: !!textArea
       },
       className
     );

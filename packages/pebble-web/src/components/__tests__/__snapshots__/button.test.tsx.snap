@@ -145,6 +145,20 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -168,8 +182,8 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -282,6 +296,20 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -305,8 +333,8 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -599,6 +627,20 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -622,8 +664,8 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -736,6 +778,20 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -759,8 +815,8 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -1001,6 +1057,20 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1024,8 +1094,8 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -1130,6 +1200,20 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1153,8 +1237,8 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -1387,6 +1471,20 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"l
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1410,8 +1508,8 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"l
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -1516,6 +1614,20 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"l
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1539,8 +1651,8 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"l
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -1789,6 +1901,20 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":fals
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":false,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1812,8 +1938,8 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":fals
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -1926,6 +2052,20 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":fals
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":false,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1949,8 +2089,8 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":fals
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -2243,6 +2383,20 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2266,8 +2420,8 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -2380,6 +2534,20 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2403,8 +2571,8 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -2661,6 +2829,20 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":fa
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":false,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2684,8 +2866,8 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":fa
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -2798,6 +2980,20 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":fa
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":false,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2821,8 +3017,8 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":fa
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -3115,6 +3311,20 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":tr
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":true,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3138,8 +3348,8 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":tr
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -3252,6 +3462,20 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":tr
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":true,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3275,8 +3499,8 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":tr
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -3533,6 +3757,20 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":fals
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"success","showRipple":false,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3556,8 +3794,8 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":fals
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -3670,6 +3908,20 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":fals
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"success","showRipple":false,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3693,8 +3945,8 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":fals
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -3987,6 +4239,20 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4010,8 +4276,8 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -4124,6 +4390,20 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true
 `;
 
 exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4147,8 +4427,8 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -4403,6 +4683,20 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4426,8 +4720,8 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -4540,6 +4834,20 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4563,8 +4871,8 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -4819,6 +5127,20 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"l
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4842,8 +5164,8 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"l
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -4956,6 +5278,20 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"l
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4979,8 +5315,8 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"l
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -5219,6 +5555,20 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"l
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5242,8 +5592,8 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"l
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -5348,6 +5698,20 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"l
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5371,8 +5735,8 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"l
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -5603,6 +5967,20 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"lo
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5626,8 +6004,8 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"lo
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -5732,6 +6110,20 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"lo
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5755,8 +6147,8 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"lo
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -6003,6 +6395,20 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6026,8 +6432,8 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -6140,6 +6546,20 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6163,8 +6583,8 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -6419,6 +6839,20 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6442,8 +6876,8 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -6556,6 +6990,20 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6579,8 +7027,8 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -6835,6 +7283,20 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":fal
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":false,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6858,8 +7320,8 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":fal
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -6972,6 +7434,20 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":fal
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":false,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6995,8 +7471,8 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":fal
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -7251,6 +7727,20 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":tru
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":true,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7274,8 +7764,8 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":tru
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -7388,6 +7878,20 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":tru
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":true,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7411,8 +7915,8 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":tru
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -7667,6 +8171,20 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7690,8 +8208,8 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -7804,6 +8322,20 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7827,8 +8359,8 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -8083,6 +8615,20 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,"loading":true,"large":false} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8106,8 +8652,8 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {
@@ -8220,6 +8766,20 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,
 `;
 
 exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,"loading":true,"large":true} 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8243,8 +8803,8 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {

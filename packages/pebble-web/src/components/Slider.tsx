@@ -24,8 +24,8 @@ const Slider: React.FunctionComponent<SliderProps> = ({
 }) => {
   overrideRheostatStyles();
   const mainClass = cx(className, {
-    __pebble__slider__disabled: disabled,
-    __pebble__slider__large: large
+    __pebble__slider__disabled: !!disabled,
+    __pebble__slider__large: !!large
   });
 
   const _values = Array.isArray(values) ? values.slice(0) : values || [];

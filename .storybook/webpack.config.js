@@ -1,3 +1,6 @@
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
+const path = require("path");
+
 module.exports = ({ config, mode }) => {
   // This overrides the default svg loader for the the svgs present in font directory.
   // The inlining of the SVGs was creating problem
@@ -13,16 +16,33 @@ module.exports = ({ config, mode }) => {
         loader: require.resolve("babel-loader")
       },
       {
-        loader: require.resolve("awesome-typescript-loader")
-      },
-      {
-        loader: require.resolve("@storybook/addon-storysource/loader"),
+        loader: require.resolve("awesome-typescript-loader"),
         options: {
-          parser: "typescript"
+          useCache: true,
+          transpileOnly: true
         }
       }
     ]
   });
+
+  config.module.rules.push({
+    test: /\.story\.tsx?$/,
+    loaders: [
+      {
+        loader: require.resolve("@storybook/source-loader"),
+        options: {
+          parser: "typescript"
+        }
+      }
+    ],
+    enforce: "pre"
+  });
+
+  config.plugins.unshift(
+    new ForkTsCheckerWebpackPlugin({
+      tsconfig: path.resolve(__dirname, "../tsconfig.json")
+    })
+  );
 
   config.resolve.extensions.push(".ts", ".tsx", ".json");
   return config;

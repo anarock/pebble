@@ -1,6 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Loader snapshot 1`] = `
+@keyframes animation-0 {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -24,8 +38,8 @@ exports[`Loader snapshot 1`] = `
   height: 18px;
   border-radius: 100%;
   display: inline-block;
-  -webkit-animation: animation-zl77bl 1.4s infinite ease-in-out both;
-  animation: animation-zl77bl 1.4s infinite ease-in-out both;
+  -webkit-animation: animation-0 1.4s infinite ease-in-out both;
+  animation: animation-0 1.4s infinite ease-in-out both;
 }
 
 .emotion-0 > div:first-of-type {

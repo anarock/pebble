@@ -27,7 +27,7 @@ export default class Switch extends React.PureComponent<
     return (
       <label
         className={cx(className, fixedLabelStyle, {
-          [disabledStyle]: disabled
+          [disabledStyle]: !!disabled
         })}
       >
         <span className={labelTextStyle}>{label}</span>
