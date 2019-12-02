@@ -1,4 +1,4 @@
 declare module "@storybook/addon-viewport" {
-  import { StoryDecorator } from "@storybook/react";
-  export const withViewport: StoryDecorator;
+  import { DecoratorFn } from "@storybook/react";
+  export const withViewport: DecoratorFn;
 }

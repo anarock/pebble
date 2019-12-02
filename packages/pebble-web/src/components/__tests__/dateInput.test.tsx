@@ -23,7 +23,7 @@ describe("DateInput", () => {
 
     expect(changeSpy.calledOnce).toBeTruthy();
 
-    const argument = format(changeSpy.getCall(0).args[0], "DD-MM-YYYY");
+    const argument = format(changeSpy.getCall(0).args[0], "dd-MM-yyyy");
     expect(argument).toEqual("01-12-2012");
   });
 });

@@ -5,7 +5,8 @@
     "./stories",
     "./typings",
     "./tests",
-    "./src/**/__tests__"
+    "./src/**/__tests__",
+    "../../typings/npm"
   ],
   "compilerOptions": {
     "jsx": "react"

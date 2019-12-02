@@ -45,7 +45,7 @@ describe("Calendar", () => {
 
     const argument = applySpy
       .getCall(0)
-      .args[0].map((x: Date) => format(x, "DD-MM-YYYY"));
+      .args[0].map((x: Date) => format(x, "dd-MM-yyyy"));
     expect(argument).toEqual(["01-12-2012", "11-12-2012"]);
 
     calendar
@@ -88,8 +88,8 @@ describe("Calendar", () => {
 
     const argument = applySpy.getCall(0).args[0].map((x: Date) => getTime(x));
     expect(argument).toEqual([
-      getTime(startOfDay("12/01/2012")),
-      getTime(endOfDay("12/01/2012"))
+      getTime(startOfDay(new Date().setFullYear(2012, 11, 1))),
+      getTime(endOfDay(new Date().setFullYear(2012, 11, 1)))
     ]); // MM/DD/YYYY
   });
 
@@ -121,7 +121,7 @@ describe("Calendar", () => {
       .at(1)
       .simulate("click");
 
-    const argument = format(applySpy.getCall(0).args[0], "DD-MM-YYYY");
+    const argument = format(applySpy.getCall(0).args[0], "dd-MM-yyyy");
     expect(argument).toEqual("01-12-2012");
 
     calendar

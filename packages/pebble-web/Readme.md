@@ -60,6 +60,11 @@ This, however, comes at a cost of supporting only modern browsers. If you need t
 </script>
 ```
 
+## Tree Shaking
+
+Pebble is fully tree shakeable with this [rollup config](/tests/build/treeShaking.test.js) present in tests.
+//TODO Create config and tests for webpack as well.
+
 ## Acknowledgements
 
 We use [Chromaticqa](https://www.chromaticqa.com/) for visual regression testing and it is awesome.

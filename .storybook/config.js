@@ -1,8 +1,16 @@
-import { configure, addParameters } from "@storybook/react";
+import { configure, addParameters, addDecorator } from "@storybook/react";
 import { withOptions } from "@storybook/addon-options";
 import "@storybook/addon-console";
-import "storybook-chromatic";
 import { colors } from "pebble-shared";
+import { withKnobs } from "@storybook/addon-knobs";
+import centered from "@storybook/addon-centered/react";
+import { withA11y } from "@storybook/addon-a11y";
+import { withConsole } from "@storybook/addon-console";
+
+addDecorator(centered);
+addDecorator(withKnobs);
+addDecorator(withA11y);
+addDecorator((storyFn, context) => withConsole()(storyFn)(context));
 
 addParameters({
   backgrounds: [
@@ -28,7 +36,7 @@ withOptions({
    * URL for name in top left corner to link to
    * @type {String}
    */
-  url: "https://github.com/ritz078/pebble",
+  url: "https://github.com/anarock/pebble",
   /**
    * show addon panel as a vertical panel on the right
    * @type {Boolean}
@@ -36,8 +44,9 @@ withOptions({
   addonPanelInRight: true
 });
 
-// automatically import all files ending in *.stories.tsx
-const req = require.context("../packages", true, /.stories.tsx$/);
+const req = require.context("../packages", true, /.story.tsx$/);
+
+req.keys().forEach(filename => req(filename));
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));

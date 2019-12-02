@@ -3,7 +3,9 @@ import { cx } from "emotion";
 import { TabsState, TabsProps, TabSectionProps } from "./typings/Tabs";
 import { tabStyle, tabsWrap, selectedTabStyle } from "./styles/Tabs.styles";
 
-const TabSelectedContext = React.createContext(null as string | null);
+const TabSelectedContext = /*@__PURE__*/ React.createContext<string | null>(
+  null
+);
 
 export class Tabs extends React.PureComponent<TabsProps, TabsState> {
   state: Readonly<TabsState> = {

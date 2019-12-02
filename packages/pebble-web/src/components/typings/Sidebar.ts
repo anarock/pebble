@@ -3,4 +3,5 @@ export interface SidebarProps {
   width: number;
   onClose: () => void;
   closeOnOutsideClick?: boolean;
+  onOutsideClick?: () => void;
 }
