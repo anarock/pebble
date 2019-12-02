@@ -1,5 +1,9 @@
 import * as React from "react";
-import { State, Transition, TransitionProps } from "react-spring/renderprops";
+import {
+  State,
+  Transition,
+  TransitionProps
+} from "react-spring/renderprops.cjs";
 import { animationConfig } from "../../utils/animation";
 import { Omit } from "utility-types";
 

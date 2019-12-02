@@ -7,7 +7,7 @@ const terser = require("rollup-plugin-terser").terser;
 const pkg = require("../../package.json");
 const externalDeps = [
   "react-calendar/dist/Calendar",
-  "react-spring/renderprops",
+  "react-spring/renderprops.cjs",
   ...Object.keys(pkg.peerDependencies),
   ...Object.keys(pkg.dependencies)
 ];
