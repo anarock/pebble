@@ -1,5 +1,5 @@
 import * as React from "react";
-import { State, Transition, TransitionProps } from "react-spring";
+import { State, Transition, TransitionProps } from "react-spring/renderprops";
 import { animationConfig } from "../../utils/animation";
 import { Omit } from "utility-types";
 
@@ -13,9 +13,7 @@ interface MountTransitionProps
   ) => React.ReactNode;
 }
 
-const MountTransition: React.FunctionComponent<
-  MountTransitionProps
-> = props => {
+const MountTransition: React.FunctionComponent<MountTransitionProps> = props => {
   return (
     <Transition items={props.visible} {...animationConfig} {...props}>
       {(show, state, index) =>

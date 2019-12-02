@@ -5,7 +5,7 @@ import {
   sidebarWrapperStyle
 } from "./styles/Sidebar.styles";
 import { SidebarProps } from "./typings/Sidebar";
-import { Transition, animated } from "react-spring";
+import { Transition, animated } from "react-spring/renderprops";
 import Ink from "react-ink";
 import { css, cx } from "emotion";
 import { disableScrollY } from "../theme/styles";
