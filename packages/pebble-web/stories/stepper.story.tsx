@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Stepper from "../src/components/Stepper";
-import { css, cx } from "emotion";
+import { css } from "@emotion/core";
 import { action } from "@storybook/addon-actions";
 
 const x = css({
@@ -38,14 +38,14 @@ const data = [
 
 storiesOf("Components/Stepper", module).add("Default", () => (
   <Stepper
-    className={x}
+    css={x}
     data={data}
     keyExtractor={item => item.id}
     renderContentElement={({ item }) => (
-      <div className={contentWrapper}>
-        <div className={label}>{item.label}</div>
-        <div className={iconSize}>
-          <i className={cx("pi", item.icon)} />
+      <div css={contentWrapper}>
+        <div css={label}>{item.label}</div>
+        <div css={iconSize}>
+          <i css={["pi", item.icon]} />
         </div>
       </div>
     )}

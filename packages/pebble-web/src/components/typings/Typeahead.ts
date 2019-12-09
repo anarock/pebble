@@ -1,5 +1,6 @@
 import * as React from "react";
 import { SimpleInputProps } from "./Input";
+import { Interpolation } from "@emotion/css";
 
 type FocusEvent = (
   event: React.KeyboardEvent<HTMLInputElement> | React.FocusEvent<HTMLElement>
@@ -12,7 +13,7 @@ export interface SearchBoxArgs {
 }
 
 export interface TypeaheadProps<OptionType> {
-  className?: string;
+  styles?: Interpolation;
   searchBox?: (
     args: SearchBoxArgs,
     props: TypeaheadProps<OptionType>
@@ -23,7 +24,7 @@ export interface TypeaheadProps<OptionType> {
     value: OptionType | undefined,
     props: TypeaheadProps<OptionType>
   ) => void;
-  dropdownClassName?: string;
+  dropdownStyles?: Interpolation;
   initialValue?: string;
   disabled?: boolean;
   errorMessage?: string;

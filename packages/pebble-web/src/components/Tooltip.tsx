@@ -9,9 +9,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
     isOpen: !!this.props.isOpen
   };
 
-  private defaultTooltip = () => (
-    <span className={textStyle}>{this.props.text}</span>
-  );
+  private defaultTooltip = () => <span css={textStyle}>{this.props.text}</span>;
 
   private showTooltip = () => {
     if (this.props.disabled) return;
@@ -42,7 +40,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
         popperBackgroundColor={isError ? colors.red.base : colors.gray.darker}
         modifiers={modifiers}
         isOpen={this.props.isOpen || this.state.isOpen}
-        popperClassName={popperStyle}
+        popperStyles={popperStyle}
         closeOnOutsideClick={false}
       >
         {this.props.renderElement || this.defaultTooltip}

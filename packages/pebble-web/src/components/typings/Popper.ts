@@ -1,5 +1,6 @@
 import * as React from "react";
 import { PopperProps as PopperProps_ } from "react-popper";
+import { Interpolation } from "@emotion/css";
 
 type Label =
   | string
@@ -13,7 +14,7 @@ export interface PopperProps
   children: (args: { toggle: () => void; isOpen: boolean }) => React.ReactNode;
   isOpen?: boolean;
   controlled?: boolean;
-  popperClassName?: string;
+  popperStyles?: Interpolation;
   closeOnOutsideClick: boolean;
   onOutsideClick?: () => void;
 }

@@ -1,5 +1,7 @@
+import { Interpolation } from "@emotion/css";
+
 export interface LoaderProps {
   color?: string;
-  className?: string;
+  styles?: Interpolation;
   scale?: number;
 }

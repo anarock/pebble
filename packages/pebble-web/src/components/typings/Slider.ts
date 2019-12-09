@@ -1,7 +1,8 @@
 import { Props } from "rheostat";
+import { Interpolation } from "@emotion/css";
 
 export interface SliderProps extends Props {
-  className?: string;
+  styles?: Interpolation;
   large?: boolean;
   title: string;
   valueLabelExtractor: () => React.ReactNode;

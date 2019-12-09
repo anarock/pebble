@@ -5,7 +5,7 @@ import {
   TypeaheadState,
   SearchBoxArgs
 } from "./typings/Typeahead";
-import { cx } from "emotion";
+
 import Input from "./Input";
 import { optionsWrapper, wrapper } from "./styles/TypeAhead.styles";
 import OutsideClick from "./OutsideClick";
@@ -94,9 +94,9 @@ export default class TypeAhead<OptionType> extends React.PureComponent<
 
   render() {
     const {
-      className,
+      styles,
       searchBox = defaultSearchBox,
-      dropdownClassName,
+      dropdownStyles,
       children
     } = this.props;
 
@@ -110,7 +110,7 @@ export default class TypeAhead<OptionType> extends React.PureComponent<
           })
         }
         disabled={!showSuggestions}
-        className={cx(wrapper, className)}
+        css={[wrapper, styles]}
       >
         {searchBox(
           {
@@ -125,7 +125,7 @@ export default class TypeAhead<OptionType> extends React.PureComponent<
           {transitionStyles => (
             <animated.div
               style={transitionStyles}
-              className={cx(optionsWrapper, dropdownClassName)}
+              css={[optionsWrapper, dropdownStyles]}
             >
               <OptionGroupRadio onChange={this.onSelect}>
                 {children}

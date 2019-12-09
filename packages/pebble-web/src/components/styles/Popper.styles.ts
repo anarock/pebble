@@ -1,4 +1,4 @@
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { constants } from "../../theme";
 
 export const popperStyle = css({

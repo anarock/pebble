@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "emotion";
+
 import {
   iconStyle,
   getButtonStyle,
@@ -18,7 +18,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   onClick,
   width,
   showShadow,
-  className,
+  styles,
   showRipple = true,
   loading,
   size = "small",
@@ -27,14 +27,10 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   const disableAction = disabled || loading;
 
   const filled = size !== "x-small";
-  const _className = cx(
-    getButtonStyle(size, type, !!showShadow, filled),
-    className
-  );
 
   return (
     <button
-      className={_className}
+      css={[getButtonStyle(size, type, !!showShadow, filled), styles]}
       onClick={!disableAction ? onClick : undefined}
       style={{ width }}
       disabled={disabled}
@@ -50,19 +46,23 @@ export const DropDownButton = ({
   isOpen,
   isSelected,
   children,
-  className,
+  styles,
   ...props
 }: DropDownButtonProps) => {
-  const _className = cx(dropDownButtonStyle, {
-    [dropDownButtonDefaultStyle]: !(isOpen || isSelected)
-  });
-
   return (
-    <Button {...props} type="secondary" className={cx(_className, className)}>
+    <Button
+      {...props}
+      type="secondary"
+      css={[
+        dropDownButtonStyle,
+        !(isOpen || isSelected) && dropDownButtonDefaultStyle,
+        styles
+      ]}
+    >
       <React.Fragment>
         {children}{" "}
         <i
-          className={cx("pi pi-arrow-drop-down", iconStyle)}
+          css={["pi pi-arrow-drop-down", iconStyle]}
           style={{
             transform: isOpen ? "rotate(180deg)" : "none"
           }}

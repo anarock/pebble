@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as CSS from "csstype";
+import { Interpolation } from "@emotion/css";
 
 export type ButtonType = "primary" | "secondary" | "link" | "success" | "alert";
 
@@ -11,7 +12,7 @@ export interface ButtonProps {
   type?: ButtonType;
   size?: "x-small" | "small" | "large";
   width?: CSS.WidthProperty<number>;
-  className?: string;
+  styles?: Interpolation;
   showRipple?: boolean;
   loading?: boolean;
   filled?: boolean;

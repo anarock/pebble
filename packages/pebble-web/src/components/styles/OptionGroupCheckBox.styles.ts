@@ -1,5 +1,5 @@
 import * as mixins from "../../theme/mixins";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import {
   optionWrapperMaxHeight,
   searchBoxHeight,

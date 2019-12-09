@@ -1,15 +1,17 @@
+import { Interpolation } from "@emotion/css";
+
 export interface SecondaryInputProps {
   placeholder: string;
   value?: string | number;
   onChange: (text: string) => void;
-  className?: string;
+  styles?: Interpolation;
   required?: boolean;
   infoText?: string;
   readOnly?: boolean;
   successMessage?: string;
   disabled?: boolean;
   errorMessage?: string;
-  inputClassName?: string;
+  inputStyles?: Interpolation;
   loading?: boolean;
   message?: string;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement> &

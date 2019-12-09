@@ -1,7 +1,7 @@
 import * as React from "react";
 import { controlStyle, radioIconStyle } from "../styles/Control.styles";
 import { ControlProps } from "../typings/Control";
-import { cx } from "emotion";
+
 import { colors } from "pebble-shared";
 
 function Control<OptionType>(props: ControlProps<OptionType>) {
@@ -12,11 +12,11 @@ function Control<OptionType>(props: ControlProps<OptionType>) {
     disabled,
     children = ControlView,
     type,
-    className
+    styles
   } = props;
   return (
     <div
-      className={cx(controlStyle, className)}
+      css={[controlStyle, styles]}
       role={type}
       aria-disabled={disabled}
       aria-checked={checked}
@@ -51,12 +51,15 @@ export const ControlView = ({
 
   // Ensure that other styles are not emotion styles.
   // As cx merges styles into one className.
-  const iconClass = cx(radioIconStyle, "pi", {
-    "pi-radio": !!isRadio && !checked,
-    "pi-radio-selected": !!isRadio && !!checked,
-    "pi-checkbox-selected": !isRadio && !!checked,
-    "pi-checkbox-unselected": !isRadio && !checked
-  });
+  const iconClass = [
+    "pi",
+    !!isRadio && !checked && "pi-radio",
+    !!isRadio && !!checked && "pi-radio-selected",
+    !isRadio && !!checked && "pi-checkbox-selected",
+    !isRadio && !checked && "pi-checkbox-unselected"
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   const getColor = () => {
     if (disabled) {
@@ -76,6 +79,7 @@ export const ControlView = ({
           paddingTop: 2
         }}
         className={iconClass}
+        css={radioIconStyle}
       />{" "}
       {label}
     </>

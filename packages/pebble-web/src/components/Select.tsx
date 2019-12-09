@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "emotion";
+
 import { SelectProps } from "./typings/Select";
 import {
   chevronStyle,
@@ -20,12 +20,12 @@ function noop() {}
 
 function Select<OptionType>(props: SelectProps<OptionType>) {
   const {
-    className,
+    styles,
     placeholder,
     required,
     errorMessage,
     value,
-    dropdownClassName,
+    dropdownStyles,
     inputProps,
     fullWidthDropdown,
     onDropdownToggle = noop,
@@ -36,23 +36,25 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
   } = props;
 
   return (
-    <div
-      className={cx(selectWrapper, className, {
-        [relativePosition]: !!fullWidthDropdown
-      })}
-    >
+    <div css={[selectWrapper, styles, !!fullWidthDropdown && relativePosition]}>
       <DropDown
-        dropDownClassName={cx(dropDownClass, dropdownClassName, {
-          [fullWidth]: !!fullWidthDropdown
-        })}
+        dropDownStyles={[
+          dropDownClass,
+          dropdownStyles,
+          !!fullWidthDropdown && fullWidth
+        ]}
         onOutsideClick={isOpen => onDropdownToggle(isOpen)}
         labelComponent={({ toggleDropdown, isOpen }) => {
-          const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {
-            __pebble__select__open: isOpen
-          });
+          const chevron = [
+            "pi",
+            "pi-arrow-drop-down",
+            isOpen && "__pebble__select__open"
+          ]
+            .filter(Boolean)
+            .join(" ");
           return (
             <div
-              className={inputWrapper}
+              css={inputWrapper}
               onClick={
                 disabled
                   ? undefined
@@ -63,8 +65,8 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
               }
             >
               <Input
-                className={selectInputWrapper}
-                inputClassName={selectInput}
+                styles={selectInputWrapper}
+                inputStyles={selectInput}
                 placeholder={placeholder}
                 value={value || ""}
                 onChange={noop}
@@ -75,7 +77,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                 disabled={disabled}
                 {...inputProps}
               />
-              <i className={chevron} />
+              <i css={chevronStyle} className={chevron} />
             </div>
           );
         }}

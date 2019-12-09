@@ -1,6 +1,6 @@
 import * as React from "react";
 import Calendar from "./Calendar";
-import { cx } from "emotion";
+
 import {
   PresetCalendarProps,
   PresetCalendarState
@@ -30,13 +30,9 @@ class PresetCalendar extends React.PureComponent<
     const { defaultValue } = this.props;
 
     return (
-      <Tabs
-        tabs={DATE_TABS}
-        initialSelectedTab="Presets"
-        tabClassName={tabsStyle}
-      >
+      <Tabs tabs={DATE_TABS} initialSelectedTab="Presets" tabStyles={tabsStyle}>
         <TabSection section={DATE_TABS[0]}>
-          <div className={dateBtnsWrap}>
+          <div css={dateBtnsWrap}>
             {this.props.presetDateOptions.map((btn, index) => (
               <Button
                 onClick={() => {
@@ -50,12 +46,12 @@ class PresetCalendar extends React.PureComponent<
                 }}
                 type="primary"
                 size="large"
-                className={cx({
-                  [unSelectedDateButton]: true,
-                  [selectedDateButton]:
-                    btn.dateRange[0] === this.state.startTime &&
-                    btn.dateRange[1] === this.state.endTime
-                })}
+                css={[
+                  unSelectedDateButton,
+                  btn.dateRange[0] === this.state.startTime &&
+                    btn.dateRange[1] === this.state.endTime &&
+                    selectedDateButton
+                ]}
                 key={`${btn.label}-${index}`}
               >
                 {btn.label}

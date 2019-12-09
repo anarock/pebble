@@ -3,7 +3,7 @@ import { constants } from "../src";
 import Option from "../src/components/Option";
 import * as React from "react";
 import OptionGroup from "../src/components/shared/OptionGroup";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { withState } from "@dump247/storybook-state";
 import matchSorter from "match-sorter";
 import { colors } from "pebble-shared";
@@ -208,7 +208,7 @@ class GroupedOptionGroup<
                   key={o.id}
                   value={o.id}
                   label={o.label}
-                  className={group.group_label && subOptionClass}
+                  css={group.group_label && subOptionClass}
                 />
               ))
             ].filter(f => f) as React.ReactNode[]
@@ -228,9 +228,9 @@ class GroupedOptionGroup<
           onChange: this.onSearchBoxValueChange,
           value: this.state.searchBoxValue
         }}
-        className={css({
+        css={{
           maxHeight: "none"
-        })}
+        }}
       >
         {this.state.optionGroupChildren}
       </OptionGroup>

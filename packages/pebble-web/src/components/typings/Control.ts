@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Interpolation } from "@emotion/css";
 
 export interface ControlProps<OptionType> {
   onChange?: (
@@ -11,5 +12,5 @@ export interface ControlProps<OptionType> {
   disabled?: boolean;
   children?: (props: ControlProps<OptionType>) => React.ReactNode;
   type: "radio" | "checkbox";
-  className?: string;
+  styles?: Interpolation;
 }

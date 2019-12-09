@@ -1,3 +1,5 @@
+import { Interpolation } from "@emotion/css";
+
 export type ToastType = "success" | "error";
 
 export type ToastPosition =
@@ -9,7 +11,7 @@ export type ToastPosition =
   | "TOP_RIGHT";
 
 export interface ToastProps {
-  className?: string;
+  styles?: Interpolation;
   defaultTime?: number;
   defaultPosition?: ToastPosition;
 }

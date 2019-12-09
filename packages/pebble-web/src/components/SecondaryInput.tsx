@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "emotion";
+
 import { colors } from "pebble-shared";
 import Loader from "./Loader";
 import {
@@ -66,7 +66,7 @@ export default class SecondaryInput extends React.PureComponent<
   render() {
     const {
       placeholder,
-      inputClassName,
+      inputStyles,
       required,
       infoText,
       value,
@@ -76,7 +76,7 @@ export default class SecondaryInput extends React.PureComponent<
       message,
       readOnly,
       loading,
-      className
+      styles
     } = this.props;
     const { isFocused } = this.state;
 
@@ -87,27 +87,26 @@ export default class SecondaryInput extends React.PureComponent<
       disabled,
       readOnly,
       value: value || "",
-      className: inputStyle,
+      css: inputStyle,
       onChange: this.handleChange
     };
 
-    const inputWrapperClassName = cx(
+    const inputWrapperClassName = [
       inputWrapperStyle,
-      {
-        [inputDisabledStyle]: !!disabled,
-        [inputReadOnlyStyle]: !!readOnly
-      },
-      inputClassName
-    );
+      !!disabled && inputDisabledStyle,
+      !!readOnly && inputReadOnlyStyle,
+      inputStyles
+    ];
 
-    const placeholderClassName = cx(placeholderStyle, {
-      _pebble_secondary_input_label_focused: isFocused || !!value
-    });
+    const placeholderClassName = [
+      placeholderStyle,
+      isFocused || (!!value && "_pebble_secondary_input_label_focused")
+    ];
 
     return (
-      <div className={cx(wrapperStyle, className)}>
+      <div css={[wrapperStyle, styles]}>
         <div
-          className={inputWrapperClassName}
+          css={inputWrapperClassName}
           style={{
             border: `1px solid ${getColor(
               errorMessage,
@@ -120,20 +119,20 @@ export default class SecondaryInput extends React.PureComponent<
           onBlur={this.removeFocus}
         >
           <input {..._inputProps} {...this.props.inputProps} />
-          <label className={placeholderClassName}>
+          <label css={placeholderClassName}>
             {placeholder}
             {required && (
               <span style={{ color: colors.red.base }}>&nbsp;*</span>
             )}
           </label>
           {infoText && !loading && (value || isFocused) && (
-            <label className={infoTextStyle}>{infoText}</label>
+            <label css={infoTextStyle}>{infoText}</label>
           )}
           {loading && <Loader color={colors.violet.base} scale={0.4} />}
         </div>
         {_message && (
           <div
-            className={messageStyle}
+            css={messageStyle}
             style={{ color: getColor(errorMessage, successMessage) }}
           >
             {_message}

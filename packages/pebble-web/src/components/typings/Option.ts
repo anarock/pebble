@@ -1,12 +1,13 @@
 import { ControlProps } from "./Control";
 import { Omit } from "utility-types";
 import * as React from "react";
+import { Interpolation } from "@emotion/css";
 
 export interface OptionProps<OptionType>
   extends Omit<ControlProps<OptionType>, "checked" | "type"> {
   isActive?: boolean;
   isSelected?: boolean;
   multiSelect?: boolean;
-  labelClassName?: string;
+  labelStyles?: Interpolation;
   rightElement?: (props: OptionProps<OptionType>) => React.ReactNode;
 }

@@ -1,10 +1,11 @@
 import * as React from "react";
+import { Interpolation } from "@emotion/css";
 
 export interface RadioGroupProps<OptionType> {
   selected: OptionType;
   onChange: (value: OptionType | undefined, event: React.MouseEvent) => void;
   toggle?: boolean;
-  className?: string;
+  styles?: Interpolation;
   name: string;
   disabled?: boolean;
 }

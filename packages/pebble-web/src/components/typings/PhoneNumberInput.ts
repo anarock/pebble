@@ -1,6 +1,7 @@
 import { SingleSelectProps } from "./Select";
 import { SimpleInputProps } from "./Input";
 import { Omit } from "utility-types";
+import { Interpolation } from "@emotion/css";
 
 export interface PhoneNumberInputProps {
   countryCode: string;
@@ -14,7 +15,7 @@ export interface PhoneNumberInputProps {
   }) => void;
 
   // Optional
-  className?: string;
+  styles?: Interpolation;
   selectProps?: Partial<SingleSelectProps<string>>;
   inputProps?: Omit<SimpleInputProps, "value" | "onChange" | "placeholder">;
   placeholder?: string;

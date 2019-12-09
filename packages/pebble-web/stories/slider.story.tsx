@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Slider from "../src/components/Slider";
 import { boolean, number, text } from "@storybook/addon-knobs";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { withState } from "@dump247/storybook-state";
 
 const wrapperStyle = css({
@@ -23,7 +23,7 @@ storiesOf("Components/Slider", module).add(
       values={store.state.values}
       disabled={boolean("disabled", false)}
       large={boolean("large", false)}
-      className={wrapperStyle}
+      css={wrapperStyle}
       title={text("title", "Select Range")}
       valueLabelExtractor={() =>
         `${store.state.values[0]}-${store.state.values[1]}`

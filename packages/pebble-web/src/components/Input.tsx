@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "emotion";
+
 import { InputProps, InputState } from "./typings/Input";
 import {
   highlightStyle,
@@ -66,8 +66,8 @@ class Input extends React.PureComponent<InputProps, InputState> {
     const {
       type,
       placeholder,
-      className,
-      inputClassName,
+      styles,
+      inputStyles: overridenInputStyles,
       fixLabelAtTop,
       value,
       readOnly,
@@ -84,47 +84,40 @@ class Input extends React.PureComponent<InputProps, InputState> {
 
     const _message = errorMessage || successMessage || message;
 
-    const _inputClassName = cx(
+    const _inputClassName = [
       inputStyle,
-      {
-        [inputDisabledStyle]: !!disabled,
-        [inputReadOnlyStyle]: !!readOnly,
-        [inputTextAreaStyle]: !!textArea
-      },
-      inputClassName
-    );
+      !!disabled && inputDisabledStyle,
+      !!readOnly && inputReadOnlyStyle,
+      !!textArea && inputTextAreaStyle,
+      overridenInputStyles
+    ];
 
     const _inputProps = {
       "aria-label": placeholder ? placeholder : undefined,
-      className: _inputClassName,
+      css: _inputClassName,
       disabled,
       onChange: this.handleChange,
       readOnly,
       value: value || ""
     };
 
-    const highlightClassName = cx(highlightStyle, {
-      _pebble_input_highlight_focused: !!isFocused,
-      _pebble_input_highlight_state: !!errorMessage || !!successMessage,
-      _pebble_input_highlight_read_only: !!readOnly,
-      _pebble_input_highlight_disabled: !!disabled
-    });
+    const highlightClassName = [
+      !!isFocused && "_pebble_input_highlight_focused",
+      !!errorMessage || (!!successMessage && "_pebble_input_highlight_state"),
+      !!readOnly && "_pebble_input_highlight_read_only",
+      !!disabled && "_pebble_input_highlight_disabled"
+    ]
+      .filter(f => f)
+      .join(" ");
 
-    const labelClassName = cx(labelStyle, {
-      _pebble_input_label_focused: !!(isFocused || !!value || fixLabelAtTop)
-    });
-
-    const _wrapperStyle = cx(
-      wrapperStyle,
-      {
-        _pebble_input_wrapper_textarea: !!textArea
-      },
-      className
-    );
+    const labelClassName = !!(isFocused || !!value || fixLabelAtTop)
+      ? "_pebble_input_label_focused"
+      : "";
 
     return (
       <div
-        className={_wrapperStyle}
+        css={[wrapperStyle, styles]}
+        className={textArea ? "_pebble_input_wrapper_textarea" : ""}
         onFocus={this.addFocus}
         onBlur={this.removeFocus}
         onClick={onClick}
@@ -135,12 +128,13 @@ class Input extends React.PureComponent<InputProps, InputState> {
           <input type={type} {..._inputProps} {...this.props.inputProps} />
         )}
 
-        <label className={labelClassName}>
+        <label css={labelStyle} className={labelClassName}>
           {placeholder}
           {required && <span style={{ color: colors.red.base }}>&nbsp;*</span>}
         </label>
 
         <div
+          css={highlightStyle}
           className={highlightClassName}
           style={{
             backgroundColor: getColor(errorMessage, successMessage, true)
@@ -148,16 +142,12 @@ class Input extends React.PureComponent<InputProps, InputState> {
         />
 
         {loading && (
-          <Loader
-            color={colors.violet.base}
-            scale={0.6}
-            className={loadingStyle}
-          />
+          <Loader color={colors.violet.base} scale={0.6} css={loadingStyle} />
         )}
 
         {_message && (
           <div
-            className={messageStyle}
+            css={messageStyle}
             style={{ color: getColor(errorMessage, successMessage) }}
           >
             {_message}

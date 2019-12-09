@@ -31,7 +31,7 @@ export default class OptionGroupCheckBox<
   render() {
     const { onApply, onClear, isSelected, onChange, ...rest } = this.props;
     return (
-      <div className={styles.optionGroupCheckBoxWrap}>
+      <div css={styles.optionGroupCheckBoxWrap}>
         <OptionGroup<OptionType>
           {...rest}
           isSelected={isSelected || this.isSelected}
@@ -40,7 +40,7 @@ export default class OptionGroupCheckBox<
         />
 
         {(onApply || onClear) && (
-          <div className={styles.optionGroupCheckBoxButtonWrap}>
+          <div css={styles.optionGroupCheckBoxButtonWrap}>
             {onClear && (
               <Button type="secondary" onClick={onClear}>
                 Clear

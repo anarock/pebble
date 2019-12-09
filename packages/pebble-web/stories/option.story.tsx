@@ -3,7 +3,6 @@ import { storiesOf } from "@storybook/react";
 import { Option } from "../src";
 import { withState } from "@dump247/storybook-state";
 import { boolean } from "@storybook/addon-knobs";
-import { css } from "emotion";
 
 storiesOf("Components/Option", module).add(
   "Default",
@@ -23,9 +22,9 @@ storiesOf("Components/Option", module).add(
         value="option"
         label="I am an option with very long text wrapped"
         multiSelect
-        labelClassName={css({
+        labelStyles={{
           whiteSpace: "normal"
-        })}
+        }}
         disabled={boolean("disabled", false)}
       />
       <Option

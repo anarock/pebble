@@ -3,12 +3,13 @@ import { SearchProps } from "./Search";
 import { Extras } from "./OptionGroup";
 import { Omit } from "utility-types";
 import { Placement, Modifiers } from "popper.js";
+import { Interpolation } from "@emotion/css";
 
 export type SingleSelected = number | string;
 export type MultiSelected = Array<number | string>;
 
 interface CommonSelectProps<OptionType> {
-  className?: string;
+  styles?: Interpolation;
   placeholder: string;
   required?: boolean;
   errorMessage?: string;
@@ -16,7 +17,7 @@ interface CommonSelectProps<OptionType> {
   onClear?: () => void;
   searchBox?: boolean;
   searchBoxProps?: Omit<SearchProps, "type">;
-  dropdownClassName?: string;
+  dropdownStyles?: Interpolation;
   inputProps?: Omit<SimpleInputProps, "onChange" | "value" | "placeholder">;
   fullWidthDropdown?: boolean;
   onDropdownToggle?: (isOpen: boolean) => void;

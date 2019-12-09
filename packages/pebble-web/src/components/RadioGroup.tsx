@@ -15,7 +15,7 @@ export default class RadioGroup<OptionType> extends React.PureComponent<
   };
 
   render() {
-    const { children, selected, className, name, disabled } = this.props;
+    const { children, selected, styles, name, disabled } = this.props;
 
     const _children = React.Children.map(children, _radio => {
       // `_radio as React.ReactElement<RadioProps>` is a hack
@@ -31,7 +31,7 @@ export default class RadioGroup<OptionType> extends React.PureComponent<
     });
 
     return (
-      <div role="radiogroup" aria-label={name} className={className}>
+      <div role="radiogroup" aria-label={name} css={styles}>
         {_children}
       </div>
     );

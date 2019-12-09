@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Omit } from "utility-types";
 import { action } from "@storybook/addon-actions";
-import { css } from "emotion";
 import { storiesOf } from "@storybook/react";
 
 import { TypeaheadProps } from "../src/components/typings/Typeahead";
@@ -113,9 +112,9 @@ interface Book {
 
 storiesOf("Recipes/TypeAhead", module).add("Cached TypeAhead", () => (
   <CachedTypeAhead
-    className={css({
+    css={{
       width: 200
-    })}
+    }}
     placeholder="Select Fav Book"
     valueExtractor={v => v.title}
     onSelect={action("select")}

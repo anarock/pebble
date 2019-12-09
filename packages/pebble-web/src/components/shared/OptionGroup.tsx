@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import { OptionProps } from "../typings/Option";
 import { OptionGroupProps, OptionGroupState } from "../typings/OptionGroup";
 import scrollIntoView from "scroll-into-view-if-needed";
-import { cx } from "emotion";
+
 import Search from "../Search";
 import {
   searchBoxScrolledStyle,
@@ -115,7 +115,7 @@ class OptionGroup<OptionType> extends React.PureComponent<
       searchBox,
       children,
       multiSelect,
-      className,
+      styles,
       isSelected,
       handleChange,
       searchBoxProps
@@ -143,14 +143,15 @@ class OptionGroup<OptionType> extends React.PureComponent<
       });
     });
 
-    const searchBoxClassName = cx(searchBoxWrapper, {
-      [searchBoxScrolledStyle]: isScrolled
-    });
+    const searchBoxClassName = [
+      searchBoxWrapper,
+      isScrolled && searchBoxScrolledStyle
+    ];
 
     return (
       <React.Fragment>
         {searchBox && searchBoxProps && (
-          <div className={searchBoxClassName}>
+          <div css={searchBoxClassName}>
             <Search
               type="small"
               {...searchBoxProps}
@@ -168,7 +169,7 @@ class OptionGroup<OptionType> extends React.PureComponent<
             style={{
               paddingTop: searchBox ? searchBoxHeight : undefined
             }}
-            className={cx(optionsWrapper, className)}
+            css={[optionsWrapper, styles]}
             role={multiSelect ? "group" : "radiogroup"}
             data-test-id="optiongroup"
           >

@@ -2,7 +2,6 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { TypeAhead } from "../src";
 import { action } from "@storybook/addon-actions";
-import { css } from "emotion";
 import Option from "../src/components/Option";
 import { withState } from "@dump247/storybook-state";
 import { boolean } from "@storybook/addon-knobs";
@@ -15,9 +14,9 @@ storiesOf("Components/Typeahead", module).add(
   "simple",
   withState<State>({ selected: undefined })(({ store }) => (
     <TypeAhead
-      className={css({
+      css={{
         width: 400
-      })}
+      }}
       placeholder="Typeahead"
       onChange={action("change")}
       onSelect={val => {

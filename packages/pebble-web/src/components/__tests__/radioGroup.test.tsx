@@ -4,7 +4,7 @@ import { mount } from "enzyme";
 import sinon from "sinon";
 import combos from "combos";
 import renderer from "react-test-renderer";
-import { cx } from "emotion";
+
 import {
   setWrap,
   selectedButton,
@@ -69,25 +69,19 @@ describe("set of radios", () => {
         selected={props.value}
         onChange={noop}
         name="set of radios"
-        className={setWrap}
+        css={setWrap}
       >
         <Radio
           value="OFF"
           label=""
-          className={cx({
-            [unSelectedButton]: true,
-            [selectedButton]: props.value === "OFF"
-          })}
+          css={[unSelectedButton, props.value === "OFF" && selectedButton]}
         >
           {() => "OFF"}
         </Radio>
         <Radio
           value="ON"
           label=""
-          className={cx({
-            [unSelectedButton]: true,
-            [selectedButton]: props.value === "ON"
-          })}
+          css={[unSelectedButton, props.value === "ON" && selectedButton]}
         >
           {() => "ON"}
         </Radio>

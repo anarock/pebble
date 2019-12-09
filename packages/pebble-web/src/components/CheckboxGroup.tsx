@@ -15,7 +15,7 @@ export default class CheckboxGroup<OptionType> extends React.PureComponent<
   };
 
   render() {
-    const { children, selected, className, name, disabled } = this.props;
+    const { children, selected, styles, name, disabled } = this.props;
 
     const _children = React.Children.map(children, _checkbox => {
       // `_checkbox as React.ReactElement<CheckboxProps>` is a hack
@@ -33,7 +33,7 @@ export default class CheckboxGroup<OptionType> extends React.PureComponent<
     });
 
     return (
-      <div role="checkboxgroup" aria-label={name} className={className}>
+      <div role="checkboxgroup" aria-label={name} css={styles}>
         {_children}
       </div>
     );

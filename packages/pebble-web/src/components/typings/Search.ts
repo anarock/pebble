@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Interpolation } from "@emotion/css";
 
 export interface SearchProps {
   type: "small" | "large" | "table";
@@ -6,7 +7,7 @@ export interface SearchProps {
   value: string;
   placeholder: string;
   showSearchIcon?: boolean;
-  className?: string;
+  styles?: Interpolation;
   clearable?: boolean;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
 }

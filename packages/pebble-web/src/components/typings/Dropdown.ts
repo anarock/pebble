@@ -1,6 +1,7 @@
 import * as React from "react";
 import { ButtonType } from "./Button";
 import { Placement, Modifiers } from "popper.js";
+import { Interpolation } from "@emotion/css";
 
 type Toggle = () => void;
 
@@ -14,12 +15,12 @@ export interface DropdownProps {
     toggleDropdown: Toggle;
   }) => React.ReactNode;
   padding?: number | string;
-  className?: string;
-  dropDownClassName?: string;
+  styles?: Interpolation;
+  dropDownStyles?: Interpolation;
   initiallyOpen?: boolean;
   isSelected?: boolean;
   disabled?: boolean;
-  labelClassName?: string;
+  labelStyles?: Interpolation;
   onOutsideClick?: (isOpen: boolean) => void;
   placement?: Placement;
   modifiers?: Modifiers;

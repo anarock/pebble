@@ -8,7 +8,7 @@ import {
   ToastPosition
 } from "./typings/Toast";
 import { Transition, animated } from "react-spring/renderprops.cjs";
-import { cx } from "emotion";
+
 import mitt from "mitt";
 import { animationConfig } from "../utils/animation";
 
@@ -163,10 +163,9 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
   render() {
     const bColor = _colors[this.state.type];
 
-    const iconClass = cx("pi", {
-      "pi-radio-check-filled": this.state.type === "success",
-      "pi-close-circle-filled": this.state.type === "error"
-    });
+    const iconClass = `pi ${(this.state.type === "success" &&
+      "pi-radio-check-filled") ||
+      ""} ${this.state.type === "error" && "pi-close-circle-filled"}`;
 
     const position =
       this.state.position || this.props.defaultPosition || "BOTTOM";
@@ -195,7 +194,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
           show &&
           (styles => (
             <animated.div
-              className={cx(toastWrapper, this.props.className)}
+              css={[toastWrapper, this.props.styles]}
               style={{
                 backgroundColor: bColor,
                 ...(styles as React.CSSProperties),

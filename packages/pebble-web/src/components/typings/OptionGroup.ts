@@ -1,9 +1,10 @@
 import * as React from "react";
 import { SearchProps } from "./Search";
 import { Omit } from "utility-types";
+import { Interpolation } from "@emotion/css";
 
 export interface CommonProps {
-  className?: string;
+  styles?: Interpolation;
   searchBox?: boolean;
   children?: React.ReactNode;
   searchBoxProps?: Omit<SearchProps, "type">;

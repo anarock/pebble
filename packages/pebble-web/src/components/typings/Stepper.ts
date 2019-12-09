@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Interpolation } from "@emotion/css";
 
 interface ButtonData {
   label: string;
@@ -34,7 +35,7 @@ export interface StepperProps {
     args: ArgsRenderFooter,
     props: StepperProps
   ) => React.ReactNode;
-  className?: string;
+  styles?: Interpolation;
   initialSelectedIndex?: number;
   allowSkip: boolean;
   cancelLabel: string;

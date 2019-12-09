@@ -7,7 +7,7 @@ import {
 import { SidebarProps } from "./typings/Sidebar";
 import { Transition, animated } from "react-spring/renderprops.cjs";
 import Ink from "react-ink";
-import { css, cx } from "emotion";
+import { css } from "@emotion/core";
 import { disableScrollY } from "../theme/styles";
 import { animationConfig } from "../utils/animation";
 
@@ -61,13 +61,13 @@ class SideBar extends React.PureComponent<SidebarProps> {
       width,
       transform: isOpen ? `translateX(0)` : `translateX(${width}px)`
     });
-    const _sidebarStyle = cx(
+    const _sidebarStyle = [
       _sidebarOverride,
       sidebarStyle,
-      css({
+      {
         transform: isOpen ? `translateX(0)` : `translateX(100%)`
-      })
-    );
+      }
+    ];
 
     return (
       <React.Fragment>
@@ -81,7 +81,7 @@ class SideBar extends React.PureComponent<SidebarProps> {
             (styles => (
               <animated.div
                 style={styles}
-                className={sidebarWrapperStyle}
+                css={sidebarWrapperStyle}
                 onClick={
                   onOutsideClick || closeOnOutsideClick
                     ? this.onOutsideClick
@@ -93,16 +93,12 @@ class SideBar extends React.PureComponent<SidebarProps> {
           }
         </Transition>
 
-        <div className={_sidebarStyle}>
+        <div css={_sidebarStyle}>
           <Transition items={isOpen} {...transitionProps}>
             {show =>
               show &&
               (styles => (
-                <animated.div
-                  style={styles}
-                  className={closeStyle}
-                  onClick={onClose}
-                >
+                <animated.div style={styles} css={closeStyle} onClick={onClose}>
                   <i className="pi pi-close" />
                   <Ink />
                 </animated.div>

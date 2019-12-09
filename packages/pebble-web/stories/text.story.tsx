@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { constants, mixins, typography } from "../src/theme";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { Type, TypographyStyle } from "../src/theme/typings/typography";
 import { Text } from "../src";
 import { colors } from "pebble-shared";
@@ -46,7 +46,7 @@ const text =
   "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.";
 
 storiesOf("Components/Text", module).add("List", () => (
-  <div className={wrapper}>
+  <div css={wrapper}>
     <h2 style={{ marginBottom: 40 }}>Text</h2>
     {Object.keys(typography).map(x =>
       Object.keys(typography[x as keyof typeof typography]).map(y => {
@@ -57,19 +57,19 @@ storiesOf("Components/Text", module).add("List", () => (
           <>
             <Text
               typography={typography.normal.bold}
-              className={css({
+              css={{
                 display: "inline-block",
                 marginBottom: 10
-              })}
+              }}
               color={colors.gray.darker}
             >
               {`typography.${x}.${y}`}
             </Text>
-            <div className={section} key={`${x}.${y}`}>
-              <Text typography={style} className={textStyle}>
+            <div css={section} key={`${x}.${y}`}>
+              <Text typography={style} css={textStyle}>
                 {text}
               </Text>
-              <title className={titleStyle} style={{ width: 100 }}>
+              <title css={titleStyle} style={{ width: 100 }}>
                 <span>
                   {style.fontSize}
                   px

@@ -2,22 +2,18 @@ import * as React from "react";
 import { colors } from "pebble-shared";
 import { tagStyle, iconClass } from "./styles/Tag.styles";
 import { TagProps } from "./typings/Tag";
-import { cx } from "emotion";
+
 import Ink from "react-ink";
 
 const Tag: React.FunctionComponent<TagProps> = ({
   label,
   color,
   onClose,
-  className
+  styles
 }) => {
-  const wrapperClassName = cx(tagStyle, {
-    __pebble__tag__with__close: !!onClose
-  });
-  const _className = cx(wrapperClassName, className);
   return (
     <div
-      className={_className}
+      css={[tagStyle, !!onClose && "__pebble__tag__with__close", styles]}
       style={{
         color: colors[color].base,
         // @ts-ignore
@@ -26,7 +22,7 @@ const Tag: React.FunctionComponent<TagProps> = ({
     >
       {label}{" "}
       {onClose && (
-        <i onClick={onClose} className={cx("pi", "pi-close", iconClass)}>
+        <i onClick={onClose} className="pi pi-close" css={iconClass}>
           <Ink />
         </i>
       )}

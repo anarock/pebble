@@ -1,7 +1,6 @@
 import * as React from "react";
 import { OptionProps } from "./typings/Option";
 import Control from "./shared/Control";
-import { cx, css } from "emotion";
 import {
   activeRow,
   rowWrapper,
@@ -19,19 +18,23 @@ const defaultProps = {
     isSelected: boolean;
     multiSelect: boolean;
   }) => {
-    const iconClass = cx(
+    const iconClass = [
       "pi",
-      {
-        "pi-checkbox-selected": isSelected,
-        "pi-checkbox-unselected": !isSelected
-      },
-      css({
-        marginLeft: "10px",
-        color: isSelected ? colors.violet.base : colors.gray.light,
-        fontSize: "20px"
-      })
-    );
-    return multiSelect ? <i className={iconClass} /> : null;
+      isSelected && "pi-checkbox-selected",
+      !isSelected && "pi-checkbox-unselected"
+    ]
+      .filter(Boolean)
+      .join(" ");
+    return multiSelect ? (
+      <i
+        className={iconClass}
+        css={{
+          marginLeft: "10px",
+          color: isSelected ? colors.violet.base : colors.gray.light,
+          fontSize: "20px"
+        }}
+      />
+    ) : null;
   }
 };
 
@@ -45,28 +48,26 @@ class Option<OptionType> extends React.Component<
       isActive,
       isSelected,
       rightElement,
-      labelClassName,
-      className
+      labelStyles,
+      styles
     } = this.props;
-    const _class = cx(
+    const _class = [
       rowWrapper,
-      {
-        [activeRow]: !!isActive,
-        [selectedRow]: !!isSelected
-      },
-      className
-    );
+      !!isActive && activeRow,
+      !!isSelected && selectedRow,
+      styles
+    ];
     return (
       <Control
         {...this.props}
         checked={this.props.isSelected}
         type={this.props.multiSelect ? "checkbox" : "radio"}
-        className={_class}
+        css={_class}
       >
         {() => {
           return (
             <>
-              <div className={cx(labelWrap, labelClassName)}>{label}</div>
+              <div css={[labelWrap, labelStyles]}>{label}</div>
               {rightElement(this.props)}
               <Ink />
             </>

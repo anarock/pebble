@@ -1,5 +1,5 @@
 import { mixins, typography } from "../../theme";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { colors } from "pebble-shared";
 // import { isDesktop } from "../../utils";
 

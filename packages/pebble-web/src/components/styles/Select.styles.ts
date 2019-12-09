@@ -1,4 +1,4 @@
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { colors } from "pebble-shared";
 import { inputMarginBottom } from "./Input.styles";
 

@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Input from "../src/components/Input";
 import { boolean, select, text } from "@storybook/addon-knobs";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import DateInput, { BrowserBasedDateInput } from "../src/components/DateInput";
 import { withState } from "@dump247/storybook-state";
 import { InputProps } from "../src/components/typings/Input";
@@ -31,7 +31,7 @@ storiesOf("Components/Input", module)
     "Material",
     withState({ value: "" })(({ store }) => (
       <Input
-        className={className}
+        css={className}
         onChange={value => store.set({ value })}
         type={select("type", type, type[0]) as InputProps["type"]}
         placeholder={text("placeholder", "Name")}
@@ -52,7 +52,7 @@ storiesOf("Components/Input", module)
     withState({ value: "" })(({ store }) => (
       <Input
         textArea
-        className={className}
+        css={className}
         onChange={value => store.set({ value })}
         placeholder={text("placeholder", "Name")}
         fixLabelAtTop={boolean("fixLabelAtTop", false)}
@@ -105,7 +105,7 @@ storiesOf("Components/Input", module)
     withState({ value: "" })(({ store }) => (
       <SecondaryInput
         placeholder={text("placeholder", "Secondary")}
-        className={className}
+        css={className}
         onChange={value => store.set({ value })}
         value={store.state.value}
         infoText={text("infoText", "InfoText")}

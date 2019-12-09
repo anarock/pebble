@@ -2,7 +2,7 @@ import * as React from "react";
 import { DropdownProps, DropdownState } from "./typings/Dropdown";
 import { DropDownButton } from "./Button";
 import { dropDownStyle, wrapperStyle } from "./styles/Dropdown.styles";
-import { cx } from "emotion";
+
 import OutsideClick from "./OutsideClick";
 import { animated } from "react-spring/renderprops.cjs";
 import MountTransition from "./shared/MountTransition";
@@ -42,18 +42,18 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
       children,
       labelComponent,
       padding,
-      className,
-      dropDownClassName,
+      styles,
+      dropDownStyles,
       isSelected,
       disabled,
-      labelClassName,
+      labelStyles,
       onOutsideClick
     } = this.props;
     const { isOpen } = this.state;
 
     return (
       <OutsideClick
-        className={cx(wrapperStyle, className)}
+        css={[wrapperStyle, styles]}
         onOutsideClick={() => {
           this.setState({
             isOpen: false
@@ -77,7 +77,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                     isOpen={isOpen}
                     onClick={this.toggleDropdown}
                     disabled={disabled}
-                    className={labelClassName}
+                    styles={labelStyles}
                   >
                     {buttonLabel}
                   </DropDownButton>
@@ -90,7 +90,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
           <MountTransition visible={isOpen}>
             {transitionStyles => (
               <animated.div
-                className={cx(dropDownStyle, dropDownClassName)}
+                css={[dropDownStyle, dropDownStyles]}
                 style={{ padding, ...transitionStyles }}
               >
                 <Popper {...this.props} positionFixed>
@@ -108,7 +108,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
 
                     return (
                       <div
-                        className={cx(dropDownStyle, dropDownClassName)}
+                        css={[dropDownStyle, dropDownStyles]}
                         ref={ref}
                         style={popperWrapperStyle}
                         data-placement={placement}

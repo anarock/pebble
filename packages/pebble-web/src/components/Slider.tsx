@@ -1,6 +1,6 @@
 import * as React from "react";
 import Rheostat from "rheostat";
-import { cx, injectGlobal } from "emotion";
+import { injectGlobal } from "emotion";
 import { typography } from "../theme";
 import { SliderProps } from "./typings/Slider";
 import { sliderHeader, rheostatOverrides } from "./styles/Slider.styles";
@@ -13,7 +13,7 @@ function overrideRheostatStyles() {
 }
 
 const Slider: React.FunctionComponent<SliderProps> = ({
-  className,
+  styles,
   large,
   title,
   disabled,
@@ -23,10 +23,6 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   ...rest
 }) => {
   overrideRheostatStyles();
-  const mainClass = cx(className, {
-    __pebble__slider__disabled: !!disabled,
-    __pebble__slider__large: !!large
-  });
 
   const _values = Array.isArray(values) ? values.slice(0) : values || [];
 
@@ -40,8 +36,12 @@ const Slider: React.FunctionComponent<SliderProps> = ({
   }
 
   return (
-    <div className={mainClass}>
-      <div className={sliderHeader}>
+    <div
+      css={styles}
+      className={`${(!!disabled && "__pebble__slider__disabled") ||
+        ""} ${(!!large && "__pebble__slider__large") || ""}`}
+    >
+      <div css={sliderHeader}>
         <div style={large ? typography.normal.light : typography.normal.light}>
           {title}
         </div>

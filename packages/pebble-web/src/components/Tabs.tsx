@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "emotion";
+
 import { TabsState, TabsProps, TabSectionProps } from "./typings/Tabs";
 import { tabStyle, tabsWrap, selectedTabStyle } from "./styles/Tabs.styles";
 
@@ -25,13 +25,11 @@ export class Tabs extends React.PureComponent<TabsProps, TabsState> {
   }
 
   render() {
-    const _className = cx(tabStyle, this.props.tabClassName);
-
     const { labels } = this.props;
 
     return (
       <TabSelectedContext.Provider value={this.state.selectedTab}>
-        <div className={cx(tabsWrap, this.props.wrapClassName)}>
+        <div css={[tabsWrap, this.props.wrapStyles]}>
           {this.props.tabs.map((tab, i) => (
             <span
               key={`${tab}-${i}`}
@@ -40,10 +38,11 @@ export class Tabs extends React.PureComponent<TabsProps, TabsState> {
                 .replace("(", "")
                 .replace(")", "")
                 .trim()}`}
-              className={cx({
-                [_className]: true,
-                [selectedTabStyle]: this.state.selectedTab === tab
-              })}
+              css={[
+                tabStyle,
+                this.props.tabStyles,
+                this.state.selectedTab === tab && selectedTabStyle
+              ]}
               onClick={() => {
                 this.setState({
                   selectedTab: tab

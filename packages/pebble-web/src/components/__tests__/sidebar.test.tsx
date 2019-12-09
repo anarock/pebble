@@ -8,7 +8,7 @@ import {
 } from "@testing-library/react";
 import SideBar from "../Sidebar";
 import Button from "../Button";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 
 const wrapperStyle = css({
   width: "100%",
@@ -32,7 +32,7 @@ function SidebarComponent({
         isOpen={open}
         closeOnOutsideClick={closeOnOutsideClick}
       >
-        <div className={wrapperStyle}>Sidebar Content</div>
+        <div css={wrapperStyle}>Sidebar Content</div>
       </SideBar>
     </>
   );

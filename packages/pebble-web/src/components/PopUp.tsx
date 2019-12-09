@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "emotion";
+
 import Modal from "./Modal";
 import Button from "./Button";
 import {
@@ -21,17 +21,14 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
     children
   } = props;
   return (
-    <Modal visible={visible} modalClassName={flexCenter}>
-      <div className={modalContainer}>
+    <Modal visible={visible} modalStyles={flexCenter}>
+      <div css={modalContainer}>
         {onClose && (
-          <i
-            className={cx("pi", "pi-close", iconCloseClassName)}
-            onClick={onClose}
-          />
+          <i css={["pi", "pi-close", iconCloseClassName]} onClick={onClose} />
         )}
         {children}
         {(onReject || onApprove) && (
-          <div className={buttonsContainer}>
+          <div css={buttonsContainer}>
             {onReject && (
               <Button size="large" type="secondary" onClick={onReject}>
                 {rejectButtonText}

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "emotion";
+
 import {
   labelTextStyle,
   labelStyle,
@@ -21,25 +21,17 @@ export default class Switch extends React.PureComponent<
   };
 
   render() {
-    const { onChange, className, label, disabled } = this.props;
+    const { onChange, styles, label, disabled } = this.props;
     const { value } = this.state;
 
     return (
-      <label
-        className={cx(className, fixedLabelStyle, {
-          [disabledStyle]: !!disabled
-        })}
-      >
-        <span className={labelTextStyle}>{label}</span>
-        <div
-          className={cx(labelStyle, {
-            [selectedLabel]: value
-          })}
-        >
+      <label css={[styles, fixedLabelStyle, !!disabled && disabledStyle]}>
+        <span css={labelTextStyle}>{label}</span>
+        <div css={[labelStyle, value && selectedLabel]}>
           <input
             type="checkbox"
             checked={value}
-            className={inputStyle}
+            css={inputStyle}
             onChange={() => {
               this.setState({
                 value: !value
@@ -50,12 +42,7 @@ export default class Switch extends React.PureComponent<
             }}
             disabled={disabled}
           />
-          <span
-            className={cx({
-              [switchStyle]: true,
-              [selectedSwitch]: value
-            })}
-          />
+          <span css={[switchStyle, value && selectedSwitch]} />
         </div>
       </label>
     );

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Modal from "../src/components/Modal";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { withState } from "@dump247/storybook-state";
 import Button from "../src/components/Button";
 import { colors } from "pebble-shared";
@@ -22,7 +22,7 @@ storiesOf("Components/Modal", module).add(
     <>
       <Button onClick={() => store.set({ show: true })}>Open Modal</Button>
       <Modal visible={store.state.show}>
-        <div className={style}>
+        <div css={style}>
           <i
             className="pi pi-close"
             onClick={() => store.set({ show: false })}

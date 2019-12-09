@@ -29,6 +29,7 @@
     "react-dom": "^16.8.4"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.22",
     "date-fns": "^2.7.0",
     "emotion": "^10.0.14",
     "is-in-browser": "^1.1.3",

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import SideBar from "../src/components/Sidebar";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { number, boolean } from "@storybook/addon-knobs";
 import { withState } from "@dump247/storybook-state";
 import Button from "../src/components/Button";
@@ -38,14 +38,11 @@ storiesOf("Components/SideBar", module).add(
         isOpen={store.state.value}
         closeOnOutsideClick={boolean("closeOnOutsideClick", true)}
       >
-        <div className={wrapperStyle} onClick={() => {}}>
+        <div css={wrapperStyle} onClick={() => {}}>
           <Button onClick={() => store.set({ displayModal: true })}>
             Open modal
           </Button>
-          <Modal
-            visible={store.state.displayModal}
-            modalClassName={modalStyles}
-          >
+          <Modal visible={store.state.displayModal} modalStyles={modalStyles}>
             <Button
               type="link"
               onClick={() => store.set({ displayModal: false })}

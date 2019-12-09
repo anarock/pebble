@@ -1,14 +1,15 @@
 import * as React from "react";
+import { Interpolation } from "@emotion/css";
 
 interface CommonInputProps {
   placeholder: string;
   onChange: (text: string) => void;
   value?: string | number;
-  className?: string;
+  styles?: Interpolation;
   disabled?: boolean;
   errorMessage?: string;
   fixLabelAtTop?: boolean;
-  inputClassName?: string;
+  inputStyles?: Interpolation;
   loading?: boolean;
   message?: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;

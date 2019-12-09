@@ -1,4 +1,4 @@
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { constants, typography } from "../../theme";
 import { ButtonType, MappingColorByType } from "../typings/Button";
 import { colors } from "pebble-shared";

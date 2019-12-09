@@ -1,3 +1,5 @@
+import { Interpolation } from "@emotion/css";
+
 export interface TabsState {
   selectedTab: string | null;
 }
@@ -6,8 +8,8 @@ export interface TabsProps {
   initialSelectedTab?: string;
   selectedTab?: string;
   tabs: string[];
-  tabClassName?: string;
-  wrapClassName?: string;
+  tabStyles?: Interpolation;
+  wrapStyles?: Interpolation;
   onTabChange?: (tab: string) => void;
   labels?: { [name: string]: string };
 }

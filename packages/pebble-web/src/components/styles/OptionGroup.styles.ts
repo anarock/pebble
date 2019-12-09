@@ -1,5 +1,5 @@
 import { constants } from "../../theme";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { colors } from "pebble-shared";
 
 export const optionWrapperMaxHeight = 316;

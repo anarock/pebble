@@ -1,7 +1,7 @@
 import * as React from "react";
 import Select from "./Select";
 import Input from "./Input";
-import { cx } from "emotion";
+
 import { PhoneNumberInputProps } from "./typings/PhoneNumberInput";
 import {
   wrapper,
@@ -36,20 +36,16 @@ export default class PhoneNumberInput extends React.Component<
     const {
       phone,
       countryCode,
-      className,
+      styles,
       selectProps,
       inputProps,
       required,
       placeholder
     } = this.props;
     return (
-      <div className={cx(wrapper, className)}>
+      <div css={[wrapper, styles]}>
         <label
-          className={cx(
-            labelStyle,
-            "_pebble_input_label_focused",
-            combinedLabelStyle
-          )}
+          css={[labelStyle, "_pebble_input_label_focused", combinedLabelStyle]}
         >
           {placeholder || "Phone No."}
           {required && <span style={{ color: colors.red.base }}>&nbsp;*</span>}
@@ -60,7 +56,7 @@ export default class PhoneNumberInput extends React.Component<
           value={countryCode + ""}
           selected={countryCode}
           {...selectProps}
-          className={cx(selectStyle, selectProps && selectProps.className)}
+          css={[selectStyle, selectProps && selectProps.styles]}
         >
           {this.props.children}
         </Select>

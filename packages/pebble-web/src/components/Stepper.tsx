@@ -1,5 +1,4 @@
 import * as React from "react";
-import { css, cx } from "emotion";
 import { StepperProps, StepperState } from "./typings/Stepper";
 import Button from "./Button";
 import {
@@ -30,7 +29,7 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
     onDone: () => {},
     renderFooterElement: ({ leftButtonData, rightButtonData }, props) => {
       return (
-        <footer className={footerStyle}>
+        <footer css={footerStyle}>
           <Button
             size="large"
             width={100}
@@ -118,7 +117,7 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
       renderContentElement,
       keyExtractor,
       renderFooterElement,
-      className,
+      styles,
       allowSkip
     } = this.props;
 
@@ -133,13 +132,9 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
     };
 
     return (
-      <div className={className}>
-        <div className={headStyle}>
+      <div css={styles}>
+        <div css={headStyle}>
           {this.getHeadings().map((heading, i) => {
-            const dotClass = cx(dotStyle, {
-              [activeDotStyle]: i <= active
-            });
-
             const headingColor =
               i === active
                 ? colors.violet.base
@@ -150,20 +145,18 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
             return (
               <div
                 key={keyExtractor(data[i])}
-                className={cx(headSection, {
-                  [css({ cursor: "inherit" })]: !allowSkip
-                })}
+                css={[headSection, !allowSkip && { cursor: "inherit" }]}
                 onClick={allowSkip ? () => this.goToPage(i) : noop}
               >
-                <div className={headingStyle} style={{ color: headingColor }}>
+                <div css={headingStyle} style={{ color: headingColor }}>
                   {heading}
                 </div>
-                <div className={dotClass} />
+                <div css={[dotStyle, i <= active && activeDotStyle]} />
               </div>
             );
           })}
           <div
-            className={stepperLineStyle}
+            css={stepperLineStyle}
             style={{
               width: `${(100 / (2 * data.length)) * 2 * active}%`,
               marginLeft: `${100 / (2 * data.length)}%`
@@ -171,13 +164,11 @@ class Stepper extends React.PureComponent<StepperProps, StepperState> {
           />
         </div>
 
-        <div className={contentWrapper}>
+        <div css={contentWrapper}>
           {data.map((datum, i) => (
             <div
               key={keyExtractor(datum)}
-              className={cx({
-                [css({ display: "none" })]: i !== this.state.active
-              })}
+              css={[i !== this.state.active && { display: "none" }]}
             >
               {renderContentElement({
                 item: datum,
