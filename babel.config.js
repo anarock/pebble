@@ -11,10 +11,25 @@ module.exports = {
     "@babel/preset-typescript"
   ],
   plugins: [
+    [
+      "@wordpress/babel-plugin-import-jsx-pragma",
+      {
+        scopeVariable: "jsx",
+        source: "@emotion/core",
+        isDefault: false
+      }
+    ],
     "@babel/plugin-transform-runtime",
     ["@babel/plugin-proposal-class-properties", { loose: false }],
     "@babel/plugin-syntax-jsx",
-    ["@babel/plugin-transform-react-jsx", { useBuiltIns: true }],
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        useBuiltIns: true,
+        pragma: "jsx",
+        pragmaFrag: "jsx"
+      }
+    ],
     "emotion",
     "date-fns"
   ],

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { Tooltip, mixins } from "../../pebble-web/src";
 // @ts-ignore
 import iconNames from "../icons.json";
@@ -27,13 +27,13 @@ const divs = css({
 });
 
 storiesOf("Theme/icons", module).add("List", () => (
-  <div className={wrapper}>
+  <div css={wrapper}>
     {iconNames.map((iconName: string) => (
       <div key={iconName} style={{ width: "33%" }}>
         <Tooltip
           label={labelProps => (
-            <div className={divs} {...labelProps}>
-              <i className={`pi pi-${iconName}`} /> <span>{iconName}</span>
+            <div css={divs} {...labelProps}>
+              <i css={`pi pi-${iconName}`} /> <span>{iconName}</span>
             </div>
           )}
           text={`<i className="pi pi-${iconName}" />`}

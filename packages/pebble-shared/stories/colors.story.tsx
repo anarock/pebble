@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { css } from "emotion";
+import { css } from "@emotion/core";
 import { typography, constants } from "pebble-web/src";
 import { Colors } from "../src/theme/typings/colors";
 import { colors } from "pebble-shared";
@@ -35,7 +35,7 @@ const section = css({
 });
 
 storiesOf("Theme/colors", module).add("List", () => (
-  <div className={wrapper}>
+  <div css={wrapper}>
     <h2 style={{ marginBottom: 40 }}>Colors</h2>
     {Object.keys(colors).map(x => {
       const group = colors[x as keyof Colors];
@@ -46,7 +46,7 @@ storiesOf("Theme/colors", module).add("List", () => (
             {Object.keys(colors[x as keyof Colors]).map(y => {
               const color = group[y as keyof typeof group];
               return (
-                <div className={section} key={y}>
+                <div css={section} key={y}>
                   <div
                     style={{
                       backgroundColor: color,
@@ -54,7 +54,7 @@ storiesOf("Theme/colors", module).add("List", () => (
                       height: 100
                     }}
                   />
-                  <div className={titleStyle}>
+                  <div css={titleStyle}>
                     <div style={{ borderBottom: constants.border.base }}>
                       {color}
                     </div>

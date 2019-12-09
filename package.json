@@ -58,6 +58,7 @@
     "@types/rheostat": "^2.0.0",
     "@types/sinon": "^7.5.0",
     "@types/starwars-names": "^1.6.0",
+    "@wordpress/babel-plugin-import-jsx-pragma": "^2.3.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.0.6",
