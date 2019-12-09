@@ -208,7 +208,7 @@ class GroupedOptionGroup<
                   key={o.id}
                   value={o.id}
                   label={o.label}
-                  css={group.group_label && subOptionClass}
+                  styles={group.group_label && subOptionClass}
                 />
               ))
             ].filter(f => f) as React.ReactNode[]
@@ -228,7 +228,7 @@ class GroupedOptionGroup<
           onChange: this.onSearchBoxValueChange,
           value: this.state.searchBoxValue
         }}
-        css={{
+        styles={{
           maxHeight: "none"
         }}
       >

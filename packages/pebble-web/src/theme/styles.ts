@@ -1,9 +1,10 @@
-import { css } from "@emotion/core";
+import { Interpolation } from "@emotion/core";
+import { css } from "emotion";
 import { constants } from "./constants";
 import { typography } from "./typography";
 import { colors } from "pebble-shared";
 
-export const tableStyle = css({
+export const tableStyle: Interpolation = css({
   borderRadius: constants.borderRadius,
   border: constants.border.dark,
   ...typography.s.regular,

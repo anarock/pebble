@@ -110,7 +110,7 @@ export default class TypeAhead<OptionType> extends React.PureComponent<
           })
         }
         disabled={!showSuggestions}
-        css={[wrapper, styles]}
+        styles={[wrapper, styles]}
       >
         {searchBox(
           {

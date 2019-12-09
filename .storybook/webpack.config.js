@@ -10,16 +10,17 @@ module.exports = ({ config, mode }) => {
   });
 
   config.module.rules.push({
-    test: /\.(ts|tsx)$/,
+    test: /\.tsx?$/,
     use: [
       {
-        loader: require.resolve("babel-loader")
+        loader: require.resolve("babel-loader"),
+        options: require("../babel.config")
       },
       {
         loader: require.resolve("awesome-typescript-loader"),
         options: {
-          useCache: true,
-          transpileOnly: true
+          transpileOnly: true,
+          useCache: true
         }
       }
     ]
@@ -38,11 +39,11 @@ module.exports = ({ config, mode }) => {
     enforce: "pre"
   });
 
-  config.plugins.unshift(
-    new ForkTsCheckerWebpackPlugin({
-      tsconfig: path.resolve(__dirname, "../tsconfig.json")
-    })
-  );
+  // config.plugins.unshift(
+  //   new ForkTsCheckerWebpackPlugin({
+  //     tsconfig: path.resolve(__dirname, "../tsconfig.json")
+  //   })
+  // );
 
   config.resolve.extensions.push(".ts", ".tsx", ".json");
   return config;

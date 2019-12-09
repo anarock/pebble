@@ -1,15 +1,16 @@
-import { css } from "@emotion/core";
+import { Interpolation } from "@emotion/core";
+import { css } from "emotion";
 import { constants, mixins, typography } from "../../theme";
 import { colors } from "pebble-shared";
 
-export const wrapperStyle = css({
+export const wrapperStyle: Interpolation = {
   backgroundColor: colors.white.base,
   borderRadius: constants.borderRadius,
   boxShadow: constants.boxShadow.xElevated,
   overflow: "hidden",
   padding: 20,
   position: "relative"
-});
+};
 
 export const tileStyle = css({
   ...typography.normal.regular,
@@ -113,22 +114,22 @@ export const dateStyle = css({
   }
 });
 
-export const dotWrapper = css({
+export const dotWrapper: Interpolation = {
   display: "flex",
   justifyContent: "center",
   position: "absolute",
   width: "100%"
-});
+};
 
-export const dotStyle = css({
+export const dotStyle: Interpolation = {
   height: 4,
   width: 4,
   display: "inline-block",
   borderRadius: constants.borderRadius,
   margin: "5px 2px 0"
-});
+};
 
-export const buttonsWrapper = css({
+export const buttonsWrapper: Interpolation = {
   ...mixins.flexSpaceBetween,
   marginTop: 20
-});
+};

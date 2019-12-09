@@ -31,7 +31,7 @@ storiesOf("Components/Input", module)
     "Material",
     withState({ value: "" })(({ store }) => (
       <Input
-        css={className}
+        styles={className}
         onChange={value => store.set({ value })}
         type={select("type", type, type[0]) as InputProps["type"]}
         placeholder={text("placeholder", "Name")}
@@ -52,7 +52,7 @@ storiesOf("Components/Input", module)
     withState({ value: "" })(({ store }) => (
       <Input
         textArea
-        css={className}
+        styles={className}
         onChange={value => store.set({ value })}
         placeholder={text("placeholder", "Name")}
         fixLabelAtTop={boolean("fixLabelAtTop", false)}
@@ -105,7 +105,7 @@ storiesOf("Components/Input", module)
     withState({ value: "" })(({ store }) => (
       <SecondaryInput
         placeholder={text("placeholder", "Secondary")}
-        css={className}
+        styles={className}
         onChange={value => store.set({ value })}
         value={store.state.value}
         infoText={text("infoText", "InfoText")}

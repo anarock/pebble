@@ -53,21 +53,19 @@ export const DropDownButton = ({
     <Button
       {...props}
       type="secondary"
-      css={[
+      styles={[
         dropDownButtonStyle,
         !(isOpen || isSelected) && dropDownButtonDefaultStyle,
         styles
       ]}
     >
-      <React.Fragment>
-        {children}{" "}
-        <i
-          css={["pi pi-arrow-drop-down", iconStyle]}
-          style={{
-            transform: isOpen ? "rotate(180deg)" : "none"
-          }}
-        />
-      </React.Fragment>
+      {children}{" "}
+      <i
+        css={["pi pi-arrow-drop-down", iconStyle]}
+        style={{
+          transform: isOpen ? "rotate(180deg)" : "none"
+        }}
+      />
     </Button>
   );
 };

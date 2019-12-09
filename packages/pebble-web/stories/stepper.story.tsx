@@ -38,7 +38,7 @@ const data = [
 
 storiesOf("Components/Stepper", module).add("Default", () => (
   <Stepper
-    css={x}
+    styles={x}
     data={data}
     keyExtractor={item => item.id}
     renderContentElement={({ item }) => (

@@ -112,7 +112,7 @@ interface Book {
 
 storiesOf("Recipes/TypeAhead", module).add("Cached TypeAhead", () => (
   <CachedTypeAhead
-    css={{
+    styles={{
       width: 200
     }}
     placeholder="Select Fav Book"

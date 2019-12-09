@@ -46,7 +46,7 @@ class PresetCalendar extends React.PureComponent<
                 }}
                 type="primary"
                 size="large"
-                css={[
+                styles={[
                   unSelectedDateButton,
                   btn.dateRange[0] === this.state.startTime &&
                     btn.dateRange[1] === this.state.endTime &&

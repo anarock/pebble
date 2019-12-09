@@ -142,7 +142,11 @@ class Input extends React.PureComponent<InputProps, InputState> {
         />
 
         {loading && (
-          <Loader color={colors.violet.base} scale={0.6} css={loadingStyle} />
+          <Loader
+            color={colors.violet.base}
+            scale={0.6}
+            styles={loadingStyle}
+          />
         )}
 
         {_message && (

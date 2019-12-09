@@ -89,14 +89,14 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
               toggle();
             }}
             selected={selectedHour}
-            css={optionStyle}
+            styles={optionStyle}
           >
             {HOURS.map(hour => (
               <Option
                 key={hour}
                 value={parseInt(hour, 10)}
                 label={hour}
-                css={optionStyle}
+                styles={optionStyle}
               />
             ))}
           </OptionGroupRadio>
@@ -136,14 +136,14 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
               toggle();
             }}
             selected={selectedMinute}
-            css={optionStyle}
+            styles={optionStyle}
           >
             {MINUTES.map(min => (
               <Option
                 key={min}
                 value={parseInt(min, 10)}
                 label={min}
-                css={optionStyle}
+                styles={optionStyle}
               />
             ))}
           </OptionGroupRadio>

@@ -53,7 +53,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
 
     return (
       <OutsideClick
-        css={[wrapperStyle, styles]}
+        styles={[wrapperStyle, styles]}
         onOutsideClick={() => {
           this.setState({
             isOpen: false

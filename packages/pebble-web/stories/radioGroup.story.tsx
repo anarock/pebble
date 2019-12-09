@@ -45,19 +45,25 @@ storiesOf("Recipes/RadioGroup", module).add(
         store.set({ value });
       }}
       name="set of radios"
-      css={setWrap}
+      styles={setWrap}
     >
       <Radio
         value="OFF"
         label=""
-        css={[unSelectedButton, store.state.value === "OFF" && selectedButton]}
+        styles={[
+          unSelectedButton,
+          store.state.value === "OFF" && selectedButton
+        ]}
       >
         {() => "OFF"}
       </Radio>
       <Radio
         value="ON"
         label=""
-        css={[unSelectedButton, store.state.value === "ON" && selectedButton]}
+        styles={[
+          unSelectedButton,
+          store.state.value === "ON" && selectedButton
+        ]}
       >
         {() => "ON"}
       </Radio>
@@ -75,26 +81,26 @@ storiesOf("Recipes/RadioGroup", module).add(
         store.set({ value });
       }}
       name="set of radios"
-      css={setWrap}
+      styles={setWrap}
     >
       <Radio
         value="C"
         label=""
-        css={[unSelectedButton, store.state.value === "C" && selectedButton]}
+        styles={[unSelectedButton, store.state.value === "C" && selectedButton]}
       >
         {() => "C"}
       </Radio>
       <Radio
         value="B"
         label=""
-        css={[unSelectedButton, store.state.value === "B" && selectedButton]}
+        styles={[unSelectedButton, store.state.value === "B" && selectedButton]}
       >
         {() => "B"}
       </Radio>
       <Radio
         value="A"
         label=""
-        css={[unSelectedButton, store.state.value === "A" && selectedButton]}
+        styles={[unSelectedButton, store.state.value === "A" && selectedButton]}
       >
         {() => "A"}
       </Radio>

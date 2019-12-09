@@ -23,7 +23,7 @@ storiesOf("Components/Slider", module).add(
       values={store.state.values}
       disabled={boolean("disabled", false)}
       large={boolean("large", false)}
-      css={wrapperStyle}
+      styles={wrapperStyle}
       title={text("title", "Select Range")}
       valueLabelExtractor={() =>
         `${store.state.values[0]}-${store.state.values[1]}`

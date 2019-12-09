@@ -1,7 +1,6 @@
 import * as React from "react";
 import { CalendarTileProperties } from "react-calendar/dist/entry.nostyle";
 import RCalendar from "react-calendar/dist/Calendar";
-import { css } from "@emotion/core";
 import { CalendarProps, CalendarState } from "./typings/Calendar";
 import {
   buttonsWrapper,

@@ -14,7 +14,7 @@ storiesOf("Components/Typeahead", module).add(
   "simple",
   withState<State>({ selected: undefined })(({ store }) => (
     <TypeAhead
-      css={{
+      styles={{
         width: 400
       }}
       placeholder="Typeahead"

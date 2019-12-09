@@ -69,19 +69,19 @@ describe("set of radios", () => {
         selected={props.value}
         onChange={noop}
         name="set of radios"
-        css={setWrap}
+        styles={setWrap}
       >
         <Radio
           value="OFF"
           label=""
-          css={[unSelectedButton, props.value === "OFF" && selectedButton]}
+          styles={[unSelectedButton, props.value === "OFF" && selectedButton]}
         >
           {() => "OFF"}
         </Radio>
         <Radio
           value="ON"
           label=""
-          css={[unSelectedButton, props.value === "ON" && selectedButton]}
+          styles={[unSelectedButton, props.value === "ON" && selectedButton]}
         >
           {() => "ON"}
         </Radio>

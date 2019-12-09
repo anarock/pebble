@@ -57,7 +57,7 @@ storiesOf("Components/Text", module).add("List", () => (
           <>
             <Text
               typography={typography.normal.bold}
-              css={{
+              styles={{
                 display: "inline-block",
                 marginBottom: 10
               }}
@@ -66,7 +66,7 @@ storiesOf("Components/Text", module).add("List", () => (
               {`typography.${x}.${y}`}
             </Text>
             <div css={section} key={`${x}.${y}`}>
-              <Text typography={style} css={textStyle}>
+              <Text typography={style} styles={textStyle}>
                 {text}
               </Text>
               <title css={titleStyle} style={{ width: 100 }}>

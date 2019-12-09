@@ -62,7 +62,7 @@ class Option<OptionType> extends React.Component<
         {...this.props}
         checked={this.props.isSelected}
         type={this.props.multiSelect ? "checkbox" : "radio"}
-        css={_class}
+        styles={_class}
       >
         {() => {
           return (
