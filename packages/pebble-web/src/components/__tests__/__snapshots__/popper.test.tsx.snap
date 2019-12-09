@@ -1,99 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Popper snapshot 1`] = `
-.emotion-2 {
-  margin: 14px;
-  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1);
-  border-radius: 3px;
-}
-
-.emotion-1 {
-  position: absolute;
-  text-shadow: 1px 0 20px rgba(0,0,0,0.1);
-}
-
-.emotion-1[data-placement^='top'] {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  bottom: -11px;
-}
-
-.emotion-1[data-placement^='bottom'] {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  top: -11px;
-}
-
-.emotion-1[data-placement^='right'] {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  left: -11px;
-}
-
-.emotion-1[data-placement^='left'] {
-  right: -11px;
-}
-
-.emotion-0 {
-  line-height: 23px;
-  height: 40px;
-  padding: 0 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all ease-out .2s;
-  transition: all ease-out .2s;
-  border-radius: 3px;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  white-space: nowrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border: 0;
-  height: 40px;
-  min-width: 100px;
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 12px;
-  background-color: #6161FF;
-  border: none;
-  box-shadow: none;
-}
-
-.emotion-0[disabled] {
-  cursor: not-allowed;
-}
-
-.emotion-0:not([disabled]):hover {
-  color: #ffffff;
-  background-color: #7070FF;
-  border-color: #7070FF;
-}
-
-.emotion-0:not([disabled]):active {
-  color: #ffffff;
-  background-color: #5656ED;
-  border-color: #5656ED;
-}
-
-.emotion-0[disabled] {
-  color: #ffffff;
-  background-color: #C0C0FF;
-  border-color: #C0C0FF;
-}
-
 <div>
   <div
     style={
@@ -103,7 +10,18 @@ exports[`Component: Popper snapshot 1`] = `
     }
   >
     <button
-      className="emotion-0"
+      css={
+        Array [
+          Object {
+            "map": undefined,
+            "name": "ayrc6e",
+            "next": undefined,
+            "styles": "line-height:23px;height:40px;padding:0 20px;display:flex;align-items:center;transition:all ease-out .2s;border-radius:3px;outline:none;position:relative;overflow:hidden;cursor:pointer;white-space:nowrap;justify-content:center;border:0;&[disabled]{cursor:not-allowed;};height:40px;min-width:100px;font-weight:400;color:#ffffff;font-size:12px;background-color:#6161FF;border:none;&:not([disabled]):hover{color:#ffffff;background-color:#7070FF;border-color:#7070FF;}&:not([disabled]):active{color:#ffffff;background-color:#5656ED;border-color:#5656ED;}&[disabled]{color:#ffffff;background-color:#C0C0FF;border-color:#C0C0FF;}box-shadow:none;",
+            "toString": [Function],
+          },
+          undefined,
+        ]
+      }
       onClick={[Function]}
       style={
         Object {
@@ -133,7 +51,24 @@ exports[`Component: Popper snapshot 1`] = `
     </button>
   </div>
   <div
-    className="emotion-2"
+    css={
+      Array [
+        Object {
+          "map": undefined,
+          "name": "mwlb20",
+          "next": undefined,
+          "styles": "margin:14px;box-shadow:0 2px 15px 0 rgba(0,0,0,0.1);border-radius:3px;",
+          "toString": [Function],
+        },
+        Object {
+          "map": undefined,
+          "name": "mwlb20",
+          "next": undefined,
+          "styles": "margin:14px;box-shadow:0 2px 15px 0 rgba(0,0,0,0.1);border-radius:3px;",
+          "toString": [Function],
+        },
+      ]
+    }
     style={
       Object {
         "backgroundColor": "#ffffff",
@@ -151,7 +86,15 @@ exports[`Component: Popper snapshot 1`] = `
       className="dropdown-content"
     />
     <div
-      className="emotion-1"
+      css={
+        Object {
+          "map": undefined,
+          "name": "1duf8ku",
+          "next": undefined,
+          "styles": "position:absolute;text-shadow:1px 0 20px rgba(0,0,0,0.1);&[data-placement^='top']{transform:rotate(90deg);bottom:-11px;}&[data-placement^='bottom']{transform:rotate(-90deg);top:-11px;}&[data-placement^='right']{transform:rotate(180deg);left:-11px;}&[data-placement^='left']{right:-11px;}",
+          "toString": [Function],
+        }
+      }
       style={
         Object {
           "color": "#ffffff",

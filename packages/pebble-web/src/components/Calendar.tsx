@@ -115,14 +115,17 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
       range,
       selected,
       hideShadow,
-      styles,
+      wrapperClassName,
       onApply,
       onClear,
       ...rest
     } = this.props;
 
     return (
-      <div css={[wrapperStyle, !!hideShadow && { boxShadow: "none" }, styles]}>
+      <div
+        className={wrapperClassName}
+        css={[wrapperStyle, !!hideShadow && { boxShadow: "none" }]}
+      >
         <RCalendar
           {...rest}
           onChange={this.onChange}

@@ -1,103 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`set of radios { value: 'OFF' } 1`] = `
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: 400;
-  color: #101721;
-  font-size: 12px;
-}
-
-.emotion-1 {
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  outline: none;
-  padding: 10px 0;
-  position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 400;
-  color: #101721;
-  font-size: 14px;
-  padding: 15px 20px;
-  line-height: 8px;
-  border: 1px solid #EDEDED;
-  border-right: none;
-}
-
-.emotion-1[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.emotion-1[data-disabled='true'] .css-qatnln {
-  color: #E0E0E0;
-}
-
-.emotion-1:first-of-type {
-  border-radius: 3px 0px 0px 3px;
-}
-
-.emotion-1:last-of-type {
-  border-radius: 0px 3px 3px 0px;
-  border-right: 1px solid #EDEDED;
-}
-
-.emotion-0 {
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  outline: none;
-  padding: 10px 0;
-  position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 400;
-  color: #101721;
-  font-size: 14px;
-  padding: 15px 20px;
-  line-height: 8px;
-  border: 1px solid #EDEDED;
-  border-right: none;
-  background-color: #EDEDED;
-}
-
-.emotion-0[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] .css-qatnln {
-  color: #E0E0E0;
-}
-
-.emotion-0:first-of-type {
-  border-radius: 3px 0px 0px 3px;
-}
-
-.emotion-0:last-of-type {
-  border-radius: 0px 3px 3px 0px;
-  border-right: 1px solid #EDEDED;
-}
-
 <div
   aria-label="set of radios"
-  className="emotion-2"
+  css={
+    Object {
+      "map": undefined,
+      "name": "f6stqu",
+      "next": undefined,
+      "styles": "display:flex;font-weight:400;color:#101721;font-size:12px;",
+      "toString": [Function],
+    }
+  }
   role="radiogroup"
 >
   <div
     aria-checked={true}
-    className="emotion-0"
+    css={
+      Array [
+        Object {
+          "map": undefined,
+          "name": "qeht8w",
+          "next": undefined,
+          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
+          "toString": [Function],
+        },
+        Array [
+          Object {
+            "map": undefined,
+            "name": "adq3d0",
+            "next": undefined,
+            "styles": "padding:15px 20px;line-height:8px;border:1px solid #EDEDED;border-right:none;&:first-of-type{border-radius:3px 0px 0px 3px;}&:last-of-type{border-radius:0px 3px 3px 0px;border-right:1px solid #EDEDED;}",
+            "toString": [Function],
+          },
+          Object {
+            "map": undefined,
+            "name": "8o6nzx",
+            "next": undefined,
+            "styles": "background-color:#EDEDED;",
+            "toString": [Function],
+          },
+        ],
+      ]
+    }
     onClick={[Function]}
     role="radio"
     tabIndex={0}
@@ -106,7 +51,27 @@ exports[`set of radios { value: 'OFF' } 1`] = `
   </div>
   <div
     aria-checked={false}
-    className="emotion-1"
+    css={
+      Array [
+        Object {
+          "map": undefined,
+          "name": "qeht8w",
+          "next": undefined,
+          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
+          "toString": [Function],
+        },
+        Array [
+          Object {
+            "map": undefined,
+            "name": "adq3d0",
+            "next": undefined,
+            "styles": "padding:15px 20px;line-height:8px;border:1px solid #EDEDED;border-right:none;&:first-of-type{border-radius:3px 0px 0px 3px;}&:last-of-type{border-radius:0px 3px 3px 0px;border-right:1px solid #EDEDED;}",
+            "toString": [Function],
+          },
+          false,
+        ],
+      ]
+    }
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
@@ -117,103 +82,42 @@ exports[`set of radios { value: 'OFF' } 1`] = `
 `;
 
 exports[`set of radios { value: 'ON' } 1`] = `
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  font-weight: 400;
-  color: #101721;
-  font-size: 12px;
-}
-
-.emotion-0 {
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  outline: none;
-  padding: 10px 0;
-  position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 400;
-  color: #101721;
-  font-size: 14px;
-  padding: 15px 20px;
-  line-height: 8px;
-  border: 1px solid #EDEDED;
-  border-right: none;
-}
-
-.emotion-0[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.emotion-0[data-disabled='true'] .css-qatnln {
-  color: #E0E0E0;
-}
-
-.emotion-0:first-of-type {
-  border-radius: 3px 0px 0px 3px;
-}
-
-.emotion-0:last-of-type {
-  border-radius: 0px 3px 3px 0px;
-  border-right: 1px solid #EDEDED;
-}
-
-.emotion-1 {
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  outline: none;
-  padding: 10px 0;
-  position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-weight: 400;
-  color: #101721;
-  font-size: 14px;
-  padding: 15px 20px;
-  line-height: 8px;
-  border: 1px solid #EDEDED;
-  border-right: none;
-  background-color: #EDEDED;
-}
-
-.emotion-1[data-disabled='true'] {
-  cursor: not-allowed;
-}
-
-.emotion-1[data-disabled='true'] .css-qatnln {
-  color: #E0E0E0;
-}
-
-.emotion-1:first-of-type {
-  border-radius: 3px 0px 0px 3px;
-}
-
-.emotion-1:last-of-type {
-  border-radius: 0px 3px 3px 0px;
-  border-right: 1px solid #EDEDED;
-}
-
 <div
   aria-label="set of radios"
-  className="emotion-2"
+  css={
+    Object {
+      "map": undefined,
+      "name": "f6stqu",
+      "next": undefined,
+      "styles": "display:flex;font-weight:400;color:#101721;font-size:12px;",
+      "toString": [Function],
+    }
+  }
   role="radiogroup"
 >
   <div
     aria-checked={false}
-    className="emotion-0"
+    css={
+      Array [
+        Object {
+          "map": undefined,
+          "name": "qeht8w",
+          "next": undefined,
+          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
+          "toString": [Function],
+        },
+        Array [
+          Object {
+            "map": undefined,
+            "name": "adq3d0",
+            "next": undefined,
+            "styles": "padding:15px 20px;line-height:8px;border:1px solid #EDEDED;border-right:none;&:first-of-type{border-radius:3px 0px 0px 3px;}&:last-of-type{border-radius:0px 3px 3px 0px;border-right:1px solid #EDEDED;}",
+            "toString": [Function],
+          },
+          false,
+        ],
+      ]
+    }
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
@@ -222,7 +126,33 @@ exports[`set of radios { value: 'ON' } 1`] = `
   </div>
   <div
     aria-checked={true}
-    className="emotion-1"
+    css={
+      Array [
+        Object {
+          "map": undefined,
+          "name": "qeht8w",
+          "next": undefined,
+          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
+          "toString": [Function],
+        },
+        Array [
+          Object {
+            "map": undefined,
+            "name": "adq3d0",
+            "next": undefined,
+            "styles": "padding:15px 20px;line-height:8px;border:1px solid #EDEDED;border-right:none;&:first-of-type{border-radius:3px 0px 0px 3px;}&:last-of-type{border-radius:0px 3px 3px 0px;border-right:1px solid #EDEDED;}",
+            "toString": [Function],
+          },
+          Object {
+            "map": undefined,
+            "name": "8o6nzx",
+            "next": undefined,
+            "styles": "background-color:#EDEDED;",
+            "toString": [Function],
+          },
+        ],
+      ]
+    }
     onClick={[Function]}
     role="radio"
     tabIndex={0}
