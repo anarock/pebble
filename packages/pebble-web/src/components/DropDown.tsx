@@ -103,7 +103,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                         ""} ${transitionStyles.transform || ""}`,
                       transformOrigin: `${arrowProps.style.left ||
                         0}px ${arrowProps.style.top || 0}px`,
-                      padding: `${padding}`
+                      padding
                     };
 
                     return (

@@ -9,7 +9,7 @@ export const modalContainer = css({
   width: "360px",
   alignSelf: "center",
   borderRadius: constants.borderRadius,
-  padding: `${modalPadding}px`,
+  padding: modalPadding,
   position: "relative"
 });
 
@@ -28,8 +28,8 @@ export const buttonsContainer = css({
 export const iconCloseClassName = css({
   cursor: "pointer",
   position: "absolute",
-  right: `${modalPadding}px`,
-  top: `${modalPadding}px`,
+  right: modalPadding,
+  top: modalPadding,
   fontSize: "14px",
   color: colors.gray.base,
   "&:hover": {
