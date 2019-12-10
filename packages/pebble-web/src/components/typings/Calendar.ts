@@ -1,5 +1,6 @@
 import { CalendarProps as CP } from "react-calendar";
 import { Omit } from "utility-types";
+import { Interpolation } from "./emotionCustom";
 
 interface TileDot {
   timeStamp?: number | Date;
@@ -8,6 +9,7 @@ interface TileDot {
 
 interface CommonCalendarProps extends Omit<CP, "onChange"> {
   hideShadow?: boolean;
+  wrapperStyles?: Interpolation;
   wrapperClassName?: string;
   onClear?: () => void;
   tileDots: TileDot[];

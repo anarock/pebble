@@ -28,14 +28,15 @@ class Search extends React.PureComponent<SearchProps> {
     } = this.props;
 
     const wrapperClassName = [
-      searchWrapperStyle,
       type === "small" && "__pebble__search__small",
       type === "large" && "__pebble__search__large",
       type === "table" && "__pebble__search__table"
-    ];
+    ]
+      .filter(Boolean)
+      .join(" ");
 
     return (
-      <div css={[wrapperClassName, styles]}>
+      <div className={wrapperClassName} css={[searchWrapperStyle, styles]}>
         {type !== "large" && showSearchIcon && <i className="pi pi-search" />}
         <input
           css={searchStyle}
@@ -51,7 +52,8 @@ class Search extends React.PureComponent<SearchProps> {
         />
         {clearable && (
           <div
-            css={[clearContainer, !!value && !!value.length && "__display"]}
+            className={(!!value && !!value.length && "__display") || ""}
+            css={clearContainer}
             onClick={() => {
               if (this.searchInputRef.current) {
                 this.searchInputRef.current.value = "";

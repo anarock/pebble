@@ -1,5 +1,5 @@
 import { TypographyStyle } from "../../theme/typings/typography";
-import { Interpolation } from "@emotion/css";
+import { Interpolation } from "./emotionCustom";
 
 export interface TextProps {
   color?: string;

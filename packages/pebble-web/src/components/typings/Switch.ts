@@ -1,4 +1,4 @@
-import { Interpolation } from "@emotion/css";
+import { Interpolation } from "./emotionCustom";
 
 export interface SwitchProps {
   initialValue?: boolean;

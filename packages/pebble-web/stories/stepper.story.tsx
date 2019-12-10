@@ -45,7 +45,7 @@ storiesOf("Components/Stepper", module).add("Default", () => (
       <div css={contentWrapper}>
         <div css={label}>{item.label}</div>
         <div css={iconSize}>
-          <i css={["pi", item.icon]} />
+          <i className={`pi ${item.icon}`} />
         </div>
       </div>
     )}

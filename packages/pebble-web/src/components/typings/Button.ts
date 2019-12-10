@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as CSS from "csstype";
-import { Interpolation } from "@emotion/css";
+import { Interpolation } from "./emotionCustom";
 
 export type ButtonType = "primary" | "secondary" | "link" | "success" | "alert";
 

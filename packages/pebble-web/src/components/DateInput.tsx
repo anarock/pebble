@@ -119,7 +119,7 @@ export default class DateInput extends React.PureComponent<
         {({ toggle }) => (
           <Calendar
             hideShadow
-            styles={dateClass}
+            wrapperStyles={dateClass}
             selected={propsValue ? new Date(propsValue) : undefined}
             {...calendarProps}
             range={false}

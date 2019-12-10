@@ -1,6 +1,6 @@
 import * as React from "react";
 import { PopperProps as PopperProps_ } from "react-popper";
-import { Interpolation } from "@emotion/css";
+import { Interpolation } from "./emotionCustom";
 
 type Label =
   | string

@@ -79,9 +79,8 @@ export default class PebblePopper extends React.PureComponent<
 
                   return (
                     <div
-                      css={[popperStyle, popperStyle]}
+                      css={[popperStyle, wrapperStyle]}
                       ref={ref}
-                      style={wrapperStyle}
                       data-placement={placement}
                     >
                       {children({

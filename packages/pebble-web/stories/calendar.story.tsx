@@ -10,6 +10,7 @@ const LAST_DATE_OF_2018 = new Date(2018, 11, 31);
 storiesOf("Components/Calendar", module)
   .add("Single Date", () => (
     <Calendar
+      wrapperClassName="axix"
       onChange={action("change")}
       onApply={action("apply")}
       onClear={action("clear")}

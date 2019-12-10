@@ -1,7 +1,7 @@
 import React from "react";
 import { SetDifference } from "utility-types";
 import { Colors } from "pebble-shared/dist/theme/typings/colors";
-import { Interpolation } from "@emotion/css";
+import { Interpolation } from "./emotionCustom";
 
 export interface TagProps {
   label: React.ReactNode;

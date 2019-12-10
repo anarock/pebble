@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ButtonType } from "./Button";
 import { Placement, Modifiers } from "popper.js";
-import { Interpolation } from "@emotion/css";
+import { Interpolation } from "./emotionCustom";
 
 type Toggle = () => void;
 

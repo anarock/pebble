@@ -45,7 +45,8 @@ export default class PhoneNumberInput extends React.Component<
     return (
       <div css={[wrapper, styles]}>
         <label
-          css={[labelStyle, "_pebble_input_label_focused", combinedLabelStyle]}
+          className="_pebble_input_label_focused"
+          css={[labelStyle, combinedLabelStyle]}
         >
           {placeholder || "Phone No."}
           {required && <span style={{ color: colors.red.base }}>&nbsp;*</span>}

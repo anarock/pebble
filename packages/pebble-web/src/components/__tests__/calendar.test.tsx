@@ -14,7 +14,7 @@ describe("Calendar", () => {
 
     const calendar = mount(
       <Calendar
-        wrapperClassName="calendar-test"
+        wrapperStyles="calendar-test"
         onApply={applySpy}
         range
         onClear={clearSpy}
@@ -65,7 +65,7 @@ describe("Calendar", () => {
 
     const calendar = mount(
       <Calendar
-        wrapperClassName="calendar-test"
+        wrapperStyles="calendar-test"
         onApply={applySpy}
         range
         onClear={clearSpy}
@@ -100,7 +100,7 @@ describe("Calendar", () => {
 
     const calendar = mount(
       <Calendar
-        wrapperClassName="calendar-test"
+        wrapperStyles="calendar-test"
         onApply={applySpy}
         onClear={clearSpy}
         onChange={changeSpy}
@@ -141,7 +141,7 @@ describe("Calendar", () => {
 
     const calendar = mount(
       <Calendar
-        wrapperClassName="calendar-test"
+        wrapperStyles="calendar-test"
         onApply={applySpy}
         onClear={clearSpy}
         onChange={changeSpy}

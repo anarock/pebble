@@ -1,6 +1,6 @@
 import * as React from "react";
 import { SimpleInputProps } from "./Input";
-import { Interpolation } from "@emotion/css";
+import { Interpolation } from "./emotionCustom";
 
 type FocusEvent = (
   event: React.KeyboardEvent<HTMLInputElement> | React.FocusEvent<HTMLElement>

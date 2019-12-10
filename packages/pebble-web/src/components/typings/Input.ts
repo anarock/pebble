@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Interpolation } from "@emotion/css";
+import { Interpolation } from "./emotionCustom";
 
 interface CommonInputProps {
   placeholder: string;

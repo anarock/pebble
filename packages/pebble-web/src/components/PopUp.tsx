@@ -24,7 +24,11 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
     <Modal visible={visible} modalStyles={flexCenter}>
       <div css={modalContainer}>
         {onClose && (
-          <i css={["pi", "pi-close", iconCloseClassName]} onClick={onClose} />
+          <i
+            className="pi pi-close"
+            css={iconCloseClassName}
+            onClick={onClose}
+          />
         )}
         {children}
         {(onReject || onApprove) && (

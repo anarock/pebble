@@ -61,7 +61,8 @@ export const DropDownButton = ({
     >
       {children}{" "}
       <i
-        css={["pi pi-arrow-drop-down", iconStyle]}
+        className="pi pi-arrow-drop-down"
+        css={iconStyle}
         style={{
           transform: isOpen ? "rotate(180deg)" : "none"
         }}

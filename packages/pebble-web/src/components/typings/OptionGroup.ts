@@ -1,7 +1,7 @@
 import * as React from "react";
 import { SearchProps } from "./Search";
 import { Omit } from "utility-types";
-import { Interpolation } from "@emotion/css";
+import { Interpolation } from "./emotionCustom";
 
 export interface CommonProps {
   styles?: Interpolation;

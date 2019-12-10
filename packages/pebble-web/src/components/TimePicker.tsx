@@ -70,7 +70,8 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
             </span>
             <span>
               <i
-                css={["pi pi-arrow-drop-down", iconStyle]}
+                className="pi pi-arrow-drop-down"
+                css={iconStyle}
                 style={{ transform: isOpen ? "rotate(180deg)" : "none" }}
               />
             </span>
@@ -118,7 +119,8 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
               {selectedMinute !== undefined ? selectedMinute : "mins"}
             </span>
             <i
-              css={["pi pi-arrow-drop-down", iconStyle]}
+              className="pi pi-arrow-drop-down"
+              css={iconStyle}
               style={{ transform: isOpen ? "rotate(180deg)" : "none" }}
             />
           </div>

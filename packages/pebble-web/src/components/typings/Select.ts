@@ -3,7 +3,7 @@ import { SearchProps } from "./Search";
 import { Extras } from "./OptionGroup";
 import { Omit } from "utility-types";
 import { Placement, Modifiers } from "popper.js";
-import { Interpolation } from "@emotion/css";
+import { Interpolation } from "./emotionCustom";
 
 export type SingleSelected = number | string;
 export type MultiSelected = Array<number | string>;

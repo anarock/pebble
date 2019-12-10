@@ -13,7 +13,8 @@ const Tag: React.FunctionComponent<TagProps> = ({
 }) => {
   return (
     <div
-      css={[tagStyle, !!onClose && "__pebble__tag__with__close", styles]}
+      className={(!!onClose && "__pebble__tag__with__close") || ""}
+      css={[tagStyle, styles]}
       style={{
         color: colors[color].base,
         // @ts-ignore

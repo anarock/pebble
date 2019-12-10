@@ -1,5 +1,5 @@
 import { Props } from "rheostat";
-import { Interpolation } from "@emotion/css";
+import { Interpolation } from "./emotionCustom";
 
 export interface SliderProps extends Props {
   styles?: Interpolation;
