@@ -1,19 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: OptionGroup default snapshot 1`] = `
+.emotion-24 {
+  background-color: #ffffff;
+  border-radius: 3px;
+  position: relative;
+  width: inherit;
+  z-index: 9;
+  max-height: 316px;
+  min-width: 100px;
+  overflow-y: auto;
+  padding: 10px 1px;
+}
+
+.emotion-1 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 12px 18px;
+  position: relative;
+  line-height: 28px;
+  z-index: 999;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-1:last-of-type {
+  border: 0;
+}
+
+.emotion-1:hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "d5z4ii",
-        "next": undefined,
-        "styles": "background-color:#ffffff;border-radius:3px;position:relative;width:inherit;z-index:9;max-height:316px;min-width:100px;overflow-y:auto;padding:10px 1px;",
-        "toString": [Function],
-      },
-      undefined,
-    ]
-  }
+  className="emotion-24"
   data-test-id="optiongroup"
   role="radiogroup"
   style={
@@ -24,46 +93,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
 >
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 0
     </div>
@@ -88,46 +124,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   </div>
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 1
     </div>
@@ -152,46 +155,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   </div>
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 2
     </div>
@@ -216,46 +186,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   </div>
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 3
     </div>
@@ -280,46 +217,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   </div>
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 4
     </div>
@@ -344,46 +248,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   </div>
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 5
     </div>
@@ -408,46 +279,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   </div>
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 6
     </div>
@@ -472,46 +310,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   </div>
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 7
     </div>
@@ -536,46 +341,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   </div>
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 8
     </div>
@@ -600,46 +372,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   </div>
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 9
     </div>
@@ -664,46 +403,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   </div>
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 10
     </div>
@@ -728,46 +434,13 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   </div>
   <div
     aria-checked={false}
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "qeht8w",
-          "next": undefined,
-          "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-          "toString": [Function],
-        },
-        Array [
-          Object {
-            "map": undefined,
-            "name": "285sb6",
-            "next": undefined,
-            "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-            "toString": [Function],
-          },
-          false,
-          false,
-          undefined,
-        ],
-      ]
-    }
+    className="emotion-1"
     onClick={[Function]}
     role="radio"
     tabIndex={-1}
   >
     <div
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "8hyqlg",
-            "next": undefined,
-            "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
     >
       Option 11
     </div>
@@ -795,38 +468,138 @@ exports[`Component: OptionGroup default snapshot 1`] = `
 
 exports[`Component: OptionGroup multi option group 1`] = `
 Array [
-  <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "nimfj4",
-          "next": undefined,
-          "styles": "padding:20px;box-shadow:none;transition:all 100ms linear;z-index:10;will-change:padding;position:absolute;top:0;background:white;width:100%;box-sizing:border-box;",
-          "toString": [Function],
-        },
-        false,
-      ]
-    }
+  .emotion-3 {
+  padding: 20px;
+  box-shadow: none;
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
+  z-index: 10;
+  will-change: padding;
+  position: absolute;
+  top: 0;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  min-width: 200px;
+  border-radius: 3px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+}
+
+.emotion-2 > i {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.emotion-2.__pebble__search__small {
+  background-color: #F7F7F9;
+}
+
+.emotion-2.__pebble__search__large {
+  background-color: #ffffff;
+  height: 76px;
+  padding: 0 25px;
+  box-shadow: 0 2px 7px 0 #F2F2F2;
+}
+
+.emotion-2.__pebble__search__table {
+  border: 1px solid #E0E0E0;
+  background-color: #ffffff;
+}
+
+.emotion-2.__pebble__search__table i {
+  color: #6B7785;
+}
+
+.emotion-0 {
+  border-radius: 3px;
+  outline: none;
+  border: 0;
+  height: inherit;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  color: #101721;
+  font-size: 12px;
+  background-color: transparent;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0:-moz-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0::placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-1 {
+  display: table;
+  height: 16px;
+  width: 16px;
+  background-color: #E0E0E0;
+  font-size: 6px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.emotion-1.__display {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+<div
+    className="emotion-3"
   >
     <div
-      css={
-        Array [
-          Array [
-            Object {
-              "map": undefined,
-              "name": "1rax6ee",
-              "next": undefined,
-              "styles": "min-width:200px;border-radius:3px;padding:0 20px;display:flex;flex-direction:row;align-items:center;height:40px;> i{margin-right:10px;font-size:12px;}&.__pebble__search__small{background-color:#F7F7F9;}&.__pebble__search__large{background-color:#ffffff;height:76px;padding:0 25px;box-shadow:0 2px 7px 0 #F2F2F2;}&.__pebble__search__table{border:1px solid #E0E0E0;background-color:#ffffff;i{color:#6B7785;}}",
-              "toString": [Function],
-            },
-            "__pebble__search__small",
-            false,
-            false,
-          ],
-          undefined,
-        ]
-      }
+      className="__pebble__search__small emotion-2"
     >
       <i
         className="pi pi-search"
@@ -834,15 +607,7 @@ Array [
       <input
         aria-label="Search"
         autoFocus={true}
-        css={
-          Object {
-            "map": undefined,
-            "name": "14kl288",
-            "next": undefined,
-            "styles": "border-radius:3px;outline:none;border:0;height:inherit;flex-grow:1;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400;color:#101721;font-size:12px;::-webkit-input-placeholder{color:#9FA6B0;}::-moz-placeholder{color:#9FA6B0;}:-ms-input-placeholder{color:#9FA6B0;}:-moz-placeholder{color:#9FA6B0;}::placeholder{color:#9FA6B0;}background-color:transparent;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-0"
         onChange={[Function]}
         onKeyDown={[Function]}
         placeholder="Search"
@@ -850,18 +615,7 @@ Array [
         value=""
       />
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "ficc52",
-              "next": undefined,
-              "styles": "display:table;height:16px;width:16px;background-color:#E0E0E0;font-size:6px;border-radius:16px;text-align:center;cursor:pointer;pointer-events:none;transition:opacity 0.3s;opacity:0;&.__display{opacity:1;pointer-events:unset;}",
-              "toString": [Function],
-            },
-            false,
-          ]
-        }
+        className=" emotion-1"
         onClick={[Function]}
       >
         <i
@@ -876,19 +630,94 @@ Array [
       </div>
     </div>
   </div>,
-  <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "d5z4ii",
-          "next": undefined,
-          "styles": "background-color:#ffffff;border-radius:3px;position:relative;width:inherit;z-index:9;max-height:316px;min-width:100px;overflow-y:auto;padding:10px 1px;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+  .emotion-36 {
+  background-color: #ffffff;
+  border-radius: 3px;
+  position: relative;
+  width: inherit;
+  z-index: 9;
+  max-height: 316px;
+  min-width: 100px;
+  overflow-y: auto;
+  padding: 10px 1px;
+}
+
+.emotion-2 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 12px 18px;
+  position: relative;
+  line-height: 28px;
+  z-index: 999;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-2:last-of-type {
+  border: 0;
+}
+
+.emotion-2:hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-1 {
+  margin-left: 10px;
+  color: #E0E0E0;
+  font-size: 20px;
+}
+
+<div
+    className="emotion-36"
     data-test-id="optiongroup"
     role="group"
     style={
@@ -899,58 +728,18 @@ Array [
   >
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 0
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -973,58 +762,18 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 1
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -1047,58 +796,18 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 2
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -1121,58 +830,18 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 3
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -1195,58 +864,18 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 4
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -1269,58 +898,18 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 5
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -1343,58 +932,18 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 6
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -1417,58 +966,18 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 7
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -1491,58 +1000,18 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 8
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -1565,58 +1034,18 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 9
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -1639,58 +1068,18 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 10
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -1713,58 +1102,18 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-2"
       onClick={[Function]}
       role="checkbox"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 11
       </div>
       <i
-        className="pi pi-checkbox-unselected"
-        css={
-          Object {
-            "color": "#E0E0E0",
-            "fontSize": "20px",
-            "marginLeft": "10px",
-          }
-        }
+        className="pi pi-checkbox-unselected emotion-1"
       />
       <canvas
         height={0}
@@ -1791,38 +1140,138 @@ Array [
 
 exports[`Component: OptionGroup with searchbox 1`] = `
 Array [
-  <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "nimfj4",
-          "next": undefined,
-          "styles": "padding:20px;box-shadow:none;transition:all 100ms linear;z-index:10;will-change:padding;position:absolute;top:0;background:white;width:100%;box-sizing:border-box;",
-          "toString": [Function],
-        },
-        false,
-      ]
-    }
+  .emotion-3 {
+  padding: 20px;
+  box-shadow: none;
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
+  z-index: 10;
+  will-change: padding;
+  position: absolute;
+  top: 0;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.emotion-2 {
+  min-width: 200px;
+  border-radius: 3px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+}
+
+.emotion-2 > i {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.emotion-2.__pebble__search__small {
+  background-color: #F7F7F9;
+}
+
+.emotion-2.__pebble__search__large {
+  background-color: #ffffff;
+  height: 76px;
+  padding: 0 25px;
+  box-shadow: 0 2px 7px 0 #F2F2F2;
+}
+
+.emotion-2.__pebble__search__table {
+  border: 1px solid #E0E0E0;
+  background-color: #ffffff;
+}
+
+.emotion-2.__pebble__search__table i {
+  color: #6B7785;
+}
+
+.emotion-0 {
+  border-radius: 3px;
+  outline: none;
+  border: 0;
+  height: inherit;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  color: #101721;
+  font-size: 12px;
+  background-color: transparent;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0:-moz-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0::-moz-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-0::placeholder {
+  color: #9FA6B0;
+}
+
+.emotion-1 {
+  display: table;
+  height: 16px;
+  width: 16px;
+  background-color: #E0E0E0;
+  font-size: 6px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.emotion-1.__display {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+<div
+    className="emotion-3"
   >
     <div
-      css={
-        Array [
-          Array [
-            Object {
-              "map": undefined,
-              "name": "1rax6ee",
-              "next": undefined,
-              "styles": "min-width:200px;border-radius:3px;padding:0 20px;display:flex;flex-direction:row;align-items:center;height:40px;> i{margin-right:10px;font-size:12px;}&.__pebble__search__small{background-color:#F7F7F9;}&.__pebble__search__large{background-color:#ffffff;height:76px;padding:0 25px;box-shadow:0 2px 7px 0 #F2F2F2;}&.__pebble__search__table{border:1px solid #E0E0E0;background-color:#ffffff;i{color:#6B7785;}}",
-              "toString": [Function],
-            },
-            "__pebble__search__small",
-            false,
-            false,
-          ],
-          undefined,
-        ]
-      }
+      className="__pebble__search__small emotion-2"
     >
       <i
         className="pi pi-search"
@@ -1830,15 +1279,7 @@ Array [
       <input
         aria-label="Search"
         autoFocus={true}
-        css={
-          Object {
-            "map": undefined,
-            "name": "14kl288",
-            "next": undefined,
-            "styles": "border-radius:3px;outline:none;border:0;height:inherit;flex-grow:1;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:400;color:#101721;font-size:12px;::-webkit-input-placeholder{color:#9FA6B0;}::-moz-placeholder{color:#9FA6B0;}:-ms-input-placeholder{color:#9FA6B0;}:-moz-placeholder{color:#9FA6B0;}::placeholder{color:#9FA6B0;}background-color:transparent;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-0"
         onChange={[Function]}
         onKeyDown={[Function]}
         placeholder="Search"
@@ -1846,18 +1287,7 @@ Array [
         value=""
       />
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "ficc52",
-              "next": undefined,
-              "styles": "display:table;height:16px;width:16px;background-color:#E0E0E0;font-size:6px;border-radius:16px;text-align:center;cursor:pointer;pointer-events:none;transition:opacity 0.3s;opacity:0;&.__display{opacity:1;pointer-events:unset;}",
-              "toString": [Function],
-            },
-            false,
-          ]
-        }
+        className=" emotion-1"
         onClick={[Function]}
       >
         <i
@@ -1872,19 +1302,88 @@ Array [
       </div>
     </div>
   </div>,
-  <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "d5z4ii",
-          "next": undefined,
-          "styles": "background-color:#ffffff;border-radius:3px;position:relative;width:inherit;z-index:9;max-height:316px;min-width:100px;overflow-y:auto;padding:10px 1px;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+  .emotion-24 {
+  background-color: #ffffff;
+  border-radius: 3px;
+  position: relative;
+  width: inherit;
+  z-index: 9;
+  max-height: 316px;
+  min-width: 100px;
+  overflow-y: auto;
+  padding: 10px 1px;
+}
+
+.emotion-1 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 12px 18px;
+  position: relative;
+  line-height: 28px;
+  z-index: 999;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: initial;
+  -ms-flex-line-pack: initial;
+  align-content: initial;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-1[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-1:last-of-type {
+  border: 0;
+}
+
+.emotion-1:hover {
+  background-color: #F7F7F9;
+}
+
+.emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+<div
+    className="emotion-24"
     data-test-id="optiongroup"
     role="radiogroup"
     style={
@@ -1895,46 +1394,13 @@ Array [
   >
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 0
       </div>
@@ -1959,46 +1425,13 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 1
       </div>
@@ -2023,46 +1456,13 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 2
       </div>
@@ -2087,46 +1487,13 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 3
       </div>
@@ -2151,46 +1518,13 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 4
       </div>
@@ -2215,46 +1549,13 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 5
       </div>
@@ -2279,46 +1580,13 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 6
       </div>
@@ -2343,46 +1611,13 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 7
       </div>
@@ -2407,46 +1642,13 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 8
       </div>
@@ -2471,46 +1673,13 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 9
       </div>
@@ -2535,46 +1704,13 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 10
       </div>
@@ -2599,46 +1735,13 @@ Array [
     </div>
     <div
       aria-checked={false}
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "qeht8w",
-            "next": undefined,
-            "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-            "toString": [Function],
-          },
-          Array [
-            Object {
-              "map": undefined,
-              "name": "285sb6",
-              "next": undefined,
-              "styles": "font-weight:400;color:#101721;font-size:14px;cursor:pointer;padding:12px 18px;position:relative;line-height:28px;z-index:999;overflow-x:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;flex-direction:row;justify-content:space-between;align-content:initial;align-items:center;&:last-of-type{border:0;}&:hover{background-color:#F7F7F9;}",
-              "toString": [Function],
-            },
-            false,
-            false,
-            undefined,
-          ],
-        ]
-      }
+      className="emotion-1"
       onClick={[Function]}
       role="radio"
       tabIndex={-1}
     >
       <div
-        css={
-          Array [
-            Object {
-              "map": undefined,
-              "name": "8hyqlg",
-              "next": undefined,
-              "styles": "user-select:none;overflow:hidden;text-overflow:ellipsis;",
-              "toString": [Function],
-            },
-            undefined,
-          ]
-        }
+        className="emotion-0"
       >
         Option 11
       </div>

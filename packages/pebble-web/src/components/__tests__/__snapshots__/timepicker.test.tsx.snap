@@ -1,39 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TimePicker { selectedHour: 1, selectedMinute: 0 } 1`] = `
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #EDEDED;
+}
+
+.emotion-9:not([disabled]):hover {
+  background: #E0E0E0;
+}
+
+.emotion-3 {
+  position: relative;
+}
+
+.emotion-2 {
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #101721;
+  line-height: 9px;
+}
+
+.emotion-0 {
+  margin-right: 15px;
+}
+
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 8px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+  color: #6B7785;
+  display: inline-block;
+}
+
+.emotion-4 {
+  color: #6B7785;
+  line-height: 40px;
+}
+
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "18d3jqg",
-        "next": undefined,
-        "styles": "display:flex;align-items:center;border:1px solid #E0E0E0;border-radius:3px;cursor:pointer;&:not([disabled]):hover{background:#E0E0E0;}",
-        "toString": [Function],
-      },
-      Object {
-        "map": undefined,
-        "name": "8o6nzx",
-        "next": undefined,
-        "styles": "background-color:#EDEDED;",
-        "toString": [Function],
-      },
-    ]
-  }
+  className="emotion-9"
 >
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -44,45 +68,18 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 0 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="hour-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           1
         </span>
         <span>
           <i
-            css={
-              Array [
-                "pi pi-arrow-drop-down",
-                Object {
-                  "map": undefined,
-                  "name": "32hj2g",
-                  "next": undefined,
-                  "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                  "toString": [Function],
-                },
-              ]
-            }
+            className="pi pi-arrow-drop-down emotion-1"
             style={
               Object {
                 "transform": "none",
@@ -94,31 +91,12 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 0 } 1`] = `
     </div>
   </div>
   <span
-    css={
-      Object {
-        "map": undefined,
-        "name": "wn9ldv",
-        "next": undefined,
-        "styles": "color:#6B7785;line-height:40px;",
-        "toString": [Function],
-      }
-    }
+    className="emotion-4"
   >
     :
   </span>
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -129,44 +107,17 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 0 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="minute-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           0
         </span>
         <i
-          css={
-            Array [
-              "pi pi-arrow-drop-down",
-              Object {
-                "map": undefined,
-                "name": "32hj2g",
-                "next": undefined,
-                "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                "toString": [Function],
-              },
-            ]
-          }
+          className="pi pi-arrow-drop-down emotion-1"
           style={
             Object {
               "transform": "none",
@@ -180,39 +131,63 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 0 } 1`] = `
 `;
 
 exports[`TimePicker { selectedHour: 1, selectedMinute: 15 } 1`] = `
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #EDEDED;
+}
+
+.emotion-9:not([disabled]):hover {
+  background: #E0E0E0;
+}
+
+.emotion-3 {
+  position: relative;
+}
+
+.emotion-2 {
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #101721;
+  line-height: 9px;
+}
+
+.emotion-0 {
+  margin-right: 15px;
+}
+
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 8px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+  color: #6B7785;
+  display: inline-block;
+}
+
+.emotion-4 {
+  color: #6B7785;
+  line-height: 40px;
+}
+
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "18d3jqg",
-        "next": undefined,
-        "styles": "display:flex;align-items:center;border:1px solid #E0E0E0;border-radius:3px;cursor:pointer;&:not([disabled]):hover{background:#E0E0E0;}",
-        "toString": [Function],
-      },
-      Object {
-        "map": undefined,
-        "name": "8o6nzx",
-        "next": undefined,
-        "styles": "background-color:#EDEDED;",
-        "toString": [Function],
-      },
-    ]
-  }
+  className="emotion-9"
 >
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -223,45 +198,18 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 15 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="hour-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           1
         </span>
         <span>
           <i
-            css={
-              Array [
-                "pi pi-arrow-drop-down",
-                Object {
-                  "map": undefined,
-                  "name": "32hj2g",
-                  "next": undefined,
-                  "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                  "toString": [Function],
-                },
-              ]
-            }
+            className="pi pi-arrow-drop-down emotion-1"
             style={
               Object {
                 "transform": "none",
@@ -273,31 +221,12 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 15 } 1`] = `
     </div>
   </div>
   <span
-    css={
-      Object {
-        "map": undefined,
-        "name": "wn9ldv",
-        "next": undefined,
-        "styles": "color:#6B7785;line-height:40px;",
-        "toString": [Function],
-      }
-    }
+    className="emotion-4"
   >
     :
   </span>
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -308,44 +237,17 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 15 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="minute-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           15
         </span>
         <i
-          css={
-            Array [
-              "pi pi-arrow-drop-down",
-              Object {
-                "map": undefined,
-                "name": "32hj2g",
-                "next": undefined,
-                "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                "toString": [Function],
-              },
-            ]
-          }
+          className="pi pi-arrow-drop-down emotion-1"
           style={
             Object {
               "transform": "none",
@@ -359,39 +261,63 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 15 } 1`] = `
 `;
 
 exports[`TimePicker { selectedHour: 1, selectedMinute: undefined } 1`] = `
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #EDEDED;
+}
+
+.emotion-9:not([disabled]):hover {
+  background: #E0E0E0;
+}
+
+.emotion-3 {
+  position: relative;
+}
+
+.emotion-2 {
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #101721;
+  line-height: 9px;
+}
+
+.emotion-0 {
+  margin-right: 15px;
+}
+
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 8px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+  color: #6B7785;
+  display: inline-block;
+}
+
+.emotion-4 {
+  color: #6B7785;
+  line-height: 40px;
+}
+
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "18d3jqg",
-        "next": undefined,
-        "styles": "display:flex;align-items:center;border:1px solid #E0E0E0;border-radius:3px;cursor:pointer;&:not([disabled]):hover{background:#E0E0E0;}",
-        "toString": [Function],
-      },
-      Object {
-        "map": undefined,
-        "name": "8o6nzx",
-        "next": undefined,
-        "styles": "background-color:#EDEDED;",
-        "toString": [Function],
-      },
-    ]
-  }
+  className="emotion-9"
 >
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -402,45 +328,18 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: undefined } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="hour-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           1
         </span>
         <span>
           <i
-            css={
-              Array [
-                "pi pi-arrow-drop-down",
-                Object {
-                  "map": undefined,
-                  "name": "32hj2g",
-                  "next": undefined,
-                  "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                  "toString": [Function],
-                },
-              ]
-            }
+            className="pi pi-arrow-drop-down emotion-1"
             style={
               Object {
                 "transform": "none",
@@ -452,31 +351,12 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: undefined } 1`] = `
     </div>
   </div>
   <span
-    css={
-      Object {
-        "map": undefined,
-        "name": "wn9ldv",
-        "next": undefined,
-        "styles": "color:#6B7785;line-height:40px;",
-        "toString": [Function],
-      }
-    }
+    className="emotion-4"
   >
     :
   </span>
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -487,44 +367,17 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: undefined } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="minute-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           mins
         </span>
         <i
-          css={
-            Array [
-              "pi pi-arrow-drop-down",
-              Object {
-                "map": undefined,
-                "name": "32hj2g",
-                "next": undefined,
-                "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                "toString": [Function],
-              },
-            ]
-          }
+          className="pi pi-arrow-drop-down emotion-1"
           style={
             Object {
               "transform": "none",
@@ -538,39 +391,63 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: undefined } 1`] = `
 `;
 
 exports[`TimePicker { selectedHour: 12, selectedMinute: 0 } 1`] = `
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #EDEDED;
+}
+
+.emotion-9:not([disabled]):hover {
+  background: #E0E0E0;
+}
+
+.emotion-3 {
+  position: relative;
+}
+
+.emotion-2 {
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #101721;
+  line-height: 9px;
+}
+
+.emotion-0 {
+  margin-right: 15px;
+}
+
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 8px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+  color: #6B7785;
+  display: inline-block;
+}
+
+.emotion-4 {
+  color: #6B7785;
+  line-height: 40px;
+}
+
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "18d3jqg",
-        "next": undefined,
-        "styles": "display:flex;align-items:center;border:1px solid #E0E0E0;border-radius:3px;cursor:pointer;&:not([disabled]):hover{background:#E0E0E0;}",
-        "toString": [Function],
-      },
-      Object {
-        "map": undefined,
-        "name": "8o6nzx",
-        "next": undefined,
-        "styles": "background-color:#EDEDED;",
-        "toString": [Function],
-      },
-    ]
-  }
+  className="emotion-9"
 >
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -581,45 +458,18 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 0 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="hour-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           12
         </span>
         <span>
           <i
-            css={
-              Array [
-                "pi pi-arrow-drop-down",
-                Object {
-                  "map": undefined,
-                  "name": "32hj2g",
-                  "next": undefined,
-                  "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                  "toString": [Function],
-                },
-              ]
-            }
+            className="pi pi-arrow-drop-down emotion-1"
             style={
               Object {
                 "transform": "none",
@@ -631,31 +481,12 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 0 } 1`] = `
     </div>
   </div>
   <span
-    css={
-      Object {
-        "map": undefined,
-        "name": "wn9ldv",
-        "next": undefined,
-        "styles": "color:#6B7785;line-height:40px;",
-        "toString": [Function],
-      }
-    }
+    className="emotion-4"
   >
     :
   </span>
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -666,44 +497,17 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 0 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="minute-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           0
         </span>
         <i
-          css={
-            Array [
-              "pi pi-arrow-drop-down",
-              Object {
-                "map": undefined,
-                "name": "32hj2g",
-                "next": undefined,
-                "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                "toString": [Function],
-              },
-            ]
-          }
+          className="pi pi-arrow-drop-down emotion-1"
           style={
             Object {
               "transform": "none",
@@ -717,39 +521,63 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 0 } 1`] = `
 `;
 
 exports[`TimePicker { selectedHour: 12, selectedMinute: 15 } 1`] = `
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #EDEDED;
+}
+
+.emotion-9:not([disabled]):hover {
+  background: #E0E0E0;
+}
+
+.emotion-3 {
+  position: relative;
+}
+
+.emotion-2 {
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #101721;
+  line-height: 9px;
+}
+
+.emotion-0 {
+  margin-right: 15px;
+}
+
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 8px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+  color: #6B7785;
+  display: inline-block;
+}
+
+.emotion-4 {
+  color: #6B7785;
+  line-height: 40px;
+}
+
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "18d3jqg",
-        "next": undefined,
-        "styles": "display:flex;align-items:center;border:1px solid #E0E0E0;border-radius:3px;cursor:pointer;&:not([disabled]):hover{background:#E0E0E0;}",
-        "toString": [Function],
-      },
-      Object {
-        "map": undefined,
-        "name": "8o6nzx",
-        "next": undefined,
-        "styles": "background-color:#EDEDED;",
-        "toString": [Function],
-      },
-    ]
-  }
+  className="emotion-9"
 >
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -760,45 +588,18 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 15 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="hour-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           12
         </span>
         <span>
           <i
-            css={
-              Array [
-                "pi pi-arrow-drop-down",
-                Object {
-                  "map": undefined,
-                  "name": "32hj2g",
-                  "next": undefined,
-                  "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                  "toString": [Function],
-                },
-              ]
-            }
+            className="pi pi-arrow-drop-down emotion-1"
             style={
               Object {
                 "transform": "none",
@@ -810,31 +611,12 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 15 } 1`] = `
     </div>
   </div>
   <span
-    css={
-      Object {
-        "map": undefined,
-        "name": "wn9ldv",
-        "next": undefined,
-        "styles": "color:#6B7785;line-height:40px;",
-        "toString": [Function],
-      }
-    }
+    className="emotion-4"
   >
     :
   </span>
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -845,44 +627,17 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 15 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="minute-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           15
         </span>
         <i
-          css={
-            Array [
-              "pi pi-arrow-drop-down",
-              Object {
-                "map": undefined,
-                "name": "32hj2g",
-                "next": undefined,
-                "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                "toString": [Function],
-              },
-            ]
-          }
+          className="pi pi-arrow-drop-down emotion-1"
           style={
             Object {
               "transform": "none",
@@ -896,39 +651,63 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 15 } 1`] = `
 `;
 
 exports[`TimePicker { selectedHour: 12, selectedMinute: undefined } 1`] = `
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #EDEDED;
+}
+
+.emotion-9:not([disabled]):hover {
+  background: #E0E0E0;
+}
+
+.emotion-3 {
+  position: relative;
+}
+
+.emotion-2 {
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #101721;
+  line-height: 9px;
+}
+
+.emotion-0 {
+  margin-right: 15px;
+}
+
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 8px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+  color: #6B7785;
+  display: inline-block;
+}
+
+.emotion-4 {
+  color: #6B7785;
+  line-height: 40px;
+}
+
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "18d3jqg",
-        "next": undefined,
-        "styles": "display:flex;align-items:center;border:1px solid #E0E0E0;border-radius:3px;cursor:pointer;&:not([disabled]):hover{background:#E0E0E0;}",
-        "toString": [Function],
-      },
-      Object {
-        "map": undefined,
-        "name": "8o6nzx",
-        "next": undefined,
-        "styles": "background-color:#EDEDED;",
-        "toString": [Function],
-      },
-    ]
-  }
+  className="emotion-9"
 >
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -939,45 +718,18 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: undefined } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="hour-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           12
         </span>
         <span>
           <i
-            css={
-              Array [
-                "pi pi-arrow-drop-down",
-                Object {
-                  "map": undefined,
-                  "name": "32hj2g",
-                  "next": undefined,
-                  "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                  "toString": [Function],
-                },
-              ]
-            }
+            className="pi pi-arrow-drop-down emotion-1"
             style={
               Object {
                 "transform": "none",
@@ -989,31 +741,12 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: undefined } 1`] = `
     </div>
   </div>
   <span
-    css={
-      Object {
-        "map": undefined,
-        "name": "wn9ldv",
-        "next": undefined,
-        "styles": "color:#6B7785;line-height:40px;",
-        "toString": [Function],
-      }
-    }
+    className="emotion-4"
   >
     :
   </span>
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -1024,44 +757,17 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: undefined } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="minute-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           mins
         </span>
         <i
-          css={
-            Array [
-              "pi pi-arrow-drop-down",
-              Object {
-                "map": undefined,
-                "name": "32hj2g",
-                "next": undefined,
-                "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                "toString": [Function],
-              },
-            ]
-          }
+          className="pi pi-arrow-drop-down emotion-1"
           style={
             Object {
               "transform": "none",
@@ -1075,39 +781,63 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: undefined } 1`] = `
 `;
 
 exports[`TimePicker { selectedHour: undefined, selectedMinute: 0 } 1`] = `
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #EDEDED;
+}
+
+.emotion-9:not([disabled]):hover {
+  background: #E0E0E0;
+}
+
+.emotion-3 {
+  position: relative;
+}
+
+.emotion-2 {
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #101721;
+  line-height: 9px;
+}
+
+.emotion-0 {
+  margin-right: 15px;
+}
+
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 8px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+  color: #6B7785;
+  display: inline-block;
+}
+
+.emotion-4 {
+  color: #6B7785;
+  line-height: 40px;
+}
+
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "18d3jqg",
-        "next": undefined,
-        "styles": "display:flex;align-items:center;border:1px solid #E0E0E0;border-radius:3px;cursor:pointer;&:not([disabled]):hover{background:#E0E0E0;}",
-        "toString": [Function],
-      },
-      Object {
-        "map": undefined,
-        "name": "8o6nzx",
-        "next": undefined,
-        "styles": "background-color:#EDEDED;",
-        "toString": [Function],
-      },
-    ]
-  }
+  className="emotion-9"
 >
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -1118,45 +848,18 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 0 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="hour-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           Hrs
         </span>
         <span>
           <i
-            css={
-              Array [
-                "pi pi-arrow-drop-down",
-                Object {
-                  "map": undefined,
-                  "name": "32hj2g",
-                  "next": undefined,
-                  "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                  "toString": [Function],
-                },
-              ]
-            }
+            className="pi pi-arrow-drop-down emotion-1"
             style={
               Object {
                 "transform": "none",
@@ -1168,31 +871,12 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 0 } 1`] = `
     </div>
   </div>
   <span
-    css={
-      Object {
-        "map": undefined,
-        "name": "wn9ldv",
-        "next": undefined,
-        "styles": "color:#6B7785;line-height:40px;",
-        "toString": [Function],
-      }
-    }
+    className="emotion-4"
   >
     :
   </span>
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -1203,44 +887,17 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 0 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="minute-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           0
         </span>
         <i
-          css={
-            Array [
-              "pi pi-arrow-drop-down",
-              Object {
-                "map": undefined,
-                "name": "32hj2g",
-                "next": undefined,
-                "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                "toString": [Function],
-              },
-            ]
-          }
+          className="pi pi-arrow-drop-down emotion-1"
           style={
             Object {
               "transform": "none",
@@ -1254,39 +911,63 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 0 } 1`] = `
 `;
 
 exports[`TimePicker { selectedHour: undefined, selectedMinute: 15 } 1`] = `
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #EDEDED;
+}
+
+.emotion-9:not([disabled]):hover {
+  background: #E0E0E0;
+}
+
+.emotion-3 {
+  position: relative;
+}
+
+.emotion-2 {
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #101721;
+  line-height: 9px;
+}
+
+.emotion-0 {
+  margin-right: 15px;
+}
+
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 8px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+  color: #6B7785;
+  display: inline-block;
+}
+
+.emotion-4 {
+  color: #6B7785;
+  line-height: 40px;
+}
+
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "18d3jqg",
-        "next": undefined,
-        "styles": "display:flex;align-items:center;border:1px solid #E0E0E0;border-radius:3px;cursor:pointer;&:not([disabled]):hover{background:#E0E0E0;}",
-        "toString": [Function],
-      },
-      Object {
-        "map": undefined,
-        "name": "8o6nzx",
-        "next": undefined,
-        "styles": "background-color:#EDEDED;",
-        "toString": [Function],
-      },
-    ]
-  }
+  className="emotion-9"
 >
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -1297,45 +978,18 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 15 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="hour-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           Hrs
         </span>
         <span>
           <i
-            css={
-              Array [
-                "pi pi-arrow-drop-down",
-                Object {
-                  "map": undefined,
-                  "name": "32hj2g",
-                  "next": undefined,
-                  "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                  "toString": [Function],
-                },
-              ]
-            }
+            className="pi pi-arrow-drop-down emotion-1"
             style={
               Object {
                 "transform": "none",
@@ -1347,31 +1001,12 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 15 } 1`] = `
     </div>
   </div>
   <span
-    css={
-      Object {
-        "map": undefined,
-        "name": "wn9ldv",
-        "next": undefined,
-        "styles": "color:#6B7785;line-height:40px;",
-        "toString": [Function],
-      }
-    }
+    className="emotion-4"
   >
     :
   </span>
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -1382,44 +1017,17 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 15 } 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="minute-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           15
         </span>
         <i
-          css={
-            Array [
-              "pi pi-arrow-drop-down",
-              Object {
-                "map": undefined,
-                "name": "32hj2g",
-                "next": undefined,
-                "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                "toString": [Function],
-              },
-            ]
-          }
+          className="pi pi-arrow-drop-down emotion-1"
           style={
             Object {
               "transform": "none",
@@ -1433,33 +1041,62 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 15 } 1`] = `
 `;
 
 exports[`TimePicker { selectedHour: undefined, selectedMinute: undefined } 1`] = `
+.emotion-3 {
+  position: relative;
+}
+
+.emotion-2 {
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #101721;
+  line-height: 9px;
+}
+
+.emotion-0 {
+  margin-right: 15px;
+}
+
+.emotion-1 {
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 8px;
+  -webkit-transition: -webkit-transform ease-out .2s;
+  -webkit-transition: transform ease-out .2s;
+  transition: transform ease-out .2s;
+  will-transform: transform;
+  margin-top: 2px;
+  color: #6B7785;
+  display: inline-block;
+}
+
+.emotion-4 {
+  color: #6B7785;
+  line-height: 40px;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.emotion-9:not([disabled]):hover {
+  background: #E0E0E0;
+}
+
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "18d3jqg",
-        "next": undefined,
-        "styles": "display:flex;align-items:center;border:1px solid #E0E0E0;border-radius:3px;cursor:pointer;&:not([disabled]):hover{background:#E0E0E0;}",
-        "toString": [Function],
-      },
-      false,
-    ]
-  }
+  className="emotion-9"
 >
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -1470,45 +1107,18 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: undefined } 1`] =
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="hour-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           Hrs
         </span>
         <span>
           <i
-            css={
-              Array [
-                "pi pi-arrow-drop-down",
-                Object {
-                  "map": undefined,
-                  "name": "32hj2g",
-                  "next": undefined,
-                  "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                  "toString": [Function],
-                },
-              ]
-            }
+            className="pi pi-arrow-drop-down emotion-1"
             style={
               Object {
                 "transform": "none",
@@ -1520,31 +1130,12 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: undefined } 1`] =
     </div>
   </div>
   <span
-    css={
-      Object {
-        "map": undefined,
-        "name": "wn9ldv",
-        "next": undefined,
-        "styles": "color:#6B7785;line-height:40px;",
-        "toString": [Function],
-      }
-    }
+    className="emotion-4"
   >
     :
   </span>
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "79elbk",
-          "next": undefined,
-          "styles": "position:relative;",
-          "toString": [Function],
-        },
-        undefined,
-      ]
-    }
+    className="emotion-3"
   >
     <div
       style={
@@ -1555,44 +1146,17 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: undefined } 1`] =
       }
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "hab9ds",
-            "next": undefined,
-            "styles": "padding:15px 20px;font-size:12px;color:#101721;line-height:9px;",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         data-test-id="minute-label"
         onClick={[Function]}
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "j5b9iu",
-              "next": undefined,
-              "styles": "margin-right:15px;",
-              "toString": [Function],
-            }
-          }
+          className="emotion-0"
         >
           mins
         </span>
         <i
-          css={
-            Array [
-              "pi pi-arrow-drop-down",
-              Object {
-                "map": undefined,
-                "name": "32hj2g",
-                "next": undefined,
-                "styles": "margin-left:15px;font-weight:bold;font-size:8px;transition:transform ease-out .2s;will-transform:transform;margin-top:2px;color:#6B7785;display:inline-block;",
-                "toString": [Function],
-              },
-            ]
-          }
+          className="pi pi-arrow-drop-down emotion-1"
           style={
             Object {
               "transform": "none",

@@ -2,19 +2,8 @@
 
 exports[`Component: Tag snapshot 1`] = `
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "1vs1t0l",
-        "next": undefined,
-        "styles": "font-weight:500;color:#101721;font-size:12px;display:inline-flex;flex-direction:row;justify-content:center;align-content:initial;border-radius:3px;padding:0 10px;height:28px;align-items:center;line-height:10px;&.__pebble__tag__with__close{padding-right:0;}",
-        "toString": [Function],
-      },
-      false,
-      undefined,
-    ]
-  }
+  className="emotion-0"
+  css="unknown styles"
   style={
     Object {
       "backgroundColor": "#E8E8FF",
@@ -29,19 +18,8 @@ exports[`Component: Tag snapshot 1`] = `
 
 exports[`Component: Tag snapshot 2`] = `
 <div
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "1vs1t0l",
-        "next": undefined,
-        "styles": "font-weight:500;color:#101721;font-size:12px;display:inline-flex;flex-direction:row;justify-content:center;align-content:initial;border-radius:3px;padding:0 10px;height:28px;align-items:center;line-height:10px;&.__pebble__tag__with__close{padding-right:0;}",
-        "toString": [Function],
-      },
-      "__pebble__tag__with__close",
-      undefined,
-    ]
-  }
+  className="__pebble__tag__with__close emotion-0"
+  css="unknown styles"
   style={
     Object {
       "backgroundColor": "#DBF3E7",
@@ -52,16 +30,8 @@ exports[`Component: Tag snapshot 2`] = `
   Anarock
    
   <i
-    className="pi pi-close"
-    css={
-      Object {
-        "map": undefined,
-        "name": "1iigyh3",
-        "next": undefined,
-        "styles": "font-size:7px;margin-left:5px;height:inherit;padding:10px 10px;cursor:pointer;position:relative;:hover{background-color:#C0C0FF;border-top-right-radius:3px;border-bottom-right-radius:3px;}",
-        "toString": [Function],
-      }
-    }
+    className="pi pi-close emotion-0"
+    css="unknown styles"
     onClick={[Function]}
   >
     <e

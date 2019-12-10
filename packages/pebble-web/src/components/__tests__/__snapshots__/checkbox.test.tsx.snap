@@ -1,35 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox snapshot 1`] = `
+.emotion-1 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+}
+
+.emotion-1[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-0 {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+[data-disabled='true'] .emotion-0 {
+  color: #E0E0E0;
+}
+
 <div
   aria-checked={true}
-  css={
-    Array [
-      Object {
-        "map": undefined,
-        "name": "qeht8w",
-        "next": undefined,
-        "styles": "cursor:pointer;display:flex;outline:none;padding:10px 0;position:relative;align-items:center;font-weight:400;color:#101721;font-size:14px;&[data-disabled='true']{cursor:not-allowed;.You have tried to stringify object returned from \`css\` function. It isn't supposed to be used directly (e.g. as value of the \`className\` prop), but rather handed to emotion so it can handle it (e.g. as value of \`css\` prop).{color:#E0E0E0;}}",
-        "toString": [Function],
-      },
-      undefined,
-    ]
-  }
+  className="emotion-1"
   onClick={[Function]}
   role="checkbox"
   tabIndex={0}
 >
   <i
-    className="pi pi-checkbox-selected"
-    css={
-      Object {
-        "map": undefined,
-        "name": "qatnln",
-        "next": undefined,
-        "styles": "margin-right:10px;font-size:16px;",
-        "toString": [Function],
-      }
-    }
+    className="pi pi-checkbox-selected emotion-0"
     style={
       Object {
         "color": "#6161FF",

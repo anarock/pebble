@@ -61,6 +61,7 @@
     "@types/starwars-names": "^1.6.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-date-fns": "^2.0.0",
     "babel-plugin-emotion": "^10.0.14",

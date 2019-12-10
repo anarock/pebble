@@ -1,7 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Popper snapshot 1`] = `
-<div>
+.emotion-0 {
+  line-height: 23px;
+  height: 40px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all ease-out .2s;
+  transition: all ease-out .2s;
+  border-radius: 3px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: 0;
+  height: 40px;
+  min-width: 100px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #6161FF;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-0[disabled] {
+  cursor: not-allowed;
+}
+
+.emotion-0:not([disabled]):hover {
+  color: #ffffff;
+  background-color: #7070FF;
+  border-color: #7070FF;
+}
+
+.emotion-0:not([disabled]):active {
+  color: #ffffff;
+  background-color: #5656ED;
+  border-color: #5656ED;
+}
+
+.emotion-0[disabled] {
+  color: #ffffff;
+  background-color: #C0C0FF;
+  border-color: #C0C0FF;
+}
+
+.emotion-2 {
+  margin: 14px;
+  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.1);
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  background-color: #ffffff;
+  -webkit-transform-origin: 0px 0px;
+  -ms-transform-origin: 0px 0px;
+  transform-origin: 0px 0px;
+}
+
+.emotion-1 {
+  position: absolute;
+  text-shadow: 1px 0 20px rgba(0,0,0,0.1);
+}
+
+.emotion-1[data-placement^='top'] {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: -11px;
+}
+
+.emotion-1[data-placement^='bottom'] {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  top: -11px;
+}
+
+.emotion-1[data-placement^='right'] {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  left: -11px;
+}
+
+.emotion-1[data-placement^='left'] {
+  right: -11px;
+}
+
+<div
+  className="emotion-3"
+>
   <div
     style={
       Object {
@@ -10,18 +117,7 @@ exports[`Component: Popper snapshot 1`] = `
     }
   >
     <button
-      css={
-        Array [
-          Object {
-            "map": undefined,
-            "name": "ayrc6e",
-            "next": undefined,
-            "styles": "line-height:23px;height:40px;padding:0 20px;display:flex;align-items:center;transition:all ease-out .2s;border-radius:3px;outline:none;position:relative;overflow:hidden;cursor:pointer;white-space:nowrap;justify-content:center;border:0;&[disabled]{cursor:not-allowed;};height:40px;min-width:100px;font-weight:400;color:#ffffff;font-size:12px;background-color:#6161FF;border:none;&:not([disabled]):hover{color:#ffffff;background-color:#7070FF;border-color:#7070FF;}&:not([disabled]):active{color:#ffffff;background-color:#5656ED;border-color:#5656ED;}&[disabled]{color:#ffffff;background-color:#C0C0FF;border-color:#C0C0FF;}box-shadow:none;",
-            "toString": [Function],
-          },
-          undefined,
-        ]
-      }
+      className="emotion-0"
       onClick={[Function]}
       style={
         Object {
@@ -51,50 +147,13 @@ exports[`Component: Popper snapshot 1`] = `
     </button>
   </div>
   <div
-    css={
-      Array [
-        Object {
-          "map": undefined,
-          "name": "mwlb20",
-          "next": undefined,
-          "styles": "margin:14px;box-shadow:0 2px 15px 0 rgba(0,0,0,0.1);border-radius:3px;",
-          "toString": [Function],
-        },
-        Object {
-          "map": undefined,
-          "name": "mwlb20",
-          "next": undefined,
-          "styles": "margin:14px;box-shadow:0 2px 15px 0 rgba(0,0,0,0.1);border-radius:3px;",
-          "toString": [Function],
-        },
-      ]
-    }
-    style={
-      Object {
-        "backgroundColor": "#ffffff",
-        "left": 0,
-        "opacity": 0,
-        "pointerEvents": "none",
-        "position": "absolute",
-        "top": 0,
-        "transform": " scale(0.95)",
-        "transformOrigin": "0px 0px",
-      }
-    }
+    className="emotion-2"
   >
     <div
       className="dropdown-content"
     />
     <div
-      css={
-        Object {
-          "map": undefined,
-          "name": "1duf8ku",
-          "next": undefined,
-          "styles": "position:absolute;text-shadow:1px 0 20px rgba(0,0,0,0.1);&[data-placement^='top']{transform:rotate(90deg);bottom:-11px;}&[data-placement^='bottom']{transform:rotate(-90deg);top:-11px;}&[data-placement^='right']{transform:rotate(180deg);left:-11px;}&[data-placement^='left']{right:-11px;}",
-          "toString": [Function],
-        }
-      }
+      className="emotion-1"
       style={
         Object {
           "color": "#ffffff",
