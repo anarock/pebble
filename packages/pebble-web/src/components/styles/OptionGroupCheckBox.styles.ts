@@ -12,18 +12,19 @@ export const optionGroupCheckBoxButtonWrapPadding = 20;
 export const optionGroupCheckBoxButtonWrapPaddingTop = 10;
 
 export const optionGroupCheckBoxWrap = css({
-  maxHeight: `${optionWrapperMaxHeight +
+  maxHeight:
+    optionWrapperMaxHeight +
     searchBoxHeight +
     2 * (initialPadding - onScrollPadding) +
     optionGroupCheckBoxButtonWrapPadding +
     optionGroupCheckBoxButtonWrapPaddingTop +
-    smallButtonHeight}`,
+    smallButtonHeight,
   position: "relative"
 });
 
 export const optionGroupCheckBoxButtonWrap = css({
   ...mixins.flexSpaceBetween,
-  padding: `${optionGroupCheckBoxButtonWrapPadding}`,
-  paddingTop: `${optionGroupCheckBoxButtonWrapPaddingTop}`,
+  padding: optionGroupCheckBoxButtonWrapPadding,
+  paddingTop: optionGroupCheckBoxButtonWrapPaddingTop,
   backgroundColor: colors.white.base
 });
