@@ -55,7 +55,10 @@ describe("Component: Select", () => {
     const component = mount(getComponent());
 
     expect(component.find(Option)).toHaveLength(0);
-    component.find(`#${SELECT_INPUT_ID}`).simulate("click");
+    component
+      .find(`#${SELECT_INPUT_ID}`)
+      .hostNodes()
+      .simulate("click");
 
     expect(component.find(Option)).toHaveLength(countries.length);
   });
@@ -64,7 +67,10 @@ describe("Component: Select", () => {
     const component = mount(getComponent());
 
     expect(component.find(Option)).toHaveLength(0);
-    component.find(`#${SELECT_INPUT_ID}`).simulate("click");
+    component
+      .find(`#${SELECT_INPUT_ID}`)
+      .hostNodes()
+      .simulate("click");
 
     expect(component.find(Option)).toHaveLength(countries.length);
   });
@@ -77,7 +83,7 @@ describe("Component: Select", () => {
       })
     );
 
-    const phoneInput = component.find(`#${PHONE_INPUT_ID}`);
+    const phoneInput = component.find(`#${PHONE_INPUT_ID}`).hostNodes();
     phoneInput.simulate("change", {
       target: {
         value: "99-997-(876)"
@@ -100,7 +106,7 @@ describe("Component: Select", () => {
       })
     );
 
-    const phoneInput = component.find(`#${PHONE_INPUT_ID}`);
+    const phoneInput = component.find(`#${PHONE_INPUT_ID}`).hostNodes();
     phoneInput.simulate("change", {
       target: {
         value: "99997876a"
@@ -118,7 +124,7 @@ describe("Component: Select", () => {
         onChange: spy
       })
     );
-    const phoneInput = component.find(`#${PHONE_INPUT_ID}`);
+    const phoneInput = component.find(`#${PHONE_INPUT_ID}`).hostNodes();
     phoneInput.simulate("change", {
       target: {
         value: ""
@@ -141,7 +147,10 @@ describe("Component: Select", () => {
       })
     );
 
-    component.find(`#${SELECT_INPUT_ID}`).simulate("click");
+    component
+      .find(`#${SELECT_INPUT_ID}`)
+      .hostNodes()
+      .simulate("click");
     component
       .find(Option)
       .at(0)
@@ -165,8 +174,10 @@ describe("Component: Select", () => {
     );
 
     expect(
-      (component.find(`#${PHONE_INPUT_ID}`).getDOMNode() as HTMLInputElement)
-        .value
+      (component
+        .find(`#${PHONE_INPUT_ID}`)
+        .hostNodes()
+        .getDOMNode() as HTMLInputElement).value
     ).toEqual("998127");
     const props = component.find(Select).props();
     expect(props.selected).toEqual(countries[0].country_code);

@@ -29,7 +29,10 @@ describe("Component: Search", () => {
   test("Search: clearing query triggers onChange", () => {
     const spy = sinon.spy();
     const search = mount(getComponent(spy, { value: "hello" }));
-    search.find(".pi-close").simulate("click");
+    search
+      .find(".pi-close")
+      .hostNodes()
+      .simulate("click");
     expect(spy.calledWith("")).toBeTruthy();
   });
 });

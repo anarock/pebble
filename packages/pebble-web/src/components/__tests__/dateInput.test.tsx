@@ -18,6 +18,7 @@ describe("DateInput", () => {
 
     dateInput
       .find(".react-calendar__tile")
+      .hostNodes()
       .at(0)
       .simulate("click");
 

@@ -36,7 +36,10 @@ describe("TimePicker: functionality test", () => {
     const timePicker = mount(
       <TimePicker onHourChange={spyHour} onMinuteChange={spyMinute} />
     );
-    timePicker.find("[data-test-id='hour-label']").simulate("click");
+    timePicker
+      .find("[data-test-id='hour-label']")
+      .hostNodes()
+      .simulate("click");
 
     clock.tick(10000);
 
@@ -50,7 +53,10 @@ describe("TimePicker: functionality test", () => {
     expect(spyHour.calledOnce).toBeTruthy();
     expect(spyHour.calledWith(1)).toBeTruthy();
 
-    timePicker.find("[data-test-id='minute-label']").simulate("click");
+    timePicker
+      .find("[data-test-id='minute-label']")
+      .hostNodes()
+      .simulate("click");
 
     clock.tick(10000);
 

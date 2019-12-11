@@ -40,7 +40,10 @@ describe("Button: functionality", () => {
 
     const button = mount(<Button onClick={fake}>Submit</Button>);
 
-    button.find("button").simulate("click");
+    button
+      .find("button")
+      .hostNodes()
+      .simulate("click");
 
     expect(button.contains(<Ink />)).toBeTruthy();
     expect(fake.calledOnce).toBeTruthy();

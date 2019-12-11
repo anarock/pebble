@@ -225,6 +225,7 @@ describe("Component: Select", () => {
     select
       .find(Search)
       .find(".pi-close")
+      .hostNodes()
       .simulate("click");
     expect(clearQuerySpy.calledWith("")).toBeTruthy();
   });
