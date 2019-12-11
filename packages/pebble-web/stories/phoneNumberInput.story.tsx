@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import PhoneNumberInput from "../src/components/PhoneNumberInput";
 // import { boolean, select, text } from "@storybook/addon-knobs";
-// import { css } from "@emotion/core";
+// import css from "@emotion/css";
 import { withState } from "@dump247/storybook-state";
 import Option from "../src/components/Option";
 import countries from "../src/components/__tests__/fixtures/countrycodes";

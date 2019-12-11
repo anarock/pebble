@@ -1,4 +1,4 @@
-import { css } from "@emotion/core";
+import css from "@emotion/css";
 
 export const modalContainer = css({
   position: "fixed",

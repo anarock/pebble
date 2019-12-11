@@ -1,4 +1,5 @@
-import { keyframes, css } from "@emotion/core";
+import { keyframes } from "@emotion/core";
+import css from "@emotion/css";
 import { mixins } from "../../theme";
 
 const bounceDelay = /*#__PURE__*/ keyframes({

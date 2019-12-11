@@ -106,7 +106,30 @@ export function getRollupConfig(pkg) {
     plugins: [
       babel({
         ...babelConfig,
-        ...config.babelConfig
+        ...config.babelConfig,
+        presets: [
+          ...babelConfig.presets.map(preset => {
+            if (Array.isArray(preset)) {
+              if (preset[0] === "@emotion/babel-preset-css-prop") {
+                return [
+                  "@emotion/babel-preset-css-prop",
+                  {
+                    ...preset[1],
+                    autoLabel: false
+                  }
+                ];
+              }
+            } else if (preset === "@emotion/babel-preset-css-prop") {
+              return [
+                "@emotion/babel-preset-css-prop",
+                {
+                  autoLabel: false
+                }
+              ];
+            }
+            return preset;
+          })
+        ]
       }),
       ...plugins,
       replace({
@@ -130,33 +153,7 @@ export function getRollupConfig(pkg) {
     plugins: [
       babel({
         ...babelConfig,
-        ...config.babelConfig,
-        plugins: [
-          ...babelConfig.plugins.map(plugin => {
-            if (Array.isArray(plugin)) {
-              if (plugin[0] === "emotion") {
-                return [
-                  "emotion",
-                  {
-                    autoLabel: true,
-                    labelFormat: "[filename]-[local]",
-                    ...plugin[1]
-                  }
-                ];
-              }
-            } else if (plugin === "emotion") {
-              return [
-                "emotion",
-                {
-                  autoLabel: true,
-                  labelFormat: "[filename]-[local]",
-                  ...plugin[1]
-                }
-              ];
-            }
-            return plugin;
-          })
-        ]
+        ...config.babelConfig
       }),
       ...plugins,
       replace({

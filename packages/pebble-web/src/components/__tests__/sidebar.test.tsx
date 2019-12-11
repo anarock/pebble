@@ -8,7 +8,7 @@ import {
 } from "@testing-library/react";
 import SideBar from "../Sidebar";
 import Button from "../Button";
-import { css } from "@emotion/core";
+import css from "@emotion/css";
 
 const wrapperStyle = css({
   width: "100%",

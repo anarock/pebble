@@ -1,4 +1,4 @@
-import { Interpolation } from "@emotion/core";
+import { Interpolation } from "../typings/emotionCustom";
 import { css } from "emotion";
 import { constants, mixins, typography } from "../../theme";
 import { colors } from "pebble-shared";

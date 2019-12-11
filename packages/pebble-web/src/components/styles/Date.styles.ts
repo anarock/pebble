@@ -1,4 +1,4 @@
-import { css } from "@emotion/core";
+import css from "@emotion/css";
 import { inputMarginBottom } from "./Input.styles";
 
 export const dateClass = css({

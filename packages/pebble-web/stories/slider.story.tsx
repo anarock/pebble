@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Slider from "../src/components/Slider";
 import { boolean, number, text } from "@storybook/addon-knobs";
-import { css } from "@emotion/core";
+import css from "@emotion/css";
 import { withState } from "@dump247/storybook-state";
 
 const wrapperStyle = css({

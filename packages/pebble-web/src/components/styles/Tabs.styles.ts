@@ -1,4 +1,4 @@
-import { css } from "@emotion/core";
+import css from "@emotion/css";
 import { colors } from "pebble-shared";
 import { typography } from "../../theme";
 

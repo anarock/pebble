@@ -1,7 +1,7 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Stepper from "../src/components/Stepper";
-import { css } from "@emotion/core";
+import css from "@emotion/css";
 import { action } from "@storybook/addon-actions";
 
 const x = css({

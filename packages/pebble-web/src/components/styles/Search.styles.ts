@@ -1,4 +1,4 @@
-import { css } from "@emotion/core";
+import css from "@emotion/css";
 import { constants, mixins, typography } from "../../theme";
 import { getPlaceholderStyle } from "../../theme/mixins";
 import { colors } from "pebble-shared";

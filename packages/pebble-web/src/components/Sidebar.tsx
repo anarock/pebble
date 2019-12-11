@@ -7,7 +7,7 @@ import {
 import { SidebarProps } from "./typings/Sidebar";
 import { Transition, animated } from "react-spring/renderprops.cjs";
 import Ink from "react-ink";
-import { css } from "@emotion/core";
+import css from "@emotion/css";
 import { disableScrollY } from "../theme/styles";
 import { animationConfig } from "../utils/animation";
 
