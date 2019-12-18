@@ -725,6 +725,7 @@ Array [
 }
 
 <div
+    aria-label="Search"
     className="emotion-36"
     data-test-id="optiongroup"
     role="group"
@@ -1395,6 +1396,7 @@ Array [
 }
 
 <div
+    aria-label="Search"
     className="emotion-24"
     data-test-id="optiongroup"
     role="radiogroup"
