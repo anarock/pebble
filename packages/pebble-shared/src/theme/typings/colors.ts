@@ -5,6 +5,7 @@ interface Dense {
   light: string;
   lighter: string;
   lightest: string;
+  border?: string;
 }
 
 interface White {
