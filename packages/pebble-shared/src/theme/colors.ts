@@ -66,6 +66,7 @@ export const colors: Colors = {
     base: "#9FA6B0",
     light: "#E0E0E0",
     lighter: "#EDEDED",
-    lightest: "#F7F7F9"
+    lightest: "#F7F7F9",
+    border: "#E6E6E6"
   }
 };
