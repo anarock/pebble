@@ -18,7 +18,9 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
     visible,
     approveButtonText = "Yes",
     rejectButtonText = "No",
-    children
+    children,
+    approveButtonProps,
+    rejectButtonProps
   } = props;
   return (
     <Modal visible={visible} modalClassName={flexCenter}>
@@ -33,12 +35,22 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
         {(onReject || onApprove) && (
           <div className={buttonsContainer}>
             {onReject && (
-              <Button size="large" type="secondary" onClick={onReject}>
+              <Button
+                size="large"
+                type="secondary"
+                onClick={onReject}
+                {...rejectButtonProps}
+              >
                 {rejectButtonText}
               </Button>
             )}
             {onApprove && (
-              <Button size="large" type="primary" onClick={onApprove}>
+              <Button
+                size="large"
+                type="primary"
+                onClick={onApprove}
+                {...approveButtonProps}
+              >
                 {approveButtonText}
               </Button>
             )}
