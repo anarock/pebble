@@ -38,7 +38,7 @@
     "react-ink": "^6.4.0",
     "react-popper": "^1.3.6",
     "react-spring": "^8.0.27",
-    "rheostat": "2.2.0",
+    "rheostat": "4.1.1",
     "rifm": "^0.10.1",
     "scroll-into-view-if-needed": "^2.2.20",
     "utility-types": "^3.10.0"
