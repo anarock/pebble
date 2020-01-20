@@ -19,6 +19,7 @@ storiesOf("Components/PopUp", module).add(
         onApprove={action("approve")}
         onReject={action("reject")}
         onClose={() => store.set({ show: false })}
+        approveButtonProps={{ loading: true }}
       >
         <div>Are you sure?</div>
       </PopUp>
