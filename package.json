@@ -84,7 +84,7 @@
     "jest-emotion": "^10.0.25",
     "just-entries": "^1.1.0",
     "lerna": "^3.18.4",
-    "lint-staged": "^9.4.2",
+    "lint-staged": "^10.0.3",
     "match-sorter": "^4.0.2",
     "patch-package": "^6.2.0",
     "postinstall-postinstall": "^2.0.0",
