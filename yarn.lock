@@ -13520,10 +13520,10 @@ rheostat@2.2.0:
     object.assign "^4.1.0"
     prop-types "^15.6.0"
 
-rifm@^0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/rifm/-/rifm-0.10.1.tgz#2db1b2e006e1fd3540caffd012bdbcd96e5d6e5a"
-  integrity sha512-Y1kCEFNCEkqRlmjHhQ91fVXfv8VxeXW1UBIbaCYqFdMWPF/8Lf10/1dUdtuAuZ44Krdj/n1eYIt/20gs2HZoKA==
+rifm@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/rifm/-/rifm-0.11.0.tgz#817a3f3319f2c3461ca42630dfe9f0c5cb84288b"
+  integrity sha512-h1bkVl1n69e7hYErPZF1rdhq6mTeUKecSsfimo++caU/gkAje5M8wepyKVaoQ8oLSgoC1L/2EGCr+vYAYgaM3A==
 
 right-pad@^1.0.1:
   version "1.0.1"
