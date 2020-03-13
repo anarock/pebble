@@ -35,3 +35,10 @@ export const selectedRow = css({
   color: colors.violet.base,
   ...typography.normal.bold
 });
+
+export const advancedActionsWrapper = css({
+  display: "flex",
+  justifyContent: "space-around",
+  fontSize: "12px",
+  color: colors.gray.dark
+});

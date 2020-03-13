@@ -11,6 +11,7 @@ import {
   optionsWrapper,
   searchBoxHeight
 } from "../styles/OptionGroup.styles";
+import { rowWrapper, advancedActionsWrapper } from "../styles/Options.styles";
 
 class OptionGroup<OptionType> extends React.PureComponent<
   OptionGroupProps<OptionType>,
@@ -113,6 +114,8 @@ class OptionGroup<OptionType> extends React.PureComponent<
   render() {
     const {
       searchBox,
+      advancedOptions,
+      advancedOptionsProps,
       children,
       multiSelect,
       className,
@@ -147,6 +150,12 @@ class OptionGroup<OptionType> extends React.PureComponent<
       [searchBoxScrolledStyle]: isScrolled
     });
 
+    const _class = cx(
+      rowWrapper,
+      advancedActionsWrapper,
+      advancedOptionsProps && advancedOptionsProps.className
+    );
+
     return (
       <React.Fragment>
         {searchBox && searchBoxProps && (
@@ -173,6 +182,16 @@ class OptionGroup<OptionType> extends React.PureComponent<
             data-test-id="optiongroup"
             aria-label={searchBoxProps && searchBoxProps.placeholder}
           >
+            {advancedOptions && advancedOptionsProps && (
+              <div className={_class}>
+                <div onClick={advancedOptionsProps.selectVisible}>
+                  Select Visible
+                </div>
+                <div onClick={advancedOptionsProps.clearVisible}>
+                  Clear Visible
+                </div>
+              </div>
+            )}
             {_children}
           </div>
         )}
