@@ -56,7 +56,7 @@
     "@types/react-dom": "^16.9.4",
     "@types/react-test-renderer": "^16.9.1",
     "@types/rheostat": "^2.0.0",
-    "@types/sinon": "^7.5.0",
+    "@types/sinon": "^9.0.0",
     "@types/starwars-names": "^1.6.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-core": "^7.0.0-bridge.0",
