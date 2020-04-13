@@ -79,7 +79,7 @@
     "fork-ts-checker-webpack-plugin": "^4.0.1",
     "husky": "^4.0.2",
     "imagemin-lint-staged": "^0.4.0",
-    "intersection-observer": "^0.7.0",
+    "intersection-observer": "^0.8.0",
     "jest": "^24.9.0",
     "jest-emotion": "^10.0.25",
     "just-entries": "^1.1.0",
