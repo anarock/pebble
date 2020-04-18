@@ -7,6 +7,12 @@ export interface CommonProps {
   searchBox?: boolean;
   children?: React.ReactNode;
   searchBoxProps?: Omit<SearchProps, "type">;
+  advancedOptions?: boolean;
+  advancedOptionsProps?: {
+    className?: string;
+    selectVisible?: () => void;
+    clearVisible?: () => void;
+  };
 }
 
 export interface OptionGroupProps<OptionType> extends CommonProps {
@@ -20,7 +26,7 @@ export interface OptionGroupProps<OptionType> extends CommonProps {
 
 export interface Extras {
   props: CommonProps;
-  event: React.SyntheticEvent | Event;
+  event?: React.SyntheticEvent | Event;
 }
 
 export interface OptionGroupState {

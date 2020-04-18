@@ -4,6 +4,7 @@ import Button from "./Button";
 import OptionGroup from "./shared/OptionGroup";
 import { OptionGroupCheckBoxProps } from "./typings/OptionGroupCheckBox";
 import * as styles from "../components/styles/OptionGroupCheckBox.styles";
+import { OptionProps } from "./typings/Option";
 
 export default class OptionGroupCheckBox<
   OptionType
@@ -24,16 +25,33 @@ export default class OptionGroupCheckBox<
       }
     );
   };
+  selectVisible = () => {
+    const { children } = this.props;
+    const _values = React.Children.map(children, child => {
+      const _child = child as React.ReactElement<OptionProps<OptionType>>;
+      return _child && _child.props && _child.props.value;
+    });
+    this.props.onChange(_values, { props: this.props });
+  };
+  clearVisible = () => {
+    this.props.onChange([], { props: this.props, event });
+  };
   onApply = () => {
     const { onApply, selected } = this.props;
     if (onApply) onApply(selected || [], this.props);
   };
   render() {
     const { onApply, onClear, isSelected, onChange, ...rest } = this.props;
+    const advancedOptionsProps = {
+      selectVisible: this.selectVisible,
+      clearVisible: this.clearVisible,
+      ...this.props.advancedOptionsProps
+    };
     return (
       <div className={styles.optionGroupCheckBoxWrap}>
         <OptionGroup<OptionType>
           {...rest}
+          advancedOptionsProps={advancedOptionsProps}
           isSelected={isSelected || this.isSelected}
           handleChange={this.handleChange}
           multiSelect
