@@ -107,7 +107,7 @@
     "sinon": "^7.5.0",
     "starwars-names": "^1.6.0",
     "storybook-chromatic": "^3.1.0",
-    "ts-jest": "^25.1.0",
+    "ts-jest": "^26.0.0",
     "ts-loader": "^6.2.1",
     "tslint": "^5.20.1",
     "tslint-react": "^4.1.0",
