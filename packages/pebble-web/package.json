@@ -39,7 +39,7 @@
     "react-popper": "^1.3.6",
     "react-spring": "^8.0.27",
     "rheostat": "2.2.0",
-    "rifm": "^0.11.0",
+    "rifm": "^0.12.0",
     "scroll-into-view-if-needed": "^2.2.20",
     "utility-types": "^3.10.0"
   },
