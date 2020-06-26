@@ -39,24 +39,31 @@ interface ControlViewProps {
   checked?: boolean;
   type: "radio" | "checkbox";
   disabled?: boolean;
+  iconClassName?: string;
 }
 
 export const ControlView = ({
   checked,
   label,
   type,
-  disabled
+  disabled,
+  iconClassName
 }: ControlViewProps) => {
   const isRadio = type === "radio";
 
   // Ensure that other styles are not emotion styles.
   // As cx merges styles into one className.
-  const iconClass = cx(radioIconStyle, "pi", {
-    "pi-radio": !!isRadio && !checked,
-    "pi-radio-selected": !!isRadio && !!checked,
-    "pi-checkbox-selected": !isRadio && !!checked,
-    "pi-checkbox-unselected": !isRadio && !checked
-  });
+  const iconClass = cx(
+    radioIconStyle,
+    "pi",
+    {
+      "pi-radio": !!isRadio && !checked,
+      "pi-radio-selected": !!isRadio && !!checked,
+      "pi-checkbox-selected": !isRadio && !!checked,
+      "pi-checkbox-unselected": !isRadio && !checked
+    },
+    iconClassName
+  );
 
   const getColor = () => {
     if (disabled) {
