@@ -53,17 +53,12 @@ export const ControlView = ({
 
   // Ensure that other styles are not emotion styles.
   // As cx merges styles into one className.
-  const iconClass = cx(
-    radioIconStyle,
-    "pi",
-    {
-      "pi-radio": !!isRadio && !checked,
-      "pi-radio-selected": !!isRadio && !!checked,
-      "pi-checkbox-selected": !isRadio && !!checked,
-      "pi-checkbox-unselected": !isRadio && !checked
-    },
-    iconClassName
-  );
+  const iconClass = cx(radioIconStyle, iconClassName, "pi", {
+    "pi-radio": !!isRadio && !checked,
+    "pi-radio-selected": !!isRadio && !!checked,
+    "pi-checkbox-selected": !isRadio && !!checked,
+    "pi-checkbox-unselected": !isRadio && !checked
+  });
 
   const getColor = () => {
     if (disabled) {
