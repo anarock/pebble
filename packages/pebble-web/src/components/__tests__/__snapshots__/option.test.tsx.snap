@@ -67,7 +67,7 @@ exports[`Option component snapshot for multi select 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled='true'] .css-qatnln {
+.emotion-2[data-disabled='true'] .i {
   color: #E0E0E0;
 }
 
@@ -176,7 +176,7 @@ exports[`Option component snapshot in active state 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-1[data-disabled='true'] .css-qatnln {
+.emotion-1[data-disabled='true'] .i {
   color: #E0E0E0;
 }
 
@@ -284,7 +284,7 @@ exports[`Option component snapshot in selected state 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-1[data-disabled='true'] .css-qatnln {
+.emotion-1[data-disabled='true'] .i {
   color: #E0E0E0;
 }
 

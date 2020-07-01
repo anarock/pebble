@@ -73,7 +73,7 @@ exports[`Component: OptionGroup default snapshot 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-1[data-disabled='true'] .css-qatnln {
+.emotion-1[data-disabled='true'] .i {
   color: #E0E0E0;
 }
 
@@ -706,7 +706,7 @@ Array [
   cursor: not-allowed;
 }
 
-.emotion-2[data-disabled='true'] .css-qatnln {
+.emotion-2[data-disabled='true'] .i {
   color: #E0E0E0;
 }
 
@@ -1383,7 +1383,7 @@ Array [
   cursor: not-allowed;
 }
 
-.emotion-1[data-disabled='true'] .css-qatnln {
+.emotion-1[data-disabled='true'] .i {
   color: #E0E0E0;
 }
 
