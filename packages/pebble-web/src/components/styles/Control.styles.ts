@@ -4,7 +4,9 @@ import { colors } from "pebble-shared";
 
 export const radioIconStyle = css({
   marginRight: 10,
-  fontSize: 16
+  fontSize: 16,
+  paddingTop: 2,
+  height: 18
 });
 
 export const controlStyle = css({
