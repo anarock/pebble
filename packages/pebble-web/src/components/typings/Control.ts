@@ -12,4 +12,5 @@ export interface ControlProps<OptionType> {
   children?: (props: ControlProps<OptionType>) => React.ReactNode;
   type: "radio" | "checkbox";
   className?: string;
+  iconClassName?: string;
 }

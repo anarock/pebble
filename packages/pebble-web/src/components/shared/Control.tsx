@@ -39,19 +39,20 @@ interface ControlViewProps {
   checked?: boolean;
   type: "radio" | "checkbox";
   disabled?: boolean;
+  iconClassName?: string;
 }
 
 export const ControlView = ({
   checked,
   label,
   type,
-  disabled
+  disabled,
+  iconClassName
 }: ControlViewProps) => {
   const isRadio = type === "radio";
 
-  // Ensure that other styles are not emotion styles.
-  // As cx merges styles into one className.
-  const iconClass = cx(radioIconStyle, "pi", {
+  const wrapClass = cx(radioIconStyle, iconClassName);
+  const iconClass = cx("pi", {
     "pi-radio": !!isRadio && !checked,
     "pi-radio-selected": !!isRadio && !!checked,
     "pi-checkbox-selected": !isRadio && !!checked,
@@ -70,13 +71,9 @@ export const ControlView = ({
 
   return (
     <>
-      <i
-        style={{
-          color: getColor(),
-          paddingTop: 2
-        }}
-        className={iconClass}
-      />{" "}
+      <div className={wrapClass}>
+        <i style={{ color: getColor() }} className={iconClass} />
+      </div>{" "}
       {label}
     </>
   );

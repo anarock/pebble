@@ -4,6 +4,8 @@ exports[`Checkbox snapshot 1`] = `
 .emotion-0 {
   margin-right: 10px;
   font-size: 16px;
+  padding-top: 2px;
+  height: 18px;
 }
 
 .emotion-1 {
@@ -28,7 +30,7 @@ exports[`Checkbox snapshot 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-1[data-disabled='true'] .emotion-0 {
+.emotion-1[data-disabled='true'] .i {
   color: #E0E0E0;
 }
 
@@ -39,15 +41,18 @@ exports[`Checkbox snapshot 1`] = `
   role="checkbox"
   tabIndex={0}
 >
-  <i
-    className="emotion-0 pi pi-checkbox-selected"
-    style={
-      Object {
-        "color": "#6161FF",
-        "paddingTop": 2,
+  <div
+    className="emotion-0"
+  >
+    <i
+      className="pi pi-checkbox-selected"
+      style={
+        Object {
+          "color": "#6161FF",
+        }
       }
-    }
-  />
+    />
+  </div>
    
   I am a checkbox
 </div>
