@@ -42,13 +42,13 @@ class Input extends React.PureComponent<InputProps, InputState> {
     readOnly: false
   };
 
-  private addFocus = () => {
+  addFocus = () => {
     this.setState({
       isFocused: true
     });
   };
 
-  private removeFocus = () => {
+  removeFocus = () => {
     this.setState({
       isFocused: false
     });
