@@ -40,7 +40,9 @@ module.exports = ({ config, mode }) => {
 
   config.plugins.unshift(
     new ForkTsCheckerWebpackPlugin({
-      tsconfig: path.resolve(__dirname, "../tsconfig.json")
+      typescript: {
+        configFile: path.resolve(__dirname, "../tsconfig.json")
+      }
     })
   );
 

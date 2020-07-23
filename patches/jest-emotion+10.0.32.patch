@@ -1,8 +1,8 @@
 diff --git a/node_modules/jest-emotion/types/index.d.ts b/node_modules/jest-emotion/types/index.d.ts
-index 2f407ad..7d6e1e1 100644
+index 86936ff..d788bb5 100644
 --- a/node_modules/jest-emotion/types/index.d.ts
 +++ b/node_modules/jest-emotion/types/index.d.ts
-@@ -30,7 +30,7 @@ export default serializer
+@@ -33,7 +33,7 @@ export default serializer
  
  declare global {
    namespace jest {
