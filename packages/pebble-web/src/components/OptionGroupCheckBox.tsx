@@ -27,10 +27,14 @@ export default class OptionGroupCheckBox<
   };
   selectVisible = () => {
     const { children } = this.props;
-    const _values = React.Children.map(children, child => {
-      const _child = child as React.ReactElement<OptionProps<OptionType>>;
-      return _child && _child.props && _child.props.value;
-    });
+    const _values = (
+      React.Children.map(
+        children,
+        child => child as React.ReactElement<OptionProps<OptionType>>
+      ) || []
+    )
+      .filter(_child => _child && _child.props && _child.props.value)
+      .map(_child => _child && _child.props && _child.props.value);
     this.props.onChange(_values, { props: this.props });
   };
   clearVisible = () => {
