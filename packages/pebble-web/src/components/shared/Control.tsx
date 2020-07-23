@@ -12,7 +12,8 @@ function Control<OptionType>(props: ControlProps<OptionType>) {
     disabled,
     children = ControlView,
     type,
-    className
+    className,
+    indeterminate
   } = props;
   return (
     <div
@@ -21,6 +22,7 @@ function Control<OptionType>(props: ControlProps<OptionType>) {
       aria-disabled={disabled}
       aria-checked={checked}
       data-disabled={disabled}
+      data-indeterminate={indeterminate}
       tabIndex={checked ? 0 : -1}
       onClick={
         !disabled
@@ -66,7 +68,7 @@ export const ControlView = ({
     if (disabled) {
       return colors.gray.base;
     }
-    if (checked || indeterminate) {
+    if (checked) {
       return colors.violet.base;
     }
     return colors.gray.light;
