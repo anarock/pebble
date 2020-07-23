@@ -95,6 +95,12 @@ const customStyles = {
   }
 };
 
+type EventType = Partial<ToastState> & {
+  text: string;
+  time?: number;
+  position: ToastPosition;
+};
+
 class Toast extends React.PureComponent<ToastProps, ToastState> {
   static show(
     text: string,
@@ -118,25 +124,16 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
   };
 
   componentDidMount() {
-    emitter.on("showToast", this.show);
-    emitter.on("hideToast", this.hide);
+    emitter.on<EventType>("showToast", this.show);
+    emitter.on<EventType>("hideToast", this.hide);
   }
 
   componentWillUnmount() {
-    emitter.off("showToast", this.show);
+    emitter.off<EventType>("showToast", this.show);
     emitter.off("hideToast", this.hide);
   }
 
-  private show = ({
-    text,
-    type = "success",
-    position,
-    time
-  }: Partial<ToastState> & {
-    text: string;
-    time?: number;
-    position: ToastPosition;
-  }) => {
+  private show = ({ text, type = "success", position, time }: EventType) => {
     this.setState({
       text,
       type,
