@@ -13,4 +13,5 @@ export interface ControlProps<OptionType> {
   type: "radio" | "checkbox";
   className?: string;
   iconClassName?: string;
+  indeterminate?: boolean;
 }

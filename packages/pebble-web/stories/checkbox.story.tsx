@@ -13,6 +13,7 @@ storiesOf("Components/Checkbox", module).add(
       value="checkbox"
       label="I am a checkbox"
       disabled={boolean("disabled", false)}
+      indeterminate={boolean("indeterminate", false)}
     />
   ))
 );

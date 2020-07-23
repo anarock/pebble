@@ -40,6 +40,7 @@ interface ControlViewProps {
   type: "radio" | "checkbox";
   disabled?: boolean;
   iconClassName?: string;
+  indeterminate?: boolean;
 }
 
 export const ControlView = ({
@@ -47,7 +48,8 @@ export const ControlView = ({
   label,
   type,
   disabled,
-  iconClassName
+  iconClassName,
+  indeterminate
 }: ControlViewProps) => {
   const isRadio = type === "radio";
 
@@ -55,15 +57,16 @@ export const ControlView = ({
   const iconClass = cx("pi", {
     "pi-radio": !!isRadio && !checked,
     "pi-radio-selected": !!isRadio && !!checked,
-    "pi-checkbox-selected": !isRadio && !!checked,
-    "pi-checkbox-unselected": !isRadio && !checked
+    "pi-checkbox-selected": !indeterminate && !isRadio && !!checked,
+    "pi-checkbox-unselected": !indeterminate && !isRadio && !checked,
+    "pi-checkbox-indeterminate": !!indeterminate && !isRadio
   });
 
   const getColor = () => {
     if (disabled) {
       return colors.gray.base;
     }
-    if (checked) {
+    if (checked || indeterminate) {
       return colors.violet.base;
     }
     return colors.gray.light;
