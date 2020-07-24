@@ -12,7 +12,8 @@ function Control<OptionType>(props: ControlProps<OptionType>) {
     disabled,
     children = ControlView,
     type,
-    className
+    className,
+    indeterminate
   } = props;
   return (
     <div
@@ -21,6 +22,7 @@ function Control<OptionType>(props: ControlProps<OptionType>) {
       aria-disabled={disabled}
       aria-checked={checked}
       data-disabled={disabled}
+      data-indeterminate={indeterminate}
       tabIndex={checked ? 0 : -1}
       onClick={
         !disabled
@@ -40,6 +42,7 @@ interface ControlViewProps {
   type: "radio" | "checkbox";
   disabled?: boolean;
   iconClassName?: string;
+  indeterminate?: boolean;
 }
 
 export const ControlView = ({
@@ -47,7 +50,8 @@ export const ControlView = ({
   label,
   type,
   disabled,
-  iconClassName
+  iconClassName,
+  indeterminate
 }: ControlViewProps) => {
   const isRadio = type === "radio";
 
@@ -55,8 +59,9 @@ export const ControlView = ({
   const iconClass = cx("pi", {
     "pi-radio": !!isRadio && !checked,
     "pi-radio-selected": !!isRadio && !!checked,
-    "pi-checkbox-selected": !isRadio && !!checked,
-    "pi-checkbox-unselected": !isRadio && !checked
+    "pi-checkbox-selected": !indeterminate && !isRadio && !!checked,
+    "pi-checkbox-unselected": !indeterminate && !isRadio && !checked,
+    "pi-checkbox-indeterminate": !!indeterminate && !isRadio
   });
 
   const getColor = () => {

@@ -96,11 +96,6 @@ class GroupedOptionGroup<
 
       // Comment this line if you don't want to retain search input retained when options are changed.
       newState.searchBoxValue = "";
-
-      newState.optionGroupChildren = newState.optionGroupChildren = GroupedOptionGroup.generateGroupedOption(
-        newState.searchBoxValue,
-        props.options
-      );
     }
     if (props.selected !== state.propSelected) {
       const selectedDataPoints = new Set<D>(
@@ -128,6 +123,11 @@ class GroupedOptionGroup<
       };
       newState.selectedDataPoints = selectedDataPoints;
     }
+    newState.optionGroupChildren = newState.optionGroupChildren = GroupedOptionGroup.generateGroupedOption(
+      newState.searchBoxValue,
+      props.options,
+      newState.selectedDataPoints
+    );
     return newState;
   }
 
@@ -174,14 +174,16 @@ class GroupedOptionGroup<
       searchBoxValue: v,
       optionGroupChildren: GroupedOptionGroup.generateGroupedOption(
         v,
-        this.props.options
+        this.props.options,
+        this.state.selectedDataPoints
       )
     });
   };
 
   static generateGroupedOption<D extends DataPoint, G extends Group<D>>(
     searchBoxValue: string,
-    options: G[]
+    options: G[],
+    selectedDataPoints: Set<D>
   ) {
     if (searchBoxValue) {
       return matchSorter(
@@ -201,6 +203,14 @@ class GroupedOptionGroup<
                   key={`group_${group.id}`}
                   value={`group_${group.group_label}`}
                   label={group.group_label}
+                  indeterminate={
+                    group.options.some(option =>
+                      selectedDataPoints.has(option)
+                    ) &&
+                    !group.options.every(option =>
+                      selectedDataPoints.has(option)
+                    )
+                  }
                 />
               ),
               ...group.options.map(o => (
