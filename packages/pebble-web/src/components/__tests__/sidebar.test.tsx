@@ -3,7 +3,6 @@ import "@testing-library/jest-dom/extend-expect";
 import {
   render,
   fireEvent,
-  waitForElement,
   waitForElementToBeRemoved
 } from "@testing-library/react";
 import SideBar from "../Sidebar";
@@ -41,27 +40,27 @@ function SidebarComponent({
 describe("Sidebar", () => {
   test("should open sidebar and not close on outside click", async () => {
     jest.useFakeTimers();
-    const { getByText, getByTestId } = render(
+    const { findByText, getByText, getByTestId } = render(
       <SidebarComponent closeOnOutsideClick={false} />
     );
 
     fireEvent.click(getByText("Open Sidebar"));
     jest.runOnlyPendingTimers();
-    await waitForElement(() => getByText("Sidebar Content"));
+    await findByText("Sidebar Content");
     fireEvent.click(getByTestId("shadowArea"));
     jest.runOnlyPendingTimers();
-    await waitForElement(() => getByText("Sidebar Content"));
+    await findByText("Sidebar Content");
   });
 
   test("should open sidebar and close on outside click", async () => {
     jest.useFakeTimers();
-    const { getByText, getByTestId } = render(
+    const { getByText, getByTestId, findByText } = render(
       <SidebarComponent closeOnOutsideClick />
     );
 
     fireEvent.click(getByText("Open Sidebar"));
     jest.runOnlyPendingTimers();
-    await waitForElement(() => getByText("Sidebar Content"));
+    await findByText("Sidebar Content");
     const waitToBeRemovedPromise = waitForElementToBeRemoved(() =>
       getByText("Sidebar Content")
     );

@@ -45,7 +45,7 @@ async function compress() {
       })
     ],
     treeshake: {
-      pureExternalModules: true
+      moduleSideEffects: "no-external"
     }
   });
 
