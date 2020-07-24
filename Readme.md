@@ -2,6 +2,8 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/anarock/pebble.svg)](https://greenkeeper.io/)
 
+[![Build Status](https://travis-ci.org/saas-bn/pebble.svg?branch=master)](https://travis-ci.org/saas-bn/pebble)
+
 A design system comprising of component and utilities creating using React.
 It consists of:
 
