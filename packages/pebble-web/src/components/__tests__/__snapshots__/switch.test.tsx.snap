@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Switch snapshot 1`] = `
+.emotion-0 {
+  font-weight: 500;
+  color: #6B7785;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.emotion-3 {
+  width: 28px;
+  height: 14px;
+  background-color: #9FA6B0;
+  position: relative;
+  display: inline-block;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  padding: 15px 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-1 {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  left: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+<label
+  className="emotion-4"
+>
+  <span
+    className="emotion-0"
+  >
+    I am a switch
+  </span>
+  <div
+    className="emotion-3"
+  >
+    <input
+      checked={false}
+      className="emotion-1"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="emotion-2"
+    />
+  </div>
+</label>
+`;
+
+exports[`Component: Switch snapshot 2`] = `
+.emotion-0 {
+  font-weight: 500;
+  color: #6B7785;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.emotion-3 {
+  width: 28px;
+  height: 14px;
+  background-color: #9FA6B0;
+  position: relative;
+  display: inline-block;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  padding: 15px 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-1 {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.emotion-2 {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  left: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+<label
+  className="emotion-4"
+>
+  <span
+    className="emotion-0"
+  >
+    I am a switch
+  </span>
+  <div
+    className="emotion-3"
+  >
+    <input
+      checked={false}
+      className="emotion-1"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <span
+      className="emotion-2"
+    />
+  </div>
+</label>
+`;
