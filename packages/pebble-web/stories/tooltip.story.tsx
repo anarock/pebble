@@ -27,7 +27,7 @@ storiesOf("Components/Tooltip", module).add("simple", () => (
   <Tooltip
     label={labelProps => (
       <div {...labelProps}>
-        <Button type="link" onClick={() => {}}>
+        <Button type="link" size="large" onClick={() => {}}>
           Hover on me
         </Button>
       </div>
