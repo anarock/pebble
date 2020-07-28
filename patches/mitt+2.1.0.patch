@@ -1,0 +1,11 @@
+diff --git a/node_modules/mitt/index.d.ts b/node_modules/mitt/index.d.ts
+index 55346dd..329d7f3 100644
+--- a/node_modules/mitt/index.d.ts
++++ b/node_modules/mitt/index.d.ts
+@@ -1,5 +1,5 @@
+ export declare type EventType = string | symbol;
+-export declare type Handler<T = any> = (event?: T) => void;
++export declare type Handler<T = any> = (event: T) => void;
+ export declare type WildcardHandler = (type: EventType, event?: any) => void;
+ export declare type EventHandlerList = Array<Handler>;
+ export declare type WildCardEventHandlerList = Array<WildcardHandler>;
