@@ -33,7 +33,8 @@ export default class Switch extends React.PureComponent<
         <span className={labelTextStyle}>{label}</span>
         <div
           className={cx(labelStyle, {
-            [selectedLabel]: value
+            [selectedLabel]: value,
+            [disabledStyle]: !!disabled
           })}
         >
           <input

@@ -27,6 +27,7 @@ import Select from "./Select";
 import SideBar from "./Sidebar";
 import Slider from "./Slider";
 import Stepper from "./Stepper";
+import Switch from "./Switch";
 import { Tabs, TabSection } from "./Tabs";
 import Tag from "./Tag";
 import Text from "./Text";
@@ -67,6 +68,7 @@ export {
   SideBar,
   Slider,
   Stepper,
+  Switch,
   Tabs,
   TabSection,
   Tag,
