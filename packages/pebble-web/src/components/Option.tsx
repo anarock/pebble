@@ -14,20 +14,24 @@ import { colors } from "pebble-shared";
 const defaultProps = {
   rightElement: ({
     isSelected,
-    multiSelect
+    multiSelect,
+    indeterminate
   }: {
     isSelected: boolean;
     multiSelect: boolean;
+    indeterminate?: boolean;
   }) => {
     const iconClass = cx(
       "pi",
       {
-        "pi-checkbox-selected": isSelected,
-        "pi-checkbox-unselected": !isSelected
+        "pi-checkbox-selected": !indeterminate && isSelected,
+        "pi-checkbox-unselected": !indeterminate && !isSelected,
+        "pi-checkbox-indeterminate": !!indeterminate
       },
       css({
         marginLeft: "10px",
-        color: isSelected ? colors.violet.base : colors.gray.light,
+        color:
+          indeterminate || isSelected ? colors.violet.base : colors.gray.light,
         fontSize: "20px"
       })
     );

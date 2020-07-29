@@ -3,7 +3,6 @@ import "@testing-library/jest-dom/extend-expect";
 import {
   render,
   fireEvent,
-  waitForElement,
   waitForElementToBeRemoved
 } from "@testing-library/react";
 import Tooltip from "../Tooltip";
@@ -11,7 +10,7 @@ import Tooltip from "../Tooltip";
 describe("Tooltip", () => {
   test("should show & hide tooltip", async () => {
     jest.useFakeTimers();
-    const { getByText } = render(
+    const { getByText, findByText } = render(
       <Tooltip
         text="Tip Contents"
         label={labelProps => <div {...labelProps}>Hover on Me!</div>}
@@ -20,7 +19,7 @@ describe("Tooltip", () => {
 
     fireEvent.mouseEnter(getByText("Hover on Me!"));
     jest.runAllTimers();
-    await waitForElement(() => getByText("Tip Contents"));
+    await findByText("Tip Contents");
 
     fireEvent.mouseLeave(getByText("Hover on Me!"));
     jest.runAllTimers();
@@ -29,7 +28,7 @@ describe("Tooltip", () => {
 
   test("should not show & hide a disabled tooltip", async () => {
     jest.useFakeTimers();
-    const { getByText } = render(
+    const { getByText, findByText } = render(
       <Tooltip
         disabled
         text="Tip Contents"
@@ -46,7 +45,7 @@ describe("Tooltip", () => {
 
     let notFound = false;
     try {
-      await waitForElement(() => getByText("Tip Contents"));
+      await findByText("Tip Contents");
     } catch (e) {
       notFound = true;
     }
