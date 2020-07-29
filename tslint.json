@@ -2,6 +2,7 @@
   "extends": ["tslint-react", "tslint:latest"],
   "rules": {
     "arrow-parens": false,
+    "array-type": false,
     "curly": false,
     "interface-name": [true, "never-prefix"],
     "jsx-boolean-value": [true, "never"],
