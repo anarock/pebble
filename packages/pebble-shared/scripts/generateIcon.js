@@ -39,6 +39,13 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
     console.log
   );
 
+  files.map(file => {
+    fs.writeFileSync(
+      file,
+      fs.readFileSync(file, "UTF-8").replace(/ 0([01])/g, " 0 $1 ")
+    );
+  });
+
   webfontsGenerator(
     {
       files,
