@@ -1,6 +1,6 @@
 {
   "name": "pebble-shared",
-  "version": "2.1.0",
+  "version": "2.2.0-alpha.0",
   "license": "MIT",
   "main": "dist/pebble-shared.js",
   "files": [
