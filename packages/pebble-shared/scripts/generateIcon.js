@@ -24,14 +24,14 @@ fs.readdir(path.resolve(__dirname, "../svgs"), (err, data) => {
     console.log(err);
   }
 
-  const files = data
-    .filter(file => file.endsWith("svg"))
-    .map(x => `./svgs/${x}`);
+  const svgs = data.filter(file => file.endsWith(".svg"));
+
+  const files = svgs.map(x => `./svgs/${x}`);
 
   fs.writeFile(
     "./icons.json",
     prettier.format(
-      JSON.stringify(data.map(fileName => fileName.split(".")[0])),
+      JSON.stringify(svgs.map(fileName => fileName.split(".")[0])),
       {
         parser: "json"
       }
