@@ -1,0 +1,5 @@
+<<<<<<< HEAD:packages/pebble-shared/svgs/System.svg
+<svg width="1000" height="1000" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M941.065 42H58.935C26.405 42 0 68.405 0 100.935V734.86c0 32.531 26.405 58.936 58.935 58.936H458.81v81.115H217.997v82.171h564.005v-82.171H541.191v-81.115h399.874c32.53 0 58.935-26.405 58.935-58.936V100.935C1000 68.405 973.595 42 941.065 42zm-23.237 669.624H82.172V124.172h835.234v587.241h.422v.211z" fill="#000"/></g><defs><clipPath id="clip0"><path fill="#fff" d="M0 0h1000v1000H0z"/></clipPath></defs></svg>
+=======
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path d="M708.8 283.3H291.2c-15.4 0-27.9 12.5-27.9 27.9v300.1c0 15.4 12.5 27.9 27.9 27.9h189.3v38.4h-114v38.9h267v-38.9h-114v-38.4h189.3c15.4 0 27.9-12.5 27.9-27.9V311.2c0-15.4-12.5-27.9-27.9-27.9zm-11 317H302.2V322.2h395.4v278h.2v.1z"/></svg>
+>>>>>>> 444040d022664bcd9766facaa1d6d023ab37a516:packages/pebble-shared/svgs/system.svg
