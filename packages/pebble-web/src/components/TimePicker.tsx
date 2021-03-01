@@ -17,6 +17,9 @@ import { colors } from "pebble-shared";
 const HOURS = /*#__PURE__*/ [...Array(12)].map((_, i) =>
   ("00" + (i + 1).toString(10)).slice(-2)
 );
+const TWENTY_FOUR_HOUR = /*#__PURE__*/ [...Array(24)].map((_, i) =>
+  ("00" + i.toString(10)).slice(-2)
+);
 const MINUTES = /*#__PURE__*/ [...Array(4)].map((_, i) =>
   ("00" + (i * 15).toString(10)).slice(-2)
 );
@@ -36,7 +39,8 @@ export const buttonStyle = css({
   padding: "15px 20px",
   fontSize: "12px",
   color: colors.gray.darker,
-  lineHeight: "9px"
+  lineHeight: "9px",
+  width: "105px"
 });
 
 const modifiers = {
@@ -49,7 +53,13 @@ const modifiers = {
 };
 
 const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
-  const { selectedHour, selectedMinute, onHourChange, onMinuteChange } = props;
+  const {
+    selectedHour,
+    selectedMinute,
+    onHourChange,
+    onMinuteChange,
+    twentyFourHourFormat
+  } = props;
   const selected = !!selectedHour || selectedMinute !== undefined;
 
   return (
@@ -96,7 +106,7 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
             selected={selectedHour}
             className={optionStyle}
           >
-            {HOURS.map(hour => (
+            {(twentyFourHourFormat ? TWENTY_FOUR_HOUR : HOURS).map(hour => (
               <Option
                 key={hour}
                 value={parseInt(hour, 10)}
