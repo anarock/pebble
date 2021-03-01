@@ -17,7 +17,7 @@ import { colors } from "pebble-shared";
 const HOURS = /*#__PURE__*/ [...Array(12)].map((_, i) =>
   ("00" + (i + 1).toString(10)).slice(-2)
 );
-const TWENTY_FOUR_HOUR = /*#__PURE__*/ [...Array(24)].map((_, i) =>
+const TWENTY_FOUR_HOURS = /*#__PURE__*/ [...Array(24)].map((_, i) =>
   ("00" + i.toString(10)).slice(-2)
 );
 const MINUTES = /*#__PURE__*/ [...Array(4)].map((_, i) =>
@@ -106,7 +106,7 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
             selected={selectedHour}
             className={optionStyle}
           >
-            {(twentyFourHourFormat ? TWENTY_FOUR_HOUR : HOURS).map(hour => (
+            {(twentyFourHourFormat ? TWENTY_FOUR_HOURS : HOURS).map(hour => (
               <Option
                 key={hour}
                 value={parseInt(hour, 10)}
