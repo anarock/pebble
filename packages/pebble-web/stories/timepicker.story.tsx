@@ -2,6 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import TimePicker from "../src/components/TimePicker";
 import { withState } from "@dump247/storybook-state";
+import { boolean } from "@storybook/addon-knobs";
 
 interface State {
   selectedHour?: number;
@@ -25,6 +26,7 @@ storiesOf("Components/TimePicker", module).add(
         }}
         selectedHour={store.state.selectedHour}
         selectedMinute={store.state.selectedMinute}
+        twentyFourHourFormat={boolean("twentyFourHourFormat", true)}
       />
     )
   )
