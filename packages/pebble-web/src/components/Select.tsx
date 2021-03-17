@@ -9,7 +9,8 @@ import {
   selectInputWrapper,
   selectWrapper,
   fullWidth,
-  relativePosition
+  relativePosition,
+  disabledSelect
 } from "./styles/Select.styles";
 import DropDown from "./DropDown";
 import Input from "./Input";
@@ -52,7 +53,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
           });
           return (
             <div
-              className={inputWrapper}
+              className={cx(inputWrapper, disabled && disabledSelect)}
               onClick={
                 disabled
                   ? undefined
