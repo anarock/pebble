@@ -35,6 +35,7 @@ export default class PebblePopper extends React.PureComponent<
       isOpen,
       popperClassName,
       onOutsideClick,
+      styles,
       ...props
     } = this.props;
 
@@ -74,7 +75,8 @@ export default class PebblePopper extends React.PureComponent<
                     transform: `${style.transform ||
                       ""} ${transitionStyles.transform || ""}`,
                     transformOrigin: `${arrowProps.style.left ||
-                      0}px ${arrowProps.style.top || 0}px`
+                      0}px ${arrowProps.style.top || 0}px`,
+                      ...styles
                   };
 
                   return (

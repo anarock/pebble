@@ -11,6 +11,7 @@ export interface PopperProps
   label: Label;
   popperBackgroundColor?: string;
   children: (args: { toggle: () => void; isOpen: boolean }) => React.ReactNode;
+  styles?: React.CSSProperties
   isOpen?: boolean;
   controlled?: boolean;
   popperClassName?: string;
