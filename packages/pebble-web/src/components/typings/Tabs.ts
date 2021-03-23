@@ -8,6 +8,7 @@ export interface TabsProps {
   tabs: string[];
   tabClassName?: string;
   wrapClassName?: string;
+  selectedTabClassName?: string;
   onTabChange?: (tab: string) => void;
   labels?: { [name: string]: string };
 }

@@ -3,4 +3,5 @@ export interface TimePickerProps {
   onMinuteChange: (value: number) => void;
   selectedHour?: number;
   selectedMinute?: number;
+  twentyFourHourFormat?: boolean;
 }

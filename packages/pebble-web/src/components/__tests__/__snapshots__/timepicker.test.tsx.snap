@@ -28,6 +28,7 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 0 } 1`] = `
   font-size: 12px;
   color: #101721;
   line-height: 9px;
+  width: 105px;
 }
 
 .emotion-9 {
@@ -158,6 +159,7 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: 15 } 1`] = `
   font-size: 12px;
   color: #101721;
   line-height: 9px;
+  width: 105px;
 }
 
 .emotion-9 {
@@ -288,6 +290,7 @@ exports[`TimePicker { selectedHour: 1, selectedMinute: undefined } 1`] = `
   font-size: 12px;
   color: #101721;
   line-height: 9px;
+  width: 105px;
 }
 
 .emotion-9 {
@@ -418,6 +421,7 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 0 } 1`] = `
   font-size: 12px;
   color: #101721;
   line-height: 9px;
+  width: 105px;
 }
 
 .emotion-9 {
@@ -548,6 +552,7 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: 15 } 1`] = `
   font-size: 12px;
   color: #101721;
   line-height: 9px;
+  width: 105px;
 }
 
 .emotion-9 {
@@ -678,6 +683,7 @@ exports[`TimePicker { selectedHour: 12, selectedMinute: undefined } 1`] = `
   font-size: 12px;
   color: #101721;
   line-height: 9px;
+  width: 105px;
 }
 
 .emotion-9 {
@@ -808,6 +814,7 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 0 } 1`] = `
   font-size: 12px;
   color: #101721;
   line-height: 9px;
+  width: 105px;
 }
 
 .emotion-9 {
@@ -938,6 +945,7 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: 15 } 1`] = `
   font-size: 12px;
   color: #101721;
   line-height: 9px;
+  width: 105px;
 }
 
 .emotion-9 {
@@ -1086,6 +1094,7 @@ exports[`TimePicker { selectedHour: undefined, selectedMinute: undefined } 1`] =
   font-size: 12px;
   color: #101721;
   line-height: 9px;
+  width: 105px;
 }
 
 .emotion-0 {

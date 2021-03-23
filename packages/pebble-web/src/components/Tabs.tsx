@@ -32,30 +32,34 @@ export class Tabs extends React.PureComponent<TabsProps, TabsState> {
     return (
       <TabSelectedContext.Provider value={this.state.selectedTab}>
         <div className={cx(tabsWrap, this.props.wrapClassName)}>
-          {this.props.tabs.map((tab, i) => (
-            <span
-              key={`${tab}-${i}`}
-              data-test-id={`${tab
-                .replace(/\d/g, "")
-                .replace("(", "")
-                .replace(")", "")
-                .trim()}`}
-              className={cx({
-                [_className]: true,
-                [selectedTabStyle]: this.state.selectedTab === tab
-              })}
-              onClick={() => {
-                this.setState({
-                  selectedTab: tab
-                });
-                if (this.props.onTabChange) {
-                  this.props.onTabChange(tab);
-                }
-              }}
-            >
-              {labels && labels[tab] ? labels[tab] : tab}
-            </span>
-          ))}
+          {this.props.tabs.map((tab, i) => {
+            const isSelected = this.state.selectedTab === tab;
+            return (
+              <span
+                key={`${tab}-${i}`}
+                data-test-id={`${tab
+                  .replace(/\d/g, "")
+                  .replace("(", "")
+                  .replace(")", "")
+                  .trim()}`}
+                className={cx(
+                  _className,
+                  isSelected && selectedTabStyle,
+                  isSelected && this.props.selectedTabClassName
+                )}
+                onClick={() => {
+                  this.setState({
+                    selectedTab: tab
+                  });
+                  if (this.props.onTabChange) {
+                    this.props.onTabChange(tab);
+                  }
+                }}
+              >
+                {labels && labels[tab] ? labels[tab] : tab}
+              </span>
+            );
+          })}
         </div>
         {this.props.children}
       </TabSelectedContext.Provider>
