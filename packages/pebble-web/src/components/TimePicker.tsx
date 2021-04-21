@@ -81,7 +81,9 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
             data-test-id="hour-label"
           >
             <span className={css({ marginRight: "15px" })}>
-              {selectedHour ? selectedHour : "Hrs"}
+              {selectedHour !== undefined
+                ? ("00" + selectedHour).slice(-2)
+                : "Hrs"}
             </span>
             <span>
               <i
@@ -97,10 +99,9 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
         {({ toggle }) => (
           <OptionGroupRadio
             onChange={value => {
-              // `value as number` is a escape hack because we have to handle number | string
-              // and OptionGroupRadio cannot determine its type on its own.
-              // TODO: Remove all `as`.
-              onHourChange(value as number);
+              if (value !== undefined) {
+                onHourChange(value);
+              }
               toggle();
             }}
             selected={selectedHour}
@@ -130,7 +131,9 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
             data-test-id="minute-label"
           >
             <span className={css({ marginRight: "15px" })}>
-              {selectedMinute !== undefined ? selectedMinute : "mins"}
+              {selectedMinute !== undefined
+                ? ("00" + selectedMinute).slice(-2)
+                : "mins"}
             </span>
             <i
               className={cx("pi pi-arrow-drop-down", iconStyle)}
@@ -144,10 +147,9 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
         {({ toggle }) => (
           <OptionGroupRadio
             onChange={value => {
-              // `value as number` is a escape hack because we have to handle number | string
-              // and OptionGroupRadio cannot determine its type on its own.
-              // TODO: Remove all `as`.
-              onMinuteChange(value as number);
+              if (value !== undefined) {
+                onMinuteChange(value);
+              }
               toggle();
             }}
             selected={selectedMinute}
