@@ -4,9 +4,6 @@ import { Extras } from "./OptionGroup";
 import { Omit } from "utility-types";
 import { Placement, Modifiers } from "popper.js";
 
-export type SingleSelected = number | string;
-export type MultiSelected = Array<number | string>;
-
 interface CommonSelectProps<OptionType> {
   className?: string;
   placeholder: string;
