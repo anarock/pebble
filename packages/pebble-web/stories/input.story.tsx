@@ -15,7 +15,7 @@ const className = css({
   width: 400
 });
 
-const type = ["text", "date", "password", "email"];
+const type = ["text", "date", "password", "email", "number", "tel"];
 const dateInputTypes: Array<"Pebble Calendar" | "Native" | "Browser Based"> = [
   "Pebble Calendar",
   "Native",

@@ -21,7 +21,7 @@ export default class NativeDateInput extends React.PureComponent<
         // This format does not define the presentation format.
         // value will always be in YYYY-MM-DD format.
         // https://developers.google.com/web/updates/2012/08/Quick-FAQs-on-input-type-date-in-Google-Chrome
-        value={value && format(value, "YYYY-MM-DD")}
+        value={value && format(value, "yyyy-MM-dd")}
         placeholder={placeholder}
         fixLabelAtTop
         {...inputProps}
