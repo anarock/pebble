@@ -18,7 +18,7 @@ The easier way is to use the cdn:
 ```html
 <link
   rel="stylesheet"
-  href="https://unpkg.com/@anarock/pebble-web@[version]/dist/pebble.css"
+  href="https://unpkg.com/pebble-shared@[version]/dist/pebble.css"
 />
 ```
 
