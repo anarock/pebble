@@ -22,6 +22,7 @@ storiesOf("Components/Slider", module).add(
       max={number("max", 100)}
       values={store.state.values}
       disabled={boolean("disabled", false)}
+      required={boolean("required", false)}
       large={boolean("large", false)}
       className={wrapperStyle}
       title={text("title", "Select Range")}

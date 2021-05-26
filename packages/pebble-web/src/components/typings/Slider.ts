@@ -4,5 +4,6 @@ export interface SliderProps extends Props {
   className?: string;
   large?: boolean;
   title: string;
-  valueLabelExtractor: () => React.ReactNode;
+  valueLabelExtractor?: () => React.ReactNode;
+  required?: boolean;
 }
