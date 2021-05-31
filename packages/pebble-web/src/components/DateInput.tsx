@@ -82,7 +82,8 @@ export default class DateInput extends React.PureComponent<
       calendarProps,
       inputProps,
       placeholder,
-      value: propsValue
+      value: propsValue,
+      disabled
     } = this.props;
 
     return (
@@ -100,7 +101,10 @@ export default class DateInput extends React.PureComponent<
                 type={"tel"}
                 value={value}
                 placeholder={`${placeholder} DD/MM/YYYY`}
-                onClick={toggleDropdown}
+                onClick={() => {
+                  if (disabled) return;
+                  toggleDropdown();
+                }}
                 fixLabelAtTop
                 {...inputProps}
                 inputProps={{
@@ -109,6 +113,7 @@ export default class DateInput extends React.PureComponent<
                   onChange
                 }}
                 className={cx(inputStyle, inputProps && inputProps.className)}
+                disabled={disabled}
               />
             )}
           </Rifm>

@@ -8,6 +8,7 @@ export interface DateInputProps {
   placeholder: string;
   inputProps?: Omit<SimpleInputProps, "value" | "onChange" | "placeholder">;
   calendarProps?: DateSingle;
+  disabled?: boolean;
 }
 
 export interface DateInputState {
