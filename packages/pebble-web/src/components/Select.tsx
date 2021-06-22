@@ -156,7 +156,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
               <OptionGroupRadio
                 selected={props.selected}
                 onChange={(_value, extras) => {
-                  if (_value) props.onChange(_value, extras);
+                  if (_value !== undefined) props.onChange(_value, extras);
                   onDropdownToggle(isOpen);
                   toggle();
                 }}
