@@ -23,6 +23,7 @@ export interface DateSingle extends CommonCalendarProps {
 
 export interface DateRange extends CommonCalendarProps {
   range: true;
+  maxRange?: number; // number of days
   selected?: [Date, Date];
   onChange: (value: [Date, Date]) => void;
   onApply?: (value?: [Date, Date]) => void;
@@ -33,4 +34,8 @@ export type CalendarProps = DateSingle | DateRange;
 export interface CalendarState {
   value?: [Date, Date] | Date;
   singleSelectedDate?: [Date, Date] | null;
+  maxRangeDates?: {
+    future: Date;
+    past: Date;
+  };
 }

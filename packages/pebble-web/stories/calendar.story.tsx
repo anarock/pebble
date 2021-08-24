@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { object } from "@storybook/addon-knobs";
+import { object, number } from "@storybook/addon-knobs";
 import Calendar from "../src/components/Calendar";
 import { action } from "@storybook/addon-actions";
 import { colors } from "pebble-shared";
@@ -24,6 +24,7 @@ storiesOf("Components/Calendar", module)
   .add("Date Range", () => (
     <Calendar
       range
+      maxRange={number("maxRange", 5)}
       onChange={action("change")}
       onApply={action("apply")}
       onClear={action("clear")}
