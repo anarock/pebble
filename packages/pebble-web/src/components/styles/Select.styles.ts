@@ -33,6 +33,10 @@ export const inputWrapper = css({
   position: "relative"
 });
 
+export const disabledSelect = css({
+  cursor: "not-allowed"
+});
+
 export const chevronStyle = css({
   position: "absolute",
   top: 0,

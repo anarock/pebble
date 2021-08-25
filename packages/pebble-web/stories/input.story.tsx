@@ -15,7 +15,7 @@ const className = css({
   width: 400
 });
 
-const type = ["text", "date", "password", "email"];
+const type = ["text", "date", "password", "email", "number", "tel"];
 const dateInputTypes: Array<"Pebble Calendar" | "Native" | "Browser Based"> = [
   "Pebble Calendar",
   "Native",
@@ -86,14 +86,23 @@ storiesOf("Components/Input", module)
       return (
         <div style={{ width: 300 }}>
           {dateInputType === "Pebble Calendar" && (
-            <DateInput {...dateInputProps} />
+            <DateInput
+              {...dateInputProps}
+              disabled={boolean("disabled", false)}
+            />
           )}
           {dateInputType === "Native" && (
-            <NativeDateInput {...dateInputProps} />
+            <NativeDateInput
+              {...dateInputProps}
+              disabled={boolean("disabled", false)}
+            />
           )}
           {dateInputType === "Browser Based" && (
             <UserAgentInfoProvider userAgent={navigator.userAgent}>
-              <BrowserBasedDateInput {...dateInputProps} />
+              <BrowserBasedDateInput
+                {...dateInputProps}
+                disabled={boolean("disabled", false)}
+              />
             </UserAgentInfoProvider>
           )}
         </div>

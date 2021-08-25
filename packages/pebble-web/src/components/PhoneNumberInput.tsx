@@ -11,10 +11,10 @@ import {
 import { labelStyle } from "./styles/Input.styles";
 import { colors } from "pebble-shared";
 
-export default class PhoneNumberInput extends React.Component<
-  PhoneNumberInputProps
-> {
-  onCountrySelect = (countryCode: string) => {
+export default class PhoneNumberInput<
+  OptionType = string
+> extends React.Component<PhoneNumberInputProps<OptionType>> {
+  onCountrySelect = (countryCode: OptionType) => {
     this.props.onChange({
       countryCode,
       phone: this.props.phone
@@ -54,7 +54,7 @@ export default class PhoneNumberInput extends React.Component<
           {placeholder || "Phone No."}
           {required && <span style={{ color: colors.red.base }}>&nbsp;*</span>}
         </label>
-        <Select
+        <Select<OptionType>
           placeholder=""
           onChange={this.onCountrySelect}
           value={countryCode + ""}

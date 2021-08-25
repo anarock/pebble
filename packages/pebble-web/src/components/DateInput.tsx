@@ -13,6 +13,7 @@ import { Rifm } from "rifm";
 import { startOfDay, format } from "date-fns";
 import NativeDateInput from "./NativeDateInput";
 import { UserAgentInfoContext } from "../utils/useragent";
+import { cx } from "emotion";
 
 const noop = () => {};
 
@@ -81,7 +82,8 @@ export default class DateInput extends React.PureComponent<
       calendarProps,
       inputProps,
       placeholder,
-      value: propsValue
+      value: propsValue,
+      disabled
     } = this.props;
 
     return (
@@ -99,7 +101,10 @@ export default class DateInput extends React.PureComponent<
                 type={"tel"}
                 value={value}
                 placeholder={`${placeholder} DD/MM/YYYY`}
-                onClick={toggleDropdown}
+                onClick={() => {
+                  if (disabled) return;
+                  toggleDropdown();
+                }}
                 fixLabelAtTop
                 {...inputProps}
                 inputProps={{
@@ -107,7 +112,8 @@ export default class DateInput extends React.PureComponent<
                   ...(inputProps && inputProps.inputProps),
                   onChange
                 }}
-                className={inputStyle}
+                className={cx(inputStyle, inputProps && inputProps.className)}
+                disabled={disabled}
               />
             )}
           </Rifm>

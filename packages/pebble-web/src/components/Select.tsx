@@ -9,7 +9,8 @@ import {
   selectInputWrapper,
   selectWrapper,
   fullWidth,
-  relativePosition
+  relativePosition,
+  disabledSelect
 } from "./styles/Select.styles";
 import DropDown from "./DropDown";
 import Input from "./Input";
@@ -52,7 +53,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
           });
           return (
             <div
-              className={inputWrapper}
+              className={cx(inputWrapper, disabled && disabledSelect)}
               onClick={
                 disabled
                   ? undefined
@@ -155,7 +156,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
               <OptionGroupRadio
                 selected={props.selected}
                 onChange={(_value, extras) => {
-                  if (_value) props.onChange(_value, extras);
+                  if (_value !== undefined) props.onChange(_value, extras);
                   onDropdownToggle(isOpen);
                   toggle();
                 }}

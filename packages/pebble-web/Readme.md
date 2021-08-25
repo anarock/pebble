@@ -18,7 +18,7 @@ The easier way is to use the cdn:
 ```html
 <link
   rel="stylesheet"
-  href="https://unpkg.com/@anarock/pebble-web@[version]/dist/pebble.css"
+  href="https://unpkg.com/pebble-shared@[version]/dist/pebble.css"
 />
 ```
 
@@ -40,7 +40,7 @@ This, however, comes at a cost of supporting only modern browsers. If you need t
 <script src="https://polyfill.io/v3/polyfill.min.js?features=Array.prototype.find,Array.prototype.findIndex,IntersectionObserver,Intl.~locale.en,Object.entries,default"></script>
 <script src="https://unpkg.com/react@latest/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@latest/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@anarock/pebble-web@latest/dist/pebble-web.umd.js"></script>
+<script src="https://unpkg.com/pebble-web@latest/dist/pebble-web.umd.js"></script>
 <script>
   // Components are available in window.pebble
   var Button = pebble.Button;
