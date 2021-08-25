@@ -170,8 +170,8 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
           nextLabel={
             <i style={{ fontSize: 14 }} className="pi pi-arrow-right" />
           }
-          maxDate={maxDate || maxRangeDates?.future}
-          minDate={minDate || maxRangeDates?.past}
+          maxDate={maxDate || (maxRangeDates && maxRangeDates.future)}
+          minDate={minDate || (maxRangeDates && maxRangeDates.past)}
         />
 
         {(onClear || onApply) && (
