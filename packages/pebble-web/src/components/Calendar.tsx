@@ -12,7 +12,7 @@ import {
   wrapperStyle
 } from "./styles/Calendar.styles";
 import Button from "./Button";
-import { isSameDay, endOfDay, startOfDay } from "date-fns";
+import { isSameDay, endOfDay, startOfDay, addDays, subDays } from "date-fns";
 
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   static defaultProps: Partial<CalendarProps> = {
@@ -20,7 +20,7 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
     tileDots: []
   };
 
-  state: CalendarState = {
+  state: Readonly<CalendarState> = {
     value: this.props.selected,
     singleSelectedDate: null
   };
@@ -35,7 +35,8 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         this.setState(
           {
             value: value as [Date, Date],
-            singleSelectedDate: null
+            singleSelectedDate: null,
+            maxRangeDates: undefined
           },
           () => props.onChange(value as [Date, Date])
         );
@@ -45,7 +46,8 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         this.setState(
           {
             value,
-            singleSelectedDate: null
+            singleSelectedDate: null,
+            maxRangeDates: undefined
           },
           () => props.onChange(value)
         );
@@ -55,6 +57,15 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
 
   private onDayClick = (day: Date) => {
     const { onClickDay } = this.props;
+    if (this.props.range && this.props.maxRange) {
+      const { maxRange } = this.props;
+      this.setState({
+        maxRangeDates: {
+          future: addDays(day, maxRange),
+          past: subDays(day, maxRange)
+        }
+      });
+    }
     this.setState({ singleSelectedDate: [startOfDay(day), endOfDay(day)] });
     if (onClickDay) onClickDay(day);
   };
@@ -123,8 +134,11 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
       className,
       onApply,
       onClear,
+      maxDate,
+      minDate,
       ...rest
     } = this.props;
+    const { maxRangeDates } = this.state;
 
     return (
       <div
@@ -156,6 +170,8 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
           nextLabel={
             <i style={{ fontSize: 14 }} className="pi pi-arrow-right" />
           }
+          maxDate={maxDate || (maxRangeDates && maxRangeDates.future)}
+          minDate={minDate || (maxRangeDates && maxRangeDates.past)}
         />
 
         {(onClear || onApply) && (
