@@ -9,7 +9,7 @@ import {
 import { RatingProps, RatingState } from "./typings/Rating";
 
 function generateStars(maxRating: number, selectedValue: number) {
-  return [...Array(maxRating)].map((_, i) => {
+  return Array.from({ length: maxRating }, (_, i) => {
     return { active: i + 1 <= selectedValue };
   });
 }
@@ -32,7 +32,10 @@ class Rating extends React.PureComponent<RatingProps, RatingState> {
   }
 
   setRating = (rating: number) => {
-    const { maxRating } = this.props;
+    const { maxRating, disabled } = this.props;
+    if (disabled) {
+      return;
+    }
     this.setState({
       stars: generateStars(maxRating, rating)
     });
@@ -52,12 +55,8 @@ class Rating extends React.PureComponent<RatingProps, RatingState> {
             <span
               key={`${name}-${rating}`}
               onMouseEnter={() => this.setRating(rating)}
-              onMouseMove={() => this.setRating(rating)}
               onMouseLeave={() => this.setRating(value)}
               onClick={() => {
-                if (disabled) {
-                  return;
-                }
                 this.setRating(rating);
                 onChange(rating);
               }}
