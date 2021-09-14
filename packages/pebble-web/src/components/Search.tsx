@@ -6,6 +6,8 @@ import {
   searchWrapperStyle,
   clearContainer
 } from "./styles/Search.styles";
+import Loader from "./Loader";
+import { colors } from "pebble-shared";
 
 class Search extends React.PureComponent<SearchProps> {
   searchInputRef: React.RefObject<HTMLInputElement> = React.createRef();
@@ -24,7 +26,8 @@ class Search extends React.PureComponent<SearchProps> {
       showSearchIcon,
       className,
       clearable,
-      value
+      value,
+      loading
     } = this.props;
 
     const wrapperClassName = cx(searchWrapperStyle, {
@@ -48,6 +51,7 @@ class Search extends React.PureComponent<SearchProps> {
           value={value}
           {...inputProps}
         />
+        {loading && <Loader scale={0.4} color={colors.violet.base} />}
         {clearable && (
           <div
             className={cx(clearContainer, {

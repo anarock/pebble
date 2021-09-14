@@ -4,6 +4,7 @@ import { constants } from "../src";
 import OptionGroupCheckBox from "../src/components/OptionGroupCheckBox";
 import Option from "../src/components/Option";
 import * as React from "react";
+import { boolean } from "@storybook/addon-knobs";
 
 storiesOf("Components/OptionGroupCheckBox", module)
   .add(
@@ -27,7 +28,8 @@ storiesOf("Components/OptionGroupCheckBox", module)
             onChange: v => {
               store.set({ searchBoxValue: v });
             },
-            value: store.state.searchBoxValue
+            value: store.state.searchBoxValue,
+            loading: boolean("showLoading", false)
           }}
           onChange={value =>
             store.set({
