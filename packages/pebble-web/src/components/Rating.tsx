@@ -57,6 +57,9 @@ class Rating extends React.PureComponent<RatingProps, RatingState> {
               onMouseEnter={() => this.setRating(rating)}
               onMouseLeave={() => this.setRating(value)}
               onClick={() => {
+                if (disabled) {
+                  return;
+                }
                 this.setRating(rating);
                 onChange(rating);
               }}
