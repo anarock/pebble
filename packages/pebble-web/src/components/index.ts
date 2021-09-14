@@ -21,6 +21,7 @@ import PopUp from "./PopUp";
 import PresetCalendar from "./PresetCalendar";
 import Radio from "./Radio";
 import RadioGroup from "./RadioGroup";
+import Rating from "./Rating";
 import Search from "./Search";
 import SecondaryInput from "./SecondaryInput";
 import Select from "./Select";
@@ -62,6 +63,7 @@ export {
   PresetCalendar,
   Radio,
   RadioGroup,
+  Rating,
   Search,
   SecondaryInput,
   Select,
