@@ -2,16 +2,17 @@ import { SingleSelectProps } from "./Select";
 import { SimpleInputProps } from "./Input";
 import { Omit } from "utility-types";
 
-export interface PhoneNumberInputProps<OptionType = string> {
-  countryCode: OptionType;
+export interface PhoneNumberInputProps<OptionType> {
+  country: OptionType;
   phone: string;
   onChange: ({
-    countryCode,
+    country,
     phone
   }: {
-    countryCode: OptionType;
+    country: OptionType;
     phone: string;
   }) => void;
+  codeExtractor: (country: OptionType) => string;
 
   // Optional
   className?: string;

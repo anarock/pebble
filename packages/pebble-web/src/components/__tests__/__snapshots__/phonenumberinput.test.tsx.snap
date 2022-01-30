@@ -284,7 +284,7 @@ exports[`Component: Select default snapshot 1`] = `
               id="phone-select-input-test"
               onChange={[Function]}
               readOnly={true}
-              value="+1"
+              value="+91"
             />
             <label
               className="emotion-2 _pebble_input_label_focused"

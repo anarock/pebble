@@ -11,12 +11,12 @@ import {
 import { labelStyle } from "./styles/Input.styles";
 import { colors } from "pebble-shared";
 
-export default class PhoneNumberInput<
-  OptionType = string
-> extends React.Component<PhoneNumberInputProps<OptionType>> {
-  onCountrySelect = (countryCode: OptionType) => {
+export default class PhoneNumberInput<OptionType> extends React.Component<
+  PhoneNumberInputProps<OptionType>
+> {
+  onCountrySelect = (country: OptionType) => {
     this.props.onChange({
-      countryCode,
+      country,
       phone: this.props.phone
     });
   };
@@ -27,7 +27,7 @@ export default class PhoneNumberInput<
       return;
     }
     this.props.onChange({
-      countryCode: this.props.countryCode,
+      country: this.props.country,
       phone: _value
     });
   };
@@ -35,7 +35,8 @@ export default class PhoneNumberInput<
   render() {
     const {
       phone,
-      countryCode,
+      codeExtractor,
+      country,
       className,
       selectProps,
       inputProps,
@@ -57,8 +58,8 @@ export default class PhoneNumberInput<
         <Select<OptionType>
           placeholder=""
           onChange={this.onCountrySelect}
-          value={countryCode + ""}
-          selected={countryCode}
+          value={codeExtractor(country) + ""}
+          selected={country}
           {...selectProps}
           className={cx(selectStyle, selectProps && selectProps.className)}
         >

@@ -9,22 +9,23 @@ import countries from "../src/components/__tests__/fixtures/countrycodes";
 import { action } from "@storybook/addon-actions";
 
 interface State {
-  countryCode: string;
+  country: typeof countries[0];
   phone: string;
 }
 
 storiesOf("Components/PhoneNumberInput", module).add(
   "Material",
-  withState<State>({ countryCode: "+91", phone: "" })(({ store }) => (
+  withState<State>({ country: countries[0], phone: "" })(({ store }) => (
     <PhoneNumberInput
-      countryCode={store.state.countryCode}
+      country={store.state.country}
+      codeExtractor={country => country.country_code}
       phone={store.state.phone}
       placeholder="Alternate Phone Number"
       onChange={arg => {
-        const { countryCode, phone } = arg;
+        const { country, phone } = arg;
         action("onChange")(arg);
         store.set({
-          countryCode: `${countryCode}`,
+          country,
           phone
         });
       }}
@@ -32,7 +33,7 @@ storiesOf("Components/PhoneNumberInput", module).add(
       {countries.map(country => (
         <Option
           key={country.id}
-          value={country.country_code}
+          value={country}
           label={`${country.name} (${country.country_code})`}
         />
       ))}
