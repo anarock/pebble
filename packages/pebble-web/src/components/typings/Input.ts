@@ -15,6 +15,7 @@ interface CommonInputProps {
   readOnly?: boolean;
   required?: boolean;
   successMessage?: string;
+  messageClassName?: string;
 }
 
 export interface SimpleInputProps extends CommonInputProps {

@@ -74,6 +74,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
       disabled,
       errorMessage,
       successMessage,
+      messageClassName,
       message,
       textArea,
       required,
@@ -157,7 +158,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
 
         {_message && (
           <div
-            className={messageStyle}
+            className={cx(messageStyle, messageClassName)}
             style={{ color: getColor(errorMessage, successMessage) }}
           >
             {_message}
