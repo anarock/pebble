@@ -10,7 +10,6 @@ export const rowWrapper = css({
   lineHeight: "28px",
   zIndex: 999,
   ...mixins.textEllipsis,
-  ...mixins.flexSpaceBetween,
   alignItems: "center",
   display: "flex",
   "&:last-of-type": {
@@ -23,6 +22,7 @@ export const rowWrapper = css({
 
 export const labelWrap = css({
   userSelect: "none",
+  flexGrow: 1,
   overflow: "hidden",
   textOverflow: "ellipsis"
 });

@@ -45,6 +45,7 @@ class Option<OptionType> extends React.Component<
       label,
       isActive,
       isSelected,
+      leftElement,
       rightElement,
       labelClassName,
       className
@@ -67,6 +68,7 @@ class Option<OptionType> extends React.Component<
         {() => {
           return (
             <>
+              {leftElement && leftElement(this.props)}
               <div className={cx(labelWrap, labelClassName)}>{label}</div>
               {rightElement(this.props)}
               <Ink />
