@@ -12,15 +12,12 @@ import Ink from "react-ink";
 import { colors } from "pebble-shared";
 
 const defaultProps = {
-  rightElement: ({
+  rightElement: <T extends unknown>({
     isSelected,
     multiSelect,
-    indeterminate
-  }: {
-    isSelected: boolean;
-    multiSelect: boolean;
-    indeterminate?: boolean;
-  }) => {
+    indeterminate,
+    iconClassName
+  }: OptionProps<T>) => {
     const iconClass = cx(
       "pi",
       {
@@ -35,7 +32,7 @@ const defaultProps = {
         fontSize: "20px"
       })
     );
-    return multiSelect ? <i className={iconClass} /> : null;
+    return multiSelect ? <i className={cx(iconClass, iconClassName)} /> : null;
   }
 };
 
