@@ -16,5 +16,8 @@
     "build:icons": "node ./scripts/generateIcon.js",
     "copy:fonts": "copy './dist/fonts/*.ttf' ./native/icons",
     "test": "exit 0"
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.68.0"
   }
 }
