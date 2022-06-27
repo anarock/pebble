@@ -8,7 +8,12 @@ const prettier = require("prettier");
 async function createRNFont() {
   try {
     await execa(
-      "rimraf native && mkdir native && ../../node_modules/.bin/generate-icon ./dist/pebble.css --componentName=PebbleIcons --fontFamily=pebble -t ./scripts/templates/native-font.tpl -o ./native/Icon.js -p '.pi-'",
+      [
+        "rimraf native",
+        "mkdir native",
+        "../../node_modules/.bin/generate-icon ./dist/pebble.css -t ./scripts/templates/native-font.tpl -o ./native/Icon.js -p '.pi-' --fontFamily=pebble",
+        "../../node_modules/.bin/generate-icon ./dist/pebble.css -t ./scripts/templates/dts.tpl -o ./native/Icon.d.ts -p '.pi-'"
+      ].join(" && "),
       { shell: true }
     );
     console.log(
