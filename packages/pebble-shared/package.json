@@ -1,6 +1,6 @@
 {
   "name": "pebble-shared",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "license": "MIT",
   "main": "dist/pebble-shared.js",
   "files": [
@@ -15,7 +15,8 @@
     "build": "rm -rf dist && tsc && rollup -c && yarn build:icons && yarn copy:fonts",
     "build:icons": "node ./scripts/generateIcon.js",
     "copy:fonts": "copy './dist/fonts/*.ttf' ./native/icons",
-    "test": "exit 0"
+    "test": "exit 0",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@types/react-native": "^0.68.0"
