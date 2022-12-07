@@ -18,9 +18,9 @@ interface Light {
 }
 
 interface Blue {
+  dark: string;
   base: string;
   light: string;
-  dark: string;
 }
 
 export interface Colors {
