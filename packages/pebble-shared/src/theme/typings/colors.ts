@@ -17,11 +17,17 @@ interface Light {
   light: string;
 }
 
+interface Blue {
+  base: string;
+  light: string;
+  dark: string;
+}
+
 export interface Colors {
   violet: Dense;
   green: Light;
   yellow: Light;
-  blue: Light;
+  blue: Blue;
   white: White;
   emerald: Dense;
   red: Dense;
