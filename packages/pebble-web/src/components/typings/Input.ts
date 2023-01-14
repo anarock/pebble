@@ -32,8 +32,9 @@ export interface SimpleInputProps extends CommonInputProps {
   type?: InputType;
 }
 
-interface TextAreaInputProps extends CommonInputProps {
-  inputProps?: React.InputHTMLAttributes<HTMLTextAreaElement>;
+export interface TextAreaInputProps extends CommonInputProps {
+  inputProps?: React.InputHTMLAttributes<HTMLTextAreaElement> &
+    React.RefAttributes<HTMLTextAreaElement>;
   textArea: true;
   type?: undefined;
 }
