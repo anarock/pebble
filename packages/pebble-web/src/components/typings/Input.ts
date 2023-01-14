@@ -1,6 +1,6 @@
 import * as React from "react";
 
-interface CommonInputProps {
+export interface CommonInputProps {
   placeholder?: string;
   onChange: (text: string) => void;
   value?: string | number;
