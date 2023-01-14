@@ -9,6 +9,7 @@ interface CommonInputProps {
   errorMessage?: string;
   fixLabelAtTop?: boolean;
   inputClassName?: string;
+  highlightClassName?: string;
   loading?: boolean;
   message?: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
