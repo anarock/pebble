@@ -1,7 +1,7 @@
 import * as React from "react";
 
 interface CommonInputProps {
-  placeholder: string;
+  placeholder?: string;
   onChange: (text: string) => void;
   value?: string | number;
   className?: string;

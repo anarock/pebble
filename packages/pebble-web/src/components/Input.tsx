@@ -140,10 +140,14 @@ class Input extends React.PureComponent<InputProps, InputState> {
           <input type={type} {..._inputProps} {...this.props.inputProps} />
         )}
 
-        <label className={labelClassName}>
-          {placeholder}
-          {required && <span style={{ color: colors.red.base }}>&nbsp;*</span>}
-        </label>
+        {!!placeholder && (
+          <label className={labelClassName}>
+            {placeholder}
+            {required && (
+              <span style={{ color: colors.red.base }}>&nbsp;*</span>
+            )}
+          </label>
+        )}
 
         <div
           className={_highlightClassName}
