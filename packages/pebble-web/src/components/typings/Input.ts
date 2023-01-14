@@ -17,11 +17,19 @@ interface CommonInputProps {
   successMessage?: string;
 }
 
+export type InputType =
+  | "text"
+  | "date"
+  | "password"
+  | "number"
+  | "email"
+  | "tel";
+
 export interface SimpleInputProps extends CommonInputProps {
   inputProps?: React.InputHTMLAttributes<HTMLInputElement> &
     React.RefAttributes<HTMLInputElement>;
   textArea?: false;
-  type?: "text" | "date" | "password" | "number" | "email" | "tel";
+  type?: InputType;
 }
 
 interface TextAreaInputProps extends CommonInputProps {
