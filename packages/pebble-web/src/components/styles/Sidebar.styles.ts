@@ -44,7 +44,7 @@ export const closeStyle = css({
 });
 
 export const sidebarStyle = css({
-  transition: `transform 200ms ${constants.animationCurve}`,
+  transition: `transform ${constants.animationCurve}`,
   backgroundColor: colors.white.base,
   position: "fixed",
   top: 0,
