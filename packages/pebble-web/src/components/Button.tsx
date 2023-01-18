@@ -27,7 +27,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
 }: ButtonProps) => {
   const disableAction = disabled || loading;
 
-  const _filled = size !== "x-small" || !!filled;
+  const _filled = size !== "x-small" && filled !== false;
   const _className = cx(
     getButtonStyle(size, type, !!showShadow, _filled),
     className
