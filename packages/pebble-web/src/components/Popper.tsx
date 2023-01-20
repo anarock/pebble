@@ -1,3 +1,4 @@
+import * as ReactDOM from "react-dom";
 import * as React from "react";
 import { PopperProps, PopperState } from "./typings/Popper";
 import { Manager, Reference, Popper } from "react-popper";
@@ -19,6 +20,16 @@ export default class PebblePopper extends React.PureComponent<
   state: PopperState = {
     isOpen: !!this.props.isOpen
   };
+
+  private node = document.createElement("div");
+
+  componentDidMount() {
+    document.body.appendChild(this.node);
+  }
+
+  componentWillUnmount() {
+    document.body.removeChild(this.node);
+  }
 
   private toggle = () => {
     this.setState({
@@ -63,48 +74,53 @@ export default class PebblePopper extends React.PureComponent<
             )}
           </Reference>
 
-          <MountTransition visible={_isPopperOpen}>
-            {transitionStyles => (
-              <Popper {...props} positionFixed>
-                {({ ref, style, placement, arrowProps }) => {
-                  const wrapperStyle = {
-                    ...style,
-                    ...transitionStyles,
-                    backgroundColor: popperBackgroundColor,
-                    transform: `${style.transform ||
-                      ""} ${transitionStyles.transform || ""}`,
-                    transformOrigin: `${arrowProps.style.left ||
-                      0}px ${arrowProps.style.top || 0}px`
-                  };
+          {ReactDOM.createPortal(
+            <MountTransition visible={_isPopperOpen}>
+              {transitionStyles => (
+                <Popper {...props} positionFixed>
+                  {({ ref, style, placement, arrowProps }) => {
+                    const wrapperStyle = {
+                      ...style,
+                      ...transitionStyles,
+                      backgroundColor: popperBackgroundColor,
+                      transform: `${style.transform || ""} ${
+                        transitionStyles.transform || ""
+                      }`,
+                      transformOrigin: `${arrowProps.style.left || 0}px ${
+                        arrowProps.style.top || 0
+                      }px`
+                    };
 
-                  return (
-                    <div
-                      className={cx(popperStyle, popperClassName)}
-                      ref={ref}
-                      style={wrapperStyle}
-                      data-placement={placement}
-                    >
-                      {children({
-                        toggle: this.toggle,
-                        isOpen: this.state.isOpen
-                      })}
+                    return (
                       <div
-                        className={arrowStyle}
-                        ref={arrowProps.ref}
-                        style={{
-                          ...arrowProps.style,
-                          color: popperBackgroundColor
-                        }}
+                        className={cx(popperStyle, popperClassName)}
+                        ref={ref}
+                        style={wrapperStyle}
                         data-placement={placement}
                       >
-                        ▶
+                        {children({
+                          toggle: this.toggle,
+                          isOpen: this.state.isOpen
+                        })}
+                        <div
+                          className={arrowStyle}
+                          ref={arrowProps.ref}
+                          style={{
+                            ...arrowProps.style,
+                            color: popperBackgroundColor
+                          }}
+                          data-placement={placement}
+                        >
+                          ▶
+                        </div>
                       </div>
-                    </div>
-                  );
-                }}
-              </Popper>
-            )}
-          </MountTransition>
+                    );
+                  }}
+                </Popper>
+              )}
+            </MountTransition>,
+            this.node
+          )}
         </Manager>
       </OutsideClick>
     );
