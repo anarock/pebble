@@ -81,53 +81,54 @@ export default class PebblePopper extends React.PureComponent<
             )}
           </Reference>
 
-          {ReactDOM.createPortal(
-            <MountTransition visible={_isPopperOpen}>
-              {transitionStyles => (
-                <Popper {...props} positionFixed>
-                  {({ ref, style, placement, arrowProps }) => {
-                    const wrapperStyle = {
-                      ...style,
-                      ...transitionStyles,
-                      backgroundColor: popperBackgroundColor,
-                      transform: `${style.transform || ""} ${
-                        transitionStyles.transform || ""
-                      }`,
-                      transformOrigin: `${arrowProps.style.left || 0}px ${
-                        arrowProps.style.top || 0
-                      }px`
-                    };
+          {isBrowser &&
+            ReactDOM.createPortal(
+              <MountTransition visible={_isPopperOpen}>
+                {transitionStyles => (
+                  <Popper {...props} positionFixed>
+                    {({ ref, style, placement, arrowProps }) => {
+                      const wrapperStyle = {
+                        ...style,
+                        ...transitionStyles,
+                        backgroundColor: popperBackgroundColor,
+                        transform: `${style.transform || ""} ${
+                          transitionStyles.transform || ""
+                        }`,
+                        transformOrigin: `${arrowProps.style.left || 0}px ${
+                          arrowProps.style.top || 0
+                        }px`
+                      };
 
-                    return (
-                      <div
-                        className={cx(popperStyle, popperClassName)}
-                        ref={ref}
-                        style={wrapperStyle}
-                        data-placement={placement}
-                      >
-                        {children({
-                          toggle: this.toggle,
-                          isOpen: this.state.isOpen
-                        })}
+                      return (
                         <div
-                          className={arrowStyle}
-                          ref={arrowProps.ref}
-                          style={{
-                            ...arrowProps.style,
-                            color: popperBackgroundColor
-                          }}
+                          className={cx(popperStyle, popperClassName)}
+                          ref={ref}
+                          style={wrapperStyle}
                           data-placement={placement}
                         >
-                          ▶
+                          {children({
+                            toggle: this.toggle,
+                            isOpen: this.state.isOpen
+                          })}
+                          <div
+                            className={arrowStyle}
+                            ref={arrowProps.ref}
+                            style={{
+                              ...arrowProps.style,
+                              color: popperBackgroundColor
+                            }}
+                            data-placement={placement}
+                          >
+                            ▶
+                          </div>
                         </div>
-                      </div>
-                    );
-                  }}
-                </Popper>
-              )}
-            </MountTransition>,
-            node as NonNullable<typeof node>
-          )}
+                      );
+                    }}
+                  </Popper>
+                )}
+              </MountTransition>,
+              node as NonNullable<typeof node>
+            )}
         </Manager>
       </OutsideClick>
     );
