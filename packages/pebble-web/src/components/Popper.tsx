@@ -7,6 +7,7 @@ import { colors } from "pebble-shared";
 import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
 import MountTransition from "./shared/MountTransition";
+import isBrowser from "is-in-browser";
 
 export default class PebblePopper extends React.PureComponent<
   PopperProps,
@@ -21,14 +22,18 @@ export default class PebblePopper extends React.PureComponent<
     isOpen: !!this.props.isOpen
   };
 
-  private node = document.createElement("div");
+  private node = isBrowser ? document.createElement("div") : null;
 
   componentDidMount() {
-    document.body.appendChild(this.node);
+    if (this.node) {
+      document.body.appendChild(this.node);
+    }
   }
 
   componentWillUnmount() {
-    document.body.removeChild(this.node);
+    if (this.node) {
+      document.body.removeChild(this.node);
+    }
   }
 
   private toggle = () => {
@@ -50,6 +55,8 @@ export default class PebblePopper extends React.PureComponent<
     } = this.props;
 
     const _isPopperOpen = controlled ? !!isOpen : this.state.isOpen;
+
+    const node = this.node;
 
     return (
       <OutsideClick
@@ -119,7 +126,7 @@ export default class PebblePopper extends React.PureComponent<
                 </Popper>
               )}
             </MountTransition>,
-            this.node
+            node as NonNullable<typeof node>
           )}
         </Manager>
       </OutsideClick>
