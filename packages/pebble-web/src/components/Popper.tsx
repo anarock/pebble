@@ -1,5 +1,5 @@
-import * as ReactDOM from "react-dom";
 import * as React from "react";
+import * as ReactDOM from "react-dom";
 import { PopperProps, PopperState } from "./typings/Popper";
 import { Manager, Reference, Popper } from "react-popper";
 import { arrowStyle, popperStyle } from "./styles/Popper.styles";
