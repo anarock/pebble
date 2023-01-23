@@ -69,6 +69,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
       className,
       inputClassName,
       highlightClassName,
+      loadingClassName,
       fixLabelAtTop,
       value,
       readOnly,
@@ -127,6 +128,8 @@ class Input extends React.PureComponent<InputProps, InputState> {
       className
     );
 
+    const _loadingStyle = cx(loadingStyle, loadingClassName);
+
     return (
       <div
         className={_wrapperStyle}
@@ -160,7 +163,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
           <Loader
             color={colors.violet.base}
             scale={0.6}
-            className={loadingStyle}
+            className={_loadingStyle}
           />
         )}
 

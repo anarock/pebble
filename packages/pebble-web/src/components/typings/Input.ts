@@ -10,6 +10,7 @@ export interface CommonInputProps {
   fixLabelAtTop?: boolean;
   inputClassName?: string;
   highlightClassName?: string;
+  loadingClassName?: string;
   loading?: boolean;
   message?: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
