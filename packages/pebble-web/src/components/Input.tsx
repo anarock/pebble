@@ -102,7 +102,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
       disabled,
       onChange: this.handleChange,
       readOnly,
-      value: value === 0 ? "0" : value || ""
+      value: value || ""
     };
 
     const _highlightClassName = cx(
