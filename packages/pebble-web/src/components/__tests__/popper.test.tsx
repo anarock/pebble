@@ -4,15 +4,6 @@ import Button from "../Button";
 import Popper from "../Popper";
 // import { mount } from "enzyme";
 
-jest.mock("react-dom", () => {
-  const ReactDOM = jest.requireActual("react-dom");
-
-  return {
-    ...ReactDOM,
-    createPortal: (node: React.ReactNode) => node
-  };
-});
-
 describe("Component: Popper", () => {
   test("snapshot", () => {
     const component = renderer.create(
