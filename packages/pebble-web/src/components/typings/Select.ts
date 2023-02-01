@@ -4,7 +4,7 @@ import { Extras } from "./OptionGroup";
 import { Omit } from "utility-types";
 import { Placement, Modifiers } from "popper.js";
 
-interface CommonSelectProps<OptionType> {
+export interface CommonSelectProps<OptionType> {
   className?: string;
   placeholder: string;
   required?: boolean;
