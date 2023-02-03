@@ -14,7 +14,7 @@ export interface ButtonProps {
   className?: string;
   showRipple?: boolean;
   loading?: boolean;
-  outline?: boolean;
+  filled?: boolean;
   buttonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
 }
 
