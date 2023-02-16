@@ -83,7 +83,9 @@ export default class DateInput extends React.PureComponent<
       inputProps,
       placeholder,
       value: propsValue,
-      disabled
+      disabled,
+      placement = "bottom-start",
+      errorComponent
     } = this.props;
 
     return (
@@ -119,10 +121,11 @@ export default class DateInput extends React.PureComponent<
           </Rifm>
         )}
         className={wrapperStyle}
-        placement="bottom-start"
+        placement={placement}
         modifiers={modifiers}
       >
         {({ toggle }) => (
+          <>
           <Calendar
             hideShadow
             className={dateClass}
@@ -134,6 +137,8 @@ export default class DateInput extends React.PureComponent<
               toggle();
             }}
           />
+          {errorComponent}
+          </>
         )}
       </DropDown>
     );
