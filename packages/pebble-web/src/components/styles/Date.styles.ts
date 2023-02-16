@@ -1,4 +1,5 @@
 import { css } from "emotion";
+import { colors } from "pebble-shared";
 import { inputMarginBottom } from "./Input.styles";
 
 export const dateClass = css({
@@ -17,3 +18,13 @@ export const inputStyle = css({
 export const wrapperStyle = css({
   marginBottom: 20
 });
+
+export const errorStyle = css({
+  display: "flex",
+  backgroundColor: colors.red.lighter,
+  color: colors.red.darker,
+  borderRadius: "0px 0px 3px 3px",
+  alignItems:"center",
+  justifyContent:"center",
+  padding: "11px"
+})

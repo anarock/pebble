@@ -88,6 +88,10 @@ storiesOf("Components/Input", module)
           {dateInputType === "Pebble Calendar" && (
             <DateInput
               {...dateInputProps}
+              errorMessage={text(
+                "errorMessage",
+                "Error Message"
+              )}
               disabled={boolean("disabled", false)}
             />
           )}
