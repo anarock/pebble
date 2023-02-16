@@ -21,9 +21,11 @@ export const wrapperStyle = css({
 
 export const errorStyle = css({
   display: "flex",
-  backgroundColor: colors.red.lighter,
+  backgroundColor: colors.red.lightest,
   color: colors.red.darker,
   borderRadius: "0px 0px 3px 3px",
+  fontSize: "12px",
+  fontWeight: 500,
   alignItems:"center",
   justifyContent:"center",
   padding: "11px"
