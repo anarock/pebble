@@ -11,7 +11,6 @@ export interface DateInputProps {
   calendarProps?: DateSingle;
   disabled?: boolean;
   placement?: Placement;
-  errorComponent?: React.ReactNode;
   wrapperClassName?: string;
 }
 

@@ -37,9 +37,12 @@ const modifiers = {
 };
 
 export default class DateInput extends React.PureComponent<
-  DateInputProps,
+  DateInputProps & typeof DateInput.defaultProps,
   DateInputState
 > {
+  static defaultProps = {
+    placement: "bottom-start"
+  }
   state: Readonly<DateInputState> = {
     stringInput: ""
   };
@@ -84,8 +87,7 @@ export default class DateInput extends React.PureComponent<
       placeholder,
       value: propsValue,
       disabled,
-      placement = "bottom-start",
-      errorComponent,
+      placement,
       wrapperClassName
     } = this.props;
 
@@ -128,20 +130,17 @@ export default class DateInput extends React.PureComponent<
         modifiers={modifiers}
       >
         {({ toggle }) => (
-          <>
-            <Calendar
-              hideShadow
-              className={dateClass}
-              selected={propsValue ? new Date(propsValue) : undefined}
-              {...calendarProps}
-              range={false}
-              onChange={date => {
-                this.onCalendarDateChange(date);
-                toggle();
-              }}
-            />
-            {errorComponent}
-          </>
+          <Calendar
+            hideShadow
+            className={dateClass}
+            selected={propsValue ? new Date(propsValue) : undefined}
+            {...calendarProps}
+            range={false}
+            onChange={date => {
+              this.onCalendarDateChange(date);
+              toggle();
+            }}
+          />
         )}
       </DropDown>
     );
