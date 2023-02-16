@@ -1,7 +1,7 @@
 import { SimpleInputProps } from "./Input";
 import { Omit } from "utility-types";
 import { DateSingle } from "./Calendar";
-import {Placement} from 'popper.js'
+import { Placement } from "popper.js";
 import React from "react";
 export interface DateInputProps {
   onChange: (date?: number) => void;
@@ -11,7 +11,8 @@ export interface DateInputProps {
   calendarProps?: DateSingle;
   disabled?: boolean;
   placement?: Placement;
-  errorComponent?: React.ReactNode
+  errorComponent?: React.ReactNode;
+  wrapperClassName?: string;
 }
 
 export interface DateInputState {

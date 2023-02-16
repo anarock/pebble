@@ -85,8 +85,11 @@ export default class DateInput extends React.PureComponent<
       value: propsValue,
       disabled,
       placement = "bottom-start",
-      errorComponent
+      errorComponent,
+      wrapperClassName
     } = this.props;
+
+    const _wrapperClassName = cx(wrapperStyle, wrapperClassName);
 
     return (
       <DropDown
@@ -120,24 +123,24 @@ export default class DateInput extends React.PureComponent<
             )}
           </Rifm>
         )}
-        className={wrapperStyle}
+        className={_wrapperClassName}
         placement={placement}
         modifiers={modifiers}
       >
         {({ toggle }) => (
           <>
-          <Calendar
-            hideShadow
-            className={dateClass}
-            selected={propsValue ? new Date(propsValue) : undefined}
-            {...calendarProps}
-            range={false}
-            onChange={date => {
-              this.onCalendarDateChange(date);
-              toggle();
-            }}
-          />
-          {errorComponent}
+            <Calendar
+              hideShadow
+              className={dateClass}
+              selected={propsValue ? new Date(propsValue) : undefined}
+              {...calendarProps}
+              range={false}
+              onChange={date => {
+                this.onCalendarDateChange(date);
+                toggle();
+              }}
+            />
+            {errorComponent}
           </>
         )}
       </DropDown>
