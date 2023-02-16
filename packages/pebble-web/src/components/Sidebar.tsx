@@ -9,7 +9,7 @@ import { Transition, animated } from "react-spring/renderprops.cjs";
 import Ink from "react-ink";
 import { css, cx } from "emotion";
 import { disableScrollY } from "../theme/styles";
-import { animationConfig, duration } from "../utils/animation";
+import { animationConfig } from "../utils/animation";
 
 const transitionProps = {
   from: { opacity: 0 },
@@ -93,17 +93,8 @@ class SideBar extends React.PureComponent<SidebarProps> {
           }
         </Transition>
 
-        <div
-          className={_sidebarStyle}
-          style={{
-            transitionDuration: `${isOpen ? duration.enter : duration.leave}ms`
-          }}
-        >
-          <Transition
-            items={isOpen}
-            {...transitionProps}
-            config={animationConfig.config}
-          >
+        <div className={_sidebarStyle}>
+          <Transition items={isOpen} {...transitionProps}>
             {show =>
               show &&
               (styles => (
