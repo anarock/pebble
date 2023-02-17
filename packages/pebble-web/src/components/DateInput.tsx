@@ -137,7 +137,7 @@ export default class DateInput extends React.PureComponent<
                 toggle();
               }}
             />
-            {errorMessage && <span className={errorStyle}>{errorMessage}</span>}
+            {errorMessage && <div className={errorStyle}>{errorMessage}</div>}
           </>
         )}
       </DropDown>
