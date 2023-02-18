@@ -1,2 +1,2 @@
 export * from "./theme";
-export { default as Icon } from "./Icon";
+export { default as PebbleIcon } from "./Icon";

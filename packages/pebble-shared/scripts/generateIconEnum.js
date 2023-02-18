@@ -22,7 +22,7 @@ const namedIcons = icons
   })
   .join(",");
 
-const iconEnum = `enum Icon { ${namedIcons} } ; export default Icon`;
+const iconEnum = `enum PebbleIcon { ${namedIcons} } ; export default PebbleIcon`;
 
 fs.writeFileSync(
   "./src/Icon.ts",
