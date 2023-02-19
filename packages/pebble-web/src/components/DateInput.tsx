@@ -88,14 +88,15 @@ export default class DateInput extends React.PureComponent<
       value: propsValue,
       disabled,
       placement,
-      wrapperClassName
+      wrapperClassName,
+      dropDownWrapperClassName
     } = this.props;
 
     const _wrapperClassName = cx(wrapperStyle, wrapperClassName);
-
+    const _dropDownClassName = cx(dropDownClassName,dropDownWrapperClassName)
     return (
       <DropDown
-        dropDownClassName={dropDownClassName}
+        dropDownClassName={_dropDownClassName}
         labelComponent={({ toggleDropdown }) => (
           <Rifm
             value={this.state.stringInput}
