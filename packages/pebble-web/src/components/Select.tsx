@@ -51,8 +51,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
         labelComponent={({ toggleDropdown, isOpen }) => {
           const chevron = cx(
             chevronStyle,
-            "pi",
-            "pi-arrow-drop-down",
+            "pi pi-arrow-drop-down",
             {
               __pebble__select__open: isOpen
             },
