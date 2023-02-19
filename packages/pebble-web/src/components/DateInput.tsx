@@ -89,11 +89,11 @@ export default class DateInput extends React.PureComponent<
       disabled,
       placement,
       wrapperClassName,
-      dropDownWrapperClassName
+      dropDownClassName
     } = this.props;
 
     const _wrapperClassName = cx(wrapperStyle, wrapperClassName);
-    const _dropDownClassName = cx(dropDownClassName,dropDownWrapperClassName)
+    const _dropDownClassName = cx(dropDownClassName,this.props.dropDownClassName)
     return (
       <DropDown
         dropDownClassName={_dropDownClassName}

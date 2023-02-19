@@ -11,7 +11,7 @@ export interface DateInputProps {
   disabled?: boolean;
   placement?: Placement;
   wrapperClassName?: string;
-  dropDownWrapperClassName?:string
+  dropDownClassName?:string
 }
 
 export interface DateInputState {
