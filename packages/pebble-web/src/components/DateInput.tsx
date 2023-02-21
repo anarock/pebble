@@ -88,7 +88,8 @@ export default class DateInput extends React.PureComponent<
       value: propsValue,
       disabled,
       placement,
-      wrapperClassName
+      wrapperClassName,
+      initiallyOpen
     } = this.props;
 
     const _wrapperClassName = cx(wrapperStyle, wrapperClassName);
@@ -128,6 +129,7 @@ export default class DateInput extends React.PureComponent<
         className={_wrapperClassName}
         placement={placement}
         modifiers={modifiers}
+        initiallyOpen={initiallyOpen}
       >
         {({ toggle }) => (
           <Calendar
