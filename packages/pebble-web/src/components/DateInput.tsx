@@ -102,7 +102,7 @@ export default class DateInput extends React.PureComponent<
                 onChange={noop}
                 type={"tel"}
                 value={value}
-                placeholder={`${placeholder} DD/MM/YYYY`}
+                placeholder={placeholder}
                 onClick={() => {
                   if (disabled) return;
                   toggleDropdown();
