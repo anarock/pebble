@@ -1,6 +1,6 @@
 {
   "name": "pebble-shared",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "license": "MIT",
   "main": "dist/pebble-shared.js",
   "files": [
@@ -12,8 +12,9 @@
   "typings": "dist/index.d.ts",
   "unpkg": "dist/pebble-shared.umd.js",
   "scripts": {
-    "build": "rm -rf dist && tsc && rollup -c && yarn build:icons && yarn copy:fonts",
+    "build": "rm -rf dist && yarn build:iconenum && tsc && rollup -c && yarn build:icons && yarn copy:fonts",
     "build:icons": "node ./scripts/generateIcon.js",
+    "build:iconenum": "node ./scripts/generateIconEnum.js",
     "copy:fonts": "copy './dist/fonts/*.ttf' ./native/icons",
     "test": "exit 0",
     "prepublishOnly": "yarn build"
