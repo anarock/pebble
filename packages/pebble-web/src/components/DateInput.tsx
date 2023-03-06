@@ -5,7 +5,8 @@ import {
   dateClass,
   dropDownClassName,
   inputStyle,
-  wrapperStyle
+  wrapperStyle,
+  errorStyle
 } from "./styles/Date.styles";
 import Calendar from "./Calendar";
 import Input from "./Input";
@@ -87,6 +88,7 @@ export default class DateInput extends React.PureComponent<
       placeholder,
       value: propsValue,
       disabled,
+      errorMessage,
       placement,
       wrapperClassName,
       initiallyOpen
@@ -112,7 +114,7 @@ export default class DateInput extends React.PureComponent<
                 onChange={noop}
                 type={"tel"}
                 value={value}
-                placeholder={`${placeholder} DD/MM/YYYY`}
+                placeholder={placeholder}
                 onClick={() => {
                   if (disabled) return;
                   toggleDropdown();
@@ -136,17 +138,20 @@ export default class DateInput extends React.PureComponent<
         initiallyOpen={initiallyOpen}
       >
         {({ toggle }) => (
-          <Calendar
-            hideShadow
-            className={dateClass}
-            selected={propsValue ? new Date(propsValue) : undefined}
-            {...calendarProps}
-            range={false}
-            onChange={date => {
-              this.onCalendarDateChange(date);
-              toggle();
-            }}
-          />
+          <>
+            <Calendar
+              hideShadow
+              className={dateClass}
+              selected={propsValue ? new Date(propsValue) : undefined}
+              {...calendarProps}
+              range={false}
+              onChange={date => {
+                this.onCalendarDateChange(date);
+                toggle();
+              }}
+            />
+            {errorMessage && <div className={errorStyle}>{errorMessage}</div>}
+          </>
         )}
       </DropDown>
     );

@@ -10,6 +10,7 @@ export interface DateInputProps {
   inputProps?: Omit<SimpleInputProps, "value" | "onChange" | "placeholder">;
   calendarProps?: DateSingle;
   disabled?: boolean;
+  errorMessage?: string;
   placement?: Placement;
   wrapperClassName?: string;
   dropDownClassName?: string;
