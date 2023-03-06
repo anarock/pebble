@@ -38,9 +38,12 @@ const modifiers = {
 };
 
 export default class DateInput extends React.PureComponent<
-  DateInputProps,
+  DateInputProps & typeof DateInput.defaultProps,
   DateInputState
 > {
+  static defaultProps = {
+    placement: "bottom-start"
+  };
   state: Readonly<DateInputState> = {
     stringInput: ""
   };
@@ -85,12 +88,21 @@ export default class DateInput extends React.PureComponent<
       placeholder,
       value: propsValue,
       disabled,
-      errorMessage
+      errorMessage,
+      placement,
+      wrapperClassName,
+      initiallyOpen
     } = this.props;
 
+    const _wrapperClassName = cx(wrapperStyle, wrapperClassName);
+
+    const _dropDownClassName = cx(
+      dropDownClassName,
+      this.props.dropDownClassName
+    );
     return (
       <DropDown
-        dropDownClassName={dropDownClassName}
+        dropDownClassName={_dropDownClassName}
         labelComponent={({ toggleDropdown }) => (
           <Rifm
             value={this.state.stringInput}
@@ -102,7 +114,7 @@ export default class DateInput extends React.PureComponent<
                 onChange={noop}
                 type={"tel"}
                 value={value}
-                placeholder={placeholder}
+                placeholder={`${placeholder} DD/MM/YYYY`}
                 onClick={() => {
                   if (disabled) return;
                   toggleDropdown();
@@ -120,9 +132,10 @@ export default class DateInput extends React.PureComponent<
             )}
           </Rifm>
         )}
-        className={wrapperStyle}
-        placement="bottom-start"
+        className={_wrapperClassName}
+        placement={placement}
         modifiers={modifiers}
+        initiallyOpen={initiallyOpen}
       >
         {({ toggle }) => (
           <>
