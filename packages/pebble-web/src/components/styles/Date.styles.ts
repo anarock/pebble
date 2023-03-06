@@ -25,5 +25,5 @@ export const errorStyle = css({
   backgroundColor: colors.red.lightest,
   color: colors.red.darker,
   textAlign: "left",
-  padding: "11px 30px",
-})
+  padding: "11px 30px"
+});
