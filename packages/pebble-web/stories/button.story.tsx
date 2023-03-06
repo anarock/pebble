@@ -17,7 +17,6 @@ storiesOf("Components/Button", module).add("Playground", () => (
     onClick={action("click")}
     showRipple={boolean("showRipple", true)}
     loading={boolean("loading", false)}
-    filled={boolean("Filled", true)}
   >
     Submit
   </Button>

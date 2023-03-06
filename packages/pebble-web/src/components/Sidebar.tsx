@@ -5,16 +5,16 @@ import {
   sidebarWrapperStyle
 } from "./styles/Sidebar.styles";
 import { SidebarProps } from "./typings/Sidebar";
-import { animated } from "react-spring/renderprops.cjs";
+import { Transition, animated } from "react-spring/renderprops.cjs";
 import Ink from "react-ink";
 import { css, cx } from "emotion";
 import { disableScrollY } from "../theme/styles";
-import MountTransition from "./shared/MountTransition";
+import { animationConfig } from "../utils/animation";
 
 const transitionProps = {
-  from: { opacity: 0, transform: "translateX(100%)" },
-  enter: { opacity: 1, transform: "translateX(0)" },
-  leave: { opacity: 0, transform: "translateX(100%)", pointerEvents: "none" }
+  from: { opacity: 0 },
+  enter: { opacity: 1 },
+  leave: { opacity: 0 }
 };
 
 class SideBar extends React.PureComponent<SidebarProps> {
@@ -57,36 +57,63 @@ class SideBar extends React.PureComponent<SidebarProps> {
       onOutsideClick,
       closeOnOutsideClick
     } = this.props;
-    const _sidebarStyle = cx(sidebarStyle, css({ width }));
+    const _sidebarOverride = css({
+      width,
+      transform: isOpen ? `translateX(0)` : `translateX(${width}px)`
+    });
+    const _sidebarStyle = cx(
+      _sidebarOverride,
+      sidebarStyle,
+      css({
+        transform: isOpen ? `translateX(0)` : `translateX(100%)`
+      })
+    );
 
     return (
-      <MountTransition visible={isOpen} {...transitionProps}>
-        {styles => (
-          <>
-            <animated.div
-              style={{ opacity: styles.opacity }}
-              className={sidebarWrapperStyle}
-              onClick={
-                onOutsideClick || closeOnOutsideClick
-                  ? this.onOutsideClick
-                  : undefined
-              }
-              data-testid="shadowArea"
-            />
+      <React.Fragment>
+        <Transition
+          items={isOpen}
+          {...transitionProps}
+          config={animationConfig.config}
+        >
+          {show =>
+            show &&
+            (styles => (
+              <animated.div
+                style={styles}
+                className={sidebarWrapperStyle}
+                onClick={
+                  onOutsideClick || closeOnOutsideClick
+                    ? this.onOutsideClick
+                    : undefined
+                }
+                data-testid="shadowArea"
+              />
+            ))
+          }
+        </Transition>
 
-            <animated.div className={_sidebarStyle} style={styles}>
-              <div className={closeStyle} onClick={onClose}>
-                <i className="pi pi-close" />
-                <Ink />
-              </div>
-
-              <div style={{ overflowY: "scroll", height: "100vh" }}>
-                {children}
-              </div>
-            </animated.div>
-          </>
-        )}
-      </MountTransition>
+        <div className={_sidebarStyle}>
+          <Transition items={isOpen} {...transitionProps}>
+            {show =>
+              show &&
+              (styles => (
+                <animated.div
+                  style={styles}
+                  className={closeStyle}
+                  onClick={onClose}
+                >
+                  <i className="pi pi-close" />
+                  <Ink />
+                </animated.div>
+              ))
+            }
+          </Transition>
+          {isOpen && (
+            <div style={{ overflowY: "auto", height: "100vh" }}>{children}</div>
+          )}
+        </div>
+      </React.Fragment>
     );
   }
 }
