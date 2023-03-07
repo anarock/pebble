@@ -80,7 +80,7 @@ class SideBar extends React.PureComponent<SidebarProps> {
                 <Ink />
               </div>
 
-              <div style={{ overflowY: "auto", height: "100vh" }}>
+              <div style={{ overflowY: "auto", height: "100%" }}>
                 {children}
               </div>
             </animated.div>
