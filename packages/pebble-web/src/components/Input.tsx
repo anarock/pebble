@@ -68,6 +68,8 @@ class Input extends React.PureComponent<InputProps, InputState> {
       placeholder,
       className,
       inputClassName,
+      highlightClassName,
+      loadingClassName,
       fixLabelAtTop,
       value,
       readOnly,
@@ -103,12 +105,16 @@ class Input extends React.PureComponent<InputProps, InputState> {
       value: value || ""
     };
 
-    const highlightClassName = cx(highlightStyle, {
-      _pebble_input_highlight_focused: !!isFocused,
-      _pebble_input_highlight_state: !!errorMessage || !!successMessage,
-      _pebble_input_highlight_read_only: !!readOnly,
-      _pebble_input_highlight_disabled: !!disabled
-    });
+    const _highlightClassName = cx(
+      highlightStyle,
+      {
+        _pebble_input_highlight_focused: !!isFocused,
+        _pebble_input_highlight_state: !!errorMessage || !!successMessage,
+        _pebble_input_highlight_read_only: !!readOnly,
+        _pebble_input_highlight_disabled: !!disabled
+      },
+      highlightClassName
+    );
 
     const labelClassName = cx(labelStyle, {
       _pebble_input_label_focused: !!(isFocused || !!value || fixLabelAtTop)
@@ -121,6 +127,8 @@ class Input extends React.PureComponent<InputProps, InputState> {
       },
       className
     );
+
+    const _loadingStyle = cx(loadingStyle, loadingClassName);
 
     return (
       <div
@@ -135,13 +143,17 @@ class Input extends React.PureComponent<InputProps, InputState> {
           <input type={type} {..._inputProps} {...this.props.inputProps} />
         )}
 
-        <label className={labelClassName}>
-          {placeholder}
-          {required && <span style={{ color: colors.red.base }}>&nbsp;*</span>}
-        </label>
+        {!!placeholder && (
+          <label className={labelClassName}>
+            {placeholder}
+            {required && (
+              <span style={{ color: colors.red.base }}>&nbsp;*</span>
+            )}
+          </label>
+        )}
 
         <div
-          className={highlightClassName}
+          className={_highlightClassName}
           style={{
             backgroundColor: getColor(errorMessage, successMessage, true)
           }}
@@ -151,7 +163,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
           <Loader
             color={colors.violet.base}
             scale={0.6}
-            className={loadingStyle}
+            className={_loadingStyle}
           />
         )}
 

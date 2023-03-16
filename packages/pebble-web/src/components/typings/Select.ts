@@ -4,7 +4,7 @@ import { Extras } from "./OptionGroup";
 import { Omit } from "utility-types";
 import { Placement, Modifiers } from "popper.js";
 
-interface CommonSelectProps<OptionType> {
+export interface CommonSelectProps<OptionType> {
   className?: string;
   placeholder: string;
   required?: boolean;
@@ -14,6 +14,7 @@ interface CommonSelectProps<OptionType> {
   searchBox?: boolean;
   searchBoxProps?: Omit<SearchProps, "type">;
   dropdownClassName?: string;
+  arrowClassName?: string;
   inputProps?: Omit<SimpleInputProps, "onChange" | "value" | "placeholder">;
   fullWidthDropdown?: boolean;
   onDropdownToggle?: (isOpen: boolean) => void;

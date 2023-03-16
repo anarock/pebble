@@ -27,6 +27,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
     errorMessage,
     value,
     dropdownClassName,
+    arrowClassName,
     inputProps,
     fullWidthDropdown,
     onDropdownToggle = noop,
@@ -48,9 +49,14 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
         })}
         onOutsideClick={isOpen => onDropdownToggle(isOpen)}
         labelComponent={({ toggleDropdown, isOpen }) => {
-          const chevron = cx(chevronStyle, "pi", "pi-arrow-drop-down", {
-            __pebble__select__open: isOpen
-          });
+          const chevron = cx(
+            chevronStyle,
+            "pi pi-arrow-drop-down",
+            {
+              __pebble__select__open: isOpen
+            },
+            arrowClassName
+          );
           return (
             <div
               className={cx(inputWrapper, disabled && disabledSelect)}
