@@ -1,3 +1,4 @@
+import { cx } from "emotion";
 import * as React from "react";
 import { getSelectedCheckboxes } from "./utils/getSelectedCheckboxes";
 import Button from "./Button";
@@ -45,14 +46,21 @@ export default class OptionGroupCheckBox<
     if (onApply) onApply(selected || [], this.props);
   };
   render() {
-    const { onApply, onClear, isSelected, onChange, ...rest } = this.props;
+    const {
+      wrapClassName,
+      onApply,
+      onClear,
+      isSelected,
+      onChange,
+      ...rest
+    } = this.props;
     const advancedOptionsProps = {
       selectVisible: this.selectVisible,
       clearVisible: this.clearVisible,
       ...this.props.advancedOptionsProps
     };
     return (
-      <div className={styles.optionGroupCheckBoxWrap}>
+      <div className={cx(styles.optionGroupCheckBoxWrap, wrapClassName)}>
         <OptionGroup<OptionType>
           {...rest}
           advancedOptionsProps={advancedOptionsProps}

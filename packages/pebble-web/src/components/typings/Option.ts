@@ -8,5 +8,6 @@ export interface OptionProps<OptionType>
   isSelected?: boolean;
   multiSelect?: boolean;
   labelClassName?: string;
+  leftElement?: (props: OptionProps<OptionType>) => React.ReactNode;
   rightElement?: (props: OptionProps<OptionType>) => React.ReactNode;
 }

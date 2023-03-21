@@ -5,7 +5,8 @@ import {
   dateClass,
   dropDownClassName,
   inputStyle,
-  wrapperStyle
+  wrapperStyle,
+  errorStyle
 } from "./styles/Date.styles";
 import Calendar from "./Calendar";
 import Input from "./Input";
@@ -37,9 +38,12 @@ const modifiers = {
 };
 
 export default class DateInput extends React.PureComponent<
-  DateInputProps,
+  DateInputProps & typeof DateInput.defaultProps,
   DateInputState
 > {
+  static defaultProps = {
+    placement: "bottom-start"
+  };
   state: Readonly<DateInputState> = {
     stringInput: ""
   };
@@ -83,12 +87,22 @@ export default class DateInput extends React.PureComponent<
       inputProps,
       placeholder,
       value: propsValue,
-      disabled
+      disabled,
+      errorMessage,
+      placement,
+      wrapperClassName,
+      initiallyOpen
     } = this.props;
 
+    const _wrapperClassName = cx(wrapperStyle, wrapperClassName);
+
+    const _dropDownClassName = cx(
+      dropDownClassName,
+      this.props.dropDownClassName
+    );
     return (
       <DropDown
-        dropDownClassName={dropDownClassName}
+        dropDownClassName={_dropDownClassName}
         labelComponent={({ toggleDropdown }) => (
           <Rifm
             value={this.state.stringInput}
@@ -118,22 +132,26 @@ export default class DateInput extends React.PureComponent<
             )}
           </Rifm>
         )}
-        className={wrapperStyle}
-        placement="bottom-start"
+        className={_wrapperClassName}
+        placement={placement}
         modifiers={modifiers}
+        initiallyOpen={initiallyOpen}
       >
         {({ toggle }) => (
-          <Calendar
-            hideShadow
-            className={dateClass}
-            selected={propsValue ? new Date(propsValue) : undefined}
-            {...calendarProps}
-            range={false}
-            onChange={date => {
-              this.onCalendarDateChange(date);
-              toggle();
-            }}
-          />
+          <>
+            <Calendar
+              hideShadow
+              className={dateClass}
+              selected={propsValue ? new Date(propsValue) : undefined}
+              {...calendarProps}
+              range={false}
+              onChange={date => {
+                this.onCalendarDateChange(date);
+                toggle();
+              }}
+            />
+            {errorMessage && <div className={errorStyle}>{errorMessage}</div>}
+          </>
         )}
       </DropDown>
     );

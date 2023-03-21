@@ -24,6 +24,7 @@ export const optionGroupCheckBoxWrap = css({
 
 export const optionGroupCheckBoxButtonWrap = css({
   ...mixins.flexSpaceBetween,
+  gap: 60,
   padding: optionGroupCheckBoxButtonWrapPadding,
   paddingTop: optionGroupCheckBoxButtonWrapPaddingTop,
   backgroundColor: colors.white.base

@@ -1,7 +1,7 @@
 import * as React from "react";
 
-interface CommonInputProps {
-  placeholder: string;
+export interface CommonInputProps {
+  placeholder?: string;
   onChange: (text: string) => void;
   value?: string | number;
   className?: string;
@@ -9,6 +9,8 @@ interface CommonInputProps {
   errorMessage?: string;
   fixLabelAtTop?: boolean;
   inputClassName?: string;
+  highlightClassName?: string;
+  loadingClassName?: string;
   loading?: boolean;
   message?: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
@@ -17,15 +19,24 @@ interface CommonInputProps {
   successMessage?: string;
 }
 
+export type InputType =
+  | "text"
+  | "date"
+  | "password"
+  | "number"
+  | "email"
+  | "tel";
+
 export interface SimpleInputProps extends CommonInputProps {
   inputProps?: React.InputHTMLAttributes<HTMLInputElement> &
     React.RefAttributes<HTMLInputElement>;
   textArea?: false;
-  type?: "text" | "date" | "password" | "number" | "email" | "tel";
+  type?: InputType;
 }
 
-interface TextAreaInputProps extends CommonInputProps {
-  inputProps?: React.InputHTMLAttributes<HTMLTextAreaElement>;
+export interface TextAreaInputProps extends CommonInputProps {
+  inputProps?: React.InputHTMLAttributes<HTMLTextAreaElement> &
+    React.RefAttributes<HTMLTextAreaElement>;
   textArea: true;
   type?: undefined;
 }
