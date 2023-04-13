@@ -15,6 +15,7 @@ export interface TooltipProps {
     toggle: () => void;
     isOpen: boolean;
   }) => React.ReactNode;
+  toolTipClassName?: string;
 }
 
 export interface TooltipState {
