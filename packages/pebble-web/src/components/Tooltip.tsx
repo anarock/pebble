@@ -3,6 +3,7 @@ import Popper from "./Popper";
 import { TooltipProps, TooltipState } from "./typings/Tooltip";
 import { colors } from "pebble-shared";
 import { popperStyle, textStyle } from "./styles/Tooltip.styles";
+import { cx } from "emotion";
 
 class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
   state = {
@@ -27,7 +28,13 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
   };
 
   render() {
-    const { placement, label, modifiers, isError } = this.props;
+    const {
+      placement,
+      label,
+      modifiers,
+      isError,
+      popperClassName
+    } = this.props;
 
     return (
       <Popper
@@ -42,7 +49,7 @@ class Tooltip extends React.PureComponent<TooltipProps, TooltipState> {
         popperBackgroundColor={isError ? colors.red.base : colors.gray.darker}
         modifiers={modifiers}
         isOpen={this.props.isOpen || this.state.isOpen}
-        popperClassName={popperStyle}
+        popperClassName={cx(popperStyle, popperClassName)}
         closeOnOutsideClick={false}
       >
         {this.props.renderElement || this.defaultTooltip}
