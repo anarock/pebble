@@ -53,10 +53,10 @@ export default class DateInput extends React.PureComponent<
     state: DateInputState
   ): Partial<DateInputState> | null {
     let newState: Partial<DateInputState> | null = null;
-    if (props.value && props.value !== state.propsValue) {
+    if (props.value !== state.propsValue) {
       newState = {
         propsValue: props.value,
-        stringInput: (props.value && format(props.value, "dd/MM/yyyy")) || ""
+        stringInput: props.value ? format(props.value, "dd/MM/yyyy") : ""
       };
     }
     return newState;
@@ -114,7 +114,7 @@ export default class DateInput extends React.PureComponent<
                 onChange={noop}
                 type={"tel"}
                 value={value}
-                placeholder={`${placeholder} DD/MM/YYYY`}
+                placeholder={placeholder}
                 onClick={() => {
                   if (disabled) return;
                   toggleDropdown();
