@@ -121,7 +121,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                       >
                         {children({
                           toggle: this.toggleDropdown,
-                          isOpen: this.state.isOpen
+                          isOpen: _isDropDownOpen
                         })}
                       </div>
                     );
