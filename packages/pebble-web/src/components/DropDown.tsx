@@ -51,7 +51,10 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
       isOpen,
       onOutsideClick
     } = this.props;
-    const _isDropDownOpen = controlled ? !!this.props.isOpen : this.state.isOpen;
+
+    const _isDropDownOpen = controlled
+      ? !!this.props.isOpen
+      : this.state.isOpen;
 
     return (
       <OutsideClick
@@ -70,7 +73,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
               <div style={{ display: "inline-block", width: "100%" }} ref={ref}>
                 {labelComponent ? (
                   labelComponent({
-                    isOpen:_isDropDownOpen,
+                    isOpen: _isDropDownOpen,
                     toggleDropdown: this.toggleDropdown
                   })
                 ) : (
@@ -101,10 +104,12 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                       ...style,
                       ...transitionStyles,
                       backgroundColor: colors.white.base,
-                      transform: `${style.transform ||
-                        ""} ${transitionStyles.transform || ""}`,
-                      transformOrigin: `${arrowProps.style.left ||
-                        0}px ${arrowProps.style.top || 0}px`,
+                      transform: `${style.transform || ""} ${
+                        transitionStyles.transform || ""
+                      }`,
+                      transformOrigin: `${arrowProps.style.left || 0}px ${
+                        arrowProps.style.top || 0
+                      }px`,
                       padding
                     };
 
