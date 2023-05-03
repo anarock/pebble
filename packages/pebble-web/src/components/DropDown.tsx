@@ -48,7 +48,6 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
       disabled,
       labelClassName,
       controlled,
-      isOpen,
       onOutsideClick
     } = this.props;
 
@@ -65,7 +64,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
           });
           if (onOutsideClick) onOutsideClick(_isDropDownOpen);
         }}
-        disabled={!isOpen}
+        disabled={!_isDropDownOpen}
       >
         <Manager>
           <Reference>
