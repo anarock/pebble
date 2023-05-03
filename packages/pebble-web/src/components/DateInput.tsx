@@ -91,7 +91,10 @@ export default class DateInput extends React.PureComponent<
       errorMessage,
       placement,
       wrapperClassName,
-      initiallyOpen
+      initiallyOpen,
+      onOutsideClick,
+      controlled,
+      isOpen
     } = this.props;
 
     const _wrapperClassName = cx(wrapperStyle, wrapperClassName);
@@ -116,7 +119,7 @@ export default class DateInput extends React.PureComponent<
                 value={value}
                 placeholder={placeholder}
                 onClick={() => {
-                  if (disabled) return;
+                  if (disabled || controlled) return;
                   toggleDropdown();
                 }}
                 fixLabelAtTop
@@ -136,6 +139,9 @@ export default class DateInput extends React.PureComponent<
         placement={placement}
         modifiers={modifiers}
         initiallyOpen={initiallyOpen}
+        onOutsideClick={onOutsideClick}
+        controlled={controlled}
+        isOpen={isOpen}
       >
         {({ toggle }) => (
           <>
@@ -147,6 +153,9 @@ export default class DateInput extends React.PureComponent<
               range={false}
               onChange={date => {
                 this.onCalendarDateChange(date);
+                if (controlled) {
+                  return;
+                }
                 toggle();
               }}
             />

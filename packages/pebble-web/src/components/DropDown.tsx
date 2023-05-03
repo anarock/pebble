@@ -47,10 +47,12 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
       isSelected,
       disabled,
       labelClassName,
+      controlled,
+      isOpen,
       onOutsideClick
     } = this.props;
-    const { isOpen } = this.state;
-
+    const _isDropDownOpen = controlled ? !!this.props.isOpen : this.state.isOpen;
+    
     return (
       <OutsideClick
         className={cx(wrapperStyle, className)}
@@ -58,7 +60,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
           this.setState({
             isOpen: false
           });
-          if (onOutsideClick) onOutsideClick(isOpen);
+          if (onOutsideClick) onOutsideClick();
         }}
         disabled={!isOpen}
       >
@@ -68,13 +70,13 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
               <div style={{ display: "inline-block", width: "100%" }} ref={ref}>
                 {labelComponent ? (
                   labelComponent({
-                    isOpen,
+                    isOpen:_isDropDownOpen,
                     toggleDropdown: this.toggleDropdown
                   })
                 ) : (
                   <DropDownButton
                     isSelected={!!isSelected}
-                    isOpen={isOpen}
+                    isOpen={_isDropDownOpen}
                     onClick={this.toggleDropdown}
                     disabled={disabled}
                     className={labelClassName}
@@ -87,7 +89,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
           </Reference>
 
           {/* TODO: Add native flag. */}
-          <MountTransition visible={isOpen}>
+          <MountTransition visible={_isDropDownOpen}>
             {transitionStyles => (
               <animated.div
                 className={cx(dropDownStyle, dropDownClassName)}

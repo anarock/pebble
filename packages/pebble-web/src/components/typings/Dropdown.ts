@@ -20,9 +20,11 @@ export interface DropdownProps {
   isSelected?: boolean;
   disabled?: boolean;
   labelClassName?: string;
-  onOutsideClick?: (isOpen: boolean) => void;
+  onOutsideClick?: () => void;
   placement?: Placement;
   modifiers?: Modifiers;
+  controlled?: boolean;
+  isOpen?: boolean;
 }
 
 export interface DropdownState {
