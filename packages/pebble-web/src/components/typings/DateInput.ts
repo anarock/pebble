@@ -15,7 +15,7 @@ export interface DateInputProps {
   wrapperClassName?: string;
   dropDownClassName?: string;
   initiallyOpen?: boolean;
-  onOutsideClick?: () => void;
+  onOutsideClick?: (isOpen:boolean) => void;
   controlled?:boolean;
   isOpen?: boolean;
 }
