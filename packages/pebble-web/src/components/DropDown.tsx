@@ -47,9 +47,13 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
       isSelected,
       disabled,
       labelClassName,
+      controlled,
       onOutsideClick
     } = this.props;
-    const { isOpen } = this.state;
+
+    const _isDropDownOpen = controlled
+      ? !!this.props.isOpen
+      : this.state.isOpen;
 
     return (
       <OutsideClick
@@ -58,9 +62,9 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
           this.setState({
             isOpen: false
           });
-          if (onOutsideClick) onOutsideClick(isOpen);
+          if (onOutsideClick) onOutsideClick(_isDropDownOpen);
         }}
-        disabled={!isOpen}
+        disabled={!_isDropDownOpen}
       >
         <Manager>
           <Reference>
@@ -68,13 +72,13 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
               <div style={{ display: "inline-block", width: "100%" }} ref={ref}>
                 {labelComponent ? (
                   labelComponent({
-                    isOpen,
+                    isOpen: _isDropDownOpen,
                     toggleDropdown: this.toggleDropdown
                   })
                 ) : (
                   <DropDownButton
                     isSelected={!!isSelected}
-                    isOpen={isOpen}
+                    isOpen={_isDropDownOpen}
                     onClick={this.toggleDropdown}
                     disabled={disabled}
                     className={labelClassName}
@@ -87,7 +91,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
           </Reference>
 
           {/* TODO: Add native flag. */}
-          <MountTransition visible={isOpen}>
+          <MountTransition visible={_isDropDownOpen}>
             {transitionStyles => (
               <animated.div
                 className={cx(dropDownStyle, dropDownClassName)}
@@ -99,10 +103,12 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                       ...style,
                       ...transitionStyles,
                       backgroundColor: colors.white.base,
-                      transform: `${style.transform ||
-                        ""} ${transitionStyles.transform || ""}`,
-                      transformOrigin: `${arrowProps.style.left ||
-                        0}px ${arrowProps.style.top || 0}px`,
+                      transform: `${style.transform || ""} ${
+                        transitionStyles.transform || ""
+                      }`,
+                      transformOrigin: `${arrowProps.style.left || 0}px ${
+                        arrowProps.style.top || 0
+                      }px`,
                       padding
                     };
 
@@ -115,7 +121,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                       >
                         {children({
                           toggle: this.toggleDropdown,
-                          isOpen: this.state.isOpen
+                          isOpen: _isDropDownOpen
                         })}
                       </div>
                     );
