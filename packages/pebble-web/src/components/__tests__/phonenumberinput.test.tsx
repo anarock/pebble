@@ -11,13 +11,15 @@ import countries from "./fixtures/countrycodes";
 
 const SELECT_INPUT_ID = "phone-select-input-test";
 const PHONE_INPUT_ID = "phone-test-input-test";
+type Country = typeof countries[0];
 
-function getComponent(props: Partial<PhoneNumberInputProps> = {}) {
+function getComponent(props: Partial<PhoneNumberInputProps<Country>> = {}) {
   return (
     <PhoneNumberInput
       onChange={() => {}}
       phone=""
-      countryCode="+1"
+      country={countries[0]}
+      codeExtractor={(country: Country) => country.country_code}
       {...props}
       selectProps={{
         inputProps: {
@@ -36,7 +38,7 @@ function getComponent(props: Partial<PhoneNumberInputProps> = {}) {
       {countries.map(country => (
         <Option
           key={country.id}
-          value={country.country_code}
+          value={country}
           label={`${country.name} (${country.country_code})`}
         />
       ))}
@@ -86,7 +88,7 @@ describe("Component: Select", () => {
     expect(
       spy.calledWith({
         phone: "99997876",
-        countryCode: "+1"
+        country: countries[0]
       })
     ).toBeTruthy();
   });
@@ -128,7 +130,7 @@ describe("Component: Select", () => {
     expect(
       spy.calledWith({
         phone: "",
-        countryCode: "+1"
+        country: countries[0]
       })
     ).toBeTruthy();
   });
@@ -142,14 +144,11 @@ describe("Component: Select", () => {
     );
 
     component.find(`#${SELECT_INPUT_ID}`).simulate("click");
-    component
-      .find(Option)
-      .at(0)
-      .simulate("click");
+    component.find(Option).at(1).simulate("click");
     expect(
       spy.calledWith({
         phone: "",
-        countryCode: countries[0].country_code
+        country: countries[1]
       })
     ).toBeTruthy();
   });
@@ -160,7 +159,8 @@ describe("Component: Select", () => {
       getComponent({
         onChange: spy,
         phone: "998127",
-        countryCode: countries[0].country_code
+        country: countries[0],
+        codeExtractor: (country: Country) => country.country_code
       })
     );
 
@@ -169,6 +169,6 @@ describe("Component: Select", () => {
         .value
     ).toEqual("998127");
     const props = component.find(Select).props();
-    expect(props.selected).toEqual(countries[0].country_code);
+    expect(props.selected).toEqual(countries[0]);
   });
 });
