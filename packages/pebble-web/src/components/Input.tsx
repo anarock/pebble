@@ -6,6 +6,7 @@ import {
   labelStyle,
   wrapperStyle,
   messageStyle,
+  inputWrapperStyle,
   inputStyle,
   inputReadOnlyStyle,
   inputDisabledStyle,
@@ -67,6 +68,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
       type,
       placeholder,
       className,
+      inputWrapperClassName,
       inputClassName,
       highlightClassName,
       loadingClassName,
@@ -80,11 +82,15 @@ class Input extends React.PureComponent<InputProps, InputState> {
       textArea,
       required,
       onClick,
-      loading
+      loading,
+      leftElement,
+      rightElement
     } = this.props;
     const { isFocused } = this.state;
 
     const _message = errorMessage || successMessage || message;
+
+    const _inputWrapperClassName = cx(inputWrapperStyle, inputWrapperClassName);
 
     const _inputClassName = cx(
       inputStyle,
@@ -137,11 +143,25 @@ class Input extends React.PureComponent<InputProps, InputState> {
         onBlur={this.removeFocus}
         onClick={onClick}
       >
-        {this.props.textArea ? (
-          <textarea {..._inputProps} {...this.props.inputProps} />
-        ) : (
-          <input type={type} {..._inputProps} {...this.props.inputProps} />
-        )}
+        <div className={_inputWrapperClassName}>
+          {leftElement?.()}
+
+          {this.props.textArea ? (
+            <textarea {..._inputProps} {...this.props.inputProps} />
+          ) : (
+            <input type={type} {..._inputProps} {...this.props.inputProps} />
+          )}
+
+          {loading && (
+            <Loader
+              color={colors.violet.base}
+              scale={0.6}
+              className={_loadingStyle}
+            />
+          )}
+
+          {rightElement?.()}
+        </div>
 
         {!!placeholder && (
           <label className={labelClassName}>
@@ -158,14 +178,6 @@ class Input extends React.PureComponent<InputProps, InputState> {
             backgroundColor: getColor(errorMessage, successMessage, true)
           }}
         />
-
-        {loading && (
-          <Loader
-            color={colors.violet.base}
-            scale={0.6}
-            className={_loadingStyle}
-          />
-        )}
 
         {_message && (
           <div

@@ -2,7 +2,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import Input from "../src/components/Input";
 import { boolean, select, text } from "@storybook/addon-knobs";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import DateInput, { BrowserBasedDateInput } from "../src/components/DateInput";
 import { withState } from "@dump247/storybook-state";
 import { InputProps } from "../src/components/typings/Input";
@@ -10,6 +10,7 @@ import { action } from "@storybook/addon-actions";
 import NativeDateInput from "../src/components/NativeDateInput";
 import { UserAgentInfoProvider } from "../src/utils/useragent";
 import SecondaryInput from "../src/components/SecondaryInput";
+import { PebbleIcon } from "pebble-shared";
 
 const className = css({
   width: 400
@@ -44,6 +45,15 @@ storiesOf("Components/Input", module)
         errorMessage={text("errorMessage", "Error Message")}
         successMessage={text("successMessage", "Success Message")}
         loading={boolean("loading", false)}
+        leftElement={() => (
+          <i
+            className={cx(
+              "pi pi-" + select("leftElementIcon", PebbleIcon, PebbleIcon.User),
+              css({ padding: "0 20px" })
+            )}
+          />
+        )}
+        rightElement={() => store.state.value.length}
       />
     ))
   )
