@@ -123,7 +123,12 @@ class Input extends React.PureComponent<InputProps, InputState> {
     );
 
     const labelClassName = cx(labelStyle, {
-      _pebble_input_label_focused: !!(isFocused || !!value || fixLabelAtTop)
+      _pebble_input_label_focused: !!(
+        isFocused ||
+        value ||
+        fixLabelAtTop ||
+        leftElement
+      )
     });
 
     const _wrapperStyle = cx(
