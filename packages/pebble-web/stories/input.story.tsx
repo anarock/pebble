@@ -45,15 +45,32 @@ storiesOf("Components/Input", module)
         errorMessage={text("errorMessage", "Error Message")}
         successMessage={text("successMessage", "Success Message")}
         loading={boolean("loading", false)}
-        leftElement={() => (
-          <i
-            className={cx(
-              "pi pi-" + select("leftElementIcon", PebbleIcon, PebbleIcon.User),
-              css({ padding: "0 20px" })
-            )}
-          />
-        )}
-        rightElement={() => store.state.value.length}
+        leftElement={
+          boolean("use leftElement", false)
+            ? () => (
+                <i
+                  className={cx(
+                    css({ padding: "0 10px" }),
+                    "pi pi-" +
+                      select(
+                        "leftElement Icon",
+                        PebbleIcon,
+                        PebbleIcon.AccountCircle
+                      )
+                  )}
+                />
+              )
+            : undefined
+        }
+        rightElement={
+          boolean("use rightElement", false)
+            ? () => (
+                <div style={{ padding: "0 12px" }}>
+                  {store.state.value.length}
+                </div>
+              )
+            : undefined
+        }
       />
     ))
   )
