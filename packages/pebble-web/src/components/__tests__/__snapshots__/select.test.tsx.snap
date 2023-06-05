@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Select multi-select: snapshot 1`] = `
-.emotion-2 {
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  border-bottom: 1px solid #EDEDED;
+}
+
+.emotion-3 {
   height: 2px;
   background-color: #6161FF;
   margin-top: -2px;
@@ -12,12 +24,12 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   z-index: 9;
 }
 
-.emotion-2._pebble_input_highlight_state,
-.emotion-2._pebble_input_highlight_focused {
+.emotion-3._pebble_input_highlight_state,
+.emotion-3._pebble_input_highlight_focused {
   width: 100%;
 }
 
-.emotion-1 {
+.emotion-2 {
   color: #9FA6B0;
   font-size: 14px;
   line-height: 12px;
@@ -30,7 +42,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   pointer-events: none;
 }
 
-.emotion-1._pebble_input_label_focused {
+.emotion-2._pebble_input_label_focused {
   font-size: 12px;
   line-height: 10px;
   -webkit-transform: translate(0,0);
@@ -39,20 +51,20 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   color: #6B7785;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin-bottom: 20px;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
 }
 
-.emotion-5 {
+.emotion-6 {
   cursor: pointer;
   position: relative;
 }
 
-.emotion-4 {
+.emotion-5 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -63,7 +75,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   font-size: 10px;
 }
 
-.emotion-4.__pebble__select__open {
+.emotion-5.__pebble__select__open {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -72,7 +84,6 @@ exports[`Component: Select multi-select: snapshot 1`] = `
 .emotion-0 {
   outline: 0;
   border: 0;
-  border-bottom: 1px solid #EDEDED;
   padding: 24px 0 12px 0;
   height: 48px;
   border-radius: 0;
@@ -124,7 +135,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   color: #E0E0E0;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -141,15 +152,15 @@ exports[`Component: Select multi-select: snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-3._pebble_input_wrapper_textarea {
+.emotion-4._pebble_input_wrapper_textarea {
   height: 110px;
 }
 
 <div
-  className="emotion-7"
+  className="emotion-8"
 >
   <div
-    className="emotion-6"
+    className="emotion-7"
   >
     <div
       style={
@@ -160,28 +171,32 @@ exports[`Component: Select multi-select: snapshot 1`] = `
       }
     >
       <div
-        className="emotion-5"
+        className="emotion-6"
         onClick={[Function]}
       >
         <div
-          className="emotion-3"
+          className="emotion-4"
           onBlur={[Function]}
           onFocus={[Function]}
         >
-          <input
-            aria-label="Choose Option"
-            className="emotion-0"
-            onChange={[Function]}
-            readOnly={true}
-            value=""
-          />
-          <label
+          <div
             className="emotion-1"
+          >
+            <input
+              aria-label="Choose Option"
+              className="emotion-0"
+              onChange={[Function]}
+              readOnly={true}
+              value=""
+            />
+          </div>
+          <label
+            className="emotion-2"
           >
             Choose Option
           </label>
           <div
-            className="emotion-2 _pebble_input_highlight_read_only"
+            className="emotion-3 _pebble_input_highlight_read_only"
             style={
               Object {
                 "backgroundColor": "#6161FF",
@@ -191,7 +206,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
           
         </div>
         <i
-          className="emotion-4 pi pi-arrow-drop-down"
+          className="emotion-5 pi pi-arrow-drop-down"
         />
       </div>
     </div>
@@ -200,7 +215,19 @@ exports[`Component: Select multi-select: snapshot 1`] = `
 `;
 
 exports[`Component: Select single-select with searchbox: snapshot 1`] = `
-.emotion-2 {
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  border-bottom: 1px solid #EDEDED;
+}
+
+.emotion-3 {
   height: 2px;
   background-color: #6161FF;
   margin-top: -2px;
@@ -211,12 +238,12 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   z-index: 9;
 }
 
-.emotion-2._pebble_input_highlight_state,
-.emotion-2._pebble_input_highlight_focused {
+.emotion-3._pebble_input_highlight_state,
+.emotion-3._pebble_input_highlight_focused {
   width: 100%;
 }
 
-.emotion-1 {
+.emotion-2 {
   color: #9FA6B0;
   font-size: 14px;
   line-height: 12px;
@@ -229,7 +256,7 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   pointer-events: none;
 }
 
-.emotion-1._pebble_input_label_focused {
+.emotion-2._pebble_input_label_focused {
   font-size: 12px;
   line-height: 10px;
   -webkit-transform: translate(0,0);
@@ -238,20 +265,20 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   color: #6B7785;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin-bottom: 20px;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
 }
 
-.emotion-5 {
+.emotion-6 {
   cursor: pointer;
   position: relative;
 }
 
-.emotion-4 {
+.emotion-5 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -262,7 +289,7 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   font-size: 10px;
 }
 
-.emotion-4.__pebble__select__open {
+.emotion-5.__pebble__select__open {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -271,7 +298,6 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
 .emotion-0 {
   outline: 0;
   border: 0;
-  border-bottom: 1px solid #EDEDED;
   padding: 24px 0 12px 0;
   height: 48px;
   border-radius: 0;
@@ -323,7 +349,7 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   color: #E0E0E0;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -340,15 +366,15 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-3._pebble_input_wrapper_textarea {
+.emotion-4._pebble_input_wrapper_textarea {
   height: 110px;
 }
 
 <div
-  className="emotion-7"
+  className="emotion-8"
 >
   <div
-    className="emotion-6"
+    className="emotion-7"
   >
     <div
       style={
@@ -359,28 +385,32 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
       }
     >
       <div
-        className="emotion-5"
+        className="emotion-6"
         onClick={[Function]}
       >
         <div
-          className="emotion-3"
+          className="emotion-4"
           onBlur={[Function]}
           onFocus={[Function]}
         >
-          <input
-            aria-label="Choose Option"
-            className="emotion-0"
-            onChange={[Function]}
-            readOnly={true}
-            value=""
-          />
-          <label
+          <div
             className="emotion-1"
+          >
+            <input
+              aria-label="Choose Option"
+              className="emotion-0"
+              onChange={[Function]}
+              readOnly={true}
+              value=""
+            />
+          </div>
+          <label
+            className="emotion-2"
           >
             Choose Option
           </label>
           <div
-            className="emotion-2 _pebble_input_highlight_read_only"
+            className="emotion-3 _pebble_input_highlight_read_only"
             style={
               Object {
                 "backgroundColor": "#6161FF",
@@ -390,7 +420,7 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
           
         </div>
         <i
-          className="emotion-4 pi pi-arrow-drop-down"
+          className="emotion-5 pi pi-arrow-drop-down"
         />
       </div>
     </div>
@@ -399,7 +429,19 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
 `;
 
 exports[`Component: Select single-select: snapshot 1`] = `
-.emotion-2 {
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  border-bottom: 1px solid #EDEDED;
+}
+
+.emotion-3 {
   height: 2px;
   background-color: #6161FF;
   margin-top: -2px;
@@ -410,12 +452,12 @@ exports[`Component: Select single-select: snapshot 1`] = `
   z-index: 9;
 }
 
-.emotion-2._pebble_input_highlight_state,
-.emotion-2._pebble_input_highlight_focused {
+.emotion-3._pebble_input_highlight_state,
+.emotion-3._pebble_input_highlight_focused {
   width: 100%;
 }
 
-.emotion-1 {
+.emotion-2 {
   color: #9FA6B0;
   font-size: 14px;
   line-height: 12px;
@@ -428,7 +470,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
   pointer-events: none;
 }
 
-.emotion-1._pebble_input_label_focused {
+.emotion-2._pebble_input_label_focused {
   font-size: 12px;
   line-height: 10px;
   -webkit-transform: translate(0,0);
@@ -437,20 +479,20 @@ exports[`Component: Select single-select: snapshot 1`] = `
   color: #6B7785;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin-bottom: 20px;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
 }
 
-.emotion-5 {
+.emotion-6 {
   cursor: pointer;
   position: relative;
 }
 
-.emotion-4 {
+.emotion-5 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -461,7 +503,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
   font-size: 10px;
 }
 
-.emotion-4.__pebble__select__open {
+.emotion-5.__pebble__select__open {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -470,7 +512,6 @@ exports[`Component: Select single-select: snapshot 1`] = `
 .emotion-0 {
   outline: 0;
   border: 0;
-  border-bottom: 1px solid #EDEDED;
   padding: 24px 0 12px 0;
   height: 48px;
   border-radius: 0;
@@ -522,7 +563,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
   color: #E0E0E0;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -539,15 +580,15 @@ exports[`Component: Select single-select: snapshot 1`] = `
   margin-bottom: 0;
 }
 
-.emotion-3._pebble_input_wrapper_textarea {
+.emotion-4._pebble_input_wrapper_textarea {
   height: 110px;
 }
 
 <div
-  className="emotion-7"
+  className="emotion-8"
 >
   <div
-    className="emotion-6"
+    className="emotion-7"
   >
     <div
       style={
@@ -558,28 +599,32 @@ exports[`Component: Select single-select: snapshot 1`] = `
       }
     >
       <div
-        className="emotion-5"
+        className="emotion-6"
         onClick={[Function]}
       >
         <div
-          className="emotion-3"
+          className="emotion-4"
           onBlur={[Function]}
           onFocus={[Function]}
         >
-          <input
-            aria-label="Choose Option"
-            className="emotion-0"
-            onChange={[Function]}
-            readOnly={true}
-            value=""
-          />
-          <label
+          <div
             className="emotion-1"
+          >
+            <input
+              aria-label="Choose Option"
+              className="emotion-0"
+              onChange={[Function]}
+              readOnly={true}
+              value=""
+            />
+          </div>
+          <label
+            className="emotion-2"
           >
             Choose Option
           </label>
           <div
-            className="emotion-2 _pebble_input_highlight_read_only"
+            className="emotion-3 _pebble_input_highlight_read_only"
             style={
               Object {
                 "backgroundColor": "#6161FF",
@@ -589,7 +634,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
           
         </div>
         <i
-          className="emotion-4 pi pi-arrow-drop-down"
+          className="emotion-5 pi pi-arrow-drop-down"
         />
       </div>
     </div>
