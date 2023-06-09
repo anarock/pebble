@@ -20,10 +20,15 @@ export const wrapperStyle = css({
   }
 });
 
+export const inputWrapperStyle = css({
+  display: "flex",
+  alignItems: "baseline",
+  borderBottom: `1px solid ${colors.gray.lighter}`
+});
+
 export const inputStyle = css({
   outline: 0,
   border: 0,
-  borderBottom: `1px solid ${colors.gray.lighter}`,
   padding: "24px 0 12px 0",
   height: 48,
   borderRadius: 0,
@@ -91,13 +96,12 @@ export const labelStyle = css({
 
 export const messageStyle = css({
   ...typography.s.regular,
-  marginTop: 10,
+  marginTop: 9,
   lineHeight: "10px",
   textAlign: "left"
 });
 
 export const loadingStyle = css({
-  right: -10,
-  top: 20,
-  position: "absolute"
+  position: "relative",
+  top: 4
 });

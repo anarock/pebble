@@ -11,12 +11,15 @@ export interface CommonInputProps {
   inputClassName?: string;
   highlightClassName?: string;
   loadingClassName?: string;
+  inputWrapperClassName?: string;
   loading?: boolean;
   message?: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
   readOnly?: boolean;
   required?: boolean;
   successMessage?: string;
+  leftElement?: () => React.ReactNode;
+  rightElement?: () => React.ReactNode;
 }
 
 export type InputType =
