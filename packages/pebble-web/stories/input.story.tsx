@@ -11,6 +11,8 @@ import NativeDateInput from "../src/components/NativeDateInput";
 import { UserAgentInfoProvider } from "../src/utils/useragent";
 import SecondaryInput from "../src/components/SecondaryInput";
 import { PebbleIcon } from "pebble-shared";
+import { Input as InputNPM } from "pebble-web";
+import { getInputProps } from "./getInputProps";
 
 const className = css({
   width: 400
@@ -161,4 +163,70 @@ storiesOf("Components/Input", module)
         loading={boolean("loading", false)}
       />
     ))
+  )
+  .add(
+    "TEST",
+    withState({ value: "xhihowfhqh3fow3msjnhdu876fowhfohnoaihda" })(
+      ({ store }) => {
+        const props = getProps(store);
+        const customProps = getInputProps({ ...props });
+
+        return (
+          <div style={{ display: "flex", gap: 50 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+              <InputNPM {...props} />
+
+              <SecondaryInput {...props} />
+            </div>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+              <Input {...props} />
+
+              <Input
+                {...props}
+                {...customProps}
+                className={cx(className, customProps.className)}
+              />
+            </div>
+          </div>
+        );
+      }
+    )
   );
+
+const getProps = store => ({
+  className,
+
+  // fixLabelAtTop: true,
+  // loading: true,
+  textArea: false,
+
+  placeholder: "placeholder",
+  // errorMessage: "error message",
+  // successMessage: "success message",
+
+  leftElement: () => (
+    <div
+      style={{
+        padding: "10px 14px"
+      }}
+    >
+      <i className="pi pi-user" />
+    </div>
+  ),
+  rightElement: () => (
+    <div
+      style={{
+        padding: "0 20px",
+        fontSize: 14
+      }}
+    >
+      HI
+    </div>
+  ),
+
+  value: store.state.value,
+  onChange: value => {
+    store.set({ value });
+  }
+});
