@@ -21,16 +21,16 @@ const Button: React.FunctionComponent<ButtonProps> = ({
   className,
   showRipple = true,
   loading,
-  filled,
+  outline,
   size = "small",
   buttonProps
 }: ButtonProps) => {
   const disableAction = disabled || loading;
 
-  const _filled = size !== "x-small" && filled !== false;
+  const _outline = size === "x-small" || !!outline;
 
   const _className = cx(
-    getButtonStyle(size, type, !!showShadow, _filled),
+    getButtonStyle(size, type, !!showShadow, !_outline),
     className
   );
 
