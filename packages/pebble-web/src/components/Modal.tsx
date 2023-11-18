@@ -48,12 +48,10 @@ class Modal extends React.PureComponent<ModalProps> {
             className={cx(modalContainer, backDropClassName)}
           >
             <div
-              className={cx(
-                css({
-                  transform: transitionStyles.transform
-                }),
-                modalClassName
-              )}
+              style={{
+                transform: transitionStyles.transform
+              }}
+              className={modalClassName}
             >
               {children}
             </div>
