@@ -50,7 +50,9 @@ class Modal extends React.PureComponent<ModalProps> {
           >
             <animated.div
               style={{
-                transform: transitionStyles.transform
+                transform: transitionStyles.opacity
+                  .interpolate({ range: [0, 1], output: [0.95, 1] })
+                  .interpolate(s => `scale(${s})`)
               }}
               className={modalClassName}
             >

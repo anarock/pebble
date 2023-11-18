@@ -11,12 +11,6 @@ import { css, cx } from "emotion";
 import { disableScrollY } from "../theme/styles";
 import MountTransition from "./shared/MountTransition";
 
-const transitionProps = {
-  from: { opacity: 0, transform: "translateX(100%)" },
-  enter: { opacity: 1, transform: "translateX(0)" },
-  leave: { opacity: 0, transform: "translateX(100%)", pointerEvents: "none" }
-};
-
 class SideBar extends React.PureComponent<SidebarProps> {
   static defaultProps: Partial<SidebarProps> = {
     closeOnOutsideClick: true
@@ -60,7 +54,7 @@ class SideBar extends React.PureComponent<SidebarProps> {
     const _sidebarStyle = cx(sidebarStyle, css({ width }));
 
     return (
-      <MountTransition visible={isOpen} {...transitionProps}>
+      <MountTransition visible={isOpen}>
         {transitionStyles => (
           <>
             <animated.div
@@ -74,7 +68,15 @@ class SideBar extends React.PureComponent<SidebarProps> {
               data-testid="shadowArea"
             />
 
-            <animated.div className={_sidebarStyle} style={transitionStyles}>
+            <animated.div
+              className={_sidebarStyle}
+              style={{
+                opacity: transitionStyles.opacity,
+                transform: transitionStyles.opacity
+                  .interpolate({ range: [0, 1], output: [100, 0] })
+                  .interpolate(tx => `translate(${tx}%)`)
+              }}
+            >
               <div className={closeStyle} onClick={onClose}>
                 <i className="pi pi-close" />
                 <Ink />

@@ -8,7 +8,9 @@ import { animationConfig } from "../../utils/animation";
 import { Omit } from "utility-types";
 import { AnimatedValue } from "react-spring";
 
-type TransitionStyles = AnimatedValue<React.CSSProperties>;
+type TransitionStyles = AnimatedValue<{
+  opacity: number;
+}>;
 
 interface MountTransitionProps
   extends Omit<Omit<TransitionProps<boolean>, "items">, "children"> {
