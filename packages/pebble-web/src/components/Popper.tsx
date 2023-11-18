@@ -6,6 +6,7 @@ import { colors } from "pebble-shared";
 import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
 import MountTransition from "./shared/MountTransition";
+import { animated } from "react-spring/renderprops.cjs";
 
 export default class PebblePopper extends React.PureComponent<
   PopperProps,
@@ -71,16 +72,16 @@ export default class PebblePopper extends React.PureComponent<
                     ...style,
                     ...transitionStyles,
                     backgroundColor: popperBackgroundColor,
-                    transform: `${style.transform || ""} ${
-                      transitionStyles.transform || ""
-                    }`,
+                    transform: transitionStyles.transform?.interpolate(
+                      t => `${style.transform || ""} ${t}`
+                    ),
                     transformOrigin: `${arrowProps.style.left || 0}px ${
                       arrowProps.style.top || 0
                     }px`
                   };
 
                   return (
-                    <div
+                    <animated.div
                       className={cx(popperStyle, popperClassName)}
                       ref={ref}
                       style={wrapperStyle}
@@ -101,7 +102,7 @@ export default class PebblePopper extends React.PureComponent<
                       >
                         ▶
                       </div>
-                    </div>
+                    </animated.div>
                   );
                 }}
               </Popper>

@@ -6,12 +6,15 @@ import {
 } from "react-spring/renderprops.cjs";
 import { animationConfig } from "../../utils/animation";
 import { Omit } from "utility-types";
+import { AnimatedValue } from "react-spring";
+
+type TransitionStyles = AnimatedValue<React.CSSProperties>;
 
 interface MountTransitionProps
   extends Omit<Omit<TransitionProps<boolean>, "items">, "children"> {
   visible: boolean;
   children: (
-    transitionStyles: React.CSSProperties,
+    styles: TransitionStyles,
     state: State,
     index: number
   ) => React.ReactNode;
@@ -19,11 +22,10 @@ interface MountTransitionProps
 
 const MountTransition: React.FunctionComponent<MountTransitionProps> = props => {
   return (
-    <Transition items={props.visible} {...animationConfig} {...props}>
+    <Transition native items={props.visible} {...animationConfig} {...props}>
       {(show, state, index) =>
         show &&
-        (transitionStyles =>
-          props.children(transitionStyles as React.CSSProperties, state, index))
+        (styles => props.children(styles as TransitionStyles, state, index))
       }
     </Transition>
   );

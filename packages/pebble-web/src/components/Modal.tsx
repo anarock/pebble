@@ -1,10 +1,11 @@
 import * as React from "react";
 import { ModalProps } from "./typings/Modal";
 import { modalContainer } from "./styles/Modal.styles";
-import { cx, css } from "emotion";
+import { cx } from "emotion";
 import isBrowser from "is-in-browser";
 import * as ReactDOM from "react-dom";
 import MountTransition from "./shared/MountTransition";
+import { animated } from "react-spring/renderprops.cjs";
 
 class Modal extends React.PureComponent<ModalProps> {
   private node = isBrowser ? document.createElement("div") : null;
@@ -41,21 +42,21 @@ class Modal extends React.PureComponent<ModalProps> {
       // tslint:disable-next-line:jsx-wrap-multiline
       <MountTransition visible={visible}>
         {transitionStyles => (
-          <div
+          <animated.div
             style={{
               opacity: transitionStyles.opacity
             }}
             className={cx(modalContainer, backDropClassName)}
           >
-            <div
+            <animated.div
               style={{
                 transform: transitionStyles.transform
               }}
               className={modalClassName}
             >
               {children}
-            </div>
-          </div>
+            </animated.div>
+          </animated.div>
         )}
       </MountTransition>,
       node as NonNullable<typeof node>
