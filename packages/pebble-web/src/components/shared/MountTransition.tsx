@@ -11,7 +11,7 @@ interface MountTransitionProps
   extends Omit<Omit<TransitionProps<boolean>, "items">, "children"> {
   visible: boolean;
   children: (
-    params: React.CSSProperties,
+    transitionStyles: React.CSSProperties,
     state: State,
     index: number
   ) => React.ReactNode;
@@ -22,7 +22,8 @@ const MountTransition: React.FunctionComponent<MountTransitionProps> = props => 
     <Transition items={props.visible} {...animationConfig} {...props}>
       {(show, state, index) =>
         show &&
-        (styles => props.children(styles as React.CSSProperties, state, index))
+        (transitionStyles =>
+          props.children(transitionStyles as React.CSSProperties, state, index))
       }
     </Transition>
   );

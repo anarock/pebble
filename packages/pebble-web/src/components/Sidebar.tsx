@@ -61,10 +61,10 @@ class SideBar extends React.PureComponent<SidebarProps> {
 
     return (
       <MountTransition visible={isOpen} {...transitionProps}>
-        {styles => (
+        {transitionStyles => (
           <>
             <animated.div
-              style={{ opacity: styles.opacity }}
+              style={{ opacity: transitionStyles.opacity }}
               className={sidebarWrapperStyle}
               onClick={
                 onOutsideClick || closeOnOutsideClick
@@ -74,7 +74,7 @@ class SideBar extends React.PureComponent<SidebarProps> {
               data-testid="shadowArea"
             />
 
-            <animated.div className={_sidebarStyle} style={styles}>
+            <animated.div className={_sidebarStyle} style={transitionStyles}>
               <div className={closeStyle} onClick={onClose}>
                 <i className="pi pi-close" />
                 <Ink />
