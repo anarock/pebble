@@ -72,9 +72,10 @@ export default class PebblePopper extends React.PureComponent<
                     ...style,
                     ...transitionStyles,
                     backgroundColor: popperBackgroundColor,
-                    transform: transitionStyles.transform?.interpolate(
-                      t => `${style.transform || ""} ${t}`
-                    ),
+                    transform:
+                      transitionStyles.transform?.interpolate(
+                        t => `${style.transform || ""} ${t}`
+                      ) || style.transform,
                     transformOrigin: `${arrowProps.style.left || 0}px ${
                       arrowProps.style.top || 0
                     }px`

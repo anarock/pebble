@@ -102,9 +102,10 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                       ...style,
                       ...transitionStyles,
                       backgroundColor: colors.white.base,
-                      transform: transitionStyles.transform?.interpolate(
-                        t => `${style.transform || ""} ${t}`
-                      ),
+                      transform:
+                        transitionStyles.transform?.interpolate(
+                          t => `${style.transform || ""} ${t}`
+                        ) || style.transform,
                       transformOrigin: `${arrowProps.style.left || 0}px ${
                         arrowProps.style.top || 0
                       }px`,
