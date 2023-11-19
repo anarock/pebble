@@ -124,12 +124,7 @@ export default class TypeAhead<OptionType> extends React.PureComponent<
         <MountTransition visible={showSuggestions} native>
           {transitionStyles => (
             <animated.div
-              style={{
-                opacity: transitionStyles.opacity,
-                transform: transitionStyles.opacity
-                  .interpolate({ range: [0, 1], output: [0.95, 1] })
-                  .interpolate(s => `scale(${s})`)
-              }}
+              style={transitionStyles}
               className={cx(optionsWrapper, dropdownClassName)}
             >
               <OptionGroupRadio onChange={this.onSelect}>
