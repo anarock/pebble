@@ -62,3 +62,7 @@ export const clearContainer = css({
     pointerEvents: "unset"
   }
 });
+
+export const searchMessageColor = css({
+  color: colors.gray.base
+});

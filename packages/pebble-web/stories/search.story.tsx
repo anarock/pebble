@@ -26,6 +26,7 @@ storiesOf("Components/Search", module).add(
       clearable={boolean("showClearButton", true)}
       value={store.state.query}
       loading={boolean("showLoading", false)}
+      message={text("message", "Search Message ")}
     />
   ))
 );
