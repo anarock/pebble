@@ -10,4 +10,6 @@ export interface SearchProps {
   clearable?: boolean;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
   loading?: boolean;
+  message?: string;
+  wrapperClassName?: string;
 }
