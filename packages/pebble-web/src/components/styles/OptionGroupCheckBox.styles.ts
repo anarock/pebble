@@ -4,22 +4,28 @@ import {
   optionWrapperMaxHeight,
   searchBoxHeight,
   initialPadding,
-  onScrollPadding
+  onScrollPadding,
+  searchBoxHeightWithMessage
 } from "./OptionGroup.styles";
 import { smallButtonHeight } from "./Button.styles";
 import { colors } from "pebble-shared";
 export const optionGroupCheckBoxButtonWrapPadding = 20;
 export const optionGroupCheckBoxButtonWrapPaddingTop = 10;
 
+export const optionGroupCheckBoxWrapperHeight =
+  optionWrapperMaxHeight +
+  2 * (initialPadding - onScrollPadding) +
+  optionGroupCheckBoxButtonWrapPadding +
+  optionGroupCheckBoxButtonWrapPaddingTop +
+  smallButtonHeight;
+
 export const optionGroupCheckBoxWrap = css({
-  maxHeight:
-    optionWrapperMaxHeight +
-    searchBoxHeight +
-    2 * (initialPadding - onScrollPadding) +
-    optionGroupCheckBoxButtonWrapPadding +
-    optionGroupCheckBoxButtonWrapPaddingTop +
-    smallButtonHeight,
+  maxHeight: optionGroupCheckBoxWrapperHeight + searchBoxHeight,
   position: "relative"
+});
+
+export const optionGroupCheckBoxWrapWithMessage = css({
+  maxHeight: optionGroupCheckBoxWrapperHeight + searchBoxHeightWithMessage
 });
 
 export const optionGroupCheckBoxButtonWrap = css({

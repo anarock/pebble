@@ -59,8 +59,14 @@ export default class OptionGroupCheckBox<
       clearVisible: this.clearVisible,
       ...this.props.advancedOptionsProps
     };
+
+    const isSearchMessagePresent = !!rest.searchBoxProps?.message;
+    const _optionGroupCheckboxWrap = isSearchMessagePresent
+      ? styles.optionGroupCheckBoxWrapWithMessage
+      : styles.optionGroupCheckBoxWrap;
+
     return (
-      <div className={cx(styles.optionGroupCheckBoxWrap, wrapClassName)}>
+      <div className={cx(_optionGroupCheckboxWrap, wrapClassName)}>
         <OptionGroup<OptionType>
           {...rest}
           advancedOptionsProps={advancedOptionsProps}
