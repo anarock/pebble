@@ -4,7 +4,7 @@ import { colors } from "pebble-shared";
 
 export const optionWrapperMaxHeight = 316;
 export const searchBoxHeight = 80;
-export const searchBoxMessageHeight = 10;
+export const searchBoxMessageHeight = 20;
 export const searchBoxHeightWithMessage =
   searchBoxHeight + searchBoxMessageHeight;
 
