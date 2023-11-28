@@ -30,18 +30,19 @@ class Search extends React.PureComponent<SearchProps> {
       clearable,
       value,
       loading,
-      message
+      message,
+      wrapperClassName
     } = this.props;
 
-    const wrapperClassName = cx(searchWrapperStyle, {
+    const _searchBoxWrapperClassName = cx(searchWrapperStyle, {
       __pebble__search__small: type === "small",
       __pebble__search__large: type === "large",
       __pebble__search__table: type === "table"
     });
 
     return (
-      <>
-        <div className={cx(wrapperClassName, className)}>
+      <div className={wrapperClassName}>
+        <div className={cx(_searchBoxWrapperClassName, className)}>
           {type !== "large" && showSearchIcon && <i className="pi pi-search" />}
           <input
             className={searchStyle}
@@ -78,7 +79,7 @@ class Search extends React.PureComponent<SearchProps> {
         {message && (
           <div className={cx(messageStyle, searchMessageColor)}>{message}</div>
         )}
-      </>
+      </div>
     );
   }
 }

@@ -11,4 +11,5 @@ export interface SearchProps {
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
   loading?: boolean;
   message?: string;
+  wrapperClassName?: string;
 }
