@@ -8,8 +8,9 @@ import Search from "../Search";
 import {
   searchBoxScrolledStyle,
   searchBoxWrapper,
+  searchBoxHeight,
   optionsWrapper,
-  searchBoxHeight
+  searchBoxHeightWithMessage
 } from "../styles/OptionGroup.styles";
 import { rowWrapper, advancedActionsWrapper } from "../styles/Options.styles";
 
@@ -124,6 +125,7 @@ class OptionGroup<OptionType> extends React.PureComponent<
       searchBoxProps
     } = this.props;
     const { isScrolled, highlighted } = this.state;
+    const isMessagePresent = !!searchBoxProps?.message;
 
     const _children = React.Children.map(children, (_option, i) => {
       // `_option as React.ReactElement<OptionProps>` is a hack
@@ -175,7 +177,11 @@ class OptionGroup<OptionType> extends React.PureComponent<
           <div
             ref={this.optionRef}
             style={{
-              paddingTop: searchBox ? searchBoxHeight : undefined
+              paddingTop: searchBox
+                ? isMessagePresent
+                  ? searchBoxHeightWithMessage
+                  : searchBoxHeight
+                : undefined
             }}
             className={cx(optionsWrapper, className)}
             role={multiSelect ? "group" : "radiogroup"}
