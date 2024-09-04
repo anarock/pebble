@@ -69,4 +69,4 @@ MIT
 - Add Material Design plugin to your Figma file.
 - Create a 1000 x 1000 frame with the fill turned off.
 - Insert desired icon from the plugin into the frame and set its longest dimension to 1000 with constraint proportions on.
-- Center align the vector within the frame and export the frame as svg.
+- Center align the vector with the frame and export the frame as svg.
