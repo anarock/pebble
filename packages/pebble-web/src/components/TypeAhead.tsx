@@ -10,7 +10,7 @@ import Input from "./Input";
 import { optionsWrapper, wrapper } from "./styles/TypeAhead.styles";
 import OutsideClick from "./OutsideClick";
 import OptionGroupRadio from "./OptionGroupRadio";
-import { animated } from "react-spring/renderprops.cjs";
+import { animated } from "react-spring";
 import MountTransition from "./shared/MountTransition";
 
 function defaultSearchBox<OptionType>(
