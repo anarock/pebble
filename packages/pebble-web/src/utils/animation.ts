@@ -11,3 +11,8 @@ export const animationConfig = {
   config: (_show: boolean, _index: number, state: TransitionPhase) =>
     state === "leave" ? { duration: 80 } : { duration: 200 }
 };
+
+export type AnimationStyle = {
+  opacity: number;
+  transform: string;
+};
