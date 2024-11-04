@@ -38,6 +38,13 @@ module.exports = ({ config, mode }) => {
     enforce: "pre"
   });
 
+  // transpile @react-spring/* packages
+  config.module.rules.push({
+    test: /\.js$/,
+    include: /node_modules\/@react-spring/,
+    use: ["babel-loader"]
+  });
+
   config.plugins.unshift(
     new ForkTsCheckerWebpackPlugin({
       typescript: {
