@@ -13,7 +13,12 @@ interface MountTransitionProps extends UseTransitionProps<boolean> {
 
 const MountTransition: React.FunctionComponent<MountTransitionProps> = props => {
   return (
-    <Transition items={props.visible} {...animationConfig} {...props}>
+    <Transition
+      // @ts-expect-error
+      items={props.visible}
+      {...animationConfig}
+      {...props}
+    >
       {(styles, show, { phase }, index) => {
         if (!show) return null;
         return props.children(styles as React.CSSProperties, phase, index);
