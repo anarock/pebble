@@ -121,7 +121,7 @@ export default class TypeAhead<OptionType> extends React.PureComponent<
           this.props
         )}
 
-        <MountTransition visible={showSuggestions} native>
+        <MountTransition visible={showSuggestions}>
           {transitionStyles => (
             <animated.div
               style={transitionStyles}
