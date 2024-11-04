@@ -4,7 +4,7 @@ import { DropDownButton } from "./Button";
 import { dropDownStyle, wrapperStyle } from "./styles/Dropdown.styles";
 import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
-import { animated } from "react-spring/renderprops.cjs";
+import { animated } from "react-spring";
 import MountTransition from "./shared/MountTransition";
 import { Manager, Reference, Popper } from "react-popper";
 import { colors } from "pebble-shared";

@@ -7,7 +7,7 @@ import {
   ToastType,
   ToastPosition
 } from "./typings/Toast";
-import { Transition, animated } from "react-spring/renderprops.cjs";
+import { Transition, animated } from "react-spring";
 import { cx } from "emotion";
 import mitt from "mitt";
 import { animationConfig } from "../utils/animation";
@@ -188,9 +188,8 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
         }}
         config={animationConfig.config}
       >
-        {show =>
-          show &&
-          (styles => (
+        {(styles, show) =>
+          show && (
             <animated.div
               className={cx(toastWrapper, this.props.className)}
               style={{
@@ -202,7 +201,7 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
               <i className={iconClass} />
               {this.state.text}
             </animated.div>
-          ))
+          )
         }
       </Transition>
     );
