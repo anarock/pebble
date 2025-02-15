@@ -142,7 +142,7 @@ exports[`Component: Popper snapshot 1`] = `
         "pointerEvents": "none",
         "position": "absolute",
         "top": 0,
-        "transform": " scale(0.95)",
+        "transform": "  scale(0.95)",
         "transformOrigin": "0px 0px",
       }
     }
