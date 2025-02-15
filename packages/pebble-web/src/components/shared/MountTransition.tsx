@@ -1,29 +1,36 @@
 import * as React from "react";
+import { Transition, UseTransitionProps, SpringValues } from "react-spring";
 import {
-  State,
-  Transition,
-  TransitionProps
-} from "react-spring/renderprops.cjs";
-import { animationConfig } from "../../utils/animation";
-import { Omit } from "utility-types";
+  animationConfig,
+  TransitionPhase,
+  AnimationStyle
+} from "../../utils/animation";
 
-interface MountTransitionProps
-  extends Omit<Omit<TransitionProps<boolean>, "items">, "children"> {
+interface MountTransitionProps extends UseTransitionProps<boolean> {
   visible: boolean;
   children: (
-    params: React.CSSProperties,
-    state: State,
+    params: SpringValues<AnimationStyle>,
+    state: TransitionPhase,
     index: number
   ) => React.ReactNode;
 }
 
 const MountTransition: React.FunctionComponent<MountTransitionProps> = props => {
   return (
-    <Transition items={props.visible} {...animationConfig} {...props}>
-      {(show, state, index) =>
-        show &&
-        (styles => props.children(styles as React.CSSProperties, state, index))
-      }
+    <Transition
+      // @ts-expect-error
+      items={props.visible}
+      {...animationConfig}
+      {...props}
+    >
+      {(styles, show, { phase }, index) => {
+        if (!show) return null;
+        return props.children(
+          styles as SpringValues<AnimationStyle>,
+          phase,
+          index
+        );
+      }}
     </Transition>
   );
 };
