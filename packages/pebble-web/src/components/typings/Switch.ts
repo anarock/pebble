@@ -1,6 +1,6 @@
 export interface SwitchProps {
   checked?: boolean;
-  onChange?: (value: boolean) => void;
+  onChange?: (checked: boolean, e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
   label?: string;
   disabled?: boolean;

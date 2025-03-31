@@ -33,12 +33,12 @@ export default class Switch extends React.PureComponent<SwitchProps> {
             type="checkbox"
             checked={checked}
             className={inputStyle}
-            onChange={() => {
+            onChange={e => {
               this.setState({
                 value: !checked
               });
               if (onChange) {
-                onChange(!checked);
+                onChange(!checked, e);
               }
             }}
             disabled={disabled}
