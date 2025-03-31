@@ -10,19 +10,11 @@ import {
   fixedLabelStyle,
   disabledStyle
 } from "./styles/Switch.styles";
-import { SwitchProps, SwitchState } from "./typings/Switch";
+import { SwitchProps } from "./typings/Switch";
 
-export default class Switch extends React.PureComponent<
-  SwitchProps,
-  SwitchState
-> {
-  state = {
-    value: this.props.initialValue || false
-  };
-
+export default class Switch extends React.PureComponent<SwitchProps> {
   render() {
-    const { onChange, className, label, disabled } = this.props;
-    const { value } = this.state;
+    const { checked, onChange, className, label, disabled } = this.props;
 
     return (
       <label
@@ -33,20 +25,20 @@ export default class Switch extends React.PureComponent<
         <span className={labelTextStyle}>{label}</span>
         <div
           className={cx(labelStyle, {
-            [selectedLabel]: value,
+            [selectedLabel]: checked,
             [disabledStyle]: !!disabled
           })}
         >
           <input
             type="checkbox"
-            checked={value}
+            checked={checked}
             className={inputStyle}
             onChange={() => {
               this.setState({
-                value: !value
+                value: !checked
               });
               if (onChange) {
-                onChange(!value);
+                onChange(!checked);
               }
             }}
             disabled={disabled}
@@ -54,7 +46,7 @@ export default class Switch extends React.PureComponent<
           <span
             className={cx({
               [switchStyle]: true,
-              [selectedSwitch]: value
+              [selectedSwitch]: checked
             })}
           />
         </div>
