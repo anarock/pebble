@@ -13,6 +13,10 @@ import {
 import { SwitchProps } from "./typings/Switch";
 
 export default class Switch extends React.PureComponent<SwitchProps> {
+  static defaultProps = {
+    checked: false
+  };
+
   render() {
     const { checked, onChange, className, label, disabled } = this.props;
 
