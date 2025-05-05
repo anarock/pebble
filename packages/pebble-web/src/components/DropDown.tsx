@@ -4,7 +4,7 @@ import { DropDownButton } from "./Button";
 import { dropDownStyle, wrapperStyle } from "./styles/Dropdown.styles";
 import { cx } from "emotion";
 import OutsideClick from "./OutsideClick";
-import { animated } from "react-spring/renderprops.cjs";
+import { animated } from "react-spring";
 import MountTransition from "./shared/MountTransition";
 import { Manager, Reference, Popper } from "react-popper";
 import { colors } from "pebble-shared";
@@ -103,9 +103,9 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                       ...style,
                       ...transitionStyles,
                       backgroundColor: colors.white.base,
-                      transform: `${style.transform || ""} ${
-                        transitionStyles.transform || ""
-                      }`,
+                      transform: transitionStyles.transform.to(
+                        t => `${style.transform || ""} ${t || ""}`
+                      ),
                       transformOrigin: `${arrowProps.style.left || 0}px ${
                         arrowProps.style.top || 0
                       }px`,
@@ -113,7 +113,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                     };
 
                     return (
-                      <div
+                      <animated.div
                         className={cx(dropDownStyle, dropDownClassName)}
                         ref={ref}
                         style={popperWrapperStyle}
@@ -123,7 +123,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                           toggle: this.toggleDropdown,
                           isOpen: _isDropDownOpen
                         })}
-                      </div>
+                      </animated.div>
                     );
                   }}
                 </Popper>
