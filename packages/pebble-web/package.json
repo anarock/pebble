@@ -1,6 +1,6 @@
 {
   "name": "pebble-web",
-  "version": "2.22.0",
+  "version": "2.22.1",
   "author": "ritz078 <rkritesh078@gmail.com>",
   "license": "MIT",
   "main": "dist/pebble-web.js",
@@ -44,7 +44,7 @@
     "utility-types": "^3.10.0"
   },
   "devDependencies": {
-    "pebble-shared": "^2.21.0"
+    "pebble-shared": "^2.22.1"
   },
   "greenkeeper": {
     "ignore": [
