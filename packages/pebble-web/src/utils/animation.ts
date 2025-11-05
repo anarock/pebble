@@ -1,10 +1,10 @@
-import { TransitionState } from "react-spring";
+import { TransitionState, UseTransitionProps } from "react-spring";
 
 // TransitionPhase enum is not exported by react-spring package
 // so we alias it as a type here
 export type TransitionPhase = TransitionState["phase"];
 
-export const animationConfig = {
+export const animationConfig: UseTransitionProps<boolean> = {
   from: { opacity: 0, transform: "scale(0.95)" },
   enter: { opacity: 1, transform: "scale(1)" },
   leave: { opacity: 0, transform: "scale(0.95)", pointerEvents: "none" },
