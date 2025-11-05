@@ -1,5 +1,10 @@
 import * as React from "react";
-import { Transition, UseTransitionProps, SpringValues } from "react-spring";
+import {
+  Transition,
+  UseTransitionProps,
+  SpringValues,
+  TransitionComponentProps
+} from "react-spring";
 import {
   animationConfig,
   TransitionPhase,
@@ -17,7 +22,11 @@ interface MountTransitionProps extends UseTransitionProps<boolean> {
 
 const MountTransition: React.FunctionComponent<MountTransitionProps> = props => {
   return (
-    <Transition items={props.visible} {...animationConfig} {...props}>
+    <Transition<boolean, TransitionComponentProps<boolean>>
+      items={props.visible}
+      {...animationConfig}
+      {...props}
+    >
       {(styles, show, { phase }, index) => {
         if (!show) return null;
         return props.children(
