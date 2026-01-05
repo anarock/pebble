@@ -34,7 +34,8 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
     disabled,
     isSelected,
     placement,
-    modifiers
+    modifiers,
+    dataTestId
   } = props;
 
   return (
@@ -68,6 +69,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                       onDropdownToggle(isOpen);
                     }
               }
+              data-test-id={dataTestId}
             >
               <Input
                 className={selectInputWrapper}

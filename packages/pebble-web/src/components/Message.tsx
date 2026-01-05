@@ -7,7 +7,8 @@ import { AlertProps } from "./typings/Message";
 const Message: React.FunctionComponent<AlertProps> = ({
   intent,
   className,
-  text
+  text,
+  dataTestId
 }) => {
   const bColor = _colors[intent];
 
@@ -22,6 +23,7 @@ const Message: React.FunctionComponent<AlertProps> = ({
       style={{
         backgroundColor: bColor
       }}
+      data-test-id={dataTestId}
     >
       <i className={iconClass} />
       {text}

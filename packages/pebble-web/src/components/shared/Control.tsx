@@ -13,7 +13,8 @@ function Control<OptionType>(props: ControlProps<OptionType>) {
     children = ControlView,
     type,
     className,
-    indeterminate
+    indeterminate,
+    dataTestId
   } = props;
   return (
     <div
@@ -30,6 +31,7 @@ function Control<OptionType>(props: ControlProps<OptionType>) {
               onChange && onChange({ value, checked: !checked }, e)
           : undefined
       }
+      data-test-id={dataTestId}
     >
       {children(props)}
     </div>

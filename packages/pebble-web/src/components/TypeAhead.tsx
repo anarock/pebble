@@ -44,6 +44,7 @@ function defaultSearchBox<OptionType>(
       loading={props.loading}
       required={props.required}
       disabled={props.disabled}
+      dataTestId={props.dataTestId}
     />
   );
 }

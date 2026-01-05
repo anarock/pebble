@@ -14,4 +14,5 @@ export interface ControlProps<OptionType> {
   className?: string;
   iconClassName?: string;
   indeterminate?: boolean;
+  dataTestId?: string;
 }

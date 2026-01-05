@@ -7,14 +7,19 @@ const Text: React.FunctionComponent<TextProps> = ({
   typography,
   color = colors.gray.darker,
   children,
-  className
+  className,
+  dataTestId
 }) => {
   const _className = css({
     ...typography,
     color
   });
 
-  return <span className={cx(_className, className)}>{children}</span>;
+  return (
+    <span className={cx(_className, className)} data-test-id={dataTestId}>
+      {children}
+    </span>
+  );
 };
 
 export default Text;

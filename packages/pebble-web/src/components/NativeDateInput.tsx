@@ -12,7 +12,7 @@ export default class NativeDateInput extends React.PureComponent<
   };
 
   render() {
-    const { inputProps, placeholder, value, disabled } = this.props;
+    const { inputProps, placeholder, value, disabled, dataTestId } = this.props;
 
     return (
       <Input
@@ -26,6 +26,7 @@ export default class NativeDateInput extends React.PureComponent<
         fixLabelAtTop
         {...inputProps}
         disabled={disabled}
+        dataTestId={dataTestId}
       />
     );
   }
