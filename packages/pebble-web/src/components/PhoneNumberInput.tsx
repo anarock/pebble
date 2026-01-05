@@ -41,8 +41,7 @@ export default class PhoneNumberInput<
       inputProps,
       required,
       placeholder,
-      dataTestIdCountrySelect,
-      dataTestIdInput
+      dataTestIds = {}
     } = this.props;
     return (
       <div className={cx(wrapper, className)}>
@@ -63,7 +62,7 @@ export default class PhoneNumberInput<
           selected={countryCode}
           {...selectProps}
           className={cx(selectStyle, selectProps && selectProps.className)}
-          dataTestId={dataTestIdCountrySelect}
+          dataTestId={dataTestIds.country}
         >
           {this.props.children}
         </Select>
@@ -71,8 +70,8 @@ export default class PhoneNumberInput<
           onChange={this.onNumberChange}
           placeholder=""
           value={phone}
+          dataTestId={dataTestIds.phoneInput}
           {...inputProps}
-          dataTestId={dataTestIdInput}
         />
       </div>
     );
