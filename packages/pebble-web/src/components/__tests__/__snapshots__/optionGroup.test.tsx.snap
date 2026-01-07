@@ -81,7 +81,7 @@ exports[`Component: OptionGroup default snapshot 1`] = `
 
 <div
   className="emotion-24"
-  data-test-id="optiongroup"
+  data-testid="optiongroup"
   role="radiogroup"
   style={
     Object {
@@ -715,7 +715,7 @@ Array [
 <div
     aria-label="Search"
     className="emotion-36"
-    data-test-id="optiongroup"
+    data-testid="optiongroup"
     role="group"
     style={
       Object {
@@ -1380,7 +1380,7 @@ Array [
 <div
     aria-label="Search"
     className="emotion-24"
-    data-test-id="optiongroup"
+    data-testid="optiongroup"
     role="radiogroup"
     style={
       Object {
