@@ -31,7 +31,7 @@ function Control<OptionType>(props: ControlProps<OptionType>) {
               onChange && onChange({ value, checked: !checked }, e)
           : undefined
       }
-      data-test-id={dataTestId}
+      data-testid={dataTestId}
     >
       {children(props)}
     </div>

@@ -179,7 +179,7 @@ class OptionGroup<OptionType> extends React.PureComponent<
             }}
             className={cx(optionsWrapper, className)}
             role={multiSelect ? "group" : "radiogroup"}
-            data-test-id="optiongroup"
+            data-testid="optiongroup"
             aria-label={searchBoxProps && searchBoxProps.placeholder}
           >
             {advancedOptions && advancedOptionsProps && (

@@ -51,7 +51,7 @@ class Search extends React.PureComponent<SearchProps> {
           ref={this.searchInputRef}
           value={value}
           {...inputProps}
-          data-test-id={dataTestId}
+          data-testid={dataTestId}
         />
         {loading && <Loader scale={0.4} color={colors.violet.base} />}
         {clearable && (

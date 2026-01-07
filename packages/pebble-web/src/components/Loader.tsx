@@ -17,7 +17,7 @@ const Loader: React.FunctionComponent<LoaderProps> = ({
     <div
       className={cx(spinnerStyle, className)}
       style={{ transform: `scale(${scale})` }}
-      data-test-id={dataTestId}
+      data-testid={dataTestId}
     >
       <div style={style} />
       <div style={style} />

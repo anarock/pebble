@@ -69,7 +69,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                       onDropdownToggle(isOpen);
                     }
               }
-              data-test-id={dataTestId}
+              data-testid={dataTestId}
             >
               <Input
                 className={selectInputWrapper}

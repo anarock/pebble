@@ -123,7 +123,7 @@ export default class SecondaryInput extends React.PureComponent<
           <input
             {..._inputProps}
             {...this.props.inputProps}
-            data-test-id={dataTestId}
+            data-testid={dataTestId}
           />
           <label className={placeholderClassName}>
             {placeholder}

@@ -23,7 +23,7 @@ const Message: React.FunctionComponent<AlertProps> = ({
       style={{
         backgroundColor: bColor
       }}
-      data-test-id={dataTestId}
+      data-testid={dataTestId}
     >
       <i className={iconClass} />
       {text}

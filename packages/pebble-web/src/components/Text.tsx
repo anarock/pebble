@@ -16,7 +16,7 @@ const Text: React.FunctionComponent<TextProps> = ({
   });
 
   return (
-    <span className={cx(_className, className)} data-test-id={dataTestId}>
+    <span className={cx(_className, className)} data-testid={dataTestId}>
       {children}
     </span>
   );

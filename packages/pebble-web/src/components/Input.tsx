@@ -156,14 +156,14 @@ class Input extends React.PureComponent<InputProps, InputState> {
             <textarea
               {..._inputProps}
               {...this.props.inputProps}
-              data-test-id={dataTestId}
+              data-testid={dataTestId}
             />
           ) : (
             <input
               type={type}
               {..._inputProps}
               {...this.props.inputProps}
-              data-test-id={dataTestId}
+              data-testid={dataTestId}
             />
           )}
 

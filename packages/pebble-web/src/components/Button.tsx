@@ -41,7 +41,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       onClick={!disableAction ? onClick : undefined}
       style={{ width }}
       disabled={disabled}
-      data-test-id={dataTestId}
+      data-testid={dataTestId}
       {...buttonProps}
     >
       {loading ? <Loader color={colors.white.base} scale={0.4} /> : children}
