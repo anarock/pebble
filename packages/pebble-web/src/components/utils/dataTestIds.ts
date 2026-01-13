@@ -1,9 +1,6 @@
 type TestIdMap = Record<string, string>;
 
-function withId(
-  id: string | undefined,
-  builder: (_id: string) => TestIdMap
-): Partial<TestIdMap> {
+function withId(id: string | undefined, builder: (_id: string) => TestIdMap) {
   return id ? builder(id) : {};
 }
 
