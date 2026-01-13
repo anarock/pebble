@@ -12,6 +12,7 @@ import {
   searchBoxHeight
 } from "../styles/OptionGroup.styles";
 import { rowWrapper, advancedActionsWrapper } from "../styles/Options.styles";
+import { getOptionGroupDataTestIds } from "../utils/dataTestIds";
 
 class OptionGroup<OptionType> extends React.PureComponent<
   OptionGroupProps<OptionType>,
@@ -121,7 +122,8 @@ class OptionGroup<OptionType> extends React.PureComponent<
       className,
       isSelected,
       handleChange,
-      searchBoxProps
+      searchBoxProps,
+      dataTestId
     } = this.props;
     const { isScrolled, highlighted } = this.state;
 
@@ -142,7 +144,10 @@ class OptionGroup<OptionType> extends React.PureComponent<
         isSelected: isSelected(option.props.value),
         multiSelect,
         // @ts-ignore
-        ref
+        ref,
+        "data-testid": dataTestIds.option
+          ? `${dataTestIds.option}-${i}`
+          : undefined
       });
     });
 
@@ -156,6 +161,8 @@ class OptionGroup<OptionType> extends React.PureComponent<
       advancedOptionsProps && advancedOptionsProps.className
     );
 
+    const dataTestIds = getOptionGroupDataTestIds(dataTestId);
+
     return (
       <React.Fragment>
         {searchBox && searchBoxProps && (
@@ -168,6 +175,7 @@ class OptionGroup<OptionType> extends React.PureComponent<
                 onKeyDown: this.handleKeyPress,
                 autoFocus: true
               }}
+              dataTestId={dataTestIds.searchBox}
             />
           </div>
         )}
@@ -179,15 +187,21 @@ class OptionGroup<OptionType> extends React.PureComponent<
             }}
             className={cx(optionsWrapper, className)}
             role={multiSelect ? "group" : "radiogroup"}
-            data-testid="optiongroup"
+            data-testid={dataTestId}
             aria-label={searchBoxProps && searchBoxProps.placeholder}
           >
             {advancedOptions && advancedOptionsProps && (
               <div className={_class}>
-                <div onClick={advancedOptionsProps.selectVisible}>
+                <div
+                  onClick={advancedOptionsProps.selectVisible}
+                  data-testid={dataTestIds.selectVisible}
+                >
                   Select Visible
                 </div>
-                <div onClick={advancedOptionsProps.clearVisible}>
+                <div
+                  onClick={advancedOptionsProps.clearVisible}
+                  data-testid={dataTestIds.clearVisible}
+                >
                   Clear Visible
                 </div>
               </div>

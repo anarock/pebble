@@ -6,6 +6,7 @@ import OptionGroup from "./shared/OptionGroup";
 import { OptionGroupCheckBoxProps } from "./typings/OptionGroupCheckBox";
 import * as styles from "../components/styles/OptionGroupCheckBox.styles";
 import { OptionProps } from "./typings/Option";
+import { getOptionGroupCheckBoxDataTestIds } from "./utils/dataTestIds";
 
 export default class OptionGroupCheckBox<
   OptionType
@@ -52,6 +53,7 @@ export default class OptionGroupCheckBox<
       onClear,
       isSelected,
       onChange,
+      dataTestId,
       ...rest
     } = this.props;
     const advancedOptionsProps = {
@@ -59,6 +61,7 @@ export default class OptionGroupCheckBox<
       clearVisible: this.clearVisible,
       ...this.props.advancedOptionsProps
     };
+    const dataTestIds = getOptionGroupCheckBoxDataTestIds(dataTestId);
     return (
       <div className={cx(styles.optionGroupCheckBoxWrap, wrapClassName)}>
         <OptionGroup<OptionType>
@@ -67,16 +70,28 @@ export default class OptionGroupCheckBox<
           isSelected={isSelected || this.isSelected}
           handleChange={this.handleChange}
           multiSelect
+          dataTestId={dataTestId}
         />
 
         {(onApply || onClear) && (
           <div className={styles.optionGroupCheckBoxButtonWrap}>
             {onClear && (
-              <Button type="secondary" onClick={onClear}>
+              <Button
+                type="secondary"
+                onClick={onClear}
+                dataTestId={dataTestIds.clearButton}
+              >
                 Clear
               </Button>
             )}
-            {onApply && <Button onClick={this.onApply}>Apply</Button>}
+            {onApply && (
+              <Button
+                onClick={this.onApply}
+                dataTestId={dataTestIds.applyButton}
+              >
+                Apply
+              </Button>
+            )}
           </div>
         )}
       </div>
