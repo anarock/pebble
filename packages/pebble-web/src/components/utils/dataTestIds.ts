@@ -7,6 +7,16 @@ export function getTestIds<T extends TestIdMap>(
   return id ? builder(id) : {};
 }
 
+export function getOptionTestId(id: string, index: number) {
+  return `${id}-${index}`;
+}
+
+export function getRadioGroupTestIds(id: string) {
+  return {
+    option: `${id}-option`
+  };
+}
+
 export function getOptionGroupTestIds(id: string) {
   return {
     searchBox: `${id}-search`,
@@ -15,6 +25,11 @@ export function getOptionGroupTestIds(id: string) {
     clearVisible: `${id}-clear-visible`
   };
 }
+
+// OptionGroupRadio directly uses OptionGroup.
+// so we can use the same test ids for both
+export const getOptionGroupRadioTestIds = (id: string) =>
+  getOptionGroupTestIds(id);
 
 export function getOptionGroupCheckBoxTestIds(id: string) {
   return {
@@ -41,16 +56,15 @@ export function getSelectInputTestIds(
     optionGroup: `${id}-option-group`,
     ...(multiSelect
       ? getOptionGroupCheckBoxTestIds(`${id}-option-group`)
-      : getOptionGroupTestIds(`${id}-option-group`))
+      : getOptionGroupRadioTestIds(`${id}-option-group`))
   };
 }
 
-export function getRadioGroupTestIds(id: string) {
+export function getTypeaheadTestIds(id: string) {
+  const optionGroupId = `${id}-option-group`;
   return {
-    option: `${id}-option`
+    search: `${id}-search`,
+    optionGroup: optionGroupId,
+    ...getOptionGroupRadioTestIds(optionGroupId)
   };
-}
-
-export function getOptionTestId(id: string, index: number) {
-  return `${id}-${index}`;
 }
