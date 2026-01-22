@@ -5,7 +5,7 @@ import {
   getOptionTestId,
   getRadioGroupTestIds,
   getTestIds
-} from "./utils/dataTestIds";
+} from "../utils/dataTestIds";
 
 export default class RadioGroup<OptionType> extends React.PureComponent<
   RadioGroupProps<OptionType>

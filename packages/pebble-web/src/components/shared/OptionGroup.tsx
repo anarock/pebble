@@ -16,7 +16,7 @@ import {
   getOptionGroupTestIds,
   getOptionTestId,
   getTestIds
-} from "../utils/dataTestIds";
+} from "../../utils/dataTestIds";
 
 class OptionGroup<OptionType> extends React.PureComponent<
   OptionGroupProps<OptionType>,

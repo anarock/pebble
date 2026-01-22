@@ -10,7 +10,7 @@ import {
 } from "./styles/PhoneNumberInput.styles";
 import { labelStyle } from "./styles/Input.styles";
 import { colors } from "pebble-shared";
-import { getPhoneNumberInputTestIds, getTestIds } from "./utils/dataTestIds";
+import { getPhoneNumberInputTestIds, getTestIds } from "../utils/dataTestIds";
 
 export default class PhoneNumberInput<
   OptionType = string

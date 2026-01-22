@@ -12,7 +12,7 @@ import OutsideClick from "./OutsideClick";
 import OptionGroupRadio from "./OptionGroupRadio";
 import { animated } from "react-spring/renderprops.cjs";
 import MountTransition from "./shared/MountTransition";
-import { getTestIds, getTypeaheadTestIds } from "./utils/dataTestIds";
+import { getTestIds, getTypeaheadTestIds } from "../utils/dataTestIds";
 
 function defaultSearchBox<OptionType>(
   { registerChange, onFocus, value }: SearchBoxArgs,

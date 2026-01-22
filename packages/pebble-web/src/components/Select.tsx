@@ -16,7 +16,7 @@ import DropDown from "./DropDown";
 import Input from "./Input";
 import OptionGroupCheckBox from "./OptionGroupCheckBox";
 import OptionGroupRadio from "./OptionGroupRadio";
-import { getSelectInputTestIds, getTestIds } from "./utils/dataTestIds";
+import { getSelectInputTestIds, getTestIds } from "../utils/dataTestIds";
 
 function noop() {}
 

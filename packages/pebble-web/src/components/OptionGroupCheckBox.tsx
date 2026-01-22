@@ -6,7 +6,10 @@ import OptionGroup from "./shared/OptionGroup";
 import { OptionGroupCheckBoxProps } from "./typings/OptionGroupCheckBox";
 import * as styles from "../components/styles/OptionGroupCheckBox.styles";
 import { OptionProps } from "./typings/Option";
-import { getOptionGroupCheckBoxTestIds, getTestIds } from "./utils/dataTestIds";
+import {
+  getOptionGroupCheckBoxTestIds,
+  getTestIds
+} from "../utils/dataTestIds";
 
 export default class OptionGroupCheckBox<
   OptionType
