@@ -12,7 +12,11 @@ import {
   searchBoxHeight
 } from "../styles/OptionGroup.styles";
 import { rowWrapper, advancedActionsWrapper } from "../styles/Options.styles";
-import { getOptionGroupDataTestIds } from "../utils/dataTestIds";
+import {
+  getOptionGroupTestIds,
+  getOptionTestId,
+  getTestIds
+} from "../utils/dataTestIds";
 
 class OptionGroup<OptionType> extends React.PureComponent<
   OptionGroupProps<OptionType>,
@@ -127,6 +131,8 @@ class OptionGroup<OptionType> extends React.PureComponent<
     } = this.props;
     const { isScrolled, highlighted } = this.state;
 
+    const dataTestIds = getTestIds(dataTestId, getOptionGroupTestIds);
+
     const _children = React.Children.map(children, (_option, i) => {
       // `_option as React.ReactElement<OptionProps>` is a hack
       // Because React does not allow us to specify what sort of elements
@@ -145,8 +151,8 @@ class OptionGroup<OptionType> extends React.PureComponent<
         multiSelect,
         // @ts-ignore
         ref,
-        "data-testid": dataTestIds.option
-          ? `${dataTestIds.option}-${i}`
+        dataTestId: dataTestIds.option
+          ? getOptionTestId(dataTestIds.option, i)
           : undefined
       });
     });
@@ -160,8 +166,6 @@ class OptionGroup<OptionType> extends React.PureComponent<
       advancedActionsWrapper,
       advancedOptionsProps && advancedOptionsProps.className
     );
-
-    const dataTestIds = getOptionGroupDataTestIds(dataTestId);
 
     return (
       <React.Fragment>

@@ -16,7 +16,7 @@ import DropDown from "./DropDown";
 import Input from "./Input";
 import OptionGroupCheckBox from "./OptionGroupCheckBox";
 import OptionGroupRadio from "./OptionGroupRadio";
-import { getSelectInputDataTestIds } from "./utils/dataTestIds";
+import { getSelectInputTestIds, getTestIds } from "./utils/dataTestIds";
 
 function noop() {}
 
@@ -39,7 +39,9 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
     dataTestId
   } = props;
 
-  const dataTestIds = getSelectInputDataTestIds(dataTestId);
+  const dataTestIds = getTestIds(dataTestId, id =>
+    getSelectInputTestIds(id, props.multiSelect)
+  );
 
   return (
     <div

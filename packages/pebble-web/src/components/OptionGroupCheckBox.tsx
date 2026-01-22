@@ -6,7 +6,7 @@ import OptionGroup from "./shared/OptionGroup";
 import { OptionGroupCheckBoxProps } from "./typings/OptionGroupCheckBox";
 import * as styles from "../components/styles/OptionGroupCheckBox.styles";
 import { OptionProps } from "./typings/Option";
-import { getOptionGroupCheckBoxDataTestIds } from "./utils/dataTestIds";
+import { getOptionGroupCheckBoxTestIds, getTestIds } from "./utils/dataTestIds";
 
 export default class OptionGroupCheckBox<
   OptionType
@@ -61,7 +61,7 @@ export default class OptionGroupCheckBox<
       clearVisible: this.clearVisible,
       ...this.props.advancedOptionsProps
     };
-    const dataTestIds = getOptionGroupCheckBoxDataTestIds(dataTestId);
+    const dataTestIds = getTestIds(dataTestId, getOptionGroupCheckBoxTestIds);
     return (
       <div className={cx(styles.optionGroupCheckBoxWrap, wrapClassName)}>
         <OptionGroup<OptionType>
