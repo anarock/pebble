@@ -51,12 +51,13 @@ export function getSelectInputTestIds(
   id: string,
   multiSelect: boolean = false
 ) {
+  const optionGroupId = `${id}-option-group`;
   return {
     input: `${id}-input`,
-    optionGroup: `${id}-option-group`,
+    optionGroup: optionGroupId,
     ...(multiSelect
-      ? getOptionGroupCheckBoxTestIds(`${id}-option-group`)
-      : getOptionGroupRadioTestIds(`${id}-option-group`))
+      ? getOptionGroupCheckBoxTestIds(optionGroupId)
+      : getOptionGroupRadioTestIds(optionGroupId))
   };
 }
 
