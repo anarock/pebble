@@ -62,6 +62,7 @@ storiesOf("Components/Select", module)
               value: store.state.searchQuery
             }}
             disabled={boolean("disabled", false)}
+            dataTestId="single-select"
           >
             {options
               .filter(option => {

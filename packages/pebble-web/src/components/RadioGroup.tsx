@@ -1,6 +1,11 @@
 import * as React from "react";
 import { RadioProps } from "./typings/Radio";
 import { RadioGroupProps } from "./typings/RadioGroup";
+import {
+  getOptionTestId,
+  getRadioGroupTestIds,
+  getTestIds
+} from "./utils/dataTestIds";
 
 export default class RadioGroup<OptionType> extends React.PureComponent<
   RadioGroupProps<OptionType>
@@ -15,9 +20,18 @@ export default class RadioGroup<OptionType> extends React.PureComponent<
   };
 
   render() {
-    const { children, selected, className, name, disabled } = this.props;
+    const {
+      children,
+      selected,
+      className,
+      name,
+      disabled,
+      dataTestId
+    } = this.props;
 
-    const _children = React.Children.map(children, _radio => {
+    const dataTestIds = getTestIds(dataTestId, getRadioGroupTestIds);
+
+    const _children = React.Children.map(children, (_radio, i) => {
       // `_radio as React.ReactElement<RadioProps>` is a hack
       // Because React does not allow us to specify what sort of elements
       // you can allow as children and leaves it on you to figure out
@@ -26,7 +40,10 @@ export default class RadioGroup<OptionType> extends React.PureComponent<
       return React.cloneElement(radio, {
         onChange: this.handleChange,
         checked: selected === radio.props.value,
-        disabled
+        disabled,
+        dataTestId: dataTestIds.option
+          ? getOptionTestId(dataTestIds.option, i)
+          : undefined
       });
     });
 

@@ -19,8 +19,5 @@ export interface PhoneNumberInputProps<OptionType = string> {
   inputProps?: Omit<SimpleInputProps, "value" | "onChange" | "placeholder">;
   placeholder?: string;
   required?: boolean;
-  dataTestIds?: {
-    phoneInput?: string;
-    country?: string;
-  };
+  dataTestId?: string;
 }

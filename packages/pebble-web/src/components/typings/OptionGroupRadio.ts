@@ -7,4 +7,5 @@ export interface OptionGroupRadio<OptionType> extends CommonProps {
    */
   selected?: OptionType;
   isSelected?: (value: OptionType) => boolean;
+  dataTestId?: string;
 }
