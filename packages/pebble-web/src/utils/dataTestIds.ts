@@ -1,4 +1,4 @@
-type TestIdMap = Record<string, string>;
+type TestIdMap = Record<string, string | object>;
 
 export function getTestIds<T extends TestIdMap>(
   id: string | undefined,
@@ -43,7 +43,8 @@ export function getOptionGroupCheckBoxTestIds(id: string) {
 export function getPhoneNumberInputTestIds(id: string) {
   return {
     phone: `${id}-phone`,
-    country: `${id}-country`
+    country: `${id}-country`,
+    countryTestIds: getSelectInputTestIds(`${id}-country`)
   };
 }
 
