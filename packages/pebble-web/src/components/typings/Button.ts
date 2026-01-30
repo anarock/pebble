@@ -16,6 +16,7 @@ export interface ButtonProps {
   loading?: boolean;
   outline?: boolean;
   buttonProps?: React.ButtonHTMLAttributes<HTMLButtonElement>;
+  dataTestId?: string;
 }
 
 export interface DropDownButtonProps extends ButtonProps {

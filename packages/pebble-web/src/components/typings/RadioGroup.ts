@@ -7,4 +7,5 @@ export interface RadioGroupProps<OptionType> {
   className?: string;
   name: string;
   disabled?: boolean;
+  dataTestId?: string;
 }

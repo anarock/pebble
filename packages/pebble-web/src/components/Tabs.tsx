@@ -37,7 +37,7 @@ export class Tabs extends React.PureComponent<TabsProps, TabsState> {
             return (
               <span
                 key={`${tab}-${i}`}
-                data-test-id={`${tab
+                data-testid={`${tab
                   .replace(/\d/g, "")
                   .replace("(", "")
                   .replace(")", "")

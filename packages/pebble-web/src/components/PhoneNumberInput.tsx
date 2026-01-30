@@ -10,6 +10,7 @@ import {
 } from "./styles/PhoneNumberInput.styles";
 import { labelStyle } from "./styles/Input.styles";
 import { colors } from "pebble-shared";
+import { getPhoneNumberInputTestIds, getTestIds } from "../utils/dataTestIds";
 
 export default class PhoneNumberInput<
   OptionType = string
@@ -40,8 +41,11 @@ export default class PhoneNumberInput<
       selectProps,
       inputProps,
       required,
-      placeholder
+      placeholder,
+      dataTestId
     } = this.props;
+
+    const dataTestIds = getTestIds(dataTestId, getPhoneNumberInputTestIds);
     return (
       <div className={cx(wrapper, className)}>
         <label
@@ -61,6 +65,7 @@ export default class PhoneNumberInput<
           selected={countryCode}
           {...selectProps}
           className={cx(selectStyle, selectProps && selectProps.className)}
+          dataTestId={dataTestIds.country}
         >
           {this.props.children}
         </Select>
@@ -69,6 +74,7 @@ export default class PhoneNumberInput<
           placeholder=""
           value={phone}
           {...inputProps}
+          dataTestId={dataTestIds.phone}
         />
       </div>
     );

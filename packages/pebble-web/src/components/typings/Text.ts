@@ -4,4 +4,5 @@ export interface TextProps {
   color?: string;
   className?: string;
   typography?: TypographyStyle;
+  dataTestId?: string;
 }

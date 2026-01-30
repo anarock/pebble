@@ -124,11 +124,13 @@ class Toast extends React.PureComponent<ToastProps, ToastState> {
   };
 
   componentDidMount() {
+    // @ts-ignore
     emitter.on<EventType>("showToast", this.show);
     emitter.on<EventType>("hideToast", this.hide);
   }
 
   componentWillUnmount() {
+    // @ts-ignore
     emitter.off<EventType>("showToast", this.show);
     emitter.off("hideToast", this.hide);
   }

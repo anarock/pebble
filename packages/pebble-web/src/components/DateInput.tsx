@@ -94,7 +94,8 @@ export default class DateInput extends React.PureComponent<
       initiallyOpen,
       onOutsideClick,
       controlled,
-      isOpen
+      isOpen,
+      dataTestId
     } = this.props;
 
     const _wrapperClassName = cx(wrapperStyle, wrapperClassName);
@@ -131,6 +132,7 @@ export default class DateInput extends React.PureComponent<
                 }}
                 className={cx(inputStyle, inputProps && inputProps.className)}
                 disabled={disabled}
+                dataTestId={dataTestId}
               />
             )}
           </Rifm>

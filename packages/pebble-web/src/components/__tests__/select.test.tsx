@@ -96,10 +96,7 @@ describe("Component: Select", () => {
     const spy = sinon.spy();
     const select = mount(getComponent(spy));
     select.find(Input).simulate("click");
-    select
-      .find(Option)
-      .at(2)
-      .simulate("click");
+    select.find(Option).at(2).simulate("click");
 
     expect(spy.calledWith("option-3")).toBeTruthy();
 
@@ -107,7 +104,7 @@ describe("Component: Select", () => {
     clock.tick(1000);
 
     // This means that Option is no more rendered in DOM.
-    expect(select).toNotBeInDOM("[data-test-id='optiongroup']");
+    expect(select).toNotBeInDOM("[data-testid='optiongroup']");
   });
 
   test("multi select: should trigger onChange with correct onChange", () => {
@@ -124,10 +121,7 @@ describe("Component: Select", () => {
       })
     );
     select.find(Input).simulate("click");
-    select
-      .find(Option)
-      .at(2)
-      .simulate("click");
+    select.find(Option).at(2).simulate("click");
 
     expect(spy.calledWith(["option-3"])).toBeTruthy();
 
@@ -135,10 +129,7 @@ describe("Component: Select", () => {
       selected: ["option-3"]
     });
 
-    select
-      .find(Option)
-      .at(3)
-      .simulate("click");
+    select.find(Option).at(3).simulate("click");
 
     expect(spy.calledWith(["option-3", "option-4"])).toBeTruthy();
 
@@ -146,20 +137,14 @@ describe("Component: Select", () => {
       selected: ["option-3", "option-4"]
     });
 
-    select
-      .find(Option)
-      .at(2)
-      .simulate("click");
+    select.find(Option).at(2).simulate("click");
 
     expect(spy.calledWith(["option-4"])).toBeTruthy();
 
     expect(select.find(Button)).toHaveLength(2);
 
     // test onClear
-    select
-      .find(Button)
-      .at(0)
-      .simulate("click");
+    select.find(Button).at(0).simulate("click");
     expect(clearSpy.calledOnce).toBeTruthy();
 
     // Reopen dropdown and test onApply
@@ -168,16 +153,13 @@ describe("Component: Select", () => {
       selected: ["option-3"]
     });
 
-    select
-      .find(Button)
-      .at(1)
-      .simulate("click");
+    select.find(Button).at(1).simulate("click");
     expect(applySpy.calledWith(["option-3"])).toBeTruthy();
 
     clock.tick(1000);
 
     // ensure the dropdown is closed
-    expect(select).toNotBeInDOM("[data-test-id='optiongroup']");
+    expect(select).toNotBeInDOM("[data-testid='optiongroup']");
   });
 
   test("single select: query change triggers onChange", () => {
@@ -222,10 +204,7 @@ describe("Component: Select", () => {
     );
     select.find(Input).simulate("click");
 
-    select
-      .find(Search)
-      .find(".pi-close")
-      .simulate("click");
+    select.find(Search).find(".pi-close").simulate("click");
     expect(clearQuerySpy.calledWith("")).toBeTruthy();
   });
 

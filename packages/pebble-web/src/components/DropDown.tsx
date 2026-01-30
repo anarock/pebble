@@ -48,7 +48,8 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
       disabled,
       labelClassName,
       controlled,
-      onOutsideClick
+      onOutsideClick,
+      dataTestId
     } = this.props;
 
     const _isDropDownOpen = controlled
@@ -82,6 +83,7 @@ class DropDown extends React.PureComponent<DropdownProps, DropdownState> {
                     onClick={this.toggleDropdown}
                     disabled={disabled}
                     className={labelClassName}
+                    dataTestId={dataTestId}
                   >
                     {buttonLabel}
                   </DropDownButton>

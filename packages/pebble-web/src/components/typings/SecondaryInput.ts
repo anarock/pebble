@@ -14,6 +14,7 @@ export interface SecondaryInputProps {
   message?: string;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement> &
     React.RefAttributes<HTMLInputElement>;
+  dataTestId?: string;
 }
 
 export interface SecondaryInputState {
