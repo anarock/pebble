@@ -78,7 +78,7 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
               toggleDropdown();
             }}
             className={buttonStyle}
-            data-test-id="hour-label"
+            data-testid="hour-label"
           >
             <span className={css({ marginRight: "15px" })}>
               {selectedHour !== undefined
@@ -128,7 +128,7 @@ const TimePicker: React.FunctionComponent<TimePickerProps> = props => {
               toggleDropdown();
             }}
             className={buttonStyle}
-            data-test-id="minute-label"
+            data-testid="minute-label"
           >
             <span className={css({ marginRight: "15px" })}>
               {selectedMinute !== undefined

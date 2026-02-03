@@ -27,7 +27,8 @@ class Search extends React.PureComponent<SearchProps> {
       className,
       clearable,
       value,
-      loading
+      loading,
+      testId
     } = this.props;
 
     const wrapperClassName = cx(searchWrapperStyle, {
@@ -50,6 +51,7 @@ class Search extends React.PureComponent<SearchProps> {
           ref={this.searchInputRef}
           value={value}
           {...inputProps}
+          data-testid={testId}
         />
         {loading && <Loader scale={0.4} color={colors.violet.base} />}
         {clearable && (
