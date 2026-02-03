@@ -13,5 +13,5 @@ export interface OptionGroupCheckBoxProps<OptionType> extends CommonProps {
     props: OptionGroupCheckBoxProps<OptionType>
   ) => void;
   onClear?: () => void;
-  dataTestId?: string;
+  testId?: string;
 }

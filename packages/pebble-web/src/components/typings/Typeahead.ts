@@ -34,7 +34,7 @@ export interface TypeaheadProps<OptionType> {
   valueExtractor: (value: OptionType) => string;
   onClear?: () => void;
   inputProps?: Omit<SimpleInputProps, "onChange" | "value" | "placeholder">;
-  dataTestId?: string;
+  testId?: string;
 }
 
 export interface TypeaheadState {

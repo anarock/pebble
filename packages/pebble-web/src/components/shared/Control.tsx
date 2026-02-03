@@ -14,7 +14,7 @@ function Control<OptionType>(props: ControlProps<OptionType>) {
     type,
     className,
     indeterminate,
-    dataTestId
+    testId
   } = props;
   return (
     <div
@@ -31,7 +31,7 @@ function Control<OptionType>(props: ControlProps<OptionType>) {
               onChange && onChange({ value, checked: !checked }, e)
           : undefined
       }
-      data-testid={dataTestId}
+      data-testid={testId}
     >
       {children(props)}
     </div>

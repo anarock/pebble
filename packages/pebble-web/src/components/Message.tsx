@@ -8,7 +8,7 @@ const Message: React.FunctionComponent<AlertProps> = ({
   intent,
   className,
   text,
-  dataTestId
+  testId
 }) => {
   const bColor = _colors[intent];
 
@@ -23,7 +23,7 @@ const Message: React.FunctionComponent<AlertProps> = ({
       style={{
         backgroundColor: bColor
       }}
-      data-testid={dataTestId}
+      data-testid={testId}
     >
       <i className={iconClass} />
       {text}

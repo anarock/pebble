@@ -5,7 +5,7 @@ import {
   getOptionTestId,
   getRadioGroupTestIds,
   getTestIds
-} from "../utils/dataTestIds";
+} from "../utils/testIds";
 
 export default class RadioGroup<OptionType> extends React.PureComponent<
   RadioGroupProps<OptionType>
@@ -26,10 +26,10 @@ export default class RadioGroup<OptionType> extends React.PureComponent<
       className,
       name,
       disabled,
-      dataTestId
+      testId
     } = this.props;
 
-    const dataTestIds = getTestIds(dataTestId, getRadioGroupTestIds);
+    const testIds = getTestIds(testId, getRadioGroupTestIds);
 
     const _children = React.Children.map(children, (_radio, i) => {
       // `_radio as React.ReactElement<RadioProps>` is a hack
@@ -41,9 +41,7 @@ export default class RadioGroup<OptionType> extends React.PureComponent<
         onChange: this.handleChange,
         checked: selected === radio.props.value,
         disabled,
-        dataTestId: dataTestIds.option
-          ? getOptionTestId(dataTestIds.option, i)
-          : undefined
+        testId: testIds.option ? getOptionTestId(testIds.option, i) : undefined
       });
     });
 

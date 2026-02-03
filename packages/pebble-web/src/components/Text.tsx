@@ -8,7 +8,7 @@ const Text: React.FunctionComponent<TextProps> = ({
   color = colors.gray.darker,
   children,
   className,
-  dataTestId
+  testId
 }) => {
   const _className = css({
     ...typography,
@@ -16,7 +16,7 @@ const Text: React.FunctionComponent<TextProps> = ({
   });
 
   return (
-    <span className={cx(_className, className)} data-testid={dataTestId}>
+    <span className={cx(_className, className)} data-testid={testId}>
       {children}
     </span>
   );

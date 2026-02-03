@@ -13,7 +13,7 @@ export interface CommonProps {
     selectVisible?: () => void;
     clearVisible?: () => void;
   };
-  dataTestId?: string;
+  testId?: string;
 }
 
 export interface OptionGroupProps<OptionType> extends CommonProps {

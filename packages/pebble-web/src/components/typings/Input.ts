@@ -20,7 +20,7 @@ export interface CommonInputProps {
   successMessage?: string;
   leftElement?: () => React.ReactNode;
   rightElement?: () => React.ReactNode;
-  dataTestId?: string;
+  testId?: string;
 }
 
 export type InputType =

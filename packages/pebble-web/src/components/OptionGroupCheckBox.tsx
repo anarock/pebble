@@ -6,10 +6,7 @@ import OptionGroup from "./shared/OptionGroup";
 import { OptionGroupCheckBoxProps } from "./typings/OptionGroupCheckBox";
 import * as styles from "../components/styles/OptionGroupCheckBox.styles";
 import { OptionProps } from "./typings/Option";
-import {
-  getOptionGroupCheckBoxTestIds,
-  getTestIds
-} from "../utils/dataTestIds";
+import { getOptionGroupCheckBoxTestIds, getTestIds } from "../utils/testIds";
 
 export default class OptionGroupCheckBox<
   OptionType
@@ -56,7 +53,7 @@ export default class OptionGroupCheckBox<
       onClear,
       isSelected,
       onChange,
-      dataTestId,
+      testId,
       ...rest
     } = this.props;
     const advancedOptionsProps = {
@@ -64,7 +61,7 @@ export default class OptionGroupCheckBox<
       clearVisible: this.clearVisible,
       ...this.props.advancedOptionsProps
     };
-    const dataTestIds = getTestIds(dataTestId, getOptionGroupCheckBoxTestIds);
+    const testIds = getTestIds(testId, getOptionGroupCheckBoxTestIds);
     return (
       <div className={cx(styles.optionGroupCheckBoxWrap, wrapClassName)}>
         <OptionGroup<OptionType>
@@ -73,7 +70,7 @@ export default class OptionGroupCheckBox<
           isSelected={isSelected || this.isSelected}
           handleChange={this.handleChange}
           multiSelect
-          dataTestId={dataTestIds.optionGroup}
+          testId={testIds.optionGroup}
         />
 
         {(onApply || onClear) && (
@@ -82,16 +79,13 @@ export default class OptionGroupCheckBox<
               <Button
                 type="secondary"
                 onClick={onClear}
-                dataTestId={dataTestIds.clearButton}
+                testId={testIds.clearButton}
               >
                 Clear
               </Button>
             )}
             {onApply && (
-              <Button
-                onClick={this.onApply}
-                dataTestId={dataTestIds.applyButton}
-              >
+              <Button onClick={this.onApply} testId={testIds.applyButton}>
                 Apply
               </Button>
             )}

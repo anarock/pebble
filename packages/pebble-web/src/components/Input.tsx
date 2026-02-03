@@ -85,7 +85,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
       loading,
       leftElement,
       rightElement,
-      dataTestId
+      testId
     } = this.props;
     const { isFocused } = this.state;
 
@@ -156,14 +156,14 @@ class Input extends React.PureComponent<InputProps, InputState> {
             <textarea
               {..._inputProps}
               {...this.props.inputProps}
-              data-testid={dataTestId}
+              data-testid={testId}
             />
           ) : (
             <input
               type={type}
               {..._inputProps}
               {...this.props.inputProps}
-              data-testid={dataTestId}
+              data-testid={testId}
             />
           )}
 

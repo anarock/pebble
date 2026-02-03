@@ -77,7 +77,7 @@ export default class SecondaryInput extends React.PureComponent<
       readOnly,
       loading,
       className,
-      dataTestId
+      testId
     } = this.props;
     const { isFocused } = this.state;
 
@@ -123,7 +123,7 @@ export default class SecondaryInput extends React.PureComponent<
           <input
             {..._inputProps}
             {...this.props.inputProps}
-            data-testid={dataTestId}
+            data-testid={testId}
           />
           <label className={placeholderClassName}>
             {placeholder}

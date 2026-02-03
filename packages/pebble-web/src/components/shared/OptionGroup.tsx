@@ -16,7 +16,7 @@ import {
   getOptionGroupTestIds,
   getOptionTestId,
   getTestIds
-} from "../../utils/dataTestIds";
+} from "../../utils/testIds";
 
 class OptionGroup<OptionType> extends React.PureComponent<
   OptionGroupProps<OptionType>,
@@ -127,11 +127,11 @@ class OptionGroup<OptionType> extends React.PureComponent<
       isSelected,
       handleChange,
       searchBoxProps,
-      dataTestId
+      testId
     } = this.props;
     const { isScrolled, highlighted } = this.state;
 
-    const dataTestIds = getTestIds(dataTestId, getOptionGroupTestIds);
+    const testIds = getTestIds(testId, getOptionGroupTestIds);
 
     const _children = React.Children.map(children, (_option, i) => {
       // `_option as React.ReactElement<OptionProps>` is a hack
@@ -151,9 +151,7 @@ class OptionGroup<OptionType> extends React.PureComponent<
         multiSelect,
         // @ts-ignore
         ref,
-        dataTestId: dataTestIds.option
-          ? getOptionTestId(dataTestIds.option, i)
-          : undefined
+        testId: testIds.option ? getOptionTestId(testIds.option, i) : undefined
       });
     });
 
@@ -179,7 +177,7 @@ class OptionGroup<OptionType> extends React.PureComponent<
                 onKeyDown: this.handleKeyPress,
                 autoFocus: true
               }}
-              dataTestId={dataTestIds.searchBox}
+              testId={testIds.searchBox}
             />
           </div>
         )}
@@ -191,20 +189,20 @@ class OptionGroup<OptionType> extends React.PureComponent<
             }}
             className={cx(optionsWrapper, className)}
             role={multiSelect ? "group" : "radiogroup"}
-            data-testid={dataTestId}
+            data-testid={testId}
             aria-label={searchBoxProps && searchBoxProps.placeholder}
           >
             {advancedOptions && advancedOptionsProps && (
               <div className={_class}>
                 <div
                   onClick={advancedOptionsProps.selectVisible}
-                  data-testid={dataTestIds.selectVisible}
+                  data-testid={testIds.selectVisible}
                 >
                   Select Visible
                 </div>
                 <div
                   onClick={advancedOptionsProps.clearVisible}
-                  data-testid={dataTestIds.clearVisible}
+                  data-testid={testIds.clearVisible}
                 >
                   Clear Visible
                 </div>

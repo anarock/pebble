@@ -12,7 +12,7 @@ import OutsideClick from "./OutsideClick";
 import OptionGroupRadio from "./OptionGroupRadio";
 import { animated } from "react-spring/renderprops.cjs";
 import MountTransition from "./shared/MountTransition";
-import { getTestIds, getTypeaheadTestIds } from "../utils/dataTestIds";
+import { getTestIds, getTypeaheadTestIds } from "../utils/testIds";
 
 function defaultSearchBox<OptionType>(
   { registerChange, onFocus, value }: SearchBoxArgs,
@@ -45,7 +45,7 @@ function defaultSearchBox<OptionType>(
       loading={props.loading}
       required={props.required}
       disabled={props.disabled}
-      dataTestId={props.dataTestId}
+      testId={props.testId}
     />
   );
 }
@@ -100,10 +100,10 @@ export default class TypeAhead<OptionType> extends React.PureComponent<
       searchBox = defaultSearchBox,
       dropdownClassName,
       children,
-      dataTestId
+      testId
     } = this.props;
 
-    const dataTestIds = getTestIds(dataTestId, getTypeaheadTestIds);
+    const testIds = getTestIds(testId, getTypeaheadTestIds);
 
     const { showSuggestions, value } = this.state;
 
@@ -125,7 +125,7 @@ export default class TypeAhead<OptionType> extends React.PureComponent<
           },
           {
             ...this.props,
-            dataTestId: dataTestIds.search
+            testId: testIds.search
           }
         )}
 
@@ -137,7 +137,7 @@ export default class TypeAhead<OptionType> extends React.PureComponent<
             >
               <OptionGroupRadio
                 onChange={this.onSelect}
-                dataTestId={dataTestIds.optionGroup}
+                testId={testIds.optionGroup}
               >
                 {children}
               </OptionGroupRadio>

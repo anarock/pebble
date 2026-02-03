@@ -8,7 +8,7 @@ const Loader: React.FunctionComponent<LoaderProps> = ({
   color = colors.gray.darker,
   scale = 1,
   className,
-  dataTestId
+  testId
 }) => {
   const style = {
     backgroundColor: color
@@ -17,7 +17,7 @@ const Loader: React.FunctionComponent<LoaderProps> = ({
     <div
       className={cx(spinnerStyle, className)}
       style={{ transform: `scale(${scale})` }}
-      data-testid={dataTestId}
+      data-testid={testId}
     >
       <div style={style} />
       <div style={style} />

@@ -25,7 +25,7 @@ export interface DropdownProps {
   modifiers?: Modifiers;
   controlled?: boolean;
   isOpen?: boolean;
-  dataTestId?: string;
+  testId?: string;
 }
 
 export interface DropdownState {
