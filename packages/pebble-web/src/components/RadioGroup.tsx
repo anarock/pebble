@@ -41,7 +41,9 @@ export default class RadioGroup<OptionType> extends React.PureComponent<
         onChange: this.handleChange,
         checked: selected === radio.props.value,
         disabled,
-        testId: testIds.option ? getOptionTestId(testIds.option, i) : undefined
+        testId: testIds.optionId
+          ? getOptionTestId(testIds.optionId, i)
+          : undefined
       });
     });
 

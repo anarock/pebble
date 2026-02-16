@@ -74,7 +74,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                       onDropdownToggle(isOpen);
                     }
               }
-              data-testid={testIds.input}
+              data-testid={testIds.inputId}
             >
               <Input
                 className={selectInputWrapper}
@@ -159,8 +159,8 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                     toggle();
                   })
                 }
-                testId={testIds.optionGroup}
                 {...commonProps}
+                testId={testIds.optionGroupId}
               >
                 {children}
               </OptionGroupCheckBox>
@@ -175,7 +175,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                   toggle();
                 }}
                 {...commonProps}
-                testId={testIds.optionGroup}
+                testId={testIds.optionGroupId}
               >
                 {children}
               </OptionGroupRadio>

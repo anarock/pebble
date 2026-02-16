@@ -70,7 +70,7 @@ export default class OptionGroupCheckBox<
           isSelected={isSelected || this.isSelected}
           handleChange={this.handleChange}
           multiSelect
-          testId={testIds.optionGroup}
+          testId={testIds.optionGroupId}
         />
 
         {(onApply || onClear) && (
@@ -79,13 +79,13 @@ export default class OptionGroupCheckBox<
               <Button
                 type="secondary"
                 onClick={onClear}
-                testId={testIds.clearButton}
+                testId={testIds.clearButtonId}
               >
                 Clear
               </Button>
             )}
             {onApply && (
-              <Button onClick={this.onApply} testId={testIds.applyButton}>
+              <Button onClick={this.onApply} testId={testIds.applyButtonId}>
                 Apply
               </Button>
             )}

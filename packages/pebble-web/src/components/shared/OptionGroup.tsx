@@ -151,7 +151,9 @@ class OptionGroup<OptionType> extends React.PureComponent<
         multiSelect,
         // @ts-ignore
         ref,
-        testId: testIds.option ? getOptionTestId(testIds.option, i) : undefined
+        testId: testIds.optionId
+          ? getOptionTestId(testIds.optionId, i)
+          : undefined
       });
     });
 
@@ -177,7 +179,7 @@ class OptionGroup<OptionType> extends React.PureComponent<
                 onKeyDown: this.handleKeyPress,
                 autoFocus: true
               }}
-              testId={testIds.searchBox}
+              testId={testIds.searchBoxId}
             />
           </div>
         )}
@@ -196,13 +198,13 @@ class OptionGroup<OptionType> extends React.PureComponent<
               <div className={_class}>
                 <div
                   onClick={advancedOptionsProps.selectVisible}
-                  data-testid={testIds.selectVisible}
+                  data-testid={testIds.selectVisibleId}
                 >
                   Select Visible
                 </div>
                 <div
                   onClick={advancedOptionsProps.clearVisible}
-                  data-testid={testIds.clearVisible}
+                  data-testid={testIds.clearVisibleId}
                 >
                   Clear Visible
                 </div>

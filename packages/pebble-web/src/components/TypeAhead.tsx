@@ -125,7 +125,7 @@ export default class TypeAhead<OptionType> extends React.PureComponent<
           },
           {
             ...this.props,
-            testId: testIds.search
+            testId: testIds.searchBoxId
           }
         )}
 
@@ -137,7 +137,7 @@ export default class TypeAhead<OptionType> extends React.PureComponent<
             >
               <OptionGroupRadio
                 onChange={this.onSelect}
-                testId={testIds.optionGroup}
+                testId={testIds.optionGroupId}
               >
                 {children}
               </OptionGroupRadio>
