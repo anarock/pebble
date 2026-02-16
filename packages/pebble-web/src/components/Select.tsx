@@ -39,8 +39,11 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
     testId
   } = props;
 
-  const testIds = getTestIds(testId, id =>
-    getSelectInputTestIds(id, props.multiSelect)
+  const singleSelectTestIds = getTestIds(testId, id =>
+    getSelectInputTestIds(id, false)
+  );
+  const multiSelectTestIds = getTestIds(testId, id =>
+    getSelectInputTestIds(id, true)
   );
 
   return (
@@ -74,7 +77,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                       onDropdownToggle(isOpen);
                     }
               }
-              data-testid={testIds.inputId}
+              data-testid={singleSelectTestIds.inputId}
             >
               <Input
                 className={selectInputWrapper}
@@ -160,7 +163,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                   })
                 }
                 {...commonProps}
-                testId={testIds.optionGroupId}
+                testId={multiSelectTestIds.optionGroupId}
               >
                 {children}
               </OptionGroupCheckBox>
@@ -175,7 +178,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                   toggle();
                 }}
                 {...commonProps}
-                testId={testIds.optionGroupId}
+                testId={singleSelectTestIds.optionGroupId}
               >
                 {children}
               </OptionGroupRadio>

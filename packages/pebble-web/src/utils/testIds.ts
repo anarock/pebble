@@ -1,5 +1,14 @@
 type TestIdMap = Record<string, string | object>;
 
+type BaseSelectIds = {
+  inputId: string;
+  optionGroupId: string;
+};
+
+type OptionGroupCheckBoxIds = ReturnType<typeof getOptionGroupCheckBoxTestIds>;
+
+type OptionGroupRadioIds = ReturnType<typeof getOptionGroupRadioTestIds>;
+
 export function getTestIds<T extends TestIdMap>(
   id: string | undefined,
   builder: (_id: string) => Partial<T>
@@ -26,8 +35,6 @@ export function getOptionGroupTestIds(id: string) {
   };
 }
 
-// OptionGroupRadio directly uses OptionGroup.
-// so we can use the same test ids for both
 export const getOptionGroupRadioTestIds = (id: string) =>
   getOptionGroupTestIds(id);
 
@@ -50,26 +57,43 @@ export function getPhoneNumberInputTestIds(id: string) {
 
 export function getSelectInputTestIds(
   id: string,
+  multiSelect: true
+): BaseSelectIds & OptionGroupCheckBoxIds;
+
+export function getSelectInputTestIds(
+  id: string,
+  multiSelect?: false
+): BaseSelectIds & OptionGroupRadioIds;
+
+export function getSelectInputTestIds(
+  id: string,
+  multiSelect?: boolean
+):
+  | (BaseSelectIds & OptionGroupCheckBoxIds)
+  | (BaseSelectIds & OptionGroupRadioIds);
+
+export function getSelectInputTestIds(
+  id: string,
   multiSelect: boolean = false
 ) {
   const optionGroupId = `${id}-option-group`;
-  return {
+
+  const baseIds = {
     inputId: `${id}-input`,
-    optionGroupId,
+    optionGroupId
+  };
+  return {
     ...(multiSelect
       ? getOptionGroupCheckBoxTestIds(optionGroupId)
-      : getOptionGroupRadioTestIds(optionGroupId))
+      : getOptionGroupRadioTestIds(optionGroupId)),
+    ...baseIds
   };
 }
 
 export function getTypeaheadTestIds(id: string) {
   const optionGroupId = `${id}-option-group`;
-  const { searchBoxId: _s, ...rest } = getOptionGroupRadioTestIds(
-    optionGroupId
-  );
   return {
-    searchBoxId: `${id}-search`,
     optionGroupId,
-    ...rest
+    ...getOptionGroupRadioTestIds(optionGroupId)
   };
 }
