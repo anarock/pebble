@@ -9,6 +9,7 @@ import Button from "../Button";
 import Input from "../Input";
 import Search from "../Search";
 import "../../../tests/__setup__/matchers";
+import { getSelectInputTestIds } from "../../utils/testIds";
 
 const options = new Array(5)
   .fill(1)
@@ -17,6 +18,9 @@ const options = new Array(5)
   ));
 
 const noop = () => {};
+
+const SINGLE_SELECT_TEST_ID = "test-single-select";
+const MULTI_SELECT_TEST_ID = "test-multi-select";
 
 function getComponent(
   spy = noop,
@@ -28,6 +32,7 @@ function getComponent(
       placeholder="Choose Option"
       selected={"option-2"}
       {...props}
+      testId={SINGLE_SELECT_TEST_ID}
     >
       {options}
     </Select>
@@ -44,6 +49,7 @@ function getMultiSelectComponent<T>(
       placeholder="Choose Option"
       multiSelect
       {...props}
+      testId={MULTI_SELECT_TEST_ID}
     >
       {options}
     </Select>
@@ -103,8 +109,10 @@ describe("Component: Select", () => {
     // wait for the dropdown animation to get over.
     clock.tick(1000);
 
+    const { optionGroupId } = getSelectInputTestIds(SINGLE_SELECT_TEST_ID);
+
     // This means that Option is no more rendered in DOM.
-    expect(select).toNotBeInDOM("[data-testid='optiongroup']");
+    expect(select).toNotBeInDOM(`[data-testid='${optionGroupId}']`);
   });
 
   test("multi select: should trigger onChange with correct onChange", () => {
@@ -158,8 +166,10 @@ describe("Component: Select", () => {
 
     clock.tick(1000);
 
+    const { optionGroupId } = getSelectInputTestIds(MULTI_SELECT_TEST_ID, true);
+
     // ensure the dropdown is closed
-    expect(select).toNotBeInDOM("[data-testid='optiongroup']");
+    expect(select).toNotBeInDOM(`[data-testid='${optionGroupId}']`);
   });
 
   test("single select: query change triggers onChange", () => {

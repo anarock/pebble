@@ -70,7 +70,7 @@ export default class OptionGroupCheckBox<
           isSelected={isSelected || this.isSelected}
           handleChange={this.handleChange}
           multiSelect
-          testId={testIds.optionGroupId}
+          testId={testId}
         />
 
         {(onApply || onClear) && (

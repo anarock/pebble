@@ -40,10 +40,9 @@ export const getOptionGroupRadioTestIds = (id: string) =>
 
 export function getOptionGroupCheckBoxTestIds(id: string) {
   return {
-    optionGroupId: `${id}-option-group`,
     applyButtonId: `${id}-apply-btn`,
     clearButtonId: `${id}-clear-btn`,
-    ...getOptionGroupTestIds(`${id}-option-group`)
+    ...getOptionGroupTestIds(id)
   };
 }
 
