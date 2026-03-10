@@ -1,11 +1,7 @@
 import * as React from "react";
 import { CheckboxGroupProps } from "./typings/CheckboxGroup";
 import { CheckboxProps } from "./typings/Checkbox";
-import {
-  getOptionTestId,
-  getCheckboxGroupTestIds,
-  getTestIds
-} from "../utils/testIds";
+import { getOptionTestId } from "../utils/testIds";
 import { getSelectedCheckboxes } from "./utils/getSelectedCheckboxes";
 
 export default class CheckboxGroup<OptionType> extends React.PureComponent<
@@ -29,8 +25,6 @@ export default class CheckboxGroup<OptionType> extends React.PureComponent<
       testId
     } = this.props;
 
-    const testIds = getTestIds(testId, getCheckboxGroupTestIds);
-
     const _children = React.Children.map(children, (_checkbox, i) => {
       const index = typeof i === "number" ? i : 0;
       // `_checkbox as React.ReactElement<CheckboxProps>` is a hack
@@ -44,9 +38,7 @@ export default class CheckboxGroup<OptionType> extends React.PureComponent<
         onChange: this.handleChange,
         checked: selected.indexOf(checkbox.props.value) >= 0,
         disabled,
-        testId: testIds.checkboxId
-          ? getOptionTestId(testIds.checkboxId, index)
-          : undefined
+        testId: testId ? getOptionTestId(testId, index) : undefined
       });
     });
 
