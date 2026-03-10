@@ -15,6 +15,7 @@ import {
 } from "./styles/Input.styles";
 import { colors } from "pebble-shared";
 import Loader from "./Loader";
+import { getMessageTestId } from "../utils/testIds";
 
 function getColor(
   error: string | undefined,
@@ -197,6 +198,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
         {_message && (
           <div
             className={messageStyle}
+            data-testid={testId ? getMessageTestId(testId) : undefined}
             style={{ color: getColor(errorMessage, successMessage) }}
           >
             {_message}

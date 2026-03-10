@@ -60,6 +60,10 @@ export function getPhoneNumberInputTestIds(id: string) {
   };
 }
 
+export function getMessageTestId(id: string) {
+  return `${id}-message`;
+}
+
 export function getSelectInputTestIds(
   id: string,
   multiSelect: true
