@@ -14,10 +14,7 @@ describe("CheckboxGroup", () => {
       </CheckboxGroup>
     );
 
-    checkbox
-      .find(Checkbox)
-      .at(1)
-      .simulate("click");
+    checkbox.find(Checkbox).at(1).simulate("click");
 
     expect(spy.calledWith([])).toBeTruthy();
 
@@ -25,11 +22,31 @@ describe("CheckboxGroup", () => {
       selected: []
     });
 
-    checkbox
-      .find(Checkbox)
-      .at(0)
-      .simulate("click");
+    checkbox.find(Checkbox).at(0).simulate("click");
 
     expect(spy.calledWith(["checkbox-0"])).toBeTruthy();
+  });
+
+  test("should append checkbox test ids for children", () => {
+    const spy = sinon.spy();
+
+    const checkbox = mount(
+      <CheckboxGroup
+        selected={[]}
+        onChange={spy}
+        name="test"
+        testId="checkbox-group"
+      >
+        <Checkbox value="checkbox-0" label="I am a checkbox" />
+        <Checkbox value="checkbox-1" label="I am a checkbox" />
+      </CheckboxGroup>
+    );
+
+    expect(
+      checkbox.find("[data-testid='checkbox-group-checkbox-0']").length
+    ).toBe(1);
+    expect(
+      checkbox.find("[data-testid='checkbox-group-checkbox-1']").length
+    ).toBe(1);
   });
 });

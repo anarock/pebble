@@ -6,4 +6,5 @@ export interface CheckboxGroupProps<OptionType> {
   className?: string;
   name: string;
   disabled?: boolean;
+  testId?: string;
 }

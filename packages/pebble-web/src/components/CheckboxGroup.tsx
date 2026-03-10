@@ -1,6 +1,11 @@
 import * as React from "react";
 import { CheckboxGroupProps } from "./typings/CheckboxGroup";
 import { CheckboxProps } from "./typings/Checkbox";
+import {
+  getOptionTestId,
+  getCheckboxGroupTestIds,
+  getTestIds
+} from "../utils/testIds";
 import { getSelectedCheckboxes } from "./utils/getSelectedCheckboxes";
 
 export default class CheckboxGroup<OptionType> extends React.PureComponent<
@@ -15,9 +20,19 @@ export default class CheckboxGroup<OptionType> extends React.PureComponent<
   };
 
   render() {
-    const { children, selected, className, name, disabled } = this.props;
+    const {
+      children,
+      selected,
+      className,
+      name,
+      disabled,
+      testId
+    } = this.props;
 
-    const _children = React.Children.map(children, _checkbox => {
+    const testIds = getTestIds(testId, getCheckboxGroupTestIds);
+
+    const _children = React.Children.map(children, (_checkbox, i) => {
+      const index = typeof i === "number" ? i : 0;
       // `_checkbox as React.ReactElement<CheckboxProps>` is a hack
       // Because React does not allow us to specify what sort of elements
       // you can allow as children and leaves it on you to figure out
@@ -28,7 +43,10 @@ export default class CheckboxGroup<OptionType> extends React.PureComponent<
       return React.cloneElement(checkbox, {
         onChange: this.handleChange,
         checked: selected.indexOf(checkbox.props.value) >= 0,
-        disabled
+        disabled,
+        testId: testIds.checkboxId
+          ? getOptionTestId(testIds.checkboxId, index)
+          : undefined
       });
     });
 
