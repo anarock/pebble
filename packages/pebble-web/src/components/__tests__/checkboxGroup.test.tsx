@@ -42,11 +42,7 @@ describe("CheckboxGroup", () => {
       </CheckboxGroup>
     );
 
-    expect(
-      checkbox.find("[data-testid='checkbox-group-checkbox-0']").length
-    ).toBe(1);
-    expect(
-      checkbox.find("[data-testid='checkbox-group-checkbox-1']").length
-    ).toBe(1);
+    expect(checkbox.find("[data-testid='checkbox-group-0']").length).toBe(1);
+    expect(checkbox.find("[data-testid='checkbox-group-1']").length).toBe(1);
   });
 });
