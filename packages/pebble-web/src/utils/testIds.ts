@@ -26,12 +26,6 @@ export function getRadioGroupTestIds(id: string) {
   };
 }
 
-export function getCheckboxGroupTestIds(id: string) {
-  return {
-    checkboxId: `${id}-checkbox`
-  };
-}
-
 export function getOptionGroupTestIds(id: string) {
   return {
     searchBoxId: `${id}-search`,
