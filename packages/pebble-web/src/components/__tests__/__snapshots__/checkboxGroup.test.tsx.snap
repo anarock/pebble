@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxGroup snapshot 1`] = `
+.emotion-0 {
+  margin-right: 10px;
+  font-size: 16px;
+  padding-top: 2px;
+  height: 18px;
+}
+
+.emotion-1 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  padding: 10px 0;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 400;
+  color: #101721;
+  font-size: 14px;
+}
+
+.emotion-1[data-disabled='true'] {
+  cursor: not-allowed;
+}
+
+.emotion-1[data-disabled='true'] .i {
+  color: #E0E0E0;
+}
+
+<div
+  aria-label="test"
+  role="checkboxgroup"
+>
+  <div
+    aria-checked={false}
+    className="emotion-1"
+    data-testid="checkbox-group-checkbox-0"
+    onClick={[Function]}
+    role="checkbox"
+    tabIndex={-1}
+  >
+    <div
+      className="emotion-0"
+    >
+      <i
+        className="pi pi-checkbox-unselected"
+        style={
+          Object {
+            "color": "#E0E0E0",
+          }
+        }
+      />
+    </div>
+     
+    I am a checkbox
+  </div>
+  <div
+    aria-checked={true}
+    className="emotion-1"
+    data-testid="checkbox-group-checkbox-1"
+    onClick={[Function]}
+    role="checkbox"
+    tabIndex={0}
+  >
+    <div
+      className="emotion-0"
+    >
+      <i
+        className="pi pi-checkbox-selected"
+        style={
+          Object {
+            "color": "#6161FF",
+          }
+        }
+      />
+    </div>
+     
+    I am a checkbox
+  </div>
+</div>
+`;
