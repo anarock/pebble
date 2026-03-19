@@ -1,9 +1,27 @@
 import * as React from "react";
 import { Checkbox, CheckboxGroup } from "../";
 import { mount } from "enzyme";
+import renderer from "react-test-renderer";
 import sinon from "sinon";
 
 describe("CheckboxGroup", () => {
+  test("snapshot", () => {
+    const spy = sinon.spy();
+    const component = renderer.create(
+      <CheckboxGroup
+        selected={["checkbox-1"]}
+        onChange={spy}
+        name="test"
+        testId="checkbox-group"
+      >
+        <Checkbox value="checkbox-0" label="I am a checkbox" />
+        <Checkbox value="checkbox-1" label="I am a checkbox" />
+      </CheckboxGroup>
+    );
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
   test("should call onChange on click with correct arguments", () => {
     const spy = sinon.spy();
 
