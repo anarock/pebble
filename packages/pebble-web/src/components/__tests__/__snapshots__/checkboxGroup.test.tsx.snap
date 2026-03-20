@@ -41,7 +41,7 @@ exports[`CheckboxGroup snapshot 1`] = `
   <div
     aria-checked={false}
     className="emotion-1"
-    data-testid="checkbox-group-checkbox-0"
+    data-testid="checkbox-group-0"
     onClick={[Function]}
     role="checkbox"
     tabIndex={-1}
@@ -64,7 +64,7 @@ exports[`CheckboxGroup snapshot 1`] = `
   <div
     aria-checked={true}
     className="emotion-1"
-    data-testid="checkbox-group-checkbox-1"
+    data-testid="checkbox-group-1"
     onClick={[Function]}
     role="checkbox"
     tabIndex={0}
