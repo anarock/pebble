@@ -100,3 +100,12 @@ export function getTypeaheadTestIds(id: string) {
     ...getOptionGroupRadioTestIds(optionGroupId)
   };
 }
+
+export function getCalendarTestIds(id: string){
+  return {
+    leftIconId: `${id}-left-icon`,
+    rightIconId: `${id}-right-icon`,
+    applyButtonId: `${id}-apply-btn`,
+    clearButtonId: `${id}-clear-btn`
+  };
+}

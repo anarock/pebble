@@ -3,6 +3,7 @@ import Calendar from "../Calendar";
 import sinon from "sinon";
 import { mount } from "enzyme";
 import { format, getTime, startOfDay, endOfDay } from "date-fns";
+import { getCalendarTestIds } from "../../utils/testIds";
 
 const date: [Date, Date] = [new Date(2012, 11, 1), new Date(2012, 12, 1)];
 
@@ -177,5 +178,62 @@ describe("Calendar", () => {
 
     const argument = applySpy.getCall(0).args[0];
     expect(argument).toEqual(undefined);
+  });
+
+  test("sets data-testid on nav icons and footer buttons when testId is provided", () => {
+    const testIdPrefix = "calendar-field";
+    const ids = getCalendarTestIds(testIdPrefix);
+
+    const calendar = mount(
+      <Calendar
+        className="calendar-test"
+        testId={testIdPrefix}
+        onApply={() => {}}
+        onClear={() => {}}
+        range
+        onChange={() => {}}
+        selected={date}
+      />
+    );
+
+    expect(calendar.find(".pi-chevron-left").prop("data-testid")).toBe(
+      ids.leftIconId
+    );
+    expect(calendar.find(".pi-arrow-right").prop("data-testid")).toBe(
+      ids.rightIconId
+    );
+    expect(
+      calendar
+        .find("button")
+        .filterWhere(b => b.text() === "Clear")
+        .prop("data-testid")
+    ).toBe(ids.clearButtonId);
+    expect(
+      calendar
+        .find("button")
+        .filterWhere(b => b.text() === "Apply")
+        .prop("data-testid")
+    ).toBe(ids.applyButtonId);
+  });
+
+  test("does not set data-testid on nav icons and footer buttons when testId is omitted", () => {
+    const calendar = mount(
+      <Calendar
+        className="calendar-test"
+        onApply={() => {}}
+        onClear={() => {}}
+        range
+        onChange={() => {}}
+        selected={date}
+      />
+    );
+
+    expect(calendar.find(".pi-chevron-left").prop("data-testid")).toBeUndefined();
+    expect(
+      calendar.find(".pi-arrow-right").prop("data-testid")
+    ).toBeUndefined();
+    calendar.find("button").forEach(button => {
+      expect(button.prop("data-testid")).toBeUndefined();
+    });
   });
 });
