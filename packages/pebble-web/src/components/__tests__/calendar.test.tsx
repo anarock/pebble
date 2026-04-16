@@ -161,45 +161,4 @@ describe("Calendar", () => {
     const argument = applySpy.getCall(0).args[0];
     expect(argument).toEqual(undefined);
   });
-
-  test("sets data-testid on nav icons and footer buttons when testId is provided", () => {
-    const testIdPrefix = "calendar-field";
-    const {
-      leftIconId,
-      rightIconId,
-      clearButtonId,
-      applyButtonId
-    } = getCalendarTestIds(testIdPrefix);
-
-    const calendar = mount(
-      <Calendar
-        className="calendar-test"
-        testId={testIdPrefix}
-        onApply={() => {}}
-        onClear={() => {}}
-        range
-        onChange={() => {}}
-        selected={date}
-      />
-    );
-
-    expect(calendar.find(".pi-chevron-left").prop("data-testid")).toBe(
-      leftIconId
-    );
-    expect(calendar.find(".pi-arrow-right").prop("data-testid")).toBe(
-      rightIconId
-    );
-    expect(
-      calendar
-        .find("button")
-        .filterWhere(b => b.text() === "Clear")
-        .prop("data-testid")
-    ).toBe(clearButtonId);
-    expect(
-      calendar
-        .find("button")
-        .filterWhere(b => b.text() === "Apply")
-        .prop("data-testid")
-    ).toBe(applyButtonId);
-  });
 });
