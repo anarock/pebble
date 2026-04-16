@@ -3,7 +3,6 @@ import Calendar from "../Calendar";
 import sinon from "sinon";
 import { mount } from "enzyme";
 import { format, getTime, startOfDay, endOfDay } from "date-fns";
-import { getCalendarTestIds } from "../../utils/testIds";
 
 const date: [Date, Date] = [new Date(2012, 11, 1), new Date(2012, 12, 1)];
 
