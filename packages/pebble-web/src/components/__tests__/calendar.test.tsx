@@ -3,6 +3,7 @@ import Calendar from "../Calendar";
 import sinon from "sinon";
 import { mount } from "enzyme";
 import { format, getTime, startOfDay, endOfDay } from "date-fns";
+import { getCalendarTestIds } from "../../utils/testIds";
 
 const date: [Date, Date] = [new Date(2012, 11, 1), new Date(2012, 12, 1)];
 
@@ -22,19 +23,13 @@ describe("Calendar", () => {
         selected={date}
       />
     );
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
     // in case of range selector onChange should only be called once
     // both values of range have been selected.
     expect(changeSpy.calledOnce).toBeFalsy();
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(10)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(10).simulate("click");
 
     calendar
       .find(".calendar-test > div")
@@ -74,10 +69,7 @@ describe("Calendar", () => {
       />
     );
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
     calendar
       .find(".calendar-test > div")
@@ -107,10 +99,7 @@ describe("Calendar", () => {
         selected={date[0]}
       />
     );
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
     expect(changeSpy.calledOnce).toBeTruthy();
 
@@ -149,15 +138,9 @@ describe("Calendar", () => {
       />
     );
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(10)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(10).simulate("click");
 
     calendar
       .find(".calendar-test > div")

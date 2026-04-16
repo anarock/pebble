@@ -13,6 +13,7 @@ import {
 } from "./styles/Calendar.styles";
 import Button from "./Button";
 import { isSameDay, endOfDay, startOfDay, addDays, subDays } from "date-fns";
+import { getCalendarTestIds, getTestIds } from "../utils/testIds";
 
 class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
   static defaultProps: Partial<CalendarProps> = {
@@ -136,9 +137,16 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
       onClear,
       maxDate,
       minDate,
+      testId,
       ...rest
     } = this.props;
     const { maxRangeDates } = this.state;
+    const {
+      leftIconId,
+      rightIconId,
+      clearButtonId,
+      applyButtonId
+    } = getTestIds(testId, id => getCalendarTestIds(id));
 
     return (
       <div
@@ -165,10 +173,18 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
           tileDisabled={this.getDisabledDays}
           onClickDay={this.onDayClick}
           prevLabel={
-            <i style={{ fontSize: 14 }} className="pi pi-chevron-left" />
+            <i
+              style={{ fontSize: 14 }}
+              className="pi pi-chevron-left"
+              data-testid={leftIconId}
+            />
           }
           nextLabel={
-            <i style={{ fontSize: 14 }} className="pi pi-arrow-right" />
+            <i
+              style={{ fontSize: 14 }}
+              className="pi pi-arrow-right"
+              data-testid={rightIconId}
+            />
           }
           maxDate={maxDate || (maxRangeDates && maxRangeDates.future)}
           minDate={minDate || (maxRangeDates && maxRangeDates.past)}
@@ -177,11 +193,19 @@ class Calendar extends React.PureComponent<CalendarProps, CalendarState> {
         {(onClear || onApply) && (
           <div className={buttonsWrapper}>
             {onClear && (
-              <Button onClick={this.onClear} type="secondary">
+              <Button
+                onClick={this.onClear}
+                type="secondary"
+                testId={clearButtonId}
+              >
                 Clear
               </Button>
             )}
-            {onApply && <Button onClick={this.onApply}>Apply</Button>}
+            {onApply && (
+              <Button onClick={this.onApply} testId={applyButtonId}>
+                Apply
+              </Button>
+            )}
           </div>
         )}
       </div>
