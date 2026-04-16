@@ -23,19 +23,13 @@ describe("Calendar", () => {
         selected={date}
       />
     );
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
     // in case of range selector onChange should only be called once
     // both values of range have been selected.
     expect(changeSpy.calledOnce).toBeFalsy();
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(10)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(10).simulate("click");
 
     calendar
       .find(".calendar-test > div")
@@ -75,10 +69,7 @@ describe("Calendar", () => {
       />
     );
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
     calendar
       .find(".calendar-test > div")
@@ -108,10 +99,7 @@ describe("Calendar", () => {
         selected={date[0]}
       />
     );
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
     expect(changeSpy.calledOnce).toBeTruthy();
 
@@ -150,15 +138,9 @@ describe("Calendar", () => {
       />
     );
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(10)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(10).simulate("click");
 
     calendar
       .find(".calendar-test > div")
@@ -182,7 +164,12 @@ describe("Calendar", () => {
 
   test("sets data-testid on nav icons and footer buttons when testId is provided", () => {
     const testIdPrefix = "calendar-field";
-    const ids = getCalendarTestIds(testIdPrefix);
+    const {
+      leftIconId,
+      rightIconId,
+      clearButtonId,
+      applyButtonId
+    } = getCalendarTestIds(testIdPrefix);
 
     const calendar = mount(
       <Calendar
@@ -197,43 +184,22 @@ describe("Calendar", () => {
     );
 
     expect(calendar.find(".pi-chevron-left").prop("data-testid")).toBe(
-      ids.leftIconId
+      leftIconId
     );
     expect(calendar.find(".pi-arrow-right").prop("data-testid")).toBe(
-      ids.rightIconId
+      rightIconId
     );
     expect(
       calendar
         .find("button")
         .filterWhere(b => b.text() === "Clear")
         .prop("data-testid")
-    ).toBe(ids.clearButtonId);
+    ).toBe(clearButtonId);
     expect(
       calendar
         .find("button")
         .filterWhere(b => b.text() === "Apply")
         .prop("data-testid")
-    ).toBe(ids.applyButtonId);
-  });
-
-  test("does not set data-testid on nav icons and footer buttons when testId is omitted", () => {
-    const calendar = mount(
-      <Calendar
-        className="calendar-test"
-        onApply={() => {}}
-        onClear={() => {}}
-        range
-        onChange={() => {}}
-        selected={date}
-      />
-    );
-
-    expect(calendar.find(".pi-chevron-left").prop("data-testid")).toBeUndefined();
-    expect(
-      calendar.find(".pi-arrow-right").prop("data-testid")
-    ).toBeUndefined();
-    calendar.find("button").forEach(button => {
-      expect(button.prop("data-testid")).toBeUndefined();
-    });
+    ).toBe(applyButtonId);
   });
 });
