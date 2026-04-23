@@ -9,4 +9,5 @@ export interface PopUpProps {
   rejectButtonText?: string | Element;
   approveButtonProps?: Omit<ButtonProps, "children" | "onClick">;
   rejectButtonProps?: Omit<ButtonProps, "children" | "onClick">;
+  testId?: string;
 }

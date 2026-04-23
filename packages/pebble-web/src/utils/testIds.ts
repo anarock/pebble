@@ -109,3 +109,11 @@ export function getCalendarTestIds(id: string){
     clearButtonId: `${id}-clear-btn`
   };
 }
+
+export function getPopUpTestIds(id: string){
+  return {
+    closeButtonId: `${id}-close-btn`,
+    approveButtonId: `${id}-approve-btn`,
+    rejectButtonId: `${id}-reject-btn`
+  };
+}

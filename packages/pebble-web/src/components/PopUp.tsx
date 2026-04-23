@@ -9,6 +9,7 @@ import {
   flexCenter
 } from "./styles/PopUp.styles";
 import { PopUpProps } from "./typings/PopUp";
+import { getPopUpTestIds, getTestIds } from "../utils/testIds";
 
 const PopUp: React.FunctionComponent<PopUpProps> = props => {
   const {
@@ -20,8 +21,10 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
     rejectButtonText = "No",
     children,
     approveButtonProps,
-    rejectButtonProps
+    rejectButtonProps,
+    testId
   } = props;
+  const {closeButtonId, approveButtonId, rejectButtonId} = getTestIds(testId, id => getPopUpTestIds(id));
   return (
     <Modal visible={visible} modalClassName={flexCenter}>
       <div className={modalContainer}>
@@ -29,6 +32,7 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
           <i
             className={cx("pi", "pi-close", iconCloseClassName)}
             onClick={onClose}
+            data-testid={closeButtonId}
           />
         )}
         {children}
@@ -40,6 +44,7 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
                 type="secondary"
                 onClick={onReject}
                 {...rejectButtonProps}
+                testId={rejectButtonId}
               >
                 {rejectButtonText}
               </Button>
@@ -50,6 +55,7 @@ const PopUp: React.FunctionComponent<PopUpProps> = props => {
                 type="primary"
                 onClick={onApprove}
                 {...approveButtonProps}
+                testId={approveButtonId}
               >
                 {approveButtonText}
               </Button>
