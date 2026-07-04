@@ -1,6 +1,6 @@
 import * as React from "react";
 
-interface UserAgentInfoProviderProps {
+export interface UserAgentInfoProviderProps {
   userAgent: string;
 }
 
