@@ -48,7 +48,12 @@ export default class RadioGroup<OptionType> extends React.PureComponent<
     });
 
     return (
-      <div role="radiogroup" aria-label={name} className={className}>
+      <div
+        role="radiogroup"
+        aria-label={name}
+        className={className}
+        data-testid={testId}
+      >
         {_children}
       </div>
     );
