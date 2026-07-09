@@ -12,6 +12,7 @@ import {
   messageStyle,
   placeholderStyle
 } from "./styles/SecondaryInput.styles";
+import { getMessageTestId } from "../utils/testIds";
 import {
   SecondaryInputProps,
   SecondaryInputState
@@ -76,7 +77,8 @@ export default class SecondaryInput extends React.PureComponent<
       message,
       readOnly,
       loading,
-      className
+      className,
+      testId
     } = this.props;
     const { isFocused } = this.state;
 
@@ -119,7 +121,11 @@ export default class SecondaryInput extends React.PureComponent<
           onFocus={this.addFocus}
           onBlur={this.removeFocus}
         >
-          <input {..._inputProps} {...this.props.inputProps} />
+          <input
+            {..._inputProps}
+            {...this.props.inputProps}
+            data-testid={testId}
+          />
           <label className={placeholderClassName}>
             {placeholder}
             {required && (
@@ -134,6 +140,7 @@ export default class SecondaryInput extends React.PureComponent<
         {_message && (
           <div
             className={messageStyle}
+            data-testid={testId ? getMessageTestId(testId) : undefined}
             style={{ color: getColor(errorMessage, successMessage) }}
           >
             {_message}

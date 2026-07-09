@@ -22,19 +22,13 @@ describe("Calendar", () => {
         selected={date}
       />
     );
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
     // in case of range selector onChange should only be called once
     // both values of range have been selected.
     expect(changeSpy.calledOnce).toBeFalsy();
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(10)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(10).simulate("click");
 
     calendar
       .find(".calendar-test > div")
@@ -74,10 +68,7 @@ describe("Calendar", () => {
       />
     );
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
     calendar
       .find(".calendar-test > div")
@@ -107,10 +98,7 @@ describe("Calendar", () => {
         selected={date[0]}
       />
     );
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
     expect(changeSpy.calledOnce).toBeTruthy();
 
@@ -149,15 +137,9 @@ describe("Calendar", () => {
       />
     );
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(0)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(0).simulate("click");
 
-    calendar
-      .find(".react-calendar__tile")
-      .at(10)
-      .simulate("click");
+    calendar.find(".react-calendar__tile").at(10).simulate("click");
 
     calendar
       .find(".calendar-test > div")

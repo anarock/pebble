@@ -12,6 +12,7 @@ interface CommonCalendarProps extends Omit<CP, "onChange"> {
   onClear?: () => void;
   tileDots: TileDot[];
   disabledDays?: Array<number | Date>;
+  testId?: string;
 }
 
 export interface DateSingle extends CommonCalendarProps {

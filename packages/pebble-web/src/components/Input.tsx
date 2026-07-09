@@ -15,6 +15,7 @@ import {
 } from "./styles/Input.styles";
 import { colors } from "pebble-shared";
 import Loader from "./Loader";
+import { getMessageTestId } from "../utils/testIds";
 
 function getColor(
   error: string | undefined,
@@ -84,7 +85,8 @@ class Input extends React.PureComponent<InputProps, InputState> {
       onClick,
       loading,
       leftElement,
-      rightElement
+      rightElement,
+      testId
     } = this.props;
     const { isFocused } = this.state;
 
@@ -152,9 +154,18 @@ class Input extends React.PureComponent<InputProps, InputState> {
           {leftElement?.()}
 
           {this.props.textArea ? (
-            <textarea {..._inputProps} {...this.props.inputProps} />
+            <textarea
+              {..._inputProps}
+              {...this.props.inputProps}
+              data-testid={testId}
+            />
           ) : (
-            <input type={type} {..._inputProps} {...this.props.inputProps} />
+            <input
+              type={type}
+              {..._inputProps}
+              {...this.props.inputProps}
+              data-testid={testId}
+            />
           )}
 
           {loading && (
@@ -187,6 +198,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
         {_message && (
           <div
             className={messageStyle}
+            data-testid={testId ? getMessageTestId(testId) : undefined}
             style={{ color: getColor(errorMessage, successMessage) }}
           >
             {_message}

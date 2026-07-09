@@ -172,6 +172,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
     >
       <div
         className="emotion-6"
+        data-testid="test-multi-select-input"
         onClick={[Function]}
       >
         <div
@@ -386,6 +387,7 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
     >
       <div
         className="emotion-6"
+        data-testid="test-single-select-input"
         onClick={[Function]}
       >
         <div
@@ -600,6 +602,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
     >
       <div
         className="emotion-6"
+        data-testid="test-single-select-input"
         onClick={[Function]}
       >
         <div

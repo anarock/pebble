@@ -16,6 +16,7 @@ import DropDown from "./DropDown";
 import Input from "./Input";
 import OptionGroupCheckBox from "./OptionGroupCheckBox";
 import OptionGroupRadio from "./OptionGroupRadio";
+import { getSelectInputTestIds, getTestIds } from "../utils/testIds";
 
 function noop() {}
 
@@ -34,8 +35,16 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
     disabled,
     isSelected,
     placement,
-    modifiers
+    modifiers,
+    testId
   } = props;
+
+  const singleSelectTestIds = getTestIds(testId, id =>
+    getSelectInputTestIds(id, false)
+  );
+  const multiSelectTestIds = getTestIds(testId, id =>
+    getSelectInputTestIds(id, true)
+  );
 
   return (
     <div
@@ -68,6 +77,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                       onDropdownToggle(isOpen);
                     }
               }
+              data-testid={singleSelectTestIds.inputId}
             >
               <Input
                 className={selectInputWrapper}
@@ -153,6 +163,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                   })
                 }
                 {...commonProps}
+                testId={multiSelectTestIds.optionGroupId}
               >
                 {children}
               </OptionGroupCheckBox>
@@ -167,6 +178,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                   toggle();
                 }}
                 {...commonProps}
+                testId={singleSelectTestIds.optionGroupId}
               >
                 {children}
               </OptionGroupRadio>
