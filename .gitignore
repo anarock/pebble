@@ -12,3 +12,7 @@ coverage
 .cache
 .DS_Store
 .awcache
+# HQ context — generated indices and per-developer overrides
+.hq/
+AGENTS.local.md
+CLAUDE.local.md
