@@ -4,8 +4,7 @@ import {
   iconStyle,
   getButtonStyle,
   dropDownButtonStyle,
-  dropDownButtonDefaultStyle,
-  getButtonLoaderColor
+  dropDownButtonDefaultStyle
 } from "./styles/Button.styles";
 import Ink from "react-ink";
 import { ButtonProps, DropDownButtonProps } from "./typings/Button";
@@ -34,8 +33,6 @@ const Button: React.FunctionComponent<ButtonProps> = ({
     className
   );
 
-  const loaderColor = getButtonLoaderColor(type, !!outline);
-
   return (
     <button
       className={_className}
@@ -45,7 +42,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       data-testid={testId}
       {...buttonProps}
     >
-      {loading ? <Loader color={loaderColor} scale={0.4} /> : children}
+      {loading ? <Loader color="currentColor" scale={0.4} /> : children}
       {!disableAction && showRipple && type !== "link" && <Ink />}
     </button>
   );
