@@ -133,6 +133,13 @@ export const getButtonStyle = (
   ]);
 };
 
+export function getButtonLoaderColor(type: ButtonType, outline: boolean) {
+  if (type === "link") return violet.base;
+  if (!outline) return white.base;
+  const color = mappingColorByType[type];
+  return color.base;
+}
+
 export const iconStyle = css({
   marginLeft: 15,
   fontWeight: "bold",
