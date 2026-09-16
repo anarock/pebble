@@ -28,10 +28,8 @@ const Button: React.FunctionComponent<ButtonProps> = ({
 }: ButtonProps) => {
   const disableAction = disabled || loading;
 
-  const _outline = size === "x-small" || !!outline;
-
   const _className = cx(
-    getButtonStyle(size, type, !!showShadow, !_outline),
+    getButtonStyle(size, type, !!showShadow, !!outline),
     className
   );
 
