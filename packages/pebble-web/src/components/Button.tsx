@@ -9,7 +9,6 @@ import {
 import Ink from "react-ink";
 import { ButtonProps, DropDownButtonProps } from "./typings/Button";
 import Loader from "./Loader";
-import { colors } from "pebble-shared";
 
 const Button: React.FunctionComponent<ButtonProps> = ({
   type = "primary",
@@ -28,10 +27,8 @@ const Button: React.FunctionComponent<ButtonProps> = ({
 }: ButtonProps) => {
   const disableAction = disabled || loading;
 
-  const _outline = size === "x-small" || !!outline;
-
   const _className = cx(
-    getButtonStyle(size, type, !!showShadow, !_outline),
+    getButtonStyle(size, type, !!showShadow, !!outline),
     className
   );
 
@@ -44,7 +41,7 @@ const Button: React.FunctionComponent<ButtonProps> = ({
       data-testid={testId}
       {...buttonProps}
     >
-      {loading ? <Loader color={colors.white.base} scale={0.4} /> : children}
+      {loading ? <Loader color="currentColor" scale={0.4} /> : children}
       {!disableAction && showRipple && type !== "link" && <Ink />}
     </button>
   );

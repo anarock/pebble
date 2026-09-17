@@ -273,21 +273,21 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -424,21 +424,21 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":false,
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -755,21 +755,21 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -906,21 +906,21 @@ exports[`Button Combos test {"disabled":false,"type":"alert","showRipple":true,"
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -1177,21 +1177,21 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -1320,21 +1320,21 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":false,"
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -1591,21 +1591,21 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"l
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -1734,21 +1734,21 @@ exports[`Button Combos test {"disabled":false,"type":"link","showRipple":true,"l
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -2029,21 +2029,21 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":fals
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -2180,21 +2180,21 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":fals
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -2511,21 +2511,21 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -2662,21 +2662,21 @@ exports[`Button Combos test {"disabled":false,"type":"primary","showRipple":true
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -2957,21 +2957,21 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":fa
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -3108,21 +3108,21 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":fa
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -3439,21 +3439,21 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":tr
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -3590,21 +3590,21 @@ exports[`Button Combos test {"disabled":false,"type":"secondary","showRipple":tr
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -3885,21 +3885,21 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":fals
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -4036,21 +4036,21 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":fals
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -4367,21 +4367,21 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -4518,21 +4518,21 @@ exports[`Button Combos test {"disabled":false,"type":"success","showRipple":true
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -4811,21 +4811,21 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -4962,21 +4962,21 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":false,"
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -5255,21 +5255,21 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"l
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -5406,21 +5406,21 @@ exports[`Button Combos test {"disabled":true,"type":"alert","showRipple":true,"l
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -5675,21 +5675,21 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"l
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -5818,21 +5818,21 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":false,"l
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -6087,21 +6087,21 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"lo
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -6230,21 +6230,21 @@ exports[`Button Combos test {"disabled":true,"type":"link","showRipple":true,"lo
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -6523,21 +6523,21 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -6674,21 +6674,21 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":false
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -6967,21 +6967,21 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -7118,21 +7118,21 @@ exports[`Button Combos test {"disabled":true,"type":"primary","showRipple":true,
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -7411,21 +7411,21 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":fal
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -7562,21 +7562,21 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":fal
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -7855,21 +7855,21 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":tru
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -8006,21 +8006,21 @@ exports[`Button Combos test {"disabled":true,"type":"secondary","showRipple":tru
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -8299,21 +8299,21 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -8450,21 +8450,21 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":false
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -8743,21 +8743,21 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
@@ -8894,21 +8894,21 @@ exports[`Button Combos test {"disabled":true,"type":"success","showRipple":true,
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />
     <div
       style={
         Object {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "currentColor",
         }
       }
     />

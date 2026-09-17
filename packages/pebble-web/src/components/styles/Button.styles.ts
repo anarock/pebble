@@ -69,18 +69,18 @@ const linkStyle = {
   }
 };
 
-const getStyleByType = (type: ButtonType, filled: boolean) => {
+const getStyleByType = (type: ButtonType, outline: boolean) => {
   if (type === "link") return linkStyle;
 
   const _color = mappingColorByType[type];
   const { base: colorBase, disabled, hover, active, textColor } = _color;
 
-  const defaultFontColor = filled ? textColor || white.base : colorBase;
+  const defaultFontColor = outline ? colorBase : textColor || white.base;
 
   return {
     color: defaultFontColor,
-    backgroundColor: filled ? colorBase : white.base,
-    border: filled ? "none" : `1px solid ${colorBase}`,
+    backgroundColor: outline ? white.base : colorBase,
+    border: outline ? `1px solid ${colorBase}` : "none",
     "&:not([disabled]):hover": {
       color: textColor || white.base,
       backgroundColor: hover,
@@ -121,13 +121,13 @@ export const getButtonStyle = (
   size: keyof typeof styleBasedOnSize,
   type: ButtonType,
   showShadow: boolean,
-  filled: boolean
+  outline: boolean
 ) => {
   return css([
     commonButtonStyle,
     {
       ...styleBasedOnSize[size],
-      ...getStyleByType(type, filled),
+      ...getStyleByType(type, outline),
       boxShadow: showShadow ? constants.boxShadow.base : "none"
     }
   ]);
