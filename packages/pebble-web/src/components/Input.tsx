@@ -86,6 +86,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
       loading,
       leftElement,
       rightElement,
+      masked,
       testId
     } = this.props;
     const { isFocused } = this.state;
@@ -101,7 +102,8 @@ class Input extends React.PureComponent<InputProps, InputState> {
         [inputReadOnlyStyle]: !!readOnly,
         [inputTextAreaStyle]: !!textArea
       },
-      inputClassName
+      inputClassName,
+      !masked && "nr-unmask"
     );
 
     const _inputProps = {

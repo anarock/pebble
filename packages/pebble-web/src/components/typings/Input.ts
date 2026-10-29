@@ -20,6 +20,7 @@ export interface CommonInputProps {
   successMessage?: string;
   leftElement?: () => React.ReactNode;
   rightElement?: () => React.ReactNode;
+  masked?: boolean;
   testId?: string;
 }
 
