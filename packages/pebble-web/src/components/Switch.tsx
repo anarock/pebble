@@ -40,7 +40,7 @@ export default class Switch extends React.PureComponent<
           <input
             type="checkbox"
             checked={value}
-            className={cx(inputStyle, { "nr-unmask": !masked })}
+            className={cx(inputStyle, !masked && "nr-unmask")}
             onChange={() => {
               this.setState({
                 value: !value

@@ -90,7 +90,7 @@ export default class SecondaryInput extends React.PureComponent<
       disabled,
       readOnly,
       value: value || "",
-      className: cx(inputStyle, { "nr-unmask": !masked }),
+      className: cx(inputStyle, !masked && "nr-unmask"),
       onChange: this.handleChange
     };
 

@@ -100,10 +100,10 @@ class Input extends React.PureComponent<InputProps, InputState> {
       {
         [inputDisabledStyle]: !!disabled,
         [inputReadOnlyStyle]: !!readOnly,
-        [inputTextAreaStyle]: !!textArea
+        [inputTextAreaStyle]: !!textArea,
+        "nr-unmask": !masked
       },
-      inputClassName,
-      !masked && "nr-unmask"
+      inputClassName
     );
 
     const _inputProps = {
