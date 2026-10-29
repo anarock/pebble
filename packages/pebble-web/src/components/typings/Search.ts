@@ -10,5 +10,6 @@ export interface SearchProps {
   clearable?: boolean;
   inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
   loading?: boolean;
+  masked?: boolean;
   testId?: string;
 }

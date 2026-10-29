@@ -42,6 +42,7 @@ export default class PhoneNumberInput<
       inputProps,
       required,
       placeholder,
+      masked,
       testId
     } = this.props;
 
@@ -73,6 +74,7 @@ export default class PhoneNumberInput<
           onChange={this.onNumberChange}
           placeholder=""
           value={phone}
+          masked={masked}
           {...inputProps}
           testId={testIds.phoneId}
         />

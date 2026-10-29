@@ -25,6 +25,7 @@ function defaultSearchBox<OptionType>(
     : {};
   return (
     <Input
+      masked={props.masked}
       {...props.inputProps}
       onChange={registerChange}
       placeholder={props.placeholder}

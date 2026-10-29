@@ -12,7 +12,14 @@ export default class NativeDateInput extends React.PureComponent<
   };
 
   render() {
-    const { inputProps, placeholder, value, disabled, testId } = this.props;
+    const {
+      inputProps,
+      placeholder,
+      value,
+      disabled,
+      masked,
+      testId
+    } = this.props;
 
     return (
       <Input
@@ -24,6 +31,7 @@ export default class NativeDateInput extends React.PureComponent<
         value={value && format(value, "yyyy-MM-dd")}
         placeholder={placeholder}
         fixLabelAtTop
+        masked={masked}
         {...inputProps}
         disabled={disabled}
         testId={testId}

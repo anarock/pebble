@@ -36,6 +36,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
     isSelected,
     placement,
     modifiers,
+    masked,
     testId
   } = props;
 
@@ -90,6 +91,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                 errorMessage={errorMessage}
                 readOnly
                 disabled={disabled}
+                masked={masked}
                 {...inputProps}
               />
               <i className={chevron} />

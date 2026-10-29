@@ -18,6 +18,7 @@ export interface DateInputProps {
   onOutsideClick?: (isOpen: boolean) => void;
   controlled?: boolean;
   isOpen?: boolean;
+  masked?: boolean;
   testId?: string;
 }
 

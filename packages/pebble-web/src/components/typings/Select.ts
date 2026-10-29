@@ -23,6 +23,7 @@ export interface CommonSelectProps<OptionType> {
   isSelected?: (value: OptionType) => boolean;
   placement?: Placement;
   modifiers?: Modifiers;
+  masked?: boolean;
   testId?: string;
 }
 
