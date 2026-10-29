@@ -113,7 +113,7 @@ function Select<OptionType>(props: SelectProps<OptionType>) {
                 toggle();
               }),
             searchBox,
-            searchBoxProps
+            searchBoxProps: searchBoxProps && { masked, ...searchBoxProps }
           };
 
           // This would have been the ideal way to write this but typescript is crying.

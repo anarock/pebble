@@ -64,6 +64,7 @@ export default class PhoneNumberInput<
           onChange={this.onCountrySelect}
           value={countryCode + ""}
           selected={countryCode}
+          masked={masked}
           {...selectProps}
           className={cx(selectStyle, selectProps && selectProps.className)}
           testId={testIds.countryId}
