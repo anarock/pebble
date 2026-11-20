@@ -604,7 +604,7 @@ Array [
       <input
         aria-label="Search"
         autoFocus={true}
-        className="emotion-0"
+        className="emotion-0 nr-unmask"
         onChange={[Function]}
         onKeyDown={[Function]}
         placeholder="Search"
@@ -1274,7 +1274,7 @@ Array [
       <input
         aria-label="Search"
         autoFocus={true}
-        className="emotion-0"
+        className="emotion-0 nr-unmask"
         onChange={[Function]}
         onKeyDown={[Function]}
         placeholder="Search"

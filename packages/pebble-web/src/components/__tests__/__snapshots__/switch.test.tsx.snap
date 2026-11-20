@@ -62,7 +62,7 @@ exports[`Component: Switch snapshot 1`] = `
   >
     <input
       checked={false}
-      className="emotion-1"
+      className="emotion-1 nr-unmask"
       onChange={[Function]}
       type="checkbox"
     />
@@ -135,7 +135,7 @@ exports[`Component: Switch snapshot 2`] = `
   >
     <input
       checked={false}
-      className="emotion-1"
+      className="emotion-1 nr-unmask"
       onChange={[Function]}
       type="checkbox"
     />

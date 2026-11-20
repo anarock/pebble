@@ -185,7 +185,7 @@ exports[`Component: Select multi-select: snapshot 1`] = `
           >
             <input
               aria-label="Choose Option"
-              className="emotion-0"
+              className="nr-unmask emotion-0"
               onChange={[Function]}
               readOnly={true}
               value=""
@@ -400,7 +400,7 @@ exports[`Component: Select single-select with searchbox: snapshot 1`] = `
           >
             <input
               aria-label="Choose Option"
-              className="emotion-0"
+              className="nr-unmask emotion-0"
               onChange={[Function]}
               readOnly={true}
               value=""
@@ -615,7 +615,7 @@ exports[`Component: Select single-select: snapshot 1`] = `
           >
             <input
               aria-label="Choose Option"
-              className="emotion-0"
+              className="nr-unmask emotion-0"
               onChange={[Function]}
               readOnly={true}
               value=""
