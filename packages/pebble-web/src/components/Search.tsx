@@ -42,7 +42,6 @@ class Search extends React.PureComponent<SearchProps> {
       <div className={cx(wrapperClassName, className)}>
         {type !== "large" && showSearchIcon && <i className="pi pi-search" />}
         <input
-          className={cx(searchStyle, !masked && "nr-unmask")}
           type="text"
           aria-label={placeholder}
           placeholder={placeholder}
@@ -52,6 +51,11 @@ class Search extends React.PureComponent<SearchProps> {
           ref={this.searchInputRef}
           value={value}
           {...inputProps}
+          className={cx(
+            searchStyle,
+            inputProps?.className,
+            !masked && "nr-unmask"
+          )}
           data-testid={testId}
         />
         {loading && <Loader scale={0.4} color={colors.violet.base} />}

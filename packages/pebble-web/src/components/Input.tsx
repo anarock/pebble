@@ -100,15 +100,15 @@ class Input extends React.PureComponent<InputProps, InputState> {
       {
         [inputDisabledStyle]: !!disabled,
         [inputReadOnlyStyle]: !!readOnly,
-        [inputTextAreaStyle]: !!textArea,
-        "nr-unmask": !masked
+        [inputTextAreaStyle]: !!textArea
       },
-      inputClassName
+      inputClassName,
+      this.props.inputProps?.className,
+      !masked && "nr-unmask"
     );
 
     const _inputProps = {
       "aria-label": placeholder ? placeholder : undefined,
-      className: _inputClassName,
       disabled,
       onChange: this.handleChange,
       readOnly,
@@ -159,6 +159,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
             <textarea
               {..._inputProps}
               {...this.props.inputProps}
+              className={_inputClassName}
               data-testid={testId}
             />
           ) : (
@@ -166,6 +167,7 @@ class Input extends React.PureComponent<InputProps, InputState> {
               type={type}
               {..._inputProps}
               {...this.props.inputProps}
+              className={_inputClassName}
               data-testid={testId}
             />
           )}
