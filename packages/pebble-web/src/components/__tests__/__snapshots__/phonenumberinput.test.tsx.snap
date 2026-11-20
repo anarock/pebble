@@ -271,7 +271,7 @@ exports[`Component: Select default snapshot 1`] = `
               className="emotion-2"
             >
               <input
-                className="emotion-1"
+                className="nr-unmask emotion-1"
                 id="phone-select-input-test"
                 onChange={[Function]}
                 readOnly={true}
@@ -304,7 +304,7 @@ exports[`Component: Select default snapshot 1`] = `
       className="emotion-2"
     >
       <input
-        className="emotion-9"
+        className="emotion-9 nr-unmask"
         id="phone-test-input-test"
         onChange={[Function]}
         readOnly={false}

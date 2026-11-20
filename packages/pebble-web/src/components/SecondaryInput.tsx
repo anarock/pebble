@@ -78,6 +78,7 @@ export default class SecondaryInput extends React.PureComponent<
       readOnly,
       loading,
       className,
+      masked,
       testId
     } = this.props;
     const { isFocused } = this.state;
@@ -89,7 +90,6 @@ export default class SecondaryInput extends React.PureComponent<
       disabled,
       readOnly,
       value: value || "",
-      className: inputStyle,
       onChange: this.handleChange
     };
 
@@ -124,6 +124,11 @@ export default class SecondaryInput extends React.PureComponent<
           <input
             {..._inputProps}
             {...this.props.inputProps}
+            className={cx(
+              inputStyle,
+              this.props.inputProps?.className,
+              !masked && "nr-unmask"
+            )}
             data-testid={testId}
           />
           <label className={placeholderClassName}>

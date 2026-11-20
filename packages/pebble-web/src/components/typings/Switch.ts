@@ -4,6 +4,7 @@ export interface SwitchProps {
   className?: string;
   label?: string;
   disabled?: boolean;
+  masked?: boolean;
 }
 
 export interface SwitchState {

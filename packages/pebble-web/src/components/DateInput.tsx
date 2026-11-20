@@ -95,6 +95,7 @@ export default class DateInput extends React.PureComponent<
       onOutsideClick,
       controlled,
       isOpen,
+      masked,
       testId
     } = this.props;
 
@@ -124,6 +125,7 @@ export default class DateInput extends React.PureComponent<
                   toggleDropdown();
                 }}
                 fixLabelAtTop
+                masked={masked}
                 {...inputProps}
                 inputProps={{
                   placeholder: "DD/MM/YYYY",
